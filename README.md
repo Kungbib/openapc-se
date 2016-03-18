@@ -23,6 +23,10 @@ Stockholm University
 
 Swedish University of Agricultural Sciences
 
+## Contact
+
+For general comments, email beate.eellend at kb.se 
+
 
 
 
