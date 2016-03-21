@@ -1,4 +1,4 @@
-# openapc-se
+# Openapc-se
 
 This is a pilot project. Please see the wiki for more information.
 
@@ -25,7 +25,7 @@ Swedish University of Agricultural Sciences
 
 ## Contact
 
-For general comments, email beate.eellend at kb.se 
+For general comments, email Beate Eellend at the National Library of Sweden: **beate.eellend [at] kb.se** 
 
 
 
