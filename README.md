@@ -7,15 +7,14 @@ This project follows the [Open APC Initiative](https://github.com/OpenAPC/openap
 
 ## Pilot contributors
 
-Linköping University  
+1. Linköping University  
+2. Malmö University
+3. National Library of Sweden   
+4. Stockholm University   
+5. Swedish University of Agricultural Sciences
 
-Malmö University
-
-National Library of Sweden   
-
-Stockholm University   
-
-Swedish University of Agricultural Sciences
+## Contributing APC data
+See [guidelines for the template](https://github.com/Kungbib/openapc-se/wiki/Guide-for-completing-the-survey).
 
 ## Contact
 
