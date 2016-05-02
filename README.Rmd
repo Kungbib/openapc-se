@@ -152,22 +152,6 @@ ggsave(q, file = "figure/plotAverageAPC.png", width=6.8,height=4.5,units="in")
 
 ![](figure/plotAverageAPC.png)
 
-### Average fees Max Planck Digital Library paid for Springer Open Access articles by year
-
-```{r, echo=FALSE}
-
-my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
-
-mpg <- my.apc[my.apc$institution == "MPG" & my.apc$publisher == "Springer Science + Business Media",]
-q <- ggplot(mpg, aes(factor(period), euro)) + geom_boxplot() + geom_point(alpha = 2/10, size = 2)
-q <- q +  ylab("Fees paid (in EURO)") + xlab("Period") + theme(legend.position="top") + theme_bw()
-
-ggsave(q, file = "figure/plotAverageSpringerMPDL.png", width=6.8,height=4.5,units="in")
-
-```
-
-![](figure/plotAverageSpringerMPDL.png)
-
 ## Contributing APC data
 See [guidelines for the template](https://github.com/Kungbib/openapc-se/wiki/Guide-for-completing-the-survey).
 

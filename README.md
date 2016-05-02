@@ -68,12 +68,6 @@ The following institutions have contributed its expenditures for hybrid open acc
 
 ![](figure/plotAverageAPC.png)
 
-### Average fees Max Planck Digital Library paid for Springer Open Access articles by year
-
-
-
-![](figure/plotAverageSpringerMPDL.png)
-
 ## Contributing APC data
 See [guidelines for the template](https://github.com/Kungbib/openapc-se/wiki/Guide-for-completing-the-survey).
 
