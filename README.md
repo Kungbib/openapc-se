@@ -55,74 +55,24 @@ The following institutions have contributed its expenditures for hybrid open acc
 ### Distribution over publishers by university
 
 
-```
-## Warning in library(package, lib.loc = lib.loc, character.only = TRUE,
-## logical.return = TRUE, : there is no package called 'ggplot2'
-```
-
-```
-## Warning in library(package, lib.loc = lib.loc, character.only = TRUE,
-## logical.return = TRUE, : there is no package called 'RColorBrewer'
-```
-
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
-
-```
-## Error in eval(expr, envir, enclos): could not find function "ggsave"
-```
 
 ![](figure/plotPublisherAPC.png)
 
 ### Comparing fees paid by university and research institution
 
 
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
-
-```
-## Error in eval(expr, envir, enclos): could not find function "ylab"
-```
-
-```
-## Error in eval(expr, envir, enclos): could not find function "ggsave"
-```
 
 ![](figure/boxplot_institution.png)
 
 ### Average fees paid by publisher
 
 
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
-
-```
-## Error in eval(expr, envir, enclos): could not find function "ylab"
-```
-
-```
-## Error in eval(expr, envir, enclos): could not find function "ggsave"
-```
 
 ![](figure/plotAverageAPC.png)
 
 ### Average fees Max Planck Digital Library paid for Springer Open Access articles by year
 
 
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
-
-```
-## Error in eval(expr, envir, enclos): could not find function "ylab"
-```
-
-```
-## Error in eval(expr, envir, enclos): could not find function "ggsave"
-```
 
 ![](figure/plotAverageSpringerMPDL.png)
 
