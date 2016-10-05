@@ -11,7 +11,7 @@ This is a pilot project. This survey includes only journal articles. A first [re
 
 * Establish a valid empirical foundation which can only be realised by standardised reporting on APC costs
 
-Please see the [wiki](https://github.com/Kungbib/openapc-se/wiki) for more information.
+Please see the [wiki](https://github.com/Kungbib/openapc-se/wiki/Open-APC-Sweden) for more information.
 
 ## Acknowledgement  
 This project follows the [Open APC Initiative](https://github.com/OpenAPC/openapc-de) to share data on paid APCs. It recognises efforts from [JISC](https://www.jisc-collections.ac.uk/Jisc-Monitor/APC-data-collection/) and [FWF](https://figshare.com/articles/Austrian_Science_Fund_FWF_Publication_Cost_Data_2014/1378610) to standardise APC reporting.    
