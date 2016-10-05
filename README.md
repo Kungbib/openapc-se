@@ -1,6 +1,15 @@
-# Openapc-se
+# About Openapc-se
 
 This is a pilot project. This survey includes only journal articles. A first [report](http://www.kb.se/dokument/open%20access/APC_2016_161003_2.pdf) from the pilot with the results from the initial workshop is now published at [OpenAccess.se](http://www.kb.se/openaccess/Open-APC-Sweden/).  
+
+## Aim
+**The aim of this openapc-se repository is to:**  
+
+* Release datasets on fees paid for open access journal articles by the Swedish HEI sector under an Open Database Licence
+
+* Demonstrate how reporting on fee-based open access publishing can be made more transparent and reproducible across institutions. This is an important aspect in the preparation for a transition from a subscription-based market to an open access publishing infrastructure 
+
+* Establish a valid empirical foundation which can only be realised by standardised reporting on APC costs
 
 Please see the [wiki](https://github.com/Kungbib/openapc-se/wiki) for more information.
 
@@ -12,7 +21,7 @@ This project follows the [Open APC Initiative](https://github.com/OpenAPC/openap
 
 1. Linköping University (liu)  
 2. Malmö University (mah)
-3. National Library of Sweden (kb)   
+3. The National Library of Sweden (kb)   
 4. Stockholm University (su)   
 5. Swedish University of Agricultural Sciences (slu)
 
