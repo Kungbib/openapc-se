@@ -1,6 +1,8 @@
 # About Openapc-se
 
-This is a pilot project. This survey includes only journal articles. A first [report](http://www.kb.se/dokument/open%20access/APC_2016_161003_2.pdf) from the pilot with the results from the initial workshop is now published at [OpenAccess.se](http://www.kb.se/openaccess/Open-APC-Sweden/).  
+This is a pilot project. This survey includes only journal articles.   
+
+A first [report](http://www.kb.se/dokument/open%20access/APC_2016_161003_2.pdf) from the pilot with the results from the initial workshop is now published at [OpenAccess.se](http://www.kb.se/openaccess/Open-APC-Sweden/).  
 
 ## Aim
 **The aim of this openapc-se repository is to:**  
