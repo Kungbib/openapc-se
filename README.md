@@ -1,8 +1,19 @@
 # About Openapc-se
 
-This is a pilot project. This survey includes only journal articles.   
+This is a pilot project initiated by the National Library of Sweden together with Swedish higher education institutions (HEIs). The apc survey below includes only journal articles.   
 
-A first [report](http://www.kb.se/dokument/open%20access/APC_2016_161013.pdf) from the pilot with the results from the initial workshop is now published at [OpenAccess.se](http://www.kb.se/openaccess/Open-APC-Sweden/).  
+A first [report](http://www.kb.se/dokument/open%20access/APC_2016_161013.pdf) from the pilot with the results from the initial workshop is now published at [OpenAccess.se](http://www.kb.se/openaccess/Open-APC-Sweden/) (in Swedish). The report concludes that Sweden has currently no common funding system in place in order to finance and handle invoices for Article Processing Charges (APCs) paid in order to publish open access articles, fulfilling the demands of research funders. A Swedish open APC database, like the Open APC Initiative in Germany, would therefore be difficult to implement in Sweden at present. 
+
+A pilot project named "Open APC Sweden" was initiated by the National Library of Sweden together with Swedish higher education institutions (HEIs) in order to investigate the possibilities of establishing an open database. The result from the first workshop proposes two options which could dramatically facilitate the collection and monitoring of Swedish APC data. Firstly, Swedish HEIs need to establish a common invoice code for APCs in their respective accounts and invoice processing systems. Secondly, institutional repositories need to enable the registration of metadata about “corresponding author”, who receives and pays for incurred APC costs via an invoice directly addressed to the author in question.
+
+In order to establish "Open APC Sweden" there is a great need for a concerted effort by stakeholders. The current project aims to keep the Swedish HEI sector informed about ways in which to monitor the total cost of publication, which includes the collection of APCs. 
+
+#### Open APC Sweden Symposium 
+On the **25th of November** the National Library of Sweden invites all stakeholders to attend a national symposium on APCs and "Open APC Sweden". 
+
+Prof. Stephen Pinfield at the University of Sheffield will deliver the keynote speech regarding the total cost of publication in a hybrid open access environment, followed by representatives from Swedish HEIs and funding agencies presenting their experiences of monitoring APCs in Sweden.  
+
+The symposium is open to all at no cost. For a detailed programme and registration see: [Open APC Sweden](http://www.kb.se/openaccess/Open-APC-Sweden/)
 
 ## Aim
 **The aim of this openapc-se repository is to:**  
@@ -14,6 +25,7 @@ A first [report](http://www.kb.se/dokument/open%20access/APC_2016_161013.pdf) fr
 * Establish a valid empirical foundation which can only be realised by standardised reporting on APC costs
 
 Please see the [wiki](https://github.com/Kungbib/openapc-se/wiki/Open-APC-Sweden) for more information.
+
 
 ## Acknowledgement  
 This project follows the [Open APC Initiative](https://github.com/OpenAPC/openapc-de) to share data on paid APCs. It recognises efforts from [JISC](https://www.jisc-collections.ac.uk/Jisc-Monitor/APC-data-collection/) and [FWF](https://figshare.com/articles/Austrian_Science_Fund_FWF_Publication_Cost_Data_2014/1378610) to standardise APC reporting.    
