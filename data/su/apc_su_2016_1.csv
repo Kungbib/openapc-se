@@ -1,4 +1,4 @@
-institution ;period;cost;doi;is_hybrid;publisher;journal_full_title;issn;issn_print;issn_electronic;url
+institution ,period,cost,doi,is_hybrid,publisher,journal_full_title,issn,issn_print,issn_electronic,url
 su;2016;1239;10.1371/journal.pone.0147924;FALSE;Public Library of Science;PLOS ONE ;;;1932-6203;http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0147924
 su ;2016;2290;10.3389/fpsyg.2016.01146;FALSE;Frontiers;Frontiers in Psychology;;;1664-1078;http://journal.frontiersin.org/article/10.3389/fpsyg.2016.01146/full
 su ;2016;668;10.17585/njlr.v2.224;FALSE;Cappelen Damm Akademisk;Nordic journal of literacy research;;;2464-1596;https://nordicliteracy.net/index.php/njlr/article/view/224
