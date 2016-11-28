@@ -1,0 +1,4 @@
+"institution","period","euro","doi","is_hybrid","publisher","journal_full_title","issn","issn_print","issn_electronic","license_ref","indexed_in_crossref","pmid","pmcid","ut","url","doaj"
+"kth",2015,2230,"10.1136/jech-2014-205058",TRUE,"BMJ","Journal of Epidemiology and Community Health","0143-005X","0143-005X","1470-2738",NA,TRUE,"25922471","PMC4516006",NA,"http://jech.bmj.com/content/69/8/769.full",FALSE
+"kth",2015,787,"10.1186/s40488-015-0031-y",FALSE,"Springer Science + Business Media","Journal of Statistical Distributions and Applications","2195-5832",NA,"2195-5832",NA,TRUE,NA,NA,NA,"http://jsdajournal.springeropen.com/articles/10.1186/s40488-015-0031-y",TRUE
+"kth",2015,1530,"10.1002/ece3.1773",FALSE,"Wiley-Blackwell","Ecology and Evolution","20457758",NA,NA,"http://doi.wiley.com/10.1002/tdm_license_1",TRUE,"27069602","PMC4813107",NA,"http://onlinelibrary.wiley.com/doi/10.1002/ece3.1773/full",FALSE
