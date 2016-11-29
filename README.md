@@ -9,11 +9,11 @@ A pilot project named "Open APC Sweden" was initiated by the National Library of
 In order to establish "Open APC Sweden" there is a great need for a concerted effort by stakeholders. The current project aims to keep the Swedish HEI sector informed about ways in which to monitor the total cost of publication, which includes the collection of APCs. 
 
 #### Open APC Sweden Symposium 2016
-On the **25th of November** the National Library of Sweden invites all stakeholders to attend a national symposium on APCs and "Open APC Sweden". 
+On the **25th of November** the National Library of Sweden invited all stakeholders to attend a national symposium on APCs and "Open APC Sweden". 
 
-Prof. Stephen Pinfield at the University of Sheffield will deliver the keynote speech regarding the total cost of publication in a hybrid open access environment, followed by representatives from Swedish HEIs and funding agencies presenting their experiences of monitoring APCs in Sweden.  
+Prof. Stephen Pinfield at the University of Sheffield delivered the keynote speech regarding the total cost of publication in a hybrid open access environment, followed by representatives from Swedish HEIs and funding agencies presenting their experiences of monitoring APCs in Sweden.  
 
-The symposium is open to all at no cost. For a detailed programme and registration see: [Open APC Sweden](http://www.kb.se/openaccess/Open-APC-Sweden/)
+The presentations from the symposium are published at: [Open APC Sweden](http://www.kb.se/openaccess/Open-APC-Sweden/).
 
 ## Aim
 **The aim of this openapc-se repository is to:**  
