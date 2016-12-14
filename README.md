@@ -108,7 +108,6 @@ See [guidelines for the template](https://github.com/Kungbib/openapc-se/wiki/Gui
 
 For general comments, email Beate Eellend at the National Library of Sweden: **beate.eellend [at] kb.se** 
 
+For technical comments, contact Ulf Kronman at the National Library of Sweden: **ulf.kronman [at] kb.se**
 
-
-
-
+[Page updated 2016-12-14]
