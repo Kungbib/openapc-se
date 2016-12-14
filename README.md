@@ -1,6 +1,6 @@
 # About Openapc-se
 
-This is a pilot project initiated by the National Library of Sweden together with Swedish higher education institutions (HEIs). The APC survey below includes only journal articles.   
+This is a pilot project initiated by the National Library of Sweden together with Swedish higher education institutions (HEIs). The apc survey below includes only journal articles.   
 
 A first [report](http://www.kb.se/dokument/open%20access/Open_APC_Sweden_English_LAST.pdf) from the pilot with the results from the initial workshop is now published at [OpenAccess.se](http://www.kb.se/openaccess/Open-APC-Sweden/). The report concludes that Sweden has currently no common funding system in place in order to finance and handle invoices for Article Processing Charges (APCs) paid in order to publish open access articles, fulfilling the demands of research funders. A Swedish open APC database, like the Open APC Initiative in Germany, would therefore be difficult to implement in Sweden at present. 
 
@@ -108,7 +108,6 @@ See [guidelines for the template](https://github.com/Kungbib/openapc-se/wiki/Gui
 
 For general comments, email Beate Eellend at the National Library of Sweden: **beate.eellend [at] kb.se** 
 
+For technical comments, contact Ulf Kronman at the National Library of Sweden: **ulf.kronman [at] kb.se**
 
-
-
-
+[Page updated 2016-12-14]
