@@ -4,24 +4,25 @@
 import argparse
 import codecs
 from collections import OrderedDict
-from copy import copy
-import csv
 import datetime
 import locale
+import logging
+from logging.handlers import MemoryHandler
+import os
 import sys
 
 import openapc_toolkit as oat
 
 class CSVColumn(object):
-    
+
     MANDATORY = "mandatory"
     OPTIONAL = "optional"
     NONE = "non-required"
-    
+
     OW_ALWAYS = 0
     OW_ASK = 1
     OW_NEVER = 2
-    
+
     _OW_MSG = (u"\033[91mConflict\033[0m: Existing non-NA value " +
                u"\033[93m{ov}\033[0m in column \033[93m{name}\033[0m is to be " +
                u"replaced by new value \033[93m{nv}\033[0m.\nAllow overwrite?\n" +
@@ -29,7 +30,7 @@ class CSVColumn(object):
                "\033[93m{nv}\033[0m in this column\n3) Yes, and always " +
                "overwrite in this column\n4) No\n5) No, and never replace " +
                "\033[93m{ov}\033[0m by \033[93m{nv}\033[0m in this " +
-               "column\n6) No, and never overwrite in this column\n>") 
+               "column\n6) No, and never overwrite in this column\n>")
 
     def __init__(self, column_type, requirement, index=None, column_name="", overwrite=OW_ASK):
         self.column_type = column_type
@@ -39,7 +40,7 @@ class CSVColumn(object):
         self.overwrite = overwrite
         self.overwrite_whitelist = {}
         self.overwrite_blacklist = {}
-        
+
     def check_overwrite(self, old_value, new_value):
         if old_value == new_value:
             return old_value
@@ -48,6 +49,9 @@ class CSVColumn(object):
             return new_value
         if old_value.strip() == "":
             return new_value
+        # Do not replace an existing old value with NA
+        if new_value == "NA":
+            return old_value
         if self.overwrite == CSVColumn.OW_ALWAYS:
             return new_value
         if self.overwrite == CSVColumn.OW_NEVER:
@@ -57,7 +61,7 @@ class CSVColumn(object):
                 return old_value
         if old_value in self.overwrite_whitelist:
             return new_value
-        msg = CSVColumn._OW_MSG.format(ov=old_value, name=self.column_name, 
+        msg = CSVColumn._OW_MSG.format(ov=old_value, name=self.column_name,
                                        nv=new_value)
         msg = msg.encode("utf-8")
         ret = raw_input(msg)
@@ -80,6 +84,36 @@ class CSVColumn(object):
             self.overwrite = CSVColumn.OW_NEVER
             return old_value
 
+class ANSIColorFormatter(logging.Formatter):
+    """
+    A simple logging formatter using ANSI codes to colorize messages
+    """
+    FORMATS = {
+        logging.ERROR: "\033[91m%(levelname)s: %(message)s\033[0m",
+        logging.WARNING: "\033[93m%(levelname)s: %(message)s\033[0m",
+        logging.INFO: "\033[94m%(levelname)s: %(message)s\033[0m",
+        "DEFAULT": "%(levelname)s: %(message)s"
+    }
+
+    def format(self, record):
+        self._fmt = self.FORMATS.get(record.levelno, self.FORMATS["DEFAULT"])
+        return logging.Formatter.format(self, record)
+
+class BufferedErrorHandler(MemoryHandler):
+    """
+    A modified MemoryHandler without automatic flushing.
+
+    This handler serves the simple purpose of buffering error and critical
+    log messages so that they can be shown to the user in collected form when
+    the enrichment process has finished.
+    """
+    def __init__(self, target):
+        MemoryHandler.__init__(self, 100000, target=target)
+        self.setLevel(logging.ERROR)
+
+    def shouldFlush(self, record):
+        return False
+
 
 ARG_HELP_STRINGS = {
     "csv_file": "CSV file containing your APC data. It must contain at least " +
@@ -93,14 +127,20 @@ ARG_HELP_STRINGS = {
               "CSV file was created in (Example: Using en_US as your system " +
               "locale might become a problem if the file contains numeric " +
               "values with ',' as decimal mark character)",
-    "headers": "Ignore any CSV headers (if present) and try to determine " +
-               "relevant columns heuristically.",
+    "ignore_header": "Ignore any CSV headers (if present) and try to " +
+                     "determine relevant columns heuristically.",
+    "force_header": "Interpret the file's first line as a header even if the " +
+                    "automatic analysis did not detect one.",
     "force": "Force the script to continue even if not all mandatory columns " +
              "have been identified",
     "bypass": "Force the script to bypass TLS certificate verification when " +
               "querying metadata APIs. Not recommended, but might be " +
               "necessary if run under windows (where python does not use the " +
               "cert store of the OS)",
+    "unknown_columns": "Attach any unidentified columns to the generated " +
+                       "csv file",
+    "overwrite": "Always overwrite existing data with imported data " +
+                 "(instead of asking on the first conflict)",
     "institution": "Manually identify the 'institution' column if the script " +
                    "fails to detect it automatically. The value is the " +
                    "numerical column index in the CSV file, with the " +
@@ -138,37 +178,41 @@ ARG_HELP_STRINGS = {
            "it automatically. The value is the numerical column index in the " +
            "CSV file, with the leftmost column being 0. This is an optional " +
            "column, identifying it is required if there are articles without " +
-           "a DOI in the file."
-}
-
-ERROR_MSGS = {
-    "locale": "Error: Could not process the monetary value '{}' in column " +
-              "{}. This will usually have one of two reasons:\n1) The value " +
-              "does not represent a number.\n2) The value represents a " +
-              "number, but its format differs from your current system " +
-              "locale - the most common source of error will be the decimal " +
-              "mark (1234.56 vs 1234,56). Try using another locale with the " +
-              "-l option."
-}
-
-INFO_MSGS = {
-    "unify": "Normalisation: CrossRef-based {} changed from '{}' to '{}' " +
-             "to maintain consistency."
+           "a DOI in the file.",
+    "offline_doaj": "Use an offline copy of the DOAJ database. This might " +
+                    "be useful when processing large files as the DOAJ API " +
+                    "is not too responsive at times and might pose a " +
+                    "bottleneck. This option expects the CSV you can usually " +
+                    "download at https://doaj.org/csv as argument. " +
+                    "Obviously, this copy should be as up-to-date as possible.",
+    "start": "Do not process the whole file, but start from this line " +
+             "number. May be used together with '-end' to select a specific " +
+             "segment.",
+    "end": "Do not process the whole file, but end at this line number. May " +
+           "be used together with '-start' to select a specific segment."
 }
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("csv_file", help=ARG_HELP_STRINGS["csv_file"])
-    parser.add_argument("-e", "--encoding", help=ARG_HELP_STRINGS["encoding"])
-    parser.add_argument("-v", "--verbose", action="store_true",
-                        help=ARG_HELP_STRINGS["verbose"])
-    parser.add_argument("-l", "--locale", help=ARG_HELP_STRINGS["locale"])
-    parser.add_argument("-i", "--ignore-header", action="store_true",
-                        help=ARG_HELP_STRINGS["headers"])
-    parser.add_argument("-f", "--force", action="store_true",
-                        help=ARG_HELP_STRINGS["force"])
     parser.add_argument("-b", "--bypass-cert-verification", action="store_true",
                         help=ARG_HELP_STRINGS["bypass"])
+    parser.add_argument("-d", "--offline_doaj",
+                        help=ARG_HELP_STRINGS["offline_doaj"])
+    parser.add_argument("-e", "--encoding", help=ARG_HELP_STRINGS["encoding"])
+    parser.add_argument("-f", "--force", action="store_true",
+                        help=ARG_HELP_STRINGS["force"])
+    parser.add_argument("-i", "--ignore-header", action="store_true",
+                        help=ARG_HELP_STRINGS["ignore_header"])
+    parser.add_argument("-j", "--force-header", action="store_true",
+                        help=ARG_HELP_STRINGS["force_header"])
+    parser.add_argument("-l", "--locale", help=ARG_HELP_STRINGS["locale"])
+    parser.add_argument("-u", "--add-unknown-columns", action="store_true",
+                        help=ARG_HELP_STRINGS["unknown_columns"])
+    parser.add_argument("-v", "--verbose", action="store_true",
+                        help=ARG_HELP_STRINGS["verbose"])
+    parser.add_argument("-o", "--overwrite", action="store_true",
+                        help=ARG_HELP_STRINGS["overwrite"])
     parser.add_argument("-institution", "--institution_column", type=int,
                         help=ARG_HELP_STRINGS["institution"])
     parser.add_argument("-period", "--period_column", type=int,
@@ -187,9 +231,19 @@ def main():
                         type=int, help=ARG_HELP_STRINGS["issn"])
     parser.add_argument("-url", "--url_column",
                         type=int, help=ARG_HELP_STRINGS["url"])
+    parser.add_argument("-start", type=int, help=ARG_HELP_STRINGS["start"])
+    parser.add_argument("-end", type=int, help=ARG_HELP_STRINGS["end"])
 
     args = parser.parse_args()
     enc = None # CSV file encoding
+
+    handler = logging.StreamHandler(sys.stderr)
+    handler.setFormatter(ANSIColorFormatter())
+    bufferedHandler = BufferedErrorHandler(handler)
+    bufferedHandler.setFormatter(ANSIColorFormatter())
+    logging.root.addHandler(handler)
+    logging.root.addHandler(bufferedHandler)
+    logging.root.setLevel(logging.INFO)
 
     if args.locale:
         norm = locale.normalize(args.locale)
@@ -217,24 +271,33 @@ def main():
                    "guessing.")
             sys.exit()
 
-    result = oat.analyze_csv_file(args.csv_file)
+    result = oat.analyze_csv_file(args.csv_file, line_limit=500)
     if result["success"]:
         csv_analysis = result["data"]
         print csv_analysis
     else:
         print result["error_msg"]
         sys.exit()
-    
+
     if enc is None:
         enc = csv_analysis.enc
     dialect = csv_analysis.dialect
-    has_header = csv_analysis.has_header
+    has_header = csv_analysis.has_header or args.force_header
 
     if enc is None:
         print ("Error: No encoding given for CSV file and automated " +
                "detection failed. Please set the encoding manually via the " +
                "--enc argument")
         sys.exit()
+
+
+    doaj_offline_analysis = None
+    if args.offline_doaj:
+        if os.path.isfile(args.offline_doaj):
+            doaj_offline_analysis = oat.DOAJOfflineAnalysis(args.offline_doaj)
+        else:
+            oat.print_r("Error: " + args.offline_doaj + " does not seem "
+                        "to be a file!")
 
     csv_file = open(args.csv_file, "r")
     reader = oat.UnicodeReader(csv_file, dialect=dialect, encoding=enc)
@@ -246,25 +309,31 @@ def main():
     csv_file.seek(0)
     reader = oat.UnicodeReader(csv_file, dialect=dialect, encoding=enc)
 
+    if args.overwrite:
+        ow_strategy = CSVColumn.OW_ALWAYS
+    else:
+        ow_strategy = CSVColumn.OW_ASK
+
     column_map = OrderedDict([
-        ("institution", CSVColumn("institution", CSVColumn.MANDATORY, args.institution_column)),  
-        ("period", CSVColumn("period", CSVColumn.MANDATORY, args.period_column)),
-        ("euro", CSVColumn("euro", CSVColumn.MANDATORY, args.euro_column)),
-        ("doi", CSVColumn("doi", CSVColumn.MANDATORY, args.doi_column)),
-        ("is_hybrid", CSVColumn("is_hybrid", CSVColumn.MANDATORY, args.is_hybrid_column)),
-        ("publisher", CSVColumn("publisher", CSVColumn.OPTIONAL, args.publisher_column)),
+        ("institution", CSVColumn("institution", CSVColumn.MANDATORY, args.institution_column, overwrite=ow_strategy)),
+        ("period", CSVColumn("period", CSVColumn.MANDATORY, args.period_column, overwrite=ow_strategy)),
+        ("euro", CSVColumn("euro", CSVColumn.MANDATORY, args.euro_column, overwrite=ow_strategy)),
+        ("doi", CSVColumn("doi", CSVColumn.MANDATORY, args.doi_column, overwrite=ow_strategy)),
+        ("is_hybrid", CSVColumn("is_hybrid", CSVColumn.MANDATORY, args.is_hybrid_column, overwrite=ow_strategy)),
+        ("publisher", CSVColumn("publisher", CSVColumn.OPTIONAL, args.publisher_column, overwrite=ow_strategy)),
         ("journal_full_title", CSVColumn("journal_full_title", CSVColumn.OPTIONAL,
-                                        args.journal_full_title_column)),
-        ("issn", CSVColumn("issn", CSVColumn.OPTIONAL, args.issn_column)),
-        ("issn_print", CSVColumn("issn_print", CSVColumn.NONE, None)),
-        ("issn_electronic", CSVColumn("issn_electronic", CSVColumn.NONE, None)),
-        ("license_ref", CSVColumn("license_ref", CSVColumn.NONE, None)),
-        ("indexed_in_crossref", CSVColumn("indexed_in_crossref", CSVColumn.NONE, None)),
-        ("pmid", CSVColumn("pmid", CSVColumn.NONE, None)),
-        ("pmcid", CSVColumn("pmcid", CSVColumn.NONE, None)),
-        ("ut", CSVColumn("ut", CSVColumn.NONE, None)),
-        ("url", CSVColumn("url", CSVColumn.OPTIONAL, args.url_column)),
-        ("doaj", CSVColumn("doaj", CSVColumn.NONE, None))
+                                         args.journal_full_title_column, overwrite=ow_strategy)),
+        ("issn", CSVColumn("issn", CSVColumn.OPTIONAL, args.issn_column, overwrite=ow_strategy)),
+        ("issn_print", CSVColumn("issn_print", CSVColumn.NONE, None, overwrite=ow_strategy)),
+        ("issn_electronic", CSVColumn("issn_electronic", CSVColumn.NONE, None, overwrite=ow_strategy)),
+        ("issn_l", CSVColumn("issn_l", CSVColumn.NONE, None, overwrite=ow_strategy)),
+        ("license_ref", CSVColumn("license_ref", CSVColumn.NONE, None, overwrite=ow_strategy)),
+        ("indexed_in_crossref", CSVColumn("indexed_in_crossref", CSVColumn.NONE, None, overwrite=ow_strategy)),
+        ("pmid", CSVColumn("pmid", CSVColumn.NONE, None, overwrite=ow_strategy)),
+        ("pmcid", CSVColumn("pmcid", CSVColumn.NONE, None, overwrite=ow_strategy)),
+        ("ut", CSVColumn("ut", CSVColumn.NONE, None, overwrite=ow_strategy)),
+        ("url", CSVColumn("url", CSVColumn.OPTIONAL, args.url_column, overwrite=ow_strategy)),
+        ("doaj", CSVColumn("doaj", CSVColumn.NONE, None, overwrite=ow_strategy))
     ])
 
     # Do not quote the values in the 'period' and 'euro' columns
@@ -272,6 +341,7 @@ def main():
         True,
         False,
         False,
+        True,
         True,
         True,
         True,
@@ -427,23 +497,28 @@ def main():
             column_name = header[index]
         if index in index_dict:
             column = index_dict[index]
-            msg = "column number {} ({}) is the {} column '{}'".format(
+            msg = u"column number {} ({}) is the {} column '{}'".format(
                 index, column_name, column.requirement, column.column_type)
             if column.requirement in [CSVColumn.MANDATORY, CSVColumn.OPTIONAL]:
                 oat.print_g(msg)
             else:
                 oat.print_b(msg)
         else:
-            msg = ("column number {} ({}) is an unknown column, it will be " +
-                   "appended to the generated CSV file")
-            oat.print_y(msg.format(index, column_name))
-            if not column_name:
-                # Use a generic name
-                column_name = "unknown"
-            while column_name in column_map.keys():
-                # TODO: Replace by a numerical, increasing suffix
-                column_name += "_"
-            column_map[column_name] = CSVColumn(column_name, CSVColumn.NONE, index)
+            if args.add_unknown_columns:
+                msg = (u"column number {} ({}) is an unknown column, it will be " +
+                       "appended to the generated CSV file")
+                oat.print_y(msg.format(index, column_name))
+                if not column_name:
+                    # Use a generic name
+                    column_name = "unknown"
+                while column_name in column_map.keys():
+                    # TODO: Replace by a numerical, increasing suffix
+                    column_name += "_"
+                column_map[column_name] = CSVColumn(column_name, CSVColumn.NONE, index)
+            else:
+                msg = (u"column number {} ({}) is an unknown column, it will be " +
+                       "ignored")
+                oat.print_y(msg.format(index, column_name))
 
     print ""
     for column in column_map.values():
@@ -470,8 +545,6 @@ def main():
     print "\n    *** Starting metadata aggregation ***\n"
 
     enriched_content = []
-    
-    error_messages = []
 
     csv_file.seek(0)
     reader = oat.UnicodeReader(csv_file, dialect=dialect, encoding=enc)
@@ -489,133 +562,15 @@ def main():
                 # If the CSV file has a header, we are currently there - skip it
                 # to get to the first data row
                 continue
-        print "---Processing line number " + str(row_num) + "---"
-        if len(row) != num_columns:
-            error_msg = ("Syntax: the number of values in line {} ({}) " +
-                         "differs from the number of columns ({}). Line left " +
-                         "unchanged, please correct the error in the result " +
-                         "file and re-run.")
-            error_msg_fmt = error_msg.format(row_num, len(row), num_columns)
-            error_messages.append("Line {}: {}".format(row_num, error_msg_fmt))
-            oat.print_r(error_msg_fmt)
-            enriched_content.append(row)
+        if args.start and args.start > row_num:
             continue
-
-        doi = row[column_map["doi"].index]
-        
-        current_row = OrderedDict()
-        # Copy content of identified columns
-        for csv_column in column_map.values():
-            if csv_column.index is not None and len(row[csv_column.index]) > 0:
-                if csv_column.column_type == "euro":
-                    # special case for monetary values: Cast to float to ensure
-                    # the decimal point is a dot (instead of a comma)
-                    euro_value = row[csv_column.index]
-                    try:
-                        euro = locale.atof(euro_value)
-                        if euro.is_integer():
-                            euro = int(euro)
-                        current_row[csv_column.column_type] = str(euro)
-                    except ValueError:
-                        msg = ERROR_MSGS["locale"].format(euro_value,
-                                                          csv_column.index)
-                        oat.print_r(msg)
-                        sys.exit()
-                else:
-                    current_row[csv_column.column_type] = row[csv_column.index]
-            else:
-                current_row[csv_column.column_type] = "NA"
-
-        # include crossref metadata
-        crossref_result = oat.get_metadata_from_crossref(doi)
-        if crossref_result["success"]:
-            print "Crossref: DOI resolved: " + doi
-            current_row["indexed_in_crossref"] = "TRUE"
-            data = crossref_result["data"]
-            for key, value in data.iteritems():
-                if value is not None:
-                    if key == "journal_full_title":
-                        unified_value = oat.get_unified_journal_title(value)
-                        if unified_value != value:
-                            msg = INFO_MSGS["unify"].format("journal title",
-                                                            value,
-                                                            unified_value)
-                            oat.print_b(msg)
-                        new_value = unified_value
-                    elif key == "publisher":
-                        unified_value = oat.get_unified_publisher_name(value)
-                        if unified_value != value:
-                            msg = INFO_MSGS["unify"].format("publisher name",
-                                                            value,
-                                                            unified_value)
-                            oat.print_b(msg)
-                        new_value = unified_value
-                    else:
-                        new_value = value
-                else:
-                    new_value = "NA"
-                    if args.verbose:
-                        print (u"WARNING: Element '{}' not found in in " +
-                               "response for doi {}.").format(key, doi)
-                old_value = current_row[key]
-                current_row[key] = column_map[key].check_overwrite(old_value, new_value)
-        else:
-            error_msg = ("Crossref: Error while trying to resolve DOI " + doi +
-                         ": " + crossref_result["error_msg"])
-            oat.print_r(error_msg)
-            error_messages.append("Line {}: {}".format(row_num, error_msg))
-            current_row["indexed_in_crossref"] = "FALSE"
-
-        # include pubmed metadata
-        pubmed_result = oat.get_metadata_from_pubmed(doi)
-        if pubmed_result["success"]:
-            print "Pubmed: DOI resolved: " + doi
-            data = pubmed_result["data"]
-            for key, value in data.iteritems():
-                if value is not None:
-                    new_value = value
-                else:
-                    new_value = "NA"
-                    if args.verbose:
-                        print (u"WARNING: Element '{}' not found in in " +
-                               "response for doi {}.").format(key, doi)
-                old_value = current_row[key]
-                current_row[key] = column_map[key].check_overwrite(old_value, new_value)
-        else:
-            error_msg = ("Pubmed: Error while trying to resolve DOI " + doi +
-                         ": " + pubmed_result["error_msg"])
-            oat.print_r(error_msg)
-            error_messages.append("Line {}: {}".format(row_num, error_msg))
-
-        # lookup in DOAJ. try the EISSN first, then ISSN and finally print ISSN
-        if current_row["doaj"] != "TRUE":
-            issns = []
-            if current_row["issn_electronic"] != "NA":
-                issns.append(current_row["issn_electronic"])
-            if current_row["issn"] != "NA":
-                issns.append(current_row["issn"])
-            if current_row["issn_print"] != "NA":
-                issns.append(current_row["issn_print"])
-            for issn in issns:
-                doaj_res = oat.lookup_journal_in_doaj(issn, args.bypass_cert_verification)
-                if doaj_res["data_received"]:
-                    if doaj_res["data"]["in_doaj"]:
-                        msg = "DOAJ: Journal ISSN ({}) found in DOAJ ('{}')."
-                        print msg.format(issn, doaj_res["data"]["title"])
-                        current_row["doaj"] = "TRUE"
-                        break
-                    else:
-                        msg = "DOAJ: Journal ISSN ({}) not found in DOAJ."
-                        current_row["doaj"] = "FALSE"
-                        print msg.format(issn)
-                else:
-                    msg = "DOAJ: Error while trying to look up ISSN {}: {}"
-                    msg_fmt = msg.format(issn, doaj_res["error_msg"])
-                    oat.print_r(msg_fmt)
-                    error_messages.append("Line {}: {}".format(row_num, msg_fmt))
-
-
-        enriched_content.append(current_row.values())
+        if args.end and args.end < row_num:
+            continue
+        print "---Processing line number " + str(row_num) + "---"
+        enriched_row = oat.process_row(row, row_num, column_map, num_columns,
+                                       doaj_offline_analysis,
+                                       args.bypass_cert_verification)
+        enriched_content.append(enriched_row)
 
     csv_file.close()
 
@@ -623,12 +578,13 @@ def main():
         writer = oat.OpenAPCUnicodeWriter(out, quotemask, True, True)
         writer.write_rows(enriched_content)
 
-    if not error_messages:
+    if not bufferedHandler.buffer:
         oat.print_g("Metadata enrichment successful, no errors occured")
     else:
         oat.print_r("There were errors during the enrichment process:\n")
-        for msg in error_messages:
-            print msg + "\n"
+    # closing will implicitly flush the handler and print any buffered
+    # messages to stderr
+    bufferedHandler.close()
 
 if __name__ == '__main__':
     main()
