@@ -1,3 +1,4 @@
+.cache
 # Exclude generated files
 python/out.csv
 # Exclude python byte-compiled files
