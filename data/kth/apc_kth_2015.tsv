@@ -1,10 +1,10 @@
 institution	period	cost	doi	is_hybrid	publisher	journal_full_title	issn	issn_print	issn_electronic	url
 kth	2015	990	10.1109/JPHOT.2015.2428245	FALSKT	IEEE	IEEE Photonics Journal			1943-0655	http://ieeexplore.ieee.org/document/7098342/
-kth	2015	1430	10.1109/ACCESS.2015.2414815	SANT	IEEE	IEEE Access 			2169-3536	http://ieeexplore.ieee.org/document/7072470/
+kth	2015	1430	10.1109/ACCESS.2015.2414815	FALSE	IEEE	IEEE Access 			2169-3536	http://ieeexplore.ieee.org/document/7072470/
 kth	2015	1505	10.1109/TIM.2015.2427731	SANT	IEEE	IEEE Transactions on Instrumentation and Measurement		0018-9456	1557-9662	http://ieeexplore.ieee.org/document/7104121/
 kth	2015	1505	10.1109/TITS.2015.2431293	SANT	IEEE	IEEE Transactions on Intelligent Transportation Systems		1524-9050	1558-0016	http://ieeexplore.ieee.org/document/7116534/
 kth	2015	1505	10.1109/TVT.2015.2434497	SANT	IEEE	IEEE Transactions on Vehicular Technology		0018-9545	1939-9359	http://ieeexplore.ieee.org/document/7109926/
-kth	2015	990	10.1109/JEDS.2015.2443172	SANT	IEEE	IEEE Journal of the Electron Devices Society			2168-6734	http://ieeexplore.ieee.org/document/7120903/
+kth	2015	990	10.1109/JEDS.2015.2443172	FALSE	IEEE	IEEE Journal of the Electron Devices Society			2168-6734	http://ieeexplore.ieee.org/document/7120903/
 kth	2015	1280	10.1109/JPETS.2015.2445296	SANT	IEEE	IEEE Power and Energy Technology Systems Journal			2332-7707	http://ieeexplore.ieee.org/document/7234831/
 kth	2015	1280	10.1109/TAFFC.2015.2457417	SANT	IEEE	IEEE Transactions on Affective Computing		1949-3045		http://ieeexplore.ieee.org/document/7160715/
 kth	2015	1505	10.1109/TASE.2015.2471305	SANT	IEEE	IEEE Transactions on Automation Science and Engineering		1545-5955	1558-3783	http://ieeexplore.ieee.org/document/7254252/
@@ -17,7 +17,7 @@ kth	2015	2200	10.1007/s13280-015-0735-8	SANT	Springer	Ambio				http://link.sprin
 kth	2015	2200	10.1007/s10851-015-0613-9	SANT	Springer	Journal of Mathematical Imaging and Vision				http://link.springer.com/article/10.1007/s10851-015-0613-9
 kth	2015	2200	10.1007/s11571-015-9362-0	SANT	Springer	Cognitive Neurodynamics				http://link.springer.com/article/10.1007/s11571-015-9362-0
 kth	2015	2200	10.1007/s13280-015-0732-y	SANT	Springer	Ambio				http://link.springer.com/article/10.1007/s13280-015-0732-y
-kth	2015	0	10.1007/s13373-015-0067-9	SANT	Springer	Bulletin of Mathematical Sciences				http://link.springer.com/article/10.1007/s13373-015-0067-9
+kth	2015	0	10.1007/s13373-015-0067-9	FALSE	Springer	Bulletin of Mathematical Sciences				http://link.springer.com/article/10.1007/s13373-015-0067-9
 kth	2015	930	10.1186/s40163-015-0027-4	FALSKT	Springer	Crime Science				https://crimesciencejournal.springeropen.com/articles/10.1186/s40163-015-0027-4
 kth	2015	2200	10.1007/s10237-015-0692-y	FALSKT	Springer	Biomechanics and Modeling in Mechanobiology				http://link.springer.com/article/10.1007/s10237-015-0692-y
 kth	2015	2275	10.1093/jigpal/jzv021	SANT	Oxford University Press	Logic Journal of the IGPL				http://jigpal.oxfordjournals.org/content/early/2015/07/13/jigpal.jzv021.full
