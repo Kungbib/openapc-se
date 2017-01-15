@@ -1,10 +1,10 @@
-# About Openapc-se
+# About Open APC Sweden
 
-This is a pilot project initiated by the National Library of Sweden together with Swedish higher education institutions (HEIs). The apc survey below includes only journal articles.   
+Open APC Sweden is a pilot project initiated by the National Library of Sweden together with Swedish higher education institutions (HEIs) in order to investigate the possibilities of establishing an open open access publication cost database. 
 
-A first [report](http://www.kb.se/dokument/open%20access/Open_APC_Sweden_English_LAST.pdf) from the pilot with the results from the initial workshop is now published at [OpenAccess.se](http://www.kb.se/openaccess/Open-APC-Sweden/). The report concludes that Sweden has currently no common funding system in place in order to finance and handle invoices for Article Processing Charges (APCs) paid in order to publish open access articles, fulfilling the demands of research funders. A Swedish open APC database, like the Open APC Initiative in Germany, would therefore be difficult to implement in Sweden at present. 
+A first [report](http://www.kb.se/dokument/open%20access/Open_APC_Sweden_English_LAST.pdf) from the pilot with the results from an initial workshop held in 2016 is now published at [OpenAccess.se](http://www.kb.se/openaccess/Open-APC-Sweden/). The report concludes that Sweden has currently no common funding system in place in order to finance and handle invoices for Article Processing Charges (APCs) paid in order to publish open access articles, fulfilling the demands of research funders. A Swedish open APC database, like the Open APC Initiative in Germany, would therefore be difficult to implement in Sweden at present. 
 
-A pilot project named "Open APC Sweden" was initiated by the National Library of Sweden together with Swedish HEIs in order to investigate the possibilities of establishing an open database. The result from the first workshop proposes two options which could dramatically facilitate the collection and monitoring of Swedish APC data. Firstly, Swedish HEIs need to establish a common invoice code for APCs in their respective accounts and invoice processing systems. Secondly, institutional repositories need to enable the registration of metadata about “corresponding author”, who receives and pays for incurred APC costs via an invoice directly addressed to the author in question.
+The result from the first workshop proposes two options which could dramatically facilitate the collection and monitoring of Swedish APC data. Firstly, Swedish HEIs need to establish a common invoice code for APCs in their respective accounts and invoice processing systems. Secondly, institutional repositories need to enable the registration of metadata about “corresponding author”, who receives and pays for incurred APC costs via an invoice directly addressed to the author in question. The survey data in this pilot project includes only journal articles. 
 
 In order to establish "Open APC Sweden" there is a great need for a concerted effort by stakeholders. The current project aims to keep the Swedish HEI sector informed about ways in which to monitor the total cost of publication, which includes the collection of APCs. 
 
@@ -38,18 +38,15 @@ This project follows the [Open APC Initiative](https://github.com/OpenAPC/openap
 3. The National Library of Sweden (kb)   
 4. Stockholm University (su)   
 5. Swedish University of Agricultural Sciences (slu)
+6. Luleå Technical University (ltu)
 
 ## Dataset
-
-
 
 Information on both open access journal articles and open access publication of articles in toll-access journals ("hybrid") are provided.
 
 In total,  19434 € for  11 articles were paid by the participating unviversities. Average  fee is 1766.7 € and the median 1769 €.
 
 ## Open Access Journals
-
-
 
 At the moment, the dataset releases information on 7 articles in open access journals which charge publication fees. Total expenditure amounts to  9311 €. Average  fee is 1330.1 € and the median 1530 €.
 
@@ -61,8 +58,8 @@ View dataset on [GitHub](https://github.com/OpenAPC/openapc-de/blob/master/data/
 |mah |        3|              3539|       1179.67|   1311|
 |su  |        4|              5772|       1443.00|   1608|
 
-## Hybrid articles
 
+## Hybrid articles
 
 In many toll-access journals some of the articles are open access after a fee has been paid. This model is often called "hybrid open access".
 The dataset covers 4 hybrid open access articles. Total expenditure amounts to  10123 €. Average  fee is 2530.8 € and the median 2631 €.
