@@ -5,3 +5,5 @@ python/out.csv
 *.pyc
 # Exclude PYCharm project settings directory
 .idea/
+# Exclude Python compiled files
+python/__pycache__/
