@@ -43,9 +43,6 @@ This project follows the [Open APC Initiative](https://github.com/OpenAPC/openap
 5. Swedish University of Agricultural Sciences (slu)
 6. Luleå Technical University (ltu)
 
-## Sample of statistics
-A first saample of statistics from the project may be viewed at the [statistics page](https://github.com/Kungbib/openapc-se/blob/master/statistics.html)
-
 ## Contributing APC data
 See [guidelines for the template](https://github.com/Kungbib/openapc-se/wiki/Guide-for-completing-the-survey).
 
@@ -55,4 +52,4 @@ For general comments, email Beate Eellend at the National Library of Sweden: **b
 
 For technical comments, contact Ulf Kronman at the National Library of Sweden: **ulf.kronman [at] kb.se**
 
-[Page updated 2017-01-17]
+[Page updated 2017-01-18]
