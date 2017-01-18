@@ -1,0 +1,264 @@
+---
+output:
+  md_document: default
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+
+```{r, echo = FALSE, warning = TRUE}
+
+# knitr::opts_knit$set(base.url = "/")
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  echo = FALSE,
+  fig.width = 9,
+  fig.height = 6
+)
+options(scipen = 999, digits = 0)
+knitr::knit_hooks$set(inline = function(x) {
+  prettyNum(x, big.mark = " ")
+})
+```
+
+# Open APC Sweden - Statistics
+
+This is a first sample of statistics from the pilot project Open APC Sweden, aiming at gathering data about article processing charges (APC's) paid by Swedish universities. The statistics covers journal articles from a few pilot contributors. Please see the [project wiki](https://github.com/Kungbib/openapc-se/wiki) for more information about the project and instructions on how to contribute.
+
+## Pilot contributors 
+
+```{r, echo=FALSE, results='asis', message = FALSE}
+# Ulf Kronman, 2017-01-17
+pilot_inst <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t", quote = "'")
+colnames(pilot_inst) <- c("Acronym", "Contributing organisation")
+knitr::kable(as.data.frame(pilot_inst))
+```
+
+
+## Dataset
+
+```{r, echo=FALSE, cache = FALSE}
+my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
+```
+
+Information on both open access journal articles and open access publication of articles in toll-access journals ("hybrid") are provided. You may view the dataset at the [project page in GitHub](https://github.com/Kungbib/openapc-se/blob/master/data/apc_se.csv).
+
+In total,  **`r format(sum(my.apc$euro), scientific=FALSE)` €** for  **`r nrow(my.apc)` articles** were paid by the **`r length(unique(my.apc$institution))` universities** that have delivered APC data so far. The **average  APC is `r format(sum(my.apc$euro)/nrow(my.apc), digits = 4)` €** and the **median is APC `r format(median(my.apc$euro), digits = 4)` €**.
+
+| Universities | Publications | Total APC (€) | Average APC (€) | Median APC (€) |
+|-------------:|-------------:|--------------:|----------------:|---------------:|
+| `r length(unique(my.apc$institution))` | `r nrow(my.apc)` | `r format(sum(my.apc$euro), scientific=FALSE)` |  `r format(sum(my.apc$euro)/nrow(my.apc), digits = 4)` | `r format(median(my.apc$euro), digits = 4)` |
+
+## Articles in Open Access journals ("gold OA")
+
+```{r, echo=FALSE, cache = FALSE}
+my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
+my.apc <- my.apc[my.apc$is_hybrid == FALSE,]
+```
+
+At the moment, the dataset contains information on **`r nrow(my.apc)`** articles in open access journals which charge publication fees. Total expenditure amounts to  **`r format(sum(my.apc$euro), scientific=FALSE)` €**. The average  fee is **`r format(sum(my.apc$euro)/nrow(my.apc), digits = 4)` €** and the median fee is **`r median(my.apc$euro)` €**.
+
+
+```{r, echo=FALSE, results='asis', message = FALSE}
+my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
+my.apc <- my.apc[my.apc$is_hybrid == FALSE,]
+
+# Combine with acronym-name-map to get full organisation names
+code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t")
+
+# Join datasets on institution and acronym
+my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
+
+# Drop unused factor levels in organisation field before using it for statistics
+# my.apc$organisation <- factor(my.apc$organisation)
+my.apc <- droplevels(my.apc)
+
+# Ulf Kronman, 2017-01-04: Added na.rm=TRUE to get past NA values in APC column (right?)
+df.summary <-cbind(
+             tapply(my.apc$euro, my.apc$organisation, length),
+             tapply(my.apc$euro, my.apc$organisation, sum, na.rm=TRUE),
+             tapply(my.apc$euro, my.apc$organisation, mean, na.rm=TRUE),
+             tapply(my.apc$euro, my.apc$organisation, median, na.rm=TRUE)
+             )
+colnames(df.summary) <- c("Articles", "Fees paid in €", "Mean APC", "Median APC")
+
+knitr::kable(as.data.frame(df.summary), digits = 0, format.args = list(big.mark = ' '))
+```
+
+## OA articles in toll-access journals ("hybrid OA")
+
+```{r, echo=FALSE, cache = FALSE}
+my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
+my.apc <- my.apc[my.apc$is_hybrid == TRUE,]
+```
+In many toll-access journals some of the articles are open access after a fee has been paid. This model is often called "hybrid open access".
+The dataset covers **`r nrow(my.apc)`** hybrid open access articles. Total expenditure amounts to  **`r format(sum(my.apc$euro), scientific=FALSE)` €**. Average  fee is **`r format(mean(my.apc$euro), digits = 4)` €** and the median fee is **`r median(my.apc$euro)` €**.
+
+The following institutions have contributed its expenditures for hybrid open access.
+
+```{r, echo=FALSE, cache = FALSE}
+my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
+my.apc <- my.apc[my.apc$is_hybrid == TRUE,]
+my.apc <- droplevels(my.apc)
+
+# Combine with acronym-name-map to get full organisation names
+code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t")
+
+# Join datasets on institution and acronym
+my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
+# Drop unused factor levels in organisation field before using it for statistics
+my.apc <- droplevels(my.apc)
+
+df.summary <-cbind(tapply(my.apc$euro, my.apc$organisation, length),
+             tapply(my.apc$euro, my.apc$organisation, sum, na.rm=TRUE),
+             tapply(my.apc$euro, my.apc$organisation, mean, na.rm=TRUE),
+             tapply(my.apc$euro, my.apc$organisation, median, na.rm=TRUE))
+colnames(df.summary) <- c("Articles", "Fees paid in €", "Mean APC", "Median APC")
+
+knitr::kable(as.data.frame(df.summary), digits = 0, format.args = list(big.mark = ' '))
+
+```
+
+## Distribution over publishers
+
+```{r, echo=FALSE, message = FALSE, warning= FALSE}
+require(ggplot2)
+require(RColorBrewer)
+
+#load data
+my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
+
+# Combine with acronym-name-map to get full organisation names
+code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t")
+
+# Join datasets on institution and acronym
+my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
+# Drop unused factor levels in organisation field before using it for statistics
+my.apc <- droplevels(my.apc)
+
+# Choose only publishers with at least 5 publications (abritary)
+# my.apc$publisher <- factor(my.apc$publisher,
+#                            levels = c(rownames(data.frame(rev(sort(tapply(my.apc$euro, list(my.apc$publisher), sum)))))))
+# my.apc$institution <- factor(my.apc$institution,
+#                           levels =  c(rownames(data.frame(rev(sort(table(my.apc$institution)))))))
+
+# levels(my.apc$publisher)[6:length(levels(my.apc$publisher))] <- paste("other (n=",
+#                                                                       length(unique(my.apc$publisher)) - 5, ")", sep="")
+
+my.df <- aggregate(my.apc$euro, list(Publisher = my.apc$publisher, University = my.apc$organisation), sum)
+
+## Plot by publisher
+colour_count <- length(unique(my.df$University))
+
+p <- ggplot(my.df, aes(Publisher, x, fill= University)) + 
+    geom_bar(stat="identity") + 
+    ylab("Fees paid (in €)") +
+    xlab("") +
+    coord_flip() +
+    scale_y_continuous(limits=c(0, 120000), labels=function(x) format(x, big.mark = " ", scientific = FALSE)) +
+    scale_fill_manual(values = colorRampPalette(brewer.pal(9, "Set1"))(colour_count)) +
+    theme_bw() + theme(legend.text = element_text(size = 5, colour = "black"), legend.position="bottom") +
+    guides(fill=guide_legend(ncol=2))
+
+ggsave(p, file = "figure/apc_publishers_by_units.png", width=18,height=12,units="cm")
+```
+
+APC fees paid per publisher with indication of contribution from each university.
+
+![](figure/apc_publishers_by_units.png)
+
+## Fees paid per university
+
+```{r, echo = FALSE}
+my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
+
+# Combine with acronym-name-map to get full organisation names
+code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t")
+
+# Join datasets on institution and acronym
+my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
+# Drop unused factor levels in organisation field before using it for statistics
+my.apc <- droplevels(my.apc)
+
+q <- ggplot(my.apc, aes(organisation, euro)) + 
+    geom_boxplot() + 
+    geom_point(alpha = 8/10, size = 2,aes(colour = is_hybrid)) + 
+    scale_colour_manual(values = c("#000A02", "#DC4E00"))
+
+q <- q + ylab("APC (€)") + 
+    xlab("") +
+    coord_flip() + 
+    theme(legend.position="top") + 
+    theme_bw()
+
+ggsave(q, file = "figure/apc_per_organisation.png", width=18, height=12, units="cm")
+```
+
+![](figure/apc_per_organisation.png)
+
+## Average fee per publisher
+
+```{r, echo=FALSE}
+my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
+
+# Combine with acronym-name-map to get full organisation names
+code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t")
+
+# Join datasets on institution and acronym
+my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
+# Drop unused factor levels in organisation field before using it for statistics
+my.apc <- droplevels(my.apc)
+
+# relevel
+# This is not working. Commented away by Ulf Kronman, 2017-01-04
+# my.apc$publisher <- factor(my.apc$publisher, levels = c(rownames(data.frame(rev(sort(table(my.apc$publisher)))))))
+# my.apc$institution <- factor(my.apc$institution,
+#                           levels =  c(rownames(data.frame(rev(sort(table(my.apc$institution)))))))
+
+# levels(my.apc$publisher)[6:length(levels(my.apc$publisher))] <- paste("other (n=",
+#                                                                       length(unique(my.apc$publisher)) - 5, ")", sep="")
+
+q <- ggplot(my.apc, aes(publisher, euro)) + geom_boxplot() + geom_point(alpha = 2/10, size = 2)
+q <- q + ylab("APC (€)") + 
+    xlab("") +
+    coord_flip() + 
+    theme(legend.position="top") + theme_bw()
+
+ggsave(q, file = "figure/publisher_apcs.png", width=18, height=12, units="cm")
+
+```
+
+![](figure/publisher_apcs.png)
+
+## Average and distribution of APC's by year
+
+```{r, echo=FALSE}
+
+my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
+
+# mpg <- my.apc[my.apc$institution == "KTH Royal Institute of Technology",]
+q <- ggplot(my.apc, aes(factor(period), euro)) + geom_boxplot() + geom_point(alpha = 2/10, size = 2)
+q <- q + ylab("APC (€)") + xlab("Year") + theme(legend.position="top") + theme_bw()
+
+ggsave(q, file = "figure/apc_avg_per_year.png", width=18, height=12, units="cm")
+
+```
+
+![](figure/apc_avg_per_year.png)
+
+## Acknowledgement  
+This project follows the [Open APC Initiative](https://github.com/OpenAPC/openapc-de) to share data on paid APCs. 
+It recognises efforts from [JISC](https://www.jisc-collections.ac.uk/Jisc-Monitor/APC-data-collection/) and [FWF](https://figshare.com/articles/Austrian_Science_Fund_FWF_Publication_Cost_Data_2014/1378610) to standardise APC reporting.    
+
+
+## Contact
+For general comments, email Beate Eellend at the National Library of Sweden: **beate.eellend [at] kb.se** 
+
+For technical issues, email Ulf Kronman at the National Library of Sweden: **ulf.kronman [at] kb.se** 
+
+
+
+
