@@ -7,3 +7,5 @@ python/out.csv
 .idea/
 # Exclude Python compiled files
 python/__pycache__/
+
+*.ffs_db
