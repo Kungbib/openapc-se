@@ -44,7 +44,9 @@ This project follows the [Open APC Initiative](https://github.com/OpenAPC/openap
 6. Luleå Technical University (ltu)
 
 ## Sample of statistics
-A first saample of statistics from the project may be viewed at the [statistics page](http://htmlpreview.github.io/?https://github.com/Kungbib/openapc-se/blob/master/statistics.html)
+A first sample of statistics from the project may be viewed at the [statistics page (PDF)](https://github.com/Kungbib/openapc-se/blob/master/statistics.pdf)
+
+<!--- (http://htmlpreview.github.io/?https://github.com/Kungbib/openapc-se/blob/master/statistics.html) --->
 
 ## Contributing APC data
 See [guidelines for the template](https://github.com/Kungbib/openapc-se/wiki/Guide-for-completing-the-survey).
