@@ -48,7 +48,7 @@ A first sample of statistics from the project may be viewed at the [statistics p
 
 
 ## Contributing APC data
-See [guidelines for the template](https://github.com/Kungbib/openapc-se/wiki/Guide-for-completing-the-survey).
+See [guidelines for the template](https://github.com/Kungbib/openapc-se/wiki/Guide-for-completing-the-survey) in the project Wiki.
 
 ## Contact
 
