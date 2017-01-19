@@ -8,6 +8,7 @@
 
     ToDo
     -----
+    Pseudo-code planning for Publisher name enhancement semi-automatic through CrossRef
 
     Done
     -----
@@ -25,8 +26,16 @@ import argparse
 import codecs
 import locale
 import sys
+import os
+import urllib2
+import xml.etree.ElementTree as ET
+
+# Add path for script environment
+# sys.path.append('/Users/ulfkro/OneDrive/KB-dokument/Open Access/Kostnader/Open APC Sweden/openapc-se')
+sys.path.append('/Users/ulfkro/OneDrive/KB-dokument/Open Access/Kostnader/Open APC Sweden/openapc-se_development')
 
 import python.openapc_toolkit as oat
+
 
 # Global parameters
 # ======================================================================================================================
@@ -57,29 +66,10 @@ ERROR_MSGS = {
 # Where do we find and put the data
 STR_DATA_DIRECTORY = '../../data'
 
-# List of institutions' files to prepare
-LST_APC_FILES = [
-    # 'kth/apc_kth_2015.tsv',
-    # 'mah/apc_mah_2015.csv',
-    # # 'slu/apc_slu_2015.csv',
-    # # 'su/apc_su_2015.csv',
-    # 'su/apc_su_2015.tsv',
-    # 'su/apc_su_2016.csv',
-]
-
 STR_APC_FILE_LIST = STR_DATA_DIRECTORY + '/' + 'apc_file_list.txt'
 
 # Cleaned result will be put here
 STR_RESULT_FILE_NAME = STR_DATA_DIRECTORY + '/' + 'apc_se_merged.csv'
-
-# Name mapping for institution acronyms. Move this to reporting phase in R?
-DCT_CODE_NAME_MAP = {
-    # 'kth': u'KTH Royal Institute of Technology',
-    # 'ltu': u'Luleå Technical University',
-    # 'mah': u'Malmö University College',
-    # 'slu': u'Swedish University of Agricultural Sciences',
-    # 'su': u'Stockholm University',
-}
 
 # ======================================================================================================================
 
@@ -94,6 +84,10 @@ def main():
     # Write cleaned data to summary file
     write_cleaned_data(lst_cleaned_data)
 
+# ======================================================================================================================
+
+
+# ======================================================================================================================
 # ======================================================================================================================
 
 
@@ -113,7 +107,7 @@ def collect_apc_data():
 
     args = parser.parse_args()
 
-    # print 'Processing files:'
+    print 'Processing files:'
     # print LST_APC_FILES
 
     # A list for the cleaned data
@@ -239,7 +233,10 @@ def clean_apc_data(str_input_file, args):
     csv_file.seek(0)
     reader = oat.UnicodeReader(csv_file, dialect=dialect, encoding=enc)
 
-    print "\n    *** Starting cleaning of file *** \n"
+    print "\nNOTE:    *** Starting cleaning of file *** \n"
+
+    # Create a publisher name normalising object
+    obj_publisher_normaliser = PublisherNormaliser()
 
     cleaned_content = []
     error_messages = []
@@ -288,15 +285,25 @@ def clean_apc_data(str_input_file, args):
             if col_number == 3 and not csv_column:
                 csv_column = u'0'
 
+            # Publisher name normalisation, send DOI for CrossRef lookup
+            if col_number == 6:
+                str_publisher_name_normalised = obj_publisher_normaliser.normalise(csv_column, row[3])
+                # print str_publisher_name_normalised
+                csv_column = str_publisher_name_normalised
+
             current_row.append(csv_column)
 
         # Check output if verbose mode
         if args.verbose:
             print current_row
+            # obj_publisher_normaliser.write_new_name_map()
 
         cleaned_content.append(current_row)
 
     csv_file.close()
+
+    # Write new names to file
+    obj_publisher_normaliser.write_new_name_map()
 
     if not error_messages:
         oat.print_g("Metadata cleaning successful, no errors occured")
@@ -309,6 +316,115 @@ def clean_apc_data(str_input_file, args):
 
 # ======================================================================================================================
 
+
+# ======================================================================================================================
+class PublisherNormaliser(object):
+    """ Class to keep data and methods for publisher name normalisation """
+
+    STR_PUBLISHER_NAME_MAP_FILE = STR_DATA_DIRECTORY + '/' + 'publisher_name_map.tsv'
+
+    # ------------------------------------------------------------------------------------------------------------------
+    def __init__(self):
+        """ Create name mapping dictionary for processing """
+
+        self.dct_publisher_name_map = {}
+
+        fp_publisher_map = open(self.STR_PUBLISHER_NAME_MAP_FILE, 'r')
+        for str_row in fp_publisher_map:
+            lst_row = str_row.split('\t')
+            self.dct_publisher_name_map[lst_row[0].lower()] = lst_row[1].strip()
+
+        # print self.dct_publisher_name_map
+    # ------------------------------------------------------------------------------------------------------------------
+
+    # ------------------------------------------------------------------------------------------------------------------
+    def normalise(self, str_publisher_name_in, str_doi):
+        """ The main procedure to look up publisher name in name map and CrossRef. Calls sub-methods. """
+
+        # Check if we already have this name in the map
+        str_publisher_name_lower = str_publisher_name_in.strip().lower()
+        if str_publisher_name_lower in self.dct_publisher_name_map.keys():
+            str_publisher_name_normalised = self.dct_publisher_name_map[str_publisher_name_lower]
+            print 'NOTE: Name "{}" normalised to "{}"'.format(str_publisher_name_in, str_publisher_name_normalised)
+            return str_publisher_name_normalised
+        elif str_doi:
+            # Look up in CrossRef
+            tpl_crossref_result = self.get_crossref_names(str_doi)
+            print tpl_crossref_result
+            str_publisher_name_normalised = self.ask_user(str_publisher_name_in, tpl_crossref_result)
+            return str_publisher_name_normalised
+        else:
+            print 'WARNING: No normalisation of name {}'.format(str_publisher_name_in)
+            return str_publisher_name_in
+    # ------------------------------------------------------------------------------------------------------------------
+
+    # ------------------------------------------------------------------------------------------------------------------
+    def ask_user(self, str_publisher_name_in, tpl_crossref_result):
+        """ Ask opinion from user and return choice """
+        print 'NOTE: Several name choices found. Please chose one alternative or enter new suggested name'
+        print '1) {}'.format(str_publisher_name_in)
+        print '2) {}'.format(tpl_crossref_result[0])
+        print '3) {}'.format(tpl_crossref_result[1])
+        print '4) Enter new preferred name'
+        str_choice = raw_input('Choose [2]:  ')
+        if str_choice == '1':
+            str_publisher_name_normalised = str_publisher_name_in
+        elif str_choice == '2':
+            str_publisher_name_normalised = tpl_crossref_result[0]
+        elif str_choice == '3':
+            str_publisher_name_normalised = tpl_crossref_result[1]
+        elif str_choice:
+            str_publisher_name_normalised = str_choice
+        else:
+            str_publisher_name_normalised = tpl_crossref_result[0]
+
+        # Add choice to mapping dictionary
+        self.dct_publisher_name_map[str_publisher_name_in.lower()] = str_publisher_name_normalised
+        # print self.dct_publisher_name_map
+        return str_publisher_name_normalised
+    # ------------------------------------------------------------------------------------------------------------------
+
+    # ------------------------------------------------------------------------------------------------------------------
+    def write_new_name_map(self):
+        """ Write the new name map to file to remember for next processing """
+        fp_name_map_file = open(self.STR_PUBLISHER_NAME_MAP_FILE, 'w')
+        for str_key in self.dct_publisher_name_map.keys():
+            fp_name_map_file.write('{}\t{}\n'.format(str_key, self.dct_publisher_name_map[str_key]))
+        fp_name_map_file.close()
+    # ------------------------------------------------------------------------------------------------------------------
+
+    # ------------------------------------------------------------------------------------------------------------------
+    def get_crossref_names(self, doi):
+        """ Get Crossref info
+            <crm-item name="publisher-name" type="string">Institute of Electrical and Electronics Engineers (IEEE)</crm-item>
+            <crm-item name="prefix-name" type="string">Institute of Electrical and Electronics Engineers</crm-item>
+        """
+        url = 'http://data.crossref.org/' + doi
+        headers = {"Accept": "application/vnd.crossref.unixsd+xml"}
+        req = urllib2.Request(url, None, headers)
+        try:
+            response = urllib2.urlopen(req)
+            content_string = response.read()
+            root = ET.fromstring(content_string)
+            # print content_string
+            prefix_name_result = root.findall(".//cr_qr:crm-item[@name='prefix-name']",
+                                  {"cr_qr": "http://www.crossref.org/qrschema/3.0"})
+            publisher_name_result = root.findall(".//cr_qr:crm-item[@name='publisher-name']",
+                                  {"cr_qr": "http://www.crossref.org/qrschema/3.0"})
+
+            return (publisher_name_result[0].text, prefix_name_result[0].text)
+        except urllib2.HTTPError as httpe:
+            code = str(httpe.getcode())
+            return "HTTPError: {} - {}".format(code, httpe.reason)
+        except urllib2.URLError as urle:
+            return "URLError: {}".format(urle.reason)
+        except ET.ParseError as etpe:
+            return "ElementTree ParseError: {}".format(str(etpe))
+
+    # ------------------------------------------------------------------------------------------------------------------
+
+
+# ======================================================================================================================
 
 # ======================================================================================================================
 class CSVColumn(object):
