@@ -8,10 +8,11 @@
 
     ToDo
     -----
-    Pseudo-code planning for Publisher name enhancement semi-automatic through CrossRef
+    Error handling in new normalisation routine
 
     Done
     -----
+    2017-01-19 Publisher name enhancement semi-automatic through CrossRef
     2017-01-15 Move args reading to main process
     2017-01-15 Move acronym-name mapping to reporting phase in R
     2017-01-09 Tidy up code and comment properly
@@ -26,7 +27,6 @@ import argparse
 import codecs
 import locale
 import sys
-import os
 import urllib2
 import xml.etree.ElementTree as ET
 
@@ -87,10 +87,6 @@ def main():
 # ======================================================================================================================
 
 
-# ======================================================================================================================
-# ======================================================================================================================
-
-
 # Gather data from the delivered APC files
 # ======================================================================================================================
 def collect_apc_data():
@@ -133,8 +129,6 @@ def collect_apc_data():
         int_file_number += 1
 
         str_input_file_name = STR_DATA_DIRECTORY + '/' + str_file_name
-        print '\nProcessing file {}'.format(str_input_file_name)
-
         lst_new_apc_data = clean_apc_data(str_input_file_name, args)
 
         if int_file_number == 1:
@@ -222,6 +216,7 @@ def clean_apc_data(str_input_file, args):
                "--enc argument")
         sys.exit()
 
+    print '\nProcessing file {}'.format(str_input_file)
     csv_file = open(str_input_file, "r")
 
     reader = oat.UnicodeReader(csv_file, dialect=dialect, encoding=enc)
@@ -264,6 +259,13 @@ def clean_apc_data(str_input_file, args):
             cleaned_content.append(header)
             continue
 
+        # Put the DOI in a string for later use
+        if row[3]:
+            str_doi = row[3].strip()
+        else:
+            print 'WARNING: No DOI found'
+            str_doi = ''
+
         current_row = []
 
         col_number = 0
@@ -276,19 +278,22 @@ def clean_apc_data(str_input_file, args):
             # Remove leading and trailing spaces
             csv_column = csv_column.strip()
 
-            if csv_column.lower().strip() == u'sant':
+            if csv_column.lower() == u'sant':
                 csv_column = u'TRUE'
-            elif csv_column.lower().strip() == u'falskt':
+            elif csv_column.lower() == u'falskt':
+                csv_column = u'FALSE'
+            elif csv_column == u'true':
+                csv_column = u'TRUE'
+            elif csv_column == u'false':
                 csv_column = u'FALSE'
 
-            # Special handling of empty APC fields
+            # Special handling of empty APC fields - is this right?
             if col_number == 3 and not csv_column:
                 csv_column = u'0'
 
-            # Publisher name normalisation, send DOI for CrossRef lookup
+            # Publisher name normalisation, use map or send DOI for CrossRef lookup
             if col_number == 6:
-                str_publisher_name_normalised = obj_publisher_normaliser.normalise(csv_column, row[3])
-                # print str_publisher_name_normalised
+                str_publisher_name_normalised = obj_publisher_normaliser.normalise(csv_column, str_doi)
                 csv_column = str_publisher_name_normalised
 
             current_row.append(csv_column)
@@ -296,14 +301,10 @@ def clean_apc_data(str_input_file, args):
         # Check output if verbose mode
         if args.verbose:
             print current_row
-            # obj_publisher_normaliser.write_new_name_map()
 
         cleaned_content.append(current_row)
 
     csv_file.close()
-
-    # Write new names to file
-    obj_publisher_normaliser.write_new_name_map()
 
     if not error_messages:
         oat.print_g("Metadata cleaning successful, no errors occured")
@@ -311,6 +312,9 @@ def clean_apc_data(str_input_file, args):
         oat.print_r("There were errors during the cleaning process:\n")
         for msg in error_messages:
             print msg + "\n"
+
+    # Write new publisher names to file
+    obj_publisher_normaliser.write_new_name_map()
 
     return cleaned_content
 
@@ -326,31 +330,27 @@ class PublisherNormaliser(object):
     # ------------------------------------------------------------------------------------------------------------------
     def __init__(self):
         """ Create name mapping dictionary for processing """
-
         self.dct_publisher_name_map = {}
-
         fp_publisher_map = open(self.STR_PUBLISHER_NAME_MAP_FILE, 'r')
         for str_row in fp_publisher_map:
             lst_row = str_row.split('\t')
             self.dct_publisher_name_map[lst_row[0].lower()] = lst_row[1].strip()
-
-        # print self.dct_publisher_name_map
+        fp_publisher_map.close()
     # ------------------------------------------------------------------------------------------------------------------
 
     # ------------------------------------------------------------------------------------------------------------------
     def normalise(self, str_publisher_name_in, str_doi):
         """ The main procedure to look up publisher name in name map and CrossRef. Calls sub-methods. """
-
         # Check if we already have this name in the map
         str_publisher_name_lower = str_publisher_name_in.strip().lower()
         if str_publisher_name_lower in self.dct_publisher_name_map.keys():
             str_publisher_name_normalised = self.dct_publisher_name_map[str_publisher_name_lower]
-            print 'NOTE: Name "{}" normalised to "{}"'.format(str_publisher_name_in, str_publisher_name_normalised)
+            if str_publisher_name_normalised != str_publisher_name_in:
+                print 'NOTE: Name "{}" normalised to "{}"'.format(str_publisher_name_in, str_publisher_name_normalised)
             return str_publisher_name_normalised
         elif str_doi:
             # Look up in CrossRef
             tpl_crossref_result = self.get_crossref_names(str_doi)
-            print tpl_crossref_result
             str_publisher_name_normalised = self.ask_user(str_publisher_name_in, tpl_crossref_result)
             return str_publisher_name_normalised
         else:
@@ -366,7 +366,7 @@ class PublisherNormaliser(object):
         print '2) {}'.format(tpl_crossref_result[0])
         print '3) {}'.format(tpl_crossref_result[1])
         print '4) Enter new preferred name'
-        str_choice = raw_input('Choose [2]:  ')
+        str_choice = raw_input('Choose [2] or enter new name:  ')
         if str_choice == '1':
             str_publisher_name_normalised = str_publisher_name_in
         elif str_choice == '2':
@@ -377,10 +377,8 @@ class PublisherNormaliser(object):
             str_publisher_name_normalised = str_choice
         else:
             str_publisher_name_normalised = tpl_crossref_result[0]
-
         # Add choice to mapping dictionary
         self.dct_publisher_name_map[str_publisher_name_in.lower()] = str_publisher_name_normalised
-        # print self.dct_publisher_name_map
         return str_publisher_name_normalised
     # ------------------------------------------------------------------------------------------------------------------
 
@@ -411,8 +409,7 @@ class PublisherNormaliser(object):
                                   {"cr_qr": "http://www.crossref.org/qrschema/3.0"})
             publisher_name_result = root.findall(".//cr_qr:crm-item[@name='publisher-name']",
                                   {"cr_qr": "http://www.crossref.org/qrschema/3.0"})
-
-            return (publisher_name_result[0].text, prefix_name_result[0].text)
+            return publisher_name_result[0].text, prefix_name_result[0].text
         except urllib2.HTTPError as httpe:
             code = str(httpe.getcode())
             return "HTTPError: {} - {}".format(code, httpe.reason)
@@ -420,11 +417,10 @@ class PublisherNormaliser(object):
             return "URLError: {}".format(urle.reason)
         except ET.ParseError as etpe:
             return "ElementTree ParseError: {}".format(str(etpe))
-
     # ------------------------------------------------------------------------------------------------------------------
 
-
 # ======================================================================================================================
+
 
 # ======================================================================================================================
 class CSVColumn(object):
@@ -454,7 +450,6 @@ class CSVColumn(object):
         self.overwrite = overwrite
         self.overwrite_whitelist = {}
         self.overwrite_blacklist = {}
-
     # ------------------------------------------------------------------------------------------------------------------
 
     # ------------------------------------------------------------------------------------------------------------------
@@ -501,6 +496,7 @@ class CSVColumn(object):
 
 # ======================================================================================================================
 
+# Invoke the main loop
 # ======================================================================================================================
 if __name__ == '__main__':
     main()

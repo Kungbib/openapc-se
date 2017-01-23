@@ -75,6 +75,48 @@ universities** that have delivered APC data so far. The **average APC is
 </tbody>
 </table>
 
+Open Access Articles (Total; both "gold" and "hybrid" OA)
+---------------------------------------------------------
+
+At the moment, the dataset contains information on **150** OA articles.
+Total expenditure amounts to **227 223 €**. The average fee is **1 515
+€** and the median fee is **1 905 €**.
+
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">Articles</th>
+<th align="right">Fees paid in €</th>
+<th align="right">Mean APC (€)</th>
+<th align="right">Median APC (€)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>KTH Royal Institute of Technology</td>
+<td align="right">129</td>
+<td align="right">190 688</td>
+<td align="right">1 478</td>
+<td align="right">1 905</td>
+</tr>
+<tr class="even">
+<td>Malmö University College</td>
+<td align="right">6</td>
+<td align="right">11 432</td>
+<td align="right">1 905</td>
+<td align="right">2 256</td>
+</tr>
+<tr class="odd">
+<td>Stockholm University</td>
+<td align="right">15</td>
+<td align="right">25 103</td>
+<td align="right">1 674</td>
+<td align="right">1 686</td>
+</tr>
+</tbody>
+</table>
+
 Articles in Open Access journals ("gold OA")
 --------------------------------------------
 
@@ -89,8 +131,8 @@ fee is **1 424 €**.
 <th></th>
 <th align="right">Articles</th>
 <th align="right">Fees paid in €</th>
-<th align="right">Mean APC</th>
-<th align="right">Median APC</th>
+<th align="right">Mean APC (€)</th>
+<th align="right">Median APC (€)</th>
 </tr>
 </thead>
 <tbody>
@@ -136,8 +178,8 @@ open access.
 <th></th>
 <th align="right">Articles</th>
 <th align="right">Fees paid in €</th>
-<th align="right">Mean APC</th>
-<th align="right">Median APC</th>
+<th align="right">Mean APC (€)</th>
+<th align="right">Median APC (€)</th>
 </tr>
 </thead>
 <tbody>
@@ -168,10 +210,26 @@ open access.
 Distribution over publishers
 ----------------------------
 
+### All types of OA articles
+
 APC fees paid per publisher with indication of contribution from each
 university.
 
 ![](figure/apc_publishers_by_units.png)
+
+### OA journal articles
+
+APC fees paid per publisher with indication of contribution from each
+university.
+
+![](figure/apc_publishers_gold_oa.png)
+
+### Hybrid OA articles in toll access journals
+
+APC fees paid per publisher with indication of contribution from each
+university.
+
+![](figure/apc_publishers_hybrid_oa.png)
 
 Fees paid per university
 ------------------------
