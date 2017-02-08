@@ -21,7 +21,7 @@ except ImportError:
            "encoding guessing will not work")
 
 # regex for detecing DOIs
-DOI_RE = re.compile("^(((https?://)?dx.doi.org/)|(doi:))?(?P<doi>10\.[0-9]+(\.[0-9]+)*\/\S+)")
+DOI_RE = re.compile("^(((https?://)?(dx.)?doi.org/)|(doi:))?(?P<doi>10\.[0-9]+(\.[0-9]+)*\/\S+)")
 ISSN_RE = re.compile("^(?P<first_part>\d{4})-?(?P<second_part>\d{3})(?P<check_digit>[\dxX])$")
 
 # These classes were adopted from
@@ -308,6 +308,114 @@ def get_csv_file_content(file_name, enc=None):
         content.append(row)
     csv_file.close()
     return (header, content)
+    
+def has_value(field):
+    return len(field) > 0 and field != "NA"
+    
+def oai_harvest(basic_url, metadata_prefix=None, oai_set=None, processing=None, selective_harvest=False):
+    """
+    Harvest OpenAPC records via OAI-PMH
+    """
+    if selective_harvest:
+        # create lists of all exisiting dois, pmids and urls
+        keys = ["doi", "pmid", "url"]
+        lists = {}
+        for key in keys:
+            lists[key] = []
+        with open("../data/apc_de.csv", "r") as core_file:
+            reader = UnicodeDictReader(core_file, encoding="utf-8")
+            for line in reader:
+                for key in keys:
+                    if has_value(line[key]):
+                        lists[key].append(line[key])
+    collection_xpath = ".//oai_2_0:record//oai_2_0:metadata//intact:collection"
+    token_xpath = ".//oai_2_0:resumptionToken"
+    processing_regex = re.compile("'(?P<target>\w*?)':'(?P<generator>.*?)'")
+    variable_regex = re.compile("%(\w*?)%")
+    collection_content = OrderedDict([
+        ("intact:institution", "institution"),
+        ("intact:period", "period"),
+        ("intact:euro", "euro"),
+        ("intact:id_number[@type='doi']", "doi"),
+        ("intact:is_hybrid", "is_hybrid"),
+        ("intact:publisher", "publisher"),
+        ("intact:journal_full_title", "journal_full_title"),
+        ("intact:issn", "issn"),
+        ("intact:licence", "license_ref"),
+        ("intact:id_number[@type='pubmed']","pmid"),
+        ("", "url"),
+        ("intact:id_number[@type='local']", "local_id")
+    ])
+    #institution_xpath = 
+    namespaces = {
+        "oai_2_0": "http://www.openarchives.org/OAI/2.0/",
+        "intact": "http://intact-project.org"
+    }
+    url = basic_url + "?verb=ListRecords"
+    if metadata_prefix:
+        url += "&metadataPrefix=" + metadata_prefix
+    if oai_set:
+        url += "&set=" + oai_set
+    if processing:
+        match = processing_regex.match(processing)
+        if match:
+            groupdict = match.groupdict()
+            target = groupdict["target"]
+            generator = groupdict["generator"]
+            variables = variable_regex.search(generator).groups()
+        else:
+            print_r("Error: Unable to parse processing instruction!")
+            processing = None
+    articles = [collection_content.values()] # use as header
+    while url is not None:
+        try:
+            request = urllib2.Request(url)
+            url = None
+            response = urllib2.urlopen(request)
+            content_string = response.read()
+            root = ET.fromstring(content_string)
+            collections = root.findall(collection_xpath, namespaces)
+            counter = 0
+            for collection in collections:
+                article = OrderedDict()
+                for xpath, elem in collection_content.iteritems():
+                    result = collection.find(xpath, namespaces)
+                    if result is not None and result.text is not None:
+                        article[elem] = result.text
+                    else:
+                        article[elem] = "NA"
+                if processing:
+                    target_string = generator
+                    for variable in variables:
+                        target_string = target_string.replace("%" + variable + "%", article[variable])
+                    article[target] = target_string
+                if article["euro"] in ["NA", "0"]:
+                    print_r("Article skipped, no APC amount found.")
+                    continue
+                elif selective_harvest:
+                    key_found = False
+                    for key in keys:
+                        if article[key] in lists[key]:
+                            print_r("Article skipped, " + key + " already in core data file.")
+                            key_found = True
+                            break
+                    if key_found:
+                        continue
+                articles.append(article.values())
+                counter += 1
+            token = root.find(token_xpath, namespaces)
+            if token is not None:
+                url = basic_url + "?verb=ListRecords&resumptionToken=" + token.text
+            print_g(str(counter) + " articles harvested.")
+        except urllib2.HTTPError as httpe:
+            code = str(httpe.getcode())
+            print "HTTPError: {} - {}".format(code, httpe.reason)
+        except urllib2.HTTPError as httpe:
+            code = str(httpe.getcode())
+            print "HTTPError: {} - {}".format(code, httpe.reason)
+    with open("out.csv", "w") as f:
+        writer = OpenAPCUnicodeWriter(f, openapc_quote_rules=True, has_header=True)
+        writer.write_rows(articles)
 
 def get_metadata_from_crossref(doi_string):
     """
@@ -663,6 +771,10 @@ def process_row(row, row_num, column_map, num_required_columns,
     if current_row["issn_print"] != "NA":
         issns.append(current_row["issn_print"])
     for issn in issns:
+        # In some cases xref delievers ISSNs without a hyphen. Add it
+        # temporarily to prevent the DOAJ lookup from failing.
+        if re.match("^\d{7}[\dxX]$", issn):
+            issn = issn[:4] + "-" + issn[4:]
         # look up in an offline copy of the DOAJ if requested...
         if doaj_offline_analysis:
             lookup_result = doaj_offline_analysis.lookup(issn)
@@ -752,7 +864,8 @@ def get_unified_publisher_name(publisher):
         "American Society for Biochemistry &amp; Molecular Biology (ASBMB)": "American Society for Biochemistry & Molecular Biology (ASBMB)",
         "Institute of Electrical and Electronics Engineers (IEEE)": "Institute of Electrical & Electronics Engineers (IEEE)",
         "Cold Spring Harbor Laboratory": "Cold Spring Harbor Laboratory Press",
-        "Institute of Electrical &amp; Electronics Engineers (IEEE)": "Institute of Electrical & Electronics Engineers (IEEE)"
+        "Institute of Electrical &amp; Electronics Engineers (IEEE)": "Institute of Electrical & Electronics Engineers (IEEE)",
+        "Hindawi Limited": "Hindawi Publishing Corporation"
     }
     return publisher_mappings.get(publisher, publisher)
 
@@ -810,7 +923,8 @@ def get_unified_journal_title(journal_full_title):
         "Stochastics and  Partial Differential Equations: Analysis and Computations": "Stochastics and Partial Differential Equations: Analysis and Computations",
         "Journal of Mass Communication & Journalism": "Journal of Mass Communication and Journalism",
         "Journal of Child and Adolescent Behavior": "Journal of Child and Adolescent Behaviour",
-        "Journal of Otolaryngology - Head and Neck Surgery": "Journal of Otolaryngology - Head & Neck Surgery"
+        "Journal of Otolaryngology - Head and Neck Surgery": "Journal of Otolaryngology - Head & Neck Surgery",
+        "manuscripta mathematica": "Manuscripta Mathematica"
     }
     return journal_mappings.get(journal_full_title, journal_full_title)
 
