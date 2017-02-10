@@ -33,11 +33,11 @@ A first sample of statistics from the project may be viewed at the [statistics p
 
 
 ## Contributing APC data
-See [guidelines for the template](https://github.com/Kungbib/openapc-se/wiki/Guide-for-completing-the-survey) in the project Wiki.
+See [guidelines for contribution of data](https://github.com/Kungbib/openapc-se/wiki/Instructions-for-data-entry) in the project Wiki.
 
 ## Contact
 
 For general comments, email Beate Eellend at the National Library of Sweden: **beate.eellend [at] kb.se**  
 For technical comments, contact Ulf Kronman at the National Library of Sweden: **ulf.kronman [at] kb.se**
 
-[Page updated 2017-02-09]
+[Page updated 2017-02-10]
