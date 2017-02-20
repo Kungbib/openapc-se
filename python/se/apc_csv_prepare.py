@@ -8,6 +8,7 @@
 
     ToDo
     -----
+    Report DOI errors to file(?) for correction by institutions
     Error handling in new normalisation routine
 
     Done
@@ -103,9 +104,6 @@ def collect_apc_data():
 
     args = parser.parse_args()
 
-    print 'Processing files:'
-    # print LST_APC_FILES
-
     # A list for the cleaned data
     lst_cleaned_data = []
 
@@ -127,6 +125,8 @@ def collect_apc_data():
     for str_file_name in lst_apc_files:
 
         int_file_number += 1
+
+        print 'Processing file: {} \n --------------------------------- \n'.format(str_file_name)
 
         str_input_file_name = STR_DATA_DIRECTORY + '/' + str_file_name
         lst_new_apc_data = clean_apc_data(str_input_file_name, args)
@@ -241,7 +241,8 @@ def clean_apc_data(str_input_file, args):
     for row in reader:
 
         row_num += 1
-        print "--- Processing line number {} ---".format(str(row_num))
+
+        # print "--- Processing line number {} ---".format(str(row_num))
 
         # Check input if verbose mode
         if args.verbose:
@@ -307,7 +308,7 @@ def clean_apc_data(str_input_file, args):
     csv_file.close()
 
     if not error_messages:
-        oat.print_g("Metadata cleaning successful, no errors occured")
+        oat.print_g("Metadata cleaning successful, no errors occured\n")
     else:
         oat.print_r("There were errors during the cleaning process:\n")
         for msg in error_messages:

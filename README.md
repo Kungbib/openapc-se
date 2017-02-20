@@ -23,10 +23,11 @@ This project follows the [Open APC Initiative](https://github.com/OpenAPC/openap
 (institution code in parenthesis)
 
 1. KTH Royal Institute of Techonology (kth)
-2. Malmö University (mah)
-3. Stockholm University (su)   
+2. Luleå Technical University (ltu)
+3. Malmö University (mah)
 4. Swedish University of Agricultural Sciences (slu)
-6. Luleå Technical University (ltu)
+5. Stockholm University (su)   
+6. Södertörn University (sh) 
 
 ## Sample of statistics
 A first sample of statistics from the project may be viewed at the [statistics page](https://github.com/Kungbib/openapc-se/blob/master/statistics.md)
@@ -40,4 +41,4 @@ See [guidelines for contribution of data](https://github.com/Kungbib/openapc-se/
 For general comments, email Beate Eellend at the National Library of Sweden: **beate.eellend [at] kb.se**  
 For technical comments, contact Ulf Kronman at the National Library of Sweden: **ulf.kronman [at] kb.se**
 
-[Page updated 2017-02-10]
+[Page updated 2017-02-20]
