@@ -25,8 +25,8 @@ This project follows the [Open APC Initiative](https://github.com/OpenAPC/openap
 1. KTH Royal Institute of Techonology (kth)
 2. Luleå Technical University (ltu)
 3. Malmö University (mah)
-4. Swedish University of Agricultural Sciences (slu)
-5. Stockholm University (su)   
+4. Stockholm University (su)
+5. Swedish University of Agricultural Sciences (slu)
 6. Södertörn University (sh) 
 
 ## Sample of statistics
