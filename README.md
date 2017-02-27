@@ -41,4 +41,4 @@ See [guidelines for contribution of data](https://github.com/Kungbib/openapc-se/
 For general comments, email Beate Eellend at the National Library of Sweden: **beate.eellend [at] kb.se**  
 For technical comments, contact Ulf Kronman at the National Library of Sweden: **ulf.kronman [at] kb.se**
 
-[Page updated 2017-02-20]
+[Page updated 2017-02-20] 

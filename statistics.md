@@ -1,15 +1,15 @@
 Open APC Sweden - Statistics
 ============================
 
-This is a first sample of statistics from the pilot project Open APC
-Sweden, aiming at gathering data about article processing charges
-(APC's) paid by Swedish universities. The statistics covers journal
-articles from a few pilot contributors. Please see the [project
+This is a sample of statistics from the pilot project Open APC Sweden,
+aiming at gathering data about article processing charges (APC's) paid
+by Swedish universities. The statistics covers journal articles from a
+few pilot contributors. Please see the [project
 wiki](https://github.com/Kungbib/openapc-se/wiki) for more information
 about the project and instructions on how to contribute.
 
-Pilot contributors
-------------------
+Contributing organisations
+--------------------------
 
 <table>
 <thead>
@@ -20,6 +20,14 @@ Pilot contributors
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left">gu</td>
+<td align="left">University of Gothenburg</td>
+</tr>
+<tr class="even">
+<td align="left">ki</td>
+<td align="left">Karolinska Institutet</td>
+</tr>
+<tr class="odd">
 <td align="left">kth</td>
 <td align="left">KTH Royal Institute of Technology</td>
 </tr>
@@ -28,16 +36,36 @@ Pilot contributors
 <td align="left">Luleå Technical University</td>
 </tr>
 <tr class="odd">
+<td align="left">lu</td>
+<td align="left">Lund University</td>
+</tr>
+<tr class="even">
+<td align="left">liu</td>
+<td align="left">Linköping University</td>
+</tr>
+<tr class="odd">
 <td align="left">mah</td>
 <td align="left">Malmö University College</td>
 </tr>
 <tr class="even">
+<td align="left">sh</td>
+<td align="left">Södertörn University</td>
+</tr>
+<tr class="odd">
 <td align="left">slu</td>
 <td align="left">Swedish University of Agricultural Sciences</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">su</td>
 <td align="left">Stockholm University</td>
+</tr>
+<tr class="odd">
+<td align="left">umu</td>
+<td align="left">Umeå University</td>
+</tr>
+<tr class="even">
+<td align="left">uu</td>
+<td align="left">Uppsala University</td>
 </tr>
 </tbody>
 </table>
@@ -50,9 +78,9 @@ publication of articles in toll-access journals ("hybrid") are provided.
 You may view the dataset at the [project page in
 GitHub](https://github.com/Kungbib/openapc-se/blob/master/data/apc_se.csv).
 
-In total, **227 223 €** for **150 articles** were paid by the **3
+In total, **272 626 €** for **205 articles** were paid by the **9
 universities** that have delivered APC data so far. The **average APC is
-1 515 €** and the **median is APC 1 905 €**.
+1 330 €** and the **median is APC 1 383 €**.
 
 <table>
 <thead>
@@ -66,53 +94,100 @@ universities** that have delivered APC data so far. The **average APC is
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">3</td>
-<td align="right">150</td>
-<td align="right">227 223</td>
-<td align="right">1 515</td>
-<td align="right">1 905</td>
+<td align="right">9</td>
+<td align="right">205</td>
+<td align="right">272 626</td>
+<td align="right">1 330</td>
+<td align="right">1 383</td>
 </tr>
 </tbody>
 </table>
 
-Open Access Articles (Total; both "gold" and "hybrid" OA)
+Open Access Articles (Total: both "gold" and "hybrid" OA)
 ---------------------------------------------------------
 
-At the moment, the dataset contains information on **150** OA articles.
-Total expenditure amounts to **227 223 €**. The average fee is **1 515
-€** and the median fee is **1 905 €**.
+At the moment, the dataset contains the following information:
+
+-   Number of articles: **205**
+-   Total expenditure: **272 626 €**
+-   Average fee: **1 330 €**
+-   Median fee: **1 383 €**
+
+Articles and APC costs per institution:
 
 <table>
 <thead>
 <tr class="header">
 <th></th>
 <th align="right">Articles</th>
-<th align="right">Fees paid in €</th>
+<th align="right">Fees paid (€)</th>
 <th align="right">Mean APC (€)</th>
 <th align="right">Median APC (€)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>KTH Royal Institute of Technology</td>
-<td align="right">129</td>
-<td align="right">190 688</td>
-<td align="right">1 478</td>
-<td align="right">1 905</td>
+<td>Karolinska Institutet</td>
+<td align="right">5</td>
+<td align="right">3 775</td>
+<td align="right">755</td>
+<td align="right">755</td>
 </tr>
 <tr class="even">
+<td>KTH Royal Institute of Technology</td>
+<td align="right">165</td>
+<td align="right">224 049</td>
+<td align="right">1 358</td>
+<td align="right">1 505</td>
+</tr>
+<tr class="odd">
+<td>Linköping University</td>
+<td align="right">1</td>
+<td align="right">755</td>
+<td align="right">755</td>
+<td align="right">755</td>
+</tr>
+<tr class="even">
+<td>Lund University</td>
+<td align="right">1</td>
+<td align="right">755</td>
+<td align="right">755</td>
+<td align="right">755</td>
+</tr>
+<tr class="odd">
 <td>Malmö University College</td>
 <td align="right">6</td>
 <td align="right">11 432</td>
 <td align="right">1 905</td>
 <td align="right">2 256</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Stockholm University</td>
-<td align="right">15</td>
-<td align="right">25 103</td>
-<td align="right">1 674</td>
-<td align="right">1 686</td>
+<td align="right">16</td>
+<td align="right">25 858</td>
+<td align="right">1 616</td>
+<td align="right">1 608</td>
+</tr>
+<tr class="odd">
+<td>Umeå University</td>
+<td align="right">4</td>
+<td align="right">3 850</td>
+<td align="right">962</td>
+<td align="right">755</td>
+</tr>
+<tr class="even">
+<td>University of Gothenburg</td>
+<td align="right">4</td>
+<td align="right">1 510</td>
+<td align="right">378</td>
+<td align="right">378</td>
+</tr>
+<tr class="odd">
+<td>Uppsala University</td>
+<td align="right">3</td>
+<td align="right">642</td>
+<td align="right">214</td>
+<td align="right">321</td>
 </tr>
 </tbody>
 </table>
@@ -120,42 +195,89 @@ Total expenditure amounts to **227 223 €**. The average fee is **1 515
 Articles in Open Access journals ("gold OA")
 --------------------------------------------
 
-At the moment, the dataset contains information on **97** articles in
-open access journals which charge publication fees. Total expenditure
-amounts to **123 293 €**. The average fee is **1 271 €** and the median
-fee is **1 424 €**.
+At the moment, the dataset contains the following information on
+articles in open access journals:
+
+-   Number of articles: **151**
+-   Total expenditure: **166 554 €**
+-   Average fee: **1 103 €**
+-   Median fee: **982 €**
+
+Articles and APC costs per institution:
 
 <table>
 <thead>
 <tr class="header">
 <th></th>
 <th align="right">Articles</th>
-<th align="right">Fees paid in €</th>
+<th align="right">Fees paid (€)</th>
 <th align="right">Mean APC (€)</th>
 <th align="right">Median APC (€)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>KTH Royal Institute of Technology</td>
-<td align="right">83</td>
-<td align="right">103 170</td>
-<td align="right">1 243</td>
-<td align="right">1 424</td>
+<td>Karolinska Institutet</td>
+<td align="right">5</td>
+<td align="right">3 775</td>
+<td align="right">755</td>
+<td align="right">755</td>
 </tr>
 <tr class="even">
+<td>KTH Royal Institute of Technology</td>
+<td align="right">118</td>
+<td align="right">134 389</td>
+<td align="right">1 139</td>
+<td align="right">1 021</td>
+</tr>
+<tr class="odd">
+<td>Linköping University</td>
+<td align="right">1</td>
+<td align="right">755</td>
+<td align="right">755</td>
+<td align="right">755</td>
+</tr>
+<tr class="even">
+<td>Lund University</td>
+<td align="right">1</td>
+<td align="right">755</td>
+<td align="right">755</td>
+<td align="right">755</td>
+</tr>
+<tr class="odd">
 <td>Malmö University College</td>
 <td align="right">3</td>
 <td align="right">3 539</td>
 <td align="right">1 180</td>
 <td align="right">1 311</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Stockholm University</td>
-<td align="right">11</td>
-<td align="right">16 584</td>
-<td align="right">1 508</td>
-<td align="right">1 530</td>
+<td align="right">12</td>
+<td align="right">17 339</td>
+<td align="right">1 445</td>
+<td align="right">1 448</td>
+</tr>
+<tr class="odd">
+<td>Umeå University</td>
+<td align="right">4</td>
+<td align="right">3 850</td>
+<td align="right">962</td>
+<td align="right">755</td>
+</tr>
+<tr class="even">
+<td>University of Gothenburg</td>
+<td align="right">4</td>
+<td align="right">1 510</td>
+<td align="right">378</td>
+<td align="right">378</td>
+</tr>
+<tr class="odd">
+<td>Uppsala University</td>
+<td align="right">3</td>
+<td align="right">642</td>
+<td align="right">214</td>
+<td align="right">321</td>
 </tr>
 </tbody>
 </table>
@@ -165,9 +287,12 @@ OA articles in toll-access journals ("hybrid OA")
 
 In many toll-access journals some of the articles are open access after
 a fee has been paid. This model is often called "hybrid open access".
-The dataset covers **53** hybrid open access articles. Total expenditure
-amounts to **103 930 €**. Average fee is **1 961 €** and the median fee
-is **1 905 €**.
+The dataset covers the following data on hybrid open access articles:
+
+-   Number of articles: **54**
+-   Total expenditure: **106 072 €**
+-   Average fee: **1 964 €**
+-   Median fee: **1 905 €**
 
 The following institutions have contributed its expenditures for hybrid
 open access.
@@ -177,7 +302,7 @@ open access.
 <tr class="header">
 <th></th>
 <th align="right">Articles</th>
-<th align="right">Fees paid in €</th>
+<th align="right">Fees paid (€)</th>
 <th align="right">Mean APC (€)</th>
 <th align="right">Median APC (€)</th>
 </tr>
@@ -185,9 +310,9 @@ open access.
 <tbody>
 <tr class="odd">
 <td>KTH Royal Institute of Technology</td>
-<td align="right">46</td>
-<td align="right">87 518</td>
-<td align="right">1 903</td>
+<td align="right">47</td>
+<td align="right">89 660</td>
+<td align="right">1 908</td>
 <td align="right">1 905</td>
 </tr>
 <tr class="even">
