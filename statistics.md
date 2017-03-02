@@ -78,9 +78,9 @@ publication of articles in toll-access journals ("hybrid") are provided.
 You may view the dataset at the [project page in
 GitHub](https://github.com/Kungbib/openapc-se/blob/master/data/apc_se.csv).
 
-In total, **272 626 €** for **205 articles** were paid by the **9
+In total, **373 693 €** for **241 articles** were paid by the **9
 universities** that have delivered APC data so far. The **average APC is
-1 330 €** and the **median is APC 1 383 €**.
+1 551 €** and the **median is APC 1 707 €**.
 
 <table>
 <thead>
@@ -95,10 +95,10 @@ universities** that have delivered APC data so far. The **average APC is
 <tbody>
 <tr class="odd">
 <td align="right">9</td>
-<td align="right">205</td>
-<td align="right">272 626</td>
-<td align="right">1 330</td>
-<td align="right">1 383</td>
+<td align="right">241</td>
+<td align="right">373 693</td>
+<td align="right">1 551</td>
+<td align="right">1 707</td>
 </tr>
 </tbody>
 </table>
@@ -108,10 +108,10 @@ Open Access Articles (Total: both "gold" and "hybrid" OA)
 
 At the moment, the dataset contains the following information:
 
--   Number of articles: **205**
--   Total expenditure: **272 626 €**
--   Average fee: **1 330 €**
--   Median fee: **1 383 €**
+-   Number of articles: **241**
+-   Total expenditure: **373 693 €**
+-   Average fee: **1 551 €**
+-   Median fee: **1 707 €**
 
 Articles and APC costs per institution:
 
@@ -177,10 +177,10 @@ Articles and APC costs per institution:
 </tr>
 <tr class="even">
 <td>University of Gothenburg</td>
-<td align="right">4</td>
-<td align="right">1 510</td>
-<td align="right">378</td>
-<td align="right">378</td>
+<td align="right">40</td>
+<td align="right">102 576</td>
+<td align="right">2 564</td>
+<td align="right">2 750</td>
 </tr>
 <tr class="odd">
 <td>Uppsala University</td>
@@ -198,10 +198,10 @@ Articles in Open Access journals ("gold OA")
 At the moment, the dataset contains the following information on
 articles in open access journals:
 
--   Number of articles: **151**
--   Total expenditure: **166 554 €**
--   Average fee: **1 103 €**
--   Median fee: **982 €**
+-   Number of articles: **160**
+-   Total expenditure: **194 136 €**
+-   Average fee: **1 213 €**
+-   Median fee: **1 021 €**
 
 Articles and APC costs per institution:
 
@@ -267,10 +267,10 @@ Articles and APC costs per institution:
 </tr>
 <tr class="even">
 <td>University of Gothenburg</td>
-<td align="right">4</td>
-<td align="right">1 510</td>
-<td align="right">378</td>
-<td align="right">378</td>
+<td align="right">13</td>
+<td align="right">29 092</td>
+<td align="right">2 238</td>
+<td align="right">2 800</td>
 </tr>
 <tr class="odd">
 <td>Uppsala University</td>
@@ -289,10 +289,10 @@ In many toll-access journals some of the articles are open access after
 a fee has been paid. This model is often called "hybrid open access".
 The dataset covers the following data on hybrid open access articles:
 
--   Number of articles: **54**
--   Total expenditure: **106 072 €**
--   Average fee: **1 964 €**
--   Median fee: **1 905 €**
+-   Number of articles: **81**
+-   Total expenditure: **179 557 €**
+-   Average fee: **2 217 €**
+-   Median fee: **2 200 €**
 
 The following institutions have contributed its expenditures for hybrid
 open access.
@@ -328,6 +328,13 @@ open access.
 <td align="right">8 519</td>
 <td align="right">2 130</td>
 <td align="right">2 190</td>
+</tr>
+<tr class="even">
+<td>University of Gothenburg</td>
+<td align="right">27</td>
+<td align="right">73 484</td>
+<td align="right">2 722</td>
+<td align="right">2 750</td>
 </tr>
 </tbody>
 </table>

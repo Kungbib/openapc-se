@@ -8,12 +8,14 @@
 
     ToDo
     -----
+    Add parameter to process a single file
     Do publisher normalisation here before Crossref enrichment?
     Handle duplicate entries - how?
     Report DOI errors to file(?) for correction by institutions
 
     Done
     -----
+    2017-03-02 Add (temporary?) function to comment away files from file list
     2017-02-16 Remove erroueous zero for non-cost entries?
     2017-02-26 Check for duplicate entries on DOI
     2017-02-15 Substitute comma for period
@@ -116,9 +118,11 @@ def collect_apc_data():
     try:
         fp_apc_files = open(STR_APC_FILE_LIST, 'r')
         for str_line in fp_apc_files:
+            # Don't process if we have a comment (#) on the line
+            if '#' in str_line:
+                continue
             lst_apc_files.append(str_line.strip())
-        print 'Processing files:'
-        print lst_apc_files
+        print 'Processing files: {}'.format('; '.join(lst_apc_files))
     except IOError:
         print 'File list not found in: {}'.format(STR_APC_FILE_LIST)
         sys.exit()

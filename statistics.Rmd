@@ -1,9 +1,9 @@
 ---
 output:
-  word_document: default
   md_document: default
-  pdf_document: default
   html_document: default
+  pdf_document: default
+  word_document: default
 ---
 
 ```{r, echo = FALSE, warning = TRUE}
