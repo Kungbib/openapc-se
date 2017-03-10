@@ -10,7 +10,7 @@
     -----
     Add parameter to process a single file
     Do publisher normalisation here before Crossref enrichment?
-    Handle duplicate entries - how?
+    Handle duplicate entries by skipping second entry and reporting for submission to data supplier
     Report DOI errors to file(?) for correction by institutions
 
     Done
@@ -65,12 +65,12 @@ ERROR_MSGS = {
 }
 
 # Where do we find and put the data
-STR_DATA_DIRECTORY = '../../data'
+STR_DATA_DIRECTORY = '../../data/'
 
-STR_APC_FILE_LIST = STR_DATA_DIRECTORY + '/' + 'apc_file_list.txt'
+STR_APC_FILE_LIST = STR_DATA_DIRECTORY + 'apc_file_list.txt'
 
 # Cleaned result will be put here
-STR_RESULT_FILE_NAME = STR_DATA_DIRECTORY + '/' + 'apc_se_merged.tsv'
+STR_RESULT_FILE_NAME = STR_DATA_DIRECTORY + 'apc_se_merged.tsv'
 
 # Keep a list of processed DOI's to check for duplicates - what to do if found?
 lst_dois_processed = []
@@ -117,12 +117,15 @@ def collect_apc_data():
     lst_apc_files = []
     try:
         fp_apc_files = open(STR_APC_FILE_LIST, 'r')
+        print '--------------------------------------'
+        print 'Processing files:' # {}'.format('; '.join(lst_apc_files))
         for str_line in fp_apc_files:
             # Don't process if we have a comment (#) on the line
             if '#' in str_line:
                 continue
             lst_apc_files.append(str_line.strip())
-        print 'Processing files: {}'.format('; '.join(lst_apc_files))
+            print str_line.strip()
+        print '--------------------------------------'
     except IOError:
         print 'File list not found in: {}'.format(STR_APC_FILE_LIST)
         sys.exit()
@@ -131,7 +134,7 @@ def collect_apc_data():
 
         int_file_number += 1
 
-        print 'Processing file: {} \n --------------------------------- \n'.format(str_file_name)
+        print 'Processing file: {} \n==================================================== \n'.format(str_file_name)
 
         str_input_file_name = STR_DATA_DIRECTORY + '/' + str_file_name
         lst_new_apc_data = clean_apc_data(str_input_file_name, args)

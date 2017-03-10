@@ -1,9 +1,211 @@
-institution 	period	cost	doi	is_hybrid	publisher	journal_full_title	issn	issn_print	issn_electronic	url
+institution 	period	eur	doi	is_hybrid	publisher	journal_full_title	issn	issn_print	issn_electronic	url
+su	2016	2667	10.1017/S2045796016000445	TRUE	Cambridge University Press	Epidemiology and Psychiatric Sciences		2045-7960	2045-7979	https://www.cambridge.org/core/journals/epidemiology-and-psychiatric-sciences/article/div-classtitlethe-use-of-psychiatric-services-by-young-adults-who-came-to-sweden-as-teenage-refugees-a-national-cohort-studydiv/52E7A0AB5F2357F7078D4C5E799DB1CB/core-reader
+su 	2016	2150	10.1080/03585522.2016.1258007	TRUE	Taylor and Francis	Scandinavian Economic History Review		0358-5522	1750-2837	http://www.tandfonline.com/doi/full/10.1080/03585522.2016.1258007?scroll=top&needAccess=true
+su 	2016	2150	10.1080/03585522.2016.1191534	TRUE	Taylor and Francis	Scandinavian Economic History Review		0358-5522	1750-2837	http://www.tandfonline.com/doi/full/10.1080/03585522.2016.1191534?scroll=top&needAccess=true
+su	2016	2200	10.1007/s11698-016-0144-7	TRUE	Springer 	Cliometrica		1863-2505	1863-2513	http://link.springer.com/article/10.1007/s11698-016-0144-7
+su 	2016	1138	10.1108/JFMM-04-2016-0033	TRUE	Emerald	Journal of Fashion Marketing and Management	1361-2026			http://www.emeraldinsight.com/doi/full/10.1108/JFMM-04-2016-0033
+su	2016	1948	10.1016/j.landusepol.2016.08.023	TRUE	Elsevier	Land Use Policy		0264-8377	1873-5754	http://www.sciencedirect.com/science/article/pii/S0264837716304458
+su	2016	1607	10.1016/j.avb.2016.02.006	TRUE	Elsevier	Aggression and Violent Behavior	1359-1789			http://www.sciencedirect.com/science/article/pii/S1359178916300064
+su	2016	1407	10.1371/journal.pone.0164611	FALSE 	Public Library of Science	PLOS ONE 			1932-6203	http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0164611
+su	2016	1727	10.1136/jech-2015-206547	TRUE	BMJ	Journal of Epidemiology and Community Health 		0143-005X	1470-2738	http://jech.bmj.com/content/70/6/569.full
+su	2016	1878	10.1177/1460458216656471	TRUE	Sage 	Health Informatics Journal		1460-4582	1741-2811	http://journals.sagepub.com/doi/full/10.1177/1460458216656471
+su	2016	2804	10.1111/jcpp.12560	TRUE	Wiley	Journal of Child Psychology and Psychiatry		0021-9630	1469-7610	http://onlinelibrary.wiley.com/doi/10.1111/jcpp.12560/full
+su 	2016	1950	10.1093/eurpub/ckw053	TRUE	Oxford 	European Journal of Public Health		1101-1262	1464-360X	https://academic.oup.com/eurpub/article-lookup/doi/10.1093/eurpub/ckw053
+su 	2016	2275	10.1093/rfs/hhw014	TRUE	Oxford 	Review of financial studies 		0893-9454	1465-7368	https://academic.oup.com/rfs/article/29/10/2814/2223352/
+su	2016	1404	10.1371/journal.pone.0156570	FALSE 	Public Library of Science	PLOS ONE 			1932-6203	http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0156570
+su	2016	3006	10.1111/add.13454	TRUE	Wiley	Addiction		0965-2140	1360-0443	http://onlinelibrary.wiley.com/doi/10.1111/add.13454/full
+su	2016	1071	10.1016/j.childyouth.2016.05.011	TRUE	Elsevier	Children and Youth Services Review	0190-7409			http://www.sciencedirect.com/science/article/pii/S0190740916301554
+su	2016	2658	10.1017/S1368980016001440	TRUE	Cambridge University Press	Public Health Nutrition		1368-9800	1475-2727	https://www.cambridge.org/core/journals/public-health-nutrition/article/div-classtitlesocial-patterning-of-overeating-binge-eating-compensatory-behaviours-and-symptoms-of-bulimia-nervosa-in-young-adult-women-results-from-the-australian-longitudinal-study-on-womens-healthdiv/9FB541DBA5FA92022911FE93700CDBD5
+su	2016	1173	10.1016/j.childyouth.2016.09.021	TRUE	Elsevier	Children and Youth Services Review	0190-7409			http://www.sciencedirect.com/science/article/pii/S0190740916303000
+su	2016	2780	10.1111/jora.12281	TRUE	Wiley	Journal of research on adolescence		1050-8392	1532-7795	http://onlinelibrary.wiley.com/doi/10.1111/jora.12281/full
+su	2016	2150	10.1080/09243453.2016.1253591	TRUE	Taylor and Francis	School Effectiveness and School Improvement				http://www.tandfonline.com/doi/full/10.1080/09243453.2016.1253591?scroll=top&needAccess=true
+su 	2016	2454	10.1016/j.jenvrad.2016.02.007	TRUE	Elsevier	Journal of Environmental Radioactivity	0265-931X			http://www.sciencedirect.com/science/article/pii/S0265931X16300303
+su 	2016	2142	10.1016/j.tiv.2016.05.014	TRUE	Elsevier	Toxicology in Vitro		0887-2333	1879-3177	http://www.sciencedirect.com/science/article/pii/S0887233316301096
+su	2016	1533	10.1016/j.npep.2016.08.008	TRUE	Elsevier	Neuropeptides		0143-4179	1532-2785	http://www.sciencedirect.com/science/article/pii/S0143417916300427
+su	2016	3157	10.1016/j.gloenvcha.2016.06.008	TRUE	Elsevier	Global Environmental Change	0959-3780			http://www.sciencedirect.com/science/article/pii/S0959378016300826
+su	2016	2706	10.1016/j.ecoser.2016.08.004	TRUE	Elsevier	Ecosystem Services	2212-0416			http://www.sciencedirect.com/science/article/pii/S2212041616302170
+su	2016	2455	10.1016/j.scitotenv.2016.02.176	TRUE	Elsevier	Science of The Total Environment		0048-9697	1879-1026	http://www.sciencedirect.com/science/article/pii/S0048969716303874
+su	2016	2142	10.1016/j.fct.2016.03.028	TRUE	Elsevier	Food and Chemical Toxicology		0278-6915	1873-6351	http://www.sciencedirect.com/science/article/pii/S0278691516300928
+su	2016	1867	10.1016/j.atmosenv.2016.05.041	TRUE	Elsevier	Atmospheric Environment	1352-2310			http://www.sciencedirect.com/science/article/pii/S1352231016303880
+su 	2016	2706	10.1016/j.envpol.2016.09.043	TRUE	Elsevier	Environmental Pollution		0269-7491	1873-6424	http://www.sciencedirect.com/science/article/pii/S0269749116312969
+su	2016	2751	10.1016/j.jpba.2016.09.029	TRUE	Elsevier	Journal of Pharmaceutical and Biomedical Analysis		0731-7085	1873-264X	http://www.sciencedirect.com/science/article/pii/S0731708516307026
+su 	2016	2706	10.1016/j.ecss.2016.10.009	TRUE	Elsevier	Estuarine, Coastal and Shelf Science		0272-771	1096-0015	http://www.sciencedirect.com/science/article/pii/S0272771416304383
+su	2016	893	10.1016/j.jmva.2016.02.013	TRUE	Elsevier	Journal of Multivariate Analysis	0047-259X			http://www.sciencedirect.com/science/article/pii/S0047259X16000579
+su	2016	1500	10.1002/iid3.115	FALSE 	Wiley	Immunity, Inflammation and Disease			2050-4527	http://onlinelibrary.wiley.com/doi/10.1002/iid3.115/full
+su	2016	1224	10.1002/ece3.2310	FALSE 	Wiley	Ecology and Evolution			2045-7758	http://onlinelibrary.wiley.com/doi/10.1002/ece3.2310/full
+su 	2016	2794	10.1111/1365-2745.12564	TRUE	Wiley	Journal of Ecology			1365-2745	http://onlinelibrary.wiley.com/doi/10.1111/1365-2745.12564/full
+su	2016	1424	10.1002/ece3.2067	FALSE 	Wiley	Ecology and Evolution			2045-7758	http://onlinelibrary.wiley.com/doi/10.1002/ece3.2067/full
+su	2016	3260	10.1111/1462-2920.13407	TRUE	Wiley	Environmental Microbiology		1462-2912	1462-2920	http://onlinelibrary.wiley.com/doi/10.1111/1462-2920.13407/full
+su	2016	2329	10.1002/2016GL070275	TRUE	Wiley	Geophysical Research Letters		0094-8276	1944-8007	http://onlinelibrary.wiley.com/doi/10.1002/2016GL070275/full
+su	2016	2792,75	10.1111/eff.12308	TRUE 	Wiley	Ecology of Freshwater Fish		0906-6691	1600-0633	http://onlinelibrary.wiley.com/doi/10.1111/eff.12308/full
+su	2016	1120	10.1002/ece3.2536	FALSE 	Wiley	Ecology and Evolution			2045-7758	http://onlinelibrary.wiley.com/doi/10.1002/ece3.2536/full
+su	2016	2792,75	10.1002/jat.3304	TRUE	Wiley	Journal of Applied Toxicology		0260-437X	1099-1263	http://onlinelibrary.wiley.com/doi/10.1002/jat.3304/full
+su	2016	699,56	10.1021/acs.inorgchem.5b02733	TRUE	American Chemical Society 	Inorganic Chemistry		0020-1669	1520-510X	http://pubs.acs.org/doi/full/10.1021/acs.inorgchem.5b02733
+su	2016	1400,27	10.1021/acs.accounts.6b00050	TRUE	American Chemical Society 	Accounts of Chemical Research		0001-4842 	1520-4898	http://pubs.acs.org/doi/full/10.1021/acs.accounts.6b00050
+su	2016	933,22	10.1021/acs.orglett.6b01132	TRUE 	American Chemical Society 	Organic Letters		1523-7060	1523-7052	http://pubs.acs.org/doi/full/10.1021/acs.orglett.6b01132
+su	2016	2330,89	10.1021/acscatal.6b01760	TRUE	American Chemical Society 	ACS Catalysis 			2155-5435	http://pubs.acs.org/doi/full/10.1021/acscatal.6b01760
+su	2016	1398,91	10.1021/jacs.6b09240	TRUE	American Chemical Society 	Journal of the American Chemical Society		0002-7863	1520-5126	http://pubs.acs.org/doi/full/10.1021/jacs.6b09240
+su	2016	1405,96	10.1021/acscatal.6b01562	TRUE 	American Chemical Society 	ACS Catalysis 			2155-5435	http://pubs.acs.org/doi/full/10.1021/acscatal.6b01562
+su	2016	1874,16	10.1021/acs.jced.6b00196	TRUE	American Chemical Society 	Journal of Chemical and Engineering Data		0021-9568	1520-5134	http://pubs.acs.org/doi/full/10.1021/acs.jced.6b00196
+su 	2016	3000	10.1242/jeb.129411	TRUE	The Company of Biologists	Journal of Experimental Biology		0022-0949	1477-9145	http://jeb.biologists.org/content/219/19/2971
+su	2016	2941,18	10.1002/anie.201606108	TRUE 	Wiley 	Angewandte Chemie International Edition		1433-7851	1521-3773	http://onlinelibrary.wiley.com/doi/10.1002/anie.201606108/full
+su	2016	2500	10.1002/cssc.201601171	TRUE 	Wiley	ChemSusChem		1864-5631	1864-564X	http://onlinelibrary.wiley.com/doi/10.1002/cssc.201601171/full
+su 	2016	3500	10.1002/anie.201608605	TRUE	Wiley 	Angewandte Chemie International Edition		1433-7851	1521-3773	http://onlinelibrary.wiley.com/doi/10.1002/anie.201608605/full
+su	2016	1007,31	10.5751/ES-08368-210140	FALSE 	Resilience Alliance	Ecology and Society 			1708-3087	http://www.ecologyandsociety.org/vol21/iss1/art40/
+su	2016	1103,7	10.5751/ES-08605-210316	FALSE 	Resilience Alliance	Ecology and Society 			1708-3087	http://www.ecologyandsociety.org/vol21/iss3/art16/
+su	2016	1008,99	10.5751/ES-08812-210425	FALSE 	Resilience Alliance	Ecology and Society 			1708-3087	http://www.ecologyandsociety.org/vol21/iss4/art25/
+su	2016	1197,07	10.5751/ES-08920-220102	FALSE 	Resilience Alliance	Ecology and Society 			1708-3087	http://www.ecologyandsociety.org/vol22/iss1/art2/
+su	2016	1260	10.5194/gmd-9-2741-2016	FALSE 	Copernicus	Geoscientific Model Development 		1991-959X	1991-9603	http://www.geosci-model-dev.net/9/2741/2016/
+su	2016	1725	10.5194/acp-16-10941-2016	FALSE 	Copernicus	Atmospheric Chemistry and Physics 		1680-7316	1680-7324	http://www.atmos-chem-phys.net/16/10941/2016/
+su	2016	1820,7	10.5194/bg-13-5003-2016	FALSE 	Copernicus	Biogeosciences 		1726-4170	1726-4189	http://www.biogeosciences.net/13/5003/2016/
+su	2016	1875	10.5194/tc-10-2291-2016	FALSE 	Copernicus	The Cryosphere		1994-0416	1994-0424	http://www.the-cryosphere.net/10/2291/2016/
+su	2016	1620	10.5194/bg-13-6121-2016	FALSE 	Copernicus	Biogeosciences		1726-4170	1726-4189	http://www.biogeosciences.net/13/6121/2016/
+su	2016	1926,7	10.1186/s12864-016-2383-1	FALSE 	BioMed Central	BMC Genomics			1471-2164	http://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-2383-1
+su 	2016	1397,6	10.1371/journal.pone.0152745	FALSE 	Public Library of Science	PLOS ONE 			1932-6203	http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0152745
+su	2016	1397,6	10.1371/journal.pone.0164241	FALSE 	Public Library of Science	PLOS ONE 			1932-6203	http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0164241
+su	2016	1261,35	10.1371/journal.pone.0163091	FALSE 	Public Library of Science	PLOS ONE 			1932-6203	http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0163091
+su 	2016	1397,6	10.1371/journal.pone.0151993	FALSE 	Public Library of Science	PLOS ONE 			1932-6203	http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0151993
+su	2016	1397,6	10.1371/journal.pone.0158326	FALSE 	Public Library of Science	PLOS ONE 			1932-6203	http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0158326
+su 	2016	1397,6	10.1371/journal.pone.0159684	FALSE 	Public Library of Science	PLOS ONE 			1932-6203	http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0159684
+su	2016	2812,12	10.1111/1365-2656.12579	TRUE	Wiley	Journal of Animal Ecology			1365-2656	http://onlinelibrary.wiley.com/doi/10.1111/1365-2656.12579/full
+su	2016	2108,8	10.1111/1365-2435.12670	TRUE	Wiley	Functional Ecology			1365-2435	http://onlinelibrary.wiley.com/doi/10.1111/1365-2435.12670/full
+su	2016	1642,5	10.1002/2016EF000434	FALSE 	Wiley 	Earth’s Future			2328-4277	http://onlinelibrary.wiley.com/doi/10.1002/2016EF000434/full
+su	2016	1398	10.1038/srep30469	FALSE	Nature Publishing Group 	Scientific Reports				
+su	2016	3046,47	10.1088/0143-0807/37/5/055603	TRUE	IOP Publishing	European Journal of Physics		0143-0807	1361-640	http://iopscience.iop.org/article/10.1088/0143-0807/37/5/055603
+su	2016	2539,08	10.1088/0953-4075/49/16/162001	TRUE	IOP Publishing	Journal of Physics B: Atomic, Molecular and Optical Physics				http://iopscience.iop.org/article/10.1088/0953-4075/49/16/162001
+su	2016	1955,86	10.1088/1367-2630/17/6/065007	FALSE 	IOP Publishing	New Journal of Physics				
+su	2016	2340	10.1088/0031-8949/2015/T166/014063	TRUE	IOP Publishing	Physica Scripta				
+su	2016	1955,86	10.1088/1367-2630/18/6/065004	FALSE 	IOP Publishing	New Journal of Physics				
+su	2016	1950	10.1088/0965-0393/24/4/045002	TRUE	IOP Publishing	Modelling and Simulation in Materials Science and Engineering				
+su	2016	1950	10.1088/0953-4075/49/13/134004	TRUE	IOP Publishing	Journal of Physics B: Atomic, Molecular and Optical Physics				
+su	2016	1950	10.1088/0952-4746/36/4/721	TRUE	IOP Publishing	Journal of Radiological Protection				
+su	2016	667	10.1080/01431161.2016.1249307	TRUE	Taylor & Francis	International Journal of Remote Sensing 				
+su	2016	2150	10.1080/01431161.2016.1230289	TRUE	Taylor & Francis	International Journal of Remote Sensing 				
+su	2016	2150	10.1080/23744731.2016.1152155	TRUE	Taylor & Francis	Science and Technology for the Built Environment 				
+su	2016	987,5	10.1080/23746149.2016.1165630	TRUE	Taylor & Francis	Advances in Physics: X 				
+su	2016	1758,82	10.1016/j.concog.2016.06.012	TRUE	Elsevier	Consciousness and Cognition				
+su	2016	5501,96	10.1016/j.cub.2016.07.057	TRUE	Cell Press	Current Biology 				
+su	2016	2345,1	10.1016/j.jbi.2016.11.006	TRUE	Elsevier	Journal of Biomedical Informatics 				
+su	2016	992,16	10.1016/j.alcr.2016.11.002	TRUE	Elsevier	Advances in Life Course Research				
+su	2016	2706	10.1016/j.envpol.2016.11.001	TRUE	Elsevier	Environmental Pollution				
+su	2016	2722,25	10.1016/j.jssc.2016.04.030	TRUE	Elsevier	Journal of Solid State Chemistry				
+su	2016	295,36	10.1016/j.chemosphere.2016.08.082	TRUE	Elsevier	Chemosphere				
+su	2016	2231	10.1016/j.jmarsys.2015.10.005	TRUE	Elsevier	Journal of Marine Systems				
+su	2016	2570,59	10.1016/j.quascirev.2016.07.032	TRUE	Elsevier	Quaternary Science Reviews				
+su	2016	2570,59	10.1016/j.quascirev.2016.07.029	TRUE	Elsevier	Quaternary Science Reviews				
+su	2016	3139,9	10.1016/j.clay.2016.10.002	TRUE	Elsevier	Applied Clay Science				
+su	2016	2450	10.1093/esr/jcw053	TRUE	Oxford University Press	European Sociological Review				
+su	2016	2450	10.1093/ije/dyw295	TRUE	Oxford University Press	International Journal of Epidemiology 				
+su	2016	2450	10.1093/bjsw/bcw167	TRUE	Oxford University Press	British Journal of Social Work				
+su	2016	2600	10.1093/bjc/azv114	TRUE	Oxford University Press	British Journal of Criminology				
+su	2016	2340	10.1093/eurpub/ckw025	TRUE	Oxford University Press	European Journal of Public Health 				
+su	2016	1065	10.1093/nar/gkw356	FALSE	Oxford University Press	Nucleic Acids Research				
+su	2016	1065	10.1093/nar/gkw923	FALSE	Oxford University Press	Nucleic Acids Research				
+su	2016	1065	10.1093/nar/gkw849	FALSE	Oxford University Press	Nucleic Acids Research				
+su	2016	1423,31	10.1371/journal.pone.0166066	FALSE 	Public Library of Science	PLOS ONE 				
+su	2016	1284,87	10.1371/journal.pone.0155295	FALSE 	Public Library of Science	PLOS ONE 				
+su	2016	1412,55	10.1371/journal.pone.0165799	FALSE 	Public Library of Science	PLOS ONE 				
+su	2016	1423,31	10.1371/journal.pone.0168357	FALSE 	Public Library of Science	PLOS ONE 				
+su	2016	2139,81	10.1371/journal.pgen.1006522	FALSE 	Public Library of Science	PLOS Genetics  				
+su	2016	1423,31	10.1371/journal.pone.0163476	FALSE 	Public Library of Science	PLOS ONE 				
+su	2016	1165	10.1038/srep34098	FALSE 	Nature Publishing Group 	Scientific Reports				
+su	2016	1165	10.1038/srep36243	FALSE 	Nature Publishing Group 	Scientific Reports				
+su	2016	1165	10.1038/srep38821	FALSE 	Nature Publishing Group 	Scientific Reports				
+su	2016	2941,18	10.1002/ange.201601505	TRUE	Wiley	Angewandte Chemie				
+su	2016	2941,18	10.1002/ange.201600696	TRUE	Wiley	Angewandte Chemie				
+su	2016	2941,18	10.1002/anie.201602137	TRUE	Wiley	Angewandte Chemie				
+su	2016	1750	10.1002/ange.201605999	TRUE	Wiley	Angewandte Chemie				
+su	2016	3000	10.1002/2016JF004050	TRUE	Wiley	Journal of Geophysical Research: Earth Surface				
+su	2016	2941,18	10.1002/ange.201511139	TRUE	Wiley	Angewandte Chemie				
+su	2016	3700	10.1038/ncomms12016	FALSE	Nature Publishing Group 	Nature Communications				
+su	2016	1165	10.1038/srep33509	FALSE	Nature Publishing Group 	Scientific Reports				
+su	2016	3300	10.1038/npjqi.2016.10	FALSE	Nature Publishing Group 	npj Quantum Information				
+su	2016	1165	10.1038/srep26620	FALSE	Nature Publishing Group 	Scientific Reports				
+su	2016	2400	10.1038/hdy.2016.44	TRUE	Nature Publishing Group 	Heredity				
+su	2016	1165	10.1038/srep27749	FALSE	Nature Publishing Group 	Scientific Reports				
+su	2016	3700	10.1038/ncomms12113	FALSE	Nature Publishing Group 	Nature Communications				
+su	2016	2012,29	10.1098/rsif.2016.0288	TRUE	The Royal Society	Interface 				
+su	2016	2414,89	10.1098/rspb.2015.2857	TRUE	The Royal Society	Proceedings of the Royal Society B: Biological Sciences				
+su	2016	1420,51	10.1098/rsob.160152	FALSE 	The Royal Society	Open Biology				
+su	2016	1200,74	10.1136/bmjopen-2015-009440	FALSE 	BMJ Publishing Group 	BMJ Open				
+su	2016	3700	10.1038/ncomms12776	FALSE 	Nature Publishing Group 	Nature Communications				
+su	2016	1398	10.1038/srep32446	FALSE 	Nature Publishing Group 	Scientific Reports				
+su	2016	1806,96	10.3389/fimmu.2016.00096	FALSE 	Frontiers	Frontiers in Immunology				
+su	2016	2013,45	10.3389/fmicb.2016.01209	FALSE 	Frontiers	Frontiers in Microbiology				
+su	2016	2367,83	10.3389/fphys.2016.00572	FALSE 	Frontiers	Frontiers in Physiology				
+su	2016	1806,96	10.3389/fphys.2016.00068	FALSE 	Frontiers	Frontiers in Physiology				
+su	2016	2367,83	10.3389/fnmol.2016.00097	FALSE 	Frontiers	Frontiers in Molecular Neuroscience				
+su	2016	1806,96	10.3389/fevo.2016.00134	FALSE 	Frontiers	Frontiers in Ecology and Evolution				
+su	2016	1806,96	10.3389/fmicb.2016.01043	FALSE 	Frontiers	Frontiers in Microbiology				
+su	2016	1165	10.1038/srep21203	FALSE 	Nature Publishing Group 	Scientific Reports				
+su	2016	2700	10.1038/ismej.2016.17	TRUE	Nature Publishing Group 	ISME Journal				
+su	2016	708,816	10.1021/acs.jpcc.5b12490	TRUE	American Chemical Society 	The Journal of Physical Chemistry C				
+su	2016	1418,18	10.1021/acscatal.6b02842	TRUE	American Chemical Society 	ACS Catalysis 				
+su	2016	1890,85	10.1021/jacs.6b10017	TRUE	American Chemical Society 	Journal of the American Chemical Society				
+su	2016	1890,85	10.1021/acs.chemrestox.5b00416	TRUE	American Chemical Society 	Chemical Research in Toxicology 				
+su 	2016	2834,29	10.1021/acs.est.5b05583	TRUE	American Chemical Society 	Environmental Science and Technology 				
+su	2016	1330	10.1163/24056480-00104001	TRUE	Brill 	 Journal of World Literature 				
+su	2016	2832,88	10.1139/cjfas-2016-0039	TRUE	Canadian Science Publishing	Canadian Journal of Fisheries and Aquatic Sciences 				
+su	2016	1530	10.5194/acp-16-6577-2016	TRUE	Copernicus	Atmospheric Chemistry and Physics 				
+su	2016	892,5	10.5194/gmd-9-1673-2016	TRUE	Copernicus	Geoscientific Model Development				
+su	2016	1080	10.5194/nhess-16-1571-2016	TRUE	Copernicus	Natural Hazards and Earth System Sciences				
+su	2016	1892,45	10.1177/0958928715588707	TRUE	Sage 	Journal of European Social Policy				
+su	2016	2200	10.1007/s13280-016-0776-7	TRUE	Springer 	Ambio				
+su	2016	2200	10.1007/s00216-016-9570-4	TRUE	Springer 	Analytical and Bioanalytical Chemistry				
+su	2016	3700	10.1038/ncomms13653	FALSE	Nature Publishing Group 	Nature Communications				
+su	2016	2200	10.1007/s11356-016-6241-0	TRUE	Springer 	Environmental Science and Pollution Research				
+su	2016	1500	10.5271/sjweh.3610	TRUE	Norosh	Scandinavian Journal of Work Environment and Health				
+su	2016	2750	10.1007/s12529-016-9565-8	TRUE	Springer 	International Journal of Behavioral Medicine 				
+su	2016	2200	10.1007/s10113-016-0982-7	TRUE	Springer 	Regional Environmental Change				
+su	2016	2750	10.1007/s11269-016-1363-1	TRUE	Springer 	Water Resources Management 				
+su	2016	2750	10.1007/s10021-016-9986-x	TRUE	Springer 	Ecosystems				
+su	2016	2750	10.1007/s10021-016-9998-6	TRUE	Springer 	Ecosystems				
+su	2016	2750	10.1007/s13280-016-0777-6	TRUE	Springer 	Ambio				
+su	2016	450	10.3897/zookeys.574.7002	FALSE	Pensoft Publishers 	ZooKeys				
+su	2016	1550	10.3354/meps11592	TRUE	Inter-Research	Marine Ecology Progress Series				
+su	2016	907,17	10.1107/S160057671601863X	TRUE	International Union of Crystallography	Journal of Applied Crystallography				
+su	2016	2313,56	10.1128/mBio.01670-15	FALSE	American Society for Microbiology	Mbio				
+su	2016	1312,12	10.3390/rs8020140	FALSE	MDPI	Remote Sensing				
+su	2016	1012,25	10.3390/w8120572	FALSE	MDPI	Water				
+su	2016	1406,02	10.3390/ijerph13030249	FALSE	MDPI	International Journal of Environmental Research and Public Health				
+su	2016	2680,34	10.1073/pnas.1601196113	TRUE	National Academy of Sciences	Proceedings of the National Academy of Sciences				
+su	2016	2513,17	10.1104/pp.15.01531	TRUE	American Society of Plant Biologists 	Plant Physiology				
+su	2016	1798	10.3389/fnins.2016.00007	FALSE	Frontiers	Frontiers in Neuroscience				
+su	2016	2357	10.3389/fnins.2016.00533	FALSE	Frontiers	Frontiers in Neuroscience				
+su	2016	3404	10.1074/jbc.M115.701540	TRUE	American Society for Biochemistry and Molecular Biology	Journal of Biological Chemistry				
+su	2016	1439,5	10.1186/s13195-016-0231-9	FALSE 	BioMed Central	Alzheimer's Research & Therapy				
+su	2016	2000	10.5271/sjweh.3565	TRUE	Norosh	Scandinavian Journal of Work Environment and Health				
+su	2016	1308	10.5751/ES-08826-220114	FALSE 	Resilience Alliance	Ecology and Society 				
+su	2016	1022,82	10.5751/ES-09051-220128	FALSE 	Resilience Alliance	Ecology and Society 				
+su	2016	1773	10.1144/M46.182	TRUE	Geological Society	Memoirs				
+su	2016	1773	10.1144/M46.118	TRUE	Geological Society	Memoirs				
+su	2016	3500	10.1175/JPO-D-15-0219.1	TRUE	American Meteorological Society	Journal of Physical Oceanography				
+su	2016	2750	10.1007/s10433-015-0358-8	TRUE	Springer 	European Journal of Ageing				
+su	2016	2830,49	10.1007/s10750-016-2982-5	TRUE	Springer 	Hydrobiologica				
+su	2016	313	10.4172/2375-4427.1000145	FALSE	Omics International	Journal of Communication Disorder Deaf Studies and Hearing Aids				
+su	2016	2275	10.1093/ije/dyw048	TRUE	Oxford University Press	 International Journal of Epidemiology				
+su 	2016	1950	10.1093/eurpub/ckw057	TRUE	Oxford 	European Journal of Public Health				
+su 	2016	1773	10.1144/M46.183	TRUE	Geological Society	Memoirs				
+su	2016	1285,2	10.5194/acp-16-15135-2016	FALSE 	Copernicus	Atmospheric Chemistry and Physics 				
+su	2016	1415,64	10.1371/journal.pone.0169276	FALSE 	Public Library of Science	Plos One 				
+su	2016	1415,64	10.1371/journal.pone.0155836	FALSE 	Public Library of Science	Plos One 				
+su	2016	1415,64	10.1371/journal.pone.0167493	FALSE 	Public Library of Science	Plos One 				
+su	2016	1415,64	10.1371/journal.pone.0154099	FALSE 	Public Library of Science	Plos One 				
+su	2016	1415,64	10.1371/journal.pone.0155063	FALSE 	Public Library of Science	PLOS ONE 				
+su	2016	1239	10.1371/journal.pone.0147924	FALSE	Public Library of Science	PLOS ONE 			1932-6203	http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0147924
+su 	2016	2290	10.3389/fpsyg.2016.01146	FALSE	Frontiers	Frontiers in Psychology			1664-1078	http://journal.frontiersin.org/article/10.3389/fpsyg.2016.01146/full
+su 	2016	668	10.17585/njlr.v2.224	FALSE	Cappelen Damm Akademisk	Nordic journal of literacy research			2464-1596	https://nordicliteracy.net/index.php/njlr/article/view/224
+su 	2016	1379	10.1142/S1363919616400132	TRUE	World Scientific Publishing 	International Journal of Innovation Management		1363-9196	1757-5877	http://www.worldscientific.com/doi/10.1142/S1363919616400132
+su	2016	1740	10.3389/fnagi.2016.00034	FALSE	Frontiers	Frontiers in Aging Neuroscience			1663-4365	http://journal.frontiersin.org/article/10.3389/fnagi.2016.00034/full
+su 	2016	2150	10.1080/02678373.2016.1163804	TRUE	Taylor and Francis	Work and stress		0267-8373	1464-5335	http://www.tandfonline.com/doi/full/10.1080/02678373.2016.1163804
+su 	2016	1365	10.1371/journal.pone.0156855	FALSE	Public Library of Science	PLOS ONE 			1932-6203	http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0156855
+su 	2016	2760	10.1177/0013164416668950	TRUE	SAGE 	Educational and Psychological Measurement		0013-1644	1552-3888	http://epm.sagepub.com/content/early/2016/09/01/0013164416668950.full
+su 	2016	2276	10.3389/fpsyg.2016.01450	FALSE	Frontiers	Frontiers in Psychology			1664-1078	http://journal.frontiersin.org/article/10.3389/fpsyg.2016.01450/full
 su	2016	668	10.3389/fnagi.2016.00203	FALSE	Frontiers	Frontiers in Aging Neuroscience			1663-4365	http://journal.frontiersin.org/article/10.3389/fnagi.2016.00203/full
 su 	2016	1399	10.1186/s12889-016-3685-6	FALSE	BioMed Central 	BMC Public Health			1471-2458	https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-016-3685-6
 su 	2016	1180	10.1186/s12911-016-0311-6	FALSE	BioMed Central 	BMC Medical Informatics and Decision Making			1472-6947	http://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-016-0311-6
 su 	2016	1180	10.1186/s12911-016-0309-0	FALSE	BioMed Central 	BMC Medical Informatics and Decision Making			1472-6947	https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-016-0309-0
-su 	2016	2750	10.1007/s11205-016-1271-z	TRUE 	Springer	Social Indicators Research		0303-8300	1573-0921	http://link.springer.com/article/10.1007/s11205-016-1271-z
+su 	2016	2200	10.1007/s11205-016-1271-z	TRUE 	Springer	Social Indicators Research		0303-8300	1573-0921	http://link.springer.com/article/10.1007/s11205-016-1271-z
 su	2016	2750	10.1007/s10964-016-0430-5	TRUE 	Springer	Journal of Youth and Adolescence		0047-2891	1573-6601	http://link.springer.com/article/10.1007/s10964-016-0430-5
 su	2016	590	10.15195/v3.a3	FALSE	Society for Sociological Science 	Sociological science 	2330-6696			https://www.sociologicalscience.com/articles-v3-3-39/
 su	2016	2750	10.1007/s00148-016-0595-y	TRUE	Springer	Journal of Population Economics		0933-1433	1432-1475	http://link.springer.com/article/10.1007/s00148-016-0595-y

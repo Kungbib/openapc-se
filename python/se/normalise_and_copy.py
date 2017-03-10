@@ -8,6 +8,8 @@
 
     ToDo
     -----
+    Restructure with config class
+    Improve normalising of Publisher names
 
     Done
     -----
@@ -57,10 +59,13 @@ ERROR_MSGS = {
 }
 
 # Where do we find and put the data
-STR_DATA_DIRECTORY = '../../data'
+STR_DATA_DIRECTORY = '../../data/'
 
 # Cleaned result will be put here
-STR_RESULT_FILE_NAME = STR_DATA_DIRECTORY + '/' + 'apc_se.csv'
+STR_RESULT_FILE_NAME = STR_DATA_DIRECTORY + 'apc_se.csv'
+
+# List of APC files to process
+LST_APC_FILES = ['out.csv', ]
 
 # ======================================================================================================================
 
@@ -100,10 +105,7 @@ def collect_apc_data():
     # Count files to do special handling of header in first file
     int_file_number = 0
 
-    # Fetch list of APC files to process
-    lst_apc_files = ['out.csv',]
-
-    for str_file_name in lst_apc_files:
+    for str_file_name in LST_APC_FILES:
 
         int_file_number += 1
 
@@ -369,22 +371,22 @@ class PublisherNormaliser(object):
     # ------------------------------------------------------------------------------------------------------------------
     def ask_user(self, str_publisher_name_in, tpl_crossref_result):
         """ Ask opinion from user and return choice """
-        print 'NOTE: Several name choices found. Please chose one alternative or enter new suggested name'
+        print 'NOTE: Several name choices found. Please choose one alternative or enter new suggested name'
         print '1) {}'.format(str_publisher_name_in)
         print '2) {}'.format(tpl_crossref_result[0])
         print '3) {}'.format(tpl_crossref_result[1])
         print '4) Enter new preferred name'
         str_choice = raw_input('Choose [2] or enter new name:  ')
         if str_choice == '1':
-            str_publisher_name_normalised = str_publisher_name_in
+            str_publisher_name_normalised = str_publisher_name_in.strip()
         elif str_choice == '2':
-            str_publisher_name_normalised = tpl_crossref_result[0]
+            str_publisher_name_normalised = tpl_crossref_result[0].strip()
         elif str_choice == '3':
-            str_publisher_name_normalised = tpl_crossref_result[1]
+            str_publisher_name_normalised = tpl_crossref_result[1].strip()
         elif str_choice:
-            str_publisher_name_normalised = str_choice
+            str_publisher_name_normalised = str_choice.strip()
         else:
-            str_publisher_name_normalised = tpl_crossref_result[0]
+            str_publisher_name_normalised = tpl_crossref_result[0].strip()
         # Add choice to mapping dictionary
         self.dct_publisher_name_map[str_publisher_name_in.lower()] = str_publisher_name_normalised
         return str_publisher_name_normalised
