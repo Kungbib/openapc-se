@@ -78,9 +78,9 @@ publication of articles in toll-access journals ("hybrid") are provided.
 You may view the dataset at the [project page in
 GitHub](https://github.com/Kungbib/openapc-se/blob/master/data/apc_se.csv).
 
-In total, **772 064 €** for **443 articles** were paid by the **9
+In total, **1 336 612 €** for **806 articles** were paid by the **10
 universities** that have delivered APC data so far. The **average APC is
-1 743 €** and the **median is APC 1 874 €**.
+1 658 €** and the **median is APC 1 530 €**.
 
 <table>
 <thead>
@@ -94,11 +94,11 @@ universities** that have delivered APC data so far. The **average APC is
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">9</td>
-<td align="right">443</td>
-<td align="right">772 064</td>
-<td align="right">1 743</td>
-<td align="right">1 874</td>
+<td align="right">10</td>
+<td align="right">806</td>
+<td align="right">1 336 612</td>
+<td align="right">1 658</td>
+<td align="right">1 530</td>
 </tr>
 </tbody>
 </table>
@@ -108,10 +108,10 @@ Open Access Articles (Total: both "gold" and "hybrid" OA)
 
 At the moment, the dataset contains the following information:
 
--   Number of articles: **443**
--   Total expenditure: **772 064 €**
--   Average fee: **1 743 €**
--   Median fee: **1 874 €**
+-   Number of articles: **806**
+-   Total expenditure: **1 336 612 €**
+-   Average fee: **1 658 €**
+-   Median fee: **1 530 €**
 
 Articles and APC costs per institution:
 
@@ -169,20 +169,27 @@ Articles and APC costs per institution:
 <td align="right">1 891</td>
 </tr>
 <tr class="odd">
+<td>Swedish University of Agricultural Sciences</td>
+<td align="right">363</td>
+<td align="right">564 548</td>
+<td align="right">1 555</td>
+<td align="right">1 380</td>
+</tr>
+<tr class="even">
 <td>Umeå University</td>
 <td align="right">4</td>
 <td align="right">3 850</td>
 <td align="right">962</td>
 <td align="right">755</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>University of Gothenburg</td>
 <td align="right">40</td>
 <td align="right">102 576</td>
 <td align="right">2 564</td>
 <td align="right">2 750</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Uppsala University</td>
 <td align="right">3</td>
 <td align="right">642</td>
@@ -198,10 +205,10 @@ Articles in Open Access journals ("gold OA")
 At the moment, the dataset contains the following information on
 articles in open access journals:
 
--   Number of articles: **238**
--   Total expenditure: **315 393 €**
--   Average fee: **1 325 €**
--   Median fee: **1 285 €**
+-   Number of articles: **497**
+-   Total expenditure: **644 417 €**
+-   Average fee: **1 297 €**
+-   Median fee: **1 258 €**
 
 Articles and APC costs per institution:
 
@@ -259,20 +266,27 @@ Articles and APC costs per institution:
 <td align="right">1 405</td>
 </tr>
 <tr class="odd">
+<td>Swedish University of Agricultural Sciences</td>
+<td align="right">259</td>
+<td align="right">329 024</td>
+<td align="right">1 270</td>
+<td align="right">1 237</td>
+</tr>
+<tr class="even">
 <td>Umeå University</td>
 <td align="right">4</td>
 <td align="right">3 850</td>
 <td align="right">962</td>
 <td align="right">755</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>University of Gothenburg</td>
 <td align="right">13</td>
 <td align="right">29 092</td>
 <td align="right">2 238</td>
 <td align="right">2 800</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Uppsala University</td>
 <td align="right">3</td>
 <td align="right">642</td>
@@ -289,10 +303,10 @@ In many toll-access journals some of the articles are open access after
 a fee has been paid. This model is often called "hybrid open access".
 The dataset covers the following data on hybrid open access articles:
 
--   Number of articles: **205**
--   Total expenditure: **456 671 €**
--   Average fee: **2 228 €**
--   Median fee: **2 200 €**
+-   Number of articles: **309**
+-   Total expenditure: **692 195 €**
+-   Average fee: **2 240 €**
+-   Median fee: **2 242 €**
 
 The following institutions have contributed its expenditures for hybrid
 open access.
@@ -330,6 +344,13 @@ open access.
 <td align="right">2 275</td>
 </tr>
 <tr class="even">
+<td>Swedish University of Agricultural Sciences</td>
+<td align="right">104</td>
+<td align="right">235 524</td>
+<td align="right">2 265</td>
+<td align="right">2 383</td>
+</tr>
+<tr class="odd">
 <td>University of Gothenburg</td>
 <td align="right">27</td>
 <td align="right">73 484</td>

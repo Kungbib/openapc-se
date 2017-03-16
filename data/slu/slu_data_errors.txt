@@ -1,0 +1,20 @@
+DOI duplicates
+---------------
+slu	2016	3247,06	10.1016/j.cej.2016.06.107	TRUE	Elsevier
+slu	2016	2480,39	10.1016/j.cej.2016.06.107	TRUE	Elsevier
+
+Crossref errors
+---------------
+ERROR: Line 140: Crossref: Error while trying to resolve DOI 10.1111/apm.1253: HTTPError: 404 - Not Found
+ERROR: Line 266: Crossref: Error while trying to resolve DOI 10.?1105/?tpc.?114.?134494: Parse Error: '10.?1105/?tpc.?114.?134494' is no valid DOI
+ERROR: Line 267: Crossref: Error while trying to resolve DOI 10.?1105/?tpc.?114.?132043: Parse Error: '10.?1105/?tpc.?114.?132043' is no valid DOI
+ERROR: Line 269: Crossref: Error while trying to resolve DOI 19.3920/CEP140024: Parse Error: '19.3920/CEP140024' is no valid DOI
+ERROR: Line 359: Crossref: Error while trying to resolve DOI 10.?1105/?tpc.?114.?130120: Parse Error: '10.?1105/?tpc.?114.?130120' is no valid DOI
+ERROR: Line 362: Crossref: Error while trying to resolve DOI 10.1089/fpd.2014.1863.: HTTPError: 404 - Not Found
+
+Pubmed errors
+-------------
+ERROR: Line 266: Pubmed: Error while trying to resolve DOI 10.?1105/?tpc.?114.?134494: Parse Error: '10.?1105/?tpc.?114.?134494' is no valid DOI
+ERROR: Line 267: Pubmed: Error while trying to resolve DOI 10.?1105/?tpc.?114.?132043: Parse Error: '10.?1105/?tpc.?114.?132043' is no valid DOI
+ERROR: Line 269: Pubmed: Error while trying to resolve DOI 19.3920/CEP140024: Parse Error: '19.3920/CEP140024' is no valid DOI
+ERROR: Line 359: Pubmed: Error while trying to resolve DOI 10.?1105/?tpc.?114.?130120: Parse Error: '10.?1105/?tpc.?114.?130120' is no valid DOI

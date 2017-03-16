@@ -8,6 +8,7 @@
 
     ToDo
     -----
+    Handle # comments for duplicates
     Add parameter to process a single file
     Do publisher normalisation here before Crossref enrichment?
     Handle duplicate entries by skipping second entry and reporting for submission to data supplier
@@ -259,6 +260,10 @@ def clean_apc_data(str_input_file, args):
 
         # Skip lines without content
         if not row[0].strip():
+            continue
+
+        # Skip lines with comment sign # in first position
+        if row[0] == '#':
             continue
 
         # Skip record if empty APC field

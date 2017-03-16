@@ -1,9 +1,9 @@
 ---
 output:
+  # html_document: default
   md_document: default
-  html_document: default
-  pdf_document: default
-  word_document: default
+  # pdf_document: default
+  # word_document: default
 ---
 
 ```{r, echo = FALSE, warning = TRUE}
@@ -42,6 +42,8 @@ knitr::kable(as.data.frame(pilot_inst))
 
 ```{r, echo=FALSE, cache = FALSE}
 my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
+# Convert APC's read as factors to numbers before calculating
+my.apc$euro <- as.numeric(as.character(my.apc$euro))
 ```
 
 Information on both open access journal articles and open access publication of articles in toll-access journals ("hybrid") are provided. You may view the dataset at the [project page in GitHub](https://github.com/Kungbib/openapc-se/blob/master/data/apc_se.csv).
@@ -56,6 +58,8 @@ In total,  **`r format(sum(my.apc$euro), scientific=FALSE)` €** for  **`r nrow
 
 ```{r, echo=FALSE, cache = FALSE}
 my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
+# Convert APC's read as factors to numbers before calculating
+my.apc$euro <- as.numeric(as.character(my.apc$euro))
 ```
 
 At the moment, the dataset contains the following information:
@@ -80,6 +84,9 @@ my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
 # Drop unused factor levels in organisation field before using it for statistics
 my.apc <- droplevels(my.apc)
 
+# Convert APC's read as factors to numbers before calculating
+my.apc$euro <- as.numeric(as.character(my.apc$euro))
+
 df.summary <-cbind(tapply(my.apc$euro, my.apc$organisation, length),
              tapply(my.apc$euro, my.apc$organisation, sum, na.rm=TRUE),
              tapply(my.apc$euro, my.apc$organisation, mean, na.rm=TRUE),
@@ -95,6 +102,8 @@ knitr::kable(as.data.frame(df.summary), digits = 0, format.args = list(big.mark 
 ```{r, echo=FALSE, cache = FALSE}
 my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
 my.apc <- my.apc[my.apc$is_hybrid == FALSE,]
+# Convert APC's read as factors to numbers before calculating
+my.apc$euro <- as.numeric(as.character(my.apc$euro))
 ```
 
 At the moment, the dataset contains the following information on articles in open access journals:
@@ -120,6 +129,9 @@ my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
 # my.apc$organisation <- factor(my.apc$organisation)
 my.apc <- droplevels(my.apc)
 
+# Convert APC's read as factors to numbers before calculating
+my.apc$euro <- as.numeric(as.character(my.apc$euro))
+
 # Ulf Kronman, 2017-01-04: Added na.rm=TRUE to get past NA values in APC column (right?)
 df.summary <-cbind(
              tapply(my.apc$euro, my.apc$organisation, length),
@@ -137,6 +149,8 @@ knitr::kable(as.data.frame(df.summary), digits = 0, format.args = list(big.mark 
 ```{r, echo=FALSE, cache = FALSE}
 my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
 my.apc <- my.apc[my.apc$is_hybrid == TRUE,]
+# Convert APC's read as factors to numbers before calculating
+my.apc$euro <- as.numeric(as.character(my.apc$euro))
 ```
 In many toll-access journals some of the articles are open access after a fee has been paid. This model is often called "hybrid open access".
 The dataset covers the following data on hybrid open access articles:
@@ -160,6 +174,9 @@ code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t")
 my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
 # Drop unused factor levels in organisation field before using it for statistics
 my.apc <- droplevels(my.apc)
+
+# Convert APC's read as factors to numbers before calculating
+my.apc$euro <- as.numeric(as.character(my.apc$euro))
 
 df.summary <-cbind(tapply(my.apc$euro, my.apc$organisation, length),
              tapply(my.apc$euro, my.apc$organisation, sum, na.rm=TRUE),
@@ -197,6 +214,9 @@ my.apc <- droplevels(my.apc)
 
 # levels(my.apc$publisher)[6:length(levels(my.apc$publisher))] <- paste("other (n=",
 #                                                                       length(unique(my.apc$publisher)) - 5, ")", sep="")
+
+# Convert APC's read as factors to numbers before calculating
+my.apc$euro <- as.numeric(as.character(my.apc$euro))
 
 my.df <- aggregate(my.apc$euro, list(Publisher = my.apc$publisher, University = my.apc$organisation), sum)
 
@@ -237,6 +257,12 @@ my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
 # Drop unused factor levels in organisation field before using it for statistics
 my.apc <- droplevels(my.apc)
 
+# Convert APC's read as factors to numbers before calculating
+my.apc$euro <- as.numeric(as.character(my.apc$euro))
+
+# Convert APC's read as factors to numbers before calculating
+my.apc$euro <- as.numeric(as.character(my.apc$euro))
+
 my.df <- aggregate(my.apc$euro, list(Publisher = my.apc$publisher, University = my.apc$organisation), sum)
 
 ## Plot by publisher
@@ -275,6 +301,12 @@ code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t")
 my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
 # Drop unused factor levels in organisation field before using it for statistics
 my.apc <- droplevels(my.apc)
+
+# Convert APC's read as factors to numbers before calculating
+my.apc$euro <- as.numeric(as.character(my.apc$euro))
+
+# Convert APC's read as factors to numbers before calculating
+my.apc$euro <- as.numeric(as.character(my.apc$euro))
 
 my.df <- aggregate(my.apc$euro, list(Publisher = my.apc$publisher, University = my.apc$organisation), sum)
 
