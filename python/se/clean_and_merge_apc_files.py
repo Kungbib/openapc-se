@@ -8,7 +8,6 @@
 
     ToDo
     -----
-    Handle # comments for duplicates
     Add parameter to process a single file
     Do publisher normalisation here before Crossref enrichment?
     Handle duplicate entries by skipping second entry and reporting for submission to data supplier
@@ -16,6 +15,7 @@
 
     Done
     -----
+    2017-03-16 Handle # comments for duplicates
     2017-03-02 Add (temporary?) function to comment away files from file list
     2017-02-16 Remove erroueous zero for non-cost entries?
     2017-02-26 Check for duplicate entries on DOI
