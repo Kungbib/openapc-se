@@ -26,12 +26,14 @@ knitr::knit_hooks$set(inline = function(x) {
 
 This is a sample of statistics from the pilot project Open APC Sweden, aiming at gathering data about article processing charges (APC's) paid by Swedish universities. The statistics covers journal articles from a few pilot contributors. Please see the [project wiki](https://github.com/Kungbib/openapc-se/wiki) for more information about the project and instructions on how to contribute.
 
-## Contributing organisations
+## Contributing organisations and publishers
+
+Four Swedish universities have reported APC costs for their articles so far. These are _KTH Royal Institute of Technology_, _Stockholm University_, _University of Gothenburg_ and _Swedish University of Agricultural Sciences_. The two publishers _Taylor and Francis_, and _Karger_ have also supplied Open APC Sweden with data. This publisher-supplied data leads to publishing costs being reported for a number of Swedish research institutions which not yet have supplied us with data actively.
 
 ```{r, echo=FALSE, results='asis', message = FALSE}
 # Ulf Kronman, 2017-01-17
 df_institutions <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t", quote = "'")
-colnames(df_institutions) <- c("Acronym", "Contributing organisation")
+colnames(df_institutions) <- c("Acronym", "Organisation")
 knitr::kable(as.data.frame(df_institutions))
 ```
 
@@ -39,7 +41,27 @@ knitr::kable(as.data.frame(df_institutions))
 ## Dataset
 
 ```{r, echo=FALSE, cache = FALSE}
-my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
+
+# NB: This code block has to be run fist to create the basic datasets needed by code further down
+
+# Create the basic full dataset, combined with organisation names
+my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =";")
+# Combine with acronym-name-map to get full organisation names
+code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t")
+# Join datasets on institution and acronym
+my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
+
+# Drop unused factor levels in organisation field before using it for statistics
+my.apc <- droplevels(my.apc)
+
+# Create a gold OA subset
+my.apc_gold <- my.apc[my.apc$is_hybrid == FALSE,]
+my.apc_gold <- droplevels(my.apc_gold)
+
+# Create a OA hybrid subset
+my.apc_hybrid <- my.apc[my.apc$is_hybrid == TRUE,]
+my.apc_hybrid <- droplevels(my.apc_hybrid)
+
 # Convert APC's read as factors to numbers before calculating
 # my.apc$euro <- as.numeric(as.character(my.apc$euro))
 ```
@@ -54,11 +76,6 @@ In total,  **`r format(sum(my.apc$euro), scientific=FALSE)` €** for  **`r nrow
 
 ## Open Access Articles (Total: both "gold" and "hybrid" OA)
 
-```{r, echo=FALSE, cache = FALSE}
-# my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
-# Convert APC's read as factors to numbers before calculating
-```
-
 At the moment, the dataset contains the following information:
 
 * Number of articles: **`r nrow(my.apc)`** 
@@ -69,16 +86,6 @@ At the moment, the dataset contains the following information:
 Articles and APC costs per institution:
 
 ```{r, echo=FALSE, cache = FALSE}
-my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
-my.apc <- droplevels(my.apc)
-
-# Combine with acronym-name-map to get full organisation names
-code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t")
-
-# Join datasets on institution and acronym
-my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
-# Drop unused factor levels in organisation field before using it for statistics
-my.apc <- droplevels(my.apc)
 
 df.summary <-cbind(tapply(my.apc$euro, my.apc$organisation, length),
              tapply(my.apc$euro, my.apc$organisation, sum, na.rm=TRUE),
@@ -92,45 +99,23 @@ knitr::kable(as.data.frame(df.summary), digits = 0, format.args = list(big.mark 
 
 ## Articles in Open Access journals ("gold OA")
 
-```{r, echo=FALSE, cache = FALSE}
-my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
-my.apc <- my.apc[my.apc$is_hybrid == FALSE,]
-# Convert APC's read as factors to numbers before calculating
-my.apc$euro <- as.numeric(as.character(my.apc$euro))
-```
-
 At the moment, the dataset contains the following information on articles in open access journals:
 
-* Number of articles: **`r nrow(my.apc)`** 
-* Total expenditure:  **`r format(sum(my.apc$euro), scientific=FALSE)` €** 
-* Average fee: **`r format(sum(my.apc$euro)/nrow(my.apc), digits = 4)` €** 
-* Median fee: **`r median(my.apc$euro)` €**
+* Number of articles: **`r nrow(my.apc_gold)`** 
+* Total expenditure:  **`r format(sum(my.apc_gold$euro), scientific=FALSE)` €** 
+* Average fee: **`r format(sum(my.apc_gold$euro)/nrow(my.apc_gold), digits = 4)` €** 
+* Median fee: **`r median(my.apc_gold$euro)` €**
 
 Articles and APC costs per institution:
 
 ```{r, echo=FALSE, results='asis', message = FALSE}
-my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
-my.apc <- my.apc[my.apc$is_hybrid == FALSE,]
-
-# Combine with acronym-name-map to get full organisation names
-code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t")
-
-# Join datasets on institution and acronym
-my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
-
-# Drop unused factor levels in organisation field before using it for statistics
-# my.apc$organisation <- factor(my.apc$organisation)
-my.apc <- droplevels(my.apc)
-
-# Convert APC's read as factors to numbers before calculating
-my.apc$euro <- as.numeric(as.character(my.apc$euro))
 
 # Ulf Kronman, 2017-01-04: Added na.rm=TRUE to get past NA values in APC column (right?)
 df.summary <-cbind(
-             tapply(my.apc$euro, my.apc$organisation, length),
-             tapply(my.apc$euro, my.apc$organisation, sum, na.rm=TRUE),
-             tapply(my.apc$euro, my.apc$organisation, mean, na.rm=TRUE),
-             tapply(my.apc$euro, my.apc$organisation, median, na.rm=TRUE)
+             tapply(my.apc_gold$euro, my.apc_gold$organisation, length),
+             tapply(my.apc_gold$euro, my.apc_gold$organisation, sum, na.rm=TRUE),
+             tapply(my.apc_gold$euro, my.apc_gold$organisation, mean, na.rm=TRUE),
+             tapply(my.apc_gold$euro, my.apc_gold$organisation, median, na.rm=TRUE)
              )
 colnames(df.summary) <- c("Articles", "Fees paid (€)", "Mean APC (€)", "Median APC (€)")
 
@@ -139,12 +124,6 @@ knitr::kable(as.data.frame(df.summary), digits = 0, format.args = list(big.mark 
 
 ## OA articles in toll-access journals ("hybrid OA")
 
-```{r, echo=FALSE, cache = FALSE}
-my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
-my.apc <- my.apc[my.apc$is_hybrid == TRUE,]
-# Convert APC's read as factors to numbers before calculating
-my.apc$euro <- as.numeric(as.character(my.apc$euro))
-```
 In many toll-access journals some of the articles are open access after a fee has been paid. This model is often called "hybrid open access".
 The dataset covers the following data on hybrid open access articles:
 
@@ -156,25 +135,11 @@ The dataset covers the following data on hybrid open access articles:
 The following institutions have contributed its expenditures for hybrid open access.
 
 ```{r, echo=FALSE, cache = FALSE}
-my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
-my.apc <- my.apc[my.apc$is_hybrid == TRUE,]
-my.apc <- droplevels(my.apc)
 
-# Combine with acronym-name-map to get full organisation names
-code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t")
-
-# Join datasets on institution and acronym
-my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
-# Drop unused factor levels in organisation field before using it for statistics
-my.apc <- droplevels(my.apc)
-
-# Convert APC's read as factors to numbers before calculating
-my.apc$euro <- as.numeric(as.character(my.apc$euro))
-
-df.summary <-cbind(tapply(my.apc$euro, my.apc$organisation, length),
-             tapply(my.apc$euro, my.apc$organisation, sum, na.rm=TRUE),
-             tapply(my.apc$euro, my.apc$organisation, mean, na.rm=TRUE),
-             tapply(my.apc$euro, my.apc$organisation, median, na.rm=TRUE))
+df.summary <-cbind(tapply(my.apc_hybrid$euro, my.apc_hybrid$organisation, length),
+             tapply(my.apc_hybrid$euro, my.apc_hybrid$organisation, sum, na.rm=TRUE),
+             tapply(my.apc_hybrid$euro, my.apc_hybrid$organisation, mean, na.rm=TRUE),
+             tapply(my.apc_hybrid$euro, my.apc_hybrid$organisation, median, na.rm=TRUE))
 colnames(df.summary) <- c("Articles", "Fees paid (€)", "Mean APC (€)", "Median APC (€)")
 
 knitr::kable(as.data.frame(df.summary), digits = 0, format.args = list(big.mark = ' '))
@@ -189,16 +154,6 @@ knitr::kable(as.data.frame(df.summary), digits = 0, format.args = list(big.mark 
 require(ggplot2)
 require(RColorBrewer)
 
-#load data
-my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
-
-# Combine with acronym-name-map to get full organisation names
-code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t")
-# Join datasets on institution and acronym
-my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
-# Drop unused factor levels in organisation field before using it for statistics
-my.apc <- droplevels(my.apc)
-
 # Choose only publishers with at least # publications (abritary)
 my.apc$publisher <- factor(my.apc$publisher,
                             levels = c(rownames(data.frame(rev(sort(tapply(my.apc$euro, list(my.apc$publisher), sum)))))))
@@ -207,9 +162,6 @@ my.apc$institution <- factor(my.apc$institution,
 
 levels(my.apc$publisher)[15:length(levels(my.apc$publisher))] <- paste("other (n=",
                                                                       length(unique(my.apc$publisher)) - 14, ")", sep="")
-
-# Convert APC's read as factors to numbers before calculating
-# my.apc$euro <- as.numeric(as.character(my.apc$euro))
 
 my.df <- aggregate(my.apc$euro, list(Publisher = my.apc$publisher, University = my.apc$organisation), sum)
 
@@ -239,33 +191,16 @@ APC fees paid per publisher with indication of contribution from each university
 require(ggplot2)
 require(RColorBrewer)
 
-#load data
-my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
-my.apc <- my.apc[my.apc$is_hybrid == FALSE,]
-
-# Combine with acronym-name-map to get full organisation names
-code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t")
-# Join datasets on institution and acronym
-my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
-# Drop unused factor levels in organisation field before using it for statistics
-my.apc <- droplevels(my.apc)
-
-# Convert APC's read as factors to numbers before calculating
-my.apc$euro <- as.numeric(as.character(my.apc$euro))
-
 # Choose only publishers with at least # publications (abritary)
-my.apc$publisher <- factor(my.apc$publisher,
-                            levels = c(rownames(data.frame(rev(sort(tapply(my.apc$euro, list(my.apc$publisher), sum)))))))
-my.apc$institution <- factor(my.apc$institution,
-                           levels =  c(rownames(data.frame(rev(sort(table(my.apc$institution)))))))
+my.apc_gold$publisher <- factor(my.apc_gold$publisher,
+                            levels = c(rownames(data.frame(rev(sort(tapply(my.apc_gold$euro, list(my.apc_gold$publisher), sum)))))))
+my.apc_gold$institution <- factor(my.apc_gold$institution,
+                           levels =  c(rownames(data.frame(rev(sort(table(my.apc_gold$institution)))))))
 
-levels(my.apc$publisher)[15:length(levels(my.apc$publisher))] <- paste("other (n=",
-                                                                      length(unique(my.apc$publisher)) - 14, ")", sep="")
+levels(my.apc_gold$publisher)[15:length(levels(my.apc_gold$publisher))] <- paste("other (n=",
+                                                                      length(unique(my.apc_gold$publisher)) - 14, ")", sep="")
 
-# Convert APC's read as factors to numbers before calculating
-# my.apc$euro <- as.numeric(as.character(my.apc$euro))
-
-my.df <- aggregate(my.apc$euro, list(Publisher = my.apc$publisher, University = my.apc$organisation), sum)
+my.df <- aggregate(my.apc_gold$euro, list(Publisher = my.apc_gold$publisher, University = my.apc_gold$organisation), sum)
 
 ## Plot by publisher
 colour_count <- length(unique(my.df$University))
@@ -293,33 +228,17 @@ APC fees paid per publisher with indication of contribution from each university
 require(ggplot2)
 require(RColorBrewer)
 
-#load data
-my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
-my.apc <- my.apc[my.apc$is_hybrid == TRUE,]
-
-# Combine with acronym-name-map to get full organisation names
-code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t")
-# Join datasets on institution and acronym
-my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
-# Drop unused factor levels in organisation field before using it for statistics
-my.apc <- droplevels(my.apc)
-
-# Convert APC's read as factors to numbers before calculating
-my.apc$euro <- as.numeric(as.character(my.apc$euro))
-
 # Choose only publishers with at least # publications (abritary)
-my.apc$publisher <- factor(my.apc$publisher,
-                            levels = c(rownames(data.frame(rev(sort(tapply(my.apc$euro, list(my.apc$publisher), sum)))))))
-my.apc$institution <- factor(my.apc$institution,
-                           levels =  c(rownames(data.frame(rev(sort(table(my.apc$institution)))))))
+my.apc_hybrid$publisher <- factor(my.apc_hybrid$publisher,
+                            levels = c(rownames(data.frame(rev(sort(tapply(my.apc_hybrid$euro, 
+                                                                           list(my.apc_hybrid$publisher), sum)))))))
+my.apc_hybrid$institution <- factor(my.apc_hybrid$institution,
+                           levels =  c(rownames(data.frame(rev(sort(table(my.apc_hybrid$institution)))))))
 
-levels(my.apc$publisher)[15:length(levels(my.apc$publisher))] <- paste("other (n=",
-                                                                      length(unique(my.apc$publisher)) - 14, ")", sep="")
+levels(my.apc_hybrid$publisher)[15:length(levels(my.apc_hybrid$publisher))] <- paste("other (n=",
+                                                                      length(unique(my.apc_hybrid$publisher)) - 14, ")", sep="")
 
-# Convert APC's read as factors to numbers before calculating
-# my.apc$euro <- as.numeric(as.character(my.apc$euro))
-
-my.df <- aggregate(my.apc$euro, list(Publisher = my.apc$publisher, University = my.apc$organisation), sum)
+my.df <- aggregate(my.apc_hybrid$euro, list(Publisher = my.apc_hybrid$publisher, University = my.apc_hybrid$organisation), sum)
 
 ## Plot by publisher
 colour_count <- length(unique(my.df$University))
@@ -344,15 +263,6 @@ APC fees paid per publisher with indication of contribution from each university
 ## Fees paid per university
 
 ```{r, echo = FALSE}
-my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
-
-# Combine with acronym-name-map to get full organisation names
-code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t")
-
-# Join datasets on institution and acronym
-my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
-# Drop unused factor levels in organisation field before using it for statistics
-my.apc <- droplevels(my.apc)
 
 q <- ggplot(my.apc, aes(organisation, euro)) + 
     geom_boxplot() + 
@@ -373,15 +283,6 @@ ggsave(q, file = "figure/apc_per_organisation.png", width=18, height=12, units="
 ## Average fee per publisher
 
 ```{r, echo=FALSE}
-my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
-
-# Combine with acronym-name-map to get full organisation names
-code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t")
-
-# Join datasets on institution and acronym
-my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
-# Drop unused factor levels in organisation field before using it for statistics
-my.apc <- droplevels(my.apc)
 
 # Choose only publishers with at least # publications (abritary)
 my.apc$publisher <- factor(my.apc$publisher,
@@ -396,7 +297,8 @@ q <- ggplot(my.apc, aes(publisher, euro)) + geom_boxplot() + geom_point(alpha = 
 q <- q + ylab("APC (€)") + 
     xlab("") +
     coord_flip() + 
-    theme(legend.position="top") + theme_bw()
+    theme(legend.position="top") + 
+    theme_bw()
 
 ggsave(q, file = "figure/publisher_apcs.png", width=18, height=12, units="cm")
 
@@ -408,11 +310,9 @@ ggsave(q, file = "figure/publisher_apcs.png", width=18, height=12, units="cm")
 
 ```{r, echo=FALSE}
 
-my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
-my.apc <- my.apc[my.apc$period > 2011,]
-# my.apc[my.apc$is_hybrid == TRUE,]
-# mpg <- my.apc[my.apc$institution == "KTH Royal Institute of Technology",]
-q <- ggplot(my.apc, aes(factor(period), euro)) + geom_boxplot() + geom_point(alpha = 2/10, size = 2)
+my.apc_years <- my.apc[my.apc$period > 2013,]
+my.apc_years <- my.apc_years[my.apc_years$period < 2017,]
+q <- ggplot(my.apc_years, aes(factor(period), euro)) + geom_boxplot() + geom_point(alpha = 2/10, size = 2)
 q <- q + ylab("APC (€)") + xlab("Year") + theme(legend.position="top") + theme_bw()
 
 ggsave(q, file = "figure/apc_avg_per_year.png", width=18, height=12, units="cm")
@@ -430,7 +330,4 @@ It recognises efforts from [JISC](https://www.jisc-collections.ac.uk/Jisc-Monito
 For general comments, email Beate Eellend at the National Library of Sweden: **beate.eellend [at] kb.se** 
 
 For technical issues, email Ulf Kronman at the National Library of Sweden: **ulf.kronman [at] kb.se** 
-
-
-
 
