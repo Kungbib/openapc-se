@@ -288,7 +288,7 @@ ggsave(q, file = "figure/apc_per_organisation.png", width=18, height=12, units="
 ```{r, echo=FALSE}
 
 # Make a publisher dataset for local manipulation
-my.apc_publishers <- my.apc[]
+my.apc_publishers <- my.apc
 
 # Choose only publishers with at least # publications (abritary)
 my.apc_publishers$publisher <- factor(my.apc_publishers$publisher,
