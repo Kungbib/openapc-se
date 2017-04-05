@@ -71,7 +71,7 @@ STR_DATA_DIRECTORY = '../../data/'
 STR_APC_FILE_LIST = STR_DATA_DIRECTORY + 'apc_file_list.txt'
 
 # Cleaned result will be put here
-STR_RESULT_FILE_NAME = STR_DATA_DIRECTORY + 'apc_se_merged.tsv'
+STR_RESULT_FILE_NAME = STR_DATA_DIRECTORY + 'apc_org_new.tsv'
 
 # Keep a list of processed DOI's to check for duplicates - what to do if found?
 lst_dois_processed = []

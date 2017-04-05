@@ -62,7 +62,7 @@ ERROR_MSGS = {
 STR_DATA_DIRECTORY = '../../data/'
 
 # Cleaned result will be put here
-STR_RESULT_FILE_NAME = STR_DATA_DIRECTORY + 'apc_se.csv'
+STR_RESULT_FILE_NAME = STR_DATA_DIRECTORY + 'apc_se_org_new.csv'
 
 # List of APC files to process
 LST_APC_FILES = ['out.csv', ]

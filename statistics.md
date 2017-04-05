@@ -61,22 +61,18 @@ with data actively.
 <td align="left">Malmö University College</td>
 </tr>
 <tr class="odd">
-<td align="left">sh</td>
-<td align="left">Södertörn University</td>
-</tr>
-<tr class="even">
 <td align="left">slu</td>
 <td align="left">Swedish University of Agricultural Sciences</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">su</td>
 <td align="left">Stockholm University</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">umu</td>
 <td align="left">Umeå University</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">uu</td>
 <td align="left">Uppsala University</td>
 </tr>
@@ -91,9 +87,9 @@ publication of articles in toll-access journals ("hybrid") are provided.
 You may view the dataset at the [project page in
 GitHub](https://github.com/Kungbib/openapc-se/blob/master/data/apc_se.csv).
 
-In total, **1 689 336 €** for **1 087 articles** were paid by the **12
-universities** that have delivered APC data so far. The **average APC is
-1 554 €** and the **median is APC 1 504 €**.
+In total, **2 018 395 €** for **1 272 articles** were paid by the **12
+universities** that have APC data from so far. The **average APC is 1
+587 €** and the **median is APC 1 500 €**.
 
 <table>
 <thead>
@@ -108,10 +104,10 @@ universities** that have delivered APC data so far. The **average APC is
 <tbody>
 <tr class="odd">
 <td align="right">12</td>
-<td align="right">1 087</td>
-<td align="right">1 689 336</td>
-<td align="right">1 554</td>
-<td align="right">1 504</td>
+<td align="right">1 272</td>
+<td align="right">2 018 395</td>
+<td align="right">1 587</td>
+<td align="right">1 500</td>
 </tr>
 </tbody>
 </table>
@@ -121,10 +117,10 @@ Open Access Articles (Total: both "gold" and "hybrid" OA)
 
 At the moment, the dataset contains the following information:
 
--   Number of articles: **1 087**
--   Total expenditure: **1 689 336 €**
--   Average fee: **1 554 €**
--   Median fee: **1 504 €**
+-   Number of articles: **1 272**
+-   Total expenditure: **2 018 395 €**
+-   Average fee: **1 587 €**
+-   Median fee: **1 500 €**
 
 Articles and APC costs per institution:
 
@@ -211,10 +207,10 @@ Articles and APC costs per institution:
 </tr>
 <tr class="odd">
 <td>University of Gothenburg</td>
-<td align="right">67</td>
-<td align="right">137 535</td>
-<td align="right">2 053</td>
-<td align="right">2 345</td>
+<td align="right">252</td>
+<td align="right">466 594</td>
+<td align="right">1 852</td>
+<td align="right">1 632</td>
 </tr>
 <tr class="even">
 <td>Uppsala University</td>
@@ -232,10 +228,10 @@ Articles in Open Access journals ("gold OA")
 At the moment, the dataset contains the following information on
 articles in open access journals:
 
--   Number of articles: **594**
--   Total expenditure: **669 997 €**
--   Average fee: **1 128 €**
--   Median fee: **1 180 €**
+-   Number of articles: **722**
+-   Total expenditure: **850 035 €**
+-   Average fee: **1 177 €**
+-   Median fee: **1 231 €**
 
 Articles and APC costs per institution:
 
@@ -315,10 +311,10 @@ Articles and APC costs per institution:
 </tr>
 <tr class="even">
 <td>University of Gothenburg</td>
-<td align="right">19</td>
-<td align="right">30 283</td>
-<td align="right">1 594</td>
-<td align="right">755</td>
+<td align="right">147</td>
+<td align="right">210 321</td>
+<td align="right">1 431</td>
+<td align="right">1 404</td>
 </tr>
 <tr class="odd">
 <td>Uppsala University</td>
@@ -337,10 +333,10 @@ In many toll-access journals some of the articles are open access after
 a fee has been paid. This model is often called "hybrid open access".
 The dataset covers the following data on hybrid open access articles:
 
--   Number of articles: **1 087**
--   Total expenditure: **1 689 336 €**
--   Average fee: **1 554 €**
--   Median fee: **1 504 €**
+-   Number of articles: **1 272**
+-   Total expenditure: **2 018 395 €**
+-   Average fee: **1 587 €**
+-   Median fee: **1 500 €**
 
 The following institutions have contributed its expenditures for hybrid
 open access.
@@ -428,10 +424,10 @@ open access.
 </tr>
 <tr class="odd">
 <td>University of Gothenburg</td>
-<td align="right">48</td>
-<td align="right">107 252</td>
-<td align="right">2 234</td>
-<td align="right">2 357</td>
+<td align="right">105</td>
+<td align="right">256 273</td>
+<td align="right">2 441</td>
+<td align="right">2 750</td>
 </tr>
 <tr class="even">
 <td>Uppsala University</td>

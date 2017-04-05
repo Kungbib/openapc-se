@@ -44,6 +44,9 @@ knitr::kable(as.data.frame(df_institutions))
 
 # NB: This code block has to be run fist to create the basic datasets needed by code further down
 
+require(ggplot2)
+require(RColorBrewer)
+
 # Create the basic full dataset, combined with organisation names
 my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =";")
 # Combine with acronym-name-map to get full organisation names
@@ -68,7 +71,7 @@ my.apc_hybrid <- droplevels(my.apc_hybrid)
 
 Information on both open access journal articles and open access publication of articles in toll-access journals ("hybrid") are provided. You may view the dataset at the [project page in GitHub](https://github.com/Kungbib/openapc-se/blob/master/data/apc_se.csv).
 
-In total,  **`r format(sum(my.apc$euro), scientific=FALSE)` €** for  **`r nrow(my.apc)` articles** were paid by the **`r length(unique(my.apc$institution))` universities** that have delivered APC data so far. The **average  APC is `r format(sum(my.apc$euro)/nrow(my.apc), digits = 4)` €** and the **median is APC `r format(median(my.apc$euro), digits = 4)` €**.
+In total,  **`r format(sum(my.apc$euro), scientific=FALSE)` €** for  **`r nrow(my.apc)` articles** were paid by the **`r length(unique(my.apc$institution))` universities** that have APC data from so far. The **average  APC is `r format(sum(my.apc$euro)/nrow(my.apc), digits = 4)` €** and the **median is APC `r format(median(my.apc$euro), digits = 4)` €**.
 
 | Universities | Publications | Total APC (€) | Average APC (€) | Median APC (€) |
 |-------------:|-------------:|--------------:|----------------:|---------------:|
@@ -188,8 +191,8 @@ APC fees paid per publisher with indication of contribution from each university
 ### OA journal articles
 
 ```{r, echo=FALSE, message = FALSE, warning= FALSE}
-require(ggplot2)
-require(RColorBrewer)
+# require(ggplot2)
+# require(RColorBrewer)
 
 # Choose only publishers with at least # publications (abritary)
 my.apc_gold$publisher <- factor(my.apc_gold$publisher,
@@ -266,7 +269,7 @@ APC fees paid per publisher with indication of contribution from each university
 
 q <- ggplot(my.apc, aes(organisation, euro)) + 
     geom_boxplot() + 
-    geom_point(alpha = 8/10, size = 2,aes(colour = is_hybrid)) + 
+    geom_point(alpha = 8/10, size = 2, aes(colour = is_hybrid)) + 
     scale_colour_manual(values = c("#000A02", "#DC4E00"))
 
 q <- q + ylab("APC (€)") + 
@@ -284,16 +287,26 @@ ggsave(q, file = "figure/apc_per_organisation.png", width=18, height=12, units="
 
 ```{r, echo=FALSE}
 
+# Make a publisher dataset for local manipulation
+my.apc_publishers <- my.apc[]
+
 # Choose only publishers with at least # publications (abritary)
-my.apc$publisher <- factor(my.apc$publisher,
-                            levels = c(rownames(data.frame(rev(sort(tapply(my.apc$euro, list(my.apc$publisher), sum)))))))
-my.apc$institution <- factor(my.apc$institution,
-                           levels =  c(rownames(data.frame(rev(sort(table(my.apc$institution)))))))
+my.apc_publishers$publisher <- factor(my.apc_publishers$publisher,
+                            levels = c(rownames(data.frame(rev(sort(tapply(my.apc_publishers$euro, list(my.apc_publishers$publisher), sum)))))))
 
-levels(my.apc$publisher)[20:length(levels(my.apc$publisher))] <- paste("other (n=",
-                                                                      length(unique(my.apc$publisher)) - 19, ")", sep="")
+my.apc_publishers$institution <- factor(my.apc_publishers$institution,
+                           levels =  c(rownames(data.frame(rev(sort(table(my.apc_publishers$institution)))))))
 
-q <- ggplot(my.apc, aes(publisher, euro)) + geom_boxplot() + geom_point(alpha = 2/10, size = 2)
+levels(my.apc_publishers$publisher)[20:length(
+  levels(my.apc_publishers$publisher))] <- paste("other (n=", length(unique(my.apc_publishers$publisher)) - 19, ")", sep="")
+
+# q <- ggplot(my.apc_publishers, aes(publisher, euro)) + geom_boxplot() + geom_point(alpha = 2/10, size = 2)
+
+q <- ggplot(my.apc_publishers, aes(publisher, euro)) + 
+    geom_boxplot() + 
+    geom_point(alpha = 8/10, size = 2, aes(colour = is_hybrid)) + 
+    scale_colour_manual(values = c("#000A02", "#DC4E00"))
+
 q <- q + ylab("APC (€)") + 
     xlab("") +
     coord_flip() + 
