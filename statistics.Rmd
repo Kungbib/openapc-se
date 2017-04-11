@@ -22,24 +22,6 @@ knitr::knit_hooks$set(inline = function(x) {
 })
 ```
 
-# Open APC Sweden - Statistics
-
-This is a sample of statistics from the pilot project Open APC Sweden, aiming at gathering data about article processing charges (APC's) paid by Swedish universities. The statistics covers journal articles from a few pilot contributors. Please see the [project wiki](https://github.com/Kungbib/openapc-se/wiki) for more information about the project and instructions on how to contribute.
-
-## Contributing organisations and publishers
-
-Four Swedish universities have reported APC costs for their articles so far. These are _KTH Royal Institute of Technology_, _Stockholm University_, _University of Gothenburg_ and _Swedish University of Agricultural Sciences_. The two publishers _Taylor and Francis_, and _Karger_ have also supplied Open APC Sweden with data. This publisher-supplied data leads to publishing costs being reported for a number of Swedish research institutions which not yet have supplied us with data actively.
-
-```{r, echo=FALSE, results='asis', message = FALSE}
-# Ulf Kronman, 2017-01-17
-df_institutions <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t", quote = "'")
-colnames(df_institutions) <- c("Acronym", "Organisation")
-knitr::kable(as.data.frame(df_institutions))
-```
-
-
-## Dataset
-
 ```{r, echo=FALSE, cache = FALSE}
 
 # NB: This code block has to be run fist to create the basic datasets needed by code further down
@@ -48,12 +30,11 @@ require(ggplot2)
 require(RColorBrewer)
 
 # Create the basic full dataset, combined with organisation names
-my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =";")
+my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
 # Combine with acronym-name-map to get full organisation names
 code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t")
 # Join datasets on institution and acronym
 my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
-
 # Drop unused factor levels in organisation field before using it for statistics
 my.apc <- droplevels(my.apc)
 
@@ -68,12 +49,29 @@ my.apc_hybrid <- droplevels(my.apc_hybrid)
 # Convert APC's read as factors to numbers before calculating
 # my.apc$euro <- as.numeric(as.character(my.apc$euro))
 ```
+# Open APC Sweden - Statistics
+
+This is a sample of statistics from the pilot project Open APC Sweden, aiming at gathering data about article processing charges (APC's) paid by Swedish universities. The statistics covers journal articles from a few pilot contributors. Please see the [project wiki](https://github.com/Kungbib/openapc-se/wiki) for more information about the project and instructions on how to contribute.
+
+## Contributing organisations and publishers
+
+Four Swedish universities have reported APC costs for their articles so far. These are _KTH Royal Institute of Technology_, _Stockholm University_, _University of Gothenburg_ and _Swedish University of Agricultural Sciences_. The two publishers _Taylor and Francis_, and _Karger_ have also supplied Open APC Sweden with data. This publisher-supplied data leads to publishing costs being reported for a number of Swedish research institutions which not yet have supplied us with data actively.
+
+```{r, echo=FALSE, results='asis', message = FALSE}
+# Ulf Kronman, 2017-04-08
+# df_contributors <- data.frame(my.apc$institution, my.apc$organisation)
+# df_institutions <- unique(df_contributors)
+# colnames(df_institutions) <- c("Acronym", "Organisation")
+# knitr::kable(as.data.frame(df_institutions), row.names = FALSE)
+```
+
+## Dataset
 
 Information on both open access journal articles and open access publication of articles in toll-access journals ("hybrid") are provided. You may view the dataset at the [project page in GitHub](https://github.com/Kungbib/openapc-se/blob/master/data/apc_se.csv).
 
-In total,  **`r format(sum(my.apc$euro), scientific=FALSE)` €** for  **`r nrow(my.apc)` articles** were paid by the **`r length(unique(my.apc$institution))` universities** that have APC data from so far. The **average  APC is `r format(sum(my.apc$euro)/nrow(my.apc), digits = 4)` €** and the **median is APC `r format(median(my.apc$euro), digits = 4)` €**.
+In total,  **`r format(sum(my.apc$euro), scientific=FALSE)` €** for  **`r nrow(my.apc)` articles** were paid by the **`r length(unique(my.apc$institution))` organisations** that have APC data from so far. The **average  APC is `r format(sum(my.apc$euro)/nrow(my.apc), digits = 4)` €** and the **median is APC `r format(median(my.apc$euro), digits = 4)` €**.
 
-| Universities | Publications | Total APC (€) | Average APC (€) | Median APC (€) |
+| Organisations | Publications | Total APC (€) | Average APC (€) | Median APC (€) |
 |-------------:|-------------:|--------------:|----------------:|---------------:|
 | `r length(unique(my.apc$institution))` | `r nrow(my.apc)` | `r format(sum(my.apc$euro), scientific=FALSE)` |  `r format(sum(my.apc$euro)/nrow(my.apc), digits = 4)` | `r format(median(my.apc$euro), digits = 4)` |
 
@@ -155,38 +153,37 @@ knitr::kable(as.data.frame(df.summary), digits = 0, format.args = list(big.mark 
 
 ```{r, echo=FALSE, message = FALSE, warning= FALSE}
 require(ggplot2)
-require(RColorBrewer)
+
+# Make a copy of the main APC data frame
+df_publishers <- my.apc
 
 # Choose only publishers with at least # publications (abritary)
-my.apc$publisher <- factor(my.apc$publisher,
-                            levels = c(rownames(data.frame(rev(sort(tapply(my.apc$euro, list(my.apc$publisher), sum)))))))
-my.apc$institution <- factor(my.apc$institution,
-                           levels =  c(rownames(data.frame(rev(sort(table(my.apc$institution)))))))
+df_publishers$publisher <- factor(df_publishers$publisher,
+                            levels = c(rownames(data.frame(rev(sort(tapply(df_publishers$euro, list(df_publishers$publisher), sum)))))))
 
-levels(my.apc$publisher)[15:length(levels(my.apc$publisher))] <- paste("other (n=",
-                                                                      length(unique(my.apc$publisher)) - 14, ")", sep="")
+levels(df_publishers$publisher)[20:length(levels(df_publishers$publisher))] <- paste("other (n=",
+                                                                      length(unique(df_publishers$publisher)) - 19, ")", sep="")
 
-my.df <- aggregate(my.apc$euro, list(Publisher = my.apc$publisher, University = my.apc$organisation), sum)
+my.df <- aggregate(my.apc$euro, list(Publisher = df_publishers$publisher, Hybrid_OA = df_publishers$is_hybrid), sum)
 
-## Plot by publisher
-colour_count <- length(unique(my.df$University))
+colour_count <- length(unique(df_publishers$is_hybrid))
 
-p <- ggplot(my.df, aes(Publisher, x, fill= University)) + 
+p <- ggplot(my.df, aes(Publisher, x, fill = Hybrid_OA)) + 
     geom_bar(stat="identity") + 
-    ylab("Fees paid (in €)") +
+    ylab("Fees paid (€)") +
     xlab("") +
     coord_flip() +
-    scale_y_continuous(limits=c(0, 120000), labels=function(x) format(x, big.mark = " ", scientific = FALSE)) +
+    scale_y_continuous(labels=function(x) format(x, big.mark = " ", scientific = FALSE)) +
     scale_fill_manual(values = colorRampPalette(brewer.pal(9, "Set1"))(colour_count)) +
-    theme_bw() + theme(legend.text = element_text(size = 5, colour = "black"), legend.position="bottom") +
+    theme_bw() + 
+    theme(legend.text = element_text(size = 5, colour = "black"), legend.position="bottom") +
     guides(fill=guide_legend(ncol=2))
 
-ggsave(p, file = "figure/apc_publishers_by_units.png", width=18,height=12,units="cm")
+ggsave(p, file = "figure/apc_publishers.png", width=18,height=20,units="cm")
+
 ```
+![](figure/apc_publishers.png)
 
-APC fees paid per publisher with indication of contribution from each university.
-
-![](figure/apc_publishers_by_units.png)
 
 ### OA journal articles
 
@@ -203,12 +200,12 @@ my.apc_gold$institution <- factor(my.apc_gold$institution,
 levels(my.apc_gold$publisher)[15:length(levels(my.apc_gold$publisher))] <- paste("other (n=",
                                                                       length(unique(my.apc_gold$publisher)) - 14, ")", sep="")
 
-my.df <- aggregate(my.apc_gold$euro, list(Publisher = my.apc_gold$publisher, University = my.apc_gold$organisation), sum)
+my.df <- aggregate(my.apc_gold$euro, list(Publisher = my.apc_gold$publisher, Organisation = my.apc_gold$organisation), sum)
 
 ## Plot by publisher
-colour_count <- length(unique(my.df$University))
+colour_count <- length(unique(my.df$Organisation))
 
-p <- ggplot(my.df, aes(Publisher, x, fill= University)) + 
+p <- ggplot(my.df, aes(Publisher, x, fill= Organisation)) + 
     geom_bar(stat="identity") + 
     ylab("Fees paid (in €)") +
     xlab("") +
@@ -218,7 +215,7 @@ p <- ggplot(my.df, aes(Publisher, x, fill= University)) +
     theme_bw() + theme(legend.text = element_text(size = 5, colour = "black"), legend.position="bottom") +
     guides(fill=guide_legend(ncol=2))
 
-ggsave(p, file = "figure/apc_publishers_gold_oa.png", width=18,height=12,units="cm")
+ggsave(p, file = "figure/apc_publishers_gold_oa.png", width=18,height=20,units="cm")
 ```
 
 APC fees paid per publisher with indication of contribution from each university.
@@ -241,29 +238,30 @@ my.apc_hybrid$institution <- factor(my.apc_hybrid$institution,
 levels(my.apc_hybrid$publisher)[15:length(levels(my.apc_hybrid$publisher))] <- paste("other (n=",
                                                                       length(unique(my.apc_hybrid$publisher)) - 14, ")", sep="")
 
-my.df <- aggregate(my.apc_hybrid$euro, list(Publisher = my.apc_hybrid$publisher, University = my.apc_hybrid$organisation), sum)
+my.df <- aggregate(my.apc_hybrid$euro, list(Publisher = my.apc_hybrid$publisher, Organisation = my.apc_hybrid$organisation), sum)
 
 ## Plot by publisher
-colour_count <- length(unique(my.df$University))
+colour_count <- length(unique(my.df$Organisation))
 
-p <- ggplot(my.df, aes(Publisher, x, fill= University)) + 
+p <- ggplot(my.df, aes(Publisher, x, fill= Organisation)) + 
     geom_bar(stat="identity") + 
     ylab("Fees paid (in €)") +
     xlab("") +
     coord_flip() +
     scale_y_continuous(limits=c(0, 120000), labels=function(x) format(x, big.mark = " ", scientific = FALSE)) +
     scale_fill_manual(values = colorRampPalette(brewer.pal(9, "Set1"))(colour_count)) +
-    theme_bw() + theme(legend.text = element_text(size = 5, colour = "black"), legend.position="bottom") +
+    theme_bw() + 
+    theme(legend.text = element_text(size = 5, colour = "black"), legend.position="bottom") +
     guides(fill=guide_legend(ncol=2))
 
-ggsave(p, file = "figure/apc_publishers_hybrid_oa.png", width=18,height=12,units="cm")
+ggsave(p, file = "figure/apc_publishers_hybrid_oa.png", width=18,height=30,units="cm")
 ```
 
 APC fees paid per publisher with indication of contribution from each university.
 
 ![](figure/apc_publishers_hybrid_oa.png)
 
-## Fees paid per university
+## Fees paid per organisation
 
 ```{r, echo = FALSE}
 
@@ -275,10 +273,10 @@ q <- ggplot(my.apc, aes(organisation, euro)) +
 q <- q + ylab("APC (€)") + 
     xlab("") +
     coord_flip() + 
-    theme(legend.position="top") + 
-    theme_bw()
+    theme_bw() +
+    theme(legend.position="bottom") 
 
-ggsave(q, file = "figure/apc_per_organisation.png", width=18, height=12, units="cm")
+ggsave(q, file = "figure/apc_per_organisation.png", width=18, height=20, units="cm")
 ```
 
 ![](figure/apc_per_organisation.png)
@@ -310,8 +308,8 @@ q <- ggplot(my.apc_publishers, aes(publisher, euro)) +
 q <- q + ylab("APC (€)") + 
     xlab("") +
     coord_flip() + 
-    theme(legend.position="top") + 
-    theme_bw()
+    theme_bw() +
+    theme(legend.position="bottom")
 
 ggsave(q, file = "figure/publisher_apcs.png", width=18, height=12, units="cm")
 
@@ -325,14 +323,66 @@ ggsave(q, file = "figure/publisher_apcs.png", width=18, height=12, units="cm")
 
 my.apc_years <- my.apc[my.apc$period > 2013,]
 my.apc_years <- my.apc_years[my.apc_years$period < 2017,]
-q <- ggplot(my.apc_years, aes(factor(period), euro)) + geom_boxplot() + geom_point(alpha = 2/10, size = 2)
-q <- q + ylab("APC (€)") + xlab("Year") + theme(legend.position="top") + theme_bw()
+q <- ggplot(my.apc_years, aes(factor(period), euro)) + 
+    geom_boxplot() + 
+    geom_point(alpha = 2/10, size = 2)
 
-ggsave(q, file = "figure/apc_avg_per_year.png", width=18, height=12, units="cm")
+q <- q + 
+    ylab("APC (€)") + 
+    xlab("Year") + 
+    theme_bw() +
+    theme(legend.position="top")
+
+ggsave(q, file = "figure/apc_avg_per_year.png", width=18, height=18, units="cm")
 
 ```
 
 ![](figure/apc_avg_per_year.png)
+
+<!---
+
+## Average APC trend by year
+
+```{r, echo=FALSE}
+
+library(data.table)
+
+my.apc_years <- my.apc[my.apc$period > 2013,]
+my.apc_years <- my.apc_years[my.apc_years$period < 2017,]
+my.apc_years <- my.apc_years[c('period','euro','is_hybrid')]
+
+DT <- data.table(my.apc_years)
+DT[, Mean:=mean(euro), by=list(period, is_hybrid)]
+
+# df_acp_avg = aggregate(euro~period, my.apc_years, mean)
+
+df_acp_avg = data.frame(DT)
+
+df_acp_avg = df_acp_avg[c('Mean','period','is_hybrid')]
+df_acp_avg = unique(df_acp_avg)
+
+# ggplot(data=dat, aes(x=time, y=total_bill, group=1)) +
+    # geom_line()
+
+q <- ggplot(data=df_acp_avg, aes(x=period, y=Mean, group=is_hybrid)) + 
+    # geom_line() +
+    # geom_point()
+    # geom_point(alpha = 2/10, size = 2)
+    geom_line(colour="black", linetype="solid", size=1) +
+    geom_point(colour="blue", size=3, shape=21, fill="white")
+
+q <- q + 
+    ylab("APC (€)") +
+    xlab("Year") +
+    scale_y_continuous(limits=c(0, 3000), labels=function(x) format(x, big.mark = " ", scientific = FALSE)) +
+    theme_bw() +
+    theme(legend.position="top")
+
+# ggsave(q, file = "figure/apc_avg_trend.png", width=18, height=18, units="cm")
+
+```
+![](figure/apc_avg_trend.png)
+--->
 
 ## Acknowledgement  
 This project follows the [Open APC Initiative](https://github.com/OpenAPC/openapc-de) to share data on paid APCs. 
