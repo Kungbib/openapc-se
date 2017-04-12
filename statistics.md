@@ -14,7 +14,8 @@ Contributing organisations and publishers
 Four Swedish universities have reported APC costs for their articles so
 far. These are *KTH Royal Institute of Technology*, *Stockholm
 University*, *University of Gothenburg* and *Swedish University of
-Agricultural Sciences*. The two publishers *Taylor and Francis*, and
+Agricultural Sciences*. Three publishers: *Springer* (within the
+Sprincer Compact offsetting agreement), *Taylor and Francis*, and
 *Karger* have also supplied Open APC Sweden with data. This
 publisher-supplied data leads to publishing costs being reported for a
 number of Swedish research institutions which not yet have supplied us
@@ -611,13 +612,13 @@ university.
 
 ![](figure/apc_publishers_hybrid_oa.png)
 
-Fees paid per organisation
---------------------------
+Fees and average APC paid per organisation
+------------------------------------------
 
 ![](figure/apc_per_organisation.png)
 
-Average fee per publisher
--------------------------
+Fees and average APC per publisher
+----------------------------------
 
 ![](figure/publisher_apcs.png)
 
@@ -626,27 +627,11 @@ Average and distribution of APC's by year
 
 ![](figure/apc_avg_per_year.png)
 
-<!---
+Average APC trend by year
+-------------------------
 
-## Average APC trend by year
-
-
-```
-#>       period euro is_hybrid Mean
-#>    1:   2016 2200      TRUE 2179
-#>    2:   2014 2429      TRUE 2041
-#>    3:   2014 2429      TRUE 2041
-#>    4:   2014 2429      TRUE 2041
-#>    5:   2016 2200      TRUE 2179
-#>   ---                           
-#> 1750:   2016  321     FALSE 1225
-#> 1751:   2016  969     FALSE 1225
-#> 1752:   2016  982     FALSE 1225
-#> 1753:   2016  982     FALSE 1225
-#> 1754:   2016 2200      TRUE 2179
-```
 ![](figure/apc_avg_trend.png)
---->
+
 Acknowledgement
 ---------------
 

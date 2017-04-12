@@ -55,7 +55,7 @@ This is a sample of statistics from the pilot project Open APC Sweden, aiming at
 
 ## Contributing organisations and publishers
 
-Four Swedish universities have reported APC costs for their articles so far. These are _KTH Royal Institute of Technology_, _Stockholm University_, _University of Gothenburg_ and _Swedish University of Agricultural Sciences_. The two publishers _Taylor and Francis_, and _Karger_ have also supplied Open APC Sweden with data. This publisher-supplied data leads to publishing costs being reported for a number of Swedish research institutions which not yet have supplied us with data actively.
+Four Swedish universities have reported APC costs for their articles so far. These are _KTH Royal Institute of Technology_, _Stockholm University_, _University of Gothenburg_ and _Swedish University of Agricultural Sciences_. Three publishers: *Springer* (within the Sprincer Compact offsetting agreement), _Taylor and Francis_, and _Karger_ have also supplied Open APC Sweden with data. This publisher-supplied data leads to publishing costs being reported for a number of Swedish research institutions which not yet have supplied us with data actively.
 
 ```{r, echo=FALSE, results='asis', message = FALSE}
 # Ulf Kronman, 2017-04-08
@@ -261,7 +261,7 @@ APC fees paid per publisher with indication of contribution from each university
 
 ![](figure/apc_publishers_hybrid_oa.png)
 
-## Fees paid per organisation
+## Fees and average APC paid per organisation
 
 ```{r, echo = FALSE}
 
@@ -281,7 +281,7 @@ ggsave(q, file = "figure/apc_per_organisation.png", width=18, height=20, units="
 
 ![](figure/apc_per_organisation.png)
 
-## Average fee per publisher
+## Fees and average APC per publisher
 
 ```{r, echo=FALSE}
 
@@ -339,50 +339,109 @@ ggsave(q, file = "figure/apc_avg_per_year.png", width=18, height=18, units="cm")
 
 ![](figure/apc_avg_per_year.png)
 
-<!---
-
 ## Average APC trend by year
 
 ```{r, echo=FALSE}
 
+library(ggplot2)
+library(ggthemes)
+# library(extrafont)
 library(data.table)
 
-my.apc_years <- my.apc[my.apc$period > 2013,]
-my.apc_years <- my.apc_years[my.apc_years$period < 2017,]
-my.apc_years <- my.apc_years[c('period','euro','is_hybrid')]
+# Limit to fields needed for this calculation and graph
+apc_se <- my.apc[c('period','euro','is_hybrid')]
+apc_se <- apc_se[apc_se$period > 2013,]
+apc_se <- apc_se[apc_se$period < 2017,]
 
-DT <- data.table(my.apc_years)
-DT[, Mean:=mean(euro), by=list(period, is_hybrid)]
+# Make to data table for easier mean calculation
+dt_apc_se <- data.table(apc_se)
+dt_apc_se = dt_apc_se[, Mean:=mean(euro), by=list(period, is_hybrid)]
+dt_apc_se = unique(dt_apc_se)
 
-# df_acp_avg = aggregate(euro~period, my.apc_years, mean)
+# Change labels for column is_hybrid
+dt_apc_se$is_hybrid <- factor(dt_apc_se$is_hybrid, levels = c('TRUE','FALSE'), labels = c('Hybrid OA', 'Gold OA'))
 
-df_acp_avg = data.frame(DT)
+# Common settings for ggplot
+apc_plot <- ggplot(
+    data = dt_apc_se,     
+    aes(y = Mean, x = period, colour = is_hybrid, label = round(Mean))
+  ) 
 
-df_acp_avg = df_acp_avg[c('Mean','period','is_hybrid')]
-df_acp_avg = unique(df_acp_avg)
+# Add line graph
+apc_plot <- apc_plot + 
+  geom_line(
+    stat = "identity",
+    size = 1
+  )
 
-# ggplot(data=dat, aes(x=time, y=total_bill, group=1)) +
-    # geom_line()
+# Add points to line
+apc_plot <- apc_plot + 
+  geom_point(
+   size = 2, 
+   shape = 21, 
+   fill = "white"
+  ) 
 
-q <- ggplot(data=df_acp_avg, aes(x=period, y=Mean, group=is_hybrid)) + 
-    # geom_line() +
-    # geom_point()
-    # geom_point(alpha = 2/10, size = 2)
-    geom_line(colour="black", linetype="solid", size=1) +
-    geom_point(colour="blue", size=3, shape=21, fill="white")
+# Add labels to data points
+apc_plot <- apc_plot + 
+  geom_text(
+    colour = "gray", 
+    hjust = 0, 
+    vjust = 2,
+    size = 3
+  )
 
-q <- q + 
-    ylab("APC (€)") +
-    xlab("Year") +
-    scale_y_continuous(limits=c(0, 3000), labels=function(x) format(x, big.mark = " ", scientific = FALSE)) +
-    theme_bw() +
-    theme(legend.position="top")
+# Set colours
+colour <- c("#5F9EF0", "#E1B378")
+apc_plot <- apc_plot + scale_colour_manual(values=colour)
 
-# ggsave(q, file = "figure/apc_avg_trend.png", width=18, height=18, units="cm")
+# Add title and labels on axes
+apc_plot <- apc_plot + 
+  ggtitle("Yearly trend for average APC (€)") +
+  labs(x = "Year", y = "€")
+
+# Change scaling and properties on axes
+apc_plot <- apc_plot + 
+  scale_y_continuous(
+      limits=c(0, 2500), 
+      labels=function(x) format(x, big.mark = " ", scientific = FALSE)
+  ) +
+  scale_x_continuous(
+    breaks=seq(2014,2016,1)
+  )
+
+# Use black and white theme for white background
+apc_plot <- apc_plot + theme_bw()  # theme_economist()
+
+# Customise legend
+apc_plot <- apc_plot +
+  theme(
+    legend.position="bottom", 
+    legend.direction="horizontal", 
+    legend.title = element_blank()
+  )
+
+# Customise theme
+apc_plot <- apc_plot + 
+  theme(
+    axis.line = element_line(size=1, colour = "black"),
+    panel.grid.major = element_line(colour = "#d3d3d3"), 
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank(), 
+    panel.background = element_blank(),
+    plot.title = element_text(size = 14, family = "Tahoma"), # , face = "bold"
+    text = element_text(family="Tahoma"),
+    axis.text.x = element_text(colour="black", size = 10),
+    axis.text.y = element_text(colour="black", size = 10),
+    legend.key = element_rect(fill="white", colour="white")
+  )
+
+# apc_plot
+
+ggsave(apc_plot, file = "figure/apc_avg_trend.png", width=20, height=18, units="cm")
 
 ```
 ![](figure/apc_avg_trend.png)
---->
 
 ## Acknowledgement  
 This project follows the [Open APC Initiative](https://github.com/OpenAPC/openapc-de) to share data on paid APCs. 
