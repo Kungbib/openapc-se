@@ -12,14 +12,22 @@ Contributing organisations and publishers
 -----------------------------------------
 
 Four Swedish universities have reported APC costs for their articles so
-far. These are *KTH Royal Institute of Technology*, *Stockholm
-University*, *University of Gothenburg* and *Swedish University of
-Agricultural Sciences*. Three publishers: *Springer* (within the
-Sprincer Compact offsetting agreement), *Taylor and Francis*, and
-*Karger* have also supplied Open APC Sweden with data. This
-publisher-supplied data leads to publishing costs being reported for a
-number of Swedish research institutions which not yet have supplied us
-with data actively.
+far. These are:
+
+-   KTH Royal Institute of Technology
+-   Stockholm University
+-   University of Gothenburg
+-   Swedish University of Agricultural Sciences
+
+Three publishers have also supplied Open APC Sweden with data:
+
+-   Springer (within the Sprincer Compact offsetting agreement)
+-   Taylor and Francis
+-   Karger
+
+This publisher-supplied data leads to publishing costs being reported
+for a number of Swedish research institutions which not yet have
+supplied us with data actively.
 
 Dataset
 -------

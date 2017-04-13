@@ -55,15 +55,20 @@ This is a sample of statistics from the pilot project Open APC Sweden, aiming at
 
 ## Contributing organisations and publishers
 
-Four Swedish universities have reported APC costs for their articles so far. These are _KTH Royal Institute of Technology_, _Stockholm University_, _University of Gothenburg_ and _Swedish University of Agricultural Sciences_. Three publishers: *Springer* (within the Sprincer Compact offsetting agreement), _Taylor and Francis_, and _Karger_ have also supplied Open APC Sweden with data. This publisher-supplied data leads to publishing costs being reported for a number of Swedish research institutions which not yet have supplied us with data actively.
+Four Swedish universities have reported APC costs for their articles so far. These are: 
 
-```{r, echo=FALSE, results='asis', message = FALSE}
-# Ulf Kronman, 2017-04-08
-# df_contributors <- data.frame(my.apc$institution, my.apc$organisation)
-# df_institutions <- unique(df_contributors)
-# colnames(df_institutions) <- c("Acronym", "Organisation")
-# knitr::kable(as.data.frame(df_institutions), row.names = FALSE)
-```
+* KTH Royal Institute of Technology
+* Stockholm University 
+* University of Gothenburg
+* Swedish University of Agricultural Sciences 
+
+Three publishers have also supplied Open APC Sweden with data: 
+
+* Springer (within the Sprincer Compact offsetting agreement)
+* Taylor and Francis
+* Karger
+
+This publisher-supplied data leads to publishing costs being reported for a number of Swedish research institutions which not yet have supplied us with data actively.
 
 ## Dataset
 
@@ -164,22 +169,29 @@ df_publishers$publisher <- factor(df_publishers$publisher,
 levels(df_publishers$publisher)[20:length(levels(df_publishers$publisher))] <- paste("other (n=",
                                                                       length(unique(df_publishers$publisher)) - 19, ")", sep="")
 
+# Change labels for column is_hybrid
+df_publishers$is_hybrid <- factor(df_publishers$is_hybrid, levels = c('FALSE','TRUE'), labels = c('Gold OA', 'Hybrid OA'))
+
 my.df <- aggregate(my.apc$euro, list(Publisher = df_publishers$publisher, Hybrid_OA = df_publishers$is_hybrid), sum)
 
 colour_count <- length(unique(df_publishers$is_hybrid))
 
 p <- ggplot(my.df, aes(Publisher, x, fill = Hybrid_OA)) + 
     geom_bar(stat="identity") + 
-    ylab("Fees paid (€)") +
-    xlab("") +
-    coord_flip() +
+    labs(y = "Fees paid (€)", x = '') +
     scale_y_continuous(labels=function(x) format(x, big.mark = " ", scientific = FALSE)) +
-    scale_fill_manual(values = colorRampPalette(brewer.pal(9, "Set1"))(colour_count)) +
+    # scale_fill_manual(values = colorRampPalette(brewer.pal(9, "Set1"))(colour_count)) +
+    scale_fill_manual(values = c("#c7c700", "#808080")) +
+    coord_flip() +
     theme_bw() + 
-    theme(legend.text = element_text(size = 5, colour = "black"), legend.position="bottom") +
+    theme(
+      legend.text = element_text(size = 8, colour = "black"), 
+      legend.position="bottom", 
+      legend.title = element_blank()
+    ) +
     guides(fill=guide_legend(ncol=2))
 
-ggsave(p, file = "figure/apc_publishers.png", width=18,height=20,units="cm")
+ggsave(p, file = "figure/apc_publishers.png", width=18,height=18,units="cm")
 
 ```
 ![](figure/apc_publishers.png)
@@ -190,6 +202,10 @@ ggsave(p, file = "figure/apc_publishers.png", width=18,height=20,units="cm")
 ```{r, echo=FALSE, message = FALSE, warning= FALSE}
 # require(ggplot2)
 # require(RColorBrewer)
+
+# Make a copy of the original dataset, not to destroy original by processing
+my.apc_gold <- my.apc[my.apc$is_hybrid == FALSE,]
+my.apc_gold <- droplevels(my.apc_gold)
 
 # Choose only publishers with at least # publications (abritary)
 my.apc_gold$publisher <- factor(my.apc_gold$publisher,
@@ -207,12 +223,17 @@ colour_count <- length(unique(my.df$Organisation))
 
 p <- ggplot(my.df, aes(Publisher, x, fill= Organisation)) + 
     geom_bar(stat="identity") + 
-    ylab("Fees paid (in €)") +
+    ylab("Fees paid (€)") +
     xlab("") +
     coord_flip() +
     scale_y_continuous(limits=c(0, 120000), labels=function(x) format(x, big.mark = " ", scientific = FALSE)) +
     scale_fill_manual(values = colorRampPalette(brewer.pal(9, "Set1"))(colour_count)) +
-    theme_bw() + theme(legend.text = element_text(size = 5, colour = "black"), legend.position="bottom") +
+    theme_bw() + 
+    theme(
+      legend.text = element_text(size = 6, colour = "black"), 
+      legend.position = "bottom",
+      legend.title = element_blank()
+    ) +
     guides(fill=guide_legend(ncol=2))
 
 ggsave(p, file = "figure/apc_publishers_gold_oa.png", width=18,height=20,units="cm")
@@ -225,8 +246,12 @@ APC fees paid per publisher with indication of contribution from each university
 ### Hybrid OA articles in toll access journals
 
 ```{r, echo=FALSE, message = FALSE, warning= FALSE}
-require(ggplot2)
-require(RColorBrewer)
+# require(ggplot2)
+# require(RColorBrewer)
+
+# Create a OA hybrid subset
+my.apc_hybrid <- my.apc[my.apc$is_hybrid == TRUE,]
+my.apc_hybrid <- droplevels(my.apc_hybrid)
 
 # Choose only publishers with at least # publications (abritary)
 my.apc_hybrid$publisher <- factor(my.apc_hybrid$publisher,
@@ -251,7 +276,11 @@ p <- ggplot(my.df, aes(Publisher, x, fill= Organisation)) +
     scale_y_continuous(limits=c(0, 120000), labels=function(x) format(x, big.mark = " ", scientific = FALSE)) +
     scale_fill_manual(values = colorRampPalette(brewer.pal(9, "Set1"))(colour_count)) +
     theme_bw() + 
-    theme(legend.text = element_text(size = 5, colour = "black"), legend.position="bottom") +
+    theme(
+      legend.text = element_text(size = 6, colour = "black"), 
+      legend.position = "bottom",
+      legend.title = element_blank()
+    ) +
     guides(fill=guide_legend(ncol=2))
 
 ggsave(p, file = "figure/apc_publishers_hybrid_oa.png", width=18,height=30,units="cm")
@@ -264,17 +293,26 @@ APC fees paid per publisher with indication of contribution from each university
 ## Fees and average APC paid per organisation
 
 ```{r, echo = FALSE}
+# Make a local copy of the main data frame, not to destroy original by factoring
+df_organisations <- my.apc
 
-q <- ggplot(my.apc, aes(organisation, euro)) + 
+# Change labels for column is_hybrid
+df_organisations$is_hybrid <- factor(df_organisations$is_hybrid, levels = c('FALSE','TRUE'), labels = c('Gold OA', 'Hybrid OA'))
+
+q <- ggplot(data = df_organisations, aes(organisation, euro)) + 
     geom_boxplot() + 
     geom_point(alpha = 8/10, size = 2, aes(colour = is_hybrid)) + 
-    scale_colour_manual(values = c("#000A02", "#DC4E00"))
+    scale_colour_manual(values = c("#c7c700", "#808080"))
 
-q <- q + ylab("APC (€)") + 
-    xlab("") +
+q <- q + 
+    labs(x = '', y = "APC (€)") + 
     coord_flip() + 
     theme_bw() +
-    theme(legend.position="bottom") 
+    theme(
+      legend.text = element_text(size = 10, colour = "black"), 
+      legend.position = "bottom",
+      legend.title = element_blank()
+    )
 
 ggsave(q, file = "figure/apc_per_organisation.png", width=18, height=20, units="cm")
 ```
@@ -300,16 +338,23 @@ levels(my.apc_publishers$publisher)[20:length(
 
 # q <- ggplot(my.apc_publishers, aes(publisher, euro)) + geom_boxplot() + geom_point(alpha = 2/10, size = 2)
 
+# Change labels for column is_hybrid
+my.apc_publishers$is_hybrid <- factor(my.apc_publishers$is_hybrid, levels = c('FALSE','TRUE'), labels = c('Gold OA', 'Hybrid OA'))
+
 q <- ggplot(my.apc_publishers, aes(publisher, euro)) + 
     geom_boxplot() + 
     geom_point(alpha = 8/10, size = 2, aes(colour = is_hybrid)) + 
-    scale_colour_manual(values = c("#000A02", "#DC4E00"))
+    scale_colour_manual(values = c("#c7c700", "#808080"))
 
 q <- q + ylab("APC (€)") + 
     xlab("") +
     coord_flip() + 
     theme_bw() +
-    theme(legend.position="bottom")
+    theme(
+      legend.text = element_text(size = 10, colour = "black"), 
+      legend.position = "bottom",
+      legend.title = element_blank()
+    )
 
 ggsave(q, file = "figure/publisher_apcs.png", width=18, height=12, units="cm")
 
@@ -323,15 +368,24 @@ ggsave(q, file = "figure/publisher_apcs.png", width=18, height=12, units="cm")
 
 my.apc_years <- my.apc[my.apc$period > 2013,]
 my.apc_years <- my.apc_years[my.apc_years$period < 2017,]
-q <- ggplot(my.apc_years, aes(factor(period), euro)) + 
+
+# Change labels for column is_hybrid
+my.apc_years$is_hybrid <- factor(my.apc_years$is_hybrid, levels = c('FALSE','TRUE'), labels = c('Gold OA', 'Hybrid OA'))
+
+q <- ggplot(my.apc_years, aes(factor(period), euro, colour = is_hybrid)) + 
     geom_boxplot() + 
-    geom_point(alpha = 2/10, size = 2)
+    geom_point(alpha = 2/10, size = 2) +
+    scale_colour_manual(values = c("#c7c700", "#808080"))
 
 q <- q + 
     ylab("APC (€)") + 
     xlab("Year") + 
     theme_bw() +
-    theme(legend.position="top")
+    theme(
+      legend.text = element_text(size = 10, colour = "black"), 
+      legend.position = "bottom",
+      legend.title = element_blank()
+    )
 
 ggsave(q, file = "figure/apc_avg_per_year.png", width=18, height=18, units="cm")
 
@@ -359,7 +413,7 @@ dt_apc_se = dt_apc_se[, Mean:=mean(euro), by=list(period, is_hybrid)]
 dt_apc_se = unique(dt_apc_se)
 
 # Change labels for column is_hybrid
-dt_apc_se$is_hybrid <- factor(dt_apc_se$is_hybrid, levels = c('TRUE','FALSE'), labels = c('Hybrid OA', 'Gold OA'))
+dt_apc_se$is_hybrid <- factor(dt_apc_se$is_hybrid, levels = c('FALSE', 'TRUE'), labels = c('Gold OA', 'Hybrid OA'))
 
 # Common settings for ggplot
 apc_plot <- ggplot(
@@ -392,8 +446,8 @@ apc_plot <- apc_plot +
   )
 
 # Set colours
-colour <- c("#5F9EF0", "#E1B378")
-apc_plot <- apc_plot + scale_colour_manual(values=colour)
+apc_plot <- apc_plot + 
+  scale_colour_manual(values=c("#c7c700", "#808080"))
 
 # Add title and labels on axes
 apc_plot <- apc_plot + 
@@ -418,7 +472,9 @@ apc_plot <- apc_plot +
   theme(
     legend.position="bottom", 
     legend.direction="horizontal", 
-    legend.title = element_blank()
+    legend.title = element_blank(),
+    legend.text = element_text(size = 10, colour = "black"), 
+    legend.key = element_rect(fill="white", colour="white")
   )
 
 # Customise theme
@@ -433,7 +489,6 @@ apc_plot <- apc_plot +
     text = element_text(family="Tahoma"),
     axis.text.x = element_text(colour="black", size = 10),
     axis.text.y = element_text(colour="black", size = 10),
-    legend.key = element_rect(fill="white", colour="white")
   )
 
 # apc_plot
@@ -443,12 +498,14 @@ ggsave(apc_plot, file = "figure/apc_avg_trend.png", width=20, height=18, units="
 ```
 ![](figure/apc_avg_trend.png)
 
-## Acknowledgement  
+## Acknowledgement
+
 This project follows the [Open APC Initiative](https://github.com/OpenAPC/openapc-de) to share data on paid APCs. 
 It recognises efforts from [JISC](https://www.jisc-collections.ac.uk/Jisc-Monitor/APC-data-collection/) and [FWF](https://figshare.com/articles/Austrian_Science_Fund_FWF_Publication_Cost_Data_2014/1378610) to standardise APC reporting.    
 
 
 ## Contact
+
 For general comments, email Beate Eellend at the National Library of Sweden: **beate.eellend [at] kb.se** 
 
 For technical issues, email Ulf Kronman at the National Library of Sweden: **ulf.kronman [at] kb.se** 
