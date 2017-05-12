@@ -61,6 +61,7 @@ Four Swedish universities have reported APC costs for their articles so far. The
 * Stockholm University 
 * University of Gothenburg
 * Swedish University of Agricultural Sciences 
+* Dalarna University College
 
 Three publishers have also supplied Open APC Sweden with data: 
 
@@ -356,7 +357,7 @@ q <- q + ylab("APC (€)") +
       legend.title = element_blank()
     )
 
-ggsave(q, file = "figure/publisher_apcs.png", width=18, height=12, units="cm")
+ggsave(q, file = "figure/publisher_apcs.png", width=18, height=18, units="cm")
 
 ```
 

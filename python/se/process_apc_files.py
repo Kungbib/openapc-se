@@ -8,6 +8,7 @@
 
     ToDo
     -----
+    Run DU's records
     Handling of duplicate DOI's
     Error reporting module
     Clean up processing logic and introduce error handling
@@ -757,7 +758,7 @@ class UserInterface(object):
 class PublisherNormaliser(object):
     """ Class to keep data and methods for publisher name normalisation """
 
-    STR_PUBLISHER_NAME_MAP_FILE = Config.STR_DATA_DIRECTORY + '/' + 'publisher_name_map.tsv'
+    STR_PUBLISHER_NAME_MAP_FILE = Config.STR_DATA_DIRECTORY + 'publisher_name_map.tsv'
 
     # ------------------------------------------------------------------------------------------------------------------
     def __init__(self):
@@ -781,7 +782,7 @@ class PublisherNormaliser(object):
                 print 'NOTE: Name "{}" normalised to "{}"'.format(str_publisher_name_in, str_publisher_name_normalised)
             return str_publisher_name_normalised
         elif str_doi:
-            # Look up in CrossRef
+            # Look up in CrossRef - ToDo: Problem here if HTTP error instead of tuple returned
             dct_crossref_result = self.get_crossref_names(str_doi)
             if dct_crossref_result['error']:
                 print('!ERROR: {}'.format(dct_crossref_result['error_reason']))

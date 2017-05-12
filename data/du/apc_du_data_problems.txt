@@ -1,0 +1,11 @@
+DOI present 10.1093/forestry/cpv040
+Present:	[u'kth', u'2015', u'2275', u'10.1093/forestry/cpv040', u'TRUE', u'Oxford University Press (OUP)', u'Forestry', u'0015-752X', u'0015-752X', u'1464-3626', u'NA', u'NA', u'TRUE', u'NA', u'NA', u'NA', u'http://forestry.oxfordjournals.org/content/early/2015/10/28/forestry.cpv040.short?rss=1', u'FALSE']
+New:		[u'du', u'2016', u'1149', u'10.1093/forestry/cpv040', u'TRUE', u'Oxford University Press (OUP)', u'Forestry', u'0015-752X', u'0015-752X', u'1464-3626', u'NA', u'NA', u'TRUE', u'NA', u'NA', u'NA', u'http://forestry.oxfordjournals.org/content/89/2/127.full', u'FALSE']
+Data differs. Choose item:
+NOTE: Several name choices found. Please chose one alternative.
+Present:	1) kth 2015 2275 10.1093/forestry/cpv040 TRUE Oxford University Press (OUP) Forestry 0015-752X 0015-752X 1464-3626 NA NA TRUE NA NA NA http://forestry.oxfordjournals.org/content/early/2015/10/28/forestry.cpv040.short?rss=1 FALSE
+New:		2) du 2016 1149 10.1093/forestry/cpv040 TRUE Oxford University Press (OUP) Forestry 0015-752X 0015-752X 1464-3626 NA NA TRUE NA NA NA http://forestry.oxfordjournals.org/content/89/2/127.full FALSE
+
+
+https://academic.oup.com/forestry/article-lookup/doi/10.1093/forestry/cpv040
+Corresponding author. E-mail: annao@biotech.kth.se
