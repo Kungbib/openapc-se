@@ -1,6 +1,13 @@
-ERROR: Line 107: Crossref: Error while trying to resolve DOI 10.1016/j.forpol.2013.12.007: HTTPError: 504 - Gateway Timeout
-ERROR: Line 224: Crossref: Error while trying to resolve DOI 10.1038/srep21895: HTTPError: 504 - Gateway Timeout
-ERROR: Line 231: Crossref: Error while trying to resolve DOI 10.1371/journal.pgen.1004842: HTTPError: 504 - Gateway Timeout
-ERROR: Line 287: Crossref: Error while trying to resolve DOI 10.1371/journal.pone.0093957: HTTPError: 504 - Gateway Timeout
-ERROR: Line 302: Crossref: Error while trying to resolve DOI 19.3920/CEP140024: Parse Error: '19.3920/CEP140024' is no valid DOI
-ERROR: Line 302: Pubmed: Error while trying to resolve DOI 19.3920/CEP140024: Parse Error: '19.3920/CEP140024' is no valid DOI
+Duplicate DOI's
+---------------
+slu	2014	1341	10.1186/1751-0147-56-20	FALSKT	BMC
+slu	2014	1201	10.1186/1751-0147-56-20	FALSKT	BMC
+
+slu	2014	1496.92	10.1186/s12866-014-0308-1	FALSKT	BioMed Central
+slu	2015	1 574,95	10.1186/s12866-014-0308-1	FALSKT	BMC
+
+slu	2015	1 548,52	10.1186/s12870-014-0298-z	FALSKT	BMC
+slu	2014	1511.57	10.1186/s12870-014-0298-z	FALSKT	BioMed Central
+
+slu	2015	1 362,44	10.1186/1756-3305-7-419	FALSKT	BMC
+slu	2014	1315	10.1186/1756-3305-7-419	FALSKT	BMC

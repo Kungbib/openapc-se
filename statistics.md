@@ -38,9 +38,9 @@ publication of articles in toll-access journals ("hybrid") are provided.
 You may view the dataset at the [project page in
 GitHub](https://github.com/Kungbib/openapc-se/blob/master/data/apc_se.csv).
 
-In total, **3 238 934 €** for **1 834 articles** were paid by the **28
+In total, **3 477 461 €** for **1 971 articles** were paid by the **28
 organisations** that have APC data from so far. The **average APC is 1
-766 €** and the **median is APC 2 132 €**.
+764 €** and the **median is APC 2 132 €**.
 
 <table>
 <thead>
@@ -55,9 +55,9 @@ organisations** that have APC data from so far. The **average APC is 1
 <tbody>
 <tr class="odd">
 <td align="right">28</td>
-<td align="right">1 834</td>
-<td align="right">3 238 934</td>
-<td align="right">1 766</td>
+<td align="right">1 971</td>
+<td align="right">3 477 461</td>
+<td align="right">1 764</td>
 <td align="right">2 132</td>
 </tr>
 </tbody>
@@ -68,9 +68,9 @@ Open Access Articles (Total: both "gold" and "hybrid" OA)
 
 At the moment, the dataset contains the following information:
 
--   Number of articles: **1 834**
--   Total expenditure: **3 238 934 €**
--   Average fee: **1 766 €**
+-   Number of articles: **1 971**
+-   Total expenditure: **3 477 461 €**
+-   Average fee: **1 764 €**
 -   Median fee: **2 132 €**
 
 Articles and APC costs per institution:
@@ -137,9 +137,9 @@ Articles and APC costs per institution:
 </tr>
 <tr class="even">
 <td>KTH Royal Institute of Technology</td>
-<td align="right">209</td>
-<td align="right">320 849</td>
-<td align="right">1 535</td>
+<td align="right">208</td>
+<td align="right">319 828</td>
+<td align="right">1 538</td>
 <td align="right">1 905</td>
 </tr>
 <tr class="odd">
@@ -242,10 +242,10 @@ Articles and APC costs per institution:
 </tr>
 <tr class="odd">
 <td>Swedish University of Agricultural Sciences</td>
-<td align="right">394</td>
-<td align="right">634 067</td>
-<td align="right">1 609</td>
-<td align="right">1 454</td>
+<td align="right">532</td>
+<td align="right">873 616</td>
+<td align="right">1 642</td>
+<td align="right">1 530</td>
 </tr>
 <tr class="even">
 <td>Södertörns University College</td>
@@ -291,10 +291,10 @@ Articles in Open Access journals ("gold OA")
 At the moment, the dataset contains the following information on
 articles in open access journals:
 
--   Number of articles: **747**
--   Total expenditure: **887 588 €**
--   Average fee: **1 188 €**
--   Median fee: **1 237 €**
+-   Number of articles: **830**
+-   Total expenditure: **1 005 982 €**
+-   Average fee: **1 212 €**
+-   Median fee: **1 302 €**
 
 Articles and APC costs per institution:
 
@@ -332,9 +332,9 @@ Articles and APC costs per institution:
 </tr>
 <tr class="even">
 <td>KTH Royal Institute of Technology</td>
-<td align="right">118</td>
-<td align="right">134 389</td>
-<td align="right">1 139</td>
+<td align="right">117</td>
+<td align="right">133 368</td>
+<td align="right">1 140</td>
 <td align="right">1 021</td>
 </tr>
 <tr class="odd">
@@ -367,10 +367,10 @@ Articles and APC costs per institution:
 </tr>
 <tr class="odd">
 <td>Swedish University of Agricultural Sciences</td>
-<td align="right">258</td>
-<td align="right">327 863</td>
-<td align="right">1 271</td>
-<td align="right">1 245</td>
+<td align="right">342</td>
+<td align="right">447 278</td>
+<td align="right">1 308</td>
+<td align="right">1 326</td>
 </tr>
 <tr class="even">
 <td>Umeå University</td>
@@ -403,9 +403,9 @@ In many toll-access journals some of the articles are open access after
 a fee has been paid. This model is often called "hybrid open access".
 The dataset covers the following data on hybrid open access articles:
 
--   Number of articles: **1 834**
--   Total expenditure: **3 238 934 €**
--   Average fee: **1 766 €**
+-   Number of articles: **1 971**
+-   Total expenditure: **3 477 461 €**
+-   Average fee: **1 764 €**
 -   Median fee: **2 132 €**
 
 The following institutions have contributed its expenditures for hybrid
@@ -578,9 +578,9 @@ open access.
 </tr>
 <tr class="odd">
 <td>Swedish University of Agricultural Sciences</td>
-<td align="right">136</td>
-<td align="right">306 205</td>
-<td align="right">2 252</td>
+<td align="right">190</td>
+<td align="right">426 338</td>
+<td align="right">2 244</td>
 <td align="right">2 200</td>
 </tr>
 <tr class="even">

@@ -8,7 +8,9 @@
 
     ToDo
     -----
-    Run DU's records
+    Handle commented lines in TSV input files
+    Handle files with only 6 mandatory fields
+    Run new SLU records
     Handling of duplicate DOI's
     Error reporting module
     Clean up processing logic and introduce error handling
@@ -18,6 +20,7 @@
 
     Done
     -----
+    2017-05-10 Run DU's records
     2017-04-11 Add final normalisation of master file before saving
     2017-04-11 Add header line to apc_se.csv output and remove header line from added data
     2017-04-07 Re-code for complete process for one APC file at a time
@@ -137,8 +140,6 @@ def main():
         # Create various file names
         str_input_file_name, str_output_file_name, str_enriched_file_name = cob_file_manager.create_file_names(
             str_input_file_name)
-
-        # if False:
 
         # Read and clean data for one file
         lst_cleaned_data = cob_data_processor.collect_apc_data(str_input_file_name, args)
