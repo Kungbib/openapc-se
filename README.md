@@ -24,11 +24,11 @@ This project follows the [Open APC Initiative](https://github.com/OpenAPC/openap
 1. KTH Royal Institute of Techonology (kth)
 2. Stockholm University (su)
 3. Swedish University of Agricultural Sciences (slu)
-4. University of Gothenburg (gu) 
+4. University of Gothenburg (gu)
+5. Dalarna University College (du) 
 
 ## Sample of statistics
 A first sample of statistics from the project may be viewed at the [statistics page](https://github.com/Kungbib/openapc-se/blob/master/statistics.md)
-
 
 ## Contributing APC data
 See [guidelines for contribution of data](https://github.com/Kungbib/openapc-se/wiki/Instructions-for-data-entry) in the project Wiki.
@@ -38,4 +38,4 @@ See [guidelines for contribution of data](https://github.com/Kungbib/openapc-se/
 For general comments, email Beate Eellend at the National Library of Sweden: **beate.eellend [at] kb.se**  
 For technical comments, contact Ulf Kronman at the National Library of Sweden: **ulf.kronman [at] kb.se**
 
-[Page updated 2017-04-06] 
+[Page updated 2017-07-07] 
