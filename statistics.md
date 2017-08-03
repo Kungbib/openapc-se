@@ -19,6 +19,7 @@ far. These are:
 -   University of Gothenburg
 -   Swedish University of Agricultural Sciences
 -   Dalarna University College
+-   Luleå University of Technology
 
 Three publishers have also supplied Open APC Sweden with data:
 
@@ -38,9 +39,9 @@ publication of articles in toll-access journals ("hybrid") are provided.
 You may view the dataset at the [project page in
 GitHub](https://github.com/Kungbib/openapc-se/blob/master/data/apc_se.csv).
 
-In total, **3 477 461 €** for **1 971 articles** were paid by the **28
+In total, **3 502 629 €** for **1 989 articles** were paid by the **28
 organisations** that have APC data from so far. The **average APC is 1
-764 €** and the **median is APC 2 132 €**.
+761 €** and the **median is APC 2 132 €**.
 
 <table>
 <thead>
@@ -55,9 +56,9 @@ organisations** that have APC data from so far. The **average APC is 1
 <tbody>
 <tr class="odd">
 <td align="right">28</td>
-<td align="right">1 971</td>
-<td align="right">3 477 461</td>
-<td align="right">1 764</td>
+<td align="right">1 989</td>
+<td align="right">3 502 629</td>
+<td align="right">1 761</td>
 <td align="right">2 132</td>
 </tr>
 </tbody>
@@ -68,9 +69,9 @@ Open Access Articles (Total: both "gold" and "hybrid" OA)
 
 At the moment, the dataset contains the following information:
 
--   Number of articles: **1 971**
--   Total expenditure: **3 477 461 €**
--   Average fee: **1 764 €**
+-   Number of articles: **1 989**
+-   Total expenditure: **3 502 629 €**
+-   Average fee: **1 761 €**
 -   Median fee: **2 132 €**
 
 Articles and APC costs per institution:
@@ -158,9 +159,9 @@ Articles and APC costs per institution:
 </tr>
 <tr class="odd">
 <td>Luleå University of Technology</td>
-<td align="right">24</td>
-<td align="right">52 743</td>
-<td align="right">2 198</td>
+<td align="right">42</td>
+<td align="right">77 911</td>
+<td align="right">1 855</td>
 <td align="right">2 200</td>
 </tr>
 <tr class="even">
@@ -291,10 +292,10 @@ Articles in Open Access journals ("gold OA")
 At the moment, the dataset contains the following information on
 articles in open access journals:
 
--   Number of articles: **830**
--   Total expenditure: **1 005 982 €**
--   Average fee: **1 212 €**
--   Median fee: **1 302 €**
+-   Number of articles: **843**
+-   Total expenditure: **1 020 308 €**
+-   Average fee: **1 210 €**
+-   Median fee: **1 285 €**
 
 Articles and APC costs per institution:
 
@@ -345,48 +346,55 @@ Articles and APC costs per institution:
 <td align="right">413</td>
 </tr>
 <tr class="even">
+<td>Luleå University of Technology</td>
+<td align="right">13</td>
+<td align="right">14 326</td>
+<td align="right">1 102</td>
+<td align="right">1 150</td>
+</tr>
+<tr class="odd">
 <td>Lund University</td>
 <td align="right">14</td>
 <td align="right">6 555</td>
 <td align="right">468</td>
 <td align="right">198</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Malmö University College</td>
 <td align="right">4</td>
 <td align="right">4 007</td>
 <td align="right">1 002</td>
 <td align="right">890</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Stockholm University</td>
 <td align="right">92</td>
 <td align="right">139 765</td>
 <td align="right">1 519</td>
 <td align="right">1 402</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Swedish University of Agricultural Sciences</td>
 <td align="right">342</td>
 <td align="right">447 278</td>
 <td align="right">1 308</td>
 <td align="right">1 326</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Umeå University</td>
 <td align="right">13</td>
 <td align="right">6 104</td>
 <td align="right">470</td>
 <td align="right">575</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>University of Gothenburg</td>
 <td align="right">147</td>
 <td align="right">210 321</td>
 <td align="right">1 431</td>
 <td align="right">1 404</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Uppsala University</td>
 <td align="right">45</td>
 <td align="right">6 467</td>
@@ -403,9 +411,9 @@ In many toll-access journals some of the articles are open access after
 a fee has been paid. This model is often called "hybrid open access".
 The dataset covers the following data on hybrid open access articles:
 
--   Number of articles: **1 971**
--   Total expenditure: **3 477 461 €**
--   Average fee: **1 764 €**
+-   Number of articles: **1 989**
+-   Total expenditure: **3 502 629 €**
+-   Average fee: **1 761 €**
 -   Median fee: **2 132 €**
 
 The following institutions have contributed its expenditures for hybrid
@@ -494,9 +502,9 @@ open access.
 </tr>
 <tr class="odd">
 <td>Luleå University of Technology</td>
-<td align="right">24</td>
-<td align="right">52 743</td>
-<td align="right">2 198</td>
+<td align="right">29</td>
+<td align="right">63 585</td>
+<td align="right">2 193</td>
 <td align="right">2 200</td>
 </tr>
 <tr class="even">

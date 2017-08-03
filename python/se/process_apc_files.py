@@ -3,23 +3,26 @@
 """
 ========================================================================================================================
     Script to prepare and process Swedish APC data files
-    Ulf Kronman 2017-04-06
+    Ulf Kronman 2017-04-06--07-26
     Adapted from and based on code by Christoph Broschinski, Copyright (c) 2016
 
     ToDo
     -----
-    Handle commented lines in TSV input files
-    Handle files with only 6 mandatory fields
-    Run new SLU records
-    Handling of duplicate DOI's
-    Error reporting module
-    Clean up processing logic and introduce error handling
-    Do test runs on insitutional data
+    Run LTU test file through the system
+    Fix todos
     Handle duplicate entries by skipping second entry and reporting for submission to data supplier
-    Report DOI errors to file(?) for correction by institutions
+    Future: Clean up processing logic and introduce error handling - Error reporting module?
+    Future: Add APC records to Django SwePub database - separate class/module?
+    Future: Report DOI errors to file(?) for correction by institutions
 
     Done
     -----
+    2017-07-26 Fix IDE-marked issues
+    2017-05-19 Handling of duplicate DOI's
+    2017-05-22 Handle files with only 6 mandatory fields
+    2017-05-19 Run new SLU records
+    2017-05-22 Handle commented lines in TSV input files
+    2017-05-22 Handle files with only 6 mandatory fields
     2017-05-10 Run DU's records
     2017-04-11 Add final normalisation of master file before saving
     2017-04-11 Add header line to apc_se.csv output and remove header line from added data
@@ -34,7 +37,7 @@ import codecs
 import locale
 import sys
 import urllib2
-import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as ElementTree
 from subprocess import call
 from openpyxl import load_workbook
 import unicodecsv as csv
@@ -301,10 +304,10 @@ class DataProcessor(object):
         # Create a publisher name normalising object
         obj_publisher_normaliser = PublisherNormaliser()
 
-        cleaned_content = []
-        error_messages = []
+        # cleaned_content = []
+        # error_messages = []
 
-        enc = None # CSV file encoding
+        enc = None  # CSV file encoding
 
         # Keep a list of processed DOI's to check for duplicates - what to do if found?
         lst_dois_processed = []
@@ -543,7 +546,7 @@ class FileManager(object):
     def create_file_names(self, str_input_file_name):
         """ Create names for various files """
 
-        str_output_file_name = ''
+        # str_output_file_name = ''
 
         # Create an output file name
         if r'.csv' in str_input_file_name:
@@ -568,7 +571,7 @@ class FileManager(object):
         """ If we have an Excel file as input, convert it to TSV for OA toolkit processing """
 
         # Make a TSV name to return to caller
-        str_tsv_file = str_excel_file.replace(r'.xlsx',r'.tsv')
+        str_tsv_file = str_excel_file.replace(r'.xlsx', r'.tsv')
 
         str_excel_dir_file = Config.STR_DATA_DIRECTORY + str_excel_file
         str_tsv_dir_file = Config.STR_DATA_DIRECTORY + str_tsv_file
@@ -706,8 +709,8 @@ class UserInterface(object):
     # ------------------------------------------------------------------------------------------------------------------
     def report_input(self, obj_output_data):
         """ Put input data into a dictionary and report it to user
-        :param lst_row: List with input data
-        :return: dct_input_data: Dictionary with input data
+        :param obj_output_data: Object with output data
+        :return: Nothing
         """
         # Print neat divider
         self.print_divider(u'Input data')
@@ -716,7 +719,7 @@ class UserInterface(object):
         # Print neat divider
         self.print_divider(u'End of record')
         print(u'')
-        return obj_output_data
+        # return obj_output_data
     # ------------------------------------------------------------------------------------------------------------------
 
     # ------------------------------------------------------------------------------------------------------------------
@@ -739,11 +742,11 @@ class UserInterface(object):
     # ------------------------------------------------------------------------------------------------------------------
     @staticmethod
     def print_divider(str_message, bool_space_before=False, bool_space_after=False):
-        """ Print a neat divider betweeen routines
-        :param str_message: The message to be encapsulated in the divider
-                bool_space_before = True if extra spacing before divider
-                bool_space_after = True if extra spacing after divider
-        :return: None
+        """ Print a nice divider
+            :param str_message: Print a neat divider betweeen routines
+            :param bool_space_before: Flag for space before
+            :param bool_space_after: Flag for space after
+            :return: Nothing
         """
         if bool_space_before:
             print
@@ -834,7 +837,7 @@ class PublisherNormaliser(object):
     # ------------------------------------------------------------------------------------------------------------------
     def get_crossref_names(self, doi):
         """ Get Crossref info
-            <crm-item name="publisher-name" type="string">Institute of Electrical and Electronics Engineers (IEEE)</crm-item>
+            <crm-item name="publisher-name" type="string">Institute of Electrical ... (IEEE)</crm-item>
             <crm-item name="prefix-name" type="string">Institute of Electrical and Electronics Engineers</crm-item>
         """
         dct_crossref_lookup_result = dict(
@@ -849,11 +852,11 @@ class PublisherNormaliser(object):
         try:
             response = urllib2.urlopen(req)
             content_string = response.read()
-            root = ET.fromstring(content_string)
+            root = ElementTree.fromstring(content_string)
             prefix_name_result = root.findall(".//cr_qr:crm-item[@name='prefix-name']",
-                                  {"cr_qr": "http://www.crossref.org/qrschema/3.0"})
+                                              {"cr_qr": "http://www.crossref.org/qrschema/3.0"})
             publisher_name_result = root.findall(".//cr_qr:crm-item[@name='publisher-name']",
-                                  {"cr_qr": "http://www.crossref.org/qrschema/3.0"})
+                                                 {"cr_qr": "http://www.crossref.org/qrschema/3.0"})
             # return publisher_name_result[0].text, prefix_name_result[0].text
             dct_crossref_lookup_result['publisher'] = publisher_name_result[0].text
             dct_crossref_lookup_result['prefix'] = prefix_name_result[0].text
@@ -864,7 +867,7 @@ class PublisherNormaliser(object):
         except urllib2.URLError as urle:
             dct_crossref_lookup_result['error'] = True
             dct_crossref_lookup_result['error_reason'] = "URLError: {}".format(urle.reason)
-        except ET.ParseError as etpe:
+        except ElementTree.ParseError as etpe:
             dct_crossref_lookup_result['error'] = True
             dct_crossref_lookup_result['error_reason'] = "ElementTree ParseError: {}".format(str(etpe))
         return dct_crossref_lookup_result
