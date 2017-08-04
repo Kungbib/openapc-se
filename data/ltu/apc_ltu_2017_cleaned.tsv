@@ -1,4 +1,4 @@
-institution	period	cost	doi	is_hybrid	publisher	journal_full_title	issn	issn_print	issn_electronic	url
+institution	period	euro	doi	is_hybrid	publisher	journal_full_title	issn	issn_print	issn_electronic	url
 ltu	2017	1339	10.3390/en10030263	FALSE	MDPI	Energies	1996-1073			http://www.mdpi.com/1996-1073/10/3/263/htm
 ltu	2017	1088	10.3390/app7050488	FALSE	MDPI	Applied Sciences	2076-3417			http://www.mdpi.com/2076-3417/7/5/488
 ltu	2017	1344	10.3390/en10030332	FALSE	MDPI	Energies	1996-1073			http://www.mdpi.com/1996-1073/10/3/332/htm
@@ -12,8 +12,10 @@ ltu	2017	2960	10.1016/j.biortech.2017.04.002	TRUE	Elsevier	Bioresource Technolog
 ltu	2017	2260	10.1016/j.chemolab.2017.05.016#sthash.VNp1MNah.dpuf	TRUE	Elsevier	Chemometrics and Intelligent Laboratory Systems		0169-7439	1873-3239	http://www.sciencedirect.com/science/article/pii/S0169743917300734
 ltu	2017	1338	10.1155/2017/5784627	FALSE	Hindawi Publishing Corporation	International Journal of Chemical Engineering		1687-806X	1687-8078	https://www.hindawi.com/journals/ijce/2017/5784627/
 ltu	2017	1562	10.3390/ijerph13121248	FALSE	MDPI	International Journal of Environmental Research and Public Health		1661-7827	1660-4601	http://www.mdpi.com/1660-4601/13/12/1248
+ltu	2017	931		FALSE	North Carolina State University	Bioresources		1930-2126	1930-2126	http://ojs.cnr.ncsu.edu/index.php/BioRes/article/view/BioRes_12_2_3122_Sadatnezhad_Continuous_Surface_Densification_Wood
 ltu	2017	1599	10.3390/s17010181	FALSE	MDPI	Sensors	1424-8220			http://www.mdpi.com/1424-8220/17/1/181/htm
 ltu	2017	1236	10.3390/en10020184	FALSE	MDPI	Energies		1996-1073	1996-1073	http://www.mdpi.com/1996-1073/10/2/184
 ltu	2017	588	10.1039/C6RA25410A	FALSE	Royal Society of Chemistry (RSC)	RSC Advances	2046-2069			http://pubs.rsc.org/en/content/articlelanding/2017/ra/c6ra25410a#!divAbstract
 ltu	2017	239	10.4028/www.scientific.net/MSF.891.18#sthash.pqs6shZX.dpuf	TRUE	Trans Tech Publications	Materials Science Forum		0255-5476	1662-9752	https://www.scientific.net/MSF.891.18
+ltu	2017	95		FALSE	Civil Engineering Journal	Civil Engineering Journal	2476-3055			http://civilejournal.org/index.php/cej/article/view/310
 ltu	2017	1074	10.3390/f8040107	FALSE	MDPI	Forests	1999-4907			http://www.mdpi.com/1999-4907/8/4/107

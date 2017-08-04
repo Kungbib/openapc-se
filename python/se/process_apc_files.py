@@ -3,12 +3,11 @@
 """
 ========================================================================================================================
     Script to prepare and process Swedish APC data files
-    Ulf Kronman 2017-04-06--07-26
+    Ulf Kronman 2017-04-06--08-04
     Adapted from and based on code by Christoph Broschinski, Copyright (c) 2016
 
     ToDo
     -----
-    Run LTU test file through the system
     Fix todos
     Handle duplicate entries by skipping second entry and reporting for submission to data supplier
     Future: Clean up processing logic and introduce error handling - Error reporting module?
@@ -17,6 +16,9 @@
 
     Done
     -----
+    2017-08-04 Exclude duplicate DOI checking on empty field = 'NA'
+    2017-08-03 Script does not handle empty DOI properly - fix it
+    2017-08-03 Run LTU test file through the system
     2017-07-26 Fix IDE-marked issues
     2017-05-19 Handling of duplicate DOI's
     2017-05-22 Handle files with only 6 mandatory fields
@@ -144,6 +146,10 @@ def main():
         str_input_file_name, str_output_file_name, str_enriched_file_name = cob_file_manager.create_file_names(
             str_input_file_name)
 
+        # Temporary for testing
+        # cob_data_processor.add_new_data_to_master_file(str_enriched_file_name, cob_user_interface)
+        # sys.exit()
+
         # Read and clean data for one file
         lst_cleaned_data = cob_data_processor.collect_apc_data(str_input_file_name, args)
 
@@ -189,44 +195,107 @@ class DataProcessor(object):
         # Keep the header of the master file for separate writing to the final result
         lst_master_file_header = []
 
-        # Read master file into a matrix of data - Maybe this should be a dictionary?
+        # Read master file into a matrix and a dictionary of data
         dct_master_data = {}
         lst_master_dois = []
         with open(str_apc_se_file, 'rb') as csvfile:
             obj_csv_reader = csv.reader(csvfile, delimiter=',', quotechar='"')
             for lst_row in obj_csv_reader:
                 str_doi = lst_row[3].lower().strip()
+                str_key = ''
                 if str_doi == 'doi':
                     lst_master_file_header = lst_row
                     continue
-                if str_doi not in lst_master_dois and str_doi not in dct_master_data.keys():
-                    lst_master_dois.append(str_doi)
-                    dct_master_data[str_doi] = lst_row
+                # If we have a DOI
+                if str_doi and str_doi.lower() != u'na':
+                    str_key = str_doi
+                # If no DOI is present
                 else:
-                    print '!Error: Duplicate DOI {}'.format(str_doi)
+                    print('DOI missing {}'.format(lst_row))
+                    # If article URL is present, use that as identifier (16)
+                    if len(lst_row) > 16 and lst_row[16].strip():
+                        str_key = lst_row[16].strip()
+                    else:
+                        # Create a new custom key from all fields for the entry in the dictionary
+                        str_key = ''
+                        for str_column in lst_row:
+                            str_key + '.' + str_column
+                    print(u'Info: Custom key: {}'.format(str_key))
+
+                if str_key not in lst_master_dois and str_key not in dct_master_data.keys():
+                    lst_master_dois.append(str_key)
+                    dct_master_data[str_key] = lst_row
+                else:
+                    sys.exit('!Error: Duplicate DOI/Key in master file: {}'.format(str_key))
+
         csvfile.close()
 
         with open(str_enriched_file_name, 'rb') as csvfile:
             obj_csv_reader = csv.reader(csvfile, delimiter=',', quotechar='"')
             for lst_row in obj_csv_reader:
+
                 str_doi = lst_row[3].lower().strip()
+
+                # Skip header line
                 if str_doi == 'doi':
                     continue
-                if str_doi not in dct_master_data.keys():
-                    dct_master_data[str_doi] = lst_row
-                    print(u'INFO: Added new data {}'.format(u' '.join(lst_row)))
+
+                # If we have a DOI
+                if str_doi and str_doi.lower() != u'na':
+                    str_key = str_doi
+                # If no DOI is present
+                else:
+                    print('DOI missing {}'.format(lst_row))
+                    # If article URL is present, use that as identifier (16)
+                    if len(lst_row) > 16 and lst_row[16].strip():
+                        str_key = lst_row[16].strip()
+                    else:
+                        # Create a new custom key from all fields for the entry in the dictionary
+                        str_key = ''
+                        for str_column in lst_row:
+                            str_key + '.' + str_column
+                    print(u'Info: Custom key: {}'.format(str_key))
+
+                if str_key not in dct_master_data.keys():
+                    dct_master_data[str_key] = lst_row
+                    print(u'Info: Added new data {}'.format(u' '.join(lst_row)))
+                    print(u'Info: Key: {}'.format(str_key))
                     continue
                 else:
-                    print('DOI present {}'.format(str_doi))
-                    print('Present:\t{}'.format(dct_master_data[str_doi]))
+                    print('DOI/Key present {}'.format(str_key))
+                    print('Present:\t{}'.format(dct_master_data[str_key]))
                     print('New:\t\t{}'.format(lst_row))
-                    if lst_row == dct_master_data[str_doi]:
-                        print('INFO: Data are exactly the same. Skipping new record.')
+                    if lst_row == dct_master_data[str_key]:
+                        print('info: Data are exactly the same. Skipping new record.')
                         continue
                     else:
                         print('Data differs. Choose item:')
-                        lst_chosen_data = cob_user_interface.ask_user(dct_master_data[str_doi], lst_row)
-                        dct_master_data[str_doi] = lst_chosen_data
+                        lst_chosen_data = cob_user_interface.ask_user(dct_master_data[str_key], lst_row)
+                        dct_master_data[str_key] = lst_chosen_data
+
+                # # If we don't have a DOI, we need to do some extra checking
+                # else:
+                #     # [Here 2017-08-04 ] #
+                #     print('DOI missing {}'.format(lst_row))
+                #     # Create a new custom key for the entry in the dictionary
+                #     str_key = lst_row[0] + '.' + lst_row[1] + '.' + lst_row[2] + '.' + lst_row[4] + '.' + lst_row[5]
+                #     print('New:\t\t{}'.format(lst_row))
+                #     if str_key not in dct_master_data.keys():
+                #         dct_master_data[str_key] = lst_row
+                #         print(u'Info: Added new data {}'.format(u' '.join(lst_row)))
+                #         continue
+                #     else:
+                #         if lst_row == dct_master_data[str_key]:
+                #             print('New:\t\t{}'.format(lst_row))
+                #             print('Present:\t\t{}'.format(dct_master_data[str_key]))
+                #             print('info: Data are exactly the same. Skipping new record.')
+                #             continue
+                #         else:
+                #             print('Data differs. Adding new data item:')
+                #             print('New:\t\t{}'.format(lst_row))
+                #             print('Present:\t\t{}'.format(dct_master_data[str_doi]))
+                #             dct_master_data[str_key] = lst_row
+
         csvfile.close()
 
         # Make master dictionary to a list and sort it
@@ -237,7 +306,7 @@ class DataProcessor(object):
         lst_master_data = self.normalise_publisher_names(lst_master_data)
 
         # Write the new data to the master file
-        print('\nINFO: Writing result to master file {}\n'.format(str_apc_se_file))
+        print('\nInfo: Writing result to master file {}\n'.format(str_apc_se_file))
         with open(str_apc_se_file, 'wb') as csvfile:
             obj_csv_writer = csv.writer(csvfile, delimiter=',', quotechar='"')
             obj_csv_writer.writerow(lst_master_file_header)
@@ -252,12 +321,16 @@ class DataProcessor(object):
         """ Final normalisation of publisher names after Crossref lookup names according to Bibsam principles """
         obj_publisher_normaliser = PublisherNormaliser()
         lst_cleaned_data = []
+        str_publisher_name_normalised = ''
         for lst_row in lst_master_data:
             str_publisher_name = lst_row[5].strip()
-            str_doi = lst_row[3].strip()
-            if str_publisher_name:
+            if lst_row[3].strip() and lst_row[3].strip().lower() != 'na':
+                str_doi = lst_row[3].strip()
+            else:
+                str_doi = ''
+            if str_publisher_name and str_doi:
                 str_publisher_name_normalised = obj_publisher_normaliser.normalise(str_publisher_name, str_doi)
-            if str_publisher_name_normalised != str_publisher_name:
+            if str_publisher_name_normalised and str_publisher_name_normalised != str_publisher_name:
                 lst_row[5] = str_publisher_name_normalised
             lst_cleaned_data.append(lst_row)
 
@@ -272,7 +345,7 @@ class DataProcessor(object):
         """ """
 
         # Run the DE process for enrichment as a shell command
-        print('\nINFO: Running enrichment process on file {}'.format(str_output_file_name))
+        print('\nInfo: Running enrichment process on file {}'.format(str_output_file_name))
         call(["../apc_csv_processing.py", "-l", "sv_SE.UTF-8", str_output_file_name])
 
     # ------------------------------------------------------------------------------------------------------------------
@@ -284,7 +357,7 @@ class DataProcessor(object):
         # A list for the cleaned data
         lst_cleaned_data = []
 
-        print '\nINFO: Processing file: {} \n==================================================== \n'.format(
+        print '\nInfo: Processing file: {} \n==================================================== \n'.format(
             str_file_name)
 
         str_input_file_name = Config.STR_DATA_DIRECTORY + str_file_name
@@ -402,8 +475,8 @@ class DataProcessor(object):
                 continue
 
             # Skip record if empty APC field
-            if not row[3].strip():
-                print '!Warning: No APC given for publication {}. Skipping entry.'.format(row[4])
+            if not row[2].strip():
+                print('!Warning: No APC given for publication {}. Skipping entry.'.format(' - '.join(row)))
                 continue
 
             # First non-empty row should be the header
@@ -413,10 +486,10 @@ class DataProcessor(object):
                 continue
 
             # Put the DOI in a string for later use
-            if row[3]:
+            if row[3].strip() and row[3].strip().lower() != 'na':
                 str_doi = row[3].strip()
             else:
-                print 'WARNING: No DOI found'
+                print('!Warning: No DOI found: {}'.format(' - '.join(row)))
                 str_doi = ''
 
             current_row = []
@@ -450,17 +523,17 @@ class DataProcessor(object):
                     csv_column = csv_column.replace(",", ".")
 
                 # Check for DOI duplicates
-                if col_number == 4:
-                    if csv_column in lst_dois_processed:
+                if col_number == 4 and csv_column.strip() and csv_column.strip().lower() != 'na':
+                    if csv_column.strip() in lst_dois_processed:
                         print '!Error duplicate DOI {} - Org: {} - Year: {} '.format(
                             csv_column, row[0], row[1]
                         )
                         sys.exit()
                     else:
-                        lst_dois_processed.append(csv_column)
+                        lst_dois_processed.append(csv_column.strip())
 
                 # Publisher name normalisation, use map or send DOI for CrossRef lookup
-                if col_number == 6 and csv_column:
+                if col_number == 6 and csv_column and str_doi:
                     str_publisher_name_normalised = obj_publisher_normaliser.normalise(csv_column, str_doi)
                     csv_column = str_publisher_name_normalised
 
@@ -525,15 +598,15 @@ class FileManager(object):
         lst_apc_files = []
         try:
             fp_apc_files = open(str_file_list_file, 'r')
-            print '\n--------------------------------------'
-            print 'INFO: Processing files:'
+            print '\n--------------------------------------------------------------------------'
+            print 'Info: Processing files:'
             for str_line in fp_apc_files:
                 # Don't process if we have a comment (#) on the line
                 if '#' in str_line:
                     continue
                 lst_apc_files.append(str_line.strip())
                 print str_line.strip()
-            print '--------------------------------------\n'
+            print '---------------------------------------------------------------------------\n'
         except IOError:
             print 'File list not found in: {}'.format(str_file_list_file)
             sys.exit()
