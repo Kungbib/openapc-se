@@ -63,6 +63,7 @@ Four Swedish universities have reported APC costs for their articles so far. The
 * Swedish University of Agricultural Sciences 
 * Dalarna University College
 * Luleå University of Technology
+* Linköping University
 
 Three publishers have also supplied Open APC Sweden with data: 
 

@@ -25,7 +25,8 @@ This project follows the [Open APC Initiative](https://github.com/OpenAPC/openap
 2. Stockholm University (su)
 3. Swedish University of Agricultural Sciences (slu)
 4. University of Gothenburg (gu)
-5. Dalarna University College (du) 
+5. Dalarna University College (du)
+6. Linköping University (liu) 
 
 ## Sample of statistics
 A first sample of statistics from the project may be viewed at the [statistics page](https://github.com/Kungbib/openapc-se/blob/master/statistics.md)
