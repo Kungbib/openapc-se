@@ -8,6 +8,7 @@
 
     ToDo
     -----
+    Read DOIs and data from final master to avoid processing of already processed entries
     Fix todos
     Handle duplicate entries by skipping second entry and reporting for submission to data supplier
     Future: Clean up processing logic and introduce error handling - Error reporting module?
@@ -16,6 +17,10 @@
 
     Done
     -----
+    2017-09-07 Handle this DOI error with invisble blanks:
+            slu	2015	2064.46	10.​1105/​tpc.​114.​134494	SANT	American Society of Plant Biologists
+    2017-09-06 Add DOI correction subroutine for the following:
+            0.1186/s12864-015-1829-1 ----> 10.1186/s12864-015-1829-1
     2017-08-04 Exclude duplicate DOI checking on empty field = 'NA'
     2017-08-03 Script does not handle empty DOI properly - fix it
     2017-08-03 Run LTU test file through the system
@@ -33,6 +38,9 @@
 
 ========================================================================================================================
 """
+
+# from __future__ import unicode_literals
+from __future__ import division
 
 import argparse
 import codecs
@@ -146,10 +154,6 @@ def main():
         str_input_file_name, str_output_file_name, str_enriched_file_name = cob_file_manager.create_file_names(
             str_input_file_name)
 
-        # Temporary for testing
-        # cob_data_processor.add_new_data_to_master_file(str_enriched_file_name, cob_user_interface)
-        # sys.exit()
-
         # Read and clean data for one file
         lst_cleaned_data = cob_data_processor.collect_apc_data(str_input_file_name, args)
 
@@ -187,132 +191,21 @@ class DataProcessor(object):
     lst_error_messages = []
 
     # ------------------------------------------------------------------------------------------------------------------
-    def add_new_data_to_master_file(self, str_enriched_file_name, cob_user_interface):
-        """ Check how much of the newly enriched data that should be added """
+    def __init__(self):
+        """ Set up basic data needed for processing """
 
-        str_apc_se_file = Config.STR_APC_SE_FILE
-
-        # Keep the header of the master file for separate writing to the final result
-        lst_master_file_header = []
-
-        # Read master file into a matrix and a dictionary of data
-        dct_master_data = {}
-        lst_master_dois = []
-        with open(str_apc_se_file, 'rb') as csvfile:
+        print('Info: Creating checkup file for processed DOIs')
+        # self.mx_master_data = []
+        self.lst_master_dois = []
+        with open(Config.STR_APC_SE_FILE, 'rb') as csvfile:
             obj_csv_reader = csv.reader(csvfile, delimiter=',', quotechar='"')
             for lst_row in obj_csv_reader:
-                str_doi = lst_row[3].lower().strip()
-                str_key = ''
-                if str_doi == 'doi':
-                    lst_master_file_header = lst_row
-                    continue
-                # If we have a DOI
-                if str_doi and str_doi.lower() != u'na':
-                    str_key = str_doi
-                # If no DOI is present
-                else:
-                    print('DOI missing {}'.format(lst_row))
-                    # If article URL is present, use that as identifier (16)
-                    if len(lst_row) > 16 and lst_row[16].strip():
-                        str_key = lst_row[16].strip()
-                    else:
-                        # Create a new custom key from all fields for the entry in the dictionary
-                        str_key = ''
-                        for str_column in lst_row:
-                            str_key + '.' + str_column
-                    print(u'Info: Custom key: {}'.format(str_key))
-
-                if str_key not in lst_master_dois and str_key not in dct_master_data.keys():
-                    lst_master_dois.append(str_key)
-                    dct_master_data[str_key] = lst_row
-                else:
-                    sys.exit('!Error: Duplicate DOI/Key in master file: {}'.format(str_key))
-
+                if lst_row[3].strip():
+                    self.lst_master_dois.append(lst_row[3].strip().lower())
         csvfile.close()
 
-        with open(str_enriched_file_name, 'rb') as csvfile:
-            obj_csv_reader = csv.reader(csvfile, delimiter=',', quotechar='"')
-            for lst_row in obj_csv_reader:
-
-                str_doi = lst_row[3].lower().strip()
-
-                # Skip header line
-                if str_doi == 'doi':
-                    continue
-
-                # If we have a DOI
-                if str_doi and str_doi.lower() != u'na':
-                    str_key = str_doi
-                # If no DOI is present
-                else:
-                    print('DOI missing {}'.format(lst_row))
-                    # If article URL is present, use that as identifier (16)
-                    if len(lst_row) > 16 and lst_row[16].strip():
-                        str_key = lst_row[16].strip()
-                    else:
-                        # Create a new custom key from all fields for the entry in the dictionary
-                        str_key = ''
-                        for str_column in lst_row:
-                            str_key + '.' + str_column
-                    print(u'Info: Custom key: {}'.format(str_key))
-
-                if str_key not in dct_master_data.keys():
-                    dct_master_data[str_key] = lst_row
-                    print(u'Info: Added new data {}'.format(u' '.join(lst_row)))
-                    print(u'Info: Key: {}'.format(str_key))
-                    continue
-                else:
-                    print('DOI/Key present {}'.format(str_key))
-                    print('Present:\t{}'.format(dct_master_data[str_key]))
-                    print('New:\t\t{}'.format(lst_row))
-                    if lst_row == dct_master_data[str_key]:
-                        print('info: Data are exactly the same. Skipping new record.')
-                        continue
-                    else:
-                        print('Data differs. Choose item:')
-                        lst_chosen_data = cob_user_interface.ask_user(dct_master_data[str_key], lst_row)
-                        dct_master_data[str_key] = lst_chosen_data
-
-                # # If we don't have a DOI, we need to do some extra checking
-                # else:
-                #     # [Here 2017-08-04 ] #
-                #     print('DOI missing {}'.format(lst_row))
-                #     # Create a new custom key for the entry in the dictionary
-                #     str_key = lst_row[0] + '.' + lst_row[1] + '.' + lst_row[2] + '.' + lst_row[4] + '.' + lst_row[5]
-                #     print('New:\t\t{}'.format(lst_row))
-                #     if str_key not in dct_master_data.keys():
-                #         dct_master_data[str_key] = lst_row
-                #         print(u'Info: Added new data {}'.format(u' '.join(lst_row)))
-                #         continue
-                #     else:
-                #         if lst_row == dct_master_data[str_key]:
-                #             print('New:\t\t{}'.format(lst_row))
-                #             print('Present:\t\t{}'.format(dct_master_data[str_key]))
-                #             print('info: Data are exactly the same. Skipping new record.')
-                #             continue
-                #         else:
-                #             print('Data differs. Adding new data item:')
-                #             print('New:\t\t{}'.format(lst_row))
-                #             print('Present:\t\t{}'.format(dct_master_data[str_doi]))
-                #             dct_master_data[str_key] = lst_row
-
-        csvfile.close()
-
-        # Make master dictionary to a list and sort it
-        lst_master_data = [lst_row for str_doi, lst_row in dct_master_data.iteritems()]
-        lst_master_data.sort()
-
-        # Normalise names before writing to file
-        lst_master_data = self.normalise_publisher_names(lst_master_data)
-
-        # Write the new data to the master file
-        print('\nInfo: Writing result to master file {}\n'.format(str_apc_se_file))
-        with open(str_apc_se_file, 'wb') as csvfile:
-            obj_csv_writer = csv.writer(csvfile, delimiter=',', quotechar='"')
-            obj_csv_writer.writerow(lst_master_file_header)
-            for lst_row in lst_master_data:
-                obj_csv_writer.writerow(lst_row)
-        csvfile.close()
+        # for str_doi in self.lst_master_dois:
+        #     print str_doi
 
     # ------------------------------------------------------------------------------------------------------------------
 
@@ -361,7 +254,7 @@ class DataProcessor(object):
             str_file_name)
 
         str_input_file_name = Config.STR_DATA_DIRECTORY + str_file_name
-        lst_new_apc_data = self.clean_apc_data(str_input_file_name, args)
+        lst_new_apc_data = self._clean_apc_data(str_input_file_name, args)
 
         for lst_row in lst_new_apc_data:
             lst_cleaned_data.append(lst_row)
@@ -371,7 +264,7 @@ class DataProcessor(object):
     # ------------------------------------------------------------------------------------------------------------------
 
     # ------------------------------------------------------------------------------------------------------------------
-    def clean_apc_data(self, str_input_file, args):
+    def _clean_apc_data(self, str_input_file, args):
         """ Process APC file """
 
         # Create a publisher name normalising object
@@ -485,15 +378,18 @@ class DataProcessor(object):
                 cleaned_content.append(header)
                 continue
 
-            # Put the DOI in a string for later use
+            # Don't process lines who's DOIs are in the master file
             if row[3].strip() and row[3].strip().lower() != 'na':
-                str_doi = row[3].strip()
+                # Clean the DOI before continuing
+                str_doi = self._clean_doi(row[3].strip())
+                if str_doi.lower() in self.lst_master_dois:
+                    print(u'Info: Skipping DOI present in master file: {}'. format(row[3].strip().lower()))
+                    continue
             else:
                 print('!Warning: No DOI found: {}'.format(' - '.join(row)))
                 str_doi = ''
 
             current_row = []
-
             col_number = 0
 
             # Copy content of columns
@@ -504,33 +400,32 @@ class DataProcessor(object):
                 # Remove leading and trailing spaces
                 csv_column = csv_column.strip()
 
-                if csv_column.lower() == u'sant':
-                    csv_column = u'TRUE'
-                elif csv_column.lower() == u'falskt':
-                    csv_column = u'FALSE'
-                elif csv_column == u'true':
-                    csv_column = u'TRUE'
-                elif csv_column == u'false':
-                    csv_column = u'FALSE'
-
                 # Handling of APC column
                 if col_number == 3:
-
                     # Clean monetary Euro column from spaces due to formatting
                     csv_column = ''.join(csv_column.split())
-
                     # Change commas to periods
                     csv_column = csv_column.replace(",", ".")
 
-                # Check for DOI duplicates
-                if col_number == 4 and csv_column.strip() and csv_column.strip().lower() != 'na':
-                    if csv_column.strip() in lst_dois_processed:
-                        print '!Error duplicate DOI {} - Org: {} - Year: {} '.format(
-                            csv_column, row[0], row[1]
-                        )
-                        sys.exit()
+                # DOI handling
+                if col_number == 4 and str_doi:
+                    csv_column = str_doi
+                    # Check for DOI duplicates
+                    if str_doi not in lst_dois_processed:
+                        lst_dois_processed.append(str_doi)
                     else:
-                        lst_dois_processed.append(csv_column.strip())
+                        sys.exit('!Error duplicate DOI {} - Org: {} - Year: {} '.format(str_doi, row[0], row[1]))
+
+                # Handle hybrid flag true/false
+                if col_number == 5:
+                    if csv_column.lower() == u'sant':
+                        csv_column = u'TRUE'
+                    elif csv_column.lower() == u'falskt':
+                        csv_column = u'FALSE'
+                    elif csv_column == u'true':
+                        csv_column = u'TRUE'
+                    elif csv_column == u'false':
+                        csv_column = u'FALSE'
 
                 # Publisher name normalisation, use map or send DOI for CrossRef lookup
                 if col_number == 6 and csv_column and str_doi:
@@ -565,6 +460,124 @@ class DataProcessor(object):
     # ------------------------------------------------------------------------------------------------------------------
 
     # ------------------------------------------------------------------------------------------------------------------
+    def _clean_doi(self, str_doi):
+        """ Method to clean up garbled DOI strings """
+
+        str_doi_original = str_doi
+
+        # Remove any starting or trailing blanks
+        str_doi = str_doi.strip()
+
+        # Remove beginning and ending garbage
+        str_doi = str_doi.strip('.,:;')
+
+        # Don't try to clean empty DOI
+        if not str_doi:
+            return str_doi
+
+        # Remove any non-ascii characters. Alternative (faster?): re.sub(r'[^\x00-\x7F]','', str_doi)
+        str_doi = ''.join([i for i in str_doi if ord(i) < 128])
+        str_doi = str_doi.replace(u'?', u'')
+        str_doi = str_doi.replace(u'\u200b', u'')
+
+        str_doi = str_doi.replace(u'1o.', u'10.', 1)
+        str_doi = str_doi.replace(u'1O.', u'10.', 1)
+
+        # Fix DOI beginning with '10/' instead of '10.'
+        if str_doi.find(r'10/') == 0:
+            print('Info: Error in DOI:              {}'.format(str_doi))
+            str_doi = str_doi.replace(r'10/', r'10.', 1)
+            print('Info: Cleaned DOI:               {}'.format(str_doi))
+            self.doi_error = '{} -> {}'.format(str_doi_original, str_doi)
+
+        # Fix DOI beginning with '10,' instead of '10.'
+        if str_doi.find(r'10,') == 0:
+            print('Info: Error in DOI:              {}'.format(str_doi))
+            str_doi = str_doi.replace(r'10,', r'10.', 1)
+            print('Info: Cleaned DOI:               {}'.format(str_doi))
+            self.doi_error = '{} -> {}'.format(str_doi_original, str_doi)
+
+        # Fix DOI beginning with '10-' instead of '10.'
+        if str_doi.find(r'10-') == 0:
+            print('Info: Error in DOI:              {}'.format(str_doi))
+            str_doi = str_doi.replace(r'10-', r'10.', 1)
+            print('Info: Cleaned DOI:               {}'.format(str_doi))
+            self.doi_error = '{} -> {}'.format(str_doi_original, str_doi)
+
+        # Fix DOI beginning with '19.' instead of '10.'
+        if str_doi.find(r'19.') == 0:
+            print('Info: Error in DOI:              {}'.format(str_doi))
+            str_doi = str_doi.replace(r'19.', r'10.', 1)
+            print('Info: Cleaned DOI:               {}'.format(str_doi))
+            self.doi_error = '{} -> {}'.format(str_doi_original, str_doi)
+
+        # Fix DOI beginning with '10.0' instead of '10.1'
+        if str_doi.find(r'10.0') == 0:
+            print('Info: Error in DOI:              {}'.format(str_doi))
+            str_doi = str_doi.replace(r'10.', r'10.1', 1)
+            print('Info: Cleaned DOI:               {}'.format(str_doi))
+            self.doi_error = '{} -> {}'.format(str_doi_original, str_doi)
+
+        # If no slash in DOI, it's probably too short
+        if '/' not in str_doi:
+            print('Info: Wrong format on DOI: {}'.format(str_doi))
+            self.doi_error = str_doi
+            return ''
+
+        # Replace hard spaces with ordinary spaces to enable processing
+        str_doi = str_doi.replace(u"\xc2\xa0", " ")
+
+        # Make DOI lowercase for easier processing
+        str_doi = str_doi.lower()
+
+        # If the DOI starts with '0.' we can assume a lost 1
+        if str_doi.find('0.') == 0:
+            print('Info: DOI starting with 0.:      {}'.format(str_doi))
+            str_doi = '1' + str_doi
+            print('Info: Cleaned DOI:               {}'.format(str_doi))
+            self.doi_error = '{} -> {}'.format(str_doi_original, str_doi)
+
+        # Find the place of the starter string '10.'
+        int_doi_start_pos = str_doi.find('10.')
+
+        # If we don't have a '10.' at all, we have a problem, report and return empty string
+        if int_doi_start_pos == -1:
+            print('Info: DOI missing 10.:           {}'.format(str_doi))
+            self.doi_error = str_doi
+            str_doi = ''
+            print('Info: Cleaned DOI:               {}'.format(str_doi))
+
+        # If DOI don't start with '10.', we need cleaning of beginning of DOI
+        if int_doi_start_pos > 0:
+            print('Info: DOI not beginning with 10. : {}'.format(str_doi))
+            str_doi = str_doi[int_doi_start_pos:]
+            print('Info: Cleaned DOI:                 {}'.format(str_doi))
+            self.doi_error = '{} -> {}'.format(str_doi_original, str_doi)
+
+        # If we have blanks in the DOI, we have to clean it
+        if ' ' in str_doi:
+            print('Info: DOI containing spaces: {}'.format(str_doi))
+            lst_doi_parts = str_doi.split()
+            # If we have same DOI entered twice, use only the first
+            if lst_doi_parts[0] == lst_doi_parts[1]:
+                str_doi = lst_doi_parts[0]
+            elif lst_doi_parts[1] == '.' or lst_doi_parts[1] == ',':
+                # We have a single period as the last part - don't use it
+                str_doi = lst_doi_parts[0]
+            # elif lst_doi_parts[1] == self.publication_year:
+            #     # Sometimes somehow year ends up here - don't use it
+            #     str_doi = lst_doi_parts[0]
+            else:
+                str_doi = str_doi.replace(' ', '')
+
+            print('Info: Cleaned DOI:           {}'.format(str_doi))
+            self.doi_error = '{} -> {}'.format(str_doi_original, str_doi)
+
+        return str_doi
+    # ------------------------------------------------------------------------------------------------------------------
+
+
+    # ------------------------------------------------------------------------------------------------------------------
     def write_cleaned_data(self, str_output_file_name, lst_cleaned_content):
 
         print 'INFO: Writing result to file {}'.format(str_output_file_name)
@@ -579,6 +592,136 @@ class DataProcessor(object):
                     out.write(u'\n')
     # ------------------------------------------------------------------------------------------------------------------
 
+    # ------------------------------------------------------------------------------------------------------------------
+    def add_new_data_to_master_file(self, str_enriched_file_name, cob_user_interface):
+        """ Check how much of the newly enriched data that should be added """
+
+        str_apc_se_file = Config.STR_APC_SE_FILE
+
+        # Keep the header of the master file for separate writing to the final result
+        lst_master_file_header = []
+
+        # Read master file into a matrix and a dictionary of data
+        dct_master_data = {}
+        lst_master_dois = []
+        with open(str_apc_se_file, 'rb') as csvfile:
+            obj_csv_reader = csv.reader(csvfile, delimiter=',', quotechar='"')
+            for lst_row in obj_csv_reader:
+                str_doi = lst_row[3].lower().strip()
+                str_key = ''
+                if str_doi == 'doi':
+                    lst_master_file_header = lst_row
+                    continue
+                # If we have a DOI
+                if str_doi and str_doi.lower() != u'na':
+                    str_key = str_doi
+                # If no DOI is present
+                else:
+                    print('DOI missing {}'.format(lst_row))
+                    # If article URL is present, use that as identifier (16)
+                    if len(lst_row) > 16 and lst_row[16].strip():
+                        str_key = lst_row[16].strip()
+                    else:
+                        # Create a new custom key from all fields for the entry in the dictionary
+                        str_key = ''
+                        for str_column in lst_row:
+                            str_key + '.' + str_column
+                    print(u'Info: Custom key: {}'.format(str_key))
+
+                if str_key not in lst_master_dois and str_key not in dct_master_data.keys():
+                    lst_master_dois.append(str_key)
+                    dct_master_data[str_key] = lst_row
+                else:
+                    sys.exit('!Error: Duplicate DOI/Key in master file: {}'.format(str_key))
+
+        csvfile.close()
+
+        with open(str_enriched_file_name, 'rb') as csvfile:
+            obj_csv_reader = csv.reader(csvfile, delimiter=',', quotechar='"')
+            for lst_row in obj_csv_reader:
+
+                str_doi = lst_row[3].lower().strip()
+
+                # Skip header line
+                if str_doi == 'doi':
+                    continue
+
+                # If we have a DOI
+                if str_doi and str_doi.lower() != u'na':
+                    str_key = str_doi
+                # If no DOI is present
+                else:
+                    print('DOI missing {}'.format(lst_row))
+                    # If article URL is present, use that as identifier (16)
+                    if len(lst_row) > 16 and lst_row[16].strip():
+                        str_key = lst_row[16].strip()
+                    else:
+                        # Create a new custom key from all fields for the entry in the dictionary
+                        str_key = ''
+                        for str_column in lst_row:
+                            str_key + '.' + str_column
+                    print(u'Info: Custom key: {}'.format(str_key))
+
+                if str_key not in dct_master_data.keys():
+                    dct_master_data[str_key] = lst_row
+                    print(u'Info: Added new data {}'.format(u' '.join(lst_row)))
+                    print(u'Info: Key: {}'.format(str_key))
+                    continue
+                else:
+                    print('DOI/Key present {}'.format(str_key))
+                    print('Present:\t{}'.format(dct_master_data[str_key]))
+                    print('New:\t\t{}'.format(lst_row))
+                    if lst_row == dct_master_data[str_key]:
+                        print('info: Data are exactly the same. Skipping new record.')
+                        continue
+                    else:
+                        print('Data differs. Choose item:')
+                        lst_chosen_data = cob_user_interface.ask_user(dct_master_data[str_key], lst_row)
+                        dct_master_data[str_key] = lst_chosen_data
+
+                        # # If we don't have a DOI, we need to do some extra checking
+                        # else:
+                        #     # [Here 2017-08-04 ] #
+                        #     print('DOI missing {}'.format(lst_row))
+                        #     # Create a new custom key for the entry in the dictionary
+                        #     str_key = lst_row[0] + '.' + lst_row[1] + '.' + lst_row[2] + '.' + lst_row[4] +
+                        #  '.' + lst_row[5]
+                        #     print('New:\t\t{}'.format(lst_row))
+                        #     if str_key not in dct_master_data.keys():
+                        #         dct_master_data[str_key] = lst_row
+                        #         print(u'Info: Added new data {}'.format(u' '.join(lst_row)))
+                        #         continue
+                        #     else:
+                        #         if lst_row == dct_master_data[str_key]:
+                        #             print('New:\t\t{}'.format(lst_row))
+                        #             print('Present:\t\t{}'.format(dct_master_data[str_key]))
+                        #             print('info: Data are exactly the same. Skipping new record.')
+                        #             continue
+                        #         else:
+                        #             print('Data differs. Adding new data item:')
+                        #             print('New:\t\t{}'.format(lst_row))
+                        #             print('Present:\t\t{}'.format(dct_master_data[str_doi]))
+                        #             dct_master_data[str_key] = lst_row
+
+        csvfile.close()
+
+        # Make master dictionary to a list and sort it
+        lst_master_data = [lst_row for str_doi, lst_row in dct_master_data.iteritems()]
+        lst_master_data.sort()
+
+        # Normalise names before writing to file
+        lst_master_data = self.normalise_publisher_names(lst_master_data)
+
+        # Write the new data to the master file
+        print('\nInfo: Writing result to master file {}\n'.format(str_apc_se_file))
+        with open(str_apc_se_file, 'wb') as csvfile:
+            obj_csv_writer = csv.writer(csvfile, delimiter=',', quotechar='"')
+            obj_csv_writer.writerow(lst_master_file_header)
+            for lst_row in lst_master_data:
+                obj_csv_writer.writerow(lst_row)
+        csvfile.close()
+
+    # ------------------------------------------------------------------------------------------------------------------
 
 # ======================================================================================================================
 
