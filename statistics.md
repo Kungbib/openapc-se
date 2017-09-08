@@ -24,7 +24,7 @@ far. These are:
 
 Three publishers have also supplied Open APC Sweden with data:
 
--   Springer (within the Sprincer Compact offsetting agreement)
+-   Springer (within the Springer Compact offsetting agreement)
 -   Taylor and Francis
 -   Karger
 
@@ -412,10 +412,10 @@ In many toll-access journals some of the articles are open access after
 a fee has been paid. This model is often called "hybrid open access".
 The dataset covers the following data on hybrid open access articles:
 
--   Number of articles: **2 165**
--   Total expenditure: **3 786 393 €**
--   Average fee: **1 749 €**
--   Median fee: **2 025 €**
+-   Number of articles: **1 172**
+-   Total expenditure: **2 537 829 €**
+-   Average fee: **2 165 €**
+-   Median fee: **2 200 €**
 
 The following institutions have contributed its expenditures for hybrid
 open access.

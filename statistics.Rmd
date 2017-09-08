@@ -67,7 +67,7 @@ Four Swedish universities have reported APC costs for their articles so far. The
 
 Three publishers have also supplied Open APC Sweden with data: 
 
-* Springer (within the Sprincer Compact offsetting agreement)
+* Springer (within the Springer Compact offsetting agreement)
 * Taylor and Francis
 * Karger
 
@@ -136,10 +136,10 @@ knitr::kable(as.data.frame(df.summary), digits = 0, format.args = list(big.mark 
 In many toll-access journals some of the articles are open access after a fee has been paid. This model is often called "hybrid open access".
 The dataset covers the following data on hybrid open access articles:
 
-* Number of articles: **`r nrow(my.apc)`** 
-* Total expenditure: **`r format(sum(my.apc$euro), scientific=FALSE)` €**
-* Average  fee: **`r format(mean(my.apc$euro), digits = 4)` €** 
-* Median fee: **`r median(my.apc$euro)` €**
+* Number of articles: **`r nrow(my.apc_hybrid)`** 
+* Total expenditure: **`r format(sum(my.apc_hybrid$euro), scientific=FALSE)` €**
+* Average  fee: **`r format(mean(my.apc_hybrid$euro), digits = 4)` €** 
+* Median fee: **`r median(my.apc_hybrid$euro)` €**
 
 The following institutions have contributed its expenditures for hybrid open access.
 
