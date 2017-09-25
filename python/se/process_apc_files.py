@@ -8,7 +8,6 @@
 
     ToDo
     -----
-    Read DOIs and data from final master to avoid processing of already processed entries
     Fix todos
     Handle duplicate entries by skipping second entry and reporting for submission to data supplier
     Future: Clean up processing logic and introduce error handling - Error reporting module?
@@ -17,6 +16,7 @@
 
     Done
     -----
+    2017-09-08 Read DOIs and data from final master to avoid processing of already processed entries
     2017-09-07 Handle this DOI error with invisble blanks:
             slu	2015	2064.46	10.​1105/​tpc.​114.​134494	SANT	American Society of Plant Biologists
     2017-09-06 Add DOI correction subroutine for the following:
