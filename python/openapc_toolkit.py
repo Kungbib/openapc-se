@@ -22,7 +22,10 @@ except ImportError:
            "encoding guessing will not work")
 
 # regex for detecing DOIs
-DOI_RE = re.compile("^(((https?://)?(dx.)?doi.org/)|(doi:))?(?P<doi>10\.[0-9]+(\.[0-9]+)*\/\S+)")
+DOI_RE = re.compile("^(((https?://)?(dx.)?doi.org/)|(doi:))?(?P<doi>10\.[0-9]+(\.[0-9]+)*\/\S+)", re.IGNORECASE)
+# regex for detecting shortDOIs
+SHORTDOI_RE = re.compile("^(https?://)?(dx.)?doi.org/(?P<shortdoi>[a-z0-9]+)$", re.IGNORECASE)
+
 ISSN_RE = re.compile("^(?P<first_part>\d{4})-?(?P<second_part>\d{3})(?P<check_digit>[\dxX])$")
 
 # These classes were adopted from
@@ -70,7 +73,7 @@ class UnicodeDictReader(object):
 
     def next(self):
         row = self.reader.next()
-        return {k: unicode(v, "utf-8") for (k, v) in row.iteritems()}
+        return {unicode(k, "utf-8"): unicode(v, "utf-8") for (k, v) in row.iteritems()}
 
     def __iter__(self):
         return self
@@ -96,13 +99,18 @@ class OpenAPCUnicodeWriter(object):
         has_header: Determines if the csv file has a header. If that's the case,
                     The values in the first row will all be quoted regardless
                     of any quotemask.
+        minimal_quotes: Quote values containing a comma even if a quotemask
+                        is False for that column (Might produce a malformed
+                        csv file otherwise). 
     """
 
-    def __init__(self, f, quotemask=None, openapc_quote_rules=True, has_header=True):
+    def __init__(self, f, quotemask=None, openapc_quote_rules=True,
+                 has_header=True, minimal_quotes=True):
         self.outfile = f
         self.quotemask = quotemask
         self.openapc_quote_rules = openapc_quote_rules
         self.has_header = has_header
+        self.minimal_quotes = minimal_quotes
         self.encoder = codecs.getincrementalencoder("utf-8")()
 
     def _prepare_row(self, row, use_quotemask):
@@ -115,7 +123,7 @@ class OpenAPCUnicodeWriter(object):
                 row[index] = u'"' + row[index] + u'"'
                 continue
             if index < len(self.quotemask):
-                if self.quotemask[index]:
+                if self.quotemask[index] or u"," in row[index] and self.minimal_quotes:
                     row[index] = u'"' + row[index] + u'"'
         return row
 
@@ -231,21 +239,51 @@ class BufferedErrorHandler(MemoryHandler):
 
     def shouldFlush(self, record):
         return False
+        
+class NoRedirection(urllib2.HTTPErrorProcessor):
+    """
+    A dummy processor to suppress HTTP redirection.
     
+    This handler serves the simple purpose of stopping redirection for
+    easy extraction of shortDOI redirect targets.
+    """
+    def http_response(self, request, response):
+        return response
+
+    https_response = http_response
+
 def get_normalised_DOI(doi_string):
-    doi_match = DOI_RE.match(doi_string.strip())
-    if not doi_match:
-        return None
-    return doi_match.groupdict()["doi"]
+    doi_string = doi_string.strip()
+    doi_match = DOI_RE.match(doi_string)
+    if doi_match:
+        doi = doi_match.groupdict()["doi"]
+        return doi.lower()
+    shortdoi_match = SHORTDOI_RE.match(doi_string)
+    if shortdoi_match:
+        # Extract redirect URL to obtain original DOI
+        shortdoi = shortdoi_match.groupdict()["shortdoi"]
+        url = "https://doi.org/" + shortdoi
+        opener = urllib2.build_opener(NoRedirection)
+        try:
+            res = opener.open(url)
+            if res.code == 301:
+                doi_match = DOI_RE.match(res.headers["Location"])
+                if doi_match:
+                    doi = doi_match.groupdict()["doi"]
+                    return doi.lower()
+            return None
+        except (urllib2.HTTPError, urllib2.URLError):
+            return None
+    return None
 
 def is_wellformed_ISSN(issn_string):
-    issn_match = ISSN_RE.match(issn_string.strip())
+    issn_match = ISSN_RE.match(issn_string)
     if issn_match is not None:
         return True
     return False
 
 def is_valid_ISSN(issn_string):
-    issn_match = ISSN_RE.match(issn_string.strip())
+    issn_match = ISSN_RE.match(issn_string)
     match_dict = issn_match.groupdict()
     check_digit = match_dict["check_digit"]
     if check_digit in ["X", "x"]:
@@ -307,8 +345,8 @@ def analyze_csv_file(file_path, line_limit=None):
     result = CSVAnalysisResult(blanks, dialect, has_header, enc, enc_conf)
     csv_file.close()
     return {"success": True, "data": result}
-    
-def get_csv_file_content(file_name, enc=None):
+
+def get_csv_file_content(file_name, enc=None, force_header=False):
     result = analyze_csv_file(file_name, 500)
     if result["success"]:
         csv_analysis = result["data"]
@@ -316,33 +354,33 @@ def get_csv_file_content(file_name, enc=None):
     else:
         print result["error_msg"]
         sys.exit()
-    
+
     if enc is None:
         enc = csv_analysis.enc
-    
+
     if enc is None:
         print ("Error: No encoding given for CSV file and automated " +
                "detection failed. Please set the encoding manually via the " +
                "--enc argument")
         sys.exit()
-        
+
     dialect = csv_analysis.dialect
-    
+
     csv_file = open(file_name, "r")
 
     content = []
     reader = UnicodeReader(csv_file, dialect=dialect, encoding=enc)
     header = []
-    if csv_analysis.has_header:
+    if csv_analysis.has_header or force_header:
         header.append(reader.next())
     for row in reader:
         content.append(row)
     csv_file.close()
     return (header, content)
-    
+
 def has_value(field):
     return len(field) > 0 and field != "NA"
-    
+
 def oai_harvest(basic_url, metadata_prefix=None, oai_set=None, processing=None, selective_harvest=False):
     """
     Harvest OpenAPC records via OAI-PMH
@@ -377,7 +415,7 @@ def oai_harvest(basic_url, metadata_prefix=None, oai_set=None, processing=None, 
         ("", "url"),
         ("intact:id_number[@type='local']", "local_id")
     ])
-    #institution_xpath = 
+    #institution_xpath =
     namespaces = {
         "oai_2_0": "http://www.openarchives.org/OAI/2.0/",
         "intact": "http://intact-project.org"
@@ -736,9 +774,15 @@ def process_row(row, row_num, column_map, num_required_columns,
             current_row["doi"] = norm_doi
             msg = MESSAGES["doi_norm"].format(doi, norm_doi)
             logging.warning(msg)
+            doi = norm_doi
         # include crossref metadata
         if not no_crossref_lookup:
             crossref_result = get_metadata_from_crossref(doi)
+            while not crossref_result["success"] and crossref_result["error_msg"].startswith("HTTPError: 504"):
+                # retry on gateway timeouts, crossref API is quite busy sometimes
+                msg = "%s, retrying..."
+                logging.warning(msg, crossref_result["error_msg"])
+                crossref_result = get_metadata_from_crossref(doi)
             if crossref_result["success"]:
                 logging.info("Crossref: DOI resolved: " + doi)
                 current_row["indexed_in_crossref"] = "TRUE"
@@ -885,14 +929,14 @@ def get_column_type_from_whitelist(column_name):
         "doi": ["doi"],
         "euro": ["apc", "kosten", "cost", "euro", "eur"],
         "period": ["period", "jahr"],
-        "is_hybrid": ["is_hybrid", "is hybrid"],
+        "is_hybrid": ["is_hybrid", "is hybrid", "hybrid"],
         "publisher": ["publisher"],
-        "journal_full_title": ["journal_full_title", "journal", "journal title"],
-        "issn": ["issn"],
+        "journal_full_title": ["journal_full_title", "journal", "journal title", "journal full title", "journaltitle"],
+        "issn": ["issn", "issn.1", "issn0"],
         "issn_print": ["issn_print"],
         "issn_electronic": ["issn_electronic"],
         "issn_l": ["issn_l"],
-        "license_ref": ["licence", "license_ref"],
+        "license_ref": ["licence", "license", "license_ref"],
         "indexed_in_crossref": ["indexed_in_crossref"],
         "pmid": ["pmid", "pubmed id"],
         "pmcid": ["pmcid", "pubmed central (pmc) id"],
@@ -924,7 +968,9 @@ def get_unified_publisher_name(publisher):
         "Institute of Electrical and Electronics Engineers (IEEE)": "Institute of Electrical & Electronics Engineers (IEEE)",
         "Cold Spring Harbor Laboratory": "Cold Spring Harbor Laboratory Press",
         "Institute of Electrical &amp; Electronics Engineers (IEEE)": "Institute of Electrical & Electronics Engineers (IEEE)",
-        "Hindawi Limited": "Hindawi Publishing Corporation"
+        "Hindawi Limited": "Hindawi Publishing Corporation",
+        "Oxford University Press": "Oxford University Press (OUP)",
+        "Wiley": "Wiley-Blackwell"
     }
     return publisher_mappings.get(publisher, publisher)
 
@@ -985,10 +1031,76 @@ def get_unified_journal_title(journal_full_title):
         "Journal of Otolaryngology - Head and Neck Surgery": "Journal of Otolaryngology - Head & Neck Surgery",
         "manuscripta mathematica": "Manuscripta Mathematica",
         "CPT Pharmacometrics Syst. Pharmacol.": "CPT: Pharmacometrics & Systems Pharmacology",
-        "Taal en tongval": "Taal en Tongval"
+        "Taal en tongval": "Taal en Tongval",
+        "Notfall +  Rettungsmedizin": "Notfall + Rettungsmedizin",
+        "The Journal of Neuroscience": "Journal of Neuroscience",
+        "British Editorial Society of Bone &amp; Joint Surgery": "British Editorial Society of Bone & Joint Surgery",
+        "Proceedings of the Royal Society A: Mathematical, Physical and Engineering Science": "Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences",
+        "The FEBS Journal": "FEBS Journal",
+        "PLANT PHYSIOLOGY": "Plant Physiology",
+        "IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control": "IEEE Transactions on Ultrasonics, Ferroelectrics and Frequency Control",
+        "Cellular and Molecular Gastroenterology and Hepatology": "CMGH Cellular and Molecular Gastroenterology and Hepatology",
+        "Tellus B: Chemical and Physical Meteorology": "Tellus B",
+        "Natural Hazards and Earth System Science": "Natural Hazards and Earth System Sciences",
+        "interactive Journal of Medical Research": "Interactive Journal of Medical Research",
+        "EP Europace": "Europace",
+        "Prostate Cancer and Prostatic Disease": "Prostate Cancer and Prostatic Diseases",
+        "CARTILAGE": "Cartilage",
+        "Annals of Clinical Biochemistry": "Annals of Clinical Biochemistry: An international journal of biochemistry and laboratory medicine",
+        "JNCI: Journal of the National Cancer Institute": "JNCI Journal of the National Cancer Institute",
+        "Journal of the National Cancer Institute": "JNCI Journal of the National Cancer Institute",
+        "European Heart Journal – Cardiovascular Imaging": "European Heart Journal - Cardiovascular Imaging",
+        "Transplantation": "Transplantation Journal",
+        "SHOCK": "Shock",
+        "Endocrine-Related Cancer": "Endocrine Related Cancer",
+        "The American Journal of Tropical Medicine and Hygiene": "American Journal of Tropical Medicine and Hygiene",
+        "American Journal of Physiology - Endocrinology And Metabolism": "AJP: Endocrinology and Metabolism",
+        "Neurology - Neuroimmunology Neuroinflammation": "Neurology: Neuroimmunology & Neuroinflammation",
+        "eneuro": "eNeuro",
+        "The Journal of Experimental Biology": "Journal of Experimental Biology",
+        "The Plant Cell Online": "The Plant Cell",
+        "Journal of Agricultural, Biological, and Environmental Statistics": "Journal of Agricultural, Biological and Environmental Statistics",
+        "PalZ": "Paläontologische Zeitschrift",
+        "Lighting Research and Technology": "Lighting Research & Technology",
+        "The Journal of Infectious Diseases": "Journal of Infectious Diseases",
+        "Planning Practice and Research": "Planning Practice & Research",
+        "Learning and Individual Differences": "Learning & Individual Differences",
+        "Water Science and Technology": "Water Science & Technology",
+        "Antimicrobial Resistance & Infection Control": "Antimicrobial Resistance and Infection Control",
+        "MedChemComm": "Med. Chem. Commun.",
+        "European Journal of Public Health": "The European Journal of Public Health",
+        "Journal of Vacuum Science & Technology B, Nanotechnology and Microelectronics: Materials, Processing, Measurement, and Phenomena": "Journal of Vacuum Science & Technology B: Microelectronics and Nanometer Structures",
+        "Briefings In Bioinformatics": "Briefings in Bioinformatics",
+        "Notes and Records: the Royal Society journal of the history of science": "Notes and Records of the Royal Society",
+        "Journal Of Logic And Computation": "Journal of Logic and Computation",
+        "Health:: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine": "Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine",
+        "INTERNATIONAL JOURNAL OF SYSTEMATIC AND EVOLUTIONARY MICROBIOLOGY": "International Journal of Systematic and Evolutionary Microbiology",
+        "Protein Engineering Design and Selection": "Protein Engineering, Design and Selection",
+        u"European Heart Journal – Cardiovascular Imaging": "European Heart Journal - Cardiovascular Imaging",
+        "The Journals of Gerontology: Series A": "The Journals of Gerontology Series A: Biological Sciences and Medical Sciences",
+        "MHR: Basic science of reproductive medicine": "Molecular Human Reproduction",
+        "Research on Language and Social Interaction": "Research on Language & Social Interaction",
+        "Psychology and Sexuality": "Psychology & Sexuality",
+        "BJA: British Journal of Anaesthesia": "British Journal of Anaesthesia",
+        "Journal of Development Studies": "The Journal of Development Studies",
+        "Tellus A: Dynamic Meteorology and Oceanography": "Tellus A",
+        "International journal of methods in psychiatric research": "International Journal of Methods in Psychiatric Research",
+        "Polym. Chem.": "Polymer Chemistry",
+        "Angewandte Chemie": "Angewandte Chemie International Edition",
+        "ISME Journal": "The ISME Journal",
+        "European Journal of Public Health": "The European Journal of Public Health",
+        "Interface": "Journal of The Royal Society Interface",
+        "The Plant Cell Online": "The Plant Cell",
+        "Medical Engineering and Physics": "Medical Engineering & Physics"
     }
     return journal_mappings.get(journal_full_title, journal_full_title)
 
+def get_corrected_issn_l(issn_l):
+    issn_l_corrections = {
+        "0266-7061": "1367-4803", # "Bioinformatics". 1460-2059(issn_e) -> 0266-7061, but 1367-4803(issn_p) -> 1367-4803
+        "1654-6628": "1654-661X"  # "Food & Nutrition Research". 1654-6628(issn_p) -> 1654-6628, but 1654-661X(issn_e) -> 1654-661X
+    }
+    return issn_l_corrections.get(issn_l, issn_l)
 
 def print_b(text):
     print "\033[94m" + text + "\033[0m"
