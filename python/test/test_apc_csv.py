@@ -96,14 +96,12 @@ issn_dict = {}
 issn_p_dict = {}
 issn_e_dict = {}
 
-for file_name in ["data/apc_de.csv", "data/offsetting/offsetting.csv"]:
+for file_name in ["data/apc_se.csv"]:
     csv_file = open(file_name, "r")
     reader = oat.UnicodeDictReader(csv_file)
     line = 2
     for row in reader:
         test_apc = True
-        if file_name == "data/offsetting/offsetting.csv":
-            test_apc = False
         apc_data.append(RowObject(file_name, line, row, test_apc))
         doi_duplicate_list.append(row["doi"])
         issn = row["issn"]
@@ -187,8 +185,9 @@ def check_field_content(row_object):
     if row_object.test_apc:
         try:
             euro = float(row['euro'])
-            if euro <= 0:
-                pytest.fail(line_str + 'value in row "euro" (' + row['euro'] + ') must be larger than 0')
+            # Modified: openapc-se does not implement a non-zero cost policy. 
+            # if euro <= 0:
+            #   pytest.fail(line_str + 'value in row "euro" (' + row['euro'] + ') must be larger than 0')
         except ValueError:
             pytest.fail(line_str + 'value in row "euro" (' + row['euro'] + ') is no valid number')
 
