@@ -1,4 +1,4 @@
-institution,period,euro,doi,is_hybrid,publisher,journal_full_title,issn,issn_print,issn_electronic,issn_l,license_ref,indexed_in_crossref,pmid,pmcid,ut,url,doaj
+"institution","period","euro","doi","is_hybrid","publisher","journal_full_title","issn","issn_print","issn_electronic","issn_l","license_ref","indexed_in_crossref","pmid","pmcid","ut","url","doaj"
 bth,2016,2200,10.1007/s11187-016-9801-2,TRUE,Springer,Small Business Economics,0921-898X,0921-898X,1573-0913,0921-898X,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000392306200001,NA,FALSE
 cth,2013,413,10.1080/21663831.2013.844737,FALSE,Taylor & Francis,Materials Research Letters,2166-3831,NA,2166-3831,2166-3831,NA,TRUE,NA,NA,ut:000209767600007,NA,FALSE
 cth,2014,2429,10.1080/00207543.2014.980456,TRUE,Taylor & Francis,International Journal of Production Research,0020-7543,0020-7543,1366-588X,0020-7543,NA,TRUE,NA,NA,ut:000367046100008,NA,FALSE

@@ -21,6 +21,7 @@ far. These are:
 -   Dalarna University College
 -   Luleå University of Technology
 -   Linköping University
+-   Malmö University College
 
 Three publishers have also supplied Open APC Sweden with data:
 
@@ -40,9 +41,9 @@ publication of articles in toll-access journals ("hybrid") are provided.
 You may view the dataset at the [project page in
 GitHub](https://github.com/Kungbib/openapc-se/blob/master/data/apc_se.csv).
 
-In total, **3 791 975 €** for **2 167 articles** were paid by the **30
+In total, **3 821 127 €** for **2 190 articles** were paid by the **30
 organisations** that have APC data from so far. The **average APC is 1
-750 €** and the **median is APC 2 030 €**.
+745 €** and the **median is APC 2 004 €**.
 
 <table>
 <thead>
@@ -57,10 +58,10 @@ organisations** that have APC data from so far. The **average APC is 1
 <tbody>
 <tr class="odd">
 <td align="right">30</td>
-<td align="right">2 167</td>
-<td align="right">3 791 975</td>
-<td align="right">1 750</td>
-<td align="right">2 030</td>
+<td align="right">2 190</td>
+<td align="right">3 821 127</td>
+<td align="right">1 745</td>
+<td align="right">2 004</td>
 </tr>
 </tbody>
 </table>
@@ -70,10 +71,10 @@ Open Access Articles (Total: both "gold" and "hybrid" OA)
 
 At the moment, the dataset contains the following information:
 
--   Number of articles: **2 167**
--   Total expenditure: **3 791 975 €**
--   Average fee: **1 750 €**
--   Median fee: **2 030 €**
+-   Number of articles: **2 190**
+-   Total expenditure: **3 821 127 €**
+-   Average fee: **1 745 €**
+-   Median fee: **2 004 €**
 
 Articles and APC costs per institution:
 
@@ -181,10 +182,10 @@ Articles and APC costs per institution:
 </tr>
 <tr class="even">
 <td>Malmö University College</td>
-<td align="right">14</td>
-<td align="right">27 690</td>
-<td align="right">1 978</td>
-<td align="right">2 200</td>
+<td align="right">37</td>
+<td align="right">56 842</td>
+<td align="right">1 536</td>
+<td align="right">1 517</td>
 </tr>
 <tr class="odd">
 <td>Medical Products Agency</td>
@@ -307,10 +308,10 @@ Articles in Open Access journals ("gold OA")
 At the moment, the dataset contains the following information on
 articles in open access journals:
 
--   Number of articles: **1 001**
--   Total expenditure: **1 258 218 €**
--   Average fee: **1 257 €**
--   Median fee: **1 341 €**
+-   Number of articles: **1 020**
+-   Total expenditure: **1 280 154 €**
+-   Average fee: **1 255 €**
+-   Median fee: **1 342 €**
 
 Articles and APC costs per institution:
 
@@ -376,10 +377,10 @@ Articles and APC costs per institution:
 </tr>
 <tr class="even">
 <td>Malmö University College</td>
-<td align="right">4</td>
-<td align="right">4 007</td>
-<td align="right">1 002</td>
-<td align="right">890</td>
+<td align="right">23</td>
+<td align="right">25 942</td>
+<td align="right">1 128</td>
+<td align="right">1 394</td>
 </tr>
 <tr class="odd">
 <td>Stockholm University</td>
@@ -426,9 +427,9 @@ In many toll-access journals some of the articles are open access after
 a fee has been paid. This model is often called "hybrid open access".
 The dataset covers the following data on hybrid open access articles:
 
--   Number of articles: **1 166**
--   Total expenditure: **2 533 757 €**
--   Average fee: **2 173 €**
+-   Number of articles: **1 170**
+-   Total expenditure: **2 540 973 €**
+-   Average fee: **2 172 €**
 -   Median fee: **2 200 €**
 
 The following institutions have contributed its expenditures for hybrid
@@ -538,10 +539,10 @@ open access.
 </tr>
 <tr class="even">
 <td>Malmö University College</td>
-<td align="right">10</td>
-<td align="right">23 683</td>
-<td align="right">2 368</td>
-<td align="right">2 314</td>
+<td align="right">14</td>
+<td align="right">30 899</td>
+<td align="right">2 207</td>
+<td align="right">2 200</td>
 </tr>
 <tr class="odd">
 <td>Medical Products Agency</td>

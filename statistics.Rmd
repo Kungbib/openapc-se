@@ -64,6 +64,7 @@ Four Swedish universities have reported APC costs for their articles so far. The
 * Dalarna University College
 * Luleå University of Technology
 * Linköping University
+* Malmö University College
 
 Three publishers have also supplied Open APC Sweden with data: 
 
@@ -494,8 +495,7 @@ apc_plot <- apc_plot +
     axis.text.y = element_text(colour="black", size = 10),
   )
 
-# apc_plot
-
+# Plot the result
 ggsave(apc_plot, file = "figure/apc_avg_trend.png", width=20, height=18, units="cm")
 
 ```
