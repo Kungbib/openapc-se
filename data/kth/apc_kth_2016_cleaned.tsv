@@ -1,23 +1,54 @@
 institution	period	cost	doi	is_hybrid	publisher	journal_full_title	issn	issn_print	issn_electronic	url
-kth	2016	2142.1	10.1016/j.apacoust.2016.04.004	TRUE	Elsevier	Applied Acoustics	0003-682X			http://dx.doi.org/10.1016/j.apacoust.2016.04.004
-kth	2016	1267.00	10.1371/JOURNAL.PONE.0166149	FALSE	Public Library of Science (PLoS)	PLOS One				http://dx.doi.org/10.1371/journal.pone.0166149
-kth	2016	0.00	10.3390/w8020059	FALSE	MDPI	Water			2073-4441	http://www.mdpi.com/2073-4441/8/2/59
-kth	2016	0.00	10.3390/ma9030127	FALSE	MDPI	Materials			1996-1944	http://www.mdpi.com/1996-1944/9/3/127
-kth	2016	1527.00	10.3390/s16030344	FALSE	MDPI	Sensors			1424-8220	http://www.mdpi.com/1424-8220/16/3/344
-kth	2016	644.00	10.3390/en9050315	FALSE	MDPI	Energies			1996-1073	http://www.mdpi.com/1996-1073/9/5/315
-kth	2016	919.00	10.3390/su8040388	FALSE	MDPI	Sustainability			2071-1050	http://www.mdpi.com/2071-1050/8/4/388
-kth	2016	0.00	10.3390/ma9050313	FALSE	MDPI	Materials			1996-1944	http://www.mdpi.com/1996-1944/9/5/313
-kth	2016	0.00	10.3390/molecules21030366	FALSE	MDPI	Molecules			1420-3049	http://www.mdpi.com/1420-3049/21/3/366
-kth	2016	766.00	10.3390/catal6060090	FALSE	MDPI	Catalysts			2073-4344	http://www.mdpi.com/2073-4344/6/6/90
-kth	2016	919.00	10.3390/su8060550	FALSE	MDPI	Sustainability			2071-1050	http://www.mdpi.com/2071-1050/8/6/550
-kth	2016	919.00	10.3390/su8111080	FALSE	MDPI	Sustainability			2071-1050	http://www.mdpi.com/2071-1050/8/11/1080
-kth	2016	766.00	10.3390/mi7080134	FALSE	MDPI	Micromachines			2072-666X	http://www.mdpi.com/2072-666X/7/8/134
-kth	2016	230.00	10.3390/resources5030027	FALSE	MDPI	Resources			2079-9276	http://www.mdpi.com/2079-9276/5/3/27
-kth	2016	0.00	10.3390/mi7100192	FALSE	MDPI	Micromachines			2072-666X	http://www.mdpi.com/2072-666X/7/10/192
-kth	2016	1072.00	10.3390/en9121080	FALSE	MDPI	Energies			1996-1073	http://www.mdpi.com/1996-1073/9/12/1080
-kth	2016	919.00	10.3390/su8121227	FALSE	MDPI	Sustainability			2071-1050	http://www.mdpi.com/2071-1050/8/12/1227
-kth	2016	1072.00	10.3390/ma10010057	FALSE	MDPI	Materials			1996-1944	http://www.mdpi.com/1996-1944/10/1/57
-kth	2016	1707	10.1155/2016/6279571	FALSE	Hindawi Publishing Corporation	Advances in Materials Science and Engineering		1687-8434	1687-8442	http://dx.doi.org/10.1155/2016/6279571
-kth	2016	853	10.1155/2016/6735971	FALSE	Hindawi Publishing Corporation	Journal of Combustion		2090-1968	2090-1976	http://dx.doi.org/10.1155/2016/6735971
-kth	2016	853	10.1155/2016/8181260	FALSE	Hindawi Publishing Corporation	Advances in Tribology		1687-5915	1687-5923	http://dx.doi.org/10.1155/2016/8181260
-kth	2016	853	10.1155/2016/4729128	FALSE	Hindawi Publishing Corporation	Modelling and Simulation in Engineering		1687-5591	1687-5605	http://dx.doi.org/10.1155/2016/4729128
+kth	2016	1479	10.1039/c4ta05774k	TRUE	Royal Society of Chemistry (RSC)	Journal of Materials Chemistry A			2050-7496	http://pubs.rsc.org/en/Content/ArticleLanding/2015/TA/C4TA05774K#!divAbstract
+kth	2016	924	10.1039/c4cc00698d	TRUE	Royal Society of Chemistry (RSC)	Chemical Communications			1364-548X	http://pubs.rsc.org/en/content/articlelanding/2014/cc/c4cc00698d#!divAbstract
+kth	2016	1744	10.1039/c6cp05303c	TRUE	Royal Society of Chemistry (RSC)	Physical Chemistry Chemical Physics			1463-9084	http://pubs.rsc.org/en/Content/ArticleLanding/2016/CP/C6CP05303C#!divAbstract
+kth	2016	1744	10.1039/c6ta05055g	TRUE	Royal Society of Chemistry (RSC)	Journal of Materials Chemistry A			2050-7496	http://pubs.rsc.org/en/Content/ArticleLanding/2016/TA/C6TA05055G#!divAbstract
+kth	2016	1744	10.1039/c5cp05837f	TRUE	Royal Society of Chemistry (RSC)	Physical Chemistry Chemical Physics			1463-9084	http://pubs.rsc.org/en/content/articlelanding/2016/cp/c5cp05837f#!divAbstract
+kth	2016	1744	10.1039/c6ra02399a	TRUE	Royal Society of Chemistry (RSC)	RSC Advances			2046-2069	http://pubs.rsc.org/en/content/articlelanding/2016/ra/c6ra02399a#!divAbstract
+kth	2016	1744	10.1039/c6ra21447a	TRUE	Royal Society of Chemistry (RSC)	RSC Advances			2046-2069	http://pubs.rsc.org/en/content/articlelanding/2016/ra/c6ra21447a#!divAbstract
+kth	2016	1744	10.1039/c6nr03602c	TRUE	Royal Society of Chemistry (RSC)	Nanoscale			2040-3372	http://pubs.rsc.org/en/Content/ArticleLanding/2016/NR/C6NR03602C#!divAbstract
+kth	2016	1744	10.1039/c6cy00435k	TRUE	Royal Society of Chemistry (RSC)	Catalysis Science & Technology			2044-4761	http://pubs.rsc.org/en/Content/ArticleLanding/2016/CY/C6CY00435K#!divAbstract
+kth	2016	1744	10.1039/c5gc03068d	TRUE	Royal Society of Chemistry (RSC)	Green Chemistry			1463-9270	http://pubs.rsc.org/en/Content/ArticleLanding/2016/GC/C5GC03068D#!divAbstract
+kth	2016	1744	10.1039/c6ra26703c	TRUE	Royal Society of Chemistry (RSC)	RSC Advances			2046-2069	http://pubs.rsc.org/en/Content/ArticleLanding/2017/RA/C6RA26703C#!divAbstract
+kth	2016	1744	10.1039/c6cp02623k	TRUE	Royal Society of Chemistry (RSC)	Physical Chemistry Chemical Physics			1463-9084	http://pubs.rsc.org/en/content/articlelanding/2016/cp/c6cp02623k#!divAbstract
+kth	2016	1744	10.1039/c5ra27791d	TRUE	Royal Society of Chemistry (RSC)	RSC Advances			2046-2069	http://pubs.rsc.org/en/content/articlelanding/2016/ra/c5ra27791d#!divAbstract
+kth	2016	1744	10.1039/c6ta06782d	TRUE	Royal Society of Chemistry (RSC)	Journal of Materials Chemistry A			2050-7496	http://pubs.rsc.org/en/content/articlelanding/2016/ta/c6ta06782d#!divAbstract
+kth	2016	1744	10.1039/c6ra08194k	TRUE	Royal Society of Chemistry (RSC)	RSC Advances			2046-2069	http://pubs.rsc.org/en/Content/ArticleLanding/2016/RA/C6RA08194K#!divAbstract
+kth	2016	1744	10.1039/c6an00735j	TRUE	Royal Society of Chemistry (RSC)	Analyst			1364-5528	http://pubs.rsc.org/en/content/articlelanding/2016/an/c6an00735j#!divAbstract
+kth	2016	1744	10.1039/c6cc01823h	TRUE	Royal Society of Chemistry (RSC)	Chemical Communications			1364-548X	http://pubs.rsc.org/en/Content/ArticleLanding/2016/CC/C6CC01823H#!divAbstract
+kth	2016	1744	10.1039/c6cc06737a	TRUE	Royal Society of Chemistry (RSC)	Chemical Communications			1364-548X	http://pubs.rsc.org/en/content/articlelanding/2016/cc/c6cc06737a#!divAbstract
+kth	2016	1744	10.1039/c6gc02328b	TRUE	Royal Society of Chemistry (RSC)	Green Chemistry			1463-9270	http://pubs.rsc.org/en/content/articlelanding/2017/gc/c6gc02328b#!divAbstract
+kth	2016	375	10.1080/21663831.2016.1181680	FALSE	Taylor & Francis	Materials Research Letters			2166-3831	http://www.tandfonline.com/doi/abs/10.1080/21663831.2016.1181680
+kth	2016	2522	10.1002/mrc.4370	TRUE	Wiley	Magnetic Resonance in Chemistry			1097-458X	http://onlinelibrary.wiley.com/doi/10.1002/mrc.4370/abstract
+kth	2016	2522	10.1002/pola.28048	TRUE	Wiley	Journal of Polymer Science Part A: Polymer Chemistry			1099-0518	http://onlinelibrary.wiley.com/doi/10.1002/pola.28048/abstract
+kth	2016	2522	10.1002/macp.201500490	TRUE	Wiley	Macromolecular Chemistry and Physics			1521-3935	http://onlinelibrary.wiley.com/doi/10.1002/macp.201500490/abstract
+kth	2016	2522	10.1002/pmic.201500398	TRUE	Wiley	PROTEOMICS			1615-9861	http://onlinelibrary.wiley.com/doi/10.1002/pmic.201500398/full
+kth	2016	1253	10.14814/phy2.12760	FALSE	Wiley	physiological reports			2051-817X	http://physreports.physiology.org/content/4/7/e12760
+kth	2016	3362	10.1111/tpj.13259	TRUE	Wiley	The Plant Journal			1365-313X	http://onlinelibrary.wiley.com/doi/10.1111/tpj.13259/abstract
+kth	2016	504	10.1117/1.nph.3.4.041803	FALSE	Society of Photo-optical Instrumentation Engineers (SPIE)	NEUROPHOTONICS			2329-4248	https://www.spiedigitallibrary.org/journals/Neurophotonics/volume-3/issue-04/041803/Sodium-pump-organization-in-dendritic-spines/10.1117/1.NPh.3.4.041803.full?SSO=1
+kth	2016	1494	10.1103/physrevb.93.184404	TRUE	American Physical Society (APS)	PHYSICAL REVIEW B			2469-9969	https://journals.aps.org/prb/abstract/10.1103/PhysRevB.93.184404
+kth	2016	2407	10.1103/physrevlett.117.165101	TRUE	American Physical Society (APS)	PHYSICAL REVIEW LETTERS			1079-7114	https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.117.165101
+kth	2016	0	10.1149/2.1041610jes	TRUE	The Electrochemical Society (ECS)	Journal of the Electrochemical Society			1945-7111	http://jes.ecsdl.org/content/163/10/C686.abstract
+kth	2016	0	10.1149/2.0041609jes	TRUE	The Electrochemical Society (ECS)	Journal of the Electrochemical Society			1945-7111	http://jes.ecsdl.org/content/163/8/A1790.full.pdf+html
+kth	2016	835	10.1073/pnas.1518553113	TRUE	National Academy of Sciences	Proceedings of the National Academy of Sciences			1091-6490	http://www.pnas.org/content/113/8/2188
+kth	2016	0	10.1017/fms.2016.2	FALSE	Cambridge University Press (CUP)	Forum of Mathematics, Sigma			2050-5094	https://www.cambridge.org/core/journals/forum-of-mathematics-sigma/article/roths-theorem-for-four-variables-and-additive-structures-in-sums-of-sparse-sets/7FF78FC00DA78FF8EAB301A1E4A30144
+kth	2016	2342	10.1017/jfm.2016.707	TRUE	Cambridge University Press (CUP)	Journal of Fluid Mechanics			1469-7645	https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/div-classtitleenergy-efficiency-and-performance-limitations-of-linear-adaptive-control-for-transition-delaydiv/7E37A8256AD649A11DF2111B1790E153
+kth	2016	2367	10.1017/jfm.2016.838	TRUE	Cambridge University Press (CUP)	Journal of Fluid Mechanics			1469-7645	https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/framework-for-computing-effective-boundary-conditions-at-the-interface-between-free-fluid-and-a-porous-medium/FBD54FBEF46669F38BD9D9954A5325D8
+kth	2016	1562	10.1186/s12947-015-0045-0	FALSE	BioMed Central	Cardiovascular Ultrasound			1476-7120	https://cardiovascularultrasound.biomedcentral.com/articles/10.1186/s12947-015-0045-0
+kth	2016	1562	10.1186/s12934-016-0490-y	FALSE	BioMed Central	Microbial Cell Factories			1475-2859	https://microbialcellfactories.biomedcentral.com/articles/10.1186/s12934-016-0490-y
+kth	2016	1562	1186/s12862-016-0684-2	FALSE	BioMed Central Ltd	BMC Evolutionary Biology			1471-2148	https://bmcevolbiol.biomedcentral.com/articles/10.1186/s12862-016-0684-2
+kth	2016	1859	10.1063/1.4953670	FALSE	AIP Publishing	APL Photonics	2378-0967			http://aip.scitation.org/doi/10.1063/1.4953670
+kth	2016	1950	10.1088/0022-3727/49/33/335303	TRUE	IOP Publishing	Journal of Physics D: Applied Physics			1361-6463	http://iopscience.iop.org/article/10.1088/0022-3727/49/33/335303/meta
+kth	2016	1479	10.1109/access.2016.2601445	FALSE	Institute of Electrical & Electronics Engineers (IEEE)	IEEE Access			2169-3536	http://ieeexplore.ieee.org/document/7547390/
+kth	2016	1275	10.1021/acs.accounts.6b00396	TRUE	American Chemical Society (ACS)	Accounts of Chemical Research			1520-4898	http://pubs.acs.org/doi/abs/10.1021/acs.accounts.6b00396
+kth	2016	1275	10.1021/acs.jproteome.6b00620	TRUE	American Chemical Society (ACS)	Journal of Proteome Research			1535-3907	http://pubs.acs.org/doi/abs/10.1021%2Facs.jproteome.6b00620
+kth	2016	1275	10.1021/acssuschemeng.6b01524	TRUE	American Chemical Society (ACS)	ACS Sustainable Chemistry and Engineering			2168-0485	http://pubs.acs.org/doi/abs/10.1021%2Facssuschemeng.6b01524
+kth	2016	1275	10.1021/acs.jproteome.5b01131	TRUE	American Chemical Society (ACS)	Journal of Proteome Research			1535-3907	http://pubs.acs.org/doi/abs/10.1021%2Facs.jproteome.5b01131
+kth	2016	1275	10.1021/acs.nanolett.6b02920	TRUE	American Chemical Society (ACS)	Nano Letters			1530-6992	http://pubs.acs.org/doi/abs/10.1021%2Facs.nanolett.6b02920
+kth	2016	1275	10.1021/jacs.6b04250	TRUE	American Chemical Society (ACS)	Journal of the American Chemical Society			1520-5126	http://pubs.acs.org/doi/abs/10.1021%2Fjacs.6b04250
+kth	2016	1275	10.1021/acs.langmuir.6b00671	TRUE	American Chemical Society (ACS)	Langmuir			1520-5827	http://pubs.acs.org/doi/abs/10.1021%2Facs.langmuir.6b00671
+kth	2016	1275	10.1021/acssuschemeng.5b01703	TRUE	American Chemical Society (ACS)	ACS Sustainable Chemistry and Engineering			2168-0485	http://pubs.acs.org/doi/abs/10.1021%2Facssuschemeng.5b01703
+kth	2016	1275	10.1021/acs.biomac.5b01698	TRUE	American Chemical Society (ACS)	Biomacromolecules			1526-4602	http://pubs.acs.org/doi/abs/10.1021%2Facs.biomac.5b01698
+kth	2016	1521	10.1136/bmjopen-2016-011681	FALSE	BMJ	BMJ Open			2044-6055	http://bmjopen.bmj.com/content/6/6/e011681
+kth	2016	0	10.1515/quageo-2016-0031	FALSE	Walter de Gruyter	Quaestiones Geographicae			2081-6383	https://www.degruyter.com/view/j/quageo.2016.35.issue-4/quageo-2016-0031/quageo-2016-0031.xml
+kth	2016	0	10.1515/hf-2016-0057	TRUE	Walter de Gruyter	Holzforschung			1437-434X	https://www.degruyter.com/view/j/hfsg.2016.70.issue-12/hf-2016-0057/hf-2016-0057.xml
