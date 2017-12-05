@@ -51,11 +51,11 @@ my.apc_hybrid <- droplevels(my.apc_hybrid)
 ```
 # Open APC Sweden - Statistics
 
-This is a sample of statistics from the pilot project Open APC Sweden, aiming at gathering data about article processing charges (APC's) paid by Swedish universities. The statistics covers journal articles from a few pilot contributors. Please see the [project wiki](https://github.com/Kungbib/openapc-se/wiki) for more information about the project and instructions on how to contribute.
+This is an exsample of statistics from the pilot project Open APC Sweden, aiming at gathering data about article processing charges (APC's) paid by Swedish universities. The statistics covers journal articles from a few pilot contributors. Please see the [project wiki](https://github.com/Kungbib/openapc-se/wiki) for more information about the project and instructions on how to contribute.
 
 ## Contributing organisations and publishers
 
-Four Swedish universities have reported APC costs for their articles so far. These are: 
+Eight Swedish universities have reported APC costs for their articles so far. These are: 
 
 * KTH Royal Institute of Technology
 * Stockholm University 
@@ -66,11 +66,12 @@ Four Swedish universities have reported APC costs for their articles so far. The
 * Linköping University
 * Malmö University College
 
-Three publishers have also supplied Open APC Sweden with data: 
+Four publishers have also supplied Open APC Sweden with data: 
 
 * Springer (within the Springer Compact offsetting agreement)
-* Taylor and Francis
+* Taylor & Francis
 * Karger
+* IOP Publishing
 
 This publisher-supplied data leads to publishing costs being reported for a number of Swedish research institutions which not yet have supplied us with data actively.
 

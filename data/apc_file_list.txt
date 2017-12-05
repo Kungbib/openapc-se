@@ -7,7 +7,8 @@
 # gu/apc_gu_2016-2017.tsv
 # kth/apc_kth_2015.tsv
 # kth/apc_kth_2016.tsv
-kth/apc_kth_2016_correction.tsv
+# kth/apc_kth_2016_correction.tsv
+kth/apc_kth_2016_2.tsv
 # liu/apc_liu_2017_jan-jun.tsv
 # ltu/apc_ltu_2017.tsv
 # mah/apc_mah_2015.csv
@@ -18,3 +19,4 @@ kth/apc_kth_2016_correction.tsv
 # karger/apc_karger_2014-2016.tsv
 # springer/apc_springer_2016_2.xlsx
 # taylor_and_francis/apc_tf_2014-2016.tsv
+iop/apc_iop_2017Q3.tsv

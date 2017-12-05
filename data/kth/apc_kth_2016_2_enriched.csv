@@ -1,0 +1,3 @@
+"institution","period","euro","doi","is_hybrid","publisher","journal_full_title","issn","issn_print","issn_electronic","issn_l","license_ref","indexed_in_crossref","pmid","pmcid","ut","url","doaj"
+"kth",2016,2.275,"10.1093/bioinformatics/btw064",TRUE,"Oxford University Press (OUP)","Bioinformatics","1367-4803","1367-4803","1460-2059",NA,NA,TRUE,"27153683",NA,NA,"https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btw064",FALSE
+"kth",2016,2000,"10.1515/hf-2016-0020",FALSE,"Walter de Gruyter","Holzforschung","1437-434X","0018-3830","1437-434X",NA,"http://creativecommons.org/licenses/by-nc-nd/3.0",TRUE,NA,NA,NA,"https://www.degruyter.com/view/j/hfsg.2016.70.issue-11/hf-2016-0020/hf-2016-0020.xml",FALSE
