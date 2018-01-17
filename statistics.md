@@ -21,7 +21,7 @@ far. These are:
 -   Dalarna University College
 -   Luleå University of Technology
 -   Linköping University
--   Malmö University College
+-   Malmö University
 
 Four publishers have also supplied Open APC Sweden with data:
 
@@ -182,7 +182,7 @@ Articles and APC costs per institution:
 <td align="right">2 200</td>
 </tr>
 <tr class="even">
-<td>Malmö University College</td>
+<td>Malmö University</td>
 <td align="right">37</td>
 <td align="right">56 842</td>
 <td align="right">1 536</td>
@@ -377,7 +377,7 @@ Articles and APC costs per institution:
 <td align="right">198</td>
 </tr>
 <tr class="even">
-<td>Malmö University College</td>
+<td>Malmö University</td>
 <td align="right">23</td>
 <td align="right">25 942</td>
 <td align="right">1 128</td>
@@ -539,7 +539,7 @@ open access.
 <td align="right">2 200</td>
 </tr>
 <tr class="even">
-<td>Malmö University College</td>
+<td>Malmö University</td>
 <td align="right">14</td>
 <td align="right">30 899</td>
 <td align="right">2 207</td>
