@@ -73,7 +73,18 @@ class UnicodeDictReader(object):
 
     def next(self):
         row = self.reader.next()
-        return {unicode(k, "utf-8"): unicode(v, "utf-8") for (k, v) in row.iteritems()}
+        row_dict = {}
+        for (k, v) in row.iteritems():
+            try:
+                row_dict[unicode(k, "utf-8")] = unicode(v, "utf-8")
+            except TypeError:
+                msg = ("TypeError in UnicodeDictReader (line {}): Could not " +
+                       "coerce value in column '{}' to Unicode ({})")
+                print_r(msg.format(self.reader.line_num, k, v))
+                sys.exit()
+        return row_dict
+        #return {unicode(k, "utf-8"): unicode(v, "utf-8") for (k, v) in row.iteritems()}
+        
 
     def __iter__(self):
         return self
@@ -556,6 +567,13 @@ def get_metadata_from_crossref(doi_string):
             result = root.findall(path, namespaces)
             if result:
                 crossref_data[elem] = result[0].text
+                if elem == 'license_ref':
+                    # If there's more than one license_ref element, prefer
+                    # the one with the attribute applies_to="vor"
+                    for xml_elem in result:
+                        if xml_elem.get("applies_to") == "vor":
+                            crossref_data[elem] = xml_elem.text
+                            break
         ret_value['data'] = crossref_data
     except urllib2.HTTPError as httpe:
         ret_value['success'] = False
@@ -578,7 +596,7 @@ def get_metadata_from_pubmed(doi_string):
         return {"success": False,
                 "error_msg": u"Parse Error: '{}' is no valid DOI".format(doi_string)
                }
-    url = "http://www.ebi.ac.uk/europepmc/webservices/rest/search?query=doi:"
+    url = "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=doi:"
     url += doi
     req = urllib2.Request(url)
     ret_value = {'success': True}
@@ -1091,14 +1109,20 @@ def get_unified_journal_title(journal_full_title):
         "European Journal of Public Health": "The European Journal of Public Health",
         "Interface": "Journal of The Royal Society Interface",
         "The Plant Cell Online": "The Plant Cell",
-        "Medical Engineering and Physics": "Medical Engineering & Physics"
+        "Medical Engineering and Physics": "Medical Engineering & Physics",
+        "Forensic Science, Medicine, and Pathology": "Forensic Science, Medicine and Pathology",
+        "Lab Chip": "Lab on a Chip",
+        "Mater. Horiz.": "Materials Horizons",
+        "AoB PLANTS": "AoB Plants",
+        "Elem Sci Anth": "Elementa: Science of the Anthropocene"
     }
     return journal_mappings.get(journal_full_title, journal_full_title)
 
 def get_corrected_issn_l(issn_l):
     issn_l_corrections = {
         "0266-7061": "1367-4803", # "Bioinformatics". 1460-2059(issn_e) -> 0266-7061, but 1367-4803(issn_p) -> 1367-4803
-        "1654-6628": "1654-661X"  # "Food & Nutrition Research". 1654-6628(issn_p) -> 1654-6628, but 1654-661X(issn_e) -> 1654-661X
+        "1654-6628": "1654-661X",  # "Food & Nutrition Research". 1654-6628(issn_p) -> 1654-6628, but 1654-661X(issn_e) -> 1654-661X
+        "1474-7596": "1465-6906" # "Genome Biology".  1465-6906(issn_p) -> 1465-6906, but 1474-760X(issn_e) -> 1474-7596
     }
     return issn_l_corrections.get(issn_l, issn_l)
 
