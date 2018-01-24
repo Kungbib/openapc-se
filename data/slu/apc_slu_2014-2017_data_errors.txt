@@ -1,0 +1,17 @@
+Felaktig DOI:
+-------------
+slu	2017	2960	1016/j.biortech.2017.08.213	SANT	Elsevier
+--->
+slu	2017	2960	10.1016/j.biortech.2017.08.213	SANT	Elsevier
+
+
+Saknar DOI - utesluten ur analys
+--------------------------------
+slu	2017	1203	wiley ecosphere jacobson size-dependent prey availability affects diet	FALSKT	Wiley
+
+
+Felaktig DOI - not found
+------------
+slu	2014	2200	10.1007/s10818-014-9183-yc	SANT	Springer
+slu	2014	1351	10.1186/1751-0147-55-50m	FALSKT	BioMed Central
+slu	2016	662.73	10.4172/Antimicro.1000107	FALSKT	OMICS Publishing Group
