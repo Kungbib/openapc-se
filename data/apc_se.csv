@@ -5,6 +5,9 @@ cth,2014,2429,10.1080/00207543.2014.980456,TRUE,Taylor & Francis,International J
 cth,2014,2429,10.1080/01490451.2013.879508,TRUE,Taylor & Francis,Geomicrobiology Journal,0149-0451,0149-0451,1521-0529,0149-0451,NA,TRUE,NA,NA,ut:000340188400008,NA,FALSE
 cth,2014,2429,10.1080/13669877.2014.889194,TRUE,Taylor & Francis,Journal of Risk Research,1366-9877,1366-9877,1466-4461,1366-9877,NA,TRUE,NA,NA,ut:000349671900002,NA,FALSE
 cth,2014,3040,10.3109/14992027.2014.996826,TRUE,Taylor & Francis,International Journal of Audiology,1499-2027,1499-2027,1708-8186,1499-2027,NA,TRUE,25705995,PMC4487578,ut:000354406500008,NA,FALSE
+cth,2016,0,10.5194/ascmo-2-39-2016,FALSE,Copernicus Publications,"Advances in Statistical Climatology, Meteorology and Oceanography",2364-3587,NA,2364-3587,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+cth,2016,0,10.5194/gi-5-27-2016,FALSE,Copernicus Publications,"Geoscientific Instrumentation, Methods and Data Systems",2193-0864,NA,2193-0864,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+cth,2016,1050,10.5194/acp-16-12587-2016,FALSE,Copernicus Publications,Atmospheric Chemistry and Physics,1680-7324,NA,1680-7324,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 cth,2016,1169,10.1080/23311916.2016.1239516,FALSE,Taylor & Francis,Cogent Engineering,2331-1916,NA,2331-1916,2331-1916,NA,TRUE,NA,NA,ut:000397384100026,NA,TRUE
 cth,2016,2132,10.1080/10643389.2016.1149903,TRUE,Taylor & Francis,Critical Reviews in Environmental Science and Technology,1064-3389,1064-3389,1547-6537,1064-3389,NA,TRUE,NA,NA,ut:000374956500001,NA,FALSE
 cth,2016,2132,10.1080/17445760.2016.1241880,TRUE,Taylor & Francis,"International Journal of Parallel, Emergent and Distributed Systems",1744-5760,1744-5760,1744-5779,1744-5760,NA,TRUE,NA,NA,NA,NA,FALSE
@@ -36,6 +39,8 @@ cth,2016,2200,10.1007/s13399-016-0228-4,TRUE,Springer,Biomass Conversion and Bio
 cth,2016,2200,10.1007/s40831-016-0072-6,TRUE,Springer,Journal of Sustainable Metallurgy,2199-3823,2199-3823,2199-3831,NA,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000400824500005,NA,FALSE
 cth,2016,2200,10.1208/s12248-016-9991-1,TRUE,Springer,The AAPS Journal,1550-7416,NA,1550-7416,1550-7416,http://creativecommons.org/licenses/by/4.0,TRUE,27681102,NA,ut:000395006000014,NA,FALSE
 cth,2016,560,10.1080/19942060.2016.1235515,FALSE,Taylor & Francis,Engineering Applications of Computational Fluid Mechanics,1994-2060,1994-2060,1997-003X,1994-2060,NA,TRUE,NA,NA,ut:000386338500003,NA,TRUE
+cth,2017,1650,10.5194/acp-17-3423-2017,FALSE,Copernicus Publications,Atmospheric Chemistry and Physics,1680-7324,NA,1680-7324,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+cth,2017,975,10.5194/acp-17-1791-2017,FALSE,Copernicus Publications,Atmospheric Chemistry and Physics,1680-7324,NA,1680-7324,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 du,2014,1712,10.1186/1471-2393-14-349,FALSE,BioMed Central,BMC Pregnancy and Childbirth,1471-2393,NA,1471-2393,1471-2393,http://www.springer.com/tdm,TRUE,25288075,PMC4286931,ut:000343175500001,http://bmcpregnancychildbirth.biomedcentral.com/articles/10.1186/1471-2393-14-349,TRUE
 du,2014,1760,10.1186/1472-6882-14-187,FALSE,BioMed Central,BMC Complementary and Alternative Medicine,1472-6882,NA,1472-6882,1472-6882,http://www.springer.com/tdm,TRUE,24913704,PMC4055800,ut:000337323400001,http://bmccomplementalternmed.biomedcentral.com/articles/10.1186/1472-6882-14-187,TRUE
 du,2014,1765,10.1186/1471-2458-14-892,FALSE,BioMed Central,BMC Public Health,1471-2458,NA,1471-2458,1471-2458,http://www.springer.com/tdm,TRUE,25174960,PMC4168062,ut:000341650800001,http://bmcpublichealth.biomedcentral.com/articles/10.1186/1471-2458-14-892,TRUE
@@ -113,6 +118,7 @@ gu,2016,0,10.1093/ckj/sfv152,FALSE,Oxford University Press (OUP),Clinical Kidney
 gu,2016,0,10.1107/s1600576715023444,TRUE,International Union of Crystallography (IUCr),Journal of Applied Crystallography,1600-5767,NA,1600-5767,0021-8898,http://creativecommons.org/licenses/by/2.0/uk/legalcode,TRUE,NA,NA,ut:000369389300006,NA,FALSE
 gu,2016,0,10.1111/eva.12277,FALSE,Wiley,Evolutionary Applications,1752-4571,NA,NA,1752-4571,http://doi.wiley.com/10.1002/tdm_license_1.1,TRUE,27087845,PMC4780386,ut:000368250500010,NA,TRUE
 gu,2016,0,10.1111/pbi.12479,FALSE,Wiley,Plant Biotechnology Journal,1467-7644,NA,NA,1467-7644,http://doi.wiley.com/10.1002/tdm_license_1.1,TRUE,26403330,NA,ut:000373069400006,NA,FALSE
+gu,2016,0,10.1144/jmpaleo2015-007,FALSE,Copernicus Publications,Journal of Micropalaeontology,0262-821X,0262-821X,2041-4978,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 gu,2016,0,10.1177/2056305115624528,FALSE,SAGE Publications,Social Media + Society,2056-3051,2056-3051,2056-3051,2056-3051,NA,TRUE,NA,NA,NA,NA,TRUE
 gu,2016,0,10.1186/s12884-016-1127-1,FALSE,Springer,BMC Pregnancy and Childbirth,1471-2393,NA,1471-2393,1471-2393,http://www.springer.com/tdm,TRUE,27793111,PMC5084442,ut:000386393000001,NA,TRUE
 gu,2016,0,10.1186/s12884-016-1178-3,FALSE,Springer,BMC Pregnancy and Childbirth,1471-2393,NA,1471-2393,1471-2393,http://www.springer.com/tdm,TRUE,27931191,PMC5146820,ut:000389552400001,NA,TRUE
@@ -121,6 +127,7 @@ gu,2016,0,10.1186/s40536-016-0020-8,FALSE,Springer,Large-scale Assessments in Ed
 gu,2016,0,10.1186/s40536-016-0027-1,FALSE,Springer,Large-scale Assessments in Education,2196-0739,NA,2196-0739,2196-0739,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,NA,NA,TRUE
 gu,2016,0,10.1515/nsad-2016-0020,FALSE,Walter de Gruyter,Nordic Studies on Alcohol and Drugs,1458-6126,NA,1458-6126,1455-0725,NA,TRUE,NA,NA,ut:000379145900005,NA,TRUE
 gu,2016,0,10.4309/jgi.2016.34.2,FALSE,Journal of Gambling Issues,Journal of Gambling Issues,1910-7595,1910-7595,NA,1910-7595,NA,TRUE,NA,NA,NA,NA,FALSE
+gu,2016,0,10.5194/soil-2-433-2016,FALSE,Copernicus Publications,SOIL,2199-398X,NA,2199-398X,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 gu,2016,1009.1,10.1210/en.2016-1181,TRUE,The Endocrine Society,Endocrinology,0013-7227,0013-7227,1945-7170,0013-7227,NA,TRUE,27254004,PMC4967117,ut:000380746800028,NA,FALSE
 gu,2016,1044,10.1186/s40658-016-0137-4,FALSE,Springer,EJNMMI Physics,2197-7364,NA,2197-7364,2197-7364,NA,TRUE,26782039,PMC4718906,ut:000379210200001,NA,TRUE
 gu,2016,1082.35,10.1016/j.ssmph.2016.08.004,FALSE,Elsevier,SSM - Population Health,2352-8273,2352-8273,NA,2352-8273,http://www.elsevier.com/tdm/userlicense/1.0/,TRUE,NA,NA,NA,NA,TRUE
@@ -431,6 +438,8 @@ gu,2016,932,10.1038/srep28490,FALSE,Springer,Scientific Reports,2045-2322,NA,204
 gu,2016,947,10.1002/2015wr018375,TRUE,Wiley,Water Resources Research,0043-1397,NA,NA,0043-1397,http://doi.wiley.com/10.1002/tdm_license_1,TRUE,NA,NA,ut:000380100200034,NA,FALSE
 gu,2016,960,10.1093/jhps/hnw023,FALSE,Oxford University Press (OUP),Journal of Hip Preservation Surgery,2054-8397,NA,2054-8397,2054-8397,NA,TRUE,NA,NA,ut:000389764900011,NA,TRUE
 gu,2016,981.79,10.1016/j.giq.2016.01.010,TRUE,Elsevier,Government Information Quarterly,0740-624X,0740-624X,NA,0740-624X,http://www.elsevier.com/tdm/userlicense/1.0/,TRUE,NA,NA,ut:000372774300002,NA,FALSE
+gu,2017,1050,10.5194/os-13-609-2017,FALSE,Copernicus Publications,Ocean Science,1812-0792,NA,1812-0792,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+gu,2017,1170,10.5194/bg-14-1811-2017,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 gu,2017,1345.5,10.1371/journal.pone.0169759,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,1932-6203,http://creativecommons.org/licenses/by/4.0/,TRUE,28061507,PMC5218734,ut:000391641500135,NA,TRUE
 gu,2017,1345.5,10.1371/journal.pone.0170613,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,1932-6203,http://creativecommons.org/licenses/by/4.0/,TRUE,28125727,PMC5268365,ut:000396176100086,NA,TRUE
 gu,2017,1345.5,10.1371/journal.pone.0170754,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,1932-6203,http://creativecommons.org/licenses/by/4.0/,TRUE,28129352,PMC5271333,ut:000396211400039,NA,TRUE
@@ -441,10 +450,14 @@ gu,2017,1345.5,10.1371/journal.pone.0172896,FALSE,Public Library of Science (PLo
 gu,2017,1345.5,10.1371/journal.pone.0173463,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,1932-6203,http://creativecommons.org/licenses/by/4.0/,TRUE,28273158,PMC5342245,ut:000396073700005,NA,TRUE
 gu,2017,1345.5,10.1371/journal.pone.0173492,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,1932-6203,http://creativecommons.org/licenses/by/4.0/,TRUE,28264025,PMC5338833,ut:000396054300066,NA,TRUE
 gu,2017,1345.5,10.1371/journal.pone.0173654,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,1932-6203,http://creativecommons.org/licenses/by/4.0/,TRUE,28288176,PMC5348013,ut:000396092400023,NA,TRUE
+gu,2017,1350,10.5194/os-13-349-2017,FALSE,Copernicus Publications,Ocean Science,1812-0792,NA,1812-0792,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+gu,2017,1710,10.5194/bg-14-1285-2017,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+gu,2017,1800,10.5194/cp-13-1831-2017,FALSE,Copernicus Publications,Climate of the Past,1814-9332,NA,1814-9332,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 gu,2017,2025,10.1371/journal.pgen.1006628,FALSE,Public Library of Science (PLoS),PLOS Genetics,1553-7404,NA,1553-7404,1553-7390,http://creativecommons.org/licenses/by/4.0/,TRUE,28207748,PMC5336301,ut:000396403100019,NA,TRUE
 gu,2017,2343,10.3389/fimmu.2016.00640,FALSE,Frontiers,Frontiers in Immunology,1664-3224,NA,1664-3224,1664-3224,NA,TRUE,28082979,PMC5183738,ut:000390477200002,NA,TRUE
 gu,2017,2343,10.3389/fncel.2016.00286,FALSE,Frontiers,Frontiers in Cellular Neuroscience,1662-5102,NA,1662-5102,1662-5102,NA,TRUE,28018179,PMC5156678,ut:000389789400001,NA,TRUE
 gu,2017,2500,10.1111/joim.12587,TRUE,Wiley,Journal of Internal Medicine,0954-6820,NA,NA,0954-6820,http://doi.wiley.com/10.1002/tdm_license_1,TRUE,28097725,NA,ut:000399779700008,NA,FALSE
+gu,2017,360,10.5194/bg-14-751-2017,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 hb,2016,2200,10.1007/s10615-016-0606-1,TRUE,Springer,Clinical Social Work Journal,0091-1674,0091-1674,1573-3343,0091-1674,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,NA,NA,FALSE
 hb,2016,2200,10.1007/s11192-016-2194-9,TRUE,Springer,Scientometrics,0138-9130,0138-9130,1588-2861,0138-9130,http://creativecommons.org/licenses/by/4.0,TRUE,28239206,PMC5306087,ut:000394148300010,NA,FALSE
 hb,2017,1950,10.1088/1361-665x/aa6f25,TRUE,IOP Publishing,Smart Materials and Structures,0964-1726,0964-1726,1361-665X,NA,http://iopscience.iop.org/info/page/text-and-data-mining,TRUE,NA,NA,NA,NA,FALSE
@@ -840,8 +853,14 @@ kth,2016,919,10.3390/su8060550,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,
 kth,2016,919,10.3390/su8111080,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,2071-1050,NA,TRUE,NA,NA,ut:000389316200003,http://www.mdpi.com/2071-1050/8/11/1080,TRUE
 kth,2016,919,10.3390/su8121227,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,2071-1050,NA,TRUE,NA,NA,ut:000389317100018,http://www.mdpi.com/2071-1050/8/12/1227,TRUE
 kth,2016,924,10.1039/c4cc00698d,TRUE,Royal Society of Chemistry (RSC),Chemical Communications,1359-7345,1359-7345,1364-548X,NA,NA,TRUE,24788679,NA,NA,http://pubs.rsc.org/en/content/articlelanding/2014/cc/c4cc00698d#!divAbstract,FALSE
+kth,2017,0,10.5194/isprs-archives-xlii-3-w2-137-2017,FALSE,Copernicus Publications,"ISPRS - International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",2194-9034,NA,2194-9034,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2017,1729,10.1088/1361-6463/aa65ed,TRUE,IOP Publishing,Journal of Physics D: Applied Physics,0022-3727,0022-3727,1361-6463,NA,http://iopscience.iop.org/info/page/text-and-data-mining,TRUE,NA,NA,NA,NA,FALSE
 kth,2017,1950,10.1088/1361-6560/aa591d,TRUE,IOP Publishing,Physics in Medicine and Biology,0031-9155,0031-9155,1361-6560,NA,http://iopscience.iop.org/info/page/text-and-data-mining,TRUE,28081009,NA,NA,NA,FALSE
+kth,2017,260,10.5194/ars-15-189-2017,FALSE,Copernicus Publications,Advances in Radio Science,1684-9973,NA,1684-9973,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+kth,2017,300,10.5194/angeo-35-475-2017,FALSE,Copernicus Publications,Annales Geophysicae,1432-0576,NA,1432-0576,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+kth,2017,360,10.5194/angeo-35-879-2017,FALSE,Copernicus Publications,Annales Geophysicae,1432-0576,NA,1432-0576,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+kth,2017,420,10.5194/angeo-35-1143-2017,FALSE,Copernicus Publications,Annales Geophysicae,1432-0576,NA,1432-0576,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+kth,2017,660,10.5194/angeo-35-493-2017,FALSE,Copernicus Publications,Annales Geophysicae,1432-0576,NA,1432-0576,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 lakemedelsverket,2016,2200,10.1007/s13181-016-0584-2,TRUE,Springer,Journal of Medical Toxicology,1556-9039,1556-9039,1937-6995,1556-9039,http://creativecommons.org/licenses/by/4.0,TRUE,27638057,PMC5330960,NA,NA,FALSE
 liu,2012,468,10.1080/21663831.2012.749814,FALSE,Taylor & Francis,Materials Research Letters,2166-3831,NA,2166-3831,2166-3831,NA,TRUE,NA,NA,ut:000209767300006,NA,FALSE
 liu,2013,2429,10.1080/08351813.2013.753710,TRUE,Taylor & Francis,Research on Language & Social Interaction,0835-1813,0835-1813,1532-7973,0835-1813,NA,TRUE,NA,NA,ut:000322633100001,NA,FALSE
@@ -1023,6 +1042,7 @@ lnu,2016,2200,10.1007/s10997-016-9359-z,TRUE,Springer,Journal of Management & Go
 lnu,2016,2200,10.1007/s11135-016-0390-6,TRUE,Springer,Quality & Quantity,0033-5177,0033-5177,1573-7845,0033-5177,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000407856300005,NA,FALSE
 lnu,2016,2200,10.1007/s11266-016-9815-z,TRUE,Springer,VOLUNTAS: International Journal of Voluntary and Nonprofit Organizations,0957-8765,0957-8765,1573-7888,0957-8765,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000393747800014,NA,FALSE
 lnu,2016,2200,10.1007/s12122-016-9233-4,TRUE,Springer,Journal of Labor Research,0195-3613,0195-3613,1936-4768,0195-3613,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000388182800001,NA,FALSE
+lnu,2016,630,10.5194/bg-13-2815-2016,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 ltu,2012,2630,10.1080/02827581.2012.656142,TRUE,Taylor & Francis,Scandinavian Journal of Forest Research,0282-7581,0282-7581,1651-1891,0282-7581,NA,TRUE,NA,NA,ut:000305555600010,NA,FALSE
 ltu,2012,2630,10.1080/17480272.2012.699461,TRUE,Taylor & Francis,Wood Material Science and Engineering,1748-0272,1748-0272,1748-0280,1748-0272,NA,TRUE,NA,NA,NA,NA,FALSE
 ltu,2013,2630,10.1080/03585522.2012.693272,TRUE,Taylor & Francis,Scandinavian Economic History Review,0358-5522,0358-5522,1750-2837,0358-5522,NA,TRUE,NA,NA,NA,NA,FALSE
@@ -1061,9 +1081,12 @@ ltu,2017,2260,10.1016/j.chemolab.2017.05.016#sthash.vnp1mnah.dpuf,TRUE,Elsevier,
 ltu,2017,239,10.4028/www.scientific.net/msf.891.18#sthash.pqs6shzx.dpuf,TRUE,Trans Tech Publications,Materials Science Forum,1662-9752,0255-5476,1662-9752,0255-5476,NA,TRUE,NA,NA,NA,https://www.scientific.net/MSF.891.18,FALSE
 ltu,2017,2960,10.1016/j.biortech.2017.04.002,TRUE,Elsevier,Bioresource Technology,0960-8524,0960-8524,1873-2976,0960-8524,http://www.elsevier.com/tdm/userlicense/1.0/,TRUE,28412146,NA,ut:000405980700038,http://www.sciencedirect.com/science/article/pii/S0960852417304832,FALSE
 ltu,2017,3140,10.1016/j.carbon.2017.02.007,TRUE,Elsevier,Carbon,0008-6223,0008-6223,1873-3891,0008-6223,http://www.elsevier.com/tdm/userlicense/1.0/,TRUE,NA,NA,ut:000397549300053,http://www.sciencedirect.com/science/article/pii/S0008622317301252,FALSE
+ltu,2017,540,10.5194/angeo-35-869-2017,FALSE,Copernicus Publications,Annales Geophysicae,1432-0576,NA,1432-0576,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 ltu,2017,560,10.1039/c6ra27065d,FALSE,Royal Society of Chemistry (RSC),RSC Advances,2046-2069,NA,2046-2069,2046-2069,NA,TRUE,NA,NA,ut:000393755100024,http://pubs.rsc.org/en/content/articlepdf/2017/ra/c6ra27065d,FALSE
 ltu,2017,560,10.1039/c6ra28574k,FALSE,Royal Society of Chemistry (RSC),RSC Advances,2046-2069,NA,2046-2069,2046-2069,NA,TRUE,NA,NA,ut:000393757100006,http://pubs.rsc.org/en/content/articlepdf/2017/ra/c6ra28574k,FALSE
 ltu,2017,588,10.1039/c6ra25410a,FALSE,Royal Society of Chemistry (RSC),RSC Advances,2046-2069,NA,2046-2069,2046-2069,NA,TRUE,NA,NA,ut:000393748000028,http://pubs.rsc.org/en/content/articlelanding/2017/ra/c6ra25410a#!divAbstract,FALSE
+ltu,2017,660,10.5194/angeo-35-721-2017,FALSE,Copernicus Publications,Annales Geophysicae,1432-0576,NA,1432-0576,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+ltu,2017,720,10.5194/angeo-35-1341-2017,FALSE,Copernicus Publications,Annales Geophysicae,1432-0576,NA,1432-0576,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 ltu,2017,888,10.4236/eng.2017.95024,FALSE,Scientific Research Publishing,Engineering,1947-3931,1947-3931,1947-394X,1947-394X,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,http://file.scirp.org/pdf/ENG_2017052716204530.pdf,FALSE
 ltu,2017,931,NA,FALSE,Scientific Research Publishing,Bioresources,NA,1930-2126,1930-2126,1930-2126,NA,FALSE,NA,NA,NA,http://ojs.cnr.ncsu.edu/index.php/BioRes/article/view/BioRes_12_2_3122_Sadatnezhad_Continuous_Surface_Densification_Wood,FALSE
 ltu,2017,95,NA,FALSE,Scientific Research Publishing,Civil Engineering Journal,2476-3055,NA,NA,2476-3055,NA,FALSE,NA,NA,NA,http://civilejournal.org/index.php/cej/article/view/310,FALSE
@@ -1099,6 +1122,10 @@ lu,2016,0,10.1080/17453674.2016.1210940,FALSE,Taylor & Francis,Acta Orthopaedica
 lu,2016,0,10.3109/17453674.2016.1152855,FALSE,Taylor & Francis,Acta Orthopaedica,1745-3674,1745-3674,1745-3682,1745-3674,NA,TRUE,26905618,PMC4900094,ut:000377098700016,NA,TRUE
 lu,2016,0,10.3109/17453674.2016.1161451,FALSE,Taylor & Francis,Acta Orthopaedica,1745-3674,1745-3674,1745-3682,1745-3674,NA,TRUE,26982799,PMC4900082,ut:000377098700007,NA,TRUE
 lu,2016,0,10.3109/17453674.2016.1170548,FALSE,Taylor & Francis,Acta Orthopaedica,1745-3674,1745-3674,1745-3682,1745-3674,NA,TRUE,27212102,PMC4900081,ut:000377098700012,NA,TRUE
+lu,2016,1260,10.5194/bg-13-6067-2016,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+lu,2016,1380,10.5194/esd-7-893-2016,FALSE,Copernicus Publications,Earth System Dynamics,2190-4987,NA,2190-4987,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+lu,2016,1710,10.5194/acp-16-5685-2016,FALSE,Copernicus Publications,Atmospheric Chemistry and Physics,1680-7324,NA,1680-7324,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+lu,2016,1710,10.5194/tc-10-1395-2016,FALSE,Copernicus Publications,The Cryosphere,1994-0424,NA,1994-0424,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 lu,2016,2132,10.1080/02678373.2016.1175524,TRUE,Taylor & Francis,Work & Stress,0267-8373,0267-8373,1464-5335,0267-8373,NA,TRUE,27226677,PMC4867854,ut:000375478000001,NA,FALSE
 lu,2016,2132,10.1080/08039410.2016.1252424,TRUE,Taylor & Francis,Forum for Development Studies,0803-9410,0803-9410,1891-1765,0803-9410,NA,TRUE,NA,NA,ut:000396607200002,NA,FALSE
 lu,2016,2132,10.1080/09638288.2016.1236409,TRUE,Taylor & Francis,Disability and Rehabilitation,0963-8288,0963-8288,1464-5165,0963-8288,NA,TRUE,NA,NA,NA,NA,FALSE
@@ -1193,7 +1220,21 @@ lu,2016,521,10.1080/09500340.2016.1257751,TRUE,Taylor & Francis,Journal of Moder
 lu,2016,734,10.1080/15592294.2016.1178418,TRUE,Taylor & Francis,Epigenetics,1559-2294,1559-2294,1559-2308,1559-2294,NA,TRUE,27148772,PMC4939923,ut:000380906200002,NA,FALSE
 lu,2016,734,10.1080/21623945.2016.1252011,TRUE,Taylor & Francis,Adipocyte,2162-3945,2162-3945,2162-397X,2162-3945,NA,TRUE,27994949,PMC5160390,ut:000390393500003,NA,FALSE
 lu,2016,969,10.1080/23311908.2016.1260237,FALSE,Taylor & Francis,Cogent Psychology,2331-1908,NA,2331-1908,2331-1908,NA,TRUE,NA,NA,ut:000390692400001,NA,TRUE
+lu,2016,990,10.5194/amt-9-3193-2016,FALSE,Copernicus Publications,Atmospheric Measurement Techniques,1867-8548,NA,1867-8548,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+lu,2017,0,10.5194/gh-72-455-2017,FALSE,Copernicus Publications,Geographica Helvetica,2194-8798,NA,2194-8798,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+lu,2017,1170,10.5194/bg-14-1527-2017,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+lu,2017,1350,10.5194/acp-17-8887-2017,FALSE,Copernicus Publications,Atmospheric Chemistry and Physics,1680-7324,NA,1680-7324,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+lu,2017,1440,10.5194/acp-17-11025-2017,FALSE,Copernicus Publications,Atmospheric Chemistry and Physics,1680-7324,NA,1680-7324,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+lu,2017,1440,10.5194/bg-14-4045-2017,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+lu,2017,1530,10.5194/acp-17-10937-2017,FALSE,Copernicus Publications,Atmospheric Chemistry and Physics,1680-7324,NA,1680-7324,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+lu,2017,1530,10.5194/acp-17-4265-2017,FALSE,Copernicus Publications,Atmospheric Chemistry and Physics,1680-7324,NA,1680-7324,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+lu,2017,1530,10.5194/bg-14-1703-2017,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+lu,2017,1620,10.5194/esd-8-773-2017,FALSE,Copernicus Publications,Earth System Dynamics,2190-4987,NA,2190-4987,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+lu,2017,1860,10.5194/esd-8-1191-2017,FALSE,Copernicus Publications,Earth System Dynamics,2190-4987,NA,2190-4987,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 lu,2017,1950,10.1088/1361-6528/aa6aee,TRUE,IOP Publishing,Nanotechnology,0957-4484,0957-4484,1361-6528,NA,http://iopscience.iop.org/info/page/text-and-data-mining,TRUE,28436381,NA,NA,NA,FALSE
+lu,2017,1980,10.5194/bg-14-4023-2017,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+lu,2017,2340,10.5194/bg-14-2571-2017,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+lu,2017,900,10.5194/se-8-671-2017,FALSE,Copernicus Publications,Solid Earth,1869-9529,NA,1869-9529,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 mah,2011,2631,10.1111/j.1600-0579.2011.00702.x,TRUE,Wiley,European Journal of Dental Education,1396-5883,NA,1600-0579,1396-5883,http://doi.wiley.com/10.1002/tdm_license_1.1,TRUE,22251323,PMC3490366,ut:000299202600036,http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1600-0579/homepage/ProductInformation.html,FALSE
 mah,2014,2429,10.1080/13504622.2013.879696,TRUE,Taylor & Francis,Environmental Education Research,1350-4622,1350-4622,1469-5871,1350-4622,NA,TRUE,NA,NA,ut:000348307100002,NA,FALSE
 mah,2014,2429,10.1080/17508487.2014.936890,TRUE,Taylor & Francis,Critical Studies in Education,1750-8487,1750-8487,1750-8495,1750-8487,NA,TRUE,NA,NA,ut:000342135600008,NA,FALSE
@@ -1565,6 +1606,8 @@ slu,2015,946.74,10.3390/f6092982,FALSE,MDPI,Forests,1999-4907,NA,1999-4907,1999-
 slu,2015,960,10.3389/fgene.2015.00049,FALSE,Frontiers,Frontiers in Genetics,1664-8021,NA,1664-8021,1664-8021,NA,TRUE,25750652,PMC4335173,ut:000352760600001,NA,TRUE
 slu,2015,981.79,10.1016/j.foodpol.2015.10.008,TRUE,Elsevier,Food Policy,0306-9192,0306-9192,NA,0306-9192,http://www.elsevier.com/tdm/userlicense/1.0/,TRUE,NA,NA,ut:000369212500001,NA,FALSE
 slu,2015,981.79,10.1016/j.foodpol.2015.11.002,TRUE,Elsevier,Food Policy,0306-9192,0306-9192,NA,0306-9192,http://www.elsevier.com/tdm/userlicense/1.0/,TRUE,NA,NA,ut:000369212500002,NA,FALSE
+slu,2016,0,10.5194/essd-8-439-2016,FALSE,Copernicus Publications,Earth System Science Data,1866-3516,NA,1866-3516,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2016,0,10.5194/soil-2-175-2016,FALSE,Copernicus Publications,SOIL,2199-398X,NA,2199-398X,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 slu,2016,1062.79,10.3390/su8090865,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,2071-1050,NA,TRUE,NA,NA,ut:000385529400037,NA,TRUE
 slu,2016,1082.35,10.1016/j.atmosenv.2016.08.033,TRUE,Elsevier,Atmospheric Environment,1352-2310,1352-2310,NA,1352-2310,http://www.elsevier.com/tdm/userlicense/1.0/,TRUE,NA,NA,ut:000388051700023,NA,FALSE
 slu,2016,1104,10.3390/su8040340,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,2071-1050,NA,TRUE,NA,NA,ut:000375155800050,NA,TRUE
@@ -1778,6 +1821,9 @@ slu,2016,914.33,10.1371/journal.pone.0147796,FALSE,Public Library of Science (PL
 slu,2016,914.33,10.3389/fpls.2016.00119,FALSE,Frontiers,Frontiers in Plant Science,1664-462X,NA,1664-462X,1664-462X,NA,TRUE,26904081,PMC4746258,ut:000369802700001,NA,TRUE
 slu,2016,914.54,10.3390/f7050100,FALSE,MDPI,Forests,1999-4907,NA,1999-4907,1999-4907,NA,TRUE,NA,NA,ut:000377793800009,NA,TRUE
 slu,2016,932,10.1038/srep35958,FALSE,Nature Publishing Group,Scientific Reports,2045-2322,NA,2045-2322,2045-2322,http://www.springer.com/tdm,TRUE,27775050,PMC5075900,ut:000386058500001,NA,TRUE
+slu,2017,0,10.5194/isprs-archives-xlii-3-w3-157-2017,FALSE,Copernicus Publications,"ISPRS - International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",2194-9034,NA,2194-9034,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2017,0,10.5194/isprs-archives-xlii-3-w3-59-2017,FALSE,Copernicus Publications,"ISPRS - International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",2194-9034,NA,2194-9034,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2017,0,10.5194/soil-3-177-2017,FALSE,Copernicus Publications,SOIL,2199-398X,NA,2199-398X,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 slu,2017,1002,10.1002/ecs2.2058,FALSE,Wiley,Ecosphere,2150-8925,NA,NA,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 slu,2017,1050.44,10.3390/f8100360,FALSE,MDPI,Forests,1999-4907,NA,1999-4907,NA,NA,TRUE,NA,NA,NA,NA,TRUE
 slu,2017,1101.92,10.3390/f8050164,FALSE,MDPI,Forests,1999-4907,NA,1999-4907,NA,NA,TRUE,NA,NA,NA,NA,TRUE
@@ -1796,6 +1842,7 @@ slu,2017,1250,10.3920/jiff2017.0019,TRUE,Wageningen Academic Publishers,Journal 
 slu,2017,1257.47,10.1371/journal.pone.0181785,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,28837647,PMC5570297,NA,NA,TRUE
 slu,2017,1257.47,10.1371/journal.pone.0182247,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,28813530,PMC5559072,NA,NA,TRUE
 slu,2017,1257.47,10.1371/journal.pone.0185599,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,29045424,PMC5646762,NA,NA,TRUE
+slu,2017,1260,10.5194/bg-14-3001-2017,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 slu,2017,1267.13,10.1371/journal.pone.0185182,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,29099835,PMC5669496,NA,NA,TRUE
 slu,2017,1267.13,10.1371/journal.pone.0186594,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,29036182,PMC5643112,NA,NA,TRUE
 slu,2017,1267.13,10.1371/journal.pone.0188243,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,29166650,PMC5699834,NA,NA,TRUE
@@ -1842,6 +1889,7 @@ slu,2017,1503.35,10.3390/rs9030247,FALSE,MDPI,Remote Sensing,2072-4292,NA,2072-4
 slu,2017,1530,10.1002/ece3.2791,FALSE,Wiley,Ecology and Evolution,2045-7758,NA,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,28331601,PMC5355183,NA,NA,TRUE
 slu,2017,1530,10.1002/ece3.2941,FALSE,Wiley,Ecology and Evolution,2045-7758,NA,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,28616184,PMC5468140,NA,NA,TRUE
 slu,2017,1530,10.1002/ece3.3603,FALSE,Wiley,Ecology and Evolution,2045-7758,NA,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,29299257,PMC5743537,NA,NA,TRUE
+slu,2017,1530,10.5194/hess-21-6235-2017,FALSE,Copernicus Publications,Hydrology and Earth System Sciences,1607-7938,NA,1607-7938,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 slu,2017,1557.51,10.3168/jds.2016-12312,TRUE,American Dairy Science Association,Journal of Dairy Science,0022-0302,0022-0302,NA,NA,http://www.elsevier.com/tdm/userlicense/1.0/,TRUE,28601454,NA,NA,NA,FALSE
 slu,2017,1565.82,10.1186/s12983-017-0195-z,FALSE,BioMed Central,Frontiers in Zoology,1742-9994,NA,1742-9994,NA,NA,TRUE,28239401,PMC5316190,NA,NA,TRUE
 slu,2017,1596.97,10.1186/s12917-017-1059-7,FALSE,BioMed Central,BMC Veterinary Research,1746-6148,NA,1746-6148,NA,NA,TRUE,28577553,PMC5455091,NA,NA,TRUE
@@ -2231,8 +2279,22 @@ su,2016,907.17,10.1107/s160057671601863x,TRUE,International Union of Crystallogr
 su,2016,933.22,10.1021/acs.orglett.6b01132,TRUE,American Chemical Society (ACS),Organic Letters,1523-7060,1523-7060,1523-7052,1523-7052,http://pubs.acs.org/page/policy/authorchoice_ccby_termsofuse.html,TRUE,27166509,NA,ut:000376476300045,http://pubs.acs.org/doi/full/10.1021/acs.orglett.6b01132,FALSE
 su,2016,987.5,10.1080/23746149.2016.1165630,TRUE,Taylor & Francis,Advances in Physics: X,2374-6149,NA,2374-6149,2374-6149,NA,TRUE,NA,NA,ut:000398353500004,NA,FALSE
 su,2016,992.16,10.1016/j.alcr.2016.11.002,TRUE,Elsevier,Advances in Life Course Research,1040-2608,1040-2608,NA,1040-2608,http://www.elsevier.com/tdm/userlicense/1.0/,TRUE,NA,NA,ut:000403857600001,NA,FALSE
+su,2017,1260,10.5194/cp-13-1213-2017,FALSE,Copernicus Publications,Climate of the Past,1814-9332,NA,1814-9332,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+su,2017,1260,10.5194/cp-13-303-2017,FALSE,Copernicus Publications,Climate of the Past,1814-9332,NA,1814-9332,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+su,2017,1275,10.5194/gmd-10-1733-2017,FALSE,Copernicus Publications,Geoscientific Model Development,1991-9603,NA,1991-9603,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+su,2017,1350,10.5194/acp-17-9145-2017,FALSE,Copernicus Publications,Atmospheric Chemistry and Physics,1680-7324,NA,1680-7324,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+su,2017,1350,10.5194/bg-14-325-2017,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+su,2017,1350,10.5194/cp-13-991-2017,FALSE,Copernicus Publications,Climate of the Past,1814-9332,NA,1814-9332,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+su,2017,1440,10.5194/bg-14-285-2017,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+su,2017,1440,10.5194/cp-13-1269-2017,FALSE,Copernicus Publications,Climate of the Past,1814-9332,NA,1814-9332,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+su,2017,1500,10.5194/gmd-10-1447-2017,FALSE,Copernicus Publications,Geoscientific Model Development,1991-9603,NA,1991-9603,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+su,2017,1530,10.5194/acp-17-13071-2017,FALSE,Copernicus Publications,Atmospheric Chemistry and Physics,1680-7324,NA,1680-7324,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+su,2017,1530,10.5194/tc-11-635-2017,FALSE,Copernicus Publications,The Cryosphere,1994-0424,NA,1994-0424,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+su,2017,1575,10.5194/tc-11-1745-2017,FALSE,Copernicus Publications,The Cryosphere,1994-0424,NA,1994-0424,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 su,2017,1921,10.1088/1361-6455/aa52e1,TRUE,IOP Publishing,"Journal of Physics B: Atomic, Molecular and Optical Physics",0953-4075,0953-4075,1361-6455,NA,http://iopscience.iop.org/info/page/text-and-data-mining,TRUE,NA,NA,NA,NA,FALSE
 su,2017,2268,10.1088/1751-8121/aa8125,TRUE,IOP Publishing,Journal of Physics A: Mathematical and Theoretical,1751-8113,1751-8113,1751-8121,NA,http://iopscience.iop.org/info/page/text-and-data-mining,TRUE,NA,NA,NA,NA,FALSE
+su,2017,2520,10.5194/acp-17-8101-2017,FALSE,Copernicus Publications,Atmospheric Chemistry and Physics,1680-7324,NA,1680-7324,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+su,2017,900,10.5194/cp-13-1037-2017,FALSE,Copernicus Publications,Climate of the Past,1814-9332,NA,1814-9332,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 umu,2008,2660,10.1080/17450120802069109,TRUE,Taylor & Francis,Vulnerable Children and Youth Studies,1745-0128,1745-0128,1745-0136,1745-0128,NA,TRUE,22639678,PMC3357969,NA,NA,FALSE
 umu,2013,2429,10.1080/09644016.2013.835201,TRUE,Taylor & Francis,Environmental Politics,0964-4016,0964-4016,1743-8934,0964-4016,NA,TRUE,NA,NA,ut:000334661300009,NA,FALSE
 umu,2013,2429,10.1080/17542863.2013.800568,TRUE,Taylor & Francis,International Journal of Culture and Mental Health,1754-2863,1754-2863,1754-2871,1754-2871,NA,TRUE,24999370,PMC4066927,NA,NA,FALSE
@@ -2294,10 +2356,12 @@ umu,2016,2200,10.1007/s12076-016-0176-4,TRUE,Springer,Letters in Spatial and Res
 umu,2016,2200,10.1007/s12350-016-0638-5,TRUE,Springer,Journal of Nuclear Cardiology,1071-3581,1071-3581,1532-6551,1071-3581,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,NA,NA,FALSE
 umu,2016,2200,10.1007/s40266-016-0408-8,TRUE,Springer,Drugs & Aging,1170-229X,1170-229X,1179-1969,1170-229X,http://creativecommons.org/licenses/by-nc/4.0,TRUE,27734278,PMC5122609,ut:000388987000004,NA,FALSE
 umu,2016,248,10.1080/19336934.2016.1182269,TRUE,Taylor & Francis,Fly,1933-6934,1933-6934,1933-6942,1933-6934,NA,TRUE,27116253,PMC4970531,ut:000381307600003,NA,FALSE
+umu,2016,2700,10.5194/acp-16-4451-2016,FALSE,Copernicus Publications,Atmospheric Chemistry and Physics,1680-7324,NA,1680-7324,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 umu,2016,2760,10.1080/21681805.2016.1194460,TRUE,Taylor & Francis,Scandinavian Journal of Urology,2168-1805,2168-1805,2168-1813,2168-1805,NA,TRUE,27333148,PMC5020330,ut:000384068000003,NA,FALSE
 umu,2016,323,10.1080/21681376.2016.1189354,FALSE,Taylor & Francis,"Regional Studies, Regional Science",2168-1376,NA,2168-1376,2168-1376,NA,TRUE,NA,NA,NA,NA,TRUE
 umu,2016,575,10.1080/02673843.2016.1269653,FALSE,Taylor & Francis,International Journal of Adolescence and Youth,0267-3843,0267-3843,2164-4527,0267-3843,NA,TRUE,NA,NA,NA,NA,TRUE
 umu,2016,662,10.1080/14756366.2016.1265520,FALSE,Taylor & Francis,Journal of Enzyme Inhibition and Medicinal Chemistry,1475-6366,1475-6366,1475-6374,1475-6366,NA,TRUE,28114819,NA,ut:000392591100045,NA,FALSE
+umu,2017,1800,10.5194/bg-14-1773-2017,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 umu,2017,2268,10.1088/1361-6560/aa6e1b,TRUE,IOP Publishing,Physics in Medicine and Biology,0031-9155,0031-9155,1361-6560,NA,http://iopscience.iop.org/info/page/text-and-data-mining,TRUE,28561014,NA,NA,NA,FALSE
 uu,2012,2630,10.1080/00958972.2012.701008,TRUE,Taylor & Francis,Journal of Coordination Chemistry,0095-8972,0095-8972,1029-0389,0095-8972,NA,TRUE,NA,NA,ut:000305759500011,NA,FALSE
 uu,2012,2630,10.1080/10426507.2012.743145,TRUE,Taylor & Francis,"Phosphorus, Sulfur, and Silicon and the Related Elements",1042-6507,1042-6507,1563-5325,1026-7719,NA,TRUE,NA,NA,ut:000319042300042,NA,FALSE
@@ -2349,6 +2413,7 @@ uu,2016,0,10.3109/03009734.2016.1164770,FALSE,Taylor & Francis,Upsala Journal of
 uu,2016,0,10.3109/03009734.2016.1165317,FALSE,Taylor & Francis,Upsala Journal of Medical Sciences,0300-9734,0300-9734,2000-1967,0300-9734,NA,TRUE,27117607,PMC4900070,ut:000376695600005,NA,FALSE
 uu,2016,0,10.3109/03009734.2016.1173746,FALSE,Taylor & Francis,Upsala Journal of Medical Sciences,0300-9734,0300-9734,2000-1967,0300-9734,NA,TRUE,27460605,PMC4967268,ut:000381958400009,NA,FALSE
 uu,2016,0,10.3109/17453674.2016.1146511,FALSE,Taylor & Francis,Acta Orthopaedica,1745-3674,1745-3674,1745-3682,1745-3674,NA,TRUE,26854321,PMC4812089,ut:000372447400001,NA,TRUE
+uu,2016,1350,10.5194/tc-10-2763-2016,FALSE,Copernicus Publications,The Cryosphere,1994-0424,NA,1994-0424,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 uu,2016,2132,10.1080/00016489.2016.1193894,TRUE,Taylor & Francis,Acta Oto-Laryngologica,0001-6489,0001-6489,1651-2251,0001-6489,NA,TRUE,NA,NA,ut:000386069300014,NA,FALSE
 uu,2016,2132,10.1080/02673037.2016.1219332,TRUE,Taylor & Francis,Housing Studies,0267-3037,0267-3037,1466-1810,0267-3037,NA,TRUE,NA,NA,ut:000398538500006,NA,FALSE
 uu,2016,2132,10.1080/09638288.2016.1236405,TRUE,Taylor & Francis,Disability and Rehabilitation,0963-8288,0963-8288,1464-5165,0963-8288,NA,TRUE,NA,NA,NA,NA,FALSE
@@ -2416,13 +2481,22 @@ uu,2016,2200,10.1007/s40072-016-0080-3,TRUE,Springer,Stochastics and Partial Dif
 uu,2016,2200,10.1208/s12248-016-9977-z,TRUE,Springer,The AAPS Journal,1550-7416,NA,1550-7416,1550-7416,http://creativecommons.org/licenses/by/4.0,TRUE,27634384,NA,ut:000392210900017,NA,FALSE
 uu,2016,2200,10.1245/s10434-016-5703-4,TRUE,Springer,Annals of Surgical Oncology,1068-9265,1068-9265,1534-4681,1068-9265,http://creativecommons.org/licenses/by/4.0,TRUE,27904972,NA,ut:000399013200012,NA,FALSE
 uu,2016,321,10.1159/000444874,FALSE,Karger,Case Reports in Neurology,1662-680X,NA,1662-680X,1662-680X,NA,TRUE,27065427,PMC4821142,ut:000378535900010,NA,TRUE
+uu,2016,496,10.5194/adgeo-42-35-2016,FALSE,Copernicus Publications,Advances in Geosciences,1680-7359,NA,1680-7359,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+uu,2016,594,10.5194/se-7-769-2016,FALSE,Copernicus Publications,Solid Earth,1869-9529,NA,1869-9529,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 uu,2016,969,10.1080/2331186x.2016.1247610,FALSE,Taylor & Francis,Cogent Education,2331-186X,NA,2331-186X,2331-186X,NA,TRUE,NA,NA,ut:000387266300001,NA,TRUE
 uu,2016,982,10.1080/21592535.2015.1123842,FALSE,Taylor & Francis,Biomatter,2159-2535,NA,2159-2535,2159-2527,NA,TRUE,26787304,PMC5055208,NA,NA,FALSE
 uu,2016,982,10.1080/21592535.2015.1133394,FALSE,Taylor & Francis,Biomatter,2159-2535,NA,2159-2535,2159-2527,NA,TRUE,26727581,PMC4927199,NA,NA,FALSE
 uu,2017,0,10.1080/03009734.2016.1274806,FALSE,Taylor & Francis,Upsala Journal of Medical Sciences,0300-9734,0300-9734,2000-1967,0300-9734,NA,TRUE,28256956,NA,ut:000396476600001,NA,FALSE
 uu,2017,0,10.1080/03009734.2017.1285374,FALSE,Taylor & Francis,Upsala Journal of Medical Sciences,NA,NA,NA,NA,NA,FALSE,28276779,NA,ut:000401756500001,NA,NA
 uu,2017,0,10.1080/03009734.2017.1285836,FALSE,Taylor & Francis,Upsala Journal of Medical Sciences,NA,NA,NA,NA,NA,FALSE,28276782,NA,ut:000401756500002,NA,NA
+uu,2017,1035,10.5194/wes-2-587-2017,FALSE,Copernicus Publications,Wind Energy Science,2366-7451,NA,2366-7451,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+uu,2017,1050,10.5194/esd-8-1093-2017,FALSE,Copernicus Publications,Earth System Dynamics,2190-4987,NA,2190-4987,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+uu,2017,1140,10.5194/esd-8-901-2017,FALSE,Copernicus Publications,Earth System Dynamics,2190-4987,NA,2190-4987,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 uu,2017,1755,10.1088/1752-7163/aa7957,TRUE,IOP Publishing,Journal of Breath Research,1752-7163,NA,1752-7163,NA,http://iopscience.iop.org/info/page/text-and-data-mining,TRUE,28612760,NA,NA,NA,FALSE
+uu,2017,180,10.5194/adgeo-44-9-2017,FALSE,Copernicus Publications,Advances in Geosciences,1680-7359,NA,1680-7359,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 uu,2017,1921,10.1088/1402-4896/aa694e,TRUE,IOP Publishing,Physica Scripta,0031-8949,0031-8949,1402-4896,NA,http://iopscience.iop.org/info/page/text-and-data-mining,TRUE,NA,NA,NA,NA,FALSE
 uu,2017,1921,10.1088/1752-7163/aa720b,TRUE,IOP Publishing,Journal of Breath Research,1752-7163,NA,1752-7163,NA,http://iopscience.iop.org/info/page/text-and-data-mining,TRUE,28660856,NA,NA,NA,FALSE
+uu,2017,1980,10.5194/hess-21-3597-2017,FALSE,Copernicus Publications,Hydrology and Earth System Sciences,1607-7938,NA,1607-7938,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+uu,2017,540,10.5194/esd-8-225-2017,FALSE,Copernicus Publications,Earth System Dynamics,2190-4987,NA,2190-4987,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+uu,2017,780,10.5194/esd-8-163-2017,FALSE,Copernicus Publications,Earth System Dynamics,2190-4987,NA,2190-4987,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
 vti,2016,2200,10.1007/s11116-016-9750-2,TRUE,Springer,Transportation,0049-4488,0049-4488,1572-9435,0049-4488,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,NA,NA,FALSE

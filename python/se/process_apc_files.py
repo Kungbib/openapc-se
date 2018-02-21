@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!C:/python27/python
 # -*- coding: utf-8 -*-
 """
 ========================================================================================================================
@@ -9,6 +9,7 @@
     ToDo
     -----
     Fix todos
+    Shebang options for multiple environments (chl).
     Handle duplicate entries by skipping second entry and reporting for submission to data supplier
     Future: Clean up processing logic and introduce error handling - Error reporting module?
     Future: Add APC records to Django SwePub database - separate class/module?
@@ -46,16 +47,22 @@ import argparse
 import codecs
 import locale
 import sys
+import platform
 import urllib2
 import xml.etree.ElementTree as ElementTree
 from subprocess import call
 from openpyxl import load_workbook
+from shutil import copyfile #chl
 import unicodecsv as csv
 import time
 
 # Add path for script environment
 # sys.path.append('/Users/ulfkro/OneDrive/KB-dokument/Open Access/Kostnader/Open APC Sweden/openapc-se')
-sys.path.append('/Users/ulfkro/OneDrive/KB-dokument/Open Access/Kostnader/Open APC Sweden/openapc-se_development')
+if platform.system() == 'Windows':
+    sys.path.append('C:/Users/camlin/system/openapc-se')
+elif platform.system() == 'Darwin':
+    if '/Users/ulfkro/system/swepub' not in sys.path:
+        sys.path.append('/Users/ulfkro/OneDrive/KB-dokument/Open Access/Kostnader/Open APC Sweden/openapc-se_development')
 
 import python.openapc_toolkit as oat
 
@@ -239,7 +246,11 @@ class DataProcessor(object):
 
         # Run the DE process for enrichment as a shell command
         print('\nInfo: Running enrichment process on file {}'.format(str_output_file_name))
-        call(["../apc_csv_processing.py", "-l", "sv_SE.UTF-8", str_output_file_name])
+        if platform.system() == 'Windows':
+            #locale not needed on this windows. "-l", "sv_SE.ISO8859-1" excluded. Call to Cmd need exact paths.
+            call(["C:/Python27/python", "C:/Users/camlin/system/openapc-se/python/apc_csv_processing.py", str_output_file_name])
+        elif platform.system() == 'Darwin':
+            call(["../apc_csv_processing.py", "-l", "sv_SE.UTF-8", str_output_file_name])
 
     # ------------------------------------------------------------------------------------------------------------------
 
@@ -250,8 +261,8 @@ class DataProcessor(object):
         # A list for the cleaned data
         lst_cleaned_data = []
 
-        print '\nInfo: Processing file: {} \n==================================================== \n'.format(
-            str_file_name)
+        #print '\nInfo: Processing file: {} \n==================================================== \n'.format(
+        #    str_file_name)
 
         str_input_file_name = Config.STR_DATA_DIRECTORY + str_file_name
         lst_new_apc_data = self._clean_apc_data(str_input_file_name, args)
@@ -281,8 +292,7 @@ class DataProcessor(object):
         if args.locale:
             norm = locale.normalize(args.locale)
             if norm != args.locale:
-                print "locale '{}' not found, normalized to '{}'".format(
-                    args.locale, norm)
+                print "locale '{}' not found, normalized to '{}'".format(args.locale, norm)
             try:
                 loc = locale.setlocale(locale.LC_ALL, norm)
                 print "Using locale", loc
@@ -832,7 +842,10 @@ class FileManager(object):
 
         str_apc_se_backup = str_apc_se_file.replace(r'_se.csv', r'_se_backup.csv')  # ../../data/apc_se_backup.csv'
         print('\nINFO: Making a backup copy of master file: {}\n'.format(str_apc_se_backup))
-        call(['cp', str_apc_se_file, str_apc_se_backup])
+        if platform.system() == 'Windows':
+            copyfile(str_apc_se_file, str_apc_se_backup)
+        elif platform.system() == 'Darwin':
+            call(['cp', str_apc_se_file, str_apc_se_backup])
 
     # ------------------------------------------------------------------------------------------------------------------
 
@@ -841,7 +854,7 @@ class FileManager(object):
         """ Copy the output from python/se/out.csv to the organisation directory """
 
         print('\nCopying python/se/out.csv to {}'.format(str_enriched_file_name))
-        call(["cp", 'out.csv', str_enriched_file_name])
+        copyfile('out.csv', str_enriched_file_name)
     # ------------------------------------------------------------------------------------------------------------------
 
     # ------------------------------------------------------------------------------------------------------------------

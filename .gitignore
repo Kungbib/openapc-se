@@ -1,11 +1,15 @@
 .cache
 # Exclude generated files
 python/out.csv
+python/se/out.csv
 # Exclude python byte-compiled files
 *.pyc
 # Exclude PYCharm project settings directory
 .idea/
+#Exclude RStudio project settings directory
+openapc-se.Rproj
 # Exclude Python compiled files
 python/__pycache__/
 
 *.ffs_db
+.Rproj.user
