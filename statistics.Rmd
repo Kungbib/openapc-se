@@ -30,9 +30,9 @@ require(ggplot2)
 require(RColorBrewer)
 
 # Create the basic full dataset, combined with organisation names
-my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",")
+my.apc <- read.csv("data/apc_se.csv", header = TRUE, sep =",", encoding = "UTF-8")
 # Combine with acronym-name-map to get full organisation names
-code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t")
+code_name <- read.csv("data/org_acronym_name_map.tsv", header = TRUE, sep ="\t", encoding = "UTF-8")
 # Join datasets on institution and acronym
 my.apc <- merge(x=my.apc, y=code_name, by.x="institution", by.y="acronym")
 # Drop unused factor levels in organisation field before using it for statistics
@@ -66,12 +66,13 @@ Eight Swedish universities have reported APC costs for their articles so far. Th
 * Linköping University
 * Malmö University
 
-Four publishers have also supplied Open APC Sweden with data: 
+A number of publishers have also supplied Open APC Sweden with data: 
 
 * Springer (within the Springer Compact offsetting agreement)
 * Taylor & Francis
 * Karger
 * IOP Publishing
+* Copernicus
 
 This publisher-supplied data leads to publishing costs being reported for a number of Swedish research institutions which not yet have supplied us with data actively.
 

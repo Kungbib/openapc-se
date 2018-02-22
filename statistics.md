@@ -29,6 +29,7 @@ Four publishers have also supplied Open APC Sweden with data:
 -   Taylor & Francis
 -   Karger
 -   IOP Publishing
+-   Copernicus
 
 This publisher-supplied data leads to publishing costs being reported
 for a number of Swedish research institutions which not yet have
@@ -42,9 +43,9 @@ publication of articles in toll-access journals ("hybrid") are provided.
 You may view the dataset at the [project page in
 GitHub](https://github.com/Kungbib/openapc-se/blob/master/data/apc_se.csv).
 
-In total, **4 239 874 €** for **2 427 articles** were paid by the **30
+In total, **4 317 994 €** for **2 501 articles** were paid by the **30
 organisations** that have APC data from so far. The **average APC is 1
-747 €** and the **median is APC 1 912 €**.
+727 €** and the **median is APC 1 875 €**.
 
 <table>
 <thead>
@@ -59,10 +60,10 @@ organisations** that have APC data from so far. The **average APC is 1
 <tbody>
 <tr class="odd">
 <td align="right">30</td>
-<td align="right">2 427</td>
-<td align="right">4 239 874</td>
-<td align="right">1 747</td>
-<td align="right">1 912</td>
+<td align="right">2 501</td>
+<td align="right">4 317 994</td>
+<td align="right">1 727</td>
+<td align="right">1 875</td>
 </tr>
 </tbody>
 </table>
@@ -72,10 +73,10 @@ Open Access Articles (Total: both "gold" and "hybrid" OA)
 
 At the moment, the dataset contains the following information:
 
--   Number of articles: **2 427**
--   Total expenditure: **4 239 874 €**
--   Average fee: **1 747 €**
--   Median fee: **1 912 €**
+-   Number of articles: **2 501**
+-   Total expenditure: **4 317 994 €**
+-   Average fee: **1 727 €**
+-   Median fee: **1 875 €**
 
 Articles and APC costs per institution:
 
@@ -106,9 +107,9 @@ Articles and APC costs per institution:
 </tr>
 <tr class="odd">
 <td>Chalmers University of Technology</td>
-<td align="right">36</td>
-<td align="right">76 065</td>
-<td align="right">2 113</td>
+<td align="right">41</td>
+<td align="right">79 740</td>
+<td align="right">1 945</td>
 <td align="right">2 200</td>
 </tr>
 <tr class="even">
@@ -148,9 +149,9 @@ Articles and APC costs per institution:
 </tr>
 <tr class="odd">
 <td>KTH Royal Institute of Technology</td>
-<td align="right">266</td>
-<td align="right">407 120</td>
-<td align="right">1 531</td>
+<td align="right">272</td>
+<td align="right">409 120</td>
+<td align="right">1 504</td>
 <td align="right">1 744</td>
 </tr>
 <tr class="even">
@@ -162,23 +163,23 @@ Articles and APC costs per institution:
 </tr>
 <tr class="odd">
 <td>Linnaeus University</td>
-<td align="right">10</td>
-<td align="right">22 000</td>
-<td align="right">2 200</td>
+<td align="right">11</td>
+<td align="right">22 630</td>
+<td align="right">2 057</td>
 <td align="right">2 200</td>
 </tr>
 <tr class="even">
 <td>Luleå University of Technology</td>
-<td align="right">44</td>
-<td align="right">78 937</td>
-<td align="right">1 794</td>
+<td align="right">47</td>
+<td align="right">80 857</td>
+<td align="right">1 720</td>
 <td align="right">2 200</td>
 </tr>
 <tr class="odd">
 <td>Lund University</td>
-<td align="right">127</td>
-<td align="right">247 205</td>
-<td align="right">1 946</td>
+<td align="right">145</td>
+<td align="right">272 945</td>
+<td align="right">1 882</td>
 <td align="right">2 200</td>
 </tr>
 <tr class="even">
@@ -225,10 +226,10 @@ Articles and APC costs per institution:
 </tr>
 <tr class="even">
 <td>Stockholm University</td>
-<td align="right">284</td>
-<td align="right">535 165</td>
-<td align="right">1 884</td>
-<td align="right">2 006</td>
+<td align="right">298</td>
+<td align="right">555 445</td>
+<td align="right">1 864</td>
+<td align="right">1 950</td>
 </tr>
 <tr class="odd">
 <td>Swedish Defence Research Agency</td>
@@ -260,9 +261,9 @@ Articles and APC costs per institution:
 </tr>
 <tr class="odd">
 <td>Swedish University of Agricultural Sciences</td>
-<td align="right">699</td>
-<td align="right">1 181 345</td>
-<td align="right">1 690</td>
+<td align="right">706</td>
+<td align="right">1 184 135</td>
+<td align="right">1 677</td>
 <td align="right">1 530</td>
 </tr>
 <tr class="even">
@@ -274,23 +275,23 @@ Articles and APC costs per institution:
 </tr>
 <tr class="odd">
 <td>Umeå University</td>
-<td align="right">66</td>
-<td align="right">117 444</td>
-<td align="right">1 779</td>
+<td align="right">68</td>
+<td align="right">121 944</td>
+<td align="right">1 793</td>
 <td align="right">2 200</td>
 </tr>
 <tr class="even">
 <td>University of Gothenburg</td>
-<td align="right">367</td>
-<td align="right">668 716</td>
-<td align="right">1 822</td>
-<td align="right">1 710</td>
+<td align="right">375</td>
+<td align="right">676 156</td>
+<td align="right">1 803</td>
+<td align="right">1 701</td>
 </tr>
 <tr class="odd">
 <td>Uppsala University</td>
-<td align="right">126</td>
-<td align="right">180 693</td>
-<td align="right">1 434</td>
+<td align="right">136</td>
+<td align="right">189 838</td>
+<td align="right">1 396</td>
 <td align="right">2 132</td>
 </tr>
 <tr class="even">
@@ -309,10 +310,10 @@ Articles in Open Access journals ("gold OA")
 At the moment, the dataset contains the following information on
 articles in open access journals:
 
--   Number of articles: **1 139**
--   Total expenditure: **1 443 013 €**
--   Average fee: **1 267 €**
--   Median fee: **1 342 €**
+-   Number of articles: **1 213**
+-   Total expenditure: **1 521 133 €**
+-   Average fee: **1 254 €**
+-   Median fee: **1 339 €**
 
 Articles and APC costs per institution:
 
@@ -329,10 +330,10 @@ Articles and APC costs per institution:
 <tbody>
 <tr class="odd">
 <td>Chalmers University of Technology</td>
-<td align="right">3</td>
-<td align="right">2 142</td>
-<td align="right">714</td>
-<td align="right">560</td>
+<td align="right">8</td>
+<td align="right">5 817</td>
+<td align="right">727</td>
+<td align="right">768</td>
 </tr>
 <tr class="even">
 <td>Dalarna University College</td>
@@ -350,9 +351,9 @@ Articles and APC costs per institution:
 </tr>
 <tr class="even">
 <td>KTH Royal Institute of Technology</td>
-<td align="right">129</td>
-<td align="right">146 407</td>
-<td align="right">1 135</td>
+<td align="right">135</td>
+<td align="right">148 407</td>
+<td align="right">1 099</td>
 <td align="right">1 021</td>
 </tr>
 <tr class="odd">
@@ -363,59 +364,66 @@ Articles and APC costs per institution:
 <td align="right">1 350</td>
 </tr>
 <tr class="even">
-<td>Luleå University of Technology</td>
-<td align="right">15</td>
-<td align="right">15 352</td>
-<td align="right">1 023</td>
-<td align="right">1 088</td>
+<td>Linnaeus University</td>
+<td align="right">1</td>
+<td align="right">630</td>
+<td align="right">630</td>
+<td align="right">630</td>
 </tr>
 <tr class="odd">
-<td>Lund University</td>
-<td align="right">14</td>
-<td align="right">6 555</td>
-<td align="right">468</td>
-<td align="right">198</td>
+<td>Luleå University of Technology</td>
+<td align="right">18</td>
+<td align="right">17 272</td>
+<td align="right">960</td>
+<td align="right">1 002</td>
 </tr>
 <tr class="even">
+<td>Lund University</td>
+<td align="right">32</td>
+<td align="right">32 295</td>
+<td align="right">1 009</td>
+<td align="right">1 142</td>
+</tr>
+<tr class="odd">
 <td>Malmö University</td>
 <td align="right">23</td>
 <td align="right">25 942</td>
 <td align="right">1 128</td>
 <td align="right">1 394</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Stockholm University</td>
-<td align="right">95</td>
-<td align="right">143 268</td>
-<td align="right">1 508</td>
+<td align="right">109</td>
+<td align="right">163 548</td>
+<td align="right">1 500</td>
 <td align="right">1 399</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Swedish University of Agricultural Sciences</td>
-<td align="right">449</td>
-<td align="right">597 281</td>
-<td align="right">1 330</td>
-<td align="right">1 331</td>
+<td align="right">456</td>
+<td align="right">600 071</td>
+<td align="right">1 316</td>
+<td align="right">1 326</td>
+</tr>
+<tr class="even">
+<td>Umeå University</td>
+<td align="right">15</td>
+<td align="right">10 604</td>
+<td align="right">707</td>
+<td align="right">662</td>
 </tr>
 <tr class="odd">
-<td>Umeå University</td>
-<td align="right">13</td>
-<td align="right">6 104</td>
-<td align="right">470</td>
-<td align="right">575</td>
-</tr>
-<tr class="even">
 <td>University of Gothenburg</td>
-<td align="right">209</td>
-<td align="right">295 543</td>
-<td align="right">1 414</td>
+<td align="right">217</td>
+<td align="right">302 983</td>
+<td align="right">1 396</td>
 <td align="right">1 404</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Uppsala University</td>
-<td align="right">45</td>
-<td align="right">6 467</td>
-<td align="right">144</td>
+<td align="right">55</td>
+<td align="right">15 612</td>
+<td align="right">284</td>
 <td align="right">0</td>
 </tr>
 </tbody>
