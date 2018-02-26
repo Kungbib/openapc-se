@@ -1,0 +1,10 @@
+DOIs not found:
+--------------
+
+10.1016/j.indmarman.2016.12.015
+
+Dessa två verkar använda DOIs som inte stöds av Crossref?
+
+10.29011/2575-7032/100024
+
+10.29011/2575-7032/100025

@@ -22,6 +22,6 @@
 # taylor_and_francis/apc_tf_2014-2016.tsv
 # iop/apc_iop_2017Q3.tsv
 # copernicus/apc_copernicus_2016-2017.tsv
-ltu/apc_ltu_2017_q3-4.xlsx
+# ltu/apc_ltu_2017_q3-4.xlsx
 # hv/apc_hv_2017.tsv
-# liu/apc_liu_2017_jul-dec.tsv
+liu/apc_liu_2017_jul-dec.tsv

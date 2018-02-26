@@ -11,7 +11,7 @@ about the project and instructions on how to contribute.
 Contributing organisations and publishers
 -----------------------------------------
 
-Eight Swedish universities have reported APC costs for their articles so
+Nine Swedish universities have reported APC costs for their articles so
 far. These are:
 
 -   KTH Royal Institute of Technology
@@ -22,6 +22,7 @@ far. These are:
 -   Luleå University of Technology
 -   Linköping University
 -   Malmö University
+-   University College West
 
 A number of publishers have also supplied Open APC Sweden with data:
 
