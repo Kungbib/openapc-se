@@ -156,7 +156,7 @@ def main():
 
     # Process files one at a time
     for str_input_file_name in lst_apc_files:
-
+        print(lst_apc_files)
         # Create various file names
         str_input_file_name, str_output_file_name, str_enriched_file_name = cob_file_manager.create_file_names(
             str_input_file_name)
@@ -1019,7 +1019,7 @@ class PublisherNormaliser(object):
             dct_crossref_result = self.get_crossref_names(str_doi)
             if dct_crossref_result['error']:
                 print('!ERROR: {}'.format(dct_crossref_result['error_reason']))
-                print 'WARNING: No normalisation of name {}'.format(str_publisher_name_in)
+                print 'WARNING: No normalisation of name {} {}'.format(str_publisher_name_in, str_doi)
                 return str_publisher_name_in
             else:
                 str_publisher_name_normalised = self.ask_user(str_publisher_name_in, dct_crossref_result)

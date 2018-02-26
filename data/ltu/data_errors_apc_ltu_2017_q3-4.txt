@@ -1,0 +1,11 @@
+Stavfel i förlags- och tidskriftsnamn:
+---------------------
+ltu	2017	1112	10.1108/JFMPC-05-2016-0018	Emeral Group Publishers -> Emerald
+ltu	2017	2185	10.1021/acs.jpcc.7b04405	The Journal of Physcial Chemistry C -> The Journal of Physical Chemistry C
+ltu	2017	2056	10.1080/17597269.2017.1378988   Taylor and Francis	Biofules -> Biofuels
+ltu	2017	1562	10.2166/wcc.2017.083    IWA Publishing	Journal of Water and Climate -> Journal of Water and Climate Change
+ltu	2017	2320	10.1177/0954406217690180	Sage Publications Ltd	Proceedings of the institution of the mechanical engineers. Part C, journal of mecanical engineering science -> Proceedings of the institution of mechanical engineers. Part C, journal of mechanical engineering science
+
+Fel förlag:
+----------
+ltu	2017	285	10.1016/j.ejbt.2017.10.003	Pontificia Universidad Catolica de Valparaiso -> Elsevier

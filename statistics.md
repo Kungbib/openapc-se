@@ -1,10 +1,10 @@
 Open APC Sweden - Statistics
 ============================
 
-This is an exsample of statistics from the pilot project Open APC
-Sweden, aiming at gathering data about article processing charges
-(APC's) paid by Swedish universities. The statistics covers journal
-articles from a few pilot contributors. Please see the [project
+This is an example of statistics from the pilot project Open APC Sweden,
+aiming at gathering data about article processing charges (APC's) paid
+by Swedish universities. The statistics cover journal articles from a
+few pilot contributors. Please see the [project
 wiki](https://github.com/Kungbib/openapc-se/wiki) for more information
 about the project and instructions on how to contribute.
 
@@ -23,7 +23,7 @@ far. These are:
 -   Linköping University
 -   Malmö University
 
-Four publishers have also supplied Open APC Sweden with data:
+A number of publishers have also supplied Open APC Sweden with data:
 
 -   Springer (within the Springer Compact offsetting agreement)
 -   Taylor & Francis
@@ -43,9 +43,9 @@ publication of articles in toll-access journals ("hybrid") are provided.
 You may view the dataset at the [project page in
 GitHub](https://github.com/Kungbib/openapc-se/blob/master/data/apc_se.csv).
 
-In total, **4 317 994 €** for **2 501 articles** were paid by the **30
+In total, **4 549 020 €** for **2 647 articles** were paid by the **31
 organisations** that have APC data from so far. The **average APC is 1
-727 €** and the **median is APC 1 875 €**.
+719 €** and the **median is APC 1 821 €**.
 
 <table>
 <thead>
@@ -59,11 +59,11 @@ organisations** that have APC data from so far. The **average APC is 1
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">30</td>
-<td align="right">2 501</td>
-<td align="right">4 317 994</td>
-<td align="right">1 727</td>
-<td align="right">1 875</td>
+<td align="right">31</td>
+<td align="right">2 647</td>
+<td align="right">4 549 020</td>
+<td align="right">1 719</td>
+<td align="right">1 821</td>
 </tr>
 </tbody>
 </table>
@@ -73,10 +73,10 @@ Open Access Articles (Total: both "gold" and "hybrid" OA)
 
 At the moment, the dataset contains the following information:
 
--   Number of articles: **2 501**
--   Total expenditure: **4 317 994 €**
--   Average fee: **1 727 €**
--   Median fee: **1 875 €**
+-   Number of articles: **2 647**
+-   Total expenditure: **4 549 020 €**
+-   Average fee: **1 719 €**
+-   Median fee: **1 821 €**
 
 Articles and APC costs per institution:
 
@@ -156,10 +156,10 @@ Articles and APC costs per institution:
 </tr>
 <tr class="even">
 <td>Linköping University</td>
-<td align="right">170</td>
-<td align="right">300 812</td>
-<td align="right">1 769</td>
-<td align="right">1 843</td>
+<td align="right">254</td>
+<td align="right">443 070</td>
+<td align="right">1 744</td>
+<td align="right">1 697</td>
 </tr>
 <tr class="odd">
 <td>Linnaeus University</td>
@@ -170,10 +170,10 @@ Articles and APC costs per institution:
 </tr>
 <tr class="even">
 <td>Luleå University of Technology</td>
-<td align="right">47</td>
-<td align="right">80 857</td>
-<td align="right">1 720</td>
-<td align="right">2 200</td>
+<td align="right">99</td>
+<td align="right">156 363</td>
+<td align="right">1 579</td>
+<td align="right">1 344</td>
 </tr>
 <tr class="odd">
 <td>Lund University</td>
@@ -281,20 +281,27 @@ Articles and APC costs per institution:
 <td align="right">2 200</td>
 </tr>
 <tr class="even">
+<td>University College West</td>
+<td align="right">10</td>
+<td align="right">13 263</td>
+<td align="right">1 326</td>
+<td align="right">1 239</td>
+</tr>
+<tr class="odd">
 <td>University of Gothenburg</td>
 <td align="right">375</td>
 <td align="right">676 156</td>
 <td align="right">1 803</td>
 <td align="right">1 701</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Uppsala University</td>
 <td align="right">136</td>
 <td align="right">189 838</td>
 <td align="right">1 396</td>
 <td align="right">2 132</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Örebro University</td>
 <td align="right">7</td>
 <td align="right">15 400</td>
@@ -310,10 +317,10 @@ Articles in Open Access journals ("gold OA")
 At the moment, the dataset contains the following information on
 articles in open access journals:
 
--   Number of articles: **1 213**
--   Total expenditure: **1 521 133 €**
--   Average fee: **1 254 €**
--   Median fee: **1 339 €**
+-   Number of articles: **1 316**
+-   Total expenditure: **1 663 663 €**
+-   Average fee: **1 264 €**
+-   Median fee: **1 326 €**
 
 Articles and APC costs per institution:
 
@@ -358,10 +365,10 @@ Articles and APC costs per institution:
 </tr>
 <tr class="odd">
 <td>Linköping University</td>
-<td align="right">102</td>
-<td align="right">155 146</td>
-<td align="right">1 521</td>
-<td align="right">1 350</td>
+<td align="right">166</td>
+<td align="right">256 453</td>
+<td align="right">1 545</td>
+<td align="right">1 355</td>
 </tr>
 <tr class="even">
 <td>Linnaeus University</td>
@@ -372,10 +379,10 @@ Articles and APC costs per institution:
 </tr>
 <tr class="odd">
 <td>Luleå University of Technology</td>
-<td align="right">18</td>
-<td align="right">17 272</td>
-<td align="right">960</td>
-<td align="right">1 002</td>
+<td align="right">51</td>
+<td align="right">53 627</td>
+<td align="right">1 052</td>
+<td align="right">1 150</td>
 </tr>
 <tr class="even">
 <td>Lund University</td>
@@ -413,13 +420,20 @@ Articles and APC costs per institution:
 <td align="right">662</td>
 </tr>
 <tr class="odd">
+<td>University College West</td>
+<td align="right">6</td>
+<td align="right">4 868</td>
+<td align="right">811</td>
+<td align="right">729</td>
+</tr>
+<tr class="even">
 <td>University of Gothenburg</td>
 <td align="right">217</td>
 <td align="right">302 983</td>
 <td align="right">1 396</td>
 <td align="right">1 404</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Uppsala University</td>
 <td align="right">55</td>
 <td align="right">15 612</td>
@@ -436,9 +450,9 @@ In many toll-access journals some of the articles are open access after
 a fee has been paid. This model is often called "hybrid open access".
 The dataset covers the following data on hybrid open access articles:
 
--   Number of articles: **1 288**
--   Total expenditure: **2 796 861 €**
--   Average fee: **2 171 €**
+-   Number of articles: **1 331**
+-   Total expenditure: **2 885 357 €**
+-   Average fee: **2 168 €**
 -   Median fee: **2 200 €**
 
 The following institutions have contributed its expenditures for hybrid
@@ -520,9 +534,9 @@ open access.
 </tr>
 <tr class="even">
 <td>Linköping University</td>
-<td align="right">68</td>
-<td align="right">145 666</td>
-<td align="right">2 142</td>
+<td align="right">88</td>
+<td align="right">186 617</td>
+<td align="right">2 121</td>
 <td align="right">2 200</td>
 </tr>
 <tr class="odd">
@@ -534,9 +548,9 @@ open access.
 </tr>
 <tr class="even">
 <td>Luleå University of Technology</td>
-<td align="right">29</td>
-<td align="right">63 585</td>
-<td align="right">2 193</td>
+<td align="right">48</td>
+<td align="right">102 736</td>
+<td align="right">2 140</td>
 <td align="right">2 200</td>
 </tr>
 <tr class="odd">
@@ -645,20 +659,27 @@ open access.
 <td align="right">2 200</td>
 </tr>
 <tr class="even">
+<td>University College West</td>
+<td align="right">4</td>
+<td align="right">8 395</td>
+<td align="right">2 099</td>
+<td align="right">2 022</td>
+</tr>
+<tr class="odd">
 <td>University of Gothenburg</td>
 <td align="right">158</td>
 <td align="right">373 173</td>
 <td align="right">2 362</td>
 <td align="right">2 200</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Uppsala University</td>
 <td align="right">81</td>
 <td align="right">174 226</td>
 <td align="right">2 151</td>
 <td align="right">2 200</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Örebro University</td>
 <td align="right">7</td>
 <td align="right">15 400</td>
@@ -726,5 +747,5 @@ Contact
 For general comments, email Beate Eellend at the National Library of
 Sweden: **beate.eellend \[at\] kb.se**
 
-For technical issues, email Ulf Kronman at the National Library of
-Sweden: **ulf.kronman \[at\] kb.se**
+For technical issues, email Camilla Lindelöw at the National Library of
+Sweden: **camilla.lindelow \[at\] kb.se**

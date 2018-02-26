@@ -51,7 +51,7 @@ my.apc_hybrid <- droplevels(my.apc_hybrid)
 ```
 # Open APC Sweden - Statistics
 
-This is an exsample of statistics from the pilot project Open APC Sweden, aiming at gathering data about article processing charges (APC's) paid by Swedish universities. The statistics covers journal articles from a few pilot contributors. Please see the [project wiki](https://github.com/Kungbib/openapc-se/wiki) for more information about the project and instructions on how to contribute.
+This is an example of statistics from the pilot project Open APC Sweden, aiming at gathering data about article processing charges (APC's) paid by Swedish universities. The statistics cover journal articles from a few pilot contributors. Please see the [project wiki](https://github.com/Kungbib/openapc-se/wiki) for more information about the project and instructions on how to contribute.
 
 ## Contributing organisations and publishers
 
@@ -513,5 +513,5 @@ It recognises efforts from [JISC](https://www.jisc-collections.ac.uk/Jisc-Monito
 
 For general comments, email Beate Eellend at the National Library of Sweden: **beate.eellend [at] kb.se** 
 
-For technical issues, email Ulf Kronman at the National Library of Sweden: **ulf.kronman [at] kb.se** 
+For technical issues, email Camilla Lindelöw at the National Library of Sweden: **camilla.lindelow [at] kb.se** 
 
