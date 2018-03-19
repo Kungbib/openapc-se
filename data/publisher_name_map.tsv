@@ -1,5 +1,6 @@
 spie-intl soc optical eng	Society of Photo-optical Instrumentation Engineers (SPIE)
 csiro publishing	CSIRO Publishing
+elsevier	Elsevier
 pontificia universidad catolica de valparaiso	Elsevier
 baishideng publishing group inc.	Baishideng Publishing Group
 society of photo-optical instrumentation engineers (spie)	Society of Photo-optical Instrumentation Engineers (SPIE)
@@ -10,10 +11,12 @@ springer science + business media	Springer
 ieee	Institute of Electrical & Electronics Engineers (IEEE)
 copernicus	Copernicus Publications
 copernicus gmbh	Copernicus
+american society of animal science	American Society of Animal Science (ASAS)
 ecs - the electrochemical society	The Electrochemical Society (ECS)
 american society of plant biologists	American Society of Plant Biologists
 iop publishing	IOP Publishing
 institute of electrical & electronics engineers (ieee)	Institute of Electrical & Electronics Engineers (IEEE)
+omics international	OMICS International
 royal society of chemistry	Royal Society of Chemistry (RSC)
 redfame	Redfame Publishing
 american society of animal science (asas)	American Society of Animal Science (ASAS)
@@ -28,7 +31,7 @@ portland press ltd.	Portland Press
 resilience allience	Resilience Alliance
 wiley / agu	Wiley
 biomedcentral	BioMed Central
-emerald	Emerald
+john benjamins publishing company	John Benjamins Publishing Company
 inter-research science center	Inter-Research Science Center
 taylor and francis	Taylor & Francis
 cappelen damm akademisk	Taylor & Francis
@@ -43,8 +46,9 @@ world scientific publishing	World Scientific Publishing
 journal of gambling issues	Journal of Gambling Issues
 resilience alliance	Resilience Alliance
 the endocrine society	The Endocrine Society
+international union crystallography	International Union Crystallography
 de gruyter	Walter de Gruyter
-elsevier	Elsevier
+brill	Brill
 public library of science (plos)	Public Library of Science (PLoS)
 american association for the advancement of science (aaas)	American Association for the Advancement of Science (AAAS)
 dove medical press ltd.	Taylor & Francis
@@ -57,7 +61,8 @@ elsevier bv	Elsevier
 proceedings of the national academy of sciences	National Academy of Sciences
 annex publishers	Annex Publishers
 taylor & francis	Taylor & Francis
-bentham open	Bentham Open
+resiliance alliance	Resiliance Alliance
+american society for biochemistry & molecular biology (asbmb)	American Society for Biochemistry & Molecular Biology (ASBMB)
 walter de gruyter	Walter de Gruyter
 portland press	Portland Press
 nature	Nature Publishing Group
@@ -70,7 +75,8 @@ sage publications	SAGE Publications
 impact journals, llc	Impact Journals
 the company of biologists	The Company of Biologists
 emeral group publishers	Emerald
-springeropen	Springer Open
+cold spring harbor laboratory press	Cold Spring Harbor Laboratory Press
+emerald	Emerald
 cell press	Cell Press
 american society of plant biologists (aspb)	American Society of Plant Biologists (ASPB)
 dove medical press	Taylor & Francis
@@ -80,13 +86,14 @@ scientific.net	Trans Tech Publications
 wiley-blackwell	Wiley
 informa uk limited	Taylor & Francis
 impact journals	Impact Journals
+royal society publishing	Royal Society Publishing
 mary ann liebert, inc.	Mary Ann Liebert
 frontiers media sa	Frontiers
 american association of pharmaceutical scientists (aaps)	American Association of Pharmaceutical Scientists (AAPS)
-american society for biochemistry & molecular biology (asbmb)	American Society for Biochemistry & Molecular Biology (ASBMB)
+bentham open	Bentham Open
 public library of science	Public Library of Science (PLoS)
 co-action publishing	Taylor & Francis
-plos	Public Library of Science (PLoS)
+springeropen	Springer Open
 omics publishing group	OMICS Publishing Group
 macmillan publishers ltd	Springer
 american dairy science association	American Dairy Science Association
@@ -94,19 +101,19 @@ hindawi	Hindawi Publishing Corporation
 scandinavian journal of work	Nordic Association of Occupational Safety and Health (NOROSH)
 symbiosis	Symbiosis
 karger	Karger
-american meteorological society	American Meteorological Society
+the royal society	The Royal Society
 company of biologists	Company of Biologists
 norosh	Nordic Association of Occupational Safety and Health (NOROSH)
 bmc	BioMed Central
 scientific research publishing	Scientific Research Publishing
-bmj	BMJ
+national academy of sciences, usa	National Academy of Sciences, USA
 wageningen	Wageningen Academic Publishers
 institute of physics	IOP Publishing
 spie	Society of Photo-optical Instrumentation Engineers (SPIE)
 academicjournals	Academic Journals
 hindawi publishing corporation	Hindawi Publishing Corporation
 springer	Springer
-the royal society	The Royal Society
+american meteorological society	American Meteorological Society
 oxford journals	Oxford University Press (OUP)
 baishideng publishing group	Baishideng Publishing Group
 oxford university press	Oxford University Press (OUP)
@@ -117,21 +124,24 @@ springer nature	Springer
 american society for clinical investigation	American Society for Clinical Investigation
 ovid technologies (wolters kluwer health)	Wolters Kluwer
 academic journals	Academic Journals
+society for sociological science	Society for Sociological Science
+plos	Public Library of Science (PLoS)
 crop science society of america	Crop Science Society of America
 t&f	Taylor & Francis
 optical society of america/osa	Optical Society of America (OSA)
-society for sociological science	Society for Sociological Science
+frontiers media	Frontiers Media
 american society for microbiology	American Society for Microbiology
 jmir publications inc.	JMIR Publications
 ios press	IOS Press
 biomed central	BioMed Central
 american society of civil engineers (asce)	American Society of Civil Engineers (ASCE)
 sciedu press	Sciedu Press
-american society of animal science	American Society of Animal Science (ASAS)
+bmj	BMJ
 mary ann liebert	Mary Ann Liebert
 american physical society	American Physical Society (APS)
 frontiers	Frontiers
 cambridge open	Cambridge University Press (CUP)
+elife sciences publications	eLife Sciences Publications
 oxford university press (oup)	Oxford University Press (OUP)
 aip publishing	AIP Publishing
 bmj publishing group ltd	BMJ
@@ -139,6 +149,7 @@ co-action	Taylor & Francis
 optical society of america (osa)	Optical Society of America (OSA)
 wiley	Wiley
 royal society of chemistry (rsc)	Royal Society of Chemistry (RSC)
+japan society for occupational health	Japan Society for Occupational Health
 pensoft publishers	Pensoft Publishers
 copernicus publications	Copernicus Publications
 dove	Taylor & Francis

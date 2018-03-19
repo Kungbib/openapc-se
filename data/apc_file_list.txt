@@ -17,6 +17,7 @@
 # slu/apc_slu_2014-2017.tsv
 # su/apc_su_2015.tsv
 # su/apc_su_2016.tsv
+su/apc_su_2017.tsv
 # karger/apc_karger_2014-2016.tsv
 # springer/apc_springer_2016_2.xlsx
 # taylor_and_francis/apc_tf_2014-2016.tsv
@@ -25,5 +26,6 @@
 # ltu/apc_ltu_2017_q3-4.xlsx
 # hv/apc_hv_2017.tsv
 # liu/apc_liu_2017_jul-dec.tsv
+# liu/apc_liu_2017_jul-dec_kompl.tsv
 # springer/apc_springer_2017.tsv
-springer/test_2017.tsv
+# springer/test_2017.tsv
