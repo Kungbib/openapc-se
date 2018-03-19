@@ -46,6 +46,9 @@ my.apc_gold <- droplevels(my.apc_gold)
 my.apc_hybrid <- my.apc[my.apc$is_hybrid == TRUE,]
 my.apc_hybrid <- droplevels(my.apc_hybrid)
 
+# Create a Springer Compact subset
+my.apc_sc <- my.apc_hybrid[(my.apc_hybrid$publisher == "Springer" & my.apc_hybrid$euro == 2200), ]
+
 # Convert APC's read as factors to numbers before calculating
 # my.apc$euro <- as.numeric(as.character(my.apc$euro))
 ```
@@ -55,7 +58,7 @@ This is an example of statistics from the pilot project Open APC Sweden, aiming 
 
 ## Contributing organisations and publishers
 
-Eight Swedish universities have reported APC costs for their articles so far. These are: 
+Nine Swedish universities have reported APC costs for their articles so far. These are: 
 
 * KTH Royal Institute of Technology
 * Stockholm University 
@@ -65,6 +68,7 @@ Eight Swedish universities have reported APC costs for their articles so far. Th
 * Luleå University of Technology
 * Linköping University
 * Malmö University
+* University College West
 
 A number of publishers have also supplied Open APC Sweden with data: 
 

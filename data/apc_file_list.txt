@@ -24,4 +24,6 @@
 # copernicus/apc_copernicus_2016-2017.tsv
 # ltu/apc_ltu_2017_q3-4.xlsx
 # hv/apc_hv_2017.tsv
-liu/apc_liu_2017_jul-dec.tsv
+# liu/apc_liu_2017_jul-dec.tsv
+# springer/apc_springer_2017.tsv
+springer/test_2017.tsv
