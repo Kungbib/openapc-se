@@ -811,10 +811,10 @@ def process_row(row, row_num, column_map, num_required_columns,
                         if key == "journal_full_title":
                             unified_value = get_unified_journal_title(value)
                             if unified_value != value:
-                                msg = MESSAGES["unify"].format("journal title",
+                                    msg = MESSAGES["unify"].format("journal title",
                                                                value,
                                                                unified_value)
-                                logging.warning(msg)
+                                    logging.warning(msg)
                             new_value = unified_value
                         elif key == "publisher":
                             unified_value = get_unified_publisher_name(value)
@@ -1078,7 +1078,7 @@ def get_unified_journal_title(journal_full_title):
         "The Journal of Experimental Biology": "Journal of Experimental Biology",
         "The Plant Cell Online": "The Plant Cell",
         "Journal of Agricultural, Biological, and Environmental Statistics": "Journal of Agricultural, Biological and Environmental Statistics",
-        "PalZ": "Paläontologische Zeitschrift",
+        "PalZ": u"Paläontologische Zeitschrift",
         "Lighting Research and Technology": "Lighting Research & Technology",
         "The Journal of Infectious Diseases": "Journal of Infectious Diseases",
         "Planning Practice and Research": "Planning Practice & Research",
