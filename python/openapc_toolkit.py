@@ -484,7 +484,7 @@ def oai_harvest(basic_url, metadata_prefix=None, oai_set=None, processing=None, 
                 articles.append(article.values())
                 counter += 1
             token = root.find(token_xpath, namespaces)
-            if token is not None:
+            if token is not None and token.text is not None:
                 url = basic_url + "?verb=ListRecords&resumptionToken=" + token.text
             print_g(str(counter) + " articles harvested.")
         except urllib2.HTTPError as httpe:
@@ -1018,7 +1018,7 @@ def get_unified_journal_title(journal_full_title):
         "Journal of Lipid Research": "The Journal of Lipid Research",
         "Plastic and Reconstructive Surgery Global Open": "Plastic and Reconstructive Surgery - Global Open",
         "RSC Adv.": "RSC Advances",
-        "Zeitschrift für die neutestamentliche Wissenschaft": "Zeitschrift für die Neutestamentliche Wissenschaft und die Kunde der älteren Kirche",
+        u"Zeitschrift für die neutestamentliche Wissenschaft": u"Zeitschrift für die Neutestamentliche Wissenschaft und die Kunde der älteren Kirche",
         "Chem. Soc. Rev.": "Chemical Society Reviews",
         "Journal of Elections, Public Opinion and Parties": "Journal of Elections, Public Opinion & Parties",
         "Scientific Repor.": "Scientific Reports",
@@ -1114,7 +1114,15 @@ def get_unified_journal_title(journal_full_title):
         "Lab Chip": "Lab on a Chip",
         "Mater. Horiz.": "Materials Horizons",
         "AoB PLANTS": "AoB Plants",
-        "Elem Sci Anth": "Elementa: Science of the Anthropocene"
+        "Elem Sci Anth": "Elementa: Science of the Anthropocene",
+        "Cell Death & Disease": "Cell Death and Disease",
+        "Scandinavian Journal of Work, Environment & Health": "Scandinavian Journal of Work Environment and Health",
+        "The Bone & Joint Journal": "Bone & Joint Journal",
+        "British Journal of Psychiatry": "The British Journal of Psychiatry",
+        "American Journal of Physiology-Heart and Circulatory Physiology": "American Journal of Physiology - Heart and Circulatory Physiology",
+        "American Journal of Physiology-Endocrinology and Metabolism": "AJP: Endocrinology and Metabolism",
+        "Milbank Quarterly": "The Milbank Quarterly",
+        "Faraday Discuss.": "Faraday Discussions"
     }
     return journal_mappings.get(journal_full_title, journal_full_title)
 
