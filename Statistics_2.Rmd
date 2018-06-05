@@ -1,0 +1,551 @@
+---
+output:
+  html_document: default
+  md_document: default
+---
+
+```{r, echo = FALSE, warning = TRUE}
+
+# knitr::opts_knit$set(base.url = '/')
+knitr::opts_chunk$set(
+  comment = '#>',
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  echo = FALSE,
+  fig.width = 9,
+  fig.height = 8
+)
+options(scipen = 999, digits = 0)
+knitr::knit_hooks$set(inline = function(x) {
+  prettyNum(x, big.mark = ' ')
+}
+)
+```
+
+```{r, echo=FALSE, cache = FALSE}
+# ToDo:
+# bold marking of delivering insts in first table
+# Order vectors w univs and publishers alphabetically
+# write datasets to files, for example offset
+# addera år för offset-redovisning
+
+# NB: This code block has to be run fist to create the basic datasets needed by code further down
+# Note the extra libraries needed
+
+library(ggplot2)
+library(RColorBrewer)
+library(tidyverse)
+
+# Create the basic full dataset, combined with organisation names
+apc_se <- read_csv('data/apc_se.csv')
+# Combine with acronym-name-map to get full organisation names
+code_name <- read_tsv('data/org_acronym_name_map.tsv')
+# Join datasets on institution and acronym
+apc_se <- left_join(x = apc_se, y = code_name, by = c('institution' = 'acronym'))
+
+
+# Create subsets 
+# Create a gold OA subset
+apc_se_gold <- filter(apc_se, is_hybrid == FALSE)
+
+# Create a OA hybrid subset
+apc_se_hybrid <- filter(apc_se, is_hybrid == TRUE)
+
+# Create a offset subset
+apc_se_offset <- filter(apc_se, is_hybrid == TRUE & publisher == 'Springer' & euro == 2200 & period>2015)
+
+#Create a non-offset subset
+apc_se_not_offset <- anti_join(apc_se, apc_se_offset)
+
+#Create a non-offset gold subset
+apc_se_gold_not_offset <- filter(apc_se_not_offset, is_hybrid == FALSE)
+
+#Create a non-offset hybrid subset
+apc_se_hybrid_not_offset <- filter(apc_se_not_offset, is_hybrid == TRUE)
+
+
+#Create vectors for orgs & publishers actively delivering data
+deliv_orgs <- c('kth', 'su', 'gu', 'slu', 'du', 'ltu', 'liu', 'mah', 'hv')
+deliv_publishers <- c('Springer', 'Taylor & Francis', 'Karger', 'IOP Publishing', 'Copernicus')
+offset_deals <- c('Springer')
+```
+# Open APC Sweden - Statistics
+
+This is an example of statistics from the pilot project Open APC Sweden, aiming at gathering data about article processing charges (APC's) paid by Swedish universities. The statistics cover journal articles published mainly between 2014 and **`r max(apc_se$period)`** from a few pilot contributors. Please see the [project wiki](https://github.com/Kungbib/openapc-se/wiki) for more information about the project and instructions on how to contribute.
+
+## Contributing organisations and publishers
+
+These Swedish universities have reported APC costs for their articles so far: 
+
+```{r echo=FALSE, cache = FALSE}
+#hämta upp dessa med deliv_orgs
+current_deliv_orgs <- filter(code_name, acronym %in% deliv_orgs)
+knitr::kable(current_deliv_orgs$organisation, col.names = 'Delivering universities')
+```
+
+A number of publishers have also supplied Open APC Sweden with data: 
+
+```{r echo=FALSE, cache = FALSE}
+knitr::kable(deliv_publishers, col.names = 'Publishers')
+```
+
+This publisher-supplied data leads to publishing costs being reported for a number of Swedish research institutions which not yet have supplied us with data actively.
+
+## Dataset
+
+Information on both open access journal articles, open access publication of articles in toll-access journals ('hybrid') and articles published within current Swedish Offset deals are provided. You may view the dataset at the [project page in GitHub](https://github.com/Kungbib/openapc-se/blob/master/data/apc_se.csv).
+
+## Open Access Articles (Total: 'gold', 'hybrid' and 'offset')
+
+At the moment, the dataset contains the following information:
+
+* Number of articles: **`r nrow(apc_se)`** 
+* Total expenditure: **`r format(sum(apc_se$euro), scientific=FALSE)` €** 
+* Average  fee: **`r format(sum(apc_se$euro)/nrow(apc_se), digits = 4)` €** 
+* Median fee: **`r median(apc_se$euro)` €**
+
+Articles and APC costs per institution:
+
+```{r, echo=FALSE, cache = FALSE}
+
+apc_summary <- apc_se %>%
+    group_by(organisation) %>%
+    summarise(Articles= n(),
+           Fees = sum(euro),
+           Mean = mean(euro),
+           Median = median(euro)
+           )
+
+names(apc_summary) <- c('Organisation', 'Articles', 'Fees paid (€)', 'Mean APC (€)', 'Median APC (€)')
+
+knitr::kable(apc_summary, digits = 0, format.args = list(big.mark = ' '))
+
+```
+
+## Articles in Open Access journals ('gold OA')
+
+At the moment, the dataset contains the following information on articles in open access journals:
+
+* Number of articles: **`r nrow(apc_se_gold)`** 
+* Total expenditure:  **`r format(sum(apc_se_gold$euro), scientific=FALSE)` €** 
+* Average fee: **`r format(sum(apc_se_gold$euro)/nrow(apc_se_gold), digits = 4)` €** 
+* Median fee: **`r median(apc_se_gold$euro)` €**
+* Share of articles with no fees: **`r format(100 * sum(apc_se_gold$euro == 0)/nrow(apc_se_gold), digits = 2)` %**
+
+Articles and APC costs per institution:
+
+```{r, echo=FALSE, results='asis', message = FALSE}
+
+apc_summary_gold_not_offset <- apc_se_gold_not_offset %>%
+    group_by(organisation) %>%
+    summarise(Articles= n(),
+           Fees = sum(euro),
+           Mean = mean(euro),
+           Median = median(euro),
+           Share_no_fees = 100*mean(euro == 0)
+    )
+
+names(apc_summary_gold_not_offset) <- c('Organisation', 'Articles', 'Fees paid (€)', 'Mean APC (€)',
+                                        'Median APC (€)', 'Share of articles w/o fee (%)')
+
+knitr::kable(apc_summary_gold_not_offset, digits = 0, format.args = list(big.mark = ' '))
+```
+
+## OA articles in toll-access journals ('hybrid OA'), Offset articles excluded
+
+In many toll-access journals some of the articles are open access after a fee has been paid. This model is often called 'hybrid open access'.
+The dataset covers the following data on hybrid open access articles:
+
+* Number of articles: **`r nrow(apc_se_hybrid_not_offset)`** 
+* Total expenditure: **`r format(sum(apc_se_hybrid_not_offset$euro), scientific=FALSE)` €**
+* Average  fee: **`r format(mean(apc_se_hybrid_not_offset$euro), digits = 4)` €** 
+* Median fee: **`r median(apc_se_hybrid_not_offset$euro)` €**
+* Share of articles with no fees: **`r format(100 * sum(apc_se_hybrid_not_offset$euro == 0)/nrow(apc_se_hybrid_not_offset), digits = 2)` %**
+
+The following institutions have contributed its expenditures for hybrid open access.
+
+```{r, echo=FALSE, cache = FALSE}
+
+apc_summary_hybrid_not_offset <- apc_se_hybrid_not_offset %>%
+    group_by(organisation) %>%
+    summarise(Articles= n(),
+           Fees = sum(euro),
+           Mean = mean(euro),
+           Median = median(euro),
+           Share_no_fees = 100*mean(euro == 0)
+           )
+
+names(apc_summary_hybrid_not_offset) <- c('Organisation', 'Articles', 'Fees paid (€)', 'Mean APC (€)',
+                                          'Median APC (€)', 'Share of articles w/o fee (%)')
+
+knitr::kable(apc_summary_hybrid_not_offset, digits = 0, format.args = list(big.mark = ' '))
+
+```
+
+## OA articles in offset deals
+
+In offset deals a total number of articles is agreed upon, together with a license fee.
+The dataset covers the following data on offset deal articles:
+
+* Publishers with current offset deals: **`r offset_deals`**
+* Number of articles: **`r nrow(apc_se_offset)`**
+
+The following institutions have contributed to offset deals.
+
+```{r, echo=FALSE, cache = FALSE}
+
+apc_summary_se_offset <- apc_se_offset %>%
+    group_by(organisation) %>%
+    summarise(Articles= n()
+           )
+
+names(apc_summary_se_offset) <- c('Organisation', 'Articles')
+
+knitr::kable(apc_summary_se_offset, digits = 0, format.args = list(big.mark = ' '))
+
+```
+
+The following diagram shows the most used journals within the offset deal.
+
+```{r, echo=FALSE, cache = FALSE}
+#find top10 journals
+top10publ <- apc_se_offset %>%
+    count(journal_full_title) %>%
+    top_n(10)
+
+selection_jrnls <- top10publ$journal_full_title
+
+ordered_jrnls <-  apc_se_offset %>%
+    filter(journal_full_title %in% selection_jrnls) %>%
+    group_by(journal_full_title, organisation) %>%
+    summarise(nr_art = n())
+
+most_arts <- ordered_jrnls %>% 
+    group_by(journal_full_title) %>%
+    top_n(1, nr_art)
+
+q <- ggplot(data = ordered_jrnls, aes(x = reorder(journal_full_title, nr_art, sum), y = nr_art)) +
+    geom_bar(aes(fill = organisation), stat = 'identity') +
+    #geom_label(aes(label = organisation), data = most_arts, alpha = 0.5, label.size = 0.25, nudge_y = 10) +
+    labs(x = '', y = 'nr of articles') + 
+    coord_flip() + 
+    #scale_fill_brewer(palette = 'Paired') +
+    theme_bw() +
+    theme(
+      legend.text = element_text(size = 8, colour = 'black'), 
+      legend.position = 'bottom',
+      legend.title = element_blank()
+    ) +
+    guides(fill=guide_legend(ncol=2))
+
+ggsave(q, file = 'figure/offset_jrnls.png', width=18, height=18, units='cm')
+```
+
+![](figure/offset_jrnls.png)
+
+## Distribution over publishers (offset deals excluded)
+
+### Both gold and hybrid articles (offset deals excluded)
+
+```{r, echo=FALSE, message = FALSE, warning= FALSE}
+
+# Choose the 19 most used publishers, and the 20th row makes up the others
+apc_summary_publishers <- apc_se_not_offset %>%
+    group_by(publisher) %>%
+    summarise(Fees = sum(euro),
+              share_hybrid = sum(is_hybrid == TRUE)/n()) %>%
+    arrange(desc(Fees)) %>%
+    mutate(publisher = ifelse(row_number() <= 19, publisher, 'Other publishers')) %>%
+    group_by(publisher) %>%
+    summarise(Fees = sum(Fees),
+              share_hybrid = mean(share_hybrid),
+              sum_hybrid = share_hybrid*Fees) %>%
+    arrange(desc(Fees)) %>%
+    mutate(hybrid = share_hybrid*Fees,
+           gold = (1-share_hybrid)*Fees)
+
+#Prepare for labels gold and hybrid
+apc_summary_publishers_table <- apc_summary_publishers %>%
+    gather('hybrid', 'gold', key = 'OA_type', value = 'SumFees') %>%
+    arrange(desc(Fees))
+
+p <- ggplot(data = apc_summary_publishers_table) +
+    geom_bar(mapping = aes(x = reorder(publisher, Fees), y = SumFees, fill = OA_type), stat = 'identity') +
+    labs(y = 'Fees paid (€)', x = '') +
+    scale_y_continuous(breaks = c(0, 2000000, 4000000),
+                       label = c('0', '2000K', '4000K')) +
+    # scale_fill_manual(values = colorRampPalette(brewer.pal(9, 'Set1'))(colour_count)) +
+    scale_fill_manual(values = c('#c7c700', '#808080')) +
+    coord_flip() +
+    theme_bw() + 
+    theme(
+      legend.text = element_text(size = 8, colour = 'black'), 
+      legend.position='bottom', 
+      legend.title = element_blank()
+    ) +
+    guides(fill=guide_legend(ncol=2))
+
+ggsave(p, file = 'figure/apc_publishers.png', width=18,height=18,units='cm')
+
+```
+![](figure/apc_publishers.png)
+
+
+### OA journal articles (offset deals excluded)
+
+```{r, echo=FALSE, message = FALSE, warning= FALSE}
+
+apc_gold_ranks <- apc_se_gold_not_offset %>%
+    filter(institution %in% deliv_orgs) %>%
+    group_by(publisher) %>%
+    summarise(Sum_fee = sum(euro)) %>%
+    arrange(desc(Sum_fee)) %>%
+    mutate(publisher_label = ifelse(row_number() <= 10, publisher, 'Other publishers'))
+
+apc_gold_table <- left_join(apc_se_gold, apc_gold_ranks, by = 'publisher')
+
+apc_gold_diagram <- apc_gold_table %>%
+    filter(institution %in% deliv_orgs) %>%
+    filter(publisher_label != 'Other publishers') %>%
+    group_by(publisher_label, organisation) %>%
+    summarise(Sum_fee = sum(euro))
+
+## Plot by publisher
+p <- ggplot(data = apc_gold_diagram) +
+    geom_bar(mapping = aes(x = reorder(publisher_label, Sum_fee, sum), y = Sum_fee, fill = organisation),
+             #colour = 'black',
+             stat = 'identity') +
+    labs(y = 'Fees paid (€)', x = NULL) +
+    scale_y_continuous(labels=function(x) format(x, big.mark = ' ', scientific = FALSE)) +
+    coord_flip() +
+    scale_fill_brewer(palette = 'Paired') +
+    theme_bw() + 
+    theme(
+      legend.text = element_text(size = 7, colour = 'black'), 
+      legend.position='bottom', 
+      legend.title = element_blank() #'Paying organisation'
+    ) +
+    guides(fill=guide_legend(ncol=4))
+
+
+ggsave(p, file = 'figure/apc_publishers_gold_oa.png', width=18,height=20,units='cm')
+```
+
+The ten largest publishers of OA journals in terms of total APCs paid by delivering organisations (a subset of the whole dataset).
+
+![](figure/apc_publishers_gold_oa.png)
+
+### Hybrid OA articles in toll access journals (offset deals excluded)
+
+```{r, echo=FALSE, message = FALSE, warning= FALSE}
+
+apc_hybrid_ranks <- apc_se_hybrid_not_offset %>%
+    filter(institution %in% deliv_orgs) %>%
+    group_by(publisher) %>%
+    summarise(Sum_fee = sum(euro)) %>%
+    arrange(desc(Sum_fee)) %>%
+    mutate(publisher_label = ifelse(row_number() <= 10, publisher, 'Other publishers'))
+
+apc_hybrid_table <- left_join(apc_se_hybrid_not_offset, apc_hybrid_ranks, by = 'publisher')
+
+apc_hybrid_diagram <- apc_hybrid_table %>%
+    filter(institution %in% deliv_orgs) %>%
+    filter(publisher_label != 'Other publishers') %>%
+    group_by(publisher_label, organisation) %>%
+    summarise(Sum_fee = sum(euro))
+
+## Plot by publisher
+p <- ggplot(data = apc_hybrid_diagram) +
+    geom_bar(mapping = aes(x = reorder(publisher_label, Sum_fee, sum), y = Sum_fee, fill = organisation),
+             #colour = 'black',
+             stat = 'identity') +
+    labs(y = 'Fees paid (€)', x = NULL) +
+    scale_y_continuous(labels=function(x) format(x, big.mark = ' ', scientific = FALSE)) +
+    coord_flip() +
+    scale_fill_brewer(palette = 'Paired') +
+    theme_bw() + 
+    theme(
+      legend.text = element_text(size = 7, colour = 'black'), 
+      legend.position='bottom', 
+      legend.title = element_blank() #'Paying organisation'
+    ) +
+    guides(fill=guide_legend(ncol=4))
+
+
+ggsave(p, file = 'figure/apc_publishers_hybrid_oa.png', width=18,height=20,units='cm')
+
+
+```
+
+APC fees paid per publisher with indication of contribution from each university.
+
+![](figure/apc_publishers_hybrid_oa.png)
+
+## Fees and average APC paid per organisation (only delivering universities, offset deals excluded)
+
+```{r, echo = FALSE}
+
+q <- ggplot(data = filter(apc_se_not_offset, institution %in% deliv_orgs), aes(organisation, euro)) + 
+    geom_boxplot() + 
+    geom_point(alpha = 8/10, size = 2, aes(colour = is_hybrid)) + 
+    scale_colour_manual(values = c('#F7A600', '#808080'), labels = c('Gold OA', 'Hybrid OA')) +
+    labs(x = '', y = 'APC (€)') + 
+    coord_flip() + 
+    theme_bw() +
+    theme(
+        axis.text = element_text(size=12),
+        axis.title = element_text(size=14,face="bold"),
+        legend.text = element_text(size = 12, colour = 'black'), 
+        legend.position = 'bottom',
+        legend.title = element_blank()
+    )
+
+ggsave(q, file = 'figure/apc_per_organisation.png', width=18, height=20, units='cm')
+```
+
+![](figure/apc_per_organisation.png)
+
+## Fees and average APC for the top-10 most frequent publishers (offset deals excluded)
+
+```{r, echo=FALSE}
+
+#find top10 publishers
+top10publ <- apc_se_not_offset %>%
+    count(publisher) %>%
+    top_n(10)
+
+selection_publ <- top10publ$publisher
+
+q <- ggplot(data = filter(apc_se_not_offset, publisher %in% selection_publ),
+       aes(publisher, euro)) + 
+    geom_boxplot() + 
+    geom_point(alpha = 8/10, size = 2, aes(colour = is_hybrid)) + 
+    scale_colour_manual(values = c('#F7A600', '#808080'), labels = c('Gold OA', 'Hybrid OA')) +
+    labs(x = '', y = 'APC (€)') + 
+    coord_flip() + 
+    theme_bw() +
+    theme(
+        axis.text = element_text(size=12),
+        axis.title = element_text(size=14,face="bold"),
+        legend.text = element_text(size = 12, colour = 'black'), 
+        legend.position = 'bottom',
+        legend.title = element_blank()
+    )
+
+ggsave(q, file = 'figure/publisher_apcs.png', width=18, height=18, units='cm')
+
+```
+
+![](figure/publisher_apcs.png)
+
+## Average and distribution of APC's by year (offset deals excluded)
+
+```{r, echo=FALSE}
+
+q <- ggplot(data = filter(apc_se_not_offset, period>2013),
+       aes(factor(period), euro, colour = is_hybrid)) + 
+    geom_boxplot() + 
+    geom_point(alpha = 2/10, size = 2) + 
+    scale_colour_manual(values = c('#F7A600', '#808080'), labels = c('Gold OA', 'Hybrid OA')) +
+    labs(x = 'Year', y = 'APC (€)') + 
+    theme_bw() +
+    theme(
+        axis.text = element_text(size=12),
+        axis.title = element_text(size=14,face="bold"),
+        legend.text = element_text(size = 12, colour = 'black'), 
+        legend.position = 'bottom',
+        legend.title = element_blank()
+        )
+
+ggsave(q, file = 'figure/apc_avg_per_year.png', width=18, height=18, units='cm')
+
+```
+
+![](figure/apc_avg_per_year.png)
+
+## Average APC trend by year (offset deals excluded)
+
+```{r, echo=FALSE}
+
+library(ggplot2)
+library(ggthemes)
+
+
+average_apc_trend <- apc_se_not_offset %>%
+    select(period, euro, is_hybrid) %>%
+    filter(period>2013) %>%
+    group_by(period, is_hybrid) %>%
+    summarise(yearly_mean = mean(euro),
+              n_art = n())
+
+# Common settings for ggplot
+q <- ggplot(
+    data = average_apc_trend,     
+    aes(y = yearly_mean, x = period, colour = is_hybrid, label = round(yearly_mean))
+        ) +
+    geom_line(
+        stat = 'identity',
+        size = 1
+        ) +
+    geom_point(
+        size = 2, 
+        shape = 21, 
+        fill = 'white'
+        ) +
+    geom_text(
+        colour = 'gray', 
+        hjust = 0, 
+        vjust = 2,
+        size = 3
+        ) +
+    scale_colour_manual(
+        values=c('#c7c700', '#808080'), labels = c('Gold OA', 'Hybrid OA')
+        ) +
+    ggtitle('Yearly trend for average APC (€)') +
+    labs(x = 'Year', y = '€') + 
+    scale_y_continuous(
+        limits=c(0, 2500), 
+        labels=function(x) format(x, big.mark = ' ', scientific = FALSE)
+    ) +
+    scale_x_continuous(
+        breaks=seq(2014,2016,1)
+    ) +
+    theme_bw() +  # theme_economist()
+    theme(
+        legend.position='bottom', 
+        legend.direction='horizontal', 
+        legend.title = element_blank(),
+        legend.text = element_text(size = 10, colour = 'black'), 
+        legend.key = element_rect(fill='white', colour='white')
+    ) +
+    theme(
+        axis.line = element_line(size=1, colour = 'black'),
+        panel.grid.major = element_line(colour = '#d3d3d3'), 
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(), 
+        panel.background = element_blank(),
+        #plot.title = element_text(size = 14, family = 'Tahoma'), # , face = 'bold'
+        #text = element_text(family='Tahoma'),
+        axis.text.x = element_text(colour='black', size = 10),
+        axis.text.y = element_text(colour='black', size = 10)
+        )
+
+# Plot the result
+ggsave(q, file = 'figure/apc_avg_trend.png', width=20, height=18, units='cm')
+
+```
+![](figure/apc_avg_trend.png)
+
+## Acknowledgement
+
+This project follows the [Open APC Initiative](https://github.com/OpenAPC/openapc-de) to share data on paid APCs. 
+It recognises efforts from [JISC](https://www.jisc-collections.ac.uk/Jisc-Monitor/APC-data-collection/) and [FWF](https://figshare.com/articles/Austrian_Science_Fund_FWF_Publication_Cost_Data_2014/1378610) to standardise APC reporting.    
+
+
+## Contact
+
+For general comments, email Beate Eellend at the National Library of Sweden: **beate.eellend [at] kb.se** 
+
+For technical issues, email Camilla Lindelöw at the National Library of Sweden: **camilla.lindelow [at] kb.se** 
+
