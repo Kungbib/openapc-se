@@ -39,4 +39,4 @@ See [guidelines for contribution of data](https://github.com/Kungbib/openapc-se/
 For general comments, email Beate Eellend at the National Library of Sweden: **beate.eellend [at] kb.se**  
 For technical comments, contact Camilla Lindelöw at the National Library of Sweden: **camilla.lindelow [at] kb.se**
 
-[Page updated 2017-07-07] 
+[Page updated 2018-06-08] 
