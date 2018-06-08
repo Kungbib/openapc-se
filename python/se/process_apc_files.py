@@ -1,5 +1,8 @@
-#!C:/python27/python
+#!/usr/bin/env python
+# 	
+## #!C:/python27/python #windows
 # -*- coding: utf-8 -*-
+
 """
 ========================================================================================================================
     Script to prepare and process Swedish APC data files
@@ -19,7 +22,7 @@
     -----
     2017-09-08 Read DOIs and data from final master to avoid processing of already processed entries
     2017-09-07 Handle this DOI error with invisble blanks:
-            slu	2015	2064.46	10.​1105/​tpc.​114.​134494	SANT	American Society of Plant Biologists
+            slu	2015	2064.46	10. 1105/ tpc. 114. 134494	SANT	American Society of Plant Biologists
     2017-09-06 Add DOI correction subroutine for the following:
             0.1186/s12864-015-1829-1 ----> 10.1186/s12864-015-1829-1
     2017-08-04 Exclude duplicate DOI checking on empty field = 'NA'
@@ -61,8 +64,11 @@ import time
 if platform.system() == 'Windows':
     sys.path.append('C:/Users/camlin/system/openapc-se')
 elif platform.system() == 'Darwin':
-    if '/Users/ulfkro/system/swepub' not in sys.path:
-        sys.path.append('/Users/ulfkro/OneDrive/KB-dokument/Open Access/Kostnader/Open APC Sweden/openapc-se_development')
+    sys.path.append('/Users/camlin/openapc-se')
+        
+    # if '/Users/ulfkro/system/swepub' not in sys.path:
+      # sys.path.append('/Users/camlin/openapc-se') not in sys.path:
+        #  sys.path.append('/Users/ulfkro/OneDrive/KB-dokument/Open Access/Kostnader/Open APC Sweden/openapc-se_development')
 
 import python.openapc_toolkit as oat
 
