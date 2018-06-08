@@ -1,7 +1,7 @@
 # File list for progam python/se/process_apc_files.py
 # Ulf Kronman 2017-08-03
 # Comments can be placed after # - use it to exclude files temporarily
-
+# No empty rows in this file
 # test
 # du/apc_du_2014-2016.tsv
 # gu/apc_gu_2016.tsv
@@ -16,7 +16,8 @@
 # ltu/apc_ltu_2017.tsv
 # mah/apc_mah_2015.csv
 # mah/apc_mah_2016.tsv
-oru/apc_oru_2015_2017.tsv
+# oru/original_data/apc_oru_2015_2017_dois.tsv
+oru/original_data/apc_oru_2015_2017_non_dois.tsv
 # slu/apc_slu_2014-2016.tsv
 # slu/apc_slu_2014-2017.tsv
 # su/apc_su_2015.tsv
