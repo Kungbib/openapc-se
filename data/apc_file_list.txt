@@ -1,11 +1,12 @@
 # File list for progam python/se/process_apc_files.py
 # Ulf Kronman 2017-08-03
 # Comments can be placed after # - use it to exclude files temporarily
+test
 # du/apc_du_2014-2016.tsv
 # gu/apc_gu_2016.tsv
 # gu/apc_gu_2014-2017.tsv
 # gu/apc_gu_2016-2017.tsv
-gu/original_data/apc_gu_2017_180417.tsv
+# gu/original_data/apc_gu_2017_180417.tsv
 # kth/apc_kth_2015.tsv
 # kth/apc_kth_2016.tsv
 # kth/apc_kth_2016_correction.tsv

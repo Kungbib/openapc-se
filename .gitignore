@@ -1,4 +1,6 @@
 .cache
+.DS_Store
+data/.DS_Store
 # Exclude generated files
 python/out.csv
 python/se/out.csv

@@ -5,9 +5,16 @@
 library(tidyverse)
 library(readxl)
 
-springer_2017 <- read_xlsx("data/springer/apc_springer_2017.xlsx", sheet = "Approved YTD 2017", skip = 4)
+springer_2016 <- read_xlsx("data/springer/original_data/apc_springer_2016_2.xlsx")
+springer_2017 <- read_xlsx("data/springer/original_data/apc_springer_2017.xlsx", sheet = "Approved YTD 2017", skip = 4)
 #se till att inte filen är öppen i excel, ger fel "Evaluation error: zip file x cannot be opened.
 
+springer_doi_list_2017 <- springer_2017$DOI
+springer_doi_list_2016 <- springer_2016$doi
+springer_doi_list <- tibble(append(springer_doi_list_2016, springer_doi_list_2017))
+names(springer_doi_list) <- c("doi")
+write_tsv(springer_doi_list, "data/springer/springer_doi_list.tsv")  
+  
 adjusted_springer_2017 <- springer_2017 %>%
     select(Institution, DOI) %>%
     rename(institution = Institution, doi = DOI) %>%
