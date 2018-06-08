@@ -53,10 +53,12 @@ apc_se_gold <- filter(apc_se, is_hybrid == FALSE)
 apc_se_hybrid <- filter(apc_se, is_hybrid == TRUE)
 
 # Create a offset subset
-apc_se_offset <- filter(apc_se, is_hybrid == TRUE & publisher == 'Springer' & euro == 2200 & period>2015)
+apc_se_offset <- read_tsv('data/springer_data.tsv')
+apc_se_offset <- left_join(x = apc_se_offset, y = code_name, by = c('institution' = 'acronym'))
 
 #Create a non-offset subset
-apc_se_not_offset <- anti_join(apc_se, apc_se_offset)
+apc_se_not_offset <- read_tsv('data/apc_se_without_springer.tsv')
+apc_se_not_offset <- left_join(x = apc_se_not_offset, y = code_name, by = c('institution' = 'acronym'))
 
 #Create a non-offset gold subset
 apc_se_gold_not_offset <- filter(apc_se_not_offset, is_hybrid == FALSE)
@@ -66,7 +68,7 @@ apc_se_hybrid_not_offset <- filter(apc_se_not_offset, is_hybrid == TRUE)
 
 
 #Create vectors for orgs & publishers actively delivering data
-deliv_orgs <- c('kth', 'su', 'gu', 'slu', 'du', 'ltu', 'liu', 'mah', 'hv')
+deliv_orgs <- c('kth', 'su', 'gu', 'slu', 'du', 'ltu', 'liu', 'mah', 'hv', 'oru')
 deliv_publishers <- c('Springer', 'Taylor & Francis', 'Karger', 'IOP Publishing', 'Copernicus')
 offset_deals <- c('Springer')
 ```
@@ -352,12 +354,12 @@ apc_hybrid_table <- left_join(apc_se_hybrid_not_offset, apc_hybrid_ranks, by = '
 apc_hybrid_diagram <- apc_hybrid_table %>%
     filter(institution %in% deliv_orgs) %>%
     filter(publisher_label != 'Other publishers') %>%
-    group_by(publisher_label, organisation) %>%
+    group_by(publisher_label, institution) %>%
     summarise(Sum_fee = sum(euro))
 
 ## Plot by publisher
 p <- ggplot(data = apc_hybrid_diagram) +
-    geom_bar(mapping = aes(x = reorder(publisher_label, Sum_fee, sum), y = Sum_fee, fill = organisation),
+    geom_bar(mapping = aes(x = reorder(publisher_label, Sum_fee, sum), y = Sum_fee, fill = institution),
              #colour = 'black',
              stat = 'identity') +
     labs(y = 'Fees paid (€)', x = NULL) +
