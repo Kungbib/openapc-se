@@ -3,6 +3,7 @@
 # Comments can be placed after # - use it to exclude files temporarily
 # No empty rows in this file
 # test
+# med_doi.csv
 # du/apc_du_2014-2016.tsv
 # gu/apc_gu_2016.tsv
 # gu/apc_gu_2014-2017.tsv
@@ -12,12 +13,13 @@
 # kth/apc_kth_2016.tsv
 # kth/apc_kth_2016_correction.tsv
 # kth/apc_kth_2016_2.tsv
-kth/original_data/apc_kth_2017_dois.tsv
+# kth/original_data/apc_kth_2017_dois.tsv
 # liu/apc_liu_2017_jan-jun.tsv
 # ltu/apc_ltu_2017.tsv
 # mah/apc_mah_2015.csv
 # mah/apc_mah_2016.tsv
 # oru/original_data/apc_oru_2015_2017_dois.tsv
+oru/apc_oru_2015_2017_20180614_dois.tsv
 # oru/original_data/apc_oru_2015_2017_non_dois.tsv
 # slu/apc_slu_2014-2016.tsv
 # slu/apc_slu_2014-2017.tsv
