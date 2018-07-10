@@ -81,11 +81,11 @@ class Config(object):
     INT_REPORT_WAIT = 10
 
     # Where do we find and put the data
-    STR_DATA_DIRECTORY = '../../data/'
+    STR_DATA_DIRECTORY = '../../data/' 
 
     STR_APC_FILE_LIST = STR_DATA_DIRECTORY + 'apc_file_list.txt'
 
-    STR_APC_SE_FILE = '../../data/apc_se.csv'
+    STR_APC_SE_FILE = '../../data/apc_se.csv' 
 
     ARG_HELP_STRINGS = {
         "encoding": "The encoding of the CSV file. Setting this argument will " +
