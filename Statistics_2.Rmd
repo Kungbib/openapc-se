@@ -1,7 +1,7 @@
 ---
 output:
-  html_document: default
-  md_document: default
+    md_document: default
+    html_document: default
 ---
 
 ```{r, echo = FALSE, warning = TRUE}
