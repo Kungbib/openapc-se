@@ -388,7 +388,7 @@ APC fees paid per publisher with indication of contribution from each university
 
 ### Status for delivering organisations
 Delivery status for participating organisations by year.
-```{r status deliv orgs}
+```{r, status deliv orgs}
 
 delivery <- apc_se_not_offset %>%
     filter(institution %in% deliv_orgs) %>%
