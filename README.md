@@ -19,6 +19,8 @@ Please see the [project wiki](https://github.com/Kungbib/openapc-se/wiki) for mo
 ## Acknowledgement  
 This project follows the [Open APC Initiative](https://github.com/OpenAPC/openapc-de) to share data on paid APCs. It recognises efforts from [JISC](https://www.jisc-collections.ac.uk/Jisc-Monitor/APC-data-collection/) and [FWF](https://figshare.com/articles/Austrian_Science_Fund_FWF_Publication_Cost_Data_2014/1378610) to standardise APC reporting.    
 
+Swedish Open APC data is collected by the Open APC Initiative, and the current status in Europe is available at the [INTACT project](https://treemaps.intact-project.org/). Please note that due to data cleaning differences, the results may differ between Open APC Sweden and the Opena APC Initiative.
+
 ## Pilot contributors 
 
 1. KTH Royal Institute of Techonology (kth)
@@ -39,4 +41,4 @@ See [guidelines for contribution of data](https://github.com/Kungbib/openapc-se/
 For general comments, email Beate Eellend at the National Library of Sweden: **beate.eellend [at] kb.se**  
 For technical comments, contact Camilla Lindelöw at the National Library of Sweden: **camilla.lindelow [at] kb.se**
 
-[Page updated 2018-06-08] 
+[Page updated 2018-08-31] 
