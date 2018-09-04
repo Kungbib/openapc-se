@@ -331,11 +331,12 @@ p <- ggplot(data = apc_gold_diagram) +
 
 
 ggsave(p, file = "figure/apcs_2017_deliv_orgs_gold_oa.png", width = 20, height = 20, units = "cm")
+
 ```
 
 The ten largest publishers of OA journals in terms of paid APCs 2017 per delivering organisation (a subset of the whole dataset).
 
-![](figure/apc_publishers_gold_oa.png)
+![](figure/apcs_2017_deliv_orgs_gold_oa.png)
 
 ### Hybrid OA articles in toll access journals per delivering organisation 2017 (offset deals excluded)
 
@@ -382,10 +383,7 @@ ggsave(p, file = "figure/apcs_2017_deliv_orgs_hybrid_oa.png", width = 20, height
 
 APC fees paid per publisher with indication of contribution from each university.
 
-![](figure/apc_publishers_hybrid_oa.png)
-
-## Fees and average APC paid per organisation (only delivering universities, offset deals excluded)
-
+![](figure/apcs_2017_deliv_orgs_hybrid_oa.png)
 ### Status for delivering organisations
 Delivery status for participating organisations by year.
 ```{r, status deliv orgs}
@@ -407,9 +405,13 @@ p <- ggplot(delivery) +
         ) +
         guides(fill = guide_legend(ncol = 4))
 
-ggsave(p, file = "figure/delivery_status.png", width = 20, height = 20, units = "cm")    
+ggsave(p, file = "figure/delivery_status.png", width = 20, height = 20, units = "cm")
+
 ```
 
+![](figure/delivery_status.png)
+
+## Fees and average APC paid per organisation (only delivering universities, offset deals excluded)
 
 ```{r, fees and average apc}
 
@@ -418,20 +420,21 @@ p <- ggplot(data = filter(apc_se_not_offset, institution %in% deliv_orgs), aes(o
     geom_point(alpha = 8/10, size = 2, aes(colour = is_hybrid)) + 
     scale_colour_manual(values = c("#F7A600", "#808080"), labels = c("Gold OA", "Hybrid OA")) +
     labs(x = "", y = "APC (€)") + 
-    coord_flip() + 
+    coord_flip() +
     theme_bw() +
     theme(
         axis.text = element_text(size = 12),
         axis.title = element_text(size = 14,face = "bold"),
-        legend.text = element_text(size = 12, colour = "black"), 
+        legend.text = element_text(size = 12, colour = "black"),
         legend.position = "bottom",
         legend.title = element_blank()
-    )
+        )
 
 ggsave(p, file = "figure/apc_per_deliv_orgs.png", width = 20, height = 20, units = "cm")
+
 ```
 
-![](figure/apc_per_organisation.png)
+![](figure/apc_per_deliv_orgs.png)
 
 ## Fees and average APC for the top-10 most frequent publishers (offset deals excluded)
 

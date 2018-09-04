@@ -2031,23 +2031,23 @@ Note that the offset deals are not included here.
 The ten largest publishers of OA journals in terms of paid APCs 2017 per
 delivering organisation (a subset of the whole dataset).
 
-![](figure/apc_publishers_gold_oa.png)
+![](figure/apcs_2017_deliv_orgs_gold_oa.png)
 
 ### Hybrid OA articles in toll access journals per delivering organisation 2017 (offset deals excluded)
 
 APC fees paid per publisher with indication of contribution from each
 university.
 
-![](figure/apc_publishers_hybrid_oa.png)
+![](figure/apcs_2017_deliv_orgs_hybrid_oa.png) \#\#\# Status for
+delivering organisations Delivery status for participating organisations
+by year.
+
+![](figure/delivery_status.png)
 
 Fees and average APC paid per organisation (only delivering universities, offset deals excluded)
 ------------------------------------------------------------------------------------------------
 
-### Status for delivering organisations
-
-Delivery status for participating organisations by year.
-
-![](figure/apc_per_organisation.png)
+![](figure/apc_per_deliv_orgs.png)
 
 Fees and average APC for the top-10 most frequent publishers (offset deals excluded)
 ------------------------------------------------------------------------------------
