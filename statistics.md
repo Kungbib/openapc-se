@@ -1025,11 +1025,11 @@ In many subscription journals some of the articles are open access after
 a fee has been paid. This model is called "hybrid open access". The
 dataset covers the following data on hybrid open access articles:
 
--   Number of articles: **1 095**
--   Total expenditure: **2 398 301 €**
--   Average fee: **2 190 €**
+-   Number of articles: **1 162**
+-   Total expenditure: **2 524 987 €**
+-   Average fee: **2 173 €**
 -   Median fee: **2 200 €**
--   Share of articles with no fees: **0.37 %**
+-   Share of articles with no fees: **0.77 %**
 
 Hybrid OA and APC costs per institution (note that both delivering and
 non-delivering institutions are included):
@@ -1103,16 +1103,16 @@ Chalmers University of Technology
 Dalarna University College
 </td>
 <td style="text-align:right;">
-13
+27
 </td>
 <td style="text-align:right;">
-33 705
+65 112
 </td>
 <td style="text-align:right;">
-2 593
+2 412
 </td>
 <td style="text-align:right;">
-2 690
+2 519
 </td>
 <td style="text-align:right;">
 0
@@ -1143,19 +1143,19 @@ Karolinska Institutet
 KTH Royal Institute of Technology
 </td>
 <td style="text-align:right;">
-93
+146
 </td>
 <td style="text-align:right;">
-163 912
+250 970
 </td>
 <td style="text-align:right;">
-1 762
+1 719
 </td>
 <td style="text-align:right;">
-1 744
+1 848
 </td>
 <td style="text-align:right;">
-3
+5
 </td>
 </tr>
 <tr>
@@ -1163,13 +1163,13 @@ KTH Royal Institute of Technology
 Linköping University
 </td>
 <td style="text-align:right;">
-55
+53
 </td>
 <td style="text-align:right;">
-112 804
+109 682
 </td>
 <td style="text-align:right;">
-2 051
+2 069
 </td>
 <td style="text-align:right;">
 2 132
@@ -1223,16 +1223,16 @@ Lund University
 Malmö University
 </td>
 <td style="text-align:right;">
-10
+16
 </td>
 <td style="text-align:right;">
-22 099
+32 555
 </td>
 <td style="text-align:right;">
-2 210
+2 035
 </td>
 <td style="text-align:right;">
-2 349
+2 141
 </td>
 <td style="text-align:right;">
 0
@@ -1243,16 +1243,16 @@ Malmö University
 Stockholm University
 </td>
 <td style="text-align:right;">
-303
+299
 </td>
 <td style="text-align:right;">
-670 059
+665 473
 </td>
 <td style="text-align:right;">
-2 211
+2 226
 </td>
 <td style="text-align:right;">
-2 275
+2 329
 </td>
 <td style="text-align:right;">
 0
@@ -1263,16 +1263,16 @@ Stockholm University
 Swedish University of Agricultural Sciences
 </td>
 <td style="text-align:right;">
-219
+220
 </td>
 <td style="text-align:right;">
-515 864
+520 879
 </td>
 <td style="text-align:right;">
-2 356
+2 368
 </td>
 <td style="text-align:right;">
-2 315
+2 330
 </td>
 <td style="text-align:right;">
 0
@@ -1323,19 +1323,19 @@ University College West
 University of Gothenburg
 </td>
 <td style="text-align:right;">
-201
+198
 </td>
 <td style="text-align:right;">
-480 717
+479 059
 </td>
 <td style="text-align:right;">
-2 392
+2 419
 </td>
 <td style="text-align:right;">
-2 500
+2 522
 </td>
 <td style="text-align:right;">
-0
+1
 </td>
 </tr>
 <tr>
@@ -1363,13 +1363,13 @@ Uppsala University
 Örebro University
 </td>
 <td style="text-align:right;">
-46
+48
 </td>
 <td style="text-align:right;">
-94 252
+96 368
 </td>
 <td style="text-align:right;">
-2 049
+2 008
 </td>
 <td style="text-align:right;">
 2 150
@@ -1455,101 +1455,35 @@ Wiley
 </tr>
 <tr>
 <td style="text-align:left;">
-Urban Forestry & Urban Greening
-</td>
-<td style="text-align:left;">
-Elsevier
-</td>
-<td style="text-align:right;">
-8
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Journal of the American Chemical Society
-</td>
-<td style="text-align:left;">
-American Chemical Society (ACS)
-</td>
-<td style="text-align:right;">
-7
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-RNA Biology
-</td>
-<td style="text-align:left;">
-Taylor & Francis
-</td>
-<td style="text-align:right;">
-7
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Ambio
-</td>
-<td style="text-align:left;">
-Springer
-</td>
-<td style="text-align:right;">
-6
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Chemical Communications
-</td>
-<td style="text-align:left;">
-Royal Society of Chemistry (RSC)
-</td>
-<td style="text-align:right;">
-6
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Environmental Pollution
-</td>
-<td style="text-align:left;">
-Elsevier
-</td>
-<td style="text-align:right;">
-6
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Global Change Biology
-</td>
-<td style="text-align:left;">
-Wiley
-</td>
-<td style="text-align:right;">
-6
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Journal of Materials Chemistry A
 </td>
 <td style="text-align:left;">
 Royal Society of Chemistry (RSC)
 </td>
 <td style="text-align:right;">
-6
+10
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-OncoImmunology
+Journal of the Electrochemical Society
 </td>
 <td style="text-align:left;">
-Taylor & Francis
+The Electrochemical Society (ECS)
 </td>
 <td style="text-align:right;">
-6
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Physical Chemistry Chemical Physics
+</td>
+<td style="text-align:left;">
+Royal Society of Chemistry (RSC)
+</td>
+<td style="text-align:right;">
+9
 </td>
 </tr>
 <tr>
@@ -1560,7 +1494,18 @@ Proceedings of the National Academy of Sciences
 National Academy of Sciences
 </td>
 <td style="text-align:right;">
-6
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Urban Forestry & Urban Greening
+</td>
+<td style="text-align:left;">
+Elsevier
+</td>
+<td style="text-align:right;">
+8
 </td>
 </tr>
 </tbody>
