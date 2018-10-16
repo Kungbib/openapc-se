@@ -9,7 +9,6 @@ oxford	Oxford University Press (OUP)
 common ground research networks	Common Ground Research Networks
 springer science + business media	Springer
 ieee	Institute of Electrical & Electronics Engineers (IEEE)
-graphyonline publications pvt, ltd.	Graphyonline Publications PVT, Ltd.
 acta dermato-venereologica	Acta Dermato-Venereologica
 copernicus	Copernicus Publications
 copernicus gmbh	Copernicus
@@ -22,6 +21,7 @@ omics international	OMICS International
 royal society of chemistry	Royal Society of Chemistry (RSC)
 redfame	Redfame Publishing
 american society of clinical oncology (asco)	American Society of Clinical Oncology (ASCO)
+cambridge university press	Cambridge University Press (CUP)
 american society of animal science (asas)	American Society of Animal Science (ASAS)
 brill academic publishers	Brill
 genetics society of america	Genetics Society of America
@@ -37,6 +37,7 @@ magnolia press	Magnolia Press
 association for research in vision and ophthalmology (arvo)	Association for Research in Vision and Ophthalmology (ARVO)
 john benjamins publishing company	John Benjamins Publishing Company
 inter-research science center	Inter-Research Science Center
+the royal society	The Royal Society
 cappelen damm akademisk as * nordic open access scholarly publishing	Cappelen Damm Akademisk
 cogitatio	Cogitatio
 taylor and francis	Taylor & Francis
@@ -45,9 +46,9 @@ american physical society (aps)	American Physical Society (APS)
 bmj publishing	BMJ
 iwa publishing	IWA Publishing
 mdpi	MDPI
-american meteorological society	American Meteorological Society
 american speech language hearing association	American Speech Language Hearing Association
 co-action	Taylor & Francis
+wageningen	Wageningen Academic Publishers
 walter de gruyter gmbh	Walter de Gruyter
 the electrochemical society (ecs)	The Electrochemical Society (ECS)
 trans tech publications	Trans Tech Publications
@@ -63,10 +64,10 @@ the endocrine society	The Endocrine Society
 international union crystallography	International Union Crystallography
 mary ann liebert, inc.	Mary Ann Liebert
 academicjournals	Academic Journals
-cambridge university press	Cambridge University Press (CUP)
+aip	AIP Publishing
 university of california press	University of California Press
 bmj publishing group ltd	BMJ
-public library of science (plos)	Public Library of Science (PLoS)
+graphyonline publications pvt, ltd.	Graphyonline Publications PVT, Ltd.
 american association for the advancement of science (aaas)	American Association for the Advancement of Science (AAAS)
 arvo journals	Association for Research in Vision and Ophthalmology (ARVO)
 springer open	Springer Open
@@ -79,7 +80,6 @@ elsevier bv	Elsevier
 proceedings of the national academy of sciences	National Academy of Sciences
 annex publishers	Annex Publishers
 osa publishing	Optical Society of America (OSA)
-canadian science publishing	Canadian Science Publishing
 international union of crystallography (iucr)	International Union of Crystallography (IUCr)
 bentham open	Bentham Open
 cgpublisher	CGPublisher
@@ -118,21 +118,21 @@ public library of science	Public Library of Science (PLoS)
 acs publications	American Chemical Society (ACS)
 cold spring harbor laboratory press	Cold Spring Harbor Laboratory Press
 omics publishing group	OMICS Publishing Group
-macmillan publishers ltd	Springer
 american dairy science association	American Dairy Science Association
 hindawi	Hindawi Publishing Corporation
 scandinavian journal of work	Nordic Association of Occupational Safety and Health (NOROSH)
 symbiosis	Symbiosis
 karger	Karger
 sci forschen inc	Sci Forschen Inc
-the royal society	The Royal Society
+american meteorological society	American Meteorological Society
 company of biologists	The Company of Biologists
 norosh	Nordic Association of Occupational Safety and Health (NOROSH)
 bmc	BioMed Central
 acoustical society of america (asa)	Acoustical Society of America (ASA)
 t&f	Taylor & Francis
 bmj	BMJ
-wageningen	Wageningen Academic Publishers
+macmillan publishers ltd	Springer
+macrothink institute	Macrothink Institute
 institute of physics	IOP Publishing
 spie	Society of Photo-optical Instrumentation Engineers (SPIE)
 national academy of sciences, usa	National Academy of Sciences
@@ -188,7 +188,7 @@ lippincott williams & wilkins	Lippincott Williams & Wilkins
 cogent oa	Cogent OA
 copernicus publications	Copernicus Publications
 dove	Taylor & Francis
-macrothink institute	Macrothink Institute
+public library of science (plos)	Public Library of Science (PLoS)
 bmj publishing group	BMJ
 biomedcentral	BioMed Central
 american society of nephrology (asn)	American Society of Nephrology (ASN)
@@ -197,6 +197,6 @@ optical society of america/osa	Optical Society of America (OSA)
 american chemical society (acs)	American Chemical Society (ACS)
 jmir publications	JMIR Publications
 dove medical press ltd.	Taylor & Francis
-aip	AIP Publishing
+canadian science publishing	Canadian Science Publishing
 scientific research publishing, inc,	Scientific Research Publishing
 national academy of sciences	National Academy of Sciences
