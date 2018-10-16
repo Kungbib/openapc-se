@@ -1,4 +1,4 @@
 10.1192/bjo.2018.18	byte av förlagsnamn (följer Crossref) från Cambridge University Press (CUP) till Royal College of Psychiatrists
 10.1097/aud.0000000000000616	byte av förlagsnamn (följer Crossref) från Lippincott Williams & Wilkins till Ovid Technologies (Wolters Kluwer Health)
-10.1136/bmjopen-2017-019906	404 (doi not found)
-10.1155/2018/1632195	404 (doi not found)
+10.1136/bmjopen-2017-019906	404 (doi not found)	ev felaktiga skiljetecken
+10.1155/2018/1632195	404 (doi not found)	correct doi: 10.1155/2018/4632195
