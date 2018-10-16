@@ -10,13 +10,14 @@
 # gu/apc_gu_2014-2017.tsv
 # gu/apc_gu_2016-2017.tsv
 # gu/original_data/apc_gu_2017_180417.tsv
-gu/apc_gu_add_may_2018_dois.tsv
+# gu/apc_gu_add_may_2018_dois.tsv
 # kth/apc_kth_2015.tsv
 # kth/apc_kth_2016.tsv
 # kth/apc_kth_2016_correction.tsv
 # kth/apc_kth_2016_2.tsv
 # kth/original_data/apc_kth_2017_dois.tsv
 # liu/apc_liu_2017_jan-jun.tsv
+liu/apc_liu_spring_2018_dois.tsv
 # ltu/apc_ltu_2017.tsv
 # mah/apc_mah_2015.csv
 # mah/apc_mah_2016.tsv
