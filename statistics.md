@@ -4,7 +4,7 @@ Open APC Sweden - Statistics
 This is an example of statistics from the pilot project Open APC Sweden,
 aiming at gathering data about article processing charges (APC"s) paid
 by Swedish universities. The statistics cover journal articles published
-mainly between 2014 and **2 017** from **10** contributors. Please see
+mainly between 2014 and **2 018** from **11** contributors. Please see
 the [project wiki](https://github.com/Kungbib/openapc-se/wiki) for more
 information about the project and instructions on how to contribute.
 
@@ -45,6 +45,11 @@ KTH Royal Institute of Technology
 <tr>
 <td style="text-align:left;">
 Linköping University
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Linnaeus University
 </td>
 </tr>
 <tr>
@@ -130,8 +135,8 @@ Open Access Articles (Total: "gold", "hybrid" and "offset")
 
 At the moment, the dataset contains the following information:
 
--   Number of articles: **4 862**
--   Total expenditure: **9 065 508 €**
+-   Number of articles: **4 992**
+-   Total expenditure: **9 297 576 €**
 
 Articles and APC costs per institution (note that both delivering and
 non-delivering institutions are included):
@@ -288,10 +293,10 @@ KTH Royal Institute of Technology
 Linköping University
 </td>
 <td style="text-align:right;">
-340
+432
 </td>
 <td style="text-align:right;">
-630 486
+792 550
 </td>
 </tr>
 <tr>
@@ -299,10 +304,10 @@ Linköping University
 Linnaeus University
 </td>
 <td style="text-align:right;">
-34
+72
 </td>
 <td style="text-align:right;">
-73 230
+143 234
 </td>
 </tr>
 <tr>
@@ -533,11 +538,11 @@ Articles in Open Access journals ("gold OA"), offset articles excluded
 At the moment, the dataset contains the following information on
 articles in open access journals:
 
--   Number of articles: **1 773**
--   Total expenditure: **2 301 121 €**
--   Average fee: **1 298 €**
--   Median fee: **1 320 €**
--   Share of articles with no fees: **5.9 %**
+-   Number of articles: **1 867**
+-   Total expenditure: **2 456 355 €**
+-   Average fee: **1 316 €**
+-   Median fee: **1 330 €**
+-   Share of articles with no fees: **5.6 %**
 
 Gold OA and APC costs per institution (note that both delivering and
 non-delivering institutions are included):
@@ -651,19 +656,19 @@ KTH Royal Institute of Technology
 Linköping University
 </td>
 <td style="text-align:right;">
-169
+243
 </td>
 <td style="text-align:right;">
-261 205
+386 814
 </td>
 <td style="text-align:right;">
-1 546
+1 592
 </td>
 <td style="text-align:right;">
-1 355
+1 370
 </td>
 <td style="text-align:right;">
-2
+1
 </td>
 </tr>
 <tr>
@@ -671,16 +676,16 @@ Linköping University
 Linnaeus University
 </td>
 <td style="text-align:right;">
-1
+21
 </td>
 <td style="text-align:right;">
-630
+30 254
 </td>
 <td style="text-align:right;">
-630
+1 441
 </td>
 <td style="text-align:right;">
-630
+1 361
 </td>
 <td style="text-align:right;">
 0
@@ -914,7 +919,7 @@ PLOS ONE
 Public Library of Science (PLoS)
 </td>
 <td style="text-align:right;">
-217
+224
 </td>
 </tr>
 <tr>
@@ -925,7 +930,7 @@ Scientific Reports
 Springer
 </td>
 <td style="text-align:right;">
-114
+128
 </td>
 </tr>
 <tr>
@@ -936,7 +941,7 @@ Acta Veterinaria Scandinavica
 BioMed Central
 </td>
 <td style="text-align:right;">
-43
+44
 </td>
 </tr>
 <tr>
@@ -969,7 +974,7 @@ Sustainability
 MDPI
 </td>
 <td style="text-align:right;">
-29
+33
 </td>
 </tr>
 <tr>
@@ -1025,11 +1030,11 @@ In many subscription journals some of the articles are open access after
 a fee has been paid. This model is called "hybrid open access". The
 dataset covers the following data on hybrid open access articles:
 
--   Number of articles: **1 162**
--   Total expenditure: **2 524 987 €**
--   Average fee: **2 173 €**
+-   Number of articles: **1 198**
+-   Total expenditure: **2 601 821 €**
+-   Average fee: **2 172 €**
 -   Median fee: **2 200 €**
--   Share of articles with no fees: **0.77 %**
+-   Share of articles with no fees: **0.75 %**
 
 Hybrid OA and APC costs per institution (note that both delivering and
 non-delivering institutions are included):
@@ -1163,16 +1168,36 @@ KTH Royal Institute of Technology
 Linköping University
 </td>
 <td style="text-align:right;">
-53
+71
 </td>
 <td style="text-align:right;">
-109 682
+146 136
 </td>
 <td style="text-align:right;">
-2 069
+2 058
 </td>
 <td style="text-align:right;">
 2 132
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Linnaeus University
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+40 380
+</td>
+<td style="text-align:right;">
+2 243
+</td>
+<td style="text-align:right;">
+2 109
 </td>
 <td style="text-align:right;">
 0
