@@ -19,7 +19,7 @@
 # liu/apc_liu_2017_jan-jun.tsv
 # liu/apc_liu_spring_2018_dois.tsv
 # liu/apc_liu_spring_2018_corrected_dois.csv
-lnu/apc_lnu_2017_dois.tsv
+# lnu/apc_lnu_2017_dois.tsv
 # ltu/apc_ltu_2017.tsv
 # mah/apc_mah_2015.csv
 # mah/apc_mah_2016.tsv
@@ -32,6 +32,7 @@ lnu/apc_lnu_2017_dois.tsv
 # su/apc_su_2015.tsv
 # su/apc_su_2016.tsv
 # su/apc_su_2017.tsv
+uu/apc_uu_2017_dois.tsv
 # karger/apc_karger_2014-2016.tsv
 # springer/apc_springer_2016_2.xlsx
 # taylor_and_francis/apc_tf_2014-2016.tsv
