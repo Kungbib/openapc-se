@@ -11,7 +11,7 @@ timeperiod_data <- '2017'
 indata_file <- 'data/kth/original_data/2017_OpenAPC_Sweden_Agresso_table.xlsx'
 
 
-outdata_file_dois <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperiod_data,'_dois.tsv')
+outdata_file_dois <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperiod_data,'_batch2_dois.tsv')
 outdata_file_non_dois <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperiod_data,'_non_dois.tsv')
 
 
