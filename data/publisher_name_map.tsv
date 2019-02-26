@@ -25,7 +25,6 @@ omics international	OMICS International
 royal society of chemistry	Royal Society of Chemistry (RSC)
 redfame	Redfame Publishing
 american society of clinical oncology (asco)	American Society of Clinical Oncology (ASCO)
-cambridge university press	Cambridge University Press (CUP)
 american society of animal science (asas)	American Society of Animal Science (ASAS)
 brill academic publishers	Brill
 genetics society of america	Genetics Society of America
@@ -43,8 +42,6 @@ magnolia press	Magnolia Press
 association for research in vision and ophthalmology (arvo)	Association for Research in Vision and Ophthalmology (ARVO)
 john benjamins publishing company	John Benjamins Publishing Company
 inter-research science center	Inter-Research Science Center
-the royal society	The Royal Society
-cappelen damm akademisk as * nordic open access scholarly publishing	Cappelen Damm Akademisk
 cogitatio	Cogitatio
 taylor and francis	Taylor & Francis
 cappelen damm akademisk	Cappelen Damm Akademisk
@@ -52,6 +49,7 @@ american physical society (aps)	American Physical Society (APS)
 bmj publishing	BMJ
 iwa publishing	IWA Publishing
 mdpi	MDPI
+american meteorological society	American Meteorological Society
 cogitatio press	Cogitatio
 co-action	Taylor & Francis
 wageningen	Wageningen Academic Publishers
@@ -71,7 +69,7 @@ the endocrine society	The Endocrine Society
 international union crystallography	International Union Crystallography
 mary ann liebert, inc.	Mary Ann Liebert
 academicjournals	Academic Journals
-aip	AIP Publishing
+cambridge university press	Cambridge University Press (CUP)
 university of california press	University of California Press
 bmj publishing group ltd	BMJ
 graphyonline publications pvt, ltd.	Graphyonline Publications PVT, Ltd.
@@ -86,11 +84,12 @@ pnas	National Academy of Sciences
 nature	Springer
 elsevier bv	Elsevier
 faculty of 1000	Faculty of 1000
-proceedings of the national academy of sciences	National Academy of Sciences
+cappelen damm akademisk as * nordic open access scholarly publishing	Cappelen Damm Akademisk
 annex publishers	Annex Publishers
 osa publishing	Optical Society of America (OSA)
+canadian science publishing	Canadian Science Publishing
 taylor & francis	Taylor & Francis
-american society for biochemistry & molecular biology (asbmb)	American Society for Biochemistry & Molecular Biology (ASBMB)
+proceedings of the national academy of sciences	National Academy of Sciences
 cgpublisher	CGPublisher
 american association for the advancement of science	American Association for the Advancement of Science (AAAS)
 biomed central (springer nature)	BioMed Central
@@ -113,7 +112,6 @@ americal physical society	American Physical Society (APS)
 intellect ltd	Intellect
 acs	American Chemical Society (ACS)
 emerald	Emerald
-nordic association of occupational safety and health (norosh)	Nordic Association of Occupational Safety and Health (NOROSH)
 cell press	Cell Press
 american society of plant biologists (aspb)	American Society of Plant Biologists (ASPB)
 dove medical press	Dove Medical Press
@@ -145,7 +143,7 @@ scandinavian journal of work	Nordic Association of Occupational Safety and Healt
 symbiosis	Symbiosis
 karger	Karger
 sci forschen inc	Sci Forschen Inc
-american meteorological society	American Meteorological Society
+the royal society	The Royal Society
 company of biologists	The Company of Biologists
 norosh	Nordic Association of Occupational Safety and Health (NOROSH)
 bmc	BioMed Central
@@ -154,12 +152,14 @@ t&f	Taylor & Francis
 smart science and technology	Smart Science and Technology
 bmj	BMJ
 macmillan publishers ltd	Springer
+macrothink institute	Macrothink Institute
 institute of physics	IOP Publishing
 biomed central (springer)	BioMed Central
 spie	Society of Photo-optical Instrumentation Engineers (SPIE)
 national academy of sciences, usa	National Academy of Sciences
 redfame publishing	Redfame Publishing
 hindawi publishing corporation	Hindawi Publishing Corporation
+american society for biochemistry & molecular biology (asbmb)	American Society for Biochemistry & Molecular Biology (ASBMB)
 brill	Brill
 american association for cancer research (aacr)	American Association for Cancer Research (AACR)
 intech	Intech
@@ -167,7 +167,7 @@ oxford journals	Oxford University Press (OUP)
 taylor and francis group	Taylor & Francis
 baishideng publishing group	Baishideng Publishing Group
 de gruyter	Walter de Gruyter
-crop science society of america	Crop Science Society of America
+myjove corporation	MyJove Corporation
 canadian center of science and education	Canadian Center of Science and Education
 cambridge university press (cup)	Cambridge University Press (CUP)
 springer nature	Springer
@@ -177,8 +177,9 @@ ovid technologies (wolters kluwer health)	Wolters Kluwer
 academic journals	Academic Journals
 frontiers media	Frontiers
 plos	Public Library of Science (PLoS)
-public library of science (plos)	Public Library of Science (PLoS)
+crop science society of america	Crop Science Society of America
 smart science & technology llc	Smart Science and Technology
+nace international	NACE International
 scientific research publishing	Scientific Research Publishing
 geological society of london	Geological Society of London
 society for sociological science	Society for Sociological Science
@@ -203,7 +204,7 @@ royal college of psychiatrists	Royal College of Psychiatrists
 omics	OMICS Publishing Group
 s. karger ag	Karger
 amer inst physics	AIP Publishing
-the company of biologists	The Company of Biologists
+nordic association of occupational safety and health (norosh)	Nordic Association of Occupational Safety and Health (NOROSH)
 oxford university press	Oxford University Press (OUP)
 microbiology society	Microbiology Society
 optical society of america (osa)	Optical Society of America (OSA)
@@ -217,7 +218,8 @@ lippincott williams & wilkins	Lippincott Williams & Wilkins
 cogent oa	Cogent OA
 copernicus publications	Copernicus Publications
 dove	Taylor & Francis
-macrothink institute	Macrothink Institute
+public library of science (plos)	Public Library of Science (PLoS)
+the company of biologists	The Company of Biologists
 bmj publishing group	BMJ
 biomedcentral	BioMed Central
 american society of nephrology (asn)	American Society of Nephrology (ASN)
@@ -227,7 +229,7 @@ american chemical society (acs)	American Chemical Society (ACS)
 brepols publishers	Brepols Publishers
 dove medical press ltd.	Taylor & Francis
 international union of crystallography	International Union of Crystallography
-canadian science publishing	Canadian Science Publishing
+aip	AIP Publishing
 scientific research publishing, inc,	Scientific Research Publishing
 ubiquity press	Ubiquity Press
 national academy of sciences	National Academy of Sciences
