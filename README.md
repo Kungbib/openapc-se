@@ -1,5 +1,6 @@
 # About Open APC Sweden
 
+
 Open APC Sweden is a pilot project initiated by the National Library of Sweden together with Swedish higher education institutions (HEIs) in order to investigate the possibilities of establishing an transparent open access publication cost system. 
 
 In order to establish Open APC Sweden there is a great need for a concerted effort by stakeholders. The current project aims to keep the Swedish HEI sector informed about ways in which to monitor the total cost of publication, which includes the collection of APCs. 

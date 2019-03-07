@@ -20,6 +20,7 @@
 
     Done
     -----
+    2019-03-06 added testmode in Config/CHL
     2017-09-08 Read DOIs and data from final master to avoid processing of already processed entries
     2017-09-07 Handle this DOI error with invisble blanks:
             slu	2015	2064.46	10. 1105/ tpc. 114. 134494	SANT	American Society of Plant Biologists
