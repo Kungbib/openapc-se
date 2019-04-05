@@ -35,7 +35,7 @@
 # su/apc_su_2016.tsv
 # su/apc_su_2017.tsv
 # uu/apc_uu_2017_dois.tsv
-uu/apc_uu_2018_utan_bibsam_dois.tsv
+uu/apc_uu_2018_dois.tsv
 # karger/apc_karger_2014-2016.tsv
 # springer/apc_springer_2016_2.xlsx
 # taylor_and_francis/apc_tf_2014-2016.tsv

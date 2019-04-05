@@ -1614,6 +1614,11 @@ kth,2017,0,10.5194/isprs-archives-xlii-3-w2-137-2017,FALSE,Copernicus Publicatio
 kth,2017,1022,10.1155/2017/2709547,FALSE,Hindawi Publishing Corporation,Contrast Media & Molecular Imaging,1555-4309,1555-4309,1555-4317,1555-4309,http://creativecommons.org/licenses/by/4.0/,TRUE,29097914,PMC5612744,ut:000404941200001,https://www.hindawi.com/journals/cmmi/2017/2709547/,TRUE
 kth,2017,1022,10.1155/2017/3845409,FALSE,Hindawi Publishing Corporation,BioMed Research International,2314-6133,2314-6133,2314-6141,2314-6133,http://creativecommons.org/licenses/by/4.0/,TRUE,28630864,PMC5467388,ut:000402163200001,https://www.hindawi.com/journals/bmri/2017/3845409/,TRUE
 kth,2017,1022,10.1186/s13638-017-0833-3,FALSE,Springer Open,EURASIP Journal on Wireless Communications and Networking,1687-1499,NA,1687-1499,1687-1472,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000397592000002,https://link.springer.com/article/10.1186/s13638-017-0833-3,TRUE
+kth,2017,1050,10.3183/npprj-2017-32-01-p014-020,TRUE,Walter de Gruyter,Nordic Pulp and Paper Research Journal,0283-2631,0283-2631,NA,NA,NA,TRUE,NA,NA,NA,NA,FALSE
+kth,2017,1050,10.3183/npprj-2017-32-02-p195-203,TRUE,Walter de Gruyter,Nordic Pulp and Paper Research Journal,0283-2631,0283-2631,NA,NA,NA,TRUE,NA,NA,NA,NA,FALSE
+kth,2017,1050,10.3183/npprj-2017-32-03-p317-323,TRUE,Walter de Gruyter,Nordic Pulp and Paper Research Journal,0283-2631,0283-2631,NA,NA,NA,TRUE,NA,NA,NA,NA,FALSE
+kth,2017,1050,10.3183/npprj-2017-32-03-p466-472,TRUE,Walter de Gruyter,Nordic Pulp and Paper Research Journal,0283-2631,0283-2631,NA,NA,NA,TRUE,NA,NA,NA,NA,FALSE
+kth,2017,1075,10.1080/00140139.2017.1398844,TRUE,Taylor & Francis,Ergonomics,0014-0139,0014-0139,1366-5847,NA,NA,TRUE,29134874,NA,NA,NA,FALSE
 kth,2017,1075,10.3390/su9081407,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,2071-1050,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000408861800122,http://www.mdpi.com/2071-1050/9/8/1407,TRUE
 kth,2017,1084,10.3390/ma10090994,FALSE,MDPI,Materials,1996-1944,NA,1996-1944,1996-1944,https://creativecommons.org/licenses/by/4.0/,TRUE,28841196,PMC5615649,ut:000411506700014,http://www.mdpi.com/1996-1944/10/9/994,TRUE
 kth,2017,1088,10.3390/catal7050133,FALSE,MDPI,Catalysts,2073-4344,NA,2073-4344,2073-4344,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000404099100008,http://www.mdpi.com/2073-4344/7/5/133,TRUE
@@ -1623,13 +1628,29 @@ kth,2017,1092,10.1063/1.4974282,FALSE,AIP Publishing,AIP Advances,2158-3226,NA,2
 kth,2017,1110,10.1088/1748-9326/aa7e18,FALSE,IOP Publishing,Environmental Research Letters,1748-9326,NA,1748-9326,1748-9326,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,ut:000410459000003,http://iopscience.iop.org/article/10.1088/1748-9326/aa7e18/meta,TRUE
 kth,2017,1152,10.3390/e19080394,FALSE,MDPI,Entropy,1099-4300,NA,1099-4300,1099-4300,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000408739700016,http://www.mdpi.com/1099-4300/19/8/394,TRUE
 kth,2017,1152,10.3390/ma10040413,FALSE,MDPI,Materials,1996-1944,NA,1996-1944,1996-1944,https://creativecommons.org/licenses/by/4.0/,TRUE,28772781,PMC5507006,ut:000402843800088,http://www.mdpi.com/1996-1944/10/4/413,TRUE
+kth,2017,1165,10.1038/srep34742,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,http://www.springer.com/tdm,TRUE,27713496,PMC5054424,NA,NA,TRUE
+kth,2017,1165,10.1038/srep36117,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,http://www.springer.com/tdm,TRUE,27782179,PMC5080590,NA,NA,TRUE
 kth,2017,1171,10.3390/app7030301,FALSE,MDPI,Applied Sciences,2076-3417,NA,2076-3417,2076-3417,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000398718700092,http://www.mdpi.com/2076-3417/7/3/301,TRUE
 kth,2017,1171,10.3390/su9030346,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,2071-1050,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000398714100023,http://www.mdpi.com/2071-1050/9/3/346,TRUE
 kth,2017,1171,10.3390/su9040498,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,2071-1050,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000402090300021,http://www.mdpi.com/2071-1050/9/4/498,TRUE
+kth,2017,1201,10.1109/access.2017.2754346,FALSE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Access,2169-3536,NA,2169-3536,NA,NA,TRUE,NA,NA,NA,NA,TRUE
+kth,2017,1203,10.1021/acsomega.7b00925,FALSE,American Chemical Society (ACS),ACS Omega,2470-1343,2470-1343,2470-1343,NA,http://pubs.acs.org/page/policy/authorchoice_ccbyncnd_termsofuse.html,TRUE,NA,NA,NA,NA,TRUE
+kth,2017,1220,10.1109/access.2017.2758845,FALSE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Access,2169-3536,NA,2169-3536,NA,NA,TRUE,NA,NA,NA,NA,TRUE
 kth,2017,1227,10.1155/2017/8987626,FALSE,Hindawi Publishing Corporation,Advances in Civil Engineering,1687-8086,1687-8086,1687-8094,1687-8086,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000400618200001,https://www.hindawi.com/journals/ace/2017/8987626/,TRUE
 kth,2017,1255,10.3390/e19050233,FALSE,MDPI,Entropy,1099-4300,NA,1099-4300,1099-4300,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000404453700050,http://www.mdpi.com/1099-4300/19/5/233,TRUE
 kth,2017,1255,10.3390/e19110595,FALSE,MDPI,Entropy,1099-4300,NA,1099-4300,1099-4300,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000419006900029,http://www.mdpi.com/1099-4300/19/11/595,TRUE
+kth,2017,1274,10.2166/9781780404929_099,TRUE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 kth,2017,1299,10.1088/1367-2630/aa5f74,FALSE,IOP Publishing,New Journal of Physics,1367-2630,NA,1367-2630,1367-2630,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,ut:000395947500002,http://iopscience.iop.org/article/10.1088/1367-2630/aa5f74,TRUE
+kth,2017,1305,10.1038/s41598-017-07016-y,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,http://creativecommons.org/licenses/by/4.0,TRUE,28808234,PMC5556100,NA,NA,TRUE
+kth,2017,1305,10.1038/s41598-017-07030-0,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,http://creativecommons.org/licenses/by/4.0,TRUE,28754966,PMC5533771,NA,NA,TRUE
+kth,2017,1305,10.1038/s41598-017-07374-7,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,http://creativecommons.org/licenses/by/4.0,TRUE,28779142,PMC5544778,NA,NA,TRUE
+kth,2017,1305,10.1038/s41598-017-09548-9,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,http://creativecommons.org/licenses/by/4.0,TRUE,28839198,PMC5571206,NA,NA,TRUE
+kth,2017,1305,10.1038/s41598-017-10566-w,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,http://creativecommons.org/licenses/by/4.0,TRUE,28860627,PMC5578967,NA,NA,TRUE
+kth,2017,1305,10.1038/s41598-017-11670-7,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,http://creativecommons.org/licenses/by/4.0,TRUE,28904373,PMC5597633,NA,NA,TRUE
+kth,2017,1305,10.1038/s41598-017-13462-5,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,http://creativecommons.org/licenses/by/4.0,TRUE,29021611,PMC5636908,NA,NA,TRUE
+kth,2017,1305,10.1038/s41598-017-13538-2,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,http://creativecommons.org/licenses/by/4.0,TRUE,29044158,PMC5647409,NA,NA,TRUE
+kth,2017,1328,10.1371/journal.pone.0174314,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,28350811,PMC5369763,NA,NA,TRUE
+kth,2017,1336,10.1109/access.2017.2750242,FALSE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Access,2169-3536,NA,2169-3536,NA,NA,TRUE,NA,NA,NA,NA,TRUE
 kth,2017,1339,10.3390/en10020247,FALSE,MDPI,Energies,1996-1073,NA,1996-1073,1996-1073,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000395469200101,http://www.mdpi.com/1996-1073/10/2/247,TRUE
 kth,2017,1339,10.3390/en10030313,FALSE,MDPI,Energies,1996-1073,NA,1996-1073,1996-1073,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000398736700053,http://www.mdpi.com/1996-1073/10/3/313,TRUE
 kth,2017,1339,10.3390/en10030338,FALSE,MDPI,Energies,1996-1073,NA,1996-1073,1996-1073,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000398736700078,http://www.mdpi.com/1996-1073/10/3/338,TRUE
@@ -1644,21 +1665,32 @@ kth,2017,1359,10.1021/acs.jpcc.7b03885,TRUE,American Chemical Society (ACS),The 
 kth,2017,1359,10.1021/acsnano.7b02305,TRUE,American Chemical Society (ACS),ACS Nano,1936-0851,1936-0851,1936-086X,1936-0851,http://pubs.acs.org/page/policy/authorchoice_ccby_termsofuse.html,TRUE,28475843,NA,ut:000402498400086,https://pubs.acs.org/doi/abs/10.1021/acsnano.7b02305,FALSE
 kth,2017,1359,10.1021/acsomega.7b01510,FALSE,American Chemical Society (ACS),ACS Omega,2470-1343,2470-1343,2470-1343,2470-1343,http://pubs.acs.org/page/policy/authorchoice_termsofuse.html,TRUE,NA,NA,ut:000418744400014,https://pubs.acs.org/doi/abs/10.1021/acsomega.7b01510,TRUE
 kth,2017,1359,10.1021/acssuschemeng.7b03566,TRUE,American Chemical Society (ACS),ACS Sustainable Chemistry & Engineering,2168-0485,NA,NA,2168-0485,NA,FALSE,NA,NA,NA,https://pubs.acs.org/doi/abs/10.1021%2Facssuschemeng.7b03566,FALSE
+kth,2017,1372,10.1021/acsomega.7b00067,FALSE,American Chemical Society (ACS),ACS Omega,2470-1343,2470-1343,2470-1343,NA,http://pubs.acs.org/page/policy/authorchoice_ccbyncnd_termsofuse.html,TRUE,NA,NA,NA,NA,TRUE
 kth,2017,1400,10.1080/16549716.2017.1321904,FALSE,Taylor & Francis,Global Health Action,1654-9716,1654-9716,1654-9880,1654-9880,NA,TRUE,28838300,PMC5645697,ut:000417200700003,http://www.tandfonline.com/doi/full/10.1080/16549716.2017.1321904,TRUE
 kth,2017,1400,10.1080/16549716.2017.1344003,FALSE,Taylor & Francis,Global Health Action,1654-9716,1654-9716,1654-9880,1654-9880,NA,TRUE,28838309,PMC5645721,ut:000417200700012,http://www.tandfonline.com/doi/full/10.1080/16549716.2017.1344003,TRUE
+kth,2017,1403,10.1109/access.2017.2753283,FALSE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Access,2169-3536,NA,2169-3536,NA,NA,TRUE,NA,NA,NA,NA,TRUE
 kth,2017,1480,10.1002/geo2.34,FALSE,Wiley,Geo: Geography and Environment,2054-4049,NA,NA,2054-4049,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000396352700001,https://onlinelibrary.wiley.com/doi/full/10.1002/geo2.34,TRUE
+kth,2017,1497,10.1109/access.2017.2777185,FALSE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Access,2169-3536,NA,2169-3536,NA,http://www.ieee.org/publications_standards/publications/rights/oapa.pdf,TRUE,NA,NA,NA,NA,TRUE
 kth,2017,1518,10.1103/physreva.96.012116,TRUE,American Physical Society (APS),Physical Review A,2469-9926,2469-9926,2469-9934,2469-9926,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000405508300001,https://journals.aps.org/pra/abstract/10.1103/PhysRevA.96.012116,FALSE
 kth,2017,1518,10.1103/physrevapplied.7.064018,TRUE,American Physical Society (APS),Physical Review Applied,2331-7019,NA,2331-7019,2331-7019,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000403252100001,https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.7.064018,FALSE
+kth,2017,1535,10.5006/2504,TRUE,NACE International,CORROSION,0010-9312,0010-9312,1938-159X,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 kth,2017,1547,10.1186/s12859-017-1505-3,FALSE,BioMed Central,BMC Bioinformatics,1471-2105,NA,1471-2105,1471-2105,NA,TRUE,28187712,PMC5301390,ut:000397489700003,https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-017-1505-3,TRUE
 kth,2017,1547,10.1186/s12951-016-0235-4,FALSE,BioMed Central,Journal of Nanobiotechnology,1477-3155,NA,1477-3155,1477-3155,NA,TRUE,28052769,PMC5210221,ut:000391073000001,https://jnanobiotechnology.biomedcentral.com/articles/10.1186/s12951-016-0235-4,TRUE
+kth,2017,1603,10.5006/2458,TRUE,NACE International,CORROSION,0010-9312,0010-9312,1938-159X,NA,NA,TRUE,NA,NA,NA,NA,FALSE
+kth,2017,1611,10.1021/acs.macromol.7b01318,TRUE,American Chemical Society (ACS),Macromolecules,0024-9297,0024-9297,1520-5835,NA,http://pubs.acs.org/page/policy/authorchoice_termsofuse.html,TRUE,NA,NA,NA,NA,FALSE
+kth,2017,1615,10.1016/j.trb.2017.04.009,TRUE,Elsevier,Transportation Research Part B: Methodological,0191-2615,0191-2615,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2017,1662,10.1088/1748-9326/aa7499,FALSE,IOP Publishing,Environmental Research Letters,1748-9326,NA,1748-9326,1748-9326,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,ut:000408262300001,http://iopscience.iop.org/article/10.1088/1748-9326/aa7499,TRUE
+kth,2017,1713,10.1109/tmi.2017.2718218,TRUE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Transactions on Medical Imaging,0278-0062,0278-0062,1558-254X,NA,NA,TRUE,28742031,NA,NA,NA,FALSE
 kth,2017,1729,10.1088/1361-6463/aa65ed,TRUE,IOP Publishing,Journal of Physics D: Applied Physics,0022-3727,0022-3727,1361-6463,0022-3727,http://iopscience.iop.org/info/page/text-and-data-mining,TRUE,NA,NA,ut:000397901000001,NA,FALSE
+kth,2017,1755,10.1021/acsami.7b01779,TRUE,American Chemical Society (ACS),ACS Applied Materials & Interfaces,1944-8244,1944-8244,1944-8252,NA,http://pubs.acs.org/page/policy/authorchoice_termsofuse.html,TRUE,28534628,NA,NA,NA,FALSE
 kth,2017,1780,10.1063/1.4940916,FALSE,AIP Publishing,Structural Dynamics,2329-7778,NA,2329-7778,2329-7778,NA,TRUE,26958585,PMC4752554,ut:000379177700002,http://aca.scitation.org/doi/10.1063/1.4940916,TRUE
 kth,2017,1780,10.1063/1.4982907,TRUE,AIP Publishing,Journal of Applied Physics,0021-8979,0021-8979,1089-7550,0021-8979,NA,TRUE,NA,NA,ut:000401364700008,http://aip.scitation.org/doi/full/10.1063/1.4982907,FALSE
 kth,2017,1780,10.1063/1.4983650,TRUE,AIP Publishing,The Journal of Chemical Physics,0021-9606,0021-9606,1089-7690,0021-9606,NA,TRUE,28571365,PMC5440234,ut:000401778900042,http://aip.scitation.org/doi/full/10.1063/1.4983650,FALSE
 kth,2017,1780,10.1063/1.4994004,FALSE,AIP Publishing,Structural Dynamics,2329-7778,NA,2329-7778,2329-7778,NA,TRUE,28781982,PMC5515673,ut:000414175400007,http://aca.scitation.org/doi/full/10.1063/1.4994004,TRUE
 kth,2017,1780,10.1063/1.4995651,FALSE,AIP Publishing,APL Materials,2166-532X,NA,2166-532X,2166-532X,NA,TRUE,NA,NA,ut:000406640500024,http://aip.scitation.org/doi/full/10.1063/1.4995651,TRUE
 kth,2017,1780,10.1121/1.4976814,TRUE,Acoustical Society of America (ASA),The Journal of the Acoustical Society of America,0001-4966,0001-4966,NA,0001-4966,NA,TRUE,28372062,NA,ut:000398962500027,http://asa.scitation.org/doi/full/10.1121/1.4976814,FALSE
+kth,2017,1837,10.1007/978-3-319-73065-3_8,TRUE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,1837,10.1007/978-3-319-73065-3_9,TRUE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 kth,2017,1848,10.1039/c6ce02642g,TRUE,Royal Society of Chemistry (RSC),CrystEngComm,1466-8033,NA,1466-8033,1466-8033,NA,TRUE,NA,NA,ut:000398401800004,http://pubs.rsc.org/en/content/articlelanding/2017/ce/c6ce02642g#!divAbstract,FALSE
 kth,2017,1848,10.1039/c6cp08219j,TRUE,Royal Society of Chemistry (RSC),Physical Chemistry Chemical Physics,1463-9076,1463-9076,1463-9084,1463-9076,NA,TRUE,28119980,NA,ut:000395526600020,http://pubs.rsc.org/en/content/articlelanding/2017/cp/c6cp08219j#!divAbstract,FALSE
 kth,2017,1848,10.1039/c6en00645k,TRUE,Royal Society of Chemistry (RSC),Environmental Science: Nano,2051-8153,2051-8153,2051-8161,2051-8153,NA,TRUE,NA,NA,ut:000399430500014,http://pubs.rsc.org/en/content/articlelanding/2017/en/c6en00645k#!divAbstract,FALSE
@@ -1675,11 +1707,13 @@ kth,2017,1848,10.1039/c7ta04684g,TRUE,Royal Society of Chemistry (RSC),Journal o
 kth,2017,1848,10.1039/c7ta09973h,TRUE,Royal Society of Chemistry (RSC),Journal of Materials Chemistry A,2050-7488,2050-7488,2050-7496,2050-7496,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,NA,NA,ut:000422949700040,http://pubs.rsc.org/en/content/articlelanding/2018/ta/c7ta09973h#!divAbstract,FALSE
 kth,2017,1935,10.1088/1361-6404/aa94e4,TRUE,IOP Publishing,European Journal of Physics,0143-0807,0143-0807,1361-6404,0143-0807,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,ut:000418387100002,http://iopscience.iop.org/article/10.1088/1361-6404/aa94e4,FALSE
 kth,2017,1950,10.1088/1361-6560/aa591d,TRUE,IOP Publishing,Physics in Medicine and Biology,0031-9155,0031-9155,1361-6560,0031-9155,http://iopscience.iop.org/info/page/text-and-data-mining,TRUE,28081009,NA,ut:000425859000004,NA,FALSE
+kth,2017,2040,10.1098/rsfs.2016.0154,TRUE,The Royal Society,Interface Focus,2042-8898,2042-8898,2042-8901,NA,NA,TRUE,28630678,PMC5474040,NA,NA,FALSE
 kth,2017,2083,10.1111/caim.12246,TRUE,Wiley,Creativity and Innovation Management,0963-1690,NA,NA,0963-1690,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000416146800003,https://onlinelibrary.wiley.com/doi/abs/10.1111/caim.12246,FALSE
 kth,2017,2150,10.1080/10408436.2017.1370576,TRUE,Taylor & Francis,Critical Reviews in Solid State and Materials Sciences,1040-8436,1040-8436,1547-6561,0161-1593,NA,TRUE,NA,NA,ut:000435672700001,http://www.tandfonline.com/doi/full/10.1080/10408436.2017.1370576,FALSE
 kth,2017,2150,10.1080/13583883.2017.1322631,TRUE,Taylor & Francis,Tertiary Education and Management,1358-3883,1358-3883,1573-1936,1358-3883,NA,TRUE,NA,NA,ut:000418517600002,http://www.tandfonline.com/doi/full/10.1080/13583883.2017.1322631,FALSE
 kth,2017,2150,10.1080/14649357.2017.1321776,TRUE,Taylor & Francis,Planning Theory & Practice,1464-9357,1464-9357,1470-000X,1464-9357,NA,TRUE,NA,NA,ut:000423789200006,http://www.tandfonline.com/doi/abs/10.1080/14649357.2017.1321776,FALSE
 kth,2017,2150,10.1080/17499518.2017.1416643,TRUE,Taylor & Francis,Georisk: Assessment and Management of Risk for Engineered Systems and Geohazards,1749-9518,1749-9518,1749-9526,1749-9518,NA,TRUE,NA,NA,ut:000435392700002,http://www.tandfonline.com/doi/abs/10.1080/17499518.2017.1416643,FALSE
+kth,2017,2192,10.1177/0042098017720149,TRUE,SAGE Publications,Urban Studies,0042-0980,0042-0980,1360-063X,NA,http://journals.sagepub.com/page/policies/text-and-data-mining-license,TRUE,NA,NA,NA,NA,FALSE
 kth,2017,2200,10.1007/s00048-017-0160-0,TRUE,Springer,"NTM Zeitschrift für Geschichte der Wissenschaften, Technik und Medizin",0036-6978,0036-6978,1420-9144,0036-6978,http://creativecommons.org/licenses/by/4.0,TRUE,28251246,PMC5357287,ut:000398276300005,NA,FALSE
 kth,2017,2200,10.1007/s00161-017-0569-7,TRUE,Springer,Continuum Mechanics and Thermodynamics,0935-1175,0935-1175,1432-0959,0935-1175,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000408062000001,NA,FALSE
 kth,2017,2200,10.1007/s00161-017-0573-y,TRUE,Springer,Continuum Mechanics and Thermodynamics,0935-1175,0935-1175,1432-0959,0935-1175,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000408062000002,NA,FALSE
@@ -1781,27 +1815,98 @@ kth,2017,2200,10.1007/s40194-017-0490-5,TRUE,Springer,Welding in the World,0043-
 kth,2017,2200,10.1007/s40194-017-0496-z,TRUE,Springer,Welding in the World,0043-2288,0043-2288,1878-6669,0043-2288,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000411060800006,NA,FALSE
 kth,2017,2200,10.1007/s40799-017-0183-4,TRUE,Springer,Experimental Techniques,0732-8818,0732-8818,1747-1567,0732-8818,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000406977900010,NA,FALSE
 kth,2017,2200,10.1007/s40831-017-0147-z,TRUE,Springer,Journal of Sustainable Metallurgy,2199-3823,2199-3823,2199-3831,NA,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000417302400016,NA,FALSE
+kth,2017,2227,10.1021/acsenergylett.6b00691,TRUE,American Chemical Society (ACS),ACS Energy Letters,2380-8195,2380-8195,2380-8195,NA,http://pubs.acs.org/page/policy/authorchoice_ccbyncnd_termsofuse.html,TRUE,NA,NA,NA,NA,FALSE
+kth,2017,2243,10.1016/j.algal.2017.07.025,TRUE,Elsevier,Algal Research,2211-9264,2211-9264,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+kth,2017,2243,10.1016/j.ijrmms.2017.07.004,TRUE,Elsevier,International Journal of Rock Mechanics and Mining Sciences,1365-1609,1365-1609,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+kth,2017,2243,10.1016/j.nanoen.2017.03.010,TRUE,Elsevier,Nano Energy,2211-2855,2211-2855,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+kth,2017,2243,10.1016/j.plaphy.2017.07.023,TRUE,Elsevier,Plant Physiology and Biochemistry,0981-9428,0981-9428,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,28780454,NA,NA,NA,FALSE
+kth,2017,2243,10.1016/j.strusafe.2017.01.006,TRUE,Elsevier,Structural Safety,0167-4730,0167-4730,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2017,2383,10.1093/cjres/rsx001,TRUE,Oxford University Press (OUP),"Cambridge Journal of Regions, Economy and Society",1752-1378,1752-1378,1752-1386,1752-1386,NA,TRUE,NA,NA,ut:000404620800003,https://academic.oup.com/cjres/article/10/2/231/3003399,FALSE
 kth,2017,2412,10.1039/c7cp03517a,TRUE,Royal Society of Chemistry (RSC),Physical Chemistry Chemical Physics,1463-9076,1463-9076,1463-9084,1463-9076,NA,TRUE,28681896,NA,ut:000410585900010,http://pubs.rsc.org/en/content/articlelanding/2017/cp/c7cp03517a#!divAbstract,FALSE
 kth,2017,2417,10.1093/nar/gkx436,FALSE,Oxford University Press (OUP),Nucleic Acids Research,0305-1048,0305-1048,1362-4962,0305-1048,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,28525570,PMC5569991,ut:000406776400008,https://academic.oup.com/nar/article/45/13/e125/3835310,TRUE
 kth,2017,2417,10.1093/nar/gkx994,FALSE,Oxford University Press (OUP),Nucleic Acids Research,0305-1048,0305-1048,1362-4962,0305-1048,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,29069445,PMC5753183,ut:000419550700090,https://academic.oup.com/nar/article/46/D1/D595/4563312,TRUE
+kth,2017,2500,10.1002/cbic.201700443,TRUE,Wiley,ChemBioChem,1439-4227,NA,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,28980755,PMC5725671,NA,NA,FALSE
+kth,2017,2500,10.1002/cssc.201701089,TRUE,Wiley,ChemSusChem,1864-5631,NA,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,28719095,PMC5601211,NA,NA,FALSE
 kth,2017,251,10.3390/ijtpp2040019,FALSE,MDPI,"International Journal of Turbomachinery, Propulsion and Power",2504-186X,NA,2504-186X,2504-186X,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,http://www.mdpi.com/2504-186X/2/4/19,TRUE
 kth,2017,2582,10.1093/teamat/hrx007,TRUE,Oxford University Press (OUP),Teaching Mathematics and its Applications: An International Journal of the IMA,0268-3679,0268-3679,1471-6976,0268-3679,NA,TRUE,NA,NA,NA,https://academic.oup.com/teamat/advance-article/doi/10.1093/teamat/hrx007/3852147,FALSE
 kth,2017,260,10.5194/ars-15-189-2017,FALSE,Copernicus Publications,Advances in Radio Science,1684-9973,NA,1684-9973,1684-9965,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+kth,2017,2691,10.1016/j.ebiom.2017.12.008,FALSE,Elsevier,EBioMedicine,2352-3964,2352-3964,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,29246479,PMC5828558,NA,NA,TRUE
+kth,2017,2691,10.1016/j.nbt.2017.07.011,TRUE,Elsevier,New Biotechnology,1871-6784,1871-6784,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,28778816,NA,NA,NA,FALSE
 kth,2017,2750,10.1002/mrc.4558,TRUE,Wiley,Magnetic Resonance in Chemistry,0749-1581,NA,NA,0749-1581,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,27930812,PMC5434926,ut:000400600000012,https://onlinelibrary.wiley.com/doi/abs/10.1002/mrc.4558,FALSE
+kth,2017,2781,10.1016/j.jcis.2017.02.007,TRUE,Elsevier,Journal of Colloid and Interface Science,0021-9797,0021-9797,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,28208081,NA,NA,NA,FALSE
+kth,2017,2796,10.1016/j.robot.2016.12.013,TRUE,Elsevier,Robotics and Autonomous Systems,0921-8890,0921-8890,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+kth,2017,2800,10.1038/tp.2017.160,FALSE,Springer,Translational Psychiatry,2158-3188,NA,2158-3188,NA,NA,TRUE,28742074,PMC5538130,NA,NA,TRUE
+kth,2017,2871,10.1016/j.corsci.2017.11.014,TRUE,Elsevier,Corrosion Science,0010-938X,0010-938X,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
+kth,2017,2871,10.1016/j.envpol.2017.02.006,TRUE,Elsevier,Environmental Pollution,0269-7491,0269-7491,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,28196769,NA,NA,NA,FALSE
+kth,2017,2871,10.1016/j.kint.2017.09.019,TRUE,Elsevier,Kidney International,0085-2538,0085-2538,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,29241621,NA,NA,NA,FALSE
 kth,2017,2917,10.1002/adom.201600834,TRUE,Wiley,Advanced Optical Materials,2195-1071,NA,NA,2195-1071,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,ut:000393203600010,https://onlinelibrary.wiley.com/doi/abs/10.1002/adom.201600834,FALSE
 kth,2017,2917,10.1002/adom.201700057,TRUE,Wiley,Advanced Optical Materials,2195-1071,NA,NA,2195-1071,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,NA,NA,ut:000403848500007,https://onlinelibrary.wiley.com/doi/abs/10.1002/adom.201700057,FALSE
 kth,2017,2917,10.1002/mabi.201700190,TRUE,Wiley,Macromolecular Bioscience,1616-5187,NA,NA,1616-5187,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,28809095,NA,ut:000415130800012,https://onlinelibrary.wiley.com/doi/abs/10.1002/mabi.201700190,FALSE
 kth,2017,293,10.3390/machines5040024,FALSE,MDPI,Machines,2075-1702,NA,2075-1702,2075-1702,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000415730400004,http://www.mdpi.com/2075-1702/5/4/24,TRUE
 kth,2017,293,10.3390/photonics4020037,FALSE,MDPI,Photonics,2304-6732,NA,2304-6732,2304-6732,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000407345400001,http://www.mdpi.com/2304-6732/4/2/37,TRUE
 kth,2017,293,10.3390/soc7020014,FALSE,MDPI,Societies,2075-4698,NA,2075-4698,2075-4698,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000404639200011,http://www.mdpi.com/2075-4698/7/2/14,TRUE
+kth,2017,2960,10.1016/j.ymeth.2017.11.013,TRUE,Elsevier,Methods,1046-2023,1046-2023,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,29179988,NA,NA,NA,FALSE
+kth,2017,30,10.4230/lipics.csl.2017.1,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.10,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.11,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.12,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.13,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.14,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.15,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.16,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.17,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.18,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.19,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.2,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.20,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.21,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.22,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.23,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.24,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.25,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.26,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.27,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.28,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.29,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.3,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.30,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.31,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.32,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.33,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.34,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.35,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.36,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.37,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.38,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.39,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.4,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.40,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.41,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.42,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.5,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.6,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.7,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.8,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,30,10.4230/lipics.csl.2017.9,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 kth,2017,300,10.5194/angeo-35-475-2017,FALSE,Copernicus Publications,Annales Geophysicae,1432-0576,NA,1432-0576,0992-7689,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,ut:000398189600002,NA,TRUE
 kth,2017,3167,10.1002/nme.5603,TRUE,Wiley,International Journal for Numerical Methods in Engineering,0029-5981,NA,NA,0029-5981,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000417595300004,https://onlinelibrary.wiley.com/doi/abs/10.1002/nme.5603,FALSE
 kth,2017,3167,10.1111/cod.12946,TRUE,Wiley,Contact Dermatitis,0105-1873,NA,NA,0105-1873,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,29322530,PMC5901407,ut:000428991800001,https://onlinelibrary.wiley.com/doi/abs/10.1111/cod.12946,FALSE
 kth,2017,3300,10.15252/msb.20167422,FALSE,EMBO,Molecular Systems Biology,1744-4292,NA,1744-4292,1744-4292,NA,TRUE,28254760,PMC5371732,ut:000396349200001,https://onlinelibrary.wiley.com/doi/abs/10.15252/msb.20167422,TRUE
 kth,2017,3300,10.15252/msb.20177703,FALSE,EMBO,Molecular Systems Biology,1744-4292,NA,1744-4292,1744-4292,NA,TRUE,28827398,PMC5572395,ut:000426043900001,https://onlinelibrary.wiley.com/doi/abs/10.15252/msb.20177703,TRUE
+kth,2017,3382,10.3791/57297,TRUE,MyJove Corporation,Journal of Visualized Experiments,1940-087X,NA,1940-087X,NA,NA,TRUE,29578517,PMC5931481,NA,NA,FALSE
+kth,2017,3409,10.1016/j.jclepro.2017.08.066,TRUE,Elsevier,Journal of Cleaner Production,0959-6526,0959-6526,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+kth,2017,3409,10.1016/j.jpowsour.2017.01.092,TRUE,Elsevier,Journal of Power Sources,0378-7753,0378-7753,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2017,360,10.5194/angeo-35-879-2017,FALSE,Copernicus Publications,Annales Geophysicae,1432-0576,NA,1432-0576,0992-7689,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,ut:000406712700001,NA,TRUE
+kth,2017,3700,10.1038/ncomms15840,FALSE,Springer,Nature Communications,2041-1723,NA,2041-1723,NA,NA,TRUE,28643774,PMC5501969,NA,NA,TRUE
+kth,2017,3700,10.1038/s41467-017-00486-8,FALSE,Springer,Nature Communications,2041-1723,NA,2041-1723,NA,http://creativecommons.org/licenses/by/4.0,TRUE,28855499,PMC5577278,NA,NA,TRUE
 kth,2017,420,10.5194/angeo-35-1143-2017,FALSE,Copernicus Publications,Annales Geophysicae,1432-0576,NA,1432-0576,0992-7689,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,ut:000413532900001,NA,TRUE
+kth,2017,449,10.1016/j.dib.2017.02.015,FALSE,Elsevier,Data in Brief,2352-3409,2352-3409,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,28289699,PMC5338869,NA,NA,TRUE
+kth,2017,449,10.1016/j.dib.2017.02.021,FALSE,Elsevier,Data in Brief,2352-3409,2352-3409,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,28275668,PMC5328940,NA,NA,TRUE
+kth,2017,449,10.1016/j.dib.2017.07.014,FALSE,Elsevier,Data in Brief,2352-3409,2352-3409,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,28856180,PMC5562104,NA,NA,TRUE
+kth,2017,449,10.1016/j.softx.2017.08.002,FALSE,Elsevier,SoftwareX,2352-7110,2352-7110,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+kth,2017,466,10.1016/j.mex.2017.10.002,FALSE,Elsevier,MethodsX,2215-0161,2215-0161,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,29062720,PMC5647525,NA,NA,TRUE
+kth,2017,520,10.1039/c7ra02992f,FALSE,Royal Society of Chemistry (RSC),RSC Advances,2046-2069,NA,2046-2069,NA,NA,TRUE,NA,NA,NA,NA,TRUE
+kth,2017,525,10.4236/ajcm.2018.81002,FALSE,Scientific Research Publishing,American Journal of Computational Mathematics,2161-1203,2161-1203,2161-1211,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2017,567,10.1039/c6ra26679g,FALSE,Royal Society of Chemistry (RSC),RSC Advances,2046-2069,NA,2046-2069,2046-2069,NA,TRUE,NA,NA,ut:000393756000043,http://pubs.rsc.org/en/content/articlelanding/2017/ra/c6ra26679g#!divAbstract,TRUE
 kth,2017,567,10.1039/c6ra28236a,FALSE,Royal Society of Chemistry (RSC),RSC Advances,2046-2069,NA,2046-2069,2046-2069,NA,TRUE,NA,NA,ut:000396150900075,http://pubs.rsc.org/en/content/articlelanding/2017/ra/c6ra28236a#!divAbstract,TRUE
 kth,2017,567,10.1039/c7ra00496f,FALSE,Royal Society of Chemistry (RSC),RSC Advances,2046-2069,NA,2046-2069,2046-2069,NA,TRUE,NA,NA,ut:000399242100041,http://pubs.rsc.org/en/content/articlelanding/2017/ra/c7ra00496f#!divAbstract,TRUE
@@ -1809,14 +1914,17 @@ kth,2017,567,10.1039/c7ra01082f,FALSE,Royal Society of Chemistry (RSC),RSC Advan
 kth,2017,567,10.1039/c7ra02821k,FALSE,Royal Society of Chemistry (RSC),RSC Advances,2046-2069,NA,2046-2069,2046-2069,NA,TRUE,NA,NA,ut:000400157700038,http://pubs.rsc.org/en/content/articlelanding/2017/ra/c7ra02821k#!divAbstract,TRUE
 kth,2017,567,10.1039/c7ra05209j,FALSE,Royal Society of Chemistry (RSC),RSC Advances,2046-2069,NA,2046-2069,2046-2069,NA,TRUE,NA,NA,ut:000405811400015,http://pubs.rsc.org/en/content/articlelanding/2017/ra/c7ra05209j#!divAbstract,TRUE
 kth,2017,567,10.1039/c7ra09828f,FALSE,Royal Society of Chemistry (RSC),RSC Advances,2046-2069,NA,2046-2069,2046-2069,NA,TRUE,NA,NA,ut:000413944200060,http://pubs.rsc.org/en/content/articlelanding/2017/ra/c7ra09828f#!divAbstract,TRUE
+kth,2017,639,10.1021/acssuschemeng.7b00663,TRUE,American Chemical Society (ACS),ACS Sustainable Chemistry & Engineering,2168-0485,2168-0485,2168-0485,NA,http://pubs.acs.org/page/policy/authorchoice_termsofuse.html,TRUE,NA,NA,NA,NA,FALSE
 kth,2017,647,10.1149/2.0041705jss,TRUE,The Electrochemical Society (ECS),ECS Journal of Solid State Science and Technology,2162-8769,2162-8769,2162-8777,2162-8769,NA,TRUE,NA,NA,ut:000418886800004,http://jss.ecsdl.org/content/6/4/P197.full,FALSE
 kth,2017,647,10.1149/2.0311706jes,TRUE,The Electrochemical Society (ECS),Journal of the Electrochemical Society,0013-4651,0013-4651,1945-7111,0013-4651,NA,TRUE,NA,NA,ut:000401607500084,http://jes.ecsdl.org/content/164/6/C207.full,FALSE
 kth,2017,647,10.1149/2.0331709jss,TRUE,The Electrochemical Society (ECS),ECS Journal of Solid State Science and Technology,2162-8769,2162-8769,2162-8777,2162-8769,NA,TRUE,NA,NA,ut:000418363500027,http://jss.ecsdl.org/content/6/9/P653.full,FALSE
+kth,2017,647,10.3390/app6120405,FALSE,MDPI,Applied Sciences,2076-3417,NA,2076-3417,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2017,660,10.5194/angeo-35-493-2017,FALSE,Copernicus Publications,Annales Geophysicae,1432-0576,NA,1432-0576,0992-7689,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,ut:000398189900001,NA,TRUE
 kth,2017,711,10.1186/s40687-016-0091-8,TRUE,Springer,Research in the Mathematical Sciences,2197-9847,NA,2197-9847,2197-9847,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000412664800001,https://link.springer.com/article/10.1186/s40687-016-0091-8,FALSE
 kth,2017,711,10.1186/s40687-016-0092-7,TRUE,Springer,Research in the Mathematical Sciences,2197-9847,NA,2197-9847,2197-9847,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000412664600001,https://link.springer.com/article/10.1186/s40687-016-0092-7,FALSE
 kth,2017,774,10.3390/cryst7070222,FALSE,MDPI,Crystals,2073-4352,NA,2073-4352,2073-4352,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000407446200040,http://www.mdpi.com/2073-4352/7/7/222,TRUE
 kth,2017,774,10.3390/met7070260,FALSE,MDPI,Metals,2075-4701,NA,2075-4701,2075-4701,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000407365900031,http://www.mdpi.com/2075-4701/7/7/260,TRUE
+kth,2017,818,10.1117/1.jmi.5.1.014001,TRUE,Society of Photo-optical Instrumentation Engineers (SPIE),Journal of Medical Imaging,2329-4302,NA,NA,NA,NA,TRUE,29322069,PMC5753006,NA,NA,FALSE
 kth,2017,818,10.1155/2017/4237858,FALSE,Hindawi Publishing Corporation,International Journal of Biomedical Imaging,1687-4188,1687-4188,1687-4196,1687-4188,http://creativecommons.org/licenses/by/4.0/,TRUE,28744304,PMC5506458,ut:000404691400001,https://www.hindawi.com/journals/ijbi/2017/4237858/,TRUE
 kth,2017,818,10.1155/2017/9814179,FALSE,Hindawi Publishing Corporation,Modelling and Simulation in Engineering,1687-5591,1687-5591,1687-5605,1687-5605,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000397905700001,https://www.hindawi.com/journals/mse/2017/9814179/,TRUE
 kth,2017,837,10.3390/ijgi6100295,FALSE,MDPI,ISPRS International Journal of Geo-Information,2220-9964,NA,2220-9964,2220-9964,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000414627100005,http://www.mdpi.com/2220-9964/6/10/295,TRUE
@@ -1825,6 +1933,7 @@ kth,2017,929,10.3390/app7121278,FALSE,MDPI,Applied Sciences,2076-3417,NA,2076-34
 kth,2017,929,10.3390/su9122190,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,2071-1050,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000419231500039,http://www.mdpi.com/2071-1050/9/12/2190,TRUE
 kth,2017,931,10.1007/s12544-017-0243-y,FALSE,Springer,European Transport Research Review,1867-0717,1867-0717,1866-8887,1866-8887,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000403711800015,https://link.springer.com/article/10.1007/s12544-017-0243-y,TRUE
 kth,2017,965,10.1039/c7gc02489d,TRUE,Royal Society of Chemistry (RSC),Green Chemistry,1463-9262,1463-9262,1463-9270,1463-9262,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,NA,NA,ut:000417758700005,http://pubs.rsc.org/en/content/articlelanding/2017/gc/c7gc02489d#!divAbstract,FALSE
+kth,2017,987,10.1016/j.visres.2017.07.005,TRUE,Elsevier,Vision Research,0042-6989,0042-6989,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,28739381,NA,NA,NA,FALSE
 lakemedelsverket,2016,2200,10.1007/s13181-016-0584-2,TRUE,Springer,Journal of Medical Toxicology,1556-9039,1556-9039,1937-6995,1556-9039,http://creativecommons.org/licenses/by/4.0,TRUE,27638057,PMC5330960,NA,NA,FALSE
 liu,2012,468,10.1080/21663831.2012.749814,FALSE,Taylor & Francis,Materials Research Letters,2166-3831,NA,2166-3831,2166-3831,NA,TRUE,NA,NA,ut:000209767300006,NA,FALSE
 liu,2013,2429,10.1080/08351813.2013.753710,TRUE,Taylor & Francis,Research on Language & Social Interaction,0835-1813,0835-1813,1532-7973,0835-1813,NA,TRUE,NA,NA,ut:000322633100001,NA,FALSE
