@@ -8,7 +8,7 @@ organisation <- 'uu'
 timeperiod_data <- '2018'
 
 # what's the name of the file to be converted?
-indata_file <- 'data/uu/original_data/UUAPCSweden2018_utan_bibsam.xlsx'
+indata_file <- 'data/uu/original_data/UUAPCSweden2018_utan_bibsam_utan_dublett.xlsx'
 
 
 outdata_file_dois <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperiod_data,'_dois.tsv')
