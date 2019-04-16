@@ -1167,7 +1167,7 @@ kau,2018,1543,10.1002/nop2.153,FALSE,Wiley,Nursing Open,2054-1058,NA,NA,NA,http:
 kau,2018,1632,10.1016/j.jslw.2018.05.003,TRUE,Elsevier,Journal of Second Language Writing,1060-3743,1060-3743,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kau,2018,1695,10.1109/lcomm.2018.2871457,TRUE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Communications Letters,1089-7798,1089-7798,1558-2558,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 kau,2018,1738,10.1142/s1363919618400091,TRUE,World Scientific Publishing,International Journal of Innovation Management,1363-9196,1363-9196,1757-5877,NA,NA,TRUE,NA,NA,NA,NA,FALSE
-kau,2018,174,10.14419/ijet.v7i2.8489,TRUE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kau,2018,174,10.14419/ijet.v7i2.8489,TRUE,kapitel_i_bok,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 kau,2018,2052,10.5271/sjweh.3707,TRUE,Nordic Association of Occupational Safety and Health (NOROSH),Scandinavian Journal of Work Environment and Health,0355-3140,0355-3140,1795-990X,NA,NA,TRUE,29334117,NA,NA,NA,FALSE
 kau,2018,2122,10.1016/j.ssci.2017.11.005,TRUE,Elsevier,Safety Science,0925-7535,0925-7535,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kau,2018,2167,10.1017/s0144686x1800137x,TRUE,Cambridge University Press (CUP),Ageing and Society,0144-686X,0144-686X,1469-1779,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
@@ -1732,7 +1732,7 @@ kth,2017,1220,10.1109/access.2017.2758845,FALSE,Institute of Electrical & Electr
 kth,2017,1227,10.1155/2017/8987626,FALSE,Hindawi Publishing Corporation,Advances in Civil Engineering,1687-8086,1687-8086,1687-8094,1687-8086,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000400618200001,https://www.hindawi.com/journals/ace/2017/8987626/,TRUE
 kth,2017,1255,10.3390/e19050233,FALSE,MDPI,Entropy,1099-4300,NA,1099-4300,1099-4300,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000404453700050,http://www.mdpi.com/1099-4300/19/5/233,TRUE
 kth,2017,1255,10.3390/e19110595,FALSE,MDPI,Entropy,1099-4300,NA,1099-4300,1099-4300,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000419006900029,http://www.mdpi.com/1099-4300/19/11/595,TRUE
-kth,2017,1274,10.2166/9781780404929_099,TRUE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2017,1274,10.2166/9781780404929_099,TRUE,kapitel_i_bok,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 kth,2017,1299,10.1088/1367-2630/aa5f74,FALSE,IOP Publishing,New Journal of Physics,1367-2630,NA,1367-2630,1367-2630,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,ut:000395947500002,http://iopscience.iop.org/article/10.1088/1367-2630/aa5f74,TRUE
 kth,2017,1305,10.1038/s41598-017-07016-y,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,http://creativecommons.org/licenses/by/4.0,TRUE,28808234,PMC5556100,NA,NA,TRUE
 kth,2017,1305,10.1038/s41598-017-07030-0,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,http://creativecommons.org/licenses/by/4.0,TRUE,28754966,PMC5533771,NA,NA,TRUE
@@ -3099,6 +3099,34 @@ mah,2017,3000,10.1111/cdoe.12300,TRUE,Wiley,Community Dentistry and Oral Epidemi
 mah,2017,506,10.1039/c7ra00385d,FALSE,Royal Society of Chemistry (RSC),RSC Advances,2046-2069,NA,2046-2069,2046-2069,NA,TRUE,NA,NA,NA,NA,TRUE
 mah,2017,516,10.7903/cmr.17291,FALSE,Academy of Taiwan Information Systems Research,Contemporary Management Research,1813-5498,1813-5498,NA,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 mah,2017,885,10.1186/s13104-017-2955-4,FALSE,BioMed Central,BMC Research Notes,1756-0500,NA,1756-0500,NA,NA,TRUE,29183357,PMC5704400,NA,NA,TRUE
+mau,2018,1040,10.3390/polym10030284,FALSE,MDPI,Polymers,2073-4360,NA,2073-4360,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,30966319,PMC6415026,NA,NA,TRUE
+mau,2018,1077,10.1080/23311916.2018.1438728,FALSE,Taylor & Francis,Cogent Engineering,2331-1916,NA,2331-1916,NA,NA,TRUE,NA,NA,NA,NA,TRUE
+mau,2018,1105,10.1186/s13104-018-3718-6,FALSE,BioMed Central,BMC Research Notes,1756-0500,NA,1756-0500,NA,NA,TRUE,30143050,PMC6109287,NA,NA,TRUE
+mau,2018,1105,10.1186/s13104-018-3728-4,FALSE,BioMed Central,BMC Research Notes,1756-0500,NA,1756-0500,NA,NA,TRUE,30153861,PMC6114177,NA,NA,TRUE
+mau,2018,1180,10.1186/s12912-018-0316-9,FALSE,BioMed Central,BMC Nursing,1472-6955,NA,1472-6955,NA,NA,TRUE,30524202,PMC6276187,NA,NA,TRUE
+mau,2018,119,10.3390/sports5040092,FALSE,MDPI,Sports,2075-4663,NA,2075-4663,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,29910452,PMC5969021,NA,NA,TRUE
+mau,2018,1194,10.1371/journal.pone.0196450,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,29708998,PMC5927437,NA,NA,TRUE
+mau,2018,1203,10.1002/nop2.144,FALSE,Wiley,Nursing Open,2054-1058,NA,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30062028,PMC6056451,NA,NA,TRUE
+mau,2018,1203,10.1002/nop2.220,FALSE,Wiley,Nursing Open,2054-1058,2054-1058,2054-1058,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30918690,PMC6419122,NA,NA,TRUE
+mau,2018,1208,10.3390/app8071027,FALSE,MDPI,Applied Sciences,2076-3417,NA,2076-3417,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+mau,2018,1356,10.2340/00015555-3009,FALSE,Acta Dermato-Venereologica,Acta Dermato Venereologica,0001-5555,0001-5555,NA,NA,NA,TRUE,30085320,NA,NA,NA,TRUE
+mau,2018,1380,10.1080/17482631.2018.1474673,FALSE,Taylor & Francis,International Journal of Qualitative Studies on Health and Well-being,1748-2631,NA,1748-2631,NA,http://creativecommons.org/licenses/by/4.0,TRUE,29869590,PMC5990949,NA,NA,TRUE
+mau,2018,1391,10.1136/bmjopen-2018-025055,FALSE,BMJ,BMJ Open,2044-6055,2044-6055,2044-6055,NA,NA,TRUE,30413521,PMC6231592,NA,NA,TRUE
+mau,2018,1564,10.1111/jre.12514,TRUE,Wiley,Journal of Periodontal Research,0022-3484,NA,NA,NA,http://onlinelibrary.wiley.com/termsAndConditions#vor,TRUE,29211309,NA,NA,NA,FALSE
+mau,2018,1586,10.2147/ijwh.s185930,FALSE,Dove Medical Press,International Journal of Women's Health,1179-1411,NA,1179-1411,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,30799960,PMC6369851,NA,NA,TRUE
+mau,2018,1700,10.1075/lplp.00005.lun,TRUE,John Benjamins Publishing Company,Language Problems and Language Planning,0272-2690,0272-2690,1569-9889,NA,NA,TRUE,NA,NA,NA,NA,FALSE
+mau,2018,1800,10.1186/s12912-018-0289-8,FALSE,BioMed Central,BMC Nursing,1472-6955,NA,1472-6955,NA,NA,TRUE,29760582,PMC5946464,NA,NA,TRUE
+mau,2018,1878,10.2147/ccide.s157118,FALSE,Dove Medical Press,"Clinical, Cosmetic and Investigational Dentistry",1179-1357,NA,1179-1357,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,29628778,PMC5878660,NA,NA,TRUE
+mau,2018,240,10.1111/cid.12578,TRUE,Wiley,Clinical Implant Dentistry and Related Research,1523-0899,NA,NA,NA,http://onlinelibrary.wiley.com/termsAndConditions#vor,TRUE,29283206,NA,NA,NA,FALSE
+mau,2018,247,10.1111/eje.12272,TRUE,Wiley,European Journal of Dental Education,1396-5883,NA,NA,NA,http://onlinelibrary.wiley.com/termsAndConditions#vor,TRUE,28504847,NA,NA,NA,FALSE
+mau,2018,2916,10.1016/j.jcis.2018.04.112,TRUE,Elsevier,Journal of Colloid and Interface Science,0021-9797,0021-9797,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,29738939,NA,NA,NA,FALSE
+mau,2018,3000,10.1111/jre.12527,TRUE,Wiley,Journal of Periodontal Research,0022-3484,NA,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,29341140,PMC5969291,NA,NA,FALSE
+mau,2018,3500,10.1002/anie.201708635|,TRUE,Wiley,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+mau,2018,4000,10.1002/anie.201805772,TRUE,Wiley,Angewandte Chemie International Edition,1433-7851,NA,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30308085,NA,NA,NA,FALSE
+mau,2018,575,10.1080/23337931.2018.1459626,FALSE,Taylor & Francis,Acta Biomaterialia Odontologica Scandinavica,2333-7931,NA,2333-7931,NA,NA,TRUE,29707612,PMC5917306,NA,NA,TRUE
+mau,2018,708,10.1016/j.anaerobe.2018.10.007,TRUE,Elsevier,Anaerobe,1075-9964,1075-9964,NA,NA,https://www.elsevier.com/tdm/userlicense/1.0/,TRUE,30359695,NA,NA,NA,FALSE
+mau,2018,972,10.1016/j.linged.2018.10.001,TRUE,Elsevier,Linguistics and Education,0898-5898,0898-5898,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
+mau,2018,999,10.1155/2018/5189761,FALSE,Hindawi Publishing Corporation,International Journal of Dentistry,1687-8728,1687-8728,1687-8736,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30598665,PMC6287154,NA,NA,TRUE
 mdh,2016,2200,10.1007/s00170-016-9377-7,TRUE,Springer,The International Journal of Advanced Manufacturing Technology,0268-3768,0268-3768,1433-3015,0268-3768,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000401505000030,NA,FALSE
 mdh,2016,2200,10.1007/s10270-016-0556-7,TRUE,Springer,Software & Systems Modeling,1619-1366,1619-1366,1619-1374,1619-1366,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,NA,NA,FALSE
 mdh,2016,2200,10.1007/s10659-016-9613-2,TRUE,Springer,Journal of Elasticity,0374-3535,0374-3535,1573-2681,0374-3535,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000396525700006,NA,FALSE
