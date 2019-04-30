@@ -4,7 +4,7 @@ Open APC Sweden - Statistics
 This is an example of statistics from the pilot project Open APC Sweden,
 aiming at gathering data about article processing charges (APC"s) paid
 by Swedish universities. The statistics cover journal articles published
-mainly between 2014 and **2 018** from **11** contributors. Please see
+mainly between 2014 and **2 018** from **14** contributors. Please see
 the [project wiki](https://github.com/Kungbib/openapc-se/wiki) for more
 information about the project and instructions on how to contribute.
 
@@ -24,7 +24,7 @@ Delivering HEIs
 <tbody>
 <tr>
 <td style="text-align:left;">
-Dalarna University College
+Dalarna University
 </td>
 </tr>
 <tr>
@@ -34,7 +34,17 @@ University of Gothenburg
 </tr>
 <tr>
 <td style="text-align:left;">
-University College West
+University of Skövde
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University West
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Karlstad University
 </td>
 </tr>
 <tr>
@@ -75,6 +85,11 @@ Swedish University of Agricultural Sciences
 <tr>
 <td style="text-align:left;">
 Stockholm University
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Uppsala University
 </td>
 </tr>
 </tbody>
@@ -135,8 +150,8 @@ Open Access Articles (Total: "gold", "hybrid" and "offset")
 
 At the moment, the dataset contains the following information:
 
--   Number of articles: **4 992**
--   Total expenditure: **9 297 576 €**
+-   Number of articles: **6 207**
+-   Total expenditure: **11 495 520 €**
 
 Articles and APC costs per institution (note that both delivering and
 non-delivering institutions are included):
@@ -169,17 +184,6 @@ Blekinge Institute of Technology
 </tr>
 <tr>
 <td style="text-align:left;">
-Borås University College
-</td>
-<td style="text-align:right;">
-9
-</td>
-<td style="text-align:right;">
-19 550
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Chalmers University of Technology
 </td>
 <td style="text-align:right;">
@@ -191,29 +195,18 @@ Chalmers University of Technology
 </tr>
 <tr>
 <td style="text-align:left;">
-Dalarna University College
+Dalarna University
 </td>
 <td style="text-align:right;">
-72
+93
 </td>
 <td style="text-align:right;">
-130 353
+172 985
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Gävle University College
-</td>
-<td style="text-align:right;">
-8
-</td>
-<td style="text-align:right;">
-17 600
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Halmstad University College
+Halmstad University
 </td>
 <td style="text-align:right;">
 6
@@ -235,7 +228,7 @@ Institute Mittag-Leffler
 </tr>
 <tr>
 <td style="text-align:left;">
-Jönköping University Foundation
+Jönköping University
 </td>
 <td style="text-align:right;">
 10
@@ -249,10 +242,10 @@ Jönköping University Foundation
 Karlstad University
 </td>
 <td style="text-align:right;">
-21
+114
 </td>
 <td style="text-align:right;">
-46 200
+177 356
 </td>
 </tr>
 <tr>
@@ -268,7 +261,7 @@ Karolinska Institutet
 </tr>
 <tr>
 <td style="text-align:left;">
-Kristianstad University College
+Kristianstad University
 </td>
 <td style="text-align:right;">
 14
@@ -282,10 +275,10 @@ Kristianstad University College
 KTH Royal Institute of Technology
 </td>
 <td style="text-align:right;">
-483
+592
 </td>
 <td style="text-align:right;">
-785 233
+901 882
 </td>
 </tr>
 <tr>
@@ -293,10 +286,10 @@ KTH Royal Institute of Technology
 Linköping University
 </td>
 <td style="text-align:right;">
-432
+431
 </td>
 <td style="text-align:right;">
-792 550
+790 827
 </td>
 </tr>
 <tr>
@@ -337,10 +330,10 @@ Lund University
 Malmö University
 </td>
 <td style="text-align:right;">
-74
+102
 </td>
 <td style="text-align:right;">
-118 063
+158 309
 </td>
 </tr>
 <tr>
@@ -367,24 +360,13 @@ Mid Sweden University
 </tr>
 <tr>
 <td style="text-align:left;">
-Mälardalen University College
+Mälardalen University
 </td>
 <td style="text-align:right;">
 18
 </td>
 <td style="text-align:right;">
 39 600
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Skövde University College
-</td>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:right;">
-13 200
 </td>
 </tr>
 <tr>
@@ -466,7 +448,7 @@ Swedish University of Agricultural Sciences
 </tr>
 <tr>
 <td style="text-align:left;">
-Södertörns University College
+Södertörns University
 </td>
 <td style="text-align:right;">
 7
@@ -488,13 +470,13 @@ Umeå University
 </tr>
 <tr>
 <td style="text-align:left;">
-University College West
+University of Borås
 </td>
 <td style="text-align:right;">
-24
+9
 </td>
 <td style="text-align:right;">
-44 063
+19 550
 </td>
 </tr>
 <tr>
@@ -510,13 +492,46 @@ University of Gothenburg
 </tr>
 <tr>
 <td style="text-align:left;">
+University of Gävle
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+17 600
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University of Skövde
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+58 167
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University West
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+44 063
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Uppsala University
 </td>
 <td style="text-align:right;">
-279
+1 215
 </td>
 <td style="text-align:right;">
-504 438
+2 328 456
 </td>
 </tr>
 <tr>
@@ -538,11 +553,11 @@ Articles in Open Access journals ("gold OA"), offset articles excluded
 At the moment, the dataset contains the following information on
 articles in open access journals:
 
--   Number of articles: **1 867**
--   Total expenditure: **2 456 355 €**
--   Average fee: **1 316 €**
--   Median fee: **1 330 €**
--   Share of articles with no fees: **5.6 %**
+-   Number of articles: **2 633**
+-   Total expenditure: **3 562 161 €**
+-   Average fee: **1 353 €**
+-   Median fee: **1 346 €**
+-   Share of articles with no fees: **3.9 %**
 
 Gold OA and APC costs per institution (note that both delivering and
 non-delivering institutions are included):
@@ -593,19 +608,39 @@ Chalmers University of Technology
 </tr>
 <tr>
 <td style="text-align:left;">
-Dalarna University College
+Dalarna University
 </td>
 <td style="text-align:right;">
-42
+50
 </td>
 <td style="text-align:right;">
-58 641
+70 423
 </td>
 <td style="text-align:right;">
-1 396
+1 408
 </td>
 <td style="text-align:right;">
-1 458
+1 493
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Karlstad University
+</td>
+<td style="text-align:right;">
+51
+</td>
+<td style="text-align:right;">
+57 319
+</td>
+<td style="text-align:right;">
+1 124
+</td>
+<td style="text-align:right;">
+1 157
 </td>
 <td style="text-align:right;">
 0
@@ -636,19 +671,19 @@ Karolinska Institutet
 KTH Royal Institute of Technology
 </td>
 <td style="text-align:right;">
-192
+264
 </td>
 <td style="text-align:right;">
-215 262
+256 697
 </td>
 <td style="text-align:right;">
-1 121
+972
 </td>
 <td style="text-align:right;">
-1 080
+933
 </td>
 <td style="text-align:right;">
-6
+5
 </td>
 </tr>
 <tr>
@@ -656,13 +691,13 @@ KTH Royal Institute of Technology
 Linköping University
 </td>
 <td style="text-align:right;">
-243
+244
 </td>
 <td style="text-align:right;">
-386 814
+386 993
 </td>
 <td style="text-align:right;">
-1 592
+1 586
 </td>
 <td style="text-align:right;">
 1 370
@@ -676,16 +711,16 @@ Linköping University
 Linnaeus University
 </td>
 <td style="text-align:right;">
-21
+20
 </td>
 <td style="text-align:right;">
-30 254
+28 354
 </td>
 <td style="text-align:right;">
-1 441
+1 418
 </td>
 <td style="text-align:right;">
-1 361
+1 335
 </td>
 <td style="text-align:right;">
 0
@@ -736,16 +771,16 @@ Lund University
 Malmö University
 </td>
 <td style="text-align:right;">
-41
+59
 </td>
 <td style="text-align:right;">
-48 108
+69 506
 </td>
 <td style="text-align:right;">
-1 173
+1 178
 </td>
 <td style="text-align:right;">
-1 394
+1 305
 </td>
 <td style="text-align:right;">
 0
@@ -813,26 +848,6 @@ Umeå University
 </tr>
 <tr>
 <td style="text-align:left;">
-University College West
-</td>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:right;">
-4 868
-</td>
-<td style="text-align:right;">
-811
-</td>
-<td style="text-align:right;">
-729
-</td>
-<td style="text-align:right;">
-0
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 University of Gothenburg
 </td>
 <td style="text-align:right;">
@@ -853,22 +868,62 @@ University of Gothenburg
 </tr>
 <tr>
 <td style="text-align:left;">
-Uppsala University
+University of Skövde
 </td>
 <td style="text-align:right;">
-55
+15
 </td>
 <td style="text-align:right;">
-15 612
+20 489
 </td>
 <td style="text-align:right;">
-284
+1 366
+</td>
+<td style="text-align:right;">
+1 329
 </td>
 <td style="text-align:right;">
 0
 </td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University West
+</td>
 <td style="text-align:right;">
-67
+6
+</td>
+<td style="text-align:right;">
+4 868
+</td>
+<td style="text-align:right;">
+811
+</td>
+<td style="text-align:right;">
+729
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Uppsala University
+</td>
+<td style="text-align:right;">
+657
+</td>
+<td style="text-align:right;">
+970 716
+</td>
+<td style="text-align:right;">
+1 477
+</td>
+<td style="text-align:right;">
+1 400
+</td>
+<td style="text-align:right;">
+6
 </td>
 </tr>
 <tr>
@@ -919,7 +974,7 @@ PLOS ONE
 Public Library of Science (PLoS)
 </td>
 <td style="text-align:right;">
-224
+298
 </td>
 </tr>
 <tr>
@@ -930,7 +985,7 @@ Scientific Reports
 Springer
 </td>
 <td style="text-align:right;">
-128
+216
 </td>
 </tr>
 <tr>
@@ -941,7 +996,29 @@ Acta Veterinaria Scandinavica
 BioMed Central
 </td>
 <td style="text-align:right;">
-44
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Dagstuhl Research Online Publication Server
+</td>
+<td style="text-align:right;">
+42
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ecology and Evolution
+</td>
+<td style="text-align:left;">
+Wiley
+</td>
+<td style="text-align:right;">
+41
 </td>
 </tr>
 <tr>
@@ -957,57 +1034,24 @@ Taylor & Francis
 </tr>
 <tr>
 <td style="text-align:left;">
-Ecology and Evolution
-</td>
-<td style="text-align:left;">
-Wiley
-</td>
-<td style="text-align:right;">
-33
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Sustainability
 </td>
 <td style="text-align:left;">
 MDPI
 </td>
 <td style="text-align:right;">
-33
+40
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Energy Procedia
+Nature Communications
 </td>
 <td style="text-align:left;">
-Elsevier
+Springer
 </td>
 <td style="text-align:right;">
-28
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Forests
-</td>
-<td style="text-align:left;">
-MDPI
-</td>
-<td style="text-align:right;">
-26
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Frontiers in Plant Science
-</td>
-<td style="text-align:left;">
-Frontiers
-</td>
-<td style="text-align:right;">
-23
+36
 </td>
 </tr>
 <tr>
@@ -1018,7 +1062,18 @@ Frontiers in Psychology
 Frontiers
 </td>
 <td style="text-align:right;">
-22
+33
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Energies
+</td>
+<td style="text-align:left;">
+MDPI
+</td>
+<td style="text-align:right;">
+30
 </td>
 </tr>
 </tbody>
@@ -1030,11 +1085,11 @@ In many subscription journals some of the articles are open access after
 a fee has been paid. This model is called "hybrid open access". The
 dataset covers the following data on hybrid open access articles:
 
--   Number of articles: **1 198**
--   Total expenditure: **2 601 821 €**
--   Average fee: **2 172 €**
+-   Number of articles: **1 423**
+-   Total expenditure: **3 143 979 €**
+-   Average fee: **2 209 €**
 -   Median fee: **2 200 €**
--   Share of articles with no fees: **0.75 %**
+-   Share of articles with no fees: **0.63 %**
 
 Hybrid OA and APC costs per institution (note that both delivering and
 non-delivering institutions are included):
@@ -1065,26 +1120,6 @@ Share of articles w/o fee (%)
 <tbody>
 <tr>
 <td style="text-align:left;">
-Borås University College
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1 950
-</td>
-<td style="text-align:right;">
-1 950
-</td>
-<td style="text-align:right;">
-1 950
-</td>
-<td style="text-align:right;">
-0
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Chalmers University of Technology
 </td>
 <td style="text-align:right;">
@@ -1105,19 +1140,19 @@ Chalmers University of Technology
 </tr>
 <tr>
 <td style="text-align:left;">
-Dalarna University College
+Dalarna University
 </td>
 <td style="text-align:right;">
-27
+40
 </td>
 <td style="text-align:right;">
-65 112
+95 962
 </td>
 <td style="text-align:right;">
-2 412
+2 399
 </td>
 <td style="text-align:right;">
-2 519
+2 435
 </td>
 <td style="text-align:right;">
 0
@@ -1148,19 +1183,19 @@ Karolinska Institutet
 KTH Royal Institute of Technology
 </td>
 <td style="text-align:right;">
-146
+183
 </td>
 <td style="text-align:right;">
-250 970
+326 184
 </td>
 <td style="text-align:right;">
-1 719
+1 782
 </td>
 <td style="text-align:right;">
 1 848
 </td>
 <td style="text-align:right;">
-5
+4
 </td>
 </tr>
 <tr>
@@ -1325,19 +1360,19 @@ Umeå University
 </tr>
 <tr>
 <td style="text-align:left;">
-University College West
+University of Borås
 </td>
 <td style="text-align:right;">
-4
+1
 </td>
 <td style="text-align:right;">
-8 395
+1 950
 </td>
 <td style="text-align:right;">
-2 099
+1 950
 </td>
 <td style="text-align:right;">
-2 022
+1 950
 </td>
 <td style="text-align:right;">
 0
@@ -1365,19 +1400,39 @@ University of Gothenburg
 </tr>
 <tr>
 <td style="text-align:left;">
+University West
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+8 395
+</td>
+<td style="text-align:right;">
+2 099
+</td>
+<td style="text-align:right;">
+2 022
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Uppsala University
 </td>
 <td style="text-align:right;">
-26
+203
 </td>
 <td style="text-align:right;">
-53 226
+493 720
 </td>
 <td style="text-align:right;">
-2 047
+2 432
 </td>
 <td style="text-align:right;">
-2 132
+2 429
 </td>
 <td style="text-align:right;">
 0
@@ -1388,13 +1443,13 @@ Uppsala University
 Örebro University
 </td>
 <td style="text-align:right;">
-48
+46
 </td>
 <td style="text-align:right;">
-96 368
+91 968
 </td>
 <td style="text-align:right;">
-2 008
+1 999
 </td>
 <td style="text-align:right;">
 2 150
@@ -1436,6 +1491,28 @@ Taylor & Francis
 </tr>
 <tr>
 <td style="text-align:left;">
+Proceedings of the National Academy of Sciences
+</td>
+<td style="text-align:left;">
+National Academy of Sciences
+</td>
+<td style="text-align:right;">
+14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Acta Paediatrica
+</td>
+<td style="text-align:left;">
+Wiley
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Science of The Total Environment
 </td>
 <td style="text-align:left;">
@@ -1454,17 +1531,6 @@ Royal Society of Chemistry (RSC)
 </td>
 <td style="text-align:right;">
 11
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Acta Paediatrica
-</td>
-<td style="text-align:left;">
-Wiley
-</td>
-<td style="text-align:right;">
-10
 </td>
 </tr>
 <tr>
@@ -1491,6 +1557,17 @@ Royal Society of Chemistry (RSC)
 </tr>
 <tr>
 <td style="text-align:left;">
+Journal of the American Chemical Society
+</td>
+<td style="text-align:left;">
+American Chemical Society (ACS)
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Journal of the Electrochemical Society
 </td>
 <td style="text-align:left;">
@@ -1511,28 +1588,6 @@ Royal Society of Chemistry (RSC)
 9
 </td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Proceedings of the National Academy of Sciences
-</td>
-<td style="text-align:left;">
-National Academy of Sciences
-</td>
-<td style="text-align:right;">
-9
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Urban Forestry & Urban Greening
-</td>
-<td style="text-align:left;">
-Elsevier
-</td>
-<td style="text-align:right;">
-8
-</td>
-</tr>
 </tbody>
 </table>
 OA articles in offset deals
@@ -1543,7 +1598,7 @@ a license fee. The dataset covers the following data on offset deal
 articles:
 
 -   Publishers with current offset deals: **Springer**
--   Number of articles: **1 927**
+-   Number of articles: **3 473**
 
 The following institutions have contributed to offset deals.
 
@@ -1564,15 +1619,7 @@ Articles
 Blekinge Institute of Technology
 </td>
 <td style="text-align:right;">
-10
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Borås University College
-</td>
-<td style="text-align:right;">
-8
+22
 </td>
 </tr>
 <tr>
@@ -1580,172 +1627,12 @@ Borås University College
 Chalmers University of Technology
 </td>
 <td style="text-align:right;">
-110
+199
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Dalarna University College
-</td>
-<td style="text-align:right;">
-3
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Gävle University College
-</td>
-<td style="text-align:right;">
-8
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Halmstad University College
-</td>
-<td style="text-align:right;">
-6
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Institute Mittag-Leffler
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Jönköping University Foundation
-</td>
-<td style="text-align:right;">
-10
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Karlstad University
-</td>
-<td style="text-align:right;">
-21
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Karolinska Institutet
-</td>
-<td style="text-align:right;">
-212
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Kristianstad University College
-</td>
-<td style="text-align:right;">
-14
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-KTH Royal Institute of Technology
-</td>
-<td style="text-align:right;">
-145
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Linköping University
-</td>
-<td style="text-align:right;">
-118
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Linnaeus University
-</td>
-<td style="text-align:right;">
-33
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Luleå University of Technology
-</td>
-<td style="text-align:right;">
-54
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Lund University
-</td>
-<td style="text-align:right;">
-290
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Malmö University
-</td>
-<td style="text-align:right;">
-17
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Medical Products Agency
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Mid Sweden University
-</td>
-<td style="text-align:right;">
-12
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Mälardalen University College
-</td>
-<td style="text-align:right;">
-18
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Skövde University College
-</td>
-<td style="text-align:right;">
-6
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Stockholm School of Economics
-</td>
-<td style="text-align:right;">
-6
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Stockholm University
-</td>
-<td style="text-align:right;">
-137
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Swedish Defence Research Agency
+Dalarna University
 </td>
 <td style="text-align:right;">
 5
@@ -1753,10 +1640,162 @@ Swedish Defence Research Agency
 </tr>
 <tr>
 <td style="text-align:left;">
+Halmstad University
+</td>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Institute Mittag-Leffler
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Jönköping University
+</td>
+<td style="text-align:right;">
+32
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Karlstad University
+</td>
+<td style="text-align:right;">
+36
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Karolinska Institutet
+</td>
+<td style="text-align:right;">
+400
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kristianstad University
+</td>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+KTH Royal Institute of Technology
+</td>
+<td style="text-align:right;">
+278
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Linköping University
+</td>
+<td style="text-align:right;">
+204
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Linnaeus University
+</td>
+<td style="text-align:right;">
+58
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Luleå University of Technology
+</td>
+<td style="text-align:right;">
+94
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lund University
+</td>
+<td style="text-align:right;">
+505
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Malmö University
+</td>
+<td style="text-align:right;">
+31
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Medical Products Agency
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mid Sweden University
+</td>
+<td style="text-align:right;">
+19
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mälardalen University
+</td>
+<td style="text-align:right;">
+34
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Public Health Agency of Sweden
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stockholm School of Economics
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stockholm University
+</td>
+<td style="text-align:right;">
+244
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Swedish Defence Research Agency
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Swedish Museum of Natural History
 </td>
 <td style="text-align:right;">
-11
+17
 </td>
 </tr>
 <tr>
@@ -1764,7 +1803,7 @@ Swedish Museum of Natural History
 Swedish National Road and Transport Research Institute
 </td>
 <td style="text-align:right;">
-1
+4
 </td>
 </tr>
 <tr>
@@ -1772,7 +1811,7 @@ Swedish National Road and Transport Research Institute
 Swedish School of Sport and Health Sciences
 </td>
 <td style="text-align:right;">
-1
+4
 </td>
 </tr>
 <tr>
@@ -1780,15 +1819,15 @@ Swedish School of Sport and Health Sciences
 Swedish University of Agricultural Sciences
 </td>
 <td style="text-align:right;">
-99
+185
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Södertörns University College
+Södertörns University
 </td>
 <td style="text-align:right;">
-7
+16
 </td>
 </tr>
 <tr>
@@ -1796,15 +1835,15 @@ Södertörns University College
 Umeå University
 </td>
 <td style="text-align:right;">
-118
+205
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-University College West
+University of Borås
 </td>
 <td style="text-align:right;">
-14
+19
 </td>
 </tr>
 <tr>
@@ -1812,7 +1851,31 @@ University College West
 University of Gothenburg
 </td>
 <td style="text-align:right;">
-196
+331
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University of Gävle
+</td>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University of Skövde
+</td>
+<td style="text-align:right;">
+14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University West
+</td>
+<td style="text-align:right;">
+30
 </td>
 </tr>
 <tr>
@@ -1820,7 +1883,7 @@ University of Gothenburg
 Uppsala University
 </td>
 <td style="text-align:right;">
-198
+355
 </td>
 </tr>
 <tr>
@@ -1828,7 +1891,15 @@ Uppsala University
 Örebro University
 </td>
 <td style="text-align:right;">
-37
+61
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+1
 </td>
 </tr>
 </tbody>
@@ -1853,46 +1924,24 @@ Nr of articles
 <tbody>
 <tr>
 <td style="text-align:left;">
-Diabetologia
-</td>
-<td style="text-align:left;">
-Springer
-</td>
-<td style="text-align:right;">
-24
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Knee Surgery, Sports Traumatology, Arthroscopy
 </td>
 <td style="text-align:left;">
 Springer
 </td>
 <td style="text-align:right;">
-24
+43
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Environmental Science and Pollution Research
+Diabetologia
 </td>
 <td style="text-align:left;">
 Springer
 </td>
 <td style="text-align:right;">
-21
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-World Journal of Surgery
-</td>
-<td style="text-align:left;">
-Springer
-</td>
-<td style="text-align:right;">
-19
+38
 </td>
 </tr>
 <tr>
@@ -1903,29 +1952,29 @@ Cellulose
 Springer
 </td>
 <td style="text-align:right;">
-17
+36
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Ambio
+Environmental Science and Pollution Research
 </td>
 <td style="text-align:left;">
 Springer
 </td>
 <td style="text-align:right;">
-15
+34
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Breast Cancer Research and Treatment
+World Journal of Surgery
 </td>
 <td style="text-align:left;">
 Springer
 </td>
 <td style="text-align:right;">
-15
+31
 </td>
 </tr>
 <tr>
@@ -1936,51 +1985,51 @@ European Journal of Clinical Pharmacology
 Springer
 </td>
 <td style="text-align:right;">
-15
+28
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Metallurgical and Materials Transactions B
+Ambio
 </td>
 <td style="text-align:left;">
 Springer
 </td>
 <td style="text-align:right;">
-15
+26
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Acta Neurochirurgica
+The International Journal of Advanced Manufacturing Technology
 </td>
 <td style="text-align:left;">
 Springer
 </td>
 <td style="text-align:right;">
-14
+25
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-International Archives of Occupational and Environmental Health
+Breast Cancer Research and Treatment
 </td>
 <td style="text-align:left;">
 Springer
 </td>
 <td style="text-align:right;">
-14
+24
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Metallurgical and Materials Transactions A
+Small Business Economics
 </td>
 <td style="text-align:left;">
 Springer
 </td>
 <td style="text-align:right;">
-14
+24
 </td>
 </tr>
 </tbody>

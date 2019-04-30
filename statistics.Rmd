@@ -52,7 +52,7 @@ apc_se_gold <- filter(apc_se, is_hybrid == FALSE)
 apc_se_hybrid <- filter(apc_se, is_hybrid == TRUE)
 
 # Create a offset subset
-apc_se_offset <- read_tsv("data/springer_data.tsv")
+apc_se_offset <- read_tsv("data/springer/Springer_Compact_2016_2018.tsv")
 apc_se_offset <- left_join(x = apc_se_offset, y = code_name, by = c("institution" = "acronym"))
 
 #Create a non-offset subset
@@ -64,7 +64,7 @@ apc_se_hybrid_not_offset <- filter(apc_se_not_offset, is_hybrid == TRUE)
 
 
 #Create vectors for orgs & publishers actively delivering data
-deliv_orgs <- c("kth", "su", "gu", "slu", "du", "ltu", "liu", "mah", "hv", "oru", "lnu")
+deliv_orgs <- c("du", "gu", "his", "hv", "kau", "kth", "liu", "lnu",  "ltu", "mah", "oru", "slu", "su", "uu")
 deliv_publishers <- c("Springer Compact", "Taylor & Francis", "Karger", "IOP Publishing", "Copernicus")
 offset_deals <- c("Springer")
 ```
