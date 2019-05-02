@@ -12,7 +12,7 @@
     ToDo
     -----
     Fix todos
-    Shebang options for multiple environments (chl).
+    Add config-file to handle multiple user environments (chl).
     Handle duplicate entries by skipping second entry and reporting for submission to data supplier
     Future: Clean up processing logic and introduce error handling - Error reporting module?
     Future: Add APC records to Django SwePub database - separate class/module?
