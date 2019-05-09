@@ -12,7 +12,7 @@
     ToDo
     -----
     Fix todos
-    Add config-file to handle multiple user environments (chl).
+    Shebang options for multiple environments (chl).
     Handle duplicate entries by skipping second entry and reporting for submission to data supplier
     Future: Clean up processing logic and introduce error handling - Error reporting module?
     Future: Add APC records to Django SwePub database - separate class/module?
@@ -44,16 +44,15 @@
 ========================================================================================================================
 """
 
-# no need for from_future in 3
 # from __future__ import unicode_literals
-from __future__ import division
+
 
 import argparse
 import codecs
 import locale
 import sys
 import platform
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 import xml.etree.ElementTree as ElementTree
 from subprocess import call
 from openpyxl import load_workbook
@@ -80,14 +79,22 @@ class Config(object):
     """ Keep configuration parameters and processes here to hide clutter from main """
 
     BOOL_VERBOSE = False
+    BOOL_TEST = True
     INT_REPORT_WAIT = 10
 
     # Where do we find and put the data
-    STR_DATA_DIRECTORY = '../../data/' 
+    if BOOL_TEST:
+        STR_DATA_DIRECTORY = '../../test/' 
 
-    STR_APC_FILE_LIST = STR_DATA_DIRECTORY + 'apc_file_list.txt'
+        STR_APC_FILE_LIST = STR_DATA_DIRECTORY + 'test_file_list.txt'
 
-    STR_APC_SE_FILE = '../../data/apc_se.csv' 
+        STR_APC_SE_FILE = '../../test/test_result.csv'
+    else:
+        STR_DATA_DIRECTORY = '../../data/' 
+
+        STR_APC_FILE_LIST = STR_DATA_DIRECTORY + 'apc_file_list.txt'
+
+        STR_APC_SE_FILE = '../../data/apc_se.csv' 
 
     ARG_HELP_STRINGS = {
         "encoding": "The encoding of the CSV file. Setting this argument will " +
@@ -253,7 +260,7 @@ class DataProcessor(object):
         """ """
 
         # Run the DE process for enrichment as a shell command
-        print('\nInfo: Running enrichment process on file {}'.format(str_output_file_name))
+        print(('\nInfo: Running enrichment process on file {}'.format(str_output_file_name)))
         if platform.system() == 'Windows':
             #locale not needed on this windows. "-l", "sv_SE.ISO8859-1" excluded. Call to Cmd need exact paths.
             call(["C:/Python27/python", "C:/Users/camlin/system/openapc-se/python/apc_csv_processing.py", str_output_file_name])
@@ -300,26 +307,26 @@ class DataProcessor(object):
         if args.locale:
             norm = locale.normalize(args.locale)
             if norm != args.locale:
-                print "locale '{}' not found, normalized to '{}'".format(args.locale, norm)
+                print("locale '{}' not found, normalized to '{}'".format(args.locale, norm))
             try:
                 loc = locale.setlocale(locale.LC_ALL, norm)
-                print "Using locale", loc
+                print("Using locale", loc)
             except locale.Error as loce:
-                print "Setting locale to " + norm + " failed: " + loce.message
+                print("Setting locale to " + norm + " failed: " + loce.message)
                 sys.exit()
 
         if args.encoding:
             try:
                 codec = codecs.lookup(args.encoding)
-                print ("Encoding '{}' found in Python's codec collection " +
-                       "as '{}'").format(args.encoding, codec.name)
+                print(("Encoding '{}' found in Python's codec collection " +
+                       "as '{}'").format(args.encoding, codec.name))
                 enc = args.encoding
             except LookupError:
-                print ("Error: '" + args.encoding + "' not found Python's " +
+                print(("Error: '" + args.encoding + "' not found Python's " +
                        "codec collection. Either look for a valid name here " +
                        "(https://docs.python.org/2/library/codecs.html#standard-" +
                        "encodings) or omit this argument to enable automated " +
-                       "guessing.")
+                       "guessing."))
                 sys.exit()
 
         # Read file data into result dictionary object
@@ -327,9 +334,9 @@ class DataProcessor(object):
 
         if result["success"]:
             csv_analysis = result["data"]
-            print csv_analysis
+            print(csv_analysis)
         else:
-            print result["error_msg"]
+            print(result["error_msg"])
             sys.exit()
 
         if enc is None:
@@ -339,24 +346,24 @@ class DataProcessor(object):
         has_header = csv_analysis.has_header
 
         if enc is None:
-            print ("Error: No encoding given for CSV file and automated " +
+            print(("Error: No encoding given for CSV file and automated " +
                    "detection failed. Please set the encoding manually via the " +
-                   "--enc argument")
+                   "--enc argument"))
             sys.exit()
 
-        print '\nProcessing file {}'.format(str_input_file)
+        print('\nProcessing file {}'.format(str_input_file))
         csv_file = open(str_input_file, "r")
 
         reader = oat.UnicodeReader(csv_file, dialect=dialect, encoding=enc)
 
-        first_row = reader.next()
+        first_row = next(reader)
         num_columns = len(first_row)
-        print "\nCSV file has {} columns.".format(num_columns)
+        print("\nCSV file has {} columns.".format(num_columns))
 
         csv_file.seek(0)
         reader = oat.UnicodeReader(csv_file, dialect=dialect, encoding=enc)
 
-        print "\nNOTE:    *** Starting cleaning of file *** \n"
+        print("\nNOTE:    *** Starting cleaning of file *** \n")
 
         cleaned_content = []
         error_messages = []
@@ -371,7 +378,7 @@ class DataProcessor(object):
 
             # Check input if verbose mode
             if args.verbose:
-                print row
+                print(row)
 
             # Skip empty lines
             if not row:
@@ -387,7 +394,7 @@ class DataProcessor(object):
 
             # Skip record if empty APC field
             if not row[2].strip():
-                print('!Warning: No APC given for publication {}. Skipping entry.'.format(' - '.join(row)))
+                print(('!Warning: No APC given for publication {}. Skipping entry.'.format(' - '.join(row))))
                 continue
 
             # First non-empty row should be the header
@@ -401,10 +408,10 @@ class DataProcessor(object):
                 # Clean the DOI before continuing
                 str_doi = self._clean_doi(row[3].strip())
                 if str_doi.lower() in self.lst_master_dois:
-                    print(u'Info: Skipping DOI present in master file: {}'. format(row[3].strip().lower()))
+                    print(('Info: Skipping DOI present in master file: {}'. format(row[3].strip().lower())))
                     continue
             else:
-                print('!Warning: No DOI found: {}'.format(' - '.join(row)))
+                print(('!Warning: No DOI found: {}'.format(' - '.join(row))))
                 str_doi = ''
 
             current_row = []
@@ -436,14 +443,14 @@ class DataProcessor(object):
 
                 # Handle hybrid flag true/false
                 if col_number == 5:
-                    if csv_column.lower() == u'sant':
-                        csv_column = u'TRUE'
-                    elif csv_column.lower() == u'falskt':
-                        csv_column = u'FALSE'
-                    elif csv_column == u'true':
-                        csv_column = u'TRUE'
-                    elif csv_column == u'false':
-                        csv_column = u'FALSE'
+                    if csv_column.lower() == 'sant':
+                        csv_column = 'TRUE'
+                    elif csv_column.lower() == 'falskt':
+                        csv_column = 'FALSE'
+                    elif csv_column == 'true':
+                        csv_column = 'TRUE'
+                    elif csv_column == 'false':
+                        csv_column = 'FALSE'
 
                 # Publisher name normalisation, use map or send DOI for CrossRef lookup
                 if col_number == 6 and csv_column and str_doi:
@@ -457,7 +464,7 @@ class DataProcessor(object):
 
             # Check output if verbose mode
             if args.verbose:
-                print current_row
+                print(current_row)
 
             cleaned_content.append(current_row)
 
@@ -468,7 +475,7 @@ class DataProcessor(object):
         else:
             oat.print_r("There were errors during the cleaning process:\n")
             for msg in error_messages:
-                print msg + "\n"
+                print(msg + "\n")
 
         # Write new publisher names to file
         obj_publisher_normaliser.write_new_publisher_name_map()
@@ -495,64 +502,64 @@ class DataProcessor(object):
 
         # Remove any non-ascii characters. Alternative (faster?): re.sub(r'[^\x00-\x7F]','', str_doi)
         str_doi = ''.join([i for i in str_doi if ord(i) < 128])
-        str_doi = str_doi.replace(u'?', u'')
-        str_doi = str_doi.replace(u'\u200b', u'')
+        str_doi = str_doi.replace('?', '')
+        str_doi = str_doi.replace('\u200b', '')
 
-        str_doi = str_doi.replace(u'1o.', u'10.', 1)
-        str_doi = str_doi.replace(u'1O.', u'10.', 1)
+        str_doi = str_doi.replace('1o.', '10.', 1)
+        str_doi = str_doi.replace('1O.', '10.', 1)
 
         # Fix DOI beginning with '10/' instead of '10.'
         if str_doi.find(r'10/') == 0:
-            print('Info: Error in DOI:              {}'.format(str_doi))
+            print(('Info: Error in DOI:              {}'.format(str_doi)))
             str_doi = str_doi.replace(r'10/', r'10.', 1)
-            print('Info: Cleaned DOI:               {}'.format(str_doi))
+            print(('Info: Cleaned DOI:               {}'.format(str_doi)))
             self.doi_error = '{} -> {}'.format(str_doi_original, str_doi)
 
         # Fix DOI beginning with '10,' instead of '10.'
         if str_doi.find(r'10,') == 0:
-            print('Info: Error in DOI:              {}'.format(str_doi))
+            print(('Info: Error in DOI:              {}'.format(str_doi)))
             str_doi = str_doi.replace(r'10,', r'10.', 1)
-            print('Info: Cleaned DOI:               {}'.format(str_doi))
+            print(('Info: Cleaned DOI:               {}'.format(str_doi)))
             self.doi_error = '{} -> {}'.format(str_doi_original, str_doi)
 
         # Fix DOI beginning with '10-' instead of '10.'
         if str_doi.find(r'10-') == 0:
-            print('Info: Error in DOI:              {}'.format(str_doi))
+            print(('Info: Error in DOI:              {}'.format(str_doi)))
             str_doi = str_doi.replace(r'10-', r'10.', 1)
-            print('Info: Cleaned DOI:               {}'.format(str_doi))
+            print(('Info: Cleaned DOI:               {}'.format(str_doi)))
             self.doi_error = '{} -> {}'.format(str_doi_original, str_doi)
 
         # Fix DOI beginning with '19.' instead of '10.'
         if str_doi.find(r'19.') == 0:
-            print('Info: Error in DOI:              {}'.format(str_doi))
+            print(('Info: Error in DOI:              {}'.format(str_doi)))
             str_doi = str_doi.replace(r'19.', r'10.', 1)
-            print('Info: Cleaned DOI:               {}'.format(str_doi))
+            print(('Info: Cleaned DOI:               {}'.format(str_doi)))
             self.doi_error = '{} -> {}'.format(str_doi_original, str_doi)
 
         # Fix DOI beginning with '10.0' instead of '10.1'
         if str_doi.find(r'10.0') == 0:
-            print('Info: Error in DOI:              {}'.format(str_doi))
+            print(('Info: Error in DOI:              {}'.format(str_doi)))
             str_doi = str_doi.replace(r'10.', r'10.1', 1)
-            print('Info: Cleaned DOI:               {}'.format(str_doi))
+            print(('Info: Cleaned DOI:               {}'.format(str_doi)))
             self.doi_error = '{} -> {}'.format(str_doi_original, str_doi)
 
         # If no slash in DOI, it's probably too short
         if '/' not in str_doi:
-            print('Info: Wrong format on DOI: {}'.format(str_doi))
+            print(('Info: Wrong format on DOI: {}'.format(str_doi)))
             self.doi_error = str_doi
             return ''
 
         # Replace hard spaces with ordinary spaces to enable processing
-        str_doi = str_doi.replace(u"\xc2\xa0", " ")
+        str_doi = str_doi.replace("\xc2\xa0", " ")
 
         # Make DOI lowercase for easier processing
         str_doi = str_doi.lower()
 
         # If the DOI starts with '0.' we can assume a lost 1
         if str_doi.find('0.') == 0:
-            print('Info: DOI starting with 0.:      {}'.format(str_doi))
+            print(('Info: DOI starting with 0.:      {}'.format(str_doi)))
             str_doi = '1' + str_doi
-            print('Info: Cleaned DOI:               {}'.format(str_doi))
+            print(('Info: Cleaned DOI:               {}'.format(str_doi)))
             self.doi_error = '{} -> {}'.format(str_doi_original, str_doi)
 
         # Find the place of the starter string '10.'
@@ -560,21 +567,21 @@ class DataProcessor(object):
 
         # If we don't have a '10.' at all, we have a problem, report and return empty string
         if int_doi_start_pos == -1:
-            print('Info: DOI missing 10.:           {}'.format(str_doi))
+            print(('Info: DOI missing 10.:           {}'.format(str_doi)))
             self.doi_error = str_doi
             str_doi = ''
-            print('Info: Cleaned DOI:               {}'.format(str_doi))
+            print(('Info: Cleaned DOI:               {}'.format(str_doi)))
 
         # If DOI don't start with '10.', we need cleaning of beginning of DOI
         if int_doi_start_pos > 0:
-            print('Info: DOI not beginning with 10. : {}'.format(str_doi))
+            print(('Info: DOI not beginning with 10. : {}'.format(str_doi)))
             str_doi = str_doi[int_doi_start_pos:]
-            print('Info: Cleaned DOI:                 {}'.format(str_doi))
+            print(('Info: Cleaned DOI:                 {}'.format(str_doi)))
             self.doi_error = '{} -> {}'.format(str_doi_original, str_doi)
 
         # If we have blanks in the DOI, we have to clean it
         if ' ' in str_doi:
-            print('Info: DOI containing spaces: {}'.format(str_doi))
+            print(('Info: DOI containing spaces: {}'.format(str_doi)))
             lst_doi_parts = str_doi.split()
             # If we have same DOI entered twice, use only the first
             if lst_doi_parts[0] == lst_doi_parts[1]:
@@ -588,7 +595,7 @@ class DataProcessor(object):
             else:
                 str_doi = str_doi.replace(' ', '')
 
-            print('Info: Cleaned DOI:           {}'.format(str_doi))
+            print(('Info: Cleaned DOI:           {}'.format(str_doi)))
             self.doi_error = '{} -> {}'.format(str_doi_original, str_doi)
 
         return str_doi
@@ -598,16 +605,16 @@ class DataProcessor(object):
     # ------------------------------------------------------------------------------------------------------------------
     def write_cleaned_data(self, str_output_file_name, lst_cleaned_content):
 
-        print 'INFO: Writing result to file {}'.format(str_output_file_name)
+        print('INFO: Writing result to file {}'.format(str_output_file_name))
 
         with open(str_output_file_name, 'w') as out:
 
             for lst_line in lst_cleaned_content:
                 if Config.BOOL_VERBOSE:
-                    print lst_line
+                    print(lst_line)
                 if lst_line:
-                    out.write(u'\t'.join(lst_line).encode("utf-8"))
-                    out.write(u'\n')
+                    out.write('\t'.join(lst_line).encode("utf-8"))
+                    out.write('\n')
     # ------------------------------------------------------------------------------------------------------------------
 
     # ------------------------------------------------------------------------------------------------------------------
@@ -631,11 +638,11 @@ class DataProcessor(object):
                     lst_master_file_header = lst_row
                     continue
                 # If we have a DOI
-                if str_doi and str_doi.lower() != u'na':
+                if str_doi and str_doi.lower() != 'na':
                     str_key = str_doi
                 # If no DOI is present
                 else:
-                    print('DOI missing {}'.format(lst_row))
+                    print(('DOI missing {}'.format(lst_row)))
                     # If article URL is present, use that as identifier (16)
                     if len(lst_row) > 16 and lst_row[16].strip():
                         str_key = lst_row[16].strip()
@@ -644,9 +651,9 @@ class DataProcessor(object):
                         str_key = ''
                         for str_column in lst_row:
                             str_key + '.' + str_column
-                    print(u'Info: Custom key: {}'.format(str_key))
+                    print(('Info: Custom key: {}'.format(str_key)))
 
-                if str_key not in lst_master_dois and str_key not in dct_master_data.keys():
+                if str_key not in lst_master_dois and str_key not in list(dct_master_data.keys()):
                     lst_master_dois.append(str_key)
                     dct_master_data[str_key] = lst_row
                 else:
@@ -665,11 +672,11 @@ class DataProcessor(object):
                     continue
 
                 # If we have a DOI
-                if str_doi and str_doi.lower() != u'na':
+                if str_doi and str_doi.lower() != 'na':
                     str_key = str_doi
                 # If no DOI is present
                 else:
-                    print('DOI missing {}'.format(lst_row))
+                    print(('DOI missing {}'.format(lst_row)))
                     # If article URL is present, use that as identifier (16)
                     if len(lst_row) > 16 and lst_row[16].strip():
                         str_key = lst_row[16].strip()
@@ -678,17 +685,17 @@ class DataProcessor(object):
                         str_key = ''
                         for str_column in lst_row:
                             str_key + '.' + str_column
-                    print(u'Info: Custom key: {}'.format(str_key))
+                    print(('Info: Custom key: {}'.format(str_key)))
 
-                if str_key not in dct_master_data.keys():
+                if str_key not in list(dct_master_data.keys()):
                     dct_master_data[str_key] = lst_row
-                    print(u'Info: Added new data {}'.format(u' '.join(lst_row)))
-                    print(u'Info: Key: {}'.format(str_key))
+                    print(('Info: Added new data {}'.format(' '.join(lst_row))))
+                    print(('Info: Key: {}'.format(str_key)))
                     continue
                 else:
-                    print('DOI/Key present {}'.format(str_key))
-                    print('Present:\t{}'.format(dct_master_data[str_key]))
-                    print('New:\t\t{}'.format(lst_row))
+                    print(('DOI/Key present {}'.format(str_key)))
+                    print(('Present:\t{}'.format(dct_master_data[str_key])))
+                    print(('New:\t\t{}'.format(lst_row)))
                     if lst_row == dct_master_data[str_key]:
                         print('info: Data are exactly the same. Skipping new record.')
                         continue
@@ -724,14 +731,14 @@ class DataProcessor(object):
         csvfile.close()
 
         # Make master dictionary to a list and sort it
-        lst_master_data = [lst_row for str_doi, lst_row in dct_master_data.iteritems()]
+        lst_master_data = [lst_row for str_doi, lst_row in dct_master_data.items()]
         lst_master_data.sort()
 
         # Normalise names before writing to file
         lst_master_data = self.normalise_publisher_names(lst_master_data)
 
         # Write the new data to the master file
-        print('\nInfo: Writing result to master file {}\n'.format(str_apc_se_file))
+        print(('\nInfo: Writing result to master file {}\n'.format(str_apc_se_file)))
         with open(str_apc_se_file, 'wb') as csvfile:
             obj_csv_writer = csv.writer(csvfile, delimiter=',', quotechar='"')
             obj_csv_writer.writerow(lst_master_file_header)
@@ -759,17 +766,17 @@ class FileManager(object):
         lst_apc_files = []
         try:
             fp_apc_files = open(str_file_list_file, 'r')
-            print '\n--------------------------------------------------------------------------'
-            print 'Info: Processing files:'
+            print('\n--------------------------------------------------------------------------')
+            print('Info: Processing files:')
             for str_line in fp_apc_files:
                 # Don't process if we have a comment (#) on the line
                 if '#' in str_line:
                     continue
                 lst_apc_files.append(str_line.strip())
-                print str_line.strip()
-            print '---------------------------------------------------------------------------\n'
+                print(str_line.strip())
+            print('---------------------------------------------------------------------------\n')
         except IOError:
-            print 'File list not found in: {}'.format(str_file_list_file)
+            print('File list not found in: {}'.format(str_file_list_file))
             sys.exit()
 
         return lst_apc_files
@@ -824,7 +831,7 @@ class FileManager(object):
                 if col_number > 11:
                     break
                 if cell.value != 'None':
-                    lst_row.append(unicode(cell.value))
+                    lst_row.append(str(cell.value))
                 else:
                     lst_row.append('')
             # print lst_row
@@ -849,7 +856,7 @@ class FileManager(object):
         """
 
         str_apc_se_backup = str_apc_se_file.replace(r'_se.csv', r'_se_backup.csv')  # ../../data/apc_se_backup.csv'
-        print('\nINFO: Making a backup copy of master file: {}\n'.format(str_apc_se_backup))
+        print(('\nINFO: Making a backup copy of master file: {}\n'.format(str_apc_se_backup)))
         if platform.system() == 'Windows':
             copyfile(str_apc_se_file, str_apc_se_backup)
         elif platform.system() == 'Darwin':
@@ -861,7 +868,7 @@ class FileManager(object):
     def copy_enrichment_out(self, str_enriched_file_name):
         """ Copy the output from python/se/out.csv to the organisation directory """
 
-        print('\nCopying python/se/out.csv to {}'.format(str_enriched_file_name))
+        print(('\nCopying python/se/out.csv to {}'.format(str_enriched_file_name)))
         copyfile('out.csv', str_enriched_file_name)
     # ------------------------------------------------------------------------------------------------------------------
 
@@ -871,7 +878,7 @@ class FileManager(object):
         :param str_cleaned_file_name:
         :return:
         """
-        print('\nRemoving temporary file {}'.format(str_cleaned_file_name))
+        print(('\nRemoving temporary file {}'.format(str_cleaned_file_name)))
         call(["rm", str_cleaned_file_name])
 
     # ------------------------------------------------------------------------------------------------------------------
@@ -911,35 +918,35 @@ class UserInterface(object):
     # ------------------------------------------------------------------------------------------------------------------
     def print_record_number(self, int_record_count):
         """ """
-        print 'Record: {}'.format(int_record_count)
+        print('Record: {}'.format(int_record_count))
     # ------------------------------------------------------------------------------------------------------------------
 
     # ------------------------------------------------------------------------------------------------------------------
     def report(self, obj_input_data, obj_publication=None, str_reason=''):
         """ """
-        print str_reason
-        print obj_input_data.__unicode__()
+        print(str_reason)
+        print(obj_input_data.__unicode__())
         if obj_publication:
-            print obj_publication.__unicode__()
+            print(obj_publication.__unicode__())
     # ------------------------------------------------------------------------------------------------------------------
 
     # ------------------------------------------------------------------------------------------------------------------
     def report_and_wait(self, obj_input_data, obj_publication=None, str_reason=''):
         """ """
-        print str_reason
-        print obj_input_data.__unicode__()
+        print(str_reason)
+        print(obj_input_data.__unicode__())
         if obj_publication:
-            print obj_publication.__unicode__()
+            print(obj_publication.__unicode__())
         time.sleep(Config.INT_REPORT_WAIT)
     # ------------------------------------------------------------------------------------------------------------------
 
     # ------------------------------------------------------------------------------------------------------------------
     def report_and_stop(self, obj_input_data, obj_publication=None, str_reason=''):
         """ """
-        print str_reason
-        print obj_input_data.__unicode__()
+        print(str_reason)
+        print(obj_input_data.__unicode__())
         if obj_publication:
-            print obj_publication.__unicode__()
+            print(obj_publication.__unicode__())
         sys.exit('Stopping after report')
     # ------------------------------------------------------------------------------------------------------------------
 
@@ -950,12 +957,12 @@ class UserInterface(object):
         :return: Nothing
         """
         # Print neat divider
-        self.print_divider(u'Input data')
+        self.print_divider('Input data')
         # print(lst_row)
-        print(obj_output_data.__unicode__())
+        print((obj_output_data.__unicode__()))
         # Print neat divider
-        self.print_divider(u'End of record')
-        print(u'')
+        self.print_divider('End of record')
+        print('')
         # return obj_output_data
     # ------------------------------------------------------------------------------------------------------------------
 
@@ -963,10 +970,10 @@ class UserInterface(object):
     def ask_user(self, lst_present_publication, lst_new_publication):
         """ Ask opinion from user and return choice """
 
-        print 'NOTE: Several name choices found. Please chose one alternative.'
-        print 'Present:\t1) {}'.format(' '.join(lst_present_publication))
-        print 'New:\t\t2) {}'.format(' '.join(lst_new_publication))
-        str_choice = raw_input('Choose 1 or [2]:  ')
+        print('NOTE: Several name choices found. Please chose one alternative.')
+        print('Present:\t1) {}'.format(' '.join(lst_present_publication)))
+        print('New:\t\t2) {}'.format(' '.join(lst_new_publication)))
+        str_choice = input('Choose 1 or [2]:  ')
         if str_choice == '1':
             lst_chosen_data = lst_present_publication
         elif str_choice == '2':
@@ -986,10 +993,10 @@ class UserInterface(object):
             :return: Nothing
         """
         if bool_space_before:
-            print
-        print(u'---[{}]---------------------------------------------------------------------------'.format(str_message))
+            print()
+        print(('---[{}]---------------------------------------------------------------------------'.format(str_message)))
         if bool_space_after:
-            print
+            print()
     # ------------------------------------------------------------------------------------------------------------------
 
 # ======================================================================================================================
@@ -1017,35 +1024,35 @@ class PublisherNormaliser(object):
         """ The main procedure to look up publisher name in name map and CrossRef. Calls sub-methods. """
         # Check if we already have this name in the map
         str_publisher_name_lower = str_publisher_name_in.strip().lower()
-        if str_publisher_name_lower in self.dct_publisher_name_map.keys():
+        if str_publisher_name_lower in list(self.dct_publisher_name_map.keys()):
             str_publisher_name_normalised = self.dct_publisher_name_map[str_publisher_name_lower]
             if str_publisher_name_normalised != str_publisher_name_in:
-                print 'NOTE: Name "{}" normalised to "{}"'.format(str_publisher_name_in, str_publisher_name_normalised)
+                print('NOTE: Name "{}" normalised to "{}"'.format(str_publisher_name_in, str_publisher_name_normalised))
             return str_publisher_name_normalised
         elif str_doi:
             # Look up in CrossRef - ToDo: Problem here if HTTP error instead of tuple returned
             dct_crossref_result = self.get_crossref_names(str_doi)
             if dct_crossref_result['error']:
-                print('!ERROR: {}'.format(dct_crossref_result['error_reason']))
-                print 'WARNING: No normalisation of name {} {}'.format(str_publisher_name_in, str_doi)
+                print(('!ERROR: {}'.format(dct_crossref_result['error_reason'])))
+                print('WARNING: No normalisation of name {} {}'.format(str_publisher_name_in, str_doi))
                 return str_publisher_name_in
             else:
                 str_publisher_name_normalised = self.ask_user(str_publisher_name_in, dct_crossref_result)
             return str_publisher_name_normalised
         else:
-            print 'WARNING: No normalisation of name {}'.format(str_publisher_name_in)
+            print('WARNING: No normalisation of name {}'.format(str_publisher_name_in))
             return str_publisher_name_in
     # ------------------------------------------------------------------------------------------------------------------
 
     # ------------------------------------------------------------------------------------------------------------------
     def ask_user(self, str_publisher_name_in, dct_crossref_result):
         """ Ask opinion from user and return choice """
-        print 'NOTE: Several name choices found. Please choose one alternative or enter new suggested name'
-        print '1) {}'.format(str_publisher_name_in)
-        print '2) {}'.format(dct_crossref_result['publisher'])
-        print '3) {}'.format(dct_crossref_result['prefix'])
-        print '4) Enter new preferred name'
-        str_choice = raw_input('Choose [1] or enter new name:  ')
+        print('NOTE: Several name choices found. Please choose one alternative or enter new suggested name')
+        print('1) {}'.format(str_publisher_name_in))
+        print('2) {}'.format(dct_crossref_result['publisher']))
+        print('3) {}'.format(dct_crossref_result['prefix']))
+        print('4) Enter new preferred name')
+        str_choice = input('Choose [1] or enter new name:  ')
         if str_choice == '1':
             str_publisher_name_normalised = str_publisher_name_in.strip()
         elif str_choice == '2':
@@ -1064,9 +1071,9 @@ class PublisherNormaliser(object):
     # ------------------------------------------------------------------------------------------------------------------
     def write_new_publisher_name_map(self):
         """ Write the new name map to file to remember for next processing """
-        print('\nINFO: Updating publisher name normalisation file {}\n'.format(self.STR_PUBLISHER_NAME_MAP_FILE))
+        print(('\nINFO: Updating publisher name normalisation file {}\n'.format(self.STR_PUBLISHER_NAME_MAP_FILE)))
         fp_name_map_file = open(self.STR_PUBLISHER_NAME_MAP_FILE, 'w')
-        for str_key in self.dct_publisher_name_map.keys():
+        for str_key in list(self.dct_publisher_name_map.keys()):
             fp_name_map_file.write('{}\t{}\n'.format(str_key, self.dct_publisher_name_map[str_key]))
         fp_name_map_file.close()
     # ------------------------------------------------------------------------------------------------------------------
@@ -1085,9 +1092,9 @@ class PublisherNormaliser(object):
         )
         url = 'http://data.crossref.org/' + doi
         headers = {"Accept": "application/vnd.crossref.unixsd+xml"}
-        req = urllib2.Request(url, None, headers)
+        req = urllib.request.Request(url, None, headers)
         try:
-            response = urllib2.urlopen(req)
+            response = urllib.request.urlopen(req)
             content_string = response.read()
             root = ElementTree.fromstring(content_string)
             prefix_name_result = root.findall(".//cr_qr:crm-item[@name='prefix-name']",
@@ -1097,11 +1104,11 @@ class PublisherNormaliser(object):
             # return publisher_name_result[0].text, prefix_name_result[0].text
             dct_crossref_lookup_result['publisher'] = publisher_name_result[0].text
             dct_crossref_lookup_result['prefix'] = prefix_name_result[0].text
-        except urllib2.HTTPError as httpe:
+        except urllib.error.HTTPError as httpe:
             dct_crossref_lookup_result['error'] = True
             code = str(httpe.getcode())
             dct_crossref_lookup_result['error_reason'] = "HTTPError: {} - {}".format(code, httpe.reason)
-        except urllib2.URLError as urle:
+        except urllib.error.URLError as urle:
             dct_crossref_lookup_result['error'] = True
             dct_crossref_lookup_result['error_reason'] = "URLError: {}".format(urle.reason)
         except ElementTree.ParseError as etpe:
@@ -1123,10 +1130,10 @@ class CSVColumn(object):
     OW_ASK = 1
     OW_NEVER = 2
 
-    _OW_MSG = (u"\033[91mConflict\033[0m: Existing non-NA value " +
-               u"\033[93m{ov}\033[0m in column \033[93m{name}\033[0m is to be " +
-               u"replaced by new value \033[93m{nv}\033[0m.\nAllow overwrite?\n" +
-               u"1) Yes\n2) Yes, and always replace \033[93m{ov}\033[0m by " +
+    _OW_MSG = ("\033[91mConflict\033[0m: Existing non-NA value " +
+               "\033[93m{ov}\033[0m in column \033[93m{name}\033[0m is to be " +
+               "replaced by new value \033[93m{nv}\033[0m.\nAllow overwrite?\n" +
+               "1) Yes\n2) Yes, and always replace \033[93m{ov}\033[0m by " +
                "\033[93m{nv}\033[0m in this column\n3) Yes, and always " +
                "overwrite in this column\n4) No\n5) No, and never replace " +
                "\033[93m{ov}\033[0m by \033[93m{nv}\033[0m in this " +
@@ -1164,9 +1171,9 @@ class CSVColumn(object):
         msg = CSVColumn._OW_MSG.format(ov=old_value, name=self.column_name,
                                        nv=new_value)
         msg = msg.encode("utf-8")
-        ret = raw_input(msg)
+        ret = input(msg)
         while ret not in ["1", "2", "3", "4", "5", "6"]:
-            ret = raw_input("Please select a number between 1 and 5:")
+            ret = input("Please select a number between 1 and 5:")
         if ret == "1":
             return new_value
         if ret == "2":
