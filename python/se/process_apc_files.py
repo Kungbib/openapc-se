@@ -56,6 +56,7 @@ import urllib.request, urllib.error, urllib.parse
 import xml.etree.ElementTree as ElementTree
 from subprocess import call
 from openpyxl import load_workbook
+from os import path
 from shutil import copyfile #chl
 import unicodecsv as csv
 import time
@@ -66,6 +67,8 @@ if platform.system() == 'Windows':
     sys.path.append('C:/Users/camlin/system/openapc-se')
 elif platform.system() == 'Darwin':
     sys.path.append('/Users/camlin/openapc-se')
+    
+sys.path.append(path.dirname(path.dirname(path.dirname(path.abspath(__file__)))))
         
     # if '/Users/ulfkro/system/swepub' not in sys.path:
       # sys.path.append('/Users/camlin/openapc-se') not in sys.path:
