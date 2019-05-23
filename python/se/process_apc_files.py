@@ -82,7 +82,7 @@ class Config(object):
     """ Keep configuration parameters and processes here to hide clutter from main """
 
     BOOL_VERBOSE = False
-    BOOL_TEST = True
+    BOOL_TEST = False # True
     INT_REPORT_WAIT = 10
 
     # Where do we find and put the data
@@ -266,7 +266,7 @@ class DataProcessor(object):
         print(('\nInfo: Running enrichment process on file {}'.format(str_output_file_name)))
         if platform.system() == 'Windows':
             #locale not needed on this windows. "-l", "sv_SE.ISO8859-1" excluded. Call to Cmd need exact paths.
-            call(["C:/Python27/python", "C:/Users/camlin/system/openapc-se/python/apc_csv_processing.py", str_output_file_name])
+            call(["python", "C:/Users/camlin/system/openapc-se/python/apc_csv_processing.py", str_output_file_name])
         elif platform.system() == 'Darwin':
             call(["../apc_csv_processing.py", "-l", "sv_SE.UTF-8", str_output_file_name])
 
@@ -355,16 +355,17 @@ class DataProcessor(object):
             sys.exit()
 
         print('\nProcessing file {}'.format(str_input_file))
-        csv_file = open(str_input_file, "r")
+        #csv_file = open(str_input_file, "r")
 
-        reader = oat.UnicodeReader(csv_file, dialect=dialect, encoding=enc)
+        #reader = oat.UnicodeReader(csv_file, dialect=dialect, encoding=enc)
+        header, content = oat.get_csv_file_content(str_input_file, enc=enc)
 
-        first_row = next(reader)
-        num_columns = len(first_row)
+        #first_row = next(reader)
+        num_columns = len(header)#first_row)
         print("\nCSV file has {} columns.".format(num_columns))
 
-        csv_file.seek(0)
-        reader = oat.UnicodeReader(csv_file, dialect=dialect, encoding=enc)
+        #csv_file.seek(0)
+        #reader = oat.UnicodeReader(csv_file, dialect=dialect, encoding=enc)
 
         print("\nNOTE:    *** Starting cleaning of file *** \n")
 
@@ -373,7 +374,7 @@ class DataProcessor(object):
 
         row_num = 0
 
-        for row in reader:
+        for row in content:#reader:
 
             row_num += 1
 
@@ -471,7 +472,7 @@ class DataProcessor(object):
 
             cleaned_content.append(current_row)
 
-        csv_file.close()
+       # csv_file.close()
 
         if not error_messages:
             oat.print_g("Metadata cleaning successful, no errors occured\n")
@@ -616,7 +617,8 @@ class DataProcessor(object):
                 if Config.BOOL_VERBOSE:
                     print(lst_line)
                 if lst_line:
-                    out.write('\t'.join(lst_line).encode("utf-8"))
+                    oline = '\t'.join(lst_line)#.encode("utf-8")
+                    out.write(oline)
                     out.write('\n')
     # ------------------------------------------------------------------------------------------------------------------
 
