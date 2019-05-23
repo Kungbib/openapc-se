@@ -54,12 +54,13 @@ import sys
 import platform
 import urllib.request, urllib.error, urllib.parse
 import xml.etree.ElementTree as ElementTree
-from subprocess import call
+import subprocess
 from openpyxl import load_workbook
 from os import path
 from shutil import copyfile #chl
 import unicodecsv as csv
 import time
+import os
 
 # Add path for script environment
 # sys.path.append('/Users/ulfkro/OneDrive/KB-dokument/Open Access/Kostnader/Open APC Sweden/openapc-se')
@@ -84,6 +85,7 @@ class Config(object):
     BOOL_VERBOSE = False
     BOOL_TEST = False # True
     INT_REPORT_WAIT = 10
+    ENRICHMENT_RESULT_FILE = 'out.csv'
 
     # Where do we find and put the data
     if BOOL_TEST:
@@ -185,6 +187,9 @@ def main():
         # Save the file for further processing - Write cleaned data to file
         cob_data_processor.write_cleaned_data(str_output_file_name, lst_cleaned_data)
 
+        # Delete out file before calling the enrichment process. We use this as a way of checking if processing has gone well, i.e. => out file is created
+        cob_file_manager.delete_outfile()
+
         # Run the German enrichment process and copy files
         cob_data_processor.run_enrichment_process(str_output_file_name)
 
@@ -204,6 +209,8 @@ def main():
             print(str_message)
     else:
         print('INFO: No errors during processing.\n')
+
+
 
 # ======================================================================================================================
 
@@ -266,9 +273,14 @@ class DataProcessor(object):
         print(('\nInfo: Running enrichment process on file {}'.format(str_output_file_name)))
         if platform.system() == 'Windows':
             #locale not needed on this windows. "-l", "sv_SE.ISO8859-1" excluded. Call to Cmd need exact paths.
-            call(["python", "C:/Users/camlin/system/openapc-se/python/apc_csv_processing.py", str_output_file_name])
+            #call(["C:/Python27/python", "C:/Users/camlin/system/openapc-se/python/apc_csv_processing.py", str_output_file_name])
+            subprocess.call(["python", "../apc_csv_processing.py",
+                  str_output_file_name])
         elif platform.system() == 'Darwin':
-            call(["../apc_csv_processing.py", "-l", "sv_SE.UTF-8", str_output_file_name])
+            subprocess.call(["../apc_csv_processing.py", "-l", "sv_SE.UTF-8", str_output_file_name])
+
+        if not os.path.exists(Config.ENRICHMENT_RESULT_FILE):
+            raise Exception("Enrichment process failed - no output file ({}) found".format(Config.ENRICHMENT_RESULT_FILE))
 
     # ------------------------------------------------------------------------------------------------------------------
 
@@ -374,7 +386,9 @@ class DataProcessor(object):
 
         row_num = 0
 
-        for row in content:#reader:
+        full_content = header + content
+
+        for row in full_content:#reader:
 
             row_num += 1
 
@@ -870,11 +884,21 @@ class FileManager(object):
     # ------------------------------------------------------------------------------------------------------------------
 
     # ------------------------------------------------------------------------------------------------------------------
+    def delete_outfile(self):
+        """ Delete old out file """
+        if os.path.exists(Config.ENRICHMENT_RESULT_FILE):
+            print('\nDeleting old {} file'.format(Config.ENRICHMENT_RESULT_FILE))
+            os.remove(Config.ENRICHMENT_RESULT_FILE)
+    # ------------------------------------------------------------------------------------------------------------------
+
+
+
+    # ------------------------------------------------------------------------------------------------------------------
     def copy_enrichment_out(self, str_enriched_file_name):
         """ Copy the output from python/se/out.csv to the organisation directory """
 
-        print(('\nCopying python/se/out.csv to {}'.format(str_enriched_file_name)))
-        copyfile('out.csv', str_enriched_file_name)
+        print(('\nCopying python/se/{} to {}'.format(Config.ENRICHMENT_RESULT_FILE, str_enriched_file_name)))
+        copyfile(Config.ENRICHMENT_RESULT_FILE, str_enriched_file_name)
     # ------------------------------------------------------------------------------------------------------------------
 
     # ------------------------------------------------------------------------------------------------------------------
