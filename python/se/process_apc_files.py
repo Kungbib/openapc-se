@@ -77,7 +77,6 @@ sys.path.append(path.dirname(path.dirname(path.dirname(path.abspath(__file__))))
 
 import python.openapc_toolkit as oat
 
-
 # ======================================================================================================================
 class Config(object):
     """ Keep configuration parameters and processes here to hide clutter from main """
@@ -129,22 +128,22 @@ class Config(object):
 
     # ------------------------------------------------------------------------------------------------------------------
     @staticmethod
-    def get_arguments(self):
+    def get_arguments():
 
         parser = argparse.ArgumentParser()
         # parser.add_argument("csv_file", help=self.ARG_HELP_STRINGS["csv_file"])
-        parser.add_argument("-e", "--encoding", help=self.ARG_HELP_STRINGS["encoding"])
+        parser.add_argument("-e", "--encoding", help=Config.ARG_HELP_STRINGS["encoding"])
         parser.add_argument("-v", "--verbose", action="store_true",
-                            help=self.ARG_HELP_STRINGS["verbose"])
-        parser.add_argument("-l", "--locale", help=self.ARG_HELP_STRINGS["locale"])
+                            help=Config.ARG_HELP_STRINGS["verbose"])
+        parser.add_argument("-l", "--locale", help=Config.ARG_HELP_STRINGS["locale"])
         parser.add_argument("-i", "--ignore-header", action="store_true",
-                            help=self.ARG_HELP_STRINGS["headers"])
+                            help=Config.ARG_HELP_STRINGS["headers"])
 
         args = parser.parse_args()
 
         # If we have a request for verbose processing set config parameter to True
         if args.verbose:
-            self.BOOL_VERBOSE = True
+            Config.BOOL_VERBOSE = True
 
         return args
     # ------------------------------------------------------------------------------------------------------------------
@@ -160,7 +159,7 @@ def main():
     # obj_config = Config()
     # Get line arguments
     # args = obj_config.get_arguments()
-    args = Config.get_arguments(Config)
+    args = Config.get_arguments()
 
     # Create a file manager object
     cob_file_manager = FileManager()
@@ -178,14 +177,23 @@ def main():
     for str_input_file_name in lst_apc_files:
         print(lst_apc_files)
         # Create various file names
-        str_input_file_name, str_output_file_name, str_enriched_file_name = cob_file_manager.create_file_names(
+        str_input_file_name, str_output_file_name, str_duplicate_file_name, str_enriched_file_name = cob_file_manager.create_file_names(
             str_input_file_name)
 
         # Read and clean data for one file
-        lst_cleaned_data = cob_data_processor.collect_apc_data(str_input_file_name, args)
+        lst_cleaned_data, lst_duplicate_data = cob_data_processor.collect_apc_data(str_input_file_name, args)
 
         # Save the file for further processing - Write cleaned data to file
         cob_data_processor.write_cleaned_data(str_output_file_name, lst_cleaned_data)
+
+        if len(lst_duplicate_data) != 0:
+            # Save the (cleaned) duplicates to file for inspection
+            lst_duplicate_data.insert(0,lst_cleaned_data[0])
+            cob_data_processor.write_cleaned_data(str_duplicate_file_name, lst_duplicate_data)
+
+            # prompta om man vill fortsätta
+            if not cob_user_interface.ask_continue("Duplicate DOIs were found, check the duplicate file. Do you want to continue?"):
+                sys.exit(1)
 
         # Delete out file before calling the enrichment process. We use this as a way of checking if processing has gone well, i.e. => out file is created
         cob_file_manager.delete_outfile()
@@ -288,19 +296,9 @@ class DataProcessor(object):
     def collect_apc_data(self, str_file_name, args):
         """ Method to collect data from institions suppliced CSV or TSV files """
 
-        # A list for the cleaned data
-        lst_cleaned_data = []
-
-        #print '\nInfo: Processing file: {} \n==================================================== \n'.format(
-        #    str_file_name)
 
         str_input_file_name = Config.STR_DATA_DIRECTORY + str_file_name
-        lst_new_apc_data = self._clean_apc_data(str_input_file_name, args)
-
-        for lst_row in lst_new_apc_data:
-            lst_cleaned_data.append(lst_row)
-
-        return lst_cleaned_data
+        return self._clean_apc_data(str_input_file_name, args)
 
     # ------------------------------------------------------------------------------------------------------------------
 
@@ -382,6 +380,7 @@ class DataProcessor(object):
         print("\nNOTE:    *** Starting cleaning of file *** \n")
 
         cleaned_content = []
+        duplicate_content = []
         error_messages = []
 
         row_num = 0
@@ -434,6 +433,7 @@ class DataProcessor(object):
 
             current_row = []
             col_number = 0
+            is_duplicate = False
 
             # Copy content of columns
             for csv_column in row:
@@ -457,7 +457,7 @@ class DataProcessor(object):
                     if str_doi not in lst_dois_processed:
                         lst_dois_processed.append(str_doi)
                     else:
-                        sys.exit('!Error duplicate DOI {} - Org: {} - Year: {} '.format(str_doi, row[0], row[1]))
+                        is_duplicate = True #sys.exit('!Error duplicate DOI {} - Org: {} - Year: {} '.format(str_doi, row[0], row[1]))
 
                 # Handle hybrid flag true/false
                 if col_number == 5:
@@ -484,7 +484,10 @@ class DataProcessor(object):
             if args.verbose:
                 print(current_row)
 
-            cleaned_content.append(current_row)
+            if is_duplicate:
+                duplicate_content.append(current_row)
+            else:
+                cleaned_content.append(current_row)
 
        # csv_file.close()
 
@@ -498,7 +501,7 @@ class DataProcessor(object):
         # Write new publisher names to file
         obj_publisher_normaliser.write_new_publisher_name_map()
 
-        return cleaned_content
+        return cleaned_content, duplicate_content
 
     # ------------------------------------------------------------------------------------------------------------------
 
@@ -822,7 +825,9 @@ class FileManager(object):
         # Create a name for the final enriched file
         str_enriched_file_name = str_output_file_name.replace('_cleaned.tsv', '_enriched.csv')
 
-        return str_input_file_name, str_output_file_name, str_enriched_file_name
+        str_duplicate_file_name = str_output_file_name.replace('_cleaned.tsv', '_duplicates.csv')
+
+        return str_input_file_name, str_output_file_name, str_duplicate_file_name, str_enriched_file_name
 
     # ------------------------------------------------------------------------------------------------------------------
 
@@ -1010,6 +1015,20 @@ class UserInterface(object):
         else:
             lst_chosen_data = lst_new_publication
         return lst_chosen_data
+    # ------------------------------------------------------------------------------------------------------------------
+
+    # ------------------------------------------------------------------------------------------------------------------
+    def ask_continue(self, msg):
+        """ Ask opinion from user and return choice """
+
+        print(msg)
+        print('Do you want to continue?')
+        str_choice = input('Choose [y] or n:  ')
+        str_choice = str_choice.lower()
+
+        return str_choice != "n"
+
+
     # ------------------------------------------------------------------------------------------------------------------
 
     # ------------------------------------------------------------------------------------------------------------------
