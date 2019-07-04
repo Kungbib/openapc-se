@@ -33,6 +33,7 @@
 # oru/original_data/apc_oru_2015_2017_dois.tsv
 # oru/apc_oru_2015_2017_20180614_dois.tsv
 # oru/original_data/apc_oru_2015_2017_non_dois.tsv
+oru/apc_oru_2018_dois.tsv
 # slu/apc_slu_2014-2016.tsv
 # slu/apc_slu_2014-2017.tsv
 # su/apc_su_2015.tsv
