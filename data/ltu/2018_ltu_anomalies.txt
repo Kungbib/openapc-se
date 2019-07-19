@@ -2,3 +2,10 @@ ltu
 
 unclear APC, not marked for is_hybrid. Journal seems to charge authors but is subscription:
 10.14708/am.v11i0.1247
+
+doi not found w crossref:
+10.5348/100038d05so2018oa
+10.5281/zenodo.1297161
+
+book chapter:
+10.5772/intechopen.80468

@@ -1,17 +1,15 @@
+import csv
 import pytest
 import sys
 import platform
 
 # Add path for script environment
-# sys.path.append('/Users/ulfkro/OneDrive/KB-dokument/Open Access/Kostnader/Open APC Sweden/openapc-se')
+
 if platform.system() == 'Windows':
     sys.path.append('C:/Users/camlin/system/openapc-se')
 elif platform.system() == 'Darwin':
     sys.path.append('/Users/camlin/openapc-se')
-        
-    # if '/Users/ulfkro/system/swepub' not in sys.path:
-      # sys.path.append('/Users/camlin/openapc-se') not in sys.path:
-        #  sys.path.append('/Users/ulfkro/OneDrive/KB-dokument/Open Access/Kostnader/Open APC Sweden/openapc-se_development')
+
 
 #from .. 
 import python.openapc_toolkit as oat
@@ -110,9 +108,11 @@ issn_dict = {}
 issn_p_dict = {}
 issn_e_dict = {}
 
-for file_name in ["../../data/apc_se.csv"]:
+# for file_name in ["../../data/apc_se.csv"]:
+for file_name in ["data/apc_se.csv"]:
     csv_file = open(file_name, "r")
-    reader = oat.UnicodeDictReader(csv_file)
+    # reader = oat.UnicodeDictReader(csv_file)
+    reader = csv.DictReader(csv_file)
     line = 2
     for row in reader:
         test_apc = True

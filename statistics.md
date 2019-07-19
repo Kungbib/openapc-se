@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 Open APC Sweden - Statistics
 ============================
 
@@ -150,8 +155,8 @@ Open Access Articles (Total: "gold", "hybrid" and "offset")
 
 At the moment, the dataset contains the following information:
 
--   Number of articles: **6 207**
--   Total expenditure: **11 495 520 €**
+-   Number of articles: **7 108**
+-   Total expenditure: **13 160 851 €**
 
 Articles and APC costs per institution (note that both delivering and
 non-delivering institutions are included):
@@ -308,10 +313,10 @@ Linnaeus University
 Luleå University of Technology
 </td>
 <td style="text-align:right;">
-134
+241
 </td>
 <td style="text-align:right;">
-238 696
+385 548
 </td>
 </tr>
 <tr>
@@ -330,10 +335,10 @@ Lund University
 Malmö University
 </td>
 <td style="text-align:right;">
-102
+104
 </td>
 <td style="text-align:right;">
-158 309
+160 097
 </td>
 </tr>
 <tr>
@@ -385,10 +390,10 @@ Stockholm School of Economics
 Stockholm University
 </td>
 <td style="text-align:right;">
-707
+1 040
 </td>
 <td style="text-align:right;">
-1 378 610
+1 988 434
 </td>
 </tr>
 <tr>
@@ -429,10 +434,10 @@ Swedish National Road and Transport Research Institute
 Swedish School of Sport and Health Sciences
 </td>
 <td style="text-align:right;">
-1
+11
 </td>
 <td style="text-align:right;">
-2 200
+21 086
 </td>
 </tr>
 <tr>
@@ -484,10 +489,10 @@ University of Borås
 University of Gothenburg
 </td>
 <td style="text-align:right;">
-753
+1 160
 </td>
 <td style="text-align:right;">
-1 410 946
+2 228 451
 </td>
 </tr>
 <tr>
@@ -539,10 +544,10 @@ Uppsala University
 Örebro University
 </td>
 <td style="text-align:right;">
-149
+191
 </td>
 <td style="text-align:right;">
-261 636
+332 113
 </td>
 </tr>
 </tbody>
@@ -553,11 +558,11 @@ Articles in Open Access journals ("gold OA"), offset articles excluded
 At the moment, the dataset contains the following information on
 articles in open access journals:
 
--   Number of articles: **2 633**
--   Total expenditure: **3 562 161 €**
--   Average fee: **1 353 €**
--   Median fee: **1 346 €**
--   Share of articles with no fees: **3.9 %**
+-   Number of articles: **2 944**
+-   Total expenditure: **4 006 435 €**
+-   Average fee: **1 361 €**
+-   Median fee: **1 345 €**
+-   Share of articles with no fees: **3.5 %**
 
 Gold OA and APC costs per institution (note that both delivering and
 non-delivering institutions are included):
@@ -731,16 +736,16 @@ Linnaeus University
 Luleå University of Technology
 </td>
 <td style="text-align:right;">
-48
+123
 </td>
 <td style="text-align:right;">
-52 360
+137 863
 </td>
 <td style="text-align:right;">
-1 091
+1 121
 </td>
 <td style="text-align:right;">
-1 174
+1 184
 </td>
 <td style="text-align:right;">
 0
@@ -771,13 +776,13 @@ Lund University
 Malmö University
 </td>
 <td style="text-align:right;">
-59
+61
 </td>
 <td style="text-align:right;">
-69 506
+71 294
 </td>
 <td style="text-align:right;">
-1 178
+1 169
 </td>
 <td style="text-align:right;">
 1 305
@@ -791,16 +796,36 @@ Malmö University
 Stockholm University
 </td>
 <td style="text-align:right;">
-271
+468
 </td>
 <td style="text-align:right;">
-411 737
+712 622
 </td>
 <td style="text-align:right;">
-1 519
+1 523
 </td>
 <td style="text-align:right;">
 1 350
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Swedish School of Sport and Health Sciences
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+11 776
+</td>
+<td style="text-align:right;">
+1 682
+</td>
+<td style="text-align:right;">
+1 364
 </td>
 <td style="text-align:right;">
 0
@@ -931,19 +956,19 @@ Uppsala University
 Örebro University
 </td>
 <td style="text-align:right;">
-64
+94
 </td>
 <td style="text-align:right;">
-83 868
+128 190
 </td>
 <td style="text-align:right;">
-1 310
+1 364
 </td>
 <td style="text-align:right;">
-1 342
+1 350
 </td>
 <td style="text-align:right;">
-2
+1
 </td>
 </tr>
 </tbody>
@@ -974,7 +999,7 @@ PLOS ONE
 Public Library of Science (PLoS)
 </td>
 <td style="text-align:right;">
-298
+318
 </td>
 </tr>
 <tr>
@@ -985,7 +1010,40 @@ Scientific Reports
 Springer
 </td>
 <td style="text-align:right;">
-216
+237
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sustainability
+</td>
+<td style="text-align:left;">
+MDPI
+</td>
+<td style="text-align:right;">
+53
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nature Communications
+</td>
+<td style="text-align:left;">
+Springer
+</td>
+<td style="text-align:right;">
+49
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ecology and Evolution
+</td>
+<td style="text-align:left;">
+Wiley
+</td>
+<td style="text-align:right;">
+46
 </td>
 </tr>
 <tr>
@@ -1001,6 +1059,17 @@ BioMed Central
 </tr>
 <tr>
 <td style="text-align:left;">
+Frontiers in Psychology
+</td>
+<td style="text-align:left;">
+Frontiers
+</td>
+<td style="text-align:right;">
+44
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -1008,17 +1077,6 @@ Dagstuhl Research Online Publication Server
 </td>
 <td style="text-align:right;">
 42
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Ecology and Evolution
-</td>
-<td style="text-align:left;">
-Wiley
-</td>
-<td style="text-align:right;">
-41
 </td>
 </tr>
 <tr>
@@ -1034,46 +1092,24 @@ Taylor & Francis
 </tr>
 <tr>
 <td style="text-align:left;">
-Sustainability
-</td>
-<td style="text-align:left;">
-MDPI
-</td>
-<td style="text-align:right;">
-40
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Nature Communications
-</td>
-<td style="text-align:left;">
-Springer
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Frontiers in Psychology
-</td>
-<td style="text-align:left;">
-Frontiers
-</td>
-<td style="text-align:right;">
-33
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Energies
 </td>
 <td style="text-align:left;">
 MDPI
 </td>
 <td style="text-align:right;">
-30
+32
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+International Journal of Environmental Research and Public Health
+</td>
+<td style="text-align:left;">
+MDPI
+</td>
+<td style="text-align:right;">
+32
 </td>
 </tr>
 </tbody>
