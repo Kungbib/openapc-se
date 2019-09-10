@@ -1,0 +1,7 @@
+2018 slu anomalies
+
+10.1007/s10818-014-9183-yc	correct (last c):10.1007/s10818-014-9183-y
+10.1186/1751-0147-55-50m	correct (last m):10.1186/1751-0147-55-50
+10.4172/antimicro.1000107	no valid DOI according to DOI resolver (where do OMICS get their DOIs?)
+1016/j.biortech.2017.08.213	10. missing
+wiley ecosphere jacobson size-dependent prey availability affects diet	correct doi: 10.1002/ecs2.2081
