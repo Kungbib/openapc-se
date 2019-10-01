@@ -1,8 +1,3 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
 Open APC Sweden - Statistics
 ============================
 
@@ -99,6 +94,7 @@ Uppsala University
 </tr>
 </tbody>
 </table>
+
 A number of publishers have also supplied Open APC Sweden with data:
 
 <table>
@@ -137,6 +133,7 @@ Copernicus
 </tr>
 </tbody>
 </table>
+
 This publisher-supplied data leads to publishing costs being reported
 for a number of Swedish research institutions which not yet have
 supplied us with data actively.
@@ -145,18 +142,18 @@ Dataset
 -------
 
 Information on both open access journal articles, open access
-publication of articles in toll-access journals ("hybrid") and articles
+publication of articles in toll-access journals (“hybrid”) and articles
 published within current Swedish offset deals are provided. You may view
 the dataset at the [project page in
 GitHub](https://github.com/Kungbib/openapc-se/blob/master/data/apc_se.csv).
 
-Open Access Articles (Total: "gold", "hybrid" and "offset")
+Open Access Articles (Total: “gold”, “hybrid” and “offset”)
 -----------------------------------------------------------
 
 At the moment, the dataset contains the following information:
 
--   Number of articles: **7 108**
--   Total expenditure: **13 160 851 €**
+-   Number of articles: **7 427**
+-   Total expenditure: **13 732 694 €**
 
 Articles and APC costs per institution (note that both delivering and
 non-delivering institutions are included):
@@ -291,10 +288,10 @@ KTH Royal Institute of Technology
 Linköping University
 </td>
 <td style="text-align:right;">
-431
+537
 </td>
 <td style="text-align:right;">
-790 827
+978 100
 </td>
 </tr>
 <tr>
@@ -445,10 +442,10 @@ Swedish School of Sport and Health Sciences
 Swedish University of Agricultural Sciences
 </td>
 <td style="text-align:right;">
-774
+987
 </td>
 <td style="text-align:right;">
-1 333 735
+1 718 305
 </td>
 </tr>
 <tr>
@@ -552,17 +549,18 @@ Uppsala University
 </tr>
 </tbody>
 </table>
-Articles in Open Access journals ("gold OA"), offset articles excluded
+
+Articles in Open Access journals (“gold OA”), offset articles excluded
 ----------------------------------------------------------------------
 
 At the moment, the dataset contains the following information on
 articles in open access journals:
 
--   Number of articles: **2 944**
--   Total expenditure: **4 006 435 €**
--   Average fee: **1 361 €**
--   Median fee: **1 345 €**
--   Share of articles with no fees: **3.5 %**
+-   Number of articles: **3 389**
+-   Total expenditure: **4 684 566 €**
+-   Average fee: **1 382 €**
+-   Median fee: **1 351 €**
+-   Share of articles with no fees: **3.2 %**
 
 Gold OA and APC costs per institution (note that both delivering and
 non-delivering institutions are included):
@@ -696,16 +694,16 @@ KTH Royal Institute of Technology
 Linköping University
 </td>
 <td style="text-align:right;">
-244
+323
 </td>
 <td style="text-align:right;">
-386 993
+515 389
 </td>
 <td style="text-align:right;">
-1 586
+1 596
 </td>
 <td style="text-align:right;">
-1 370
+1 413
 </td>
 <td style="text-align:right;">
 1
@@ -836,16 +834,16 @@ Swedish School of Sport and Health Sciences
 Swedish University of Agricultural Sciences
 </td>
 <td style="text-align:right;">
-455
+597
 </td>
 <td style="text-align:right;">
-595 056
+794 487
 </td>
 <td style="text-align:right;">
-1 308
+1 331
 </td>
 <td style="text-align:right;">
-1 326
+1 334
 </td>
 <td style="text-align:right;">
 1
@@ -876,19 +874,19 @@ Umeå University
 University of Gothenburg
 </td>
 <td style="text-align:right;">
-359
+583
 </td>
 <td style="text-align:right;">
-500 688
+850 992
 </td>
 <td style="text-align:right;">
-1 395
+1 460
 </td>
 <td style="text-align:right;">
-1 398
+1 406
 </td>
 <td style="text-align:right;">
-6
+4
 </td>
 </tr>
 <tr>
@@ -973,6 +971,7 @@ Uppsala University
 </tr>
 </tbody>
 </table>
+
 The following diagram shows the most used open access journals for
 publishing gold articles.
 
@@ -999,7 +998,7 @@ PLOS ONE
 Public Library of Science (PLoS)
 </td>
 <td style="text-align:right;">
-318
+363
 </td>
 </tr>
 <tr>
@@ -1010,40 +1009,7 @@ Scientific Reports
 Springer
 </td>
 <td style="text-align:right;">
-237
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Sustainability
-</td>
-<td style="text-align:left;">
-MDPI
-</td>
-<td style="text-align:right;">
-53
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Nature Communications
-</td>
-<td style="text-align:left;">
-Springer
-</td>
-<td style="text-align:right;">
-49
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Ecology and Evolution
-</td>
-<td style="text-align:left;">
-Wiley
-</td>
-<td style="text-align:right;">
-46
+277
 </td>
 </tr>
 <tr>
@@ -1054,7 +1020,40 @@ Acta Veterinaria Scandinavica
 BioMed Central
 </td>
 <td style="text-align:right;">
-45
+59
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nature Communications
+</td>
+<td style="text-align:left;">
+Springer
+</td>
+<td style="text-align:right;">
+58
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sustainability
+</td>
+<td style="text-align:left;">
+MDPI
+</td>
+<td style="text-align:right;">
+58
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ecology and Evolution
+</td>
+<td style="text-align:left;">
+Wiley
+</td>
+<td style="text-align:right;">
+57
 </td>
 </tr>
 <tr>
@@ -1065,7 +1064,7 @@ Frontiers in Psychology
 Frontiers
 </td>
 <td style="text-align:right;">
-44
+49
 </td>
 </tr>
 <tr>
@@ -1092,13 +1091,13 @@ Taylor & Francis
 </tr>
 <tr>
 <td style="text-align:left;">
-Energies
+BMJ Open
 </td>
 <td style="text-align:left;">
-MDPI
+BMJ
 </td>
 <td style="text-align:right;">
-32
+37
 </td>
 </tr>
 <tr>
@@ -1109,16 +1108,17 @@ International Journal of Environmental Research and Public Health
 MDPI
 </td>
 <td style="text-align:right;">
-32
+37
 </td>
 </tr>
 </tbody>
 </table>
-OA articles in subscription journals ("hybrid OA"), offset articles excluded
+
+OA articles in subscription journals (“hybrid OA”), offset articles excluded
 ----------------------------------------------------------------------------
 
 In many subscription journals some of the articles are open access after
-a fee has been paid. This model is called "hybrid open access". The
+a fee has been paid. This model is called “hybrid open access”. The
 dataset covers the following data on hybrid open access articles:
 
 -   Number of articles: **1 423**
@@ -1496,6 +1496,7 @@ Uppsala University
 </tr>
 </tbody>
 </table>
+
 The following diagram shows the most used subscription journals for
 publishing hybrids.
 
@@ -1626,6 +1627,7 @@ Royal Society of Chemistry (RSC)
 </tr>
 </tbody>
 </table>
+
 OA articles in offset deals
 ---------------------------
 
@@ -1940,6 +1942,7 @@ NA
 </tr>
 </tbody>
 </table>
+
 The following diagram shows the most used journals within the offset
 deals.
 
@@ -2070,6 +2073,7 @@ Springer
 </tr>
 </tbody>
 </table>
+
 ![](figure/offset_jrnls.png)
 
 Distribution over publishers (offset deals excluded)
