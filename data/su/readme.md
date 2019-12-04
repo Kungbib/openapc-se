@@ -1,3 +1,3 @@
 APC data files from Stockholm University are published in this folder.
 
-[Updated 2017-03-10/UK]
+SU reports costs with aditional costs such as page and color charges as of 2018.
