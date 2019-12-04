@@ -1,0 +1,4 @@
+2018 hb anomalies
+
+ERROR: Line 4: Crossref: Error while trying to resolve DOI 10.15376/biores.13.3.4986-4997: HTTPError: 404 - Not Found
+ERROR: Line 14: Crossref: Error while trying to resolve DOI 10.15376/biores.14.1.464-485: HTTPError: 404 - Not Found

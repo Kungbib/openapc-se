@@ -368,7 +368,7 @@ class DataProcessor(object):
         #csv_file = open(str_input_file, "r")
 
         #reader = oat.UnicodeReader(csv_file, dialect=dialect, encoding=enc)
-        header, content = oat.get_csv_file_content(str_input_file, enc=enc)
+        header, content = oat.Bio(str_input_file, enc=enc)
 
         #first_row = next(reader)
         num_columns = len(header)#first_row)
