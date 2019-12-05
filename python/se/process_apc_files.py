@@ -58,7 +58,7 @@ import subprocess
 from openpyxl import load_workbook
 from os import path
 from shutil import copyfile #chl
-import unicodecsv as csv
+import csv
 import time
 import os
 
@@ -237,7 +237,7 @@ class DataProcessor(object):
         print('Info: Creating checkup file for processed DOIs')
         # self.mx_master_data = []
         self.lst_master_dois = []
-        with open(Config.STR_APC_SE_FILE, 'rb') as csvfile:
+        with open(Config.STR_APC_SE_FILE, 'r') as csvfile:
             obj_csv_reader = csv.reader(csvfile, delimiter=',', quotechar='"')
             for lst_row in obj_csv_reader:
                 if lst_row[3].strip():
@@ -651,7 +651,7 @@ class DataProcessor(object):
         # Read master file into a matrix and a dictionary of data
         dct_master_data = {}
         lst_master_dois = []
-        with open(str_apc_se_file, 'rb') as csvfile:
+        with open(str_apc_se_file, 'r') as csvfile:
             obj_csv_reader = csv.reader(csvfile, delimiter=',', quotechar='"')
             for lst_row in obj_csv_reader:
                 str_doi = lst_row[3].lower().strip()
@@ -683,7 +683,7 @@ class DataProcessor(object):
 
         csvfile.close()
 
-        with open(str_enriched_file_name, 'rb') as csvfile:
+        with open(str_enriched_file_name, 'r') as csvfile:
             obj_csv_reader = csv.reader(csvfile, delimiter=',', quotechar='"')
             for lst_row in obj_csv_reader:
 
@@ -761,7 +761,7 @@ class DataProcessor(object):
 
         # Write the new data to the master file
         print(('\nInfo: Writing result to master file {}\n'.format(str_apc_se_file)))
-        with open(str_apc_se_file, 'wb') as csvfile:
+        with open(str_apc_se_file, 'w') as csvfile:
             obj_csv_writer = csv.writer(csvfile, delimiter=',', quotechar='"')
             obj_csv_writer.writerow(lst_master_file_header)
             for lst_row in lst_master_data:
@@ -864,7 +864,7 @@ class FileManager(object):
             # fp_tsv_file.write(u'\t'.join(lst_row).encode("utf-8"))
             # fp_tsv_file.write('\n')
 
-        with open(str_tsv_dir_file, 'wb') as csvfile:
+        with open(str_tsv_dir_file, 'w') as csvfile:
             obj_tsv_writer = csv.writer(csvfile, delimiter='\t', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             for lst_row in mx_converted_data:
                 obj_tsv_writer.writerow(lst_row)
@@ -922,13 +922,13 @@ class FileManager(object):
         """ Convert Excel funny semicolon-separated CSV to a proper CSV """
 
         mx_master_data = []
-        with open(str_apc_se_file, 'rb') as csvfile:
+        with open(str_apc_se_file, 'r') as csvfile:
             obj_csv_reader = csv.reader(csvfile, delimiter=',', quotechar='"')
             for lst_row in obj_csv_reader:
                 mx_master_data.append(lst_row)
         csvfile.close()
 
-        with open(str_apc_se_file, 'wb') as fp_csv_file:
+        with open(str_apc_se_file, 'w') as fp_csv_file:
             obj_csv_witer = csv.writer(fp_csv_file, delimiter=',', quotechar='"')
             for lst_row in mx_master_data:
                 obj_csv_witer.writerow(lst_row)
