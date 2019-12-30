@@ -761,7 +761,7 @@ class DataProcessor(object):
 
         # Write the new data to the master file
         print(('\nInfo: Writing result to master file {}\n'.format(str_apc_se_file)))
-        with open(str_apc_se_file, 'w') as csvfile:
+        with open(str_apc_se_file, 'w', newline='') as csvfile:
             obj_csv_writer = csv.writer(csvfile, delimiter=',', quotechar='"')
             obj_csv_writer.writerow(lst_master_file_header)
             for lst_row in lst_master_data:
