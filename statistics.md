@@ -4,7 +4,7 @@ Open APC Sweden - Statistics
 This is an example of statistics from the pilot project Open APC Sweden,
 aiming at gathering data about article processing charges (APC"s) paid
 by Swedish universities. The statistics cover journal articles published
-mainly between 2014 and **2 018** from **14** contributors. Please see
+mainly between 2014 and **2 019** from **17** contributors. Please see
 the [project wiki](https://github.com/Kungbib/openapc-se/wiki) for more
 information about the project and instructions on how to contribute.
 
@@ -29,7 +29,17 @@ Dalarna University
 </tr>
 <tr>
 <td style="text-align:left;">
+Swedish School of Sport and Health Sciences
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 University of Gothenburg
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University of Borås
 </td>
 </tr>
 <tr>
@@ -75,6 +85,11 @@ Malmö University
 <tr>
 <td style="text-align:left;">
 Örebro University
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Södertörns University
 </td>
 </tr>
 <tr>
@@ -152,8 +167,8 @@ Open Access Articles (Total: “gold”, “hybrid” and “offset”)
 
 At the moment, the dataset contains the following information:
 
--   Number of articles: **7 427**
--   Total expenditure: **13 732 694 €**
+-   Number of articles: **7 536**
+-   Total expenditure: **13 896 862 €**
 
 Articles and APC costs per institution (note that both delivering and
 non-delivering institutions are included):
@@ -291,7 +306,7 @@ Linköping University
 537
 </td>
 <td style="text-align:right;">
-978 100
+967 300
 </td>
 </tr>
 <tr>
@@ -299,10 +314,10 @@ Linköping University
 Linnaeus University
 </td>
 <td style="text-align:right;">
-72
+112
 </td>
 <td style="text-align:right;">
-143 234
+208 176
 </td>
 </tr>
 <tr>
@@ -453,10 +468,10 @@ Swedish University of Agricultural Sciences
 Södertörns University
 </td>
 <td style="text-align:right;">
-7
+21
 </td>
 <td style="text-align:right;">
-15 400
+40 300
 </td>
 </tr>
 <tr>
@@ -475,10 +490,10 @@ Umeå University
 University of Borås
 </td>
 <td style="text-align:right;">
-9
+28
 </td>
 <td style="text-align:right;">
-19 550
+46 709
 </td>
 </tr>
 <tr>
@@ -519,10 +534,10 @@ University of Skövde
 University West
 </td>
 <td style="text-align:right;">
-24
+60
 </td>
 <td style="text-align:right;">
-44 063
+102 030
 </td>
 </tr>
 <tr>
@@ -556,11 +571,11 @@ Articles in Open Access journals (“gold OA”), offset articles excluded
 At the moment, the dataset contains the following information on
 articles in open access journals:
 
--   Number of articles: **3 389**
--   Total expenditure: **4 684 566 €**
--   Average fee: **1 382 €**
--   Median fee: **1 351 €**
--   Share of articles with no fees: **3.2 %**
+-   Number of articles: **3 467**
+-   Total expenditure: **4 780 505 €**
+-   Average fee: **1 379 €**
+-   Median fee: **1 350 €**
+-   Share of articles with no fees: **3.1 %**
 
 Gold OA and APC costs per institution (note that both delivering and
 non-delivering institutions are included):
@@ -697,10 +712,10 @@ Linköping University
 323
 </td>
 <td style="text-align:right;">
-515 389
+504 589
 </td>
 <td style="text-align:right;">
-1 596
+1 562
 </td>
 <td style="text-align:right;">
 1 413
@@ -714,16 +729,16 @@ Linköping University
 Linnaeus University
 </td>
 <td style="text-align:right;">
-20
+51
 </td>
 <td style="text-align:right;">
-28 354
+77 058
 </td>
 <td style="text-align:right;">
-1 418
+1 511
 </td>
 <td style="text-align:right;">
-1 335
+1 424
 </td>
 <td style="text-align:right;">
 0
@@ -851,6 +866,26 @@ Swedish University of Agricultural Sciences
 </tr>
 <tr>
 <td style="text-align:left;">
+Södertörns University
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+6 111
+</td>
+<td style="text-align:right;">
+873
+</td>
+<td style="text-align:right;">
+900
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Umeå University
 </td>
 <td style="text-align:right;">
@@ -867,6 +902,26 @@ Umeå University
 </td>
 <td style="text-align:right;">
 33
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University of Borås
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+21 106
+</td>
+<td style="text-align:right;">
+1 319
+</td>
+<td style="text-align:right;">
+1 364
+</td>
+<td style="text-align:right;">
+0
 </td>
 </tr>
 <tr>
@@ -914,16 +969,16 @@ University of Skövde
 University West
 </td>
 <td style="text-align:right;">
-6
+30
 </td>
 <td style="text-align:right;">
-4 868
+35 686
 </td>
 <td style="text-align:right;">
-811
+1 190
 </td>
 <td style="text-align:right;">
-729
+1 136
 </td>
 <td style="text-align:right;">
 0
@@ -998,7 +1053,7 @@ PLOS ONE
 Public Library of Science (PLoS)
 </td>
 <td style="text-align:right;">
-363
+365
 </td>
 </tr>
 <tr>
@@ -1009,7 +1064,18 @@ Scientific Reports
 Springer
 </td>
 <td style="text-align:right;">
-277
+278
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sustainability
+</td>
+<td style="text-align:left;">
+MDPI
+</td>
+<td style="text-align:right;">
+63
 </td>
 </tr>
 <tr>
@@ -1018,6 +1084,17 @@ Acta Veterinaria Scandinavica
 </td>
 <td style="text-align:left;">
 BioMed Central
+</td>
+<td style="text-align:right;">
+59
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ecology and Evolution
+</td>
+<td style="text-align:left;">
+Wiley
 </td>
 <td style="text-align:right;">
 59
@@ -1036,35 +1113,13 @@ Springer
 </tr>
 <tr>
 <td style="text-align:left;">
-Sustainability
-</td>
-<td style="text-align:left;">
-MDPI
-</td>
-<td style="text-align:right;">
-58
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Ecology and Evolution
-</td>
-<td style="text-align:left;">
-Wiley
-</td>
-<td style="text-align:right;">
-57
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Frontiers in Psychology
 </td>
 <td style="text-align:left;">
 Frontiers
 </td>
 <td style="text-align:right;">
-49
+50
 </td>
 </tr>
 <tr>
@@ -1091,24 +1146,13 @@ Taylor & Francis
 </tr>
 <tr>
 <td style="text-align:left;">
-BMJ Open
-</td>
-<td style="text-align:left;">
-BMJ
-</td>
-<td style="text-align:right;">
-37
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 International Journal of Environmental Research and Public Health
 </td>
 <td style="text-align:left;">
 MDPI
 </td>
 <td style="text-align:right;">
-37
+39
 </td>
 </tr>
 </tbody>

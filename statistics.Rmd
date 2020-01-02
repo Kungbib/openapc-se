@@ -64,7 +64,7 @@ apc_se_hybrid_not_offset <- filter(apc_se_not_offset, is_hybrid == TRUE)
 
 
 #Create vectors for orgs & publishers actively delivering data
-deliv_orgs <- c("du", "gu", "his", "hv", "kau", "kth", "liu", "lnu",  "ltu", "mah", "oru", "slu", "su", "uu")
+deliv_orgs <- c("du", "gih", "gu", "hb", "his", "hv", "kau", "kth", "liu", "lnu",  "ltu", "mah", "oru", "sh", "slu", "su", "uu")
 deliv_publishers <- c("Springer Compact", "Taylor & Francis", "Karger", "IOP Publishing", "Copernicus")
 offset_deals <- c("Springer")
 ```
