@@ -5,10 +5,10 @@ import platform
 
 # Add path for script environment
 
-if platform.system() == 'Windows':
-    sys.path.append('C:/Users/camlin/system/openapc-se')
-elif platform.system() == 'Darwin':
-    sys.path.append('/Users/camlin/openapc-se')
+# if platform.system() == 'Windows':
+#     sys.path.append('C:/Users/camlin/system/openapc-se')
+# elif platform.system() == 'Darwin':
+#     sys.path.append('/Users/camlin/openapc-se')
 
 
 #from .. 
@@ -108,8 +108,7 @@ issn_dict = {}
 issn_p_dict = {}
 issn_e_dict = {}
 
-# for file_name in ["../../data/apc_se.csv"]:
-for file_name in ["data/apc_se.csv"]:
+for file_name in ["../../data/apc_se.csv"]:
     csv_file = open(file_name, "r")
     # reader = oat.UnicodeDictReader(csv_file)
     reader = csv.DictReader(csv_file)
