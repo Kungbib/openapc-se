@@ -25,6 +25,7 @@
 # kth/apc_kth_2016_2.tsv
 # kth/apc_kth_2017_batch2_dois.tsv
 # kth/original_data/apc_kth_2017_dois.tsv
+kth/apc_kth_2018_dois.tsv
 # liu/apc_liu_2017_jan-jun.tsv
 # liu/apc_liu_spring_2018_dois.tsv
 # liu/apc_liu_spring_2018_corrected_dois.csv
@@ -38,7 +39,7 @@
 # mah/apc_mah_2017_dois.tsv
 # mah/apc_mah_2018_dois.tsv
 # mah/apc_mah_2018komp_dois.tsv
-mdh/apc_mdh_2019_dois.tsv
+# mdh/apc_mdh_2019_dois.tsv
 # test_duplicates.tsv
 # oru/original_data/apc_oru_2015_2017_dois.tsv
 # oru/apc_oru_2015_2017_20180614_dois.tsv
