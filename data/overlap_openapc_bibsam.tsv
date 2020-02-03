@@ -581,6 +581,8 @@ kth	2017	2200	10.1007/s40194-017-0490-5	TRUE	Springer	Welding in the World	0043-
 kth	2017	2200	10.1007/s40194-017-0496-z	TRUE	Springer	Welding in the World	0043-2288	0043-2288	1878-6669	0043-2288	http://creativecommons.org/licenses/by/4.0	TRUE	NA	NA	ut:000411060800006	NA	FALSE
 kth	2017	2200	10.1007/s40799-017-0183-4	TRUE	Springer	Experimental Techniques	0732-8818	0732-8818	1747-1567	0732-8818	http://creativecommons.org/licenses/by/4.0	TRUE	NA	NA	ut:000406977900010	NA	FALSE
 kth	2017	2200	10.1007/s40831-017-0147-z	TRUE	Springer	Journal of Sustainable Metallurgy	2199-3823	2199-3823	2199-3831	2199-3823	http://creativecommons.org/licenses/by/4.0	TRUE	NA	NA	ut:000417302400016	NA	FALSE
+kth	2018	2217	10.3389/fneur.2018.00643	FALSE	Frontiers	Frontiers in Neurology	1664-2295	NA	1664-2295	NA	https://creativecommons.org/licenses/by/4.0/	TRUE	30127763	PMC6087765	NA	NA	TRUE
+kth	2018	2505	10.3389/fphys.2018.00500	FALSE	Frontiers	Frontiers in Physiology	1664-042X	NA	1664-042X	NA	https://creativecommons.org/licenses/by/4.0/	TRUE	29867548	PMC5962745	NA	NA	TRUE
 liu	2017	2093.6	10.3389/fimmu.2017.01994	FALSE	Frontiers	Frontiers in Immunology	1664-3224	NA	1664-3224	1664-3224	NA	TRUE	29387062	PMC5776019	ut:000422681400002	NA	TRUE
 liu	2017	2200	10.1007/s00033-017-0823-7	TRUE	Springer	Zeitschrift für angewandte Mathematik und Physik	0044-2275	0044-2275	1420-9039	0044-2275	http://creativecommons.org/licenses/by/4.0	TRUE	NA	NA	ut:000407669500002	NA	FALSE
 liu	2017	2200	10.1007/s00068-017-0827-1	TRUE	Springer	European Journal of Trauma and Emergency Surgery	1863-9933	1863-9933	1863-9941	1863-9933	http://creativecommons.org/licenses/by/4.0	TRUE	28825159	NA	NA	NA	FALSE
@@ -1144,7 +1146,7 @@ slu	2018	876	10.3389/fphys.2018.00323	FALSE	Frontiers	Frontiers in Physiology	16
 slu	2018	886.43	10.3389/frobt.2018.00107	FALSE	Frontiers	Frontiers in Robotics and AI	2296-9144	NA	2296-9144	NA	https://creativecommons.org/licenses/by/4.0/	TRUE	NA	NA	NA	NA	TRUE
 slu	2018	890.23	10.3389/fpls.2018.01537	FALSE	Frontiers	Frontiers in Plant Science	1664-462X	NA	1664-462X	NA	https://creativecommons.org/licenses/by/4.0/	TRUE	30405672	PMC6206411	NA	NA	TRUE
 slu	2018	912.16	10.3389/fpls.2018.01873	FALSE	Frontiers	Frontiers in Plant Science	1664-462X	NA	1664-462X	NA	https://creativecommons.org/licenses/by/4.0/	TRUE	30619428	PMC6304729	NA	NA	TRUE
-su	2017	1602	10.3389/fmars.2017.00440	FALSE	Frontiers	Frontiers in Marine Science	2296-7745	NA	2296-7745	2296-7745	NA	TRUE	NA	NA	NA	NA	TRUE
+su	2018	1419	10.3389/fmars.2017.00440	FALSE	Frontiers	Frontiers in Marine Science	2296-7745	NA	2296-7745	2296-7745	NA	TRUE	NA	NA	NA	NA	TRUE
 su	2017	2200	10.1007/s00018-017-2498-9	TRUE	Springer	Cellular and Molecular Life Sciences	1420-682X	1420-682X	1420-9071	1420-682X	http://creativecommons.org/licenses/by/4.0	TRUE	28299384	PMC5491590	ut:000404353000009	NA	FALSE
 su	2017	2200	10.1007/s00018-017-2503-3	TRUE	Springer	Cellular and Molecular Life Sciences	1420-682X	1420-682X	1420-9071	1420-682X	http://creativecommons.org/licenses/by/4.0	TRUE	28314893	PMC5501912	ut:000404961300001	NA	FALSE
 su	2017	2200	10.1007/s00018-017-2682-y	TRUE	Springer	Cellular and Molecular Life Sciences	1420-682X	1420-682X	1420-9071	1420-682X	http://creativecommons.org/licenses/by/4.0	TRUE	29043393	NA	ut:000425285100010	NA	FALSE

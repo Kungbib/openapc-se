@@ -17,6 +17,7 @@
 # hb/apc_hb_2018_dois.tsv
 # hb/apc_hb_2018_non_dois.tsv
 # his/apc_his_2017_2018_dois.tsv
+his/apc_his_2018_nov_dec_dois.tsv
 # hv/apc_hv_2018-2019_dois.tsv
 # kau/apc_kau_2014_2018_dois.tsv
 # kth/apc_kth_2015.tsv
@@ -25,7 +26,7 @@
 # kth/apc_kth_2016_2.tsv
 # kth/apc_kth_2017_batch2_dois.tsv
 # kth/original_data/apc_kth_2017_dois.tsv
-kth/apc_kth_2018_dois.tsv
+# kth/apc_kth_2018_dois.tsv
 # liu/apc_liu_2017_jan-jun.tsv
 # liu/apc_liu_spring_2018_dois.tsv
 # liu/apc_liu_spring_2018_corrected_dois.csv
@@ -34,6 +35,7 @@ kth/apc_kth_2018_dois.tsv
 # lnu/apc_lnu_2018_dois.tsv
 # ltu/apc_ltu_2017.tsv
 # ltu/apc_ltu_2018_dois.tsv
+# ltu/apc_ltu_2018_non_dois.tsv
 # mah/apc_mah_2015.csv
 # mah/apc_mah_2016.tsv
 # mah/apc_mah_2017_dois.tsv
@@ -45,6 +47,7 @@ kth/apc_kth_2018_dois.tsv
 # oru/apc_oru_2015_2017_20180614_dois.tsv
 # oru/original_data/apc_oru_2015_2017_non_dois.tsv
 # oru/apc_oru_2018_dois.tsv
+# oru/apc_oru_2018_non_dois.tsv
 # sh/apc_sh_2018_dois.tsv
 # slu/apc_slu_2014-2016.tsv
 # slu/apc_slu_2014-2017.tsv
