@@ -17,7 +17,7 @@
 # hb/apc_hb_2018_dois.tsv
 # hb/apc_hb_2018_non_dois.tsv
 # his/apc_his_2017_2018_dois.tsv
-his/apc_his_2018_nov_dec_dois.tsv
+# his/apc_his_2018_nov_dec_dois.tsv
 # hv/apc_hv_2018-2019_dois.tsv
 # kau/apc_kau_2014_2018_dois.tsv
 # kth/apc_kth_2015.tsv
