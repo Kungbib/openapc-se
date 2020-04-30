@@ -1,0 +1,6 @@
+dubblett
+Line 64: uu	2019	1722.0221439999998	10.1136/heartjnl-2019-315453	TRUE	BMJ
+Line 65: uu	2019	1722.0221439999998	10.1136/heartjnl-2019-315453	TRUE	BMJ
+
+konferensartikel
+Line 5: Crossref: Error while trying to resolve DOI 10.1145/3330345.3330376: Unsupported DOI type 'conference_paper' (OpenAPC only supports journal articles)

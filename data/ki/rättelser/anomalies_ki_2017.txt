@@ -1,20 +1,21 @@
 felaktig doi
 10.1080/17435390.2017.1363309 finns inte enligt doi.org	men finns i PubMed med PMID: 28816564
 
-dubbletter (fanns redan i Open APC Sweden)
-
-Taylor & Francis (alla stämmer överens)
+Taylor & Francis (dubbla poster i KI:s data)
 institution	period	euro	doi	is_hybrid
-ki	2017	567.30	10.1080/2331186x.2017.1316348	TRUE
+ki	2017	567.30	10.1080/2331186x.2017.1316348	TRUE (is_hybrid skiljer sig åt, bör vara FALSE)
 ki	2017	2150	10.1080/09638288.2017.1305456	TRUE
 ki	2017	1400	10.1080/16549716.2017.1340253	FALSE
 ki	2017	1400	10.1080/20018525.2017.1290193	FALSE
 ki	2017	2150	10.1080/17435390.2017.1363309	TRUE
 
-Oxford (stämmer inte, kostnad i Open APC Sweden 2036.76)
+Oxford (dubbla poster i KI:s data, är det uppdelat på olika kostnadstyper?)
+)
 institution	period	euro	doi	is_hybrid
-ki	2017	2940	10.1093/annweh/wxw022	TRUE
+Line 6: ki	2017	2036.76	10.1093/annweh/wxw022	TRUE
+Line 8: ki	2017	2940	10.1093/annweh/wxw022	TRUE
 
-Elsevier (stämmer inte, kostnad i Open APC Sweden 1076.47)
+Elsevier (dubbla poster i KI:s data, är det uppdelat på olika kostnadstyper?)
 institution	period	euro	doi	is_hybrid
-ki	2017	1345	10.1016/j.redox.2017.03.013	FALSE
+Line 3: ki	2017	1076.47	10.1016/j.redox.2017.03.013	FALSE
+Line 70: ki	2017	1345	10.1016/j.redox.2017.03.013	FALSE
