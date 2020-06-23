@@ -18,11 +18,13 @@
 # gu/apc_gu_2018_dois.tsv
 # hb/apc_hb_2018_dois.tsv
 # hb/apc_hb_2018_non_dois.tsv
+# hhs/apc_hhs_2019_dois.tsv
 # his/apc_his_2017_2018_dois.tsv
 # his/apc_his_2018_nov_dec_dois.tsv
 # his/apc_his_2019_dois.tsv
 # hv/apc_hv_2018-2019_dois.tsv
 # kau/apc_kau_2014_2018_dois.tsv
+# kau/apc_kau_2019_dois.tsv
 # ki/original_data/ki_2017_elsevier.tsv
 # ki/original_data/ki_2017_oxford.tsv
 # ki/original_data/ki_2017_sage.tsv
@@ -50,6 +52,8 @@
 # mah/apc_mah_2017_dois.tsv
 # mah/apc_mah_2018_dois.tsv
 # mah/apc_mah_2018komp_dois.tsv
+# mah/apc_mah_2019_dois.tsv
+# mah/apc_mah_2019_non_dois.tsv
 # mdh/apc_mdh_2019_dois.tsv
 # test_duplicates.tsv
 # oru/original_data/apc_oru_2015_2017_dois.tsv
@@ -58,15 +62,17 @@
 # oru/apc_oru_2018_dois.tsv
 # oru/apc_oru_2018_non_dois.tsv
 # sh/apc_sh_2018_dois.tsv
+# sh/apc_sh_2019_dois.tsv
 # slu/apc_slu_2014-2016.tsv
 # slu/apc_slu_2014-2017.tsv
 # slu/apc_slu_2018_dois.tsv
+# slu/apc_slu_2019_dois.tsv
 # su/apc_su_2015.tsv
 # su/apc_su_2016.tsv
 # su/apc_su_2017.tsv
 # su/apc_su_2018_dois.tsv
 # su/apc_su_2019_dois.tsv
-su/apc_su_2019_degruyter_dois.tsv
+# su/apc_su_2019_degruyter_dois.tsv
 # uu/apc_uu_2017_dois.tsv
 # uu/apc_uu_2018_dois.tsv
 # uu/apc_uu_2019_dois.tsv

@@ -1,0 +1,4 @@
+ERROR: Line 10: Crossref: Error while trying to resolve DOI 10.15376/biores.14.3.5451-5466: HTTPError: 404 - Not Found
+ERROR: Line 11: Crossref: Error while trying to resolve DOI 10.15376/biores.15.1.654-676: HTTPError: 404 - Not Found
+ERROR: Line 30: Crossref: Error while trying to resolve DOI 10.4324/9781315177021: Unsupported DOI type 'book_title' (OpenAPC only supports journal articles)
+ERROR: Line 33: Crossref: Error while trying to resolve DOI 10.15376/biores.14.3.6370-6383: HTTPError: 404 - Not Found
