@@ -42,6 +42,7 @@
 # liu/apc_liu_spring_2018_corrected_dois.csv
 # liu/apc_liu_2018_dois.tsv
 # liu/apc_liu_2019_jan_jun_dois.tsv
+liu/apc_liu_jul_dec_2019_dois.tsv
 # lnu/apc_lnu_2017_dois.tsv
 # lnu/apc_lnu_2018_dois.tsv
 # ltu/apc_ltu_2017.tsv
@@ -61,6 +62,7 @@
 # oru/original_data/apc_oru_2015_2017_non_dois.tsv
 # oru/apc_oru_2018_dois.tsv
 # oru/apc_oru_2018_non_dois.tsv
+oru/apc_oru_2019_dois.tsv
 # sh/apc_sh_2018_dois.tsv
 # sh/apc_sh_2019_dois.tsv
 # slu/apc_slu_2014-2016.tsv
