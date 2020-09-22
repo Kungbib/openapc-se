@@ -30,6 +30,8 @@
 # ki/original_data/ki_2017_sage.tsv
 # ki/original_data/ki_2017_taylor_francis.tsv
 # ki/original_data/ki_2017_wiley.tsv
+ki/apc_ki_2020_Q1_dois.tsv
+ki/apc_ki_2020_Q1_non_dois.tsv
 # kth/apc_kth_2015.tsv
 # kth/apc_kth_2016.tsv
 # kth/apc_kth_2016_correction.tsv
@@ -42,7 +44,7 @@
 # liu/apc_liu_spring_2018_corrected_dois.csv
 # liu/apc_liu_2018_dois.tsv
 # liu/apc_liu_2019_jan_jun_dois.tsv
-liu/apc_liu_jul_dec_2019_dois.tsv
+# liu/apc_liu_jul_dec_2019_dois.tsv
 # lnu/apc_lnu_2017_dois.tsv
 # lnu/apc_lnu_2018_dois.tsv
 # ltu/apc_ltu_2017.tsv
@@ -62,7 +64,7 @@ liu/apc_liu_jul_dec_2019_dois.tsv
 # oru/original_data/apc_oru_2015_2017_non_dois.tsv
 # oru/apc_oru_2018_dois.tsv
 # oru/apc_oru_2018_non_dois.tsv
-oru/apc_oru_2019_dois.tsv
+# oru/apc_oru_2019_dois.tsv
 # sh/apc_sh_2018_dois.tsv
 # sh/apc_sh_2019_dois.tsv
 # slu/apc_slu_2014-2016.tsv
