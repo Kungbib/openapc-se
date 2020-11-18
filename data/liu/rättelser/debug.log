@@ -1,2 +1,0 @@
-[1017/090347.017:ERROR:file_io_win.cc(243)] SetEndOfFile: Den begärda åtgärden kan inte utföras när ett användarmappat avsnitt är öppnat. (0x4C8)
-[1017/150938.404:ERROR:file_io_win.cc(243)] SetEndOfFile: Den begärda åtgärden kan inte utföras när ett användarmappat avsnitt är öppnat. (0x4C8)

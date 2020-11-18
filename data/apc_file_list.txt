@@ -16,6 +16,7 @@
 # gu/original_data/apc_gu_2017_180417.tsv
 # gu/apc_gu_add_may_2018_dois.tsv
 # gu/apc_gu_2018_dois.tsv
+gu/apc_gu_2019_dois.tsv
 # hb/apc_hb_2018_dois.tsv
 # hb/apc_hb_2018_non_dois.tsv
 # hhs/apc_hhs_2019_dois.tsv
@@ -30,8 +31,8 @@
 # ki/original_data/ki_2017_sage.tsv
 # ki/original_data/ki_2017_taylor_francis.tsv
 # ki/original_data/ki_2017_wiley.tsv
-ki/apc_ki_2020_Q1_dois.tsv
-ki/apc_ki_2020_Q1_non_dois.tsv
+# ki/apc_ki_2020_Q1_dois.tsv
+# ki/apc_ki_2020_Q1_non_dois.tsv
 # kth/apc_kth_2015.tsv
 # kth/apc_kth_2016.tsv
 # kth/apc_kth_2016_correction.tsv

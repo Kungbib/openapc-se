@@ -1,0 +1,14 @@
+Dubbletter
+
+
+DOI not resolved
+ERROR: Line 24: Crossref: Error while trying to resolve DOI 10.1002/falsep2.371: HTTPError: 404 - Not Found
+ERROR: Line 36: Crossref: Error while trying to resolve DOI 10.3389/fmicb/2019.02511: HTTPError: 404 - Not Found
+ERROR: Line 37: Crossref: Error while trying to resolve DOI går ej att belägga: Parse Error: 'går ej att belägga' is no valid DOI
+ERROR: Line 72: Crossref: Error while trying to resolve DOI 10.1093/neuonc/falsez011: HTTPError: 404 - Not Found
+ERROR: Line 114: Crossref: Error while trying to resolve DOI 10.1093/falsep/npz066: HTTPError: 404 - Not Found
+ERROR: Line 137: Crossref: Error while trying to resolve DOI 10.1002/falsep2.300: HTTPError: 404 - Not Found
+ERROR: Line 247: Crossref: Error while trying to resolve DOI 10.1002/falsep2.430: HTTPError: 404 - Not Found
+
+
+ERROR: Line 168: Crossref: Error while trying to resolve DOI 10.i: Parse Error: '10.i' is no valid DOI
