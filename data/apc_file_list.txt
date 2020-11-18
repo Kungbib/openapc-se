@@ -16,10 +16,12 @@
 # gu/original_data/apc_gu_2017_180417.tsv
 # gu/apc_gu_add_may_2018_dois.tsv
 # gu/apc_gu_2018_dois.tsv
-gu/apc_gu_2019_dois.tsv
+# gu/apc_gu_2019_dois.tsv
 # hb/apc_hb_2018_dois.tsv
+hb/apc_hb_2019_dois.tsv
 # hb/apc_hb_2018_non_dois.tsv
 # hhs/apc_hhs_2019_dois.tsv
+hig/apc_hig_2019_dois.tsv
 # his/apc_his_2017_2018_dois.tsv
 # his/apc_his_2018_nov_dec_dois.tsv
 # his/apc_his_2019_dois.tsv
@@ -40,6 +42,7 @@ gu/apc_gu_2019_dois.tsv
 # kth/apc_kth_2017_batch2_dois.tsv
 # kth/original_data/apc_kth_2017_dois.tsv
 # kth/apc_kth_2018_dois.tsv
+kth/apc_kth_2019_dois.tsv
 # liu/apc_liu_2017_jan-jun.tsv
 # liu/apc_liu_spring_2018_dois.tsv
 # liu/apc_liu_spring_2018_corrected_dois.csv
