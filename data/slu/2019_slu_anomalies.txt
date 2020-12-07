@@ -1,6 +1,0 @@
-2019 slu anomalies
-
-ERROR: Line 192: Crossref: Error while trying to resolve DOI 10.3390/agrofalsemy9110749: HTTPError: 404 - Not Found
-Preprint, är det preprint eller publicerad version som betalats för?: ERROR: Line 188: Crossref: Error while trying to resolve DOI 10.20944/preprints201904.0149.v1: Unsupported DOI type 'posted_content' (OpenAPC only supports journal articles)
-ERROR: Line 119: Crossref: Error while trying to resolve DOI 10.3390/agrofalsemy9050258: HTTPError: 404 - Not Found
-ERROR: Line 74: Crossref: Error while trying to resolve DOI 10.1002/lfalse.11349: HTTPError: 404 - Not Found

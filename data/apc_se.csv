@@ -177,7 +177,7 @@ du,2016,726,10.1155/2016/6373101,FALSE,Hindawi Publishing Corporation,Journal of
 du,2017,1150,10.3390/ijerph14050512,FALSE,MDPI,International Journal of Environmental Research and Public Health,1660-4601,NA,1660-4601,1660-4601,https://creativecommons.org/licenses/by/4.0/,TRUE,28489067,PMC5451963,NA,NA,TRUE
 du,2017,1201,10.1080/2331186x.2017.1349562,FALSE,Cogent OA,Cogent Education,2331-186X,NA,2331-186X,2331-186X,NA,TRUE,NA,NA,NA,NA,TRUE
 du,2017,1210,10.2147/oajsm.s116672,FALSE,Taylor & Francis,Open Access Journal of Sports Medicine,1179-1543,NA,1179-1543,1179-1543,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,27877070,PMC5110205,NA,https://www.dovepress.com/aerobic-power-and-lean-mass-are-indicators-of-competitive-sprint-perfo-peer-reviewed-article-OAJSM,TRUE
-du,2017,1300,10.1080/17482631.2017.1347013,FALSE,Taylor & Francis,International Journal of Qualitative Studies on Health and Well-being,1748-2631,1748-2631,NA,1748-2631,NA,FALSE,28699394,PMC5510223,NA,NA,NA
+du,2017,1300,10.1080/17482631.2017.1347013,FALSE,Taylor & Francis,International Journal of Qualitative Studies on Health and Well-being,1748-2631,1748-2631,NA,1748-2631,NA,FALSE,28699394,PMC5510223,NA,NA,TRUE
 du,2017,1313,10.1371/journal.pone.0177477,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,1932-6203,http://creativecommons.org/licenses/by/4.0/,TRUE,28727727,PMC5519004,NA,NA,TRUE
 du,2017,1329,10.3390/ma10050453,FALSE,MDPI,Materials,1996-1944,NA,1996-1944,1996-1944,https://creativecommons.org/licenses/by/4.0/,TRUE,28772813,PMC5459048,NA,NA,TRUE
 du,2017,1338,10.3390/ma10030221,FALSE,MDPI,Materials,1996-1944,NA,1996-1944,1996-1944,https://creativecommons.org/licenses/by/4.0/,TRUE,28772582,PMC5503411,NA,http://www.mdpi.com/1996-1944/10/3/221,TRUE
@@ -743,7 +743,7 @@ gu,2017,1725,10.3389/fpsyg.2017.01945,FALSE,Frontiers,Frontiers in Psychology,16
 gu,2017,1727,10.1016/j.chom.2017.11.004,TRUE,Elsevier,Cell Host & Microbe,1931-3128,1931-3128,NA,1931-3128,http://www.elsevier.com/tdm/userlicense/1.0/,TRUE,29276171,NA,ut:000419707000008,NA,FALSE
 gu,2017,1731,10.3389/fimmu.2017.01370,FALSE,Frontiers,Frontiers in Immunology,1664-3224,NA,1664-3224,1664-3224,NA,TRUE,29114250,PMC5660702,ut:000413527600001,NA,TRUE
 gu,2017,1742,10.1371/journal.pgen.1007004,FALSE,Public Library of Science (PLoS),PLOS Genetics,1553-7404,NA,1553-7404,1553-7390,http://creativecommons.org/licenses/by/4.0/,TRUE,28886012,PMC5607217,ut:000411976100026,NA,TRUE
-gu,2017,1749,10.1186/s12931-017-0607-9,FALSE,Springer,Respiratory Research,1465-993X,NA,1465-993X,1465-9921,NA,TRUE,28659192,PMC5490198,ut:000405878600001,NA,TRUE
+gu,2017,1749,10.1186/s12931-017-0607-9,FALSE,BioMed Central,Respiratory Research,1465-993X,NA,1465-993X,1465-9921,NA,TRUE,28659192,PMC5490198,ut:000405878600001,NA,TRUE
 gu,2017,1759,10.1111/ecog.02192,TRUE,Wiley,Ecography,0906-7590,NA,NA,0906-7590,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,ut:000423807400007,NA,FALSE
 gu,2017,1760,10.1177/1474515117715843,TRUE,SAGE Publications,European Journal of Cardiovascular Nursing,1474-5151,1474-5151,1873-1953,1474-5151,http://journals.sagepub.com/page/policies/text-and-data-mining-license,TRUE,28639841,PMC5751854,NA,NA,FALSE
 gu,2017,1771,10.3389/fimmu.2017.01945,FALSE,Frontiers,Frontiers in Immunology,1664-3224,NA,1664-3224,1664-3224,NA,TRUE,29375569,PMC5767593,ut:000419711400001,NA,TRUE
@@ -1288,7 +1288,7 @@ gu,2018,2500,10.1002/jbmr.3431,TRUE,Wiley,Journal of Bone and Mineral Research,0
 gu,2018,2500,10.1002/jbmr.3553,TRUE,Wiley,Journal of Bone and Mineral Research,0884-0431,NA,NA,NA,http://onlinelibrary.wiley.com/termsAndConditions#vor,TRUE,30011091,NA,NA,NA,FALSE
 gu,2018,2500,10.1002/joc.5423,TRUE,Wiley,International Journal of Climatology,0899-8418,NA,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 gu,2018,2500,10.1002/jpen.1172,TRUE,Wiley,Journal of Parenteral and Enteral Nutrition,0148-6071,NA,NA,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,29679529,PMC6437763,NA,NA,FALSE
-gu,2018,2500,10.1029/2018gl079614,TRUE,Wiley,Geophysical Research Letters,0094-8276,NA,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+gu,2018,2500,10.1029/2018gl079614,TRUE,American Geophysical Union (AGU),Geophysical Research Letters,0094-8276,NA,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 gu,2018,2500,10.1111/1365-2745.13081,TRUE,Wiley,Journal of Ecology,0022-0477,NA,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 gu,2018,2500,10.1111/1460-6984.12373,TRUE,Wiley,International Journal of Language & Communication Disorders,1368-2822,NA,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,29411466,PMC5969295,NA,NA,FALSE
 gu,2018,2500,10.1111/adb.12603,TRUE,Wiley,Addiction Biology,1355-6215,1355-6215,1369-1600,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,29405517,PMC6585842,NA,NA,FALSE
@@ -1438,35 +1438,34 @@ gu,2018,988.9525870894146,10.3389/fcimb.2018.00034,FALSE,Frontiers,Frontiers in 
 gu,2018,990,10.5194/cp-14-1097-2018,FALSE,Copernicus Publications,Climate of the Past,1814-9332,NA,1814-9332,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 gu,2019,1007.72,10.1073/pnas.1813268116,TRUE,National Academy of Sciences,Proceedings of the National Academy of Sciences,0027-8424,0027-8424,1091-6490,NA,https://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30808740,PMC6397522,NA,NA,FALSE
 gu,2019,1072.856,10.3390/min9080497,FALSE,MDPI,Minerals,2075-163X,NA,2075-163X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
-gu,2019,1084.656,10.1126/sciadv.aaw1531,TRUE,American Association for the Advancement of Science (AAAS),Science Advances,2375-2548,NA,2375-2548,NA,NA,TRUE,31328161,PMC6636987,NA,NA,TRUE
+gu,2019,1084.656,10.1126/sciadv.aaw1531,FALSE,American Association for the Advancement of Science (AAAS),Science Advances,2375-2548,NA,2375-2548,NA,NA,TRUE,31328161,PMC6636987,NA,NA,TRUE
 gu,2019,1088.9984,10.1016/j.jasrep.2019.101971,TRUE,Elsevier,Journal of Archaeological Science: Reports,2352-409X,2352-409X,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 gu,2019,1088.9984,10.1098/rsos.190886,FALSE,The Royal Society,Royal Society Open Science,2054-5703,2054-5703,2054-5703,NA,https://royalsociety.org/journals/ethics-policies/data-sharing-mining/,TRUE,31598312,PMC6774974,NA,NA,TRUE
-gu,2019,1089.848,10.1016/j.heliyon.2019.e01864,TRUE,Elsevier,Heliyon,2405-8440,2405-8440,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31194099,PMC6551469,NA,NA,TRUE
+gu,2019,1089.848,10.1016/j.heliyon.2019.e01864,FALSE,Elsevier,Heliyon,2405-8440,2405-8440,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31194099,PMC6551469,NA,NA,TRUE
 gu,2019,1120.3392,10.3167/jla.2019.030104,TRUE,Berghahn Books,Journal of Legal Anthropology,1758-9576,1758-9576,1758-9584,NA,NA,TRUE,NA,NA,NA,NA,FALSE
-gu,2019,1173.2975999999999,10.1242/bio.037994,FALSE,National Academy of Sciences,Biology Open,2046-6390,NA,2046-6390,NA,http://creativecommons.org/licenses/by/4.0,TRUE,30837224,PMC6451343,NA,NA,TRUE
-gu,2019,1182.2656,10.14814/phy2.14083,TRUE,Wiley,Physiological Reports,2051-817X,2051-817X,2051-817X,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31062503,PMC6503019,NA,NA,TRUE
+gu,2019,1173.2975999999999,10.1242/bio.037994,FALSE,The Company of Biologists,Biology Open,2046-6390,NA,2046-6390,NA,http://creativecommons.org/licenses/by/4.0,TRUE,30837224,PMC6451343,NA,NA,TRUE
+gu,2019,1182.2656,10.14814/phy2.14083,FALSE,Wiley,Physiological Reports,2051-817X,2051-817X,2051-817X,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31062503,PMC6503019,NA,NA,TRUE
 gu,2019,1199.5408,10.3390/su11020425,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 gu,2019,1222.6688,10.1107/s1600576719001900,TRUE,International Union of Crystallography,Journal of Applied Crystallography,1600-5767,NA,1600-5767,NA,http://creativecommons.org/licenses/by/4.0/legalcode,TRUE,30996717,PMC6448683,NA,NA,FALSE
 gu,2019,1237.7728,10.24966/ggm-8662/100027,FALSE,Herald Scholarly Open Access,Gerontology and Geriatric Medicine,2381-8662,NA,2381-8662,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 gu,2019,1248.0624,10.1016/j.jasrep.2019.05.002,TRUE,Elsevier,Journal of Archaeological Science: Reports,2352-409X,2352-409X,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 gu,2019,1251.744,10.1063/1.5114693,FALSE,AIP Publishing,AIP Advances,2158-3226,NA,2158-3226,NA,https://publishing.aip.org/authors/rights-and-permissions,TRUE,NA,NA,NA,NA,TRUE
-gu,2019,1266.848,10.1016/j.ssmph.2019.100514,TRUE,Elsevier,SSM - Population Health,2352-8273,2352-8273,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31998831,PMC6978491,NA,NA,TRUE
+gu,2019,1266.848,10.1016/j.ssmph.2019.100514,FALSE,Elsevier,SSM - Population Health,2352-8273,2352-8273,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31998831,PMC6978491,NA,NA,TRUE
 gu,2019,1296.0176,10.5194/acp-19-15073-2019,FALSE,Copernicus Publications,Atmospheric Chemistry and Physics,1680-7324,NA,1680-7324,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
-gu,2019,1297.2448,10.1002/falsep2.430,TRUE,Wiley,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
-gu,2019,1310.1776,10.1038/s41419-017-0237-7,FALSE,Mary Ann Liebert,Cell Death and Disease,2041-4889,NA,2041-4889,NA,http://creativecommons.org/licenses/by/4.0,TRUE,29491398,PMC5832423,NA,NA,TRUE
-gu,2019,1311.8768,10.1525/elementa.354,FALSE,Ubiquity Press,Elementa: Science of the Anthropocene,2325-1026,NA,2325-1026,NA,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,NA,NA,TRUE
+gu,2019,1310.1776,10.1038/s41419-017-0237-7,FALSE,Springer,Cell Death and Disease,2041-4889,NA,2041-4889,NA,http://creativecommons.org/licenses/by/4.0,TRUE,29491398,PMC5832423,NA,NA,TRUE
+gu,2019,1311.8768,10.1525/elementa.354,FALSE,University of California Press,Elementa: Science of the Anthropocene,2325-1026,NA,2325-1026,NA,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,NA,NA,TRUE
 gu,2019,1333.2112,10.1371/journal.pone.0213056,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30830933,PMC6398860,NA,NA,TRUE
 gu,2019,1346.616,10.1371/journal.pone.0217127,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31095633,PMC6522126,NA,NA,TRUE
 gu,2019,1361.4368,10.1371/journal.pone.0208937,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30625159,PMC6326456,NA,NA,TRUE
-gu,2019,1373.6144,10.1080/17482631.2019.1698496,TRUE,Taylor & Francis,International Journal of Qualitative Studies on Health and Well-being,1748-2631,NA,1748-2631,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31825747,PMC6922046,NA,NA,TRUE
+gu,2019,1373.6144,10.1080/17482631.2019.1698496,FALSE,Taylor & Francis,International Journal of Qualitative Studies on Health and Well-being,1748-2631,NA,1748-2631,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31825747,PMC6922046,NA,NA,TRUE
 gu,2019,1392.9664,10.1371/journal.pone.0214464,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30921409,PMC6438537,NA,NA,TRUE
 gu,2019,1393.1552,10.1371/journal.pone.0216294,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31048879,PMC6497305,NA,NA,TRUE
 gu,2019,1400.424,10.1107/s2053273319011446,TRUE,International Union of Crystallography,Acta Crystallographica Section A Foundations and Advances,2053-2733,NA,2053-2733,NA,http://creativecommons.org/licenses/by/4.0/legalcode,TRUE,31692460,PMC6833979,NA,NA,FALSE
 gu,2019,1417.2272,10.1016/j.wombi.2019.01.004,TRUE,Elsevier,Women and Birth,1871-5192,1871-5192,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30686654,NA,NA,NA,FALSE
 gu,2019,1420.0592,10.3390/genes10030182,FALSE,MDPI,Genes,2073-4425,NA,2073-4425,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,30813638,PMC6471190,NA,NA,TRUE
 gu,2019,1435.2576,10.3390/ijms20092270,FALSE,MDPI,International Journal of Molecular Sciences,1422-0067,NA,1422-0067,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31071949,PMC6539135,NA,NA,TRUE
-gu,2019,1436.5792,10.1016/j.phro.2019.01.001,TRUE,Elsevier,Physics and Imaging in Radiation Oncology,2405-6316,2405-6316,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,TRUE
-gu,2019,1436.6736,10.1080/11038128.2017.1329343,FALSE,Public Library of Science (PLoS),Scandinavian Journal of Occupational Therapy,1103-8128,1103-8128,1651-2014,NA,NA,TRUE,28521582,NA,NA,NA,FALSE
+gu,2019,1436.5792,10.1016/j.phro.2019.01.001,FALSE,Elsevier,Physics and Imaging in Radiation Oncology,2405-6316,2405-6316,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,TRUE
+gu,2019,1436.6736,10.1080/11038128.2017.1329343,TRUE,Taylor & Francis,Scandinavian Journal of Occupational Therapy,1103-8128,1103-8128,1651-2014,NA,NA,TRUE,28521582,NA,NA,NA,FALSE
 gu,2019,1436.6736,10.1371/journal.pone.0215583,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31125340,PMC6534294,NA,NA,TRUE
 gu,2019,1436.6736,10.1371/journal.pone.0217856,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31150507,PMC6544373,NA,NA,TRUE
 gu,2019,1440.9216,10.1371/journal.pone.0225816,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31830066,PMC6907786,NA,NA,TRUE
@@ -1493,7 +1492,6 @@ gu,2019,1489.8208,10.1136/bmjopen-2018-027808,FALSE,BMJ,BMJ Open,2044-6055,2044-
 gu,2019,1493.408,10.3389/fnsyn.2019.00007,FALSE,Frontiers,Frontiers in Synaptic Neuroscience,1663-3563,NA,1663-3563,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,30899219,PMC6416800,NA,NA,TRUE
 gu,2019,1499.072,10.3390/ijms20205028,FALSE,MDPI,International Journal of Molecular Sciences,1422-0067,NA,1422-0067,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31614433,PMC6834330,NA,NA,TRUE
 gu,2019,1504.5472,10.1038/s41598-019-45973-8,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31270437,PMC6610082,NA,NA,TRUE
-gu,2019,1517.3856,10.1002/falsep2.300,TRUE,Wiley,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 gu,2019,1525.7872,10.1186/s12883-019-1280-z,FALSE,BioMed Central,BMC Neurology,1471-2377,NA,1471-2377,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30922263,PMC6437849,NA,NA,TRUE
 gu,2019,1527.2032,10.3390/su11113067,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 gu,2019,1530.3183999999999,10.1016/j.envint.2019.105339,TRUE,Elsevier,Environment International,0160-4120,0160-4120,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32036119,NA,NA,NA,TRUE
@@ -1502,47 +1500,44 @@ gu,2019,1537.3984,10.1016/j.jrp.2019.03.008,TRUE,Elsevier,Journal of Research in
 gu,2019,1549.7648,10.3233/jad-190067,TRUE,IOS Press,Journal of Alzheimer's Disease,1387-2877,1387-2877,1875-8908,NA,NA,TRUE,31104027,NA,NA,NA,FALSE
 gu,2019,1553.3519999999999,10.1186/s12909-019-1684-x,FALSE,BioMed Central,BMC Medical Education,1472-6920,NA,1472-6920,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31286962,PMC6615109,NA,NA,TRUE
 gu,2019,1561.1872,10.1136/bmjopen-2018-028218,FALSE,BMJ,BMJ Open,2044-6055,2044-6055,2044-6055,NA,NA,TRUE,31072862,PMC6528008,NA,NA,TRUE
-gu,2019,1583.088,10.1002/brb3.1234,FALSE,Oxford University Press (OUP),Brain and Behavior,2162-3279,2162-3279,2162-3279,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30784220,PMC6422817,NA,NA,TRUE
+gu,2019,1583.088,10.1002/brb3.1234,FALSE,Wiley,Brain and Behavior,2162-3279,2162-3279,2162-3279,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30784220,PMC6422817,NA,NA,TRUE
 gu,2019,1588.8464,10.1016/j.tree.2018.12.005,TRUE,Elsevier,Trends in Ecology & Evolution,0169-5347,0169-5347,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30691998,NA,NA,NA,FALSE
 gu,2019,1589.1296,10.1136/bmjopen-2018-028719,FALSE,BMJ,BMJ Open,2044-6055,2044-6055,2044-6055,NA,NA,TRUE,31147369,PMC6549655,NA,NA,TRUE
-gu,2019,1611.0303999999999,10.1002/brb3.1300,TRUE,Wiley,Brain and Behavior,2162-3279,2162-3279,2162-3279,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31066194,PMC6576172,NA,NA,TRUE
-gu,2019,1613.3904,10.1002/falsep2.371,FALSE,Wiley,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+gu,2019,1611.0303999999999,10.1002/brb3.1300,FALSE,Wiley,Brain and Behavior,2162-3279,2162-3279,2162-3279,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31066194,PMC6576172,NA,NA,TRUE
 gu,2019,1617.072,10.3390/ijerph16111954,FALSE,MDPI,International Journal of Environmental Research and Public Health,1660-4601,NA,1660-4601,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31159436,PMC6603906,NA,NA,TRUE
 gu,2019,1630.0991999999999,10.1186/s13049-019-0630-6,FALSE,BioMed Central,"Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine",1757-7241,NA,1757-7241,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31046804,PMC6498576,NA,NA,TRUE
-gu,2019,1641.5216,10.1186/s13550-019-0500-2,FALSE,Springer,EJNMMI Research,2191-219X,NA,2191-219X,NA,https://creativecommons.org/licenses/by/4.0,TRUE,30895393,PMC6426909,NA,NA,TRUE
+gu,2019,1641.5216,10.1186/s13550-019-0500-2,FALSE,Springer Open,EJNMMI Research,2191-219X,NA,2191-219X,NA,https://creativecommons.org/licenses/by/4.0,TRUE,30895393,PMC6426909,NA,NA,TRUE
 gu,2019,1654.2656,10.3390/ijms20225538,FALSE,MDPI,International Journal of Molecular Sciences,1422-0067,NA,1422-0067,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31698846,PMC6887741,NA,NA,TRUE
-gu,2019,1658.0416,10.1002/brb3.1348,TRUE,Wiley,Brain and Behavior,2162-3279,2162-3279,2162-3279,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31287226,PMC6710202,NA,NA,TRUE
+gu,2019,1658.0416,10.1002/brb3.1348,FALSE,Wiley,Brain and Behavior,2162-3279,2162-3279,2162-3279,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31287226,PMC6710202,NA,NA,TRUE
 gu,2019,1662.0064,10.1016/j.trf.2019.11.013,TRUE,Elsevier,Transportation Research Part F: Traffic Psychology and Behaviour,1369-8478,1369-8478,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 gu,2019,1664.744,10.3390/cells8080913,FALSE,MDPI,Cells,2073-4409,NA,2073-4409,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31426421,PMC6721700,NA,NA,TRUE
 gu,2019,1672.296,10.1002/brb3.1442,FALSE,Wiley,Brain and Behavior,2162-3279,2162-3279,2162-3279,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31588654,PMC6851805,NA,NA,TRUE
 gu,2019,1713.1712,10.1097/md.0000000000016687,FALSE,Wolters Kluwer,Medicine,0025-7974,0025-7974,NA,NA,NA,TRUE,31393370,PMC6708709,NA,NA,TRUE
-gu,2019,1723.5552,10.1002/cre2.205,TRUE,Wiley,Clinical and Experimental Dental Research,2057-4347,2057-4347,2057-4347,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31452954,PMC6704035,NA,NA,TRUE
+gu,2019,1723.5552,10.1002/cre2.205,FALSE,Wiley,Clinical and Experimental Dental Research,2057-4347,2057-4347,2057-4347,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31452954,PMC6704035,NA,NA,TRUE
 gu,2019,1737.432,10.1186/s12995-019-0242-0,FALSE,BioMed Central,Journal of Occupational Medicine and Toxicology,1745-6673,NA,1745-6673,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31341508,PMC6631884,NA,NA,TRUE
 gu,2019,1741.2079999999999,10.1186/s12931-019-0970-9,FALSE,BioMed Central,Respiratory Research,1465-993X,NA,1465-993X,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30634967,PMC6330423,NA,NA,TRUE
-gu,2019,1741.8688,10.1080/21505594.2019.1635417,TRUE,Taylor & Francis,Virulence,2150-5594,2150-5594,2150-5608,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31234710,PMC6629182,NA,NA,TRUE
+gu,2019,1741.8688,10.1080/21505594.2019.1635417,FALSE,Taylor & Francis,Virulence,2150-5594,2150-5594,2150-5608,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31234710,PMC6629182,NA,NA,TRUE
 gu,2019,1757.0672,10.1152/jn.00756.2018,TRUE,American Physiological Society,Journal of Neurophysiology,0022-3077,0022-3077,1522-1598,NA,NA,TRUE,31242040,NA,NA,NA,FALSE
 gu,2019,1759.8992,10.1186/s12887-019-1447-1,FALSE,BioMed Central,BMC Pediatrics,1471-2431,NA,1471-2431,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30857527,PMC6410499,NA,NA,TRUE
 gu,2019,1763.5808,10.1186/s12940-019-0495-1,FALSE,BioMed Central,Environmental Health,1476-069X,NA,1476-069X,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31200698,PMC6570857,NA,NA,TRUE
 gu,2019,1763.5808,10.1186/s13048-019-0531-3,FALSE,BioMed Central,Journal of Ovarian Research,1757-2215,NA,1757-2215,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31228949,PMC6588934,NA,NA,TRUE
-gu,2019,1846.2752,10.1111/eva.12859,TRUE,Wiley,Evolutionary Applications,1752-4571,1752-4571,1752-4571,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32431734,PMC7045711,NA,NA,TRUE
+gu,2019,1846.2752,10.1111/eva.12859,FALSE,Wiley,Evolutionary Applications,1752-4571,1752-4571,1752-4571,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32431734,PMC7045711,NA,NA,TRUE
 gu,2019,1869.7808,10.1186/s40345-019-0168-6,FALSE,Springer Open,International Journal of Bipolar Disorders,2194-7511,NA,2194-7511,NA,https://creativecommons.org/licenses/by/4.0,TRUE,32030544,PMC7005229,NA,NA,TRUE
 gu,2019,1878.1824,10.1136/bmjopen-2018-028229,FALSE,BMJ,BMJ Open,2044-6055,2044-6055,2044-6055,NA,NA,TRUE,31377699,PMC6687006,NA,NA,TRUE
 gu,2019,1931.5184,10.1016/j.pbb.2019.172795,TRUE,Elsevier,Pharmacology Biochemistry and Behavior,0091-3057,0091-3057,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31669834,NA,NA,NA,FALSE
 gu,2019,1936.5216,10.1042/bcj20190180,TRUE,Portland Press,Biochemical Journal,0264-6021,0264-6021,1470-8728,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31387973,PMC6705488,NA,NA,FALSE
-gu,2019,1960.5936,går ej att belägga,FALSE,Hindawi Publishing Corporation,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 gu,2019,1968.8064,10.3389/fonc.2019.00579,FALSE,Frontiers,Frontiers in Oncology,2234-943X,NA,2234-943X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31334113,PMC6625372,NA,NA,TRUE
 gu,2019,1972.8655999999999,10.2147/ndt.s195722,FALSE,Dove Medical Press,Neuropsychiatric Disease and Treatment,1178-2021,NA,1178-2021,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,31190823,PMC6514252,NA,NA,TRUE
 gu,2019,1986.4592,10.1136/bmjopen-2018-027290,FALSE,BMJ,BMJ Open,2044-6055,2044-6055,2044-6055,NA,NA,TRUE,31160274,PMC6549657,NA,NA,TRUE
 gu,2019,2013.7408,10.3389/fphys.2018.01964,FALSE,Frontiers,Frontiers in Physiology,1664-042X,NA,1664-042X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,30719010,PMC6348271,NA,NA,TRUE
 gu,2019,2014.024,10.1530/erc-18-0509,TRUE,Bioscientifica,Endocrine Related Cancer,1351-0088,1351-0088,1479-6821,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30730850,PMC6391910,NA,NA,FALSE
 gu,2019,2019.5936,10.1515/sjpain-2019-0061,TRUE,Walter de Gruyter,Scandinavian Journal of Pain,1877-8879,1877-8860,1877-8879,NA,http://creativecommons.org/licenses/by/4.0,TRUE,31251727,NA,NA,NA,FALSE
-gu,2019,2023.936,10.1016/j.molmet.2019.01.013,TRUE,Elsevier,Molecular Metabolism,2212-8778,2212-8778,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30772256,PMC6437635,NA,NA,TRUE
+gu,2019,2023.936,10.1016/j.molmet.2019.01.013,FALSE,Elsevier,Molecular Metabolism,2212-8778,2212-8778,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30772256,PMC6437635,NA,NA,TRUE
 gu,2019,2025.4464,10.1084/jem.20190679,TRUE,Rockefeller University Press,Journal of Experimental Medicine,0022-1007,0022-1007,1540-9538,NA,http://www.rupress.org/terms/,TRUE,31420376,PMC6829596,NA,NA,FALSE
 gu,2019,2033.1871999999998,10.1029/2019gl084385,TRUE,American Geophysical Union (AGU),Geophysical Research Letters,0094-8276,0094-8276,1944-8007,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 gu,2019,2040.7392,10.3389/fphys.2019.00023,FALSE,Frontiers,Frontiers in Physiology,1664-042X,NA,1664-042X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,30761013,PMC6362097,NA,NA,TRUE
 gu,2019,2042.5328,10.1002/brb3.1509,FALSE,Wiley,Brain and Behavior,2162-3279,2162-3279,2162-3279,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31893564,PMC7010575,NA,NA,TRUE
 gu,2019,2045.9312,10.1016/j.vaccine.2018.11.040,TRUE,Elsevier,Vaccine,0264-410X,0264-410X,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30473185,PMC6717083,NA,NA,FALSE
-gu,2019,2053.2,10.i,TRUE,Elsevier,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 gu,2019,2088.7888,10.1016/j.respol.2019.03.015,TRUE,Elsevier,Research Policy,0048-7333,0048-7333,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 gu,2019,2111.9168,10.1016/j.srhc.2019.01.002,TRUE,Elsevier,Sexual & Reproductive Healthcare,1877-5756,1877-5756,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30928139,NA,NA,NA,FALSE
 gu,2019,2126.0768,10.1371/journal.ppat.1007877,FALSE,Public Library of Science (PLoS),PLOS Pathogens,1553-7374,NA,1553-7374,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31226163,PMC6608979,NA,NA,TRUE
@@ -1551,13 +1546,13 @@ gu,2019,2155.2464,10.3390/ijms20143551,FALSE,MDPI,International Journal of Molec
 gu,2019,2156.6624,10.2147/ndt.s221908,FALSE,Dove Medical Press,Neuropsychiatric Disease and Treatment,1178-2021,NA,1178-2021,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,31827325,PMC6902863,NA,NA,TRUE
 gu,2019,2189.0416,10.1016/j.brainres.2019.146562,TRUE,Elsevier,Brain Research,0006-8993,0006-8993,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31759971,NA,NA,NA,FALSE
 gu,2019,2189.0416,10.1016/j.ghir.2019.11.001,TRUE,Elsevier,Growth Hormone & IGF Research,1096-6374,1096-6374,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31756675,PMC7054155,NA,NA,FALSE
-gu,2019,2189.7968,10.1111/eva.12914,TRUE,Wiley,Evolutionary Applications,1752-4571,1752-4571,1752-4571,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32431747,PMC7232771,NA,NA,TRUE
+gu,2019,2189.7968,10.1111/eva.12914,FALSE,Wiley,Evolutionary Applications,1752-4571,1752-4571,1752-4571,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32431747,PMC7232771,NA,NA,TRUE
 gu,2019,2199.8976,10.1016/j.pedn.2019.09.021,TRUE,Elsevier,Journal of Pediatric Nursing,0882-5963,0882-5963,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31669495,NA,NA,NA,FALSE
 gu,2019,2211.2255999999998,10.1503/jpn.190029,TRUE,Joule,Journal of Psychiatry and Neuroscience,1180-4882,1180-4882,NA,NA,NA,TRUE,31829002,NA,NA,NA,FALSE
 gu,2019,2261.4464,10.1186/s12916-019-1374-x,FALSE,BioMed Central,BMC Medicine,1741-7015,NA,1741-7015,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31327319,PMC6643304,NA,NA,TRUE
 gu,2019,2267.488,10.3389/fimmu.2019.00269,FALSE,Frontiers,Frontiers in Immunology,1664-3224,NA,1664-3224,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,30838003,PMC6389712,NA,NA,TRUE
 gu,2019,2267.488,10.3389/fpsyg.2019.00220,FALSE,Frontiers,Frontiers in Psychology,1664-1078,NA,1664-1078,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,30804855,PMC6378300,NA,NA,TRUE
-gu,2019,2287.6896,10.1111/hex.12988,TRUE,Wiley,Health Expectations,1369-6513,1369-6513,1369-7625,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31854081,NA,NA,NA,TRUE
+gu,2019,2287.6896,10.1111/hex.12988,FALSE,Wiley,Health Expectations,1369-6513,1369-6513,1369-7625,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31854081,NA,NA,NA,TRUE
 gu,2019,2303.2655999999997,10.1093/jac/dkz025,TRUE,Oxford University Press (OUP),Journal of Antimicrobial Chemotherapy,0305-7453,0305-7453,1460-2091,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,30753583,PMC6477974,NA,NA,FALSE
 gu,2019,2320.824,10.1016/j.syapm.2019.126039,TRUE,Elsevier,Systematic and Applied Microbiology,0723-2020,0723-2020,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31776051,NA,NA,NA,FALSE
 gu,2019,2325.2608,10.1016/j.jsb.2019.04.006,TRUE,Elsevier,Journal of Structural Biology,1047-8477,1047-8477,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30959108,NA,NA,NA,FALSE
@@ -1579,7 +1574,6 @@ gu,2019,2479.1328,10.1136/gutjnl-2019-319322,TRUE,BMJ,Gut,0017-5749,0017-5749,14
 gu,2019,2479.6992,10.1111/adb.12764,TRUE,Wiley,Addiction Biology,1355-6215,1355-6215,1369-1600,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31069918,PMC7187236,NA,NA,FALSE
 gu,2019,2479.6992,10.1111/apm.12940,TRUE,Wiley,APMIS,0903-4641,0903-4641,1600-0463,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,30803032,PMC6850425,NA,NA,FALSE
 gu,2019,2486.968,10.1111/bcpt.13294,TRUE,Wiley,Basic & Clinical Pharmacology & Toxicology,1742-7835,1742-7835,1742-7843,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,31310705,PMC6972620,NA,NA,FALSE
-gu,2019,2489.328,10.1093/neuonc/falsez011,TRUE,Oxford University Press (OUP),NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 gu,2019,2497.824,10.1136/bmjophth-2018-000247,FALSE,BMJ,BMJ Open Ophthalmology,2397-3269,NA,2397-3269,NA,NA,TRUE,31179395,PMC6528764,NA,NA,TRUE
 gu,2019,250.16,10.1177/2333393619881636,FALSE,SAGE Publications,Global Qualitative Nursing Research,2333-3936,2333-3936,2333-3936,NA,http://journals.sagepub.com/page/policies/text-and-data-mining-license,TRUE,31673571,PMC6806114,NA,NA,TRUE
 gu,2019,2510.2848,10.1002/jts5.43,TRUE,Wiley,Journal of Theoretical Social Psychology,2475-0387,2475-0387,2475-0387,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
@@ -1589,7 +1583,7 @@ gu,2019,2522.7455999999997,10.1111/sji.12794,TRUE,Wiley,Scandinavian Journal of 
 gu,2019,2530.2032,10.1089/bio.2018.0147,TRUE,Mary Ann Liebert,Biopreservation and Biobanking,1947-5535,1947-5535,1947-5543,NA,https://www.liebertpub.com/nv/resources-tools/text-and-data-mining-policy/121/,TRUE,31464512,PMC6791476,NA,NA,FALSE
 gu,2019,2532.2799999999997,10.1016/j.neuropharm.2019.02.020,TRUE,Elsevier,Neuropharmacology,0028-3908,0028-3908,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30772374,NA,NA,NA,FALSE
 gu,2019,2536.4336,10.1016/j.ajpath.2017.11.012,TRUE,Elsevier,The American Journal of Pathology,0002-9440,0002-9440,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,29248460,PMC5840494,NA,NA,FALSE
-gu,2019,2544.1744,10.1136/gutjnl-2018-317571,FALSE,BMJ,Gut,0017-5749,0017-5749,1468-3288,NA,NA,TRUE,30914450,PMC6872445,NA,NA,FALSE
+gu,2019,2544.1744,10.1136/gutjnl-2018-317571,TRUE,BMJ,Gut,0017-5749,0017-5749,1468-3288,NA,NA,TRUE,30914450,PMC6872445,NA,NA,FALSE
 gu,2019,2544.1744,10.1177/0967010619830590,TRUE,SAGE Publications,Security Dialogue,0967-0106,0967-0106,1460-3640,NA,http://journals.sagepub.com/page/policies/text-and-data-mining-license,TRUE,NA,NA,NA,NA,FALSE
 gu,2019,2544.2688,10.1177/1354066119832074,TRUE,SAGE Publications,European Journal of International Relations,1354-0661,1354-0661,1460-3713,NA,http://journals.sagepub.com/page/policies/text-and-data-mining-license,TRUE,NA,NA,NA,NA,FALSE
 gu,2019,2546.1567999999997,10.1016/j.psychres.2019.112566,TRUE,Elsevier,Psychiatry Research,0165-1781,0165-1781,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31558402,NA,NA,NA,FALSE
@@ -1606,30 +1600,28 @@ gu,2019,2633.0048,10.1016/j.ijantimicag.2019.09.017,TRUE,Elsevier,International 
 gu,2019,2639.8959999999997,10.1038/s41385-019-0154-4,FALSE,Springer,Mucosal Immunology,1933-0219,1933-0219,1935-3456,NA,https://creativecommons.org/licenses/by/4.0,TRUE,30846831,NA,NA,NA,FALSE
 gu,2019,2657.1711999999998,10.3389/fneur.2019.00533,FALSE,Frontiers,Frontiers in Neurology,1664-2295,NA,1664-2295,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31191433,PMC6549124,NA,NA,TRUE
 gu,2019,2660.9472,10.1016/j.atherosclerosis.2019.01.004,TRUE,Elsevier,Atherosclerosis,0021-9150,0021-9150,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30685441,NA,NA,NA,FALSE
-gu,2019,2678.0335999999998,10.1038/s41396-019-0386-z,FALSE,Springer,The ISME Journal,1751-7362,1751-7362,1751-7370,NA,https://creativecommons.org/licenses/by/4.0,TRUE,30911131,PMC6776039,NA,NA,FALSE
+gu,2019,2678.0335999999998,10.1038/s41396-019-0386-z,TRUE,Springer,The ISME Journal,1751-7362,1751-7362,1751-7370,NA,https://creativecommons.org/licenses/by/4.0,TRUE,30911131,PMC6776039,NA,NA,FALSE
 gu,2019,2698.5184,10.1016/j.psyneuen.2019.02.006,TRUE,Elsevier,Psychoneuroendocrinology,0306-4530,0306-4530,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30771711,NA,NA,NA,FALSE
 gu,2019,2698.5184,10.1016/j.psyneuen.2019.02.020,TRUE,Elsevier,Psychoneuroendocrinology,0306-4530,0306-4530,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30818255,NA,NA,NA,FALSE
 gu,2019,2704.9375999999997,10.1029/2018wr024418,TRUE,American Geophysical Union (AGU),Water Resources Research,0043-1397,0043-1397,1944-7973,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
-gu,2019,2714,10.1093/falsep/npz066,TRUE,Oxford University Press (OUP),NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 gu,2019,2729.2927999999997,10.1210/en.2018-01002,TRUE,The Endocrine Society,Endocrinology,1945-7170,NA,1945-7170,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,30888399,PMC6541891,NA,NA,FALSE
-gu,2019,2729.576,10.1002/1878-0261.12500,TRUE,Wiley,Molecular Oncology,1574-7891,1574-7891,1878-0261,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31066211,PMC6670019,NA,NA,TRUE
+gu,2019,2729.576,10.1002/1878-0261.12500,FALSE,Wiley,Molecular Oncology,1574-7891,1574-7891,1878-0261,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31066211,PMC6670019,NA,NA,TRUE
 gu,2019,2735.24,10.3389/fcimb.2019.00340,FALSE,Frontiers,Frontiers in Cellular and Infection Microbiology,2235-2988,NA,2235-2988,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31637221,PMC6787560,NA,NA,TRUE
 gu,2019,2744.7744,10.1038/s41433-019-0627-4,FALSE,Springer,Eye,0950-222X,0950-222X,1476-5454,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31645674,PMC7253467,NA,NA,FALSE
-gu,2019,2754.2144,10.3389/fmicb/2019.02511,FALSE,Frontiers,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 gu,2019,2765.1648,10.1016/j.neuropharm.2019.107818,TRUE,Elsevier,Neuropharmacology,0028-3908,0028-3908,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31647973,NA,NA,NA,FALSE
 gu,2019,2770.2624,10.1016/j.ijnurstu.2019.103444,TRUE,Elsevier,International Journal of Nursing Studies,0020-7489,0020-7489,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32200099,NA,NA,NA,FALSE
 gu,2019,2770.2624,10.1016/j.mam.2019.09.003,TRUE,Elsevier,Molecular Aspects of Medicine,0098-2997,0098-2997,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31563277,NA,NA,NA,FALSE
-gu,2019,2795.9392,10.1038/s41386-019-0323-x,FALSE,Springer,Neuropsychopharmacology,0893-133X,0893-133X,1740-634X,NA,https://creativecommons.org/licenses/by/4.0,TRUE,30710109,PMC6461824,NA,NA,FALSE
+gu,2019,2795.9392,10.1038/s41386-019-0323-x,TRUE,Springer,Neuropsychopharmacology,0893-133X,0893-133X,1740-634X,NA,https://creativecommons.org/licenses/by/4.0,TRUE,30710109,PMC6461824,NA,NA,FALSE
 gu,2019,2858.7152,10.1111/sjop.12545,TRUE,Wiley,Scandinavian Journal of Psychology,0036-5564,0036-5564,1467-9450,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,31124165,PMC6851885,NA,NA,FALSE
 gu,2019,2891.944,10.1212/nxg.0000000000000391,FALSE,Wolters Kluwer,Neurology Genetics,2376-7839,NA,2376-7839,NA,NA,TRUE,32042919,PMC6975171,NA,NA,TRUE
 gu,2019,2897.3248,10.1016/j.biopsych.2019.09.019,TRUE,Elsevier,Biological Psychiatry,0006-3223,0006-3223,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31735253,NA,NA,NA,FALSE
 gu,2019,2906.1983999999998,10.1038/s41385-019-0202-0,FALSE,Springer,Mucosal Immunology,1933-0219,1933-0219,1935-3456,NA,http://www.springer.com/tdm,TRUE,31501516,NA,NA,NA,FALSE
 gu,2019,2926.0224,10.1074/mcp.ra119.001319,TRUE,American Society for Biochemistry & Molecular Biology (ASBMB),Molecular & Cellular Proteomics,1535-9476,1535-9476,1535-9484,NA,NA,TRUE,30923042,PMC6553937,NA,NA,FALSE
 gu,2019,2940.56,10.1002/hed.25563,TRUE,Wiley,Head & Neck,1043-3074,1043-3074,1097-0347,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30554450,PMC6467749,NA,NA,FALSE
-gu,2019,2969.6351999999997,10.18632/oncotarget.26866,TRUE,Impact Journals,OncoTarget,1949-2553,NA,1949-2553,NA,NA,TRUE,31073372,PMC6497460,NA,NA,FALSE
+gu,2019,2969.6351999999997,10.18632/oncotarget.26866,FALSE,Impact Journals,OncoTarget,1949-2553,NA,1949-2553,NA,NA,TRUE,31073372,PMC6497460,NA,NA,FALSE
 gu,2019,2972.4672,10.1212/wnl.0000000000007753,TRUE,Wolters Kluwer,Neurology,0028-3878,0028-3878,1526-632X,NA,NA,TRUE,31182508,PMC6656653,NA,NA,FALSE
 gu,2019,2975.5824,10.1002/eji.201847647,TRUE,Wiley,European Journal of Immunology,0014-2980,0014-2980,1521-4141,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30427069,PMC6587840,NA,NA,FALSE
-gu,2019,2976.1488,10.1038/s41386-019-0523-4,FALSE,Springer,Neuropsychopharmacology,0893-133X,0893-133X,1740-634X,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31521062,PMC6969189,NA,NA,FALSE
+gu,2019,2976.1488,10.1038/s41386-019-0523-4,TRUE,Springer,Neuropsychopharmacology,0893-133X,0893-133X,1740-634X,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31521062,PMC6969189,NA,NA,FALSE
 gu,2019,3012.6816,10.1161/circulationaha.118.039132,TRUE,Wolters Kluwer,Circulation,0009-7322,0009-7322,1524-4539,NA,NA,TRUE,31132859,PMC6635044,NA,NA,FALSE
 gu,2019,3012.6816,10.1212/wnl.0000000000008681,TRUE,Wolters Kluwer,Neurology,0028-3878,0028-3878,1526-632X,NA,NA,TRUE,31796526,PMC6988983,NA,NA,FALSE
 gu,2019,3049.7808,10.1111/bjh.16320,TRUE,Wiley,British Journal of Haematology,0007-1048,0007-1048,1365-2141,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,31853942,PMC7027927,NA,NA,FALSE
@@ -1655,18 +1647,18 @@ gu,2019,3501.6736,10.1212/wnl.0000000000007021,TRUE,Wolters Kluwer,Neurology,002
 gu,2019,3503.1839999999997,10.1111/tbed.13153,TRUE,Wiley,Transboundary and Emerging Diseases,1865-1674,1865-1674,1865-1682,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30784199,PMC6850098,NA,NA,FALSE
 gu,2019,3503.3728,10.1017/s1047951119001781,TRUE,BMJ,Cardiology in the Young,1047-9511,1047-9511,1467-1107,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31522698,NA,NA,NA,FALSE
 gu,2019,3564.6384,10.1111/jbi.13731,TRUE,Wiley,Journal of Biogeography,0305-0270,0305-0270,1365-2699,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
-gu,2019,3570.7744,10.1002/bjs.11208,TRUE,Wiley,BJS,0007-1323,0007-1323,1365-2168,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,31216062,PMC6771783,NA,NA,FALSE
+gu,2019,3570.7744,10.1002/bjs.11208,TRUE,Wiley,British Journal of Surgery,0007-1323,0007-1323,1365-2168,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,31216062,PMC6771783,NA,NA,FALSE
 gu,2019,3602.9647999999997,10.1021/acsearthspacechem.9b00041,TRUE,American Chemical Society (ACS),ACS Earth and Space Chemistry,2472-3452,2472-3452,2472-3452,NA,http://pubs.acs.org/page/policy/authorchoice_ccby_termsofuse.html,TRUE,NA,NA,NA,NA,FALSE
-gu,2019,3664.136,10.1126/sciadv.aaw5978,TRUE,BMJ,Science Advances,2375-2548,NA,2375-2548,NA,NA,TRUE,31555728,PMC6754226,NA,NA,TRUE
+gu,2019,3664.136,10.1126/sciadv.aaw5978,FALSE,American Association for the Advancement of Science (AAAS),Science Advances,2375-2548,NA,2375-2548,NA,NA,TRUE,31555728,PMC6754226,NA,NA,TRUE
 gu,2019,3693.0224,10.1212/wnl.0000000000007767,TRUE,Wolters Kluwer,Neurology,0028-3878,0028-3878,1526-632X,NA,NA,TRUE,31182505,PMC6656645,NA,NA,FALSE
 gu,2019,3801.488,10.1212/wnl.0000000000008459,TRUE,Wolters Kluwer,Neurology,0028-3878,0028-3878,1526-632X,NA,NA,TRUE,31619479,PMC6946482,NA,NA,FALSE
 gu,2019,3973.768,10.1002/art.40928,TRUE,Wiley,Arthritis & Rheumatology,2326-5191,2326-5191,2326-5205,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,31099188,PMC6790695,NA,NA,FALSE
 gu,2019,4028.4256,10.1111/ele.13441,TRUE,Wiley,Ecology Letters,1461-023X,1461-023X,1461-0248,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31854097,PMC7027860,NA,NA,FALSE
 gu,2019,408.3744,10.3897/bdj.7.e35332,FALSE,Pensoft Publishers,Biodiversity Data Journal,1314-2828,1314-2836,1314-2828,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31871405,PMC6739426,NA,NA,TRUE
 gu,2019,4136.0416,10.1038/s41467-019-08673-5,FALSE,Springer,Nature Communications,2041-1723,NA,2041-1723,NA,https://creativecommons.org/licenses/by/4.0,TRUE,30770810,PMC6377680,NA,NA,TRUE
-gu,2019,4214.016,10.1016/j.celrep.2019.02.044,TRUE,Elsevier,Cell Reports,2211-1247,2211-1247,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30865890,PMC6418345,NA,NA,TRUE
-gu,2019,4214.016,10.1016/j.celrep.2019.02.090,TRUE,Elsevier,Cell Reports,2211-1247,2211-1247,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30917328,PMC6444000,NA,NA,TRUE
-gu,2019,4287.5536,10.1016/j.celrep.2019.07.053,TRUE,Elsevier,Cell Reports,2211-1247,2211-1247,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31433985,NA,NA,NA,TRUE
+gu,2019,4214.016,10.1016/j.celrep.2019.02.044,FALSE,Elsevier,Cell Reports,2211-1247,2211-1247,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30865890,PMC6418345,NA,NA,TRUE
+gu,2019,4214.016,10.1016/j.celrep.2019.02.090,FALSE,Elsevier,Cell Reports,2211-1247,2211-1247,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30917328,PMC6444000,NA,NA,TRUE
+gu,2019,4287.5536,10.1016/j.celrep.2019.07.053,FALSE,Elsevier,Cell Reports,2211-1247,2211-1247,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31433985,NA,NA,NA,TRUE
 gu,2019,4312.192,10.1096/fj.201802040r,TRUE,Wiley,The FASEB Journal,0892-6638,0892-6638,1530-6860,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30668919,PMC6436664,NA,NA,FALSE
 gu,2019,4328.9952,10.1038/s41467-019-10448-x,TRUE,Springer,Nature Communications,2041-1723,NA,2041-1723,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31197138,PMC6565740,NA,NA,TRUE
 gu,2019,4328.9952,10.1038/s41467-019-10662-7,FALSE,Springer,Nature Communications,2041-1723,NA,2041-1723,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31213600,PMC6581956,NA,NA,TRUE
@@ -1677,7 +1669,7 @@ gu,2019,550.2576,10.3389/feduc.2019.00030,FALSE,Frontiers,Frontiers in Education
 gu,2019,567.2496,10.5324/njsts.v7i1.2530,FALSE,Norwegian University of Science and Technology (NTNU) Library,Nordic Journal of Science and Technology Studies,1894-4647,NA,1894-4647,NA,http://creativecommons.org/licenses/by-sa/4.0,TRUE,NA,NA,NA,NA,TRUE
 gu,2019,624.928,10.3390/su11226280,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 gu,2019,698.6544,10.29245/2690-0009/2019/1.1103,FALSE,Sciaccess Publishers LLC,Journal of Human and Clinical Genetics,2690-0009,NA,2690-0009,NA,NA,TRUE,NA,NA,NA,NA,FALSE
-gu,2019,762.6576,10.1016/j.inat.2019.02.008,TRUE,Elsevier,Interdisciplinary Neurosurgery,2214-7519,2214-7519,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,TRUE
+gu,2019,762.6576,10.1016/j.inat.2019.02.008,FALSE,Elsevier,Interdisciplinary Neurosurgery,2214-7519,2214-7519,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,TRUE
 gu,2019,788.712,10.3390/su11184824,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 gu,2019,795.3199999999999,10.3390/su11184895,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 gu,2019,816.6544,10.1128/iai.00889-18,TRUE,American Society for Microbiology,Infection and Immunity,0019-9567,0019-9567,1098-5522,NA,NA,TRUE,30988055,PMC6589055,NA,NA,FALSE
@@ -1723,9 +1715,9 @@ hb,2019,1574.61088,10.3390/en12061046,FALSE,MDPI,Energies,1996-1073,NA,1996-1073
 hb,2019,1581.9551999999999,10.2147/jhl.s199167,FALSE,Dove Medical Press,Journal of Healthcare Leadership,1179-3201,NA,1179-3201,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,31213938,PMC6549386,NA,NA,TRUE
 hb,2019,1584.609728,10.3390/su11174701,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 hb,2019,1624.7042399999998,10.3390/s19112615,FALSE,MDPI,Sensors,1424-8220,NA,1424-8220,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31181820,PMC6603684,NA,NA,TRUE
-hb,2019,1746.5567039999999,10.1186/s12873-019-0228-3,FALSE,Springer,BMC Emergency Medicine,1471-227X,NA,1471-227X,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30678636,PMC6345067,NA,NA,TRUE
+hb,2019,1746.5567039999999,10.1186/s12873-019-0228-3,FALSE,BioMed Central,BMC Emergency Medicine,1471-227X,NA,1471-227X,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30678636,PMC6345067,NA,NA,TRUE
 hb,2019,2034.4379999999999,10.1002/brb3.1266,FALSE,Wiley,Brain and Behavior,2162-3279,2162-3279,2162-3279,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30980519,PMC6520471,NA,NA,TRUE
-hb,2019,2394.6212,10.1186/s13049-019-0646-y,FALSE,Springer,"Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine",1757-7241,NA,1757-7241,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31426839,PMC6700770,NA,NA,TRUE
+hb,2019,2394.6212,10.1186/s13049-019-0646-y,FALSE,BioMed Central,"Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine",1757-7241,NA,1757-7241,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31426839,PMC6700770,NA,NA,TRUE
 hb,2019,2475.5456,10.1177/0040517519858768,TRUE,SAGE Publications,Textile Research Journal,0040-5175,0040-5175,1746-7748,NA,http://journals.sagepub.com/page/policies/text-and-data-mining-license,TRUE,NA,NA,NA,NA,FALSE
 hb,2019,3091.1279999999997,10.1080/10286632.2019.1595607,TRUE,Taylor & Francis,International Journal of Cultural Policy,1028-6632,1028-6632,1477-2833,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 hb,2019,471.63184,10.1016/j.csite.2019.100476,FALSE,Elsevier,Case Studies in Thermal Engineering,2214-157X,2214-157X,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
@@ -1763,7 +1755,7 @@ hig,2016,2200,10.1007/s11136-016-1373-8,TRUE,Springer,Quality of Life Research,0
 hig,2016,2200,10.1007/s12063-016-0121-0,TRUE,Springer,Operations Management Research,1936-9735,1936-9735,1936-9743,1936-9735,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000400387000003,NA,FALSE
 hig,2017,2200,10.1007/s10488-017-0806-1,TRUE,Springer,Administration and Policy in Mental Health and Mental Health Services Research,0894-587X,0894-587X,1573-3289,0894-587X,http://creativecommons.org/licenses/by/4.0,TRUE,28523437,PMC5640753,ut:000412947700007,NA,FALSE
 hig,2017,2200,10.1007/s10943-017-0383-3,TRUE,Springer,Journal of Religion and Health,0022-4197,0022-4197,1573-6571,0022-4197,http://creativecommons.org/licenses/by/4.0,TRUE,28342147,PMC5570793,ut:000408336100022,NA,FALSE
-hig,2019,1053.266112,10.1080/19475705.2019.1604573,TRUE,Taylor & Francis,"Geomatics, Natural Hazards and Risk",1947-5705,1947-5705,1947-5713,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+hig,2019,1053.266112,10.1080/19475705.2019.1604573,FALSE,Taylor & Francis,"Geomatics, Natural Hazards and Risk",1947-5705,1947-5705,1947-5713,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 hig,2019,1141.0175199999999,10.3390/en12152967,FALSE,MDPI,Energies,1996-1073,NA,1996-1073,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 hig,2019,1161.628816,10.1136/bmjopen-2018-025103,FALSE,BMJ,BMJ Open,2044-6055,2044-6055,2044-6055,NA,NA,TRUE,31110088,PMC6530365,NA,NA,TRUE
 hig,2019,1223.0228,10.1016/j.landurbplan.2019.03.015,TRUE,Elsevier,Landscape and Urban Planning,0169-2046,0169-2046,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
@@ -1792,7 +1784,7 @@ hig,2019,1904.89288,10.1136/bmjopen-2018-022006,FALSE,BMJ,BMJ Open,2044-6055,204
 hig,2019,2138.663152,10.1111/opn.12283,TRUE,Wiley,International Journal of Older People Nursing,1748-3735,1748-3735,1748-3743,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31670913,PMC7027578,NA,NA,FALSE
 hig,2019,2204.569456,10.1016/j.nepr.2019.05.004,TRUE,Elsevier,Nurse Education in Practice,1471-5953,1471-5953,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31128519,NA,NA,NA,FALSE
 hig,2019,2264.2972800000002,10.1108/lhs-09-2018-0046,TRUE,Emerald,Leadership in Health Services,1751-1879,1751-1879,NA,NA,https://www.emerald.com/insight/site-policies,TRUE,31612787,PMC7324079,NA,NA,FALSE
-hig,2019,2316.020928,10.1109/tsp.2019.2935896,FALSE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Transactions on Signal Processing,1053-587X,1053-587X,1941-0476,NA,NA,TRUE,NA,NA,NA,NA,FALSE
+hig,2019,2316.020928,10.1109/tsp.2019.2935896,TRUE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Transactions on Signal Processing,1053-587X,1053-587X,1941-0476,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 hig,2019,2562.635264,10.1097/jom.0000000000001701,TRUE,Wolters Kluwer,Journal of Occupational and Environmental Medicine,1076-2752,1076-2752,NA,NA,NA,TRUE,31478995,NA,NA,NA,FALSE
 hig,2019,2649.730592,10.1016/j.ergon.2019.04.002,TRUE,Elsevier,International Journal of Industrial Ergonomics,0169-8141,0169-8141,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 hig,2019,2654.17872,10.3138/cart.54.3.2018-0019,TRUE,University of Toronto Press,Cartographica: The International Journal for Geographic Information and Geovisualization,0317-7173,0317-7173,1911-9925,NA,NA,TRUE,NA,NA,NA,NA,FALSE
@@ -1829,7 +1821,7 @@ his,2017,2276.76,10.3389/fpsyg.2017.00036,FALSE,Frontiers,Frontiers in Psycholog
 his,2017,2500,10.1111/ijn.12603,TRUE,Wiley,International Journal of Nursing Practice,1322-7114,NA,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,29071766,PMC5813192,NA,NA,FALSE
 his,2017,846.35,10.12688/f1000research.12418.2,FALSE,Faculty of 1000,F1000Research,2046-1402,NA,2046-1402,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,29983910,PMC6020741,NA,NA,TRUE
 his,2018,1328.517,10.1371/journal.pone.0200329,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,29985946,PMC6037384,NA,NA,TRUE
-his,2018,1352.458,10.1212/nxg.0000000000000276,FALSE,Lippincott Williams & Wilkins,Neurology Genetics,2376-7839,NA,2376-7839,NA,NA,TRUE,30338296,PMC6186023,NA,NA,TRUE
+his,2018,1352.458,10.1212/nxg.0000000000000276,FALSE,Wolters Kluwer,Neurology Genetics,2376-7839,NA,2376-7839,NA,NA,TRUE,30338296,PMC6186023,NA,NA,TRUE
 his,2018,1370,10.1038/s41598-018-30721-1,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,http://creativecommons.org/licenses/by/4.0,TRUE,30143673,PMC6109051,NA,NA,TRUE
 his,2018,1470,10.1093/jpo/joy001,TRUE,Oxford University Press (OUP),Journal of Professions and Organization,2051-8803,2051-8803,2051-8811,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 his,2018,1500,10.1002/stem.2908,TRUE,Wiley,STEM CELLS,1066-5099,NA,NA,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,30171748,NA,NA,NA,FALSE
@@ -1922,6 +1914,7 @@ hv,2019,1191,10.3390/app9061050,FALSE,MDPI,Applied Sciences,2076-3417,NA,2076-34
 hv,2019,1222,10.3390/met9080881,FALSE,MDPI,Metals,2075-4701,NA,2075-4701,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 hv,2019,1255,10.3390/ijerph16162829,FALSE,MDPI,International Journal of Environmental Research and Public Health,1660-4601,NA,1660-4601,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31398821,PMC6720347,NA,NA,TRUE
 hv,2019,1270,10.3390/coatings9030171,FALSE,MDPI,Coatings,2079-6412,NA,2079-6412,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+hv,2019,1318,10.3390/met10010029,FALSE,MDPI,Metals,2075-4701,NA,2075-4701,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,NA
 hv,2019,1400,10.3390/su11195467,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 hv,2019,1432,10.3390/ijerph16101773,FALSE,MDPI,International Journal of Environmental Research and Public Health,1660-4601,NA,1660-4601,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31137472,PMC6571855,NA,NA,TRUE
 hv,2019,1548,10.1016/j.mtla.2019.100325,TRUE,Elsevier,Materialia,2589-1529,2589-1529,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
@@ -1948,17 +1941,17 @@ kau,2014,1251,10.3892/ijo.2014.2696,TRUE,Spandidos Publications,International Jo
 kau,2014,1512,10.1016/j.eujim.2014.05.005,TRUE,Elsevier,European Journal of Integrative Medicine,1876-3820,1876-3820,NA,1876-3820,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,FALSE
 kau,2014,1515,10.1186/2049-3258-73-4,FALSE,Springer,Archives of Public Health,2049-3258,NA,2049-3258,2049-3258,http://www.springer.com/tdm,TRUE,25973194,PMC4429322,NA,NA,TRUE
 kau,2014,1833,10.1186/1472-6882-14-417,FALSE,BioMed Central,BMC Complementary and Alternative Medicine,1472-6882,NA,1472-6882,1472-6882,http://creativecommons.org/licenses/by/2.0,TRUE,25344737,PMC4219027,NA,NA,TRUE
-kau,2014,1888,10.1186/1477-7517-11-25,FALSE,Springer,Harm Reduction Journal,1477-7517,1477-7517,NA,1477-7517,NA,TRUE,25200686,PMC4160913,NA,NA,TRUE
+kau,2014,1888,10.1186/1477-7517-11-25,FALSE,BioMed Central,Harm Reduction Journal,1477-7517,1477-7517,NA,1477-7517,NA,TRUE,25200686,PMC4160913,NA,NA,TRUE
 kau,2014,2263,10.1111/lnc3.12174,TRUE,Wiley,Language and Linguistics Compass,1749-818X,NA,NA,1749-818X,http://doi.wiley.com/10.1002/tdm_license_1.1,TRUE,NA,NA,NA,NA,FALSE
 kau,2014,989,10.3390/e16105198,FALSE,MDPI,Entropy,1099-4300,NA,1099-4300,1099-4300,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kau,2015,1072,10.15376/biores.10.3.3934-3947,FALSE,North Carolina State University,BioResources,1930-2126,NA,1930-2126,1930-2126,NA,TRUE,NA,NA,NA,NA,TRUE
 kau,2015,1157,10.3390/su71115693,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,2071-1050,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kau,2015,1873,10.4172/2161-0711.1000386,FALSE,OMICS Publishing Group,Journal of Community Medicine & Health Education,2161-0711,NA,2161-0711,2161-0711,NA,TRUE,NA,NA,NA,NA,FALSE
 kau,2015,2215,10.1016/j.comnet.2015.07.014,TRUE,Elsevier,Computer Networks,1389-1286,1389-1286,NA,1389-1286,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
-kau,2015,273,10.19154/njwls.v5i2.4790,FALSE,Aarhus University Library,Nordic Journal of Working Life Studies,2245-0157,2245-0157,NA,2245-0157,NA,TRUE,NA,NA,NA,NA,TRUE
-kau,2015,273,10.19154/njwls.v5i2.4791,FALSE,Aarhus University Library,Nordic Journal of Working Life Studies,2245-0157,2245-0157,NA,2245-0157,NA,TRUE,NA,NA,NA,NA,TRUE
-kau,2015,273,10.19154/njwls.v5i2.4793,FALSE,Aarhus University Library,Nordic Journal of Working Life Studies,2245-0157,2245-0157,NA,2245-0157,NA,TRUE,NA,NA,NA,NA,TRUE
-kau,2015,273,10.19154/njwls.v5i2.4795,FALSE,Aarhus University Library,Nordic Journal of Working Life Studies,2245-0157,2245-0157,NA,2245-0157,NA,TRUE,NA,NA,NA,NA,TRUE
+kau,2015,273,10.19154/njwls.v5i2.4790,FALSE,Aalborg University,Nordic Journal of Working Life Studies,2245-0157,2245-0157,NA,2245-0157,NA,TRUE,NA,NA,NA,NA,TRUE
+kau,2015,273,10.19154/njwls.v5i2.4791,FALSE,Aalborg University,Nordic Journal of Working Life Studies,2245-0157,2245-0157,NA,2245-0157,NA,TRUE,NA,NA,NA,NA,TRUE
+kau,2015,273,10.19154/njwls.v5i2.4793,FALSE,Aalborg University,Nordic Journal of Working Life Studies,2245-0157,2245-0157,NA,2245-0157,NA,TRUE,NA,NA,NA,NA,TRUE
+kau,2015,273,10.19154/njwls.v5i2.4795,FALSE,Aalborg University,Nordic Journal of Working Life Studies,2245-0157,2245-0157,NA,2245-0157,NA,TRUE,NA,NA,NA,NA,TRUE
 kau,2015,308,10.1063/1.4913701,TRUE,AIP Publishing,Journal of Applied Physics,0021-8979,0021-8979,1089-7550,0021-8979,NA,TRUE,NA,NA,NA,NA,FALSE
 kau,2015,616,10.1016/j.colcom.2015.01.001,TRUE,Elsevier,Colloid and Interface Science Communications,2215-0382,2215-0382,NA,2215-0382,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kau,2015,760,10.4172/2157-7595.1000219,FALSE,OMICS Publishing Group,Journal of Yoga & Physical Therapy,2157-7595,NA,2157-7595,2157-7595,NA,TRUE,NA,NA,NA,NA,FALSE
@@ -1970,8 +1963,8 @@ kau,2016,2200,10.1007/s10955-016-1624-7,TRUE,Springer,Journal of Statistical Phy
 kau,2016,2200,10.1007/s11195-016-9459-3,TRUE,Springer,Sexuality and Disability,0146-1044,0146-1044,1573-6717,0146-1044,http://creativecommons.org/licenses/by/4.0,TRUE,27881887,PMC5102943,ut:000393330700002,NA,FALSE
 kau,2016,2200,10.1007/s13132-016-0411-7,TRUE,Springer,Journal of the Knowledge Economy,1868-7865,1868-7865,1868-7873,1868-7865,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000407744300010,NA,FALSE
 kau,2016,2324,10.1016/j.drugpo.2016.03.007,TRUE,Elsevier,International Journal of Drug Policy,0955-3959,0955-3959,NA,0955-3959,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,27184218,NA,NA,NA,FALSE
-kau,2016,276,10.19154/njwls.v5i4.4842,FALSE,Aarhus University Library,Nordic Journal of Working Life Studies,2245-0157,2245-0157,NA,2245-0157,http://creativecommons.org/licenses/by-nc-nd/4.0,TRUE,NA,NA,NA,NA,TRUE
-kau,2016,276,10.19154/njwls.v6i2.4971,FALSE,Aarhus University Library,Nordic Journal of Working Life Studies,2245-0157,2245-0157,NA,2245-0157,http://creativecommons.org/licenses/by-nc-nd/4.0,TRUE,NA,NA,NA,NA,TRUE
+kau,2016,276,10.19154/njwls.v5i4.4842,FALSE,Aalborg University,Nordic Journal of Working Life Studies,2245-0157,2245-0157,NA,2245-0157,http://creativecommons.org/licenses/by-nc-nd/4.0,TRUE,NA,NA,NA,NA,TRUE
+kau,2016,276,10.19154/njwls.v6i2.4971,FALSE,Aalborg University,Nordic Journal of Working Life Studies,2245-0157,2245-0157,NA,2245-0157,http://creativecommons.org/licenses/by-nc-nd/4.0,TRUE,NA,NA,NA,NA,TRUE
 kau,2016,673,10.17585/njlr.v2.230,FALSE,Cappelen Damm Akademisk,Nordic Journal of Literacy Research,2464-1596,NA,2464-1596,2464-1596,NA,TRUE,NA,NA,NA,NA,TRUE
 kau,2016,833,10.17645/si.v4i3.481,FALSE,Cogitatio,Social Inclusion,2183-2803,NA,2183-2803,2183-2803,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,NA,NA,TRUE
 kau,2016,931,10.2340/00015555-2480,FALSE,Acta Dermato-Venereologica,Acta Dermato Venereologica,0001-5555,0001-5555,NA,0001-5555,NA,TRUE,27305646,NA,NA,NA,TRUE
@@ -1989,7 +1982,7 @@ kau,2017,1506,10.1186/s12955-017-0755-0,FALSE,BioMed Central,Health and Quality 
 kau,2017,1555,10.1016/j.jaging.2017.07.001,TRUE,Elsevier,Journal of Aging Studies,0890-4065,0890-4065,NA,0890-4065,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,28918820,NA,NA,NA,FALSE
 kau,2017,1555,10.1016/j.jbusres.2017.04.014,TRUE,Elsevier,Journal of Business Research,0148-2963,0148-2963,NA,0148-2963,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kau,2017,1648,10.1332/204674317x15015138368221,TRUE,The Policy Press,"Families, Relationships and Societies",2046-7435,2046-7435,NA,2046-7435,NA,TRUE,NA,NA,NA,NA,FALSE
-kau,2017,1720,10.1186/s12954-017-0186-6,FALSE,Springer,Harm Reduction Journal,1477-7517,NA,1477-7517,1477-7517,NA,TRUE,28870224,PMC5584001,NA,NA,TRUE
+kau,2017,1720,10.1186/s12954-017-0186-6,FALSE,BioMed Central,Harm Reduction Journal,1477-7517,NA,1477-7517,1477-7517,NA,TRUE,28870224,PMC5584001,NA,NA,TRUE
 kau,2017,1728,10.1016/j.jsr.2017.06.008,TRUE,Elsevier,Journal of Safety Research,0022-4375,0022-4375,NA,0022-4375,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,28882281,NA,NA,NA,FALSE
 kau,2017,1758,10.1177/0265532217690782,TRUE,SAGE Publications,Language Testing,0265-5322,0265-5322,1477-0946,0265-5322,http://journals.sagepub.com/page/policies/text-and-data-mining-license,TRUE,NA,NA,NA,NA,FALSE
 kau,2017,1965,10.1098/rsbl.2017.0208,TRUE,The Royal Society,Biology Letters,1744-9561,1744-9561,1744-957X,1744-9561,NA,TRUE,28747533,PMC5543021,NA,NA,FALSE
@@ -2446,7 +2439,7 @@ ki,2017,2730,10.1093/cercor/bhx299,TRUE,Oxford University Press (OUP),Cerebral C
 ki,2017,2730,10.1093/jnci/djx270,TRUE,Oxford University Press (OUP),JNCI Journal of the National Cancer Institute,0027-8874,0027-8874,1460-2105,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,29361175,PMC6037086,NA,NA,FALSE
 ki,2017,2730,10.1093/jnci/djy021,TRUE,Oxford University Press (OUP),JNCI Journal of the National Cancer Institute,0027-8874,0027-8874,1460-2105,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,29506270,PMC6186516,NA,NA,FALSE
 ki,2017,2780.88,10.1016/j.apergo.2017.02.012,TRUE,Elsevier,Applied Ergonomics,0003-6870,0003-6870,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,28274467,NA,NA,NA,FALSE
-ki,2017,2817,10.1002/hep4.1124,TRUE,Wiley,Hepatology Communications,2471-254X,2471-254X,2471-254X,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,29404512,PMC5776871,NA,NA,TRUE
+ki,2017,2817,10.1002/hep4.1124,FALSE,Wiley,Hepatology Communications,2471-254X,2471-254X,2471-254X,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,29404512,PMC5776871,NA,NA,TRUE
 ki,2017,2870.58,10.1016/j.jid.2016.11.033,TRUE,Elsevier,Journal of Investigative Dermatology,0022-202X,0022-202X,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,28011143,NA,NA,NA,FALSE
 ki,2017,2870.59,10.1016/j.envres.2017.10.049,TRUE,Elsevier,Environmental Research,0013-9351,0013-9351,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,29172162,NA,NA,NA,FALSE
 ki,2017,2925,10.1093/molehr/gax056,TRUE,Oxford University Press (OUP),Molecular Human Reproduction,1360-9947,1360-9947,1460-2407,NA,NA,TRUE,29069483,PMC5909860,NA,NA,FALSE
@@ -2502,7 +2495,7 @@ ki,2017,567.3,10.1080/2331186x.2017.1316348,FALSE,Cogent OA,Cogent Education,233
 ki,2017,672.79,10.1016/j.pvr.2017.05.002,FALSE,Elsevier,Papillomavirus Research,2405-8521,2405-8521,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,29179862,PMC5883233,NA,NA,TRUE
 ki,2017,861.18,10.1016/j.jcte.2017.06.001,FALSE,Elsevier,Journal of Clinical & Translational Endocrinology,2214-6237,2214-6237,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,29067267,PMC5651304,NA,NA,TRUE
 ki,2020,1016.264144,10.3390/nano10010110,FALSE,MDPI,Nanomaterials,2079-4991,NA,2079-4991,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31935871,PMC7023144,NA,NA,TRUE
-ki,2020,1033.285408,10.3389/fchem.2020.00064,TRUE,Frontiers,Frontiers in Chemistry,2296-2646,NA,2296-2646,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32117887,PMC7026131,NA,NA,TRUE
+ki,2020,1033.285408,10.3389/fchem.2020.00064,FALSE,Frontiers,Frontiers in Chemistry,2296-2646,NA,2296-2646,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32117887,PMC7026131,NA,NA,TRUE
 ki,2020,1038.795536,10.1121/10.0000581,TRUE,Acoustical Society of America (ASA),The Journal of the Acoustical Society of America,0001-4966,0001-4966,NA,NA,NA,TRUE,32113309,NA,NA,NA,FALSE
 ki,2020,1086.982016,10.1016/j.heliyon.2019.e02850,FALSE,Elsevier,Heliyon,2405-8440,2405-8440,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31872105,PMC6909063,NA,NA,TRUE
 ki,2020,1133.052048,10.3389/fonc.2020.00518,FALSE,Frontiers,Frontiers in Oncology,2234-943X,NA,2234-943X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32373525,PMC7186354,NA,NA,TRUE
@@ -2526,13 +2519,13 @@ ki,2020,1659.20272,10.3389/fgene.2020.00033,FALSE,Frontiers,Frontiers in Genetic
 ki,2020,1659.275408,10.3390/ijerph17030680,FALSE,MDPI,International Journal of Environmental Research and Public Health,1660-4601,NA,1660-4601,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31973041,PMC7037329,NA,NA,TRUE
 ki,2020,1690.700224,10.3390/nu12030620,FALSE,MDPI,Nutrients,2072-6643,NA,2072-6643,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32120791,PMC7146106,NA,NA,TRUE
 ki,2020,1721.765376,10.3233/jpd-191894,TRUE,IOS Press,Journal of Parkinson's Disease,1877-7171,1877-7171,1877-718X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32176657,PMC7242852,NA,NA,FALSE
-ki,2020,1727.76544,10.2147/dhps.s232604,FALSE,Taylor & Francis,"Drug, Healthcare and Patient Safety",1179-1365,NA,1179-1365,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,32099481,PMC6999776,NA,NA,TRUE
+ki,2020,1727.76544,10.2147/dhps.s232604,FALSE,Dove Medical Press,"Drug, Healthcare and Patient Safety",1179-1365,NA,1179-1365,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,32099481,PMC6999776,NA,NA,TRUE
 ki,2020,1777.520848,10.1167/iovs.61.5.4,FALSE,Association for Research in Vision and Ophthalmology (ARVO),Investigative Opthalmology & Visual Science,1552-5783,1552-5783,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32392313,PMC7405760,NA,NA,TRUE
-ki,2020,1798.11232,10.1152/ajpcell.00540.2019,FALSE,American Physiological Society,American Journal of Physiology-Cell Physiology,0363-6143,0363-6143,1522-1563,NA,NA,TRUE,31825657,PMC7099524,NA,NA,FALSE
+ki,2020,1798.11232,10.1152/ajpcell.00540.2019,TRUE,American Physiological Society,American Journal of Physiology-Cell Physiology,0363-6143,0363-6143,1522-1563,NA,NA,TRUE,31825657,PMC7099524,NA,NA,FALSE
 ki,2020,1798.915664,10.1084/jem.20191804,TRUE,Rockefeller University Press,Journal of Experimental Medicine,0022-1007,0022-1007,1540-9538,NA,http://www.rupress.org/terms/,TRUE,32207811,NA,NA,NA,FALSE
 ki,2020,1816.57696,10.1074/mcp.ra119.001737,TRUE,American Society for Biochemistry & Molecular Biology (ASBMB),Molecular & Cellular Proteomics,1535-9476,1535-9476,1535-9484,NA,NA,TRUE,31699905,PMC6944231,NA,NA,FALSE
-ki,2020,1821.6745600000002,10.1083/jcb.201905002,TRUE,Rockefeller University Press,Journal of Cell Biology,0021-9525,0021-9525,1540-8140,NA,http://www.rupress.org/terms/,TRUE,31676717,PMC7039195,NA,NA,FALSE
-ki,2020,1852.4744479999997,10.3390/ijerph17030930,TRUE,MDPI,International Journal of Environmental Research and Public Health,1660-4601,NA,1660-4601,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32028595,PMC7037649,NA,NA,TRUE
+ki,2020,1821.6745600000002,10.1083/jcb.201905002,TRUE,Rockefeller University Press,The Journal of Cell Biology,0021-9525,0021-9525,1540-8140,NA,http://www.rupress.org/terms/,TRUE,31676717,PMC7039195,NA,NA,FALSE
+ki,2020,1852.4744479999997,10.3390/ijerph17030930,FALSE,MDPI,International Journal of Environmental Research and Public Health,1660-4601,NA,1660-4601,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32028595,PMC7037649,NA,NA,TRUE
 ki,2020,1864.137568,10.3390/ijerph17041200,FALSE,MDPI,International Journal of Environmental Research and Public Health,1660-4601,NA,1660-4601,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32069935,PMC7068286,NA,NA,TRUE
 ki,2020,1877.0477119999998,10.3390/jcm9030753,FALSE,MDPI,Journal of Clinical Medicine,2077-0383,NA,2077-0383,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32168733,PMC7141181,NA,NA,TRUE
 ki,2020,1880.8529760000001,10.3390/jcm9020607,FALSE,MDPI,Journal of Clinical Medicine,2077-0383,NA,2077-0383,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32102408,PMC7074421,NA,NA,TRUE
@@ -2542,12 +2535,12 @@ ki,2020,1953.604224,10.1073/pnas.1911956116,TRUE,National Academy of Sciences,Pr
 ki,2020,1973.105376,10.1073/pnas.1908691117,TRUE,National Academy of Sciences,Proceedings of the National Academy of Sciences,0027-8424,0027-8424,1091-6490,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31871187,PMC6955371,NA,NA,FALSE
 ki,2020,1995.152496,10.1136/bmjopen-2019-032900,FALSE,BMJ,BMJ Open,2044-6055,2044-6055,2044-6055,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,32075827,PMC7044989,NA,NA,TRUE
 ki,2020,2003.7079680000002,10.3390/jcm9030850,FALSE,MDPI,Journal of Clinical Medicine,2077-0383,NA,2077-0383,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32244990,PMC7141502,NA,NA,TRUE
-ki,2020,2058.296656,10.1186/s12877-020-1493-4,FALSE,Springer,BMC Geriatrics,1471-2318,NA,1471-2318,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32164544,PMC7068959,NA,NA,TRUE
+ki,2020,2058.296656,10.1186/s12877-020-1493-4,FALSE,BioMed Central,BMC Geriatrics,1471-2318,NA,1471-2318,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32164544,PMC7068959,NA,NA,TRUE
 ki,2020,2093.5673279999996,10.1177/1534735420905003,FALSE,SAGE Publications,Integrative Cancer Therapies,1534-7354,1534-7354,1552-695X,NA,http://journals.sagepub.com/page/policies/text-and-data-mining-license,TRUE,32090630,PMC7040931,NA,NA,TRUE
 ki,2020,2109.8126239999997,10.2147/clep.s242528,FALSE,Taylor & Francis,Clinical Epidemiology,1179-1349,NA,1179-1349,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,32273771,PMC7102876,NA,NA,TRUE
 ki,2020,2139.84032,10.2147/clep.s244011,FALSE,Taylor & Francis,Clinical Epidemiology,1179-1349,NA,1179-1349,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,32210631,PMC7073449,NA,NA,TRUE
 ki,2020,2145.437296,10.1016/j.eurox.2019.100106,FALSE,Elsevier,European Journal of Obstetrics & Gynecology and Reproductive Biology: X,2590-1613,2590-1613,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32300757,PMC7152809,NA,NA,TRUE
-ki,2020,2176.112576,10.1161/jaha.119.014290,FALSE,Wolters Kluwer,Journal of the American Heart Association,2047-9980,NA,2047-9980,NA,NA,TRUE,32000561,PMC7033863,NA,NA,TRUE
+ki,2020,2176.112576,10.1161/jaha.119.014290,FALSE,Wiley,Journal of the American Heart Association,2047-9980,NA,2047-9980,NA,NA,TRUE,32000561,PMC7033863,NA,NA,TRUE
 ki,2020,2221.322624,10.1016/j.joca.2020.01.003,TRUE,Elsevier,Osteoarthritis and Cartilage,1063-4584,1063-4584,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31982563,NA,NA,NA,FALSE
 ki,2020,2226.5656,10.7554/elife.46756,FALSE,eLife Sciences Publications,eLife,2050-084X,NA,2050-084X,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32178760,PMC7077985,NA,NA,TRUE
 ki,2020,2246.2716,10.7554/elife.50830,FALSE,eLife Sciences Publications,eLife,2050-084X,NA,2050-084X,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31815669,PMC6938400,NA,NA,TRUE
@@ -2566,7 +2559,7 @@ ki,2020,2365.8905600000003,10.3389/fmicb.2020.00026,FALSE,Frontiers,Frontiers in
 ki,2020,2371.832096,10.3389/fimmu.2019.03157,FALSE,Frontiers,Frontiers in Immunology,1664-3224,NA,1664-3224,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32038652,PMC6987394,NA,NA,TRUE
 ki,2020,2381.179584,10.3389/fphar.2020.00026,FALSE,Frontiers,Frontiers in Pharmacology,1663-9812,NA,1663-9812,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32116703,PMC7019112,NA,NA,TRUE
 ki,2020,2382.758896,10.3389/fimmu.2020.00086,FALSE,Frontiers,Frontiers in Immunology,1664-3224,NA,1664-3224,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32082330,PMC7005221,NA,NA,TRUE
-ki,2020,2385.540864,10.3389/fpsyg.2019.02808,TRUE,Frontiers,Frontiers in Psychology,1664-1078,NA,1664-1078,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31998167,PMC6965306,NA,NA,TRUE
+ki,2020,2385.540864,10.3389/fpsyg.2019.02808,FALSE,Frontiers,Frontiers in Psychology,1664-1078,NA,1664-1078,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31998167,PMC6965306,NA,NA,TRUE
 ki,2020,2424.839584,10.3389/fphar.2020.00304,FALSE,Frontiers,Frontiers in Pharmacology,1663-9812,NA,1663-9812,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32265703,PMC7099513,NA,NA,TRUE
 ki,2020,2427.645152,10.1073/pnas.1810932116,TRUE,National Academy of Sciences,Proceedings of the National Academy of Sciences,0027-8424,0027-8424,1091-6490,NA,https://www.pnas.org/site/aboutpnas/licenses.xhtml,TRUE,30659145,PMC6369737,NA,NA,FALSE
 ki,2020,2463.1556,10.2196/17318,FALSE,JMIR Publications,Journal of Medical Internet Research,1438-8871,NA,1438-8871,NA,NA,TRUE,32672680,PMC7381083,NA,NA,TRUE
@@ -2598,7 +2591,7 @@ ki,2020,2777.1838079999998,10.1016/j.schres.2019.12.042,TRUE,Elsevier,Schizophre
 ki,2020,2783.19992,10.1016/j.msksp.2019.102070,TRUE,Elsevier,Musculoskeletal Science and Practice,2468-7812,2468-7812,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31655314,NA,NA,NA,FALSE
 ki,2020,2786.963648,10.1016/j.neuroimage.2020.116607,FALSE,Elsevier,NeuroImage,1053-8119,1053-8119,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32035186,NA,NA,NA,TRUE
 ki,2020,2789.799424,10.1089/scd.2019.0064,TRUE,Mary Ann Liebert,Stem Cells and Development,1547-3287,1547-3287,1557-8534,NA,https://www.liebertpub.com/nv/resources-tools/text-and-data-mining-policy/121/,TRUE,31122128,PMC6648222,NA,NA,FALSE
-ki,2020,2846.46208,10.1016/j.stemcr.2020.02.006,FALSE,Elsevier,Stem Cell Reports,2213-6711,2213-6711,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32197113,PMC7160308,NA,NA,TRUE
+ki,2020,2846.46208,10.1016/j.stemcr.2020.02.006,FALSE,Cell Press,Stem Cell Reports,2213-6711,2213-6711,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32197113,PMC7160308,NA,NA,TRUE
 ki,2020,2846.927472,10.1002/ehf2.12612,FALSE,Wiley,ESC Heart Failure,2055-5822,2055-5822,2055-5822,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32073753,PMC7160482,NA,NA,TRUE
 ki,2020,2863.531488,10.1016/j.psyneuen.2019.104578,TRUE,Elsevier,Psychoneuroendocrinology,0306-4530,0306-4530,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31901625,NA,NA,NA,FALSE
 ki,2020,2871.965184,10.1089/ars.2020.8035,TRUE,Mary Ann Liebert,Antioxidants & Redox Signaling,1523-0864,1523-0864,1557-7716,NA,https://www.liebertpub.com/nv/resources-tools/text-and-data-mining-policy/121/,TRUE,31989839,PMC7455479,NA,NA,FALSE
@@ -2610,32 +2603,32 @@ ki,2020,2979.6359359999997,10.1038/s41390-019-0722-z,TRUE,Springer,Pediatric Res
 ki,2020,2988.69456,10.1002/mrd.23320,TRUE,Wiley,Molecular Reproduction and Development,1040-452X,1040-452X,1098-2795,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32003503,PMC7155028,NA,NA,FALSE
 ki,2020,2997.50208,10.1111/imm.13157,TRUE,Wiley,Immunology,0019-2805,0019-2805,1365-2567,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31755557,PMC7011629,NA,NA,FALSE
 ki,2020,3003.09056,10.1038/s41419-019-1970-x,FALSE,Springer,Cell Death and Disease,2041-4889,NA,2041-4889,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31570696,PMC6768859,NA,NA,TRUE
-ki,2020,3034.708896,10.18632/aging.102662,TRUE,Impact Journals,Aging,1945-4589,NA,1945-4589,NA,NA,TRUE,31927535,PMC6977667,NA,NA,FALSE
+ki,2020,3034.708896,10.18632/aging.102662,FALSE,Impact Journals,Aging,1945-4589,NA,1945-4589,NA,NA,TRUE,31927535,PMC6977667,NA,NA,FALSE
 ki,2020,3058.925328,10.1016/j.jaci.2019.10.037,TRUE,Elsevier,Journal of Allergy and Clinical Immunology,0091-6749,0091-6749,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31805312,NA,NA,NA,FALSE
 ki,2020,3124.09248,10.1111/jcpp.13169,TRUE,Wiley,Journal of Child Psychology and Psychiatry,0021-9630,0021-9630,1469-7610,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31849046,PMC7384167,NA,NA,FALSE
 ki,2020,3127.9194559999996,10.1111/febs.15197,TRUE,Wiley,FEBS Journal,1742-464X,1742-464X,1742-4658,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31889402,NA,NA,NA,FALSE
 ki,2020,3146.539856,10.1016/j.carbon.2019.12.064,TRUE,Elsevier,Carbon,0008-6223,0008-6223,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 ki,2020,3269.2891200000004,10.1093/infdis/jiaa036,TRUE,Oxford University Press (OUP),Journal of Infectious Diseases,0022-1899,0022-1899,1537-6613,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31994701,NA,NA,NA,FALSE
 ki,2020,3272.005008,10.1016/j.jamda.2020.01.003,TRUE,Elsevier,Journal of the American Medical Directors Association,1525-8610,1525-8610,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32081681,NA,NA,NA,FALSE
-ki,2020,3272.005008,10.18632/aging.102843,TRUE,Impact Journals,Aging,1945-4589,NA,1945-4589,NA,NA,TRUE,32081835,PMC7066897,NA,NA,FALSE
+ki,2020,3272.005008,10.18632/aging.102843,FALSE,Impact Journals,Aging,1945-4589,NA,1945-4589,NA,NA,TRUE,32081835,PMC7066897,NA,NA,FALSE
 ki,2020,3339.773824,10.1111/jcpp.13210,TRUE,Wiley,Journal of Child Psychology and Psychiatry,0021-9630,0021-9630,1469-7610,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32020616,NA,NA,NA,FALSE
 ki,2020,3516.8106399999997,10.1038/s41380-019-0578-y,TRUE,Springer,Molecular Psychiatry,1359-4184,1359-4184,1476-5578,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31695167,NA,NA,NA,FALSE
 ki,2020,3585.379968,10.1016/j.celrep.2020.02.111,FALSE,Elsevier,Cell Reports,2211-1247,2211-1247,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32209459,PMC7198771,NA,NA,TRUE
 ki,2020,3606.090384,10.1212/wnl.0000000000008745,TRUE,Wolters Kluwer,Neurology,0028-3878,0028-3878,1526-632X,NA,NA,TRUE,31843808,PMC7080282,NA,NA,FALSE
 ki,2020,3655.192544,10.1073/pnas.1919600117,TRUE,National Academy of Sciences,Proceedings of the National Academy of Sciences,0027-8424,0027-8424,1091-6490,NA,https://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31988126,PMC7022209,NA,NA,FALSE
 ki,2020,3684.0355200000004,10.1126/sciadv.aaz2433,FALSE,American Association for the Advancement of Science (AAAS),Science Advances,2375-2548,NA,2375-2548,NA,NA,TRUE,32494709,PMC7202868,NA,NA,TRUE
-ki,2020,3689.961952,10.1097/j.pain.0000000000001787,TRUE,Wolters Kluwer,Pain,0304-3959,0304-3959,NA,NA,NA,TRUE,31977936,PMC7170444,NA,NA,FALSE
+ki,2020,3689.961952,10.1097/j.pain.0000000000001787,TRUE,Lippincott Williams & Wilkins,Pain,0304-3959,0304-3959,NA,NA,NA,TRUE,31977936,PMC7170444,NA,NA,FALSE
 ki,2020,3703.895392,10.1212/wnl.0000000000009058,TRUE,Wolters Kluwer,Neurology,0028-3878,0028-3878,1526-632X,NA,NA,TRUE,32047067,PMC7238917,NA,NA,FALSE
 ki,2020,3721.737936,10.1212/wnl.0000000000008667,TRUE,Wolters Kluwer,Neurology,0028-3878,0028-3878,1526-632X,NA,NA,TRUE,31732567,PMC7238943,NA,NA,FALSE
 ki,2020,3747.592208,10.1212/wnl.0000000000009097,TRUE,Wolters Kluwer,Neurology,0028-3878,0028-3878,1526-632X,NA,NA,TRUE,32047070,PMC7387108,NA,NA,FALSE
 ki,2020,3763.914912,10.1530/erc-19-0446,TRUE,Bioscientifica,Endocrine Related Cancer,1351-0088,1351-0088,1479-6821,NA,NA,TRUE,32163919,PMC7159166,NA,NA,FALSE
 ki,2020,3825.1200959999996,10.1097/ede.0000000000001173,TRUE,Wolters Kluwer,Epidemiology,1044-3983,1044-3983,NA,NA,NA,TRUE,32091429,PMC7144757,NA,NA,FALSE
 ki,2020,391.67598399999997,10.1093/ehjcr/ytaa020,FALSE,Oxford University Press (OUP),European Heart Journal - Case Reports,2514-2119,NA,2514-2119,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,32128483,PMC7047050,NA,NA,TRUE
-ki,2020,3950.64,10.1002/anie.201914411,TRUE,Wiley,Angewandte Chemie International Edition,1433-7851,1433-7851,1521-3773,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31886601,PMC7065234,NA,NA,FALSE
+ki,2020,3950.64,10.1002/anie.201914411,TRUE,Wiley,Angewandte Chemie,1433-7851,1433-7851,1521-3773,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31886601,PMC7065234,NA,NA,FALSE
 ki,2020,4071.8496,10.1136/bmj.m853,TRUE,BMJ,BMJ,1756-1833,NA,1756-1833,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32269017,PMC7190076,NA,NA,FALSE
-ki,2020,4128.287584,10.1172/jci125857,TRUE,American Society for Clinical Investigation,Journal of Clinical Investigation,0021-9738,0021-9738,1558-8238,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31725411,PMC6994148,NA,NA,FALSE
-ki,2020,4412.494831999999,10.1016/j.celrep.2019.12.095,TRUE,Elsevier,Cell Reports,2211-1247,2211-1247,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31995757,PMC6990404,NA,NA,TRUE
-ki,2020,4488.999424,10.1016/j.celrep.2020.01.092,TRUE,Elsevier,Cell Reports,2211-1247,2211-1247,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32101738,NA,NA,NA,TRUE
+ki,2020,4128.287584,10.1172/jci125857,FALSE,American Society for Clinical Investigation,Journal of Clinical Investigation,0021-9738,0021-9738,1558-8238,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31725411,PMC6994148,NA,NA,FALSE
+ki,2020,4412.494831999999,10.1016/j.celrep.2019.12.095,FALSE,Elsevier,Cell Reports,2211-1247,2211-1247,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31995757,PMC6990404,NA,NA,TRUE
+ki,2020,4488.999424,10.1016/j.celrep.2020.01.092,FALSE,Elsevier,Cell Reports,2211-1247,2211-1247,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32101738,NA,NA,NA,TRUE
 ki,2020,4525.6304,10.1001/jamaneurol.2019.4914,TRUE,American Medical Association (AMA),JAMA Neurology,2168-6149,2168-6149,NA,NA,NA,TRUE,32227140,PMC7105952,NA,NA,FALSE
 ki,2020,4561.221087999999,10.1073/pnas.1914186117,TRUE,National Academy of Sciences,Proceedings of the National Academy of Sciences,0027-8424,0027-8424,1091-6490,NA,https://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31980518,PMC7022208,NA,NA,FALSE
 ki,2020,498.0544,10.5271/sjweh.3875,TRUE,Nordic Association of Occupational Safety and Health (NOROSH),Scandinavian Journal of Work Environment and Health,0355-3140,0355-3140,1795-990X,NA,NA,TRUE,31901944,NA,NA,NA,FALSE
@@ -3203,7 +3196,6 @@ kth,2018,102,10.1109/tcns.2018.2795704,FALSE,Institute of Electrical & Electroni
 kth,2018,1049,10.3390/su10072269,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2018,1060,10.1109/tcomm.2017.2778094,TRUE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Transactions on Communications,0090-6778,0090-6778,NA,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 kth,2018,1061,10.3390/catal8080328,FALSE,MDPI,Catalysts,2073-4344,NA,2073-4344,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
-kth,2018,1080,10.1109/wcncw.2018.8369028,TRUE,Institute of Electrical & Electronics Engineers (IEEE),NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 kth,2018,1100,10.1016/j.resourpol.2018.05.014,TRUE,Elsevier,Resources Policy,0301-4207,0301-4207,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2018,1102,10.3390/su10030610,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2018,1105,10.3390/su10030717,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
@@ -3297,7 +3289,6 @@ kth,2018,2311,10.1016/j.jhazmat.2018.10.001,TRUE,Elsevier,Journal of Hazardous M
 kth,2018,2311,10.1016/j.strusafe.2018.09.004,TRUE,Elsevier,Structural Safety,0167-4730,0167-4730,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2018,2319,10.1016/j.jhazmat.2018.10.081,TRUE,Elsevier,Journal of Hazardous Materials,0304-3894,0304-3894,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30412809,NA,NA,NA,FALSE
 kth,2018,236,10.1109/tgcn.2018.2802419,FALSE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Transactions on Green Communications and Networking,2473-2400,NA,2473-2400,NA,NA,TRUE,NA,NA,NA,NA,FALSE
-kth,2018,2362,10.1007/978-3-319-94923-9_9,TRUE,Institute of Electrical & Electronics Engineers (IEEE),NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 kth,2018,2475,10.1002/cssc.201702026,TRUE,Wiley,ChemSusChem,1864-5631,NA,NA,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,29388739,PMC5873251,NA,NA,FALSE
 kth,2018,2505,10.3389/fphys.2018.00500,FALSE,Frontiers,Frontiers in Physiology,1664-042X,NA,1664-042X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,29867548,PMC5962745,NA,NA,TRUE
 kth,2018,2540,10.1016/j.applthermaleng.2017.11.033,TRUE,Elsevier,Applied Thermal Engineering,1359-4311,1359-4311,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
@@ -3315,7 +3306,6 @@ kth,2018,2688,10.1016/j.apcatb.2018.11.038,TRUE,Elsevier,Applied Catalysis B: En
 kth,2018,2703,10.1016/j.jchromb.2018.11.021,TRUE,Elsevier,Journal of Chromatography B,1570-0232,1570-0232,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30530115,NA,NA,NA,FALSE
 kth,2018,2708,10.3389/fphys.2018.01238,FALSE,Frontiers,Frontiers in Physiology,1664-042X,NA,1664-042X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,30333754,PMC6176651,NA,NA,TRUE
 kth,2018,2735,10.1021/acs.jchemed.8b00455,TRUE,American Chemical Society (ACS),Journal of Chemical Education,0021-9584,0021-9584,1938-1328,NA,http://pubs.acs.org/page/policy/authorchoice_termsofuse.html,TRUE,NA,NA,NA,NA,FALSE
-kth,2018,2744,10.1007/978-3-030-11738-2,TRUE,Institute of Electrical & Electronics Engineers (IEEE),NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 kth,2018,2756,10.1016/j.enpol.2018.09.027,TRUE,Elsevier,Energy Policy,0301-4215,0301-4215,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2018,2800,10.1016/j.jvoice.2018.08.014,TRUE,Elsevier,Journal of Voice,0892-1997,0892-1997,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30269894,NA,NA,NA,FALSE
 kth,2018,2822,10.1016/j.solener.2018.06.031,FALSE,Elsevier,Solar Energy,0038-092X,0038-092X,NA,NA,https://www.elsevier.com/tdm/userlicense/1.0/,TRUE,NA,NA,NA,NA,FALSE
@@ -3348,7 +3338,7 @@ kth,2018,3563,10.1021/acs.joc.8b02053,TRUE,American Chemical Society (ACS),The J
 kth,2018,363,10.4209/aaqr.2018.06.0225,TRUE,Taiwan Association for Aerosol Research,Aerosol and Air Quality Research,1680-8584,1680-8584,2071-1409,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 kth,2018,364,10.1109/tvt.2018.2811943,TRUE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Transactions on Vehicular Technology,0018-9545,0018-9545,1939-9359,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 kth,2018,3703,10.1038/s41467-017-02429-9,FALSE,Springer,Nature Communications,2041-1723,NA,2041-1723,NA,http://creativecommons.org/licenses/by/4.0,TRUE,29374160,PMC5786058,NA,NA,TRUE
-kth,2018,371,10.1109/tap.2018.2872766,FALSE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Transactions on Antennas and Propagation,0018-926X,0018-926X,1558-2221,NA,NA,TRUE,NA,NA,NA,NA,FALSE
+kth,2018,371,10.1109/tap.2018.2872766,TRUE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Transactions on Antennas and Propagation,0018-926X,0018-926X,1558-2221,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 kth,2018,3713,10.1016/j.jclepro.2018.05.142,TRUE,Elsevier,Journal of Cleaner Production,0959-6526,0959-6526,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2018,3731,10.1002/solr.201700073,TRUE,Wiley,Solar RRL,2367-198X,NA,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2018,382,10.1109/tii.2017.2788428,TRUE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Transactions on Industrial Informatics,1551-3203,1551-3203,1941-0050,NA,NA,TRUE,NA,NA,NA,NA,FALSE
@@ -3387,7 +3377,6 @@ kth,2018,705,10.1039/c8ra04636k,FALSE,Royal Society of Chemistry (RSC),RSC Advan
 kth,2018,732,10.4236/jemaa.2018.1012015,FALSE,Scientific Research Publishing,Journal of Electromagnetic Analysis and Applications,1942-0730,1942-0730,1942-0749,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2018,840,10.1109/tte.2018.2796031,TRUE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Transactions on Transportation Electrification,2332-7782,NA,2332-7782,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 kth,2018,844,10.3390/en11061356,FALSE,MDPI,Energies,1996-1073,NA,1996-1073,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
-kth,2018,884,10.1109/icton.2018.8473938,FALSE,Institute of Electrical & Electronics Engineers (IEEE),NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 kth,2018,938,10.1002/2017wr021187,TRUE,Wiley,Water Resources Research,0043-1397,NA,NA,NA,http://onlinelibrary.wiley.com/termsAndConditions#vor,TRUE,NA,NA,NA,NA,FALSE
 kth,2018,976,10.3390/mi9120612,FALSE,MDPI,Micromachines,2072-666X,NA,2072-666X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,30469481,PMC6316272,NA,NA,TRUE
 kth,2018,980,10.3390/mi9110544,FALSE,MDPI,Micromachines,2072-666X,NA,2072-666X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,30715043,PMC6266487,NA,NA,TRUE
@@ -3454,23 +3443,22 @@ kth,2019,1425.261584,10.1371/journal.pone.0220161,FALSE,Public Library of Scienc
 kth,2019,1428.107744,10.1371/journal.pone.0215831,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31063493,PMC6504076,NA,NA,TRUE
 kth,2019,1434.1068639999999,10.1073/pnas.1807812116,TRUE,National Academy of Sciences,Proceedings of the National Academy of Sciences,0027-8424,0027-8424,1091-6490,NA,https://www.pnas.org/site/aboutpnas/licenses.xhtml,TRUE,30733297,PMC6421426,NA,NA,FALSE
 kth,2019,1440.135248,10.3390/en12071382,FALSE,MDPI,Energies,1996-1073,NA,1996-1073,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
-kth,2019,1452.4384,10.1364/osac.2.003521,TRUE,Optical Society of America (OSA),OSA Continuum,2578-7519,NA,2578-7519,NA,NA,TRUE,NA,NA,NA,NA,TRUE
+kth,2019,1452.4384,10.1364/osac.2.003521,FALSE,Optical Society of America (OSA),OSA Continuum,2578-7519,NA,2578-7519,NA,NA,TRUE,NA,NA,NA,NA,TRUE
 kth,2019,1482.049792,10.1038/s41598-019-42541-y,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31000733,PMC6472362,NA,NA,TRUE
-kth,2019,1483.6432639999998,10.1364/ome.9.004409,TRUE,Optical Society of America (OSA),Optical Materials Express,2159-3930,NA,2159-3930,NA,NA,TRUE,NA,NA,NA,NA,TRUE
-kth,2019,1502.9801599999998,10.1364/boe.10.003773,TRUE,Optical Society of America (OSA),Biomedical Optics Express,2156-7085,2156-7085,2156-7085,NA,NA,TRUE,31452974,PMC6701525,NA,NA,TRUE
+kth,2019,1483.6432639999998,10.1364/ome.9.004409,FALSE,Optical Society of America (OSA),Optical Materials Express,2159-3930,NA,2159-3930,NA,NA,TRUE,NA,NA,NA,NA,TRUE
+kth,2019,1502.9801599999998,10.1364/boe.10.003773,FALSE,Optical Society of America (OSA),Biomedical Optics Express,2156-7085,2156-7085,2156-7085,NA,NA,TRUE,31452974,PMC6701525,NA,NA,TRUE
 kth,2019,1504.808688,10.1038/s41598-019-46958-3,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31337806,PMC6650390,NA,NA,TRUE
 kth,2019,1508.394944,10.1038/s41598-019-45934-1,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31267007,PMC6606766,NA,NA,TRUE
 kth,2019,1508.7885919999999,10.1038/s41598-019-45121-2,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31217491,PMC6584555,NA,NA,TRUE
 kth,2019,1512.15584,10.1021/acs.nanolett.9b01759,TRUE,American Chemical Society (ACS),Nano Letters,1530-6984,1530-6984,1530-6992,NA,http://pubs.acs.org/page/policy/authorchoice_termsofuse.html,TRUE,31478660,PMC6791286,NA,NA,FALSE
 kth,2019,1521.95456,10.1038/s41598-019-45606-0,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31243323,PMC6595069,NA,NA,TRUE
-kth,2019,1525.331248,10.3390/su11092669,TRUE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+kth,2019,1525.331248,10.3390/su11092669,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2019,1525.991104,10.1038/s41598-019-44506-7,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31160612,PMC6546697,NA,NA,TRUE
 kth,2019,1548.996384,10.1038/s41529-019-0071-8,FALSE,Springer,npj Materials Degradation,2397-2106,NA,2397-2106,NA,https://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,NA,NA,TRUE
 kth,2019,1557.6934560000002,10.1016/j.techsoc.2019.101221,TRUE,Elsevier,Technology in Society,0160-791X,0160-791X,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
-kth,2019,1562.157632,10.5772/intechopen.88253,TRUE,Institute of Electrical and Electronics Engineers (IEEE),NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 kth,2019,1562.85808,10.1109/access.2019.2932777,FALSE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Access,2169-3536,NA,2169-3536,NA,NA,TRUE,NA,NA,NA,NA,TRUE
 kth,2019,1569.101696,10.1109/jmems.2019.2910985,TRUE,Institute of Electrical & Electronics Engineers (IEEE),Journal of Microelectromechanical Systems,1057-7157,1057-7157,1941-0158,NA,NA,TRUE,NA,NA,NA,NA,FALSE
-kth,2019,1586.218304,10.1186/s13068-015-0417-6,FALSE,Springer,Biotechnology for Biofuels,1754-6834,NA,1754-6834,NA,NA,TRUE,26734072,PMC4700659,NA,NA,TRUE
+kth,2019,1586.218304,10.1186/s13068-015-0417-6,FALSE,BioMed Central,Biotechnology for Biofuels,1754-6834,NA,1754-6834,NA,NA,TRUE,26734072,PMC4700659,NA,NA,TRUE
 kth,2019,1587.4407840000001,10.1016/j.tranpol.2019.05.010,TRUE,Elsevier,Transport Policy,0967-070X,0967-070X,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2019,1596.472032,10.1109/tap.2019.2943328,TRUE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Transactions on Antennas and Propagation,0018-926X,0018-926X,1558-2221,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 kth,2019,1602.913888,10.1038/s41529-019-0084-3,FALSE,Springer,npj Materials Degradation,2397-2106,NA,2397-2106,NA,https://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,NA,NA,TRUE
@@ -3495,9 +3483,9 @@ kth,2019,1744.440256,10.1109/tvt.2019.2962866,TRUE,Institute of Electrical & Ele
 kth,2019,1758.4832,10.1021/acs.biomac.8b01739,TRUE,American Chemical Society (ACS),Biomacromolecules,1525-7797,1525-7797,1526-4602,NA,http://pubs.acs.org/page/policy/authorchoice_ccby_termsofuse.html,TRUE,30665299,NA,NA,NA,FALSE
 kth,2019,1775.64512,10.1021/acs.est.8b05012,TRUE,American Chemical Society (ACS),Environmental Science & Technology,0013-936X,0013-936X,1520-5851,NA,http://pubs.acs.org/page/policy/authorchoice_ccby_termsofuse.html,TRUE,30908015,NA,NA,NA,FALSE
 kth,2019,1807.6627680000001,10.1155/2019/9480193,FALSE,Hindawi Publishing Corporation,BioMed Research International,2314-6133,2314-6133,2314-6141,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31392217,PMC6662494,NA,NA,TRUE
-kth,2019,1817.6691680000001,10.1364/optica.6.001046,TRUE,Optical Society of America (OSA),Optica,2334-2536,NA,2334-2536,NA,NA,TRUE,NA,NA,NA,NA,TRUE
+kth,2019,1817.6691680000001,10.1364/optica.6.001046,FALSE,Optical Society of America (OSA),Optica,2334-2536,NA,2334-2536,NA,NA,TRUE,NA,NA,NA,NA,TRUE
 kth,2019,1826.3112992,10.1109/jstqe.2019.2943384,TRUE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Journal of Selected Topics in Quantum Electronics,1077-260X,1077-260X,1558-4542,NA,NA,TRUE,NA,NA,NA,NA,FALSE
-kth,2019,1826.6447199999998,10.1364/oe.28.001426,TRUE,Optical Society of America (OSA),Optics Express,1094-4087,NA,1094-4087,NA,NA,TRUE,32121854,NA,NA,NA,TRUE
+kth,2019,1826.6447199999998,10.1364/oe.28.001426,FALSE,Optical Society of America (OSA),Optics Express,1094-4087,NA,1094-4087,NA,NA,TRUE,32121854,NA,NA,NA,TRUE
 kth,2019,1840.7622400000002,10.1049/el.2019.2483,TRUE,Institution of Engineering and Technology (IET),Electronics Letters,0013-5194,0013-5194,1350-911X,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 kth,2019,1841.265392,10.1103/physrevfluids.4.053903,TRUE,American Physical Society (APS),Physical Review Fluids,2469-990X,NA,2469-990X,NA,https://link.aps.org/licenses/aps-default-license,TRUE,NA,NA,NA,NA,FALSE
 kth,2019,1850.3910400000002,10.1074/mcp.ra119.001765,TRUE,American Society for Biochemistry & Molecular Biology (ASBMB),Molecular & Cellular Proteomics,1535-9476,1535-9476,1535-9484,NA,NA,TRUE,31591263,PMC6885709,NA,NA,FALSE
@@ -3513,7 +3501,7 @@ kth,2019,1990.76384,10.1029/2019gl085080,TRUE,American Geophysical Union (AGU),G
 kth,2019,1994.3510400000002,10.1116/1.5129651,TRUE,American Vacuum Society,Journal of Vacuum Science & Technology B,2166-2746,2166-2746,2166-2754,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 kth,2019,1999.33536,10.1103/physrevfluids.4.071902,TRUE,American Physical Society (APS),Physical Review Fluids,2469-990X,NA,2469-990X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2019,2002.173968,10.1121/1.5095250,TRUE,Acoustical Society of America (ASA),The Journal of the Acoustical Society of America,0001-4966,0001-4966,NA,NA,NA,TRUE,31046346,NA,NA,NA,FALSE
-kth,2019,2005.1881600000002,10.1515/npprj-2018-0031,TRUE,Walter de Gruyter,Nordic Pulp & Paper Research Journal,2000-0669,0283-2631,2000-0669,NA,http://creativecommons.org/licenses/by-nc-nd/4.0,TRUE,NA,NA,NA,NA,FALSE
+kth,2019,2005.1881600000002,10.1515/npprj-2018-0031,TRUE,Walter de Gruyter,Nordic Pulp and Paper Research Journal,2000-0669,0283-2631,2000-0669,NA,http://creativecommons.org/licenses/by-nc-nd/4.0,TRUE,NA,NA,NA,NA,FALSE
 kth,2019,201.46281599999998,10.1515/znc-2018-0199,TRUE,Walter de Gruyter,Zeitschrift für Naturforschung C,1865-7125,0939-5075,1865-7125,NA,http://creativecommons.org/licenses/by-nc-nd/4.0,TRUE,30789828,NA,NA,NA,FALSE
 kth,2019,2027.3929279999998,10.1121/1.5129368,TRUE,Acoustical Society of America (ASA),The Journal of the Acoustical Society of America,0001-4966,0001-4966,NA,NA,NA,TRUE,31671999,NA,NA,NA,FALSE
 kth,2019,206.24134400000003,10.1515/hf-2018-0225,TRUE,Walter de Gruyter,Holzforschung,1437-434X,0018-3830,1437-434X,NA,http://creativecommons.org/licenses/by-nc-nd/4.0,TRUE,NA,NA,NA,NA,FALSE
@@ -3524,7 +3512,7 @@ kth,2019,2090.468176,10.1088/1361-6463/ab34b6,TRUE,IOP Publishing,Journal of Phy
 kth,2019,2090.468176,10.1088/2399-7532/ab3bdd,TRUE,IOP Publishing,Multifunctional Materials,2399-7532,NA,2399-7532,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2019,2101.139152,10.1098/rsta.2018.0341,TRUE,The Royal Society,"Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences",1364-503X,1364-503X,1471-2962,NA,https://royalsociety.org/journals/ethics-policies/data-sharing-mining/,TRUE,NA,PMC6784688,NA,NA,FALSE
 kth,2019,2104.918928,10.1111/caim.12303,TRUE,Wiley,Creativity and Innovation Management,0963-1690,NA,NA,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,NA,NA,NA,NA,FALSE
-kth,2019,2106.912656,10.2147/jpr.s215348,FALSE,Taylor & Francis,Journal of Pain Research,1178-7090,NA,1178-7090,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,31686904,PMC6800548,NA,NA,TRUE
+kth,2019,2106.912656,10.2147/jpr.s215348,FALSE,Dove Medical Press,Journal of Pain Research,1178-7090,NA,1178-7090,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,31686904,PMC6800548,NA,NA,TRUE
 kth,2019,2109.266048,10.1002/aoc.5062,TRUE,Wiley,Applied Organometallic Chemistry,0268-2605,0268-2605,1099-0739,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2019,2112.326496,10.1680/jgeot.19.p.053,TRUE,Thomas Telford,Géotechnique,0016-8505,0016-8505,1751-7656,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 kth,2019,2137.912672,10.1016/j.tust.2019.02.002,TRUE,Elsevier,Tunnelling and Underground Space Technology,0886-7798,0886-7798,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
@@ -3562,7 +3550,7 @@ kth,2019,2608.943184,10.1016/j.carbpol.2019.02.056,TRUE,Elsevier,Carbohydrate Po
 kth,2019,2609.139536,10.1016/j.carbpol.2019.03.022,TRUE,Elsevier,Carbohydrate Polymers,0144-8617,0144-8617,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30925982,NA,NA,NA,FALSE
 kth,2019,2624.835424,10.1016/j.triboint.2019.04.023,TRUE,Elsevier,Tribology International,0301-679X,0301-679X,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2019,2651.43168,10.1021/acs.nanolett.8b03937,TRUE,American Chemical Society (ACS),Nano Letters,1530-6984,1530-6984,1530-6992,NA,http://pubs.acs.org/page/policy/authorchoice_termsofuse.html,TRUE,30474987,PMC6477803,NA,NA,FALSE
-kth,2019,267.63344,10.18291/njwls.v9i2.114799,FALSE,Aarhus University Library,Nordic Journal of Working Life Studies,2245-0157,NA,2245-0157,NA,http://creativecommons.org/licenses/by-nc-nd/4.0,TRUE,NA,NA,NA,NA,TRUE
+kth,2019,267.63344,10.18291/njwls.v9i2.114799,FALSE,Aalborg University,Nordic Journal of Working Life Studies,2245-0157,NA,2245-0157,NA,http://creativecommons.org/licenses/by-nc-nd/4.0,TRUE,NA,NA,NA,NA,TRUE
 kth,2019,2671.509616,10.1016/j.ejpb.2019.05.008,TRUE,Elsevier,European Journal of Pharmaceutics and Biopharmaceutics,0939-6411,0939-6411,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31082509,NA,NA,NA,FALSE
 kth,2019,2680.9269600000002,10.1080/1088937x.2019.1648583,TRUE,Taylor & Francis,Polar Geography,1088-937X,1088-937X,1939-0513,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2019,2688.7574400000003,10.1021/acs.biomac.8b00585,TRUE,American Chemical Society (ACS),Biomacromolecules,1525-7797,1525-7797,1526-4602,NA,http://pubs.acs.org/page/policy/authorchoice_termsofuse.html,TRUE,29757614,NA,NA,NA,FALSE
@@ -3660,8 +3648,7 @@ kth,2019,3917.8784800000003,10.1021/acsaem.9b01223,TRUE,American Chemical Societ
 kth,2019,3965.124736,10.1016/j.sbi.2019.05.008,TRUE,Elsevier,Current Opinion in Structural Biology,0959-440X,0959-440X,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31233976,NA,NA,NA,FALSE
 kth,2019,409.47132799999997,10.5334/jors.238,FALSE,Ubiquity Press,Journal of Open Research Software,2049-9647,NA,2049-9647,NA,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,NA,NA,TRUE
 kth,2019,4120.920607999999,10.1016/j.jclepro.2019.03.127,TRUE,Elsevier,Journal of Cleaner Production,0959-6526,0959-6526,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
-kth,2019,4162.4736,10.1002/anie.201910603,TRUE,Wiley,Angewandte Chemie International Edition,1433-7851,1433-7851,1521-3773,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,31600016,PMC6916401,NA,NA,FALSE
-kth,2019,429.211312,10.1145/3290605.3300832,TRUE,Institute of Electrical and Electronics Engineers (IEEE),NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2019,4162.4736,10.1002/anie.201910603,TRUE,Wiley,Angewandte Chemie,1433-7851,1433-7851,1521-3773,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,31600016,PMC6916401,NA,NA,FALSE
 kth,2019,4366.979872,10.1002/adfm.201806693,TRUE,Wiley,Advanced Functional Materials,1616-301X,1616-301X,1616-3028,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2019,4379.937216,10.1038/s41467-019-10346-2,FALSE,Springer,Nature Communications,2041-1723,NA,2041-1723,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31171778,PMC6554349,NA,NA,TRUE
 kth,2019,4425.010384,10.1038/s41467-019-10631-0,FALSE,Springer,Nature Communications,2041-1723,NA,2041-1723,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31186411,PMC6560128,NA,NA,TRUE
@@ -3669,7 +3656,6 @@ kth,2019,4453.23976,10.1021/acs.bioconjchem.9b00548,TRUE,American Chemical Socie
 kth,2019,4605.765616,10.1002/we.2403,TRUE,Wiley,Wind Energy,1095-4244,1095-4244,1099-1824,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2019,491.36521600000003,10.5334/jors.239,FALSE,Ubiquity Press,Journal of Open Research Software,2049-9647,NA,2049-9647,NA,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,NA,NA,TRUE
 kth,2019,599.415456,10.1088/2399-6528/ab0d59,FALSE,IOP Publishing,Journal of Physics Communications,2399-6528,NA,2399-6528,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
-kth,2019,647.6368640000001,10.1145/3290605.3300475,TRUE,Institute of Electrical and Electronics Engineers (IEEE),NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 kth,2019,688.37424,10.1021/acsomega.9b03222,FALSE,American Chemical Society (ACS),ACS Omega,2470-1343,2470-1343,2470-1343,NA,http://pubs.acs.org/page/policy/authorchoice_termsofuse.html,TRUE,31909336,PMC6941383,NA,NA,TRUE
 kth,2019,688.675376,10.1089/neu.2019.6634,TRUE,Mary Ann Liebert,Journal of Neurotrauma,0897-7151,0897-7151,1557-9042,NA,https://www.liebertpub.com/nv/resources-tools/text-and-data-mining-policy/121/,TRUE,31701809,PMC7185329,NA,NA,FALSE
 kth,2019,692.82048,10.1021/acsomega.9b02271,FALSE,American Chemical Society (ACS),ACS Omega,2470-1343,2470-1343,2470-1343,NA,http://pubs.acs.org/page/policy/authorchoice_termsofuse.html,TRUE,31720526,PMC6844118,NA,NA,TRUE
@@ -3677,10 +3663,8 @@ kth,2019,694.272352,10.1021/acsomega.9b02641,FALSE,American Chemical Society (AC
 kth,2019,707.5100346020761,10.3390/ijgi8090387,FALSE,MDPI,ISPRS International Journal of Geo-Information,2220-9964,NA,2220-9964,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2019,754.18992,10.1121/1.5117174,TRUE,Acoustical Society of America (ASA),The Journal of the Acoustical Society of America,0001-4966,0001-4966,NA,NA,NA,TRUE,31370590,NA,NA,NA,FALSE
 kth,2019,765.1271039999999,10.1080/21663831.2019.1644683,FALSE,Taylor & Francis,Materials Research Letters,2166-3831,NA,2166-3831,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,NA,NA,NA,NA,TRUE
-kth,2019,793.500912,10.1145/3290605.3300847,TRUE,Institute of Electrical and Electronics Engineers (IEEE),NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 kth,2019,817.5153280000001,10.3390/en12122366,FALSE,MDPI,Energies,1996-1073,NA,1996-1073,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2019,830.1451072664361,10.3390/catal9100819,FALSE,MDPI,Catalysts,2073-4344,NA,2073-4344,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
-kth,2019,831.384576,10.1145/3363384.3363477,TRUE,Institute of Electrical and Electronics Engineers (IEEE),NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 kth,2019,869.233312,10.3390/app9061205,FALSE,MDPI,Applied Sciences,2076-3417,NA,2076-3417,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2019,873.23304,10.1039/c8ra09866b,FALSE,Royal Society of Chemistry (RSC),RSC Advances,2046-2069,NA,2046-2069,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2019,883.8181119999999,10.1039/c9ra07519d,FALSE,Royal Society of Chemistry (RSC),RSC Advances,2046-2069,NA,2046-2069,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,NA,NA,NA,NA,TRUE
@@ -3837,7 +3821,7 @@ liu,2017,1560,10.1088/1367-2630/aa5f8e,FALSE,IOP Publishing,New Journal of Physi
 liu,2017,1565,10.1186/s13063-017-1898-3,FALSE,BioMed Central,Trials,1745-6215,NA,1745-6215,1745-6215,NA,TRUE,28372563,PMC5379716,ut:000398119900001,NA,TRUE
 liu,2017,1566,10.1038/srep43512,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,2045-2322,NA,TRUE,28266628,PMC5339898,ut:000395637500001,NA,TRUE
 liu,2017,1566,10.1038/srep45864,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,2045-2322,NA,TRUE,28361922,PMC5374464,ut:000397898100001,NA,TRUE
-liu,2017,1568.8,10.1186/s13049-017-0439-0,FALSE,Springer,"Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine",1757-7241,NA,1757-7241,1757-7241,NA,TRUE,28899418,PMC5596498,ut:000410326900001,NA,TRUE
+liu,2017,1568.8,10.1186/s13049-017-0439-0,FALSE,BioMed Central,"Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine",1757-7241,NA,1757-7241,1757-7241,NA,TRUE,28899418,PMC5596498,ut:000410326900001,NA,TRUE
 liu,2017,1569.1,10.1186/s12889-017-4357-x,FALSE,BioMed Central,BMC Public Health,1471-2458,NA,1471-2458,1471-2458,NA,TRUE,28490328,PMC5426082,ut:000401863200003,NA,TRUE
 liu,2017,1578,10.3791/56279,TRUE,MyJove Corporation,Journal of Visualized Experiments,1940-087X,NA,1940-087X,1940-087X,NA,FALSE,NA,NA,ut:000415371500057,https://www.jove.com/video/56279/imaging-amyloid-tissues-stained-with-luminescent-conjugated,FALSE
 liu,2017,1591.5,10.1186/s12872-017-0512-7,FALSE,BioMed Central,BMC Cardiovascular Disorders,1471-2261,NA,1471-2261,1471-2261,NA,TRUE,28288580,PMC5348799,ut:000397683100003,NA,TRUE
@@ -3854,7 +3838,7 @@ liu,2017,1700.4,10.1186/s13012-017-0699-0,FALSE,BioMed Central,Implementation Sc
 liu,2017,1722.5,10.1534/g3.116.028308,FALSE,Genetics Society of America,G3: Genes|Genomes|Genetics,2160-1836,NA,2160-1836,2160-1836,NA,TRUE,27678519,PMC5144961,ut:000390591400012,NA,TRUE
 liu,2017,1722.6,10.1186/s13068-017-0814-0,FALSE,BioMed Central,Biotechnology for Biofuels,1754-6834,NA,1754-6834,1754-6834,NA,TRUE,28523077,PMC5434626,ut:000401621100002,NA,TRUE
 liu,2017,1722.6,10.1186/s13068-017-0815-z,FALSE,BioMed Central,Biotechnology for Biofuels,1754-6834,NA,1754-6834,1754-6834,NA,TRUE,28523076,PMC5434538,ut:000401621100001,NA,TRUE
-liu,2017,1750.8,10.1186/s13049-017-0395-8,FALSE,Springer,"Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine",1757-7241,NA,1757-7241,1757-7241,NA,TRUE,28526053,PMC5438497,ut:000401773100001,NA,TRUE
+liu,2017,1750.8,10.1186/s13049-017-0395-8,FALSE,BioMed Central,"Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine",1757-7241,NA,1757-7241,1757-7241,NA,TRUE,28526053,PMC5438497,ut:000401773100001,NA,TRUE
 liu,2017,1757,10.1364/oe.25.008192,FALSE,Optical Society of America (OSA),Optics Express,1094-4087,NA,1094-4087,1094-4087,NA,TRUE,28380934,NA,ut:000398536000094,NA,FALSE
 liu,2017,1784,10.1177/1687814017695174,FALSE,SAGE Publications,Advances in Mechanical Engineering,1687-8140,1687-8140,1687-8140,1687-8132,NA,TRUE,NA,NA,ut:000400394500001,NA,TRUE
 liu,2017,1792.7,10.3389/fnbeh.2017.00251,FALSE,Frontiers,Frontiers in Behavioral Neuroscience,1662-5153,NA,1662-5153,1662-5153,NA,TRUE,29311867,PMC5742217,ut:000418282900001,NA,TRUE
@@ -3891,7 +3875,7 @@ liu,2017,2150,10.1080/07292473.2017.1326584,TRUE,Taylor & Francis,War & Society,
 liu,2017,2150,10.1080/08351813.2017.1301293,TRUE,Taylor & Francis,Research on Language & Social Interaction,0835-1813,0835-1813,1532-7973,0835-1813,NA,TRUE,NA,NA,ut:000404581100001,NA,FALSE
 liu,2017,2150,10.1080/09669760.2017.1414690,TRUE,Taylor & Francis,International Journal of Early Years Education,0966-9760,0966-9760,1469-8463,0966-9760,NA,TRUE,NA,NA,NA,NA,FALSE
 liu,2017,2151.1,10.3389/fcimb.2017.00278,FALSE,Frontiers,Frontiers in Cellular and Infection Microbiology,2235-2988,NA,2235-2988,2235-2988,NA,TRUE,28695112,PMC5483443,ut:000404073500001,NA,TRUE
-liu,2017,2174,10.1044/2016_jslhr-h-16-0160,TRUE,American Speech Language Hearing Association,Journal of Speech Language and Hearing Research,1092-4388,1092-4388,NA,1092-4388,http://creativecommons.org/licenses/by/4.0/,TRUE,28651255,NA,ut:000411478200024,NA,FALSE
+liu,2017,2174,10.1044/2016_jslhr-h-16-0160,TRUE,American Speech Language Hearing Association,"Journal of Speech, Language, and Hearing Research",1092-4388,1092-4388,NA,1092-4388,http://creativecommons.org/licenses/by/4.0/,TRUE,28651255,NA,ut:000411478200024,NA,FALSE
 liu,2017,2174,10.2196/jmir.7101,FALSE,JMIR Publications,Journal of Medical Internet Research,1438-8871,NA,1438-8871,1438-8871,NA,TRUE,28619700,PMC5491899,ut:000408351500002,NA,TRUE
 liu,2017,2200,10.1007/s00033-017-0823-7,TRUE,Springer,Zeitschrift fÃ¼r angewandte Mathematik und Physik,0044-2275,0044-2275,1420-9039,0044-2275,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000407669500002,NA,FALSE
 liu,2017,2200,10.1007/s00068-017-0827-1,TRUE,Springer,European Journal of Trauma and Emergency Surgery,1863-9933,1863-9933,1863-9941,1863-9933,http://creativecommons.org/licenses/by/4.0,TRUE,28825159,NA,NA,NA,FALSE
@@ -4023,8 +4007,8 @@ liu,2017,652,10.1042/bsr20160514,FALSE,Portland Press,Bioscience Reports,0144-84
 liu,2017,717,10.3390/app7040383,FALSE,MDPI,Applied Sciences,2076-3417,NA,2076-3417,2076-3417,NA,TRUE,NA,NA,ut:000404447600073,NA,TRUE
 liu,2017,745.1,10.3389/fphy.2017.00068,FALSE,Frontiers,Frontiers in Physics,2296-424X,NA,2296-424X,2296-424X,NA,TRUE,NA,NA,ut:000418284100001,NA,TRUE
 liu,2017,75,10.1515/euco-2017-0027,FALSE,Walter de Gruyter,European Countryside,1803-8417,NA,1803-8417,1803-8417,http://creativecommons.org/licenses/by-nc-nd/3.0,TRUE,NA,NA,ut:000415257500004,NA,TRUE
-liu,2017,762.9,10.1117/1.jbo.22.10.106006,TRUE,Society of Photo-optical Instrumentation Engineers (SPIE),Journal of Biomedical Optics,1083-3668,NA,NA,1083-3668,NA,TRUE,29019178,NA,ut:000414251000019,NA,FALSE
-liu,2017,766,10.1117/1.jbo.22.10.106005,TRUE,Society of Photo-optical Instrumentation Engineers (SPIE),Journal of Biomedical Optics,1083-3668,NA,NA,1083-3668,NA,TRUE,29019179,NA,ut:000414251000018,NA,FALSE
+liu,2017,762.9,10.1117/1.jbo.22.10.106006,FALSE,Society of Photo-optical Instrumentation Engineers (SPIE),Journal of Biomedical Optics,1083-3668,NA,NA,1083-3668,NA,TRUE,29019178,NA,ut:000414251000019,NA,FALSE
+liu,2017,766,10.1117/1.jbo.22.10.106005,FALSE,Society of Photo-optical Instrumentation Engineers (SPIE),Journal of Biomedical Optics,1083-3668,NA,NA,1083-3668,NA,TRUE,29019179,NA,ut:000414251000018,NA,FALSE
 liu,2017,817.3,10.3389/fenvs.2017.00082,FALSE,Frontiers,Frontiers in Environmental Science,2296-665X,NA,2296-665X,2296-665X,NA,TRUE,NA,NA,NA,NA,TRUE
 liu,2017,987,10.1016/j.indmarman.2016.10.015,TRUE,Elsevier,Industrial Marketing Management,0019-8501,0019-8501,1873-2062,0019-8501,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000394476800009,NA,FALSE
 liu,2017,987,10.1016/j.indmarman.2016.12.007,TRUE,Elsevier,Industrial Marketing Management,0019-8501,0019-8501,NA,0019-8501,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000394476800002,NA,FALSE
@@ -4221,7 +4205,7 @@ liu,2018,810,10.5194/bg-15-1549-2018,FALSE,Copernicus Publications,Biogeoscience
 liu,2018,816.4000000000001,10.7717/peerj.5889,FALSE,PeerJ,PeerJ,2167-8359,NA,2167-8359,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30416887,PMC6225837,NA,NA,TRUE
 liu,2018,833.4,10.3389/fsufs.2018.00024,FALSE,Frontiers,Frontiers in Sustainable Food Systems,2571-581X,NA,2571-581X,2571-581X,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 liu,2018,85.4,10.5296/jet.v5i1.12702,FALSE,Macrothink Institute,Journal of Education and Training,2330-9709,NA,2330-9709,2330-9709,NA,TRUE,NA,NA,NA,NA,FALSE
-liu,2018,868.4000000000001,10.1117/1.jbo.23.12.121608,TRUE,Society of Photo-optical Instrumentation Engineers (SPIE),Journal of Biomedical Optics,1083-3668,NA,NA,NA,NA,TRUE,30267487,NA,NA,NA,TRUE
+liu,2018,868.4000000000001,10.1117/1.jbo.23.12.121608,FALSE,Society of Photo-optical Instrumentation Engineers (SPIE),Journal of Biomedical Optics,1083-3668,NA,NA,NA,NA,TRUE,30267487,NA,NA,NA,TRUE
 liu,2018,885,10.1080/21693277.2018.1528904,FALSE,Taylor & Francis,Production & Manufacturing Research,2169-3277,NA,2169-3277,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 liu,2018,945.8,10.1039/c7cc08471d,TRUE,Royal Society of Chemistry (RSC),Chemical Communications,1359-7345,1359-7345,1364-548X,1359-7345,http://creativecommons.org/licenses/by/3.0/,TRUE,29323369,NA,NA,NA,FALSE
 liu,2018,972,10.1016/j.giq.2018.09.001,TRUE,Elsevier,Government Information Quarterly,0740-624X,0740-624X,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
@@ -4665,6 +4649,62 @@ lnu,2018,3153.1540000000005,10.1128/mbio.01792-18,FALSE,American Society for Mic
 lnu,2018,847.5120000000002,10.17645/mac.v6i4.1467,FALSE,Cogitatio,Media and Communication,2183-2439,NA,2183-2439,NA,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,NA,NA,TRUE
 lnu,2018,880.1990000000001,10.4236/ojn.2018.87036,FALSE,Scientific Research Publishing,Open Journal of Nursing,2162-5336,2162-5336,2162-5344,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 lnu,2018,893.4459999999999,10.4236/ce.2018.912129,FALSE,Scientific Research Publishing,Creative Education,2151-4755,2151-4755,2151-4771,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
+lnu,2019,1076.2053119999998,10.1098/rsos.191541,FALSE,The Royal Society,Royal Society Open Science,2054-5703,2054-5703,2054-5703,NA,https://royalsociety.org/journals/ethics-policies/data-sharing-mining/,TRUE,32218971,PMC7029951,NA,NA,NA
+lnu,2019,1164.374912,10.1002/ecs2.2577,FALSE,Wiley,Ecosphere,2150-8925,2150-8925,2150-8925,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,NA
+lnu,2019,1184.22912,10.23865/njlr.v5.2013,FALSE,Cappelen Damm Akademisk,Nordic Journal of Literacy Research,2464-1596,2464-1596,NA,NA,NA,TRUE,NA,NA,NA,NA,NA
+lnu,2019,123.120256,10.1080/17482631.2019.1684166,FALSE,Taylor & Francis,International Journal of Qualitative Studies on Health and Well-being,1748-2631,NA,1748-2631,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31662062,PMC6830276,NA,NA,NA
+lnu,2019,1253.8292959999999,10.5334/ijic.4192,FALSE,Ubiquity Press,International Journal of Integrated Care,1568-4156,NA,1568-4156,NA,NA,TRUE,31592046,PMC6764182,NA,NA,NA
+lnu,2019,1283.6238239999998,10.1016/j.bpj.2018.12.004,TRUE,Elsevier,Biophysical Journal,0006-3495,0006-3495,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30606448,PMC6350078,NA,NA,NA
+lnu,2019,1289.4096,10.22382/wfs-2019-003,TRUE,Society of Wood Science and Technology,Wood and Fiber Science,0735-6161,0735-6161,NA,NA,NA,TRUE,NA,NA,NA,NA,NA
+lnu,2019,1289.4096,10.22382/wfs-2019-005,TRUE,Society of Wood Science and Technology,Wood and Fiber Science,0735-6161,0735-6161,NA,NA,NA,TRUE,NA,NA,NA,NA,NA
+lnu,2019,1319.40048,10.22382/wfs-2019-017,TRUE,Society of Wood Science and Technology,Wood and Fiber Science,0735-6161,0735-6161,0735-6161,NA,NA,TRUE,NA,NA,NA,NA,NA
+lnu,2019,1404.422784,10.1371/journal.pone.0213533,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30870454,PMC6417695,NA,NA,NA
+lnu,2019,1429.43312,10.3390/ijerph16091616,FALSE,MDPI,International Journal of Environmental Research and Public Health,1660-4601,NA,1660-4601,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31072034,PMC6539783,NA,NA,NA
+lnu,2019,1437.638368,10.1371/journal.pone.0216451,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31071131,PMC6508645,NA,NA,NA
+lnu,2019,1447.033056,10.1016/j.scitotenv.2019.03.013,TRUE,Elsevier,Science of The Total Environment,0048-9697,0048-9697,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31018448,NA,NA,NA,NA
+lnu,2019,1461.6395679999998,10.1080/23311908.2019.1647601,FALSE,Cogent OA,Cogent Psychology,2331-1908,NA,2331-1908,NA,NA,TRUE,NA,NA,NA,NA,NA
+lnu,2019,1498.1563199999998,10.1080/17482631.2019.1632109,FALSE,Taylor & Francis,International Journal of Qualitative Studies on Health and Well-being,1748-2631,NA,1748-2631,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31256748,PMC6610460,NA,NA,NA
+lnu,2019,1524.117264,10.3389/fevo.2019.00271,FALSE,Frontiers,Frontiers in Ecology and Evolution,2296-701X,NA,2296-701X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,NA
+lnu,2019,1611.408,10.1136/bmjsem-2018-000486,FALSE,BMJ,BMJ Open Sport & Exercise Medicine,2055-7647,NA,2055-7647,NA,NA,TRUE,30740234,PMC6347893,NA,NA,NA
+lnu,2019,1638.693376,10.3390/en12163064,FALSE,MDPI,Energies,1996-1073,NA,1996-1073,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,NA
+lnu,2019,1651.9056,10.1002/fsn3.1280,FALSE,Wiley,Food Science & Nutrition,2048-7177,2048-7177,2048-7177,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31890191,PMC6924304,NA,NA,NA
+lnu,2019,1674.097152,10.1016/j.ergon.2019.05.005,TRUE,Elsevier,International Journal of Industrial Ergonomics,0169-8141,0169-8141,NA,NA,https://www.elsevier.com/tdm/userlicense/1.0/,TRUE,NA,NA,NA,NA,NA
+lnu,2019,1749.077184,10.2196/11625,FALSE,JMIR Publications,JMIR Research Protocols,1929-0748,NA,1929-0748,NA,NA,TRUE,30900999,PMC6450475,NA,NA,NA
+lnu,2019,1776.8912,10.1085/jgp.201812301,FALSE,Rockefeller University Press,Journal of General Physiology,0022-1295,0022-1295,1540-7748,NA,http://www.rupress.org/terms/,TRUE,30872560,PMC6445577,NA,NA,NA
+lnu,2019,1778.5271520000001,10.1038/s41598-019-46422-2,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31296876,PMC6624374,NA,NA,NA
+lnu,2019,1786.4879039999998,10.1186/s12955-019-1110-4,FALSE,BioMed Central,Health and Quality of Life Outcomes,1477-7525,NA,1477-7525,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30837000,PMC6402133,NA,NA,NA
+lnu,2019,1793.5292,10.1039/c9py01039d,TRUE,Royal Society of Chemistry (RSC),Polymer Chemistry,1759-9954,1759-9954,1759-9962,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,NA,NA,NA,NA,NA
+lnu,2019,1810.184192,10.1016/j.ssci.2019.104567,TRUE,Elsevier,Safety Science,0925-7535,0925-7535,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,NA
+lnu,2019,1827.6085439999997,10.1186/s12885-019-5690-5,FALSE,BioMed Central,BMC Cancer,1471-2407,NA,1471-2407,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31138173,PMC6540367,NA,NA,NA
+lnu,2019,1829.7552,10.1080/15230430.2019.1646574,FALSE,Taylor & Francis,"Arctic, Antarctic, and Alpine Research",1523-0430,1523-0430,1938-4246,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,NA
+lnu,2019,1842.7323680000002,10.1186/s12862-019-1475-3,FALSE,BioMed Central,BMC Evolutionary Biology,1471-2148,NA,1471-2148,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31331267,PMC6647320,NA,NA,NA
+lnu,2019,1951.3896,10.2147/jpr.s194114,FALSE,Dove Medical Press,Journal of Pain Research,1178-7090,NA,1178-7090,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,30881106,PMC6417848,NA,NA,NA
+lnu,2019,1996.504304,10.1128/mbio.01470-19,FALSE,American Society for Microbiology,mBio,2150-7511,NA,2150-7511,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31409677,PMC6692508,NA,NA,NA
+lnu,2019,2018.5476479999998,10.3389/fmicb.2018.03296,FALSE,Frontiers,Frontiers in Microbiology,1664-302X,NA,1664-302X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,30705671,PMC6345115,NA,NA,NA
+lnu,2019,2115.637104,10.1111/1751-7915.13441,FALSE,Wiley,Microbial Biotechnology,1751-7915,1751-7915,1751-7915,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31270938,PMC6680617,NA,NA,NA
+lnu,2019,2172.216688,10.1111/hex.12966,FALSE,Wiley,Health Expectations,1369-6513,1369-6513,1369-7625,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31560830,PMC6882253,NA,NA,NA
+lnu,2019,2185.150432,10.1186/s13063-019-3187-9,FALSE,BioMed Central,Trials,1745-6215,NA,1745-6215,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30683140,PMC6347805,NA,NA,NA
+lnu,2019,229.290992,10.3390/socsci8040128,FALSE,MDPI,Social Sciences,2076-0760,NA,2076-0760,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,NA
+lnu,2019,2395.0035199999998,10.1364/oe.27.034323,FALSE,Optical Society of America (OSA),Optics Express,1094-4087,NA,1094-4087,NA,NA,TRUE,31878482,NA,NA,NA,NA
+lnu,2019,2539.8017919999998,10.1177/0952695119836587,TRUE,SAGE Publications,History of the Human Sciences,0952-6951,0952-6951,1461-720X,NA,http://journals.sagepub.com/page/policies/text-and-data-mining-license,TRUE,NA,NA,NA,NA,NA
+lnu,2019,2732.452368,10.5406/scanstud.91.1-2.0001,TRUE,University of Illinois Press,Scandinavian Studies,0036-5637,0036-5637,NA,NA,NA,TRUE,NA,NA,NA,NA,NA
+lnu,2019,2816.911104,10.1108/ijlls-02-2020-0006,TRUE,Emerald,International Journal for Lesson & Learning Studies,2046-8253,2046-8253,NA,NA,https://www.emerald.com/insight/site-policies,TRUE,NA,NA,NA,NA,NA
+lnu,2019,2890.036176,10.1002/elsc.201900015,TRUE,Wiley,Engineering in Life Sciences,1618-0240,1618-0240,1618-2863,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32625012,PMC6999223,NA,NA,NA
+lnu,2019,2949.13152,10.1111/1758-2229.12736,TRUE,Wiley,Environmental Microbiology Reports,1758-2229,1758-2229,1758-2229,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30672139,PMC6563467,NA,NA,NA
+lnu,2019,3030.724272,10.1002/aqc.3064,TRUE,Wiley,Aquatic Conservation: Marine and Freshwater Ecosystems,1052-7613,1052-7613,1099-0755,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,NA
+lnu,2019,3133.779808,10.1002/aqc.3196,TRUE,Wiley,Aquatic Conservation: Marine and Freshwater Ecosystems,1052-7613,1052-7613,1099-0755,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,NA
+lnu,2019,429.059328,10.4236/tel.2019.96115,FALSE,Scientific Research Publishing,Theoretical Economics Letters,2162-2078,2162-2078,2162-2086,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,NA
+lnu,2019,471.42888,10.3390/geosciences9020073,FALSE,MDPI,Geosciences,2076-3263,NA,2076-3263,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,NA
+lnu,2019,472.45028800000006,10.3390/buildings9010012,FALSE,MDPI,Buildings,2075-5309,NA,2075-5309,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,NA
+lnu,2019,478.38804799999997,10.5194/adgeo-49-137-2019,FALSE,Copernicus Publications,Advances in Geosciences,1680-7359,NA,1680-7359,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,NA
+lnu,2019,585.158224,10.3390/buildings9070164,FALSE,MDPI,Buildings,2075-5309,NA,2075-5309,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,NA
+lnu,2019,614.76584,10.3390/polym11101633,FALSE,MDPI,Polymers,2073-4360,NA,2073-4360,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31658588,PMC6835946,NA,NA,NA
+lnu,2019,756.687744,10.3390/su11092654,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,NA
+lnu,2019,764.3568,10.17645/si.v6i3.1496,FALSE,Cogitatio,Social Inclusion,2183-2803,NA,2183-2803,NA,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,NA,NA,NA
+lnu,2019,765.696336,10.3390/su11113061,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,NA
+lnu,2019,824.0459199999999,10.3390/toxins11020120,FALSE,MDPI,Toxins,2072-6651,NA,2072-6651,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,30781381,PMC6410017,NA,NA,NA
+lnu,2019,885.927952,10.1039/c9ra07425b,FALSE,Royal Society of Chemistry (RSC),RSC Advances,2046-2069,NA,2046-2069,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,NA
+lnu,2019,921.866032,10.15376/biores.14.2.3768-3779,FALSE,Institute of Electrical and Electronics Engineers (IEEE),NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 ltu,2012,2630,10.1080/02827581.2012.656142,TRUE,Taylor & Francis,Scandinavian Journal of Forest Research,0282-7581,0282-7581,1651-1891,0282-7581,NA,TRUE,NA,NA,ut:000305555600010,NA,FALSE
 ltu,2012,2630,10.1080/17480272.2012.699461,TRUE,Taylor & Francis,Wood Material Science and Engineering,1748-0272,1748-0272,1748-0280,1748-0272,NA,TRUE,NA,NA,NA,NA,FALSE
 ltu,2013,2630,10.1080/03585522.2012.693272,TRUE,Taylor & Francis,Scandinavian Economic History Review,0358-5522,0358-5522,1750-2837,0358-5522,NA,TRUE,NA,NA,NA,NA,FALSE
@@ -4847,7 +4887,6 @@ ltu,2018,1700,10.1109/tpami.2018.2836422,TRUE,Institute of Electrical & Electron
 ltu,2018,1745,10.1186/s12891-018-2324-z,FALSE,BioMed Central,BMC Musculoskeletal Disorders,1471-2474,NA,1471-2474,NA,NA,TRUE,30486819,PMC6263552,NA,NA,TRUE
 ltu,2018,1771,10.1159/000493339,FALSE,Karger,Dementia and Geriatric Cognitive Disorders Extra,1664-5464,NA,1664-5464,NA,https://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30386370,PMC6206949,NA,NA,TRUE
 ltu,2018,1807,10.1155/2018/1249615,FALSE,Hindawi Publishing Corporation,Advances in Materials Science and Engineering,1687-8434,1687-8434,1687-8442,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
-ltu,2018,1817,10.5772/intechopen.80468,FALSE,IntechOpen,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 ltu,2018,1820,10.1109/access.2018.2838339,FALSE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Access,2169-3536,NA,2169-3536,NA,NA,TRUE,NA,NA,NA,NA,TRUE
 ltu,2018,1921,10.1109/access.2018.2840128,FALSE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Access,2169-3536,NA,2169-3536,NA,NA,TRUE,NA,NA,NA,NA,TRUE
 ltu,2018,1995,10.1109/access.2018.2875623,FALSE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Access,2169-3536,NA,2169-3536,NA,NA,TRUE,NA,NA,NA,NA,TRUE
@@ -4881,12 +4920,10 @@ ltu,2018,3137,10.1016/j.apenergy.2018.09.018,TRUE,Elsevier,Applied Energy,0306-2
 ltu,2018,350,10.3813/aaa.919181,TRUE,S. Hirzel Verlag,Acta Acustica united with Acustica,1610-1928,1610-1928,NA,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 ltu,2018,3548,10.1002/hyp.11446,TRUE,Wiley,Hydrological Processes,0885-6087,NA,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 ltu,2018,366,10.11159/jffhmt.2018.002,FALSE,Avestia Publishing,"Journal of Fluid Flow, Heat and Mass Transfer",2368-6111,NA,2368-6111,NA,NA,TRUE,NA,NA,NA,NA,FALSE
-ltu,2018,380,10.5348/100038d05so2018oa,FALSE,Edorium,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 ltu,2018,452,10.1080/23311835.2017.1327502,FALSE,Taylor & Francis,Cogent Mathematics,2331-1835,NA,2331-1835,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 ltu,2018,486,10.1016/j.orp.2018.08.002,FALSE,Elsevier,Operations Research Perspectives,2214-7160,2214-7160,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,TRUE
 ltu,2018,491,10.4236/nr.2018.92003,FALSE,Scientific Research,Natural Resources,2158-706X,2158-706X,2158-7086,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 ltu,2018,497,10.3390/geosciences8070236,FALSE,MDPI,Geosciences,2076-3263,NA,2076-3263,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
-ltu,2018,500,10.5281/zenodo.1297161,FALSE,University of Agean,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 ltu,2018,589,10.1039/c8ra08004f,FALSE,Royal Society of Chemistry (RSC),RSC Advances,2046-2069,NA,2046-2069,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,NA,NA,NA,NA,TRUE
 ltu,2018,59,10.14708/am.v11i0.1247,TRUE,Polish Mathematical Society,Antiquitates Mathematicae,2353-8813,1898-5203,2353-8813,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 ltu,2018,646,10.4236/jgis.2018.103013,FALSE,Scientific Research Publishing,Journal of Geographic Information System,2151-1950,2151-1950,2151-1969,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
@@ -4901,26 +4938,26 @@ ltu,2018,782,10.3390/su10030683,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050
 ltu,2018,792,10.1155/2018/2981739,FALSE,Hindawi Publishing Corporation,International Journal of Rotating Machinery,1023-621X,1023-621X,1542-3034,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 ltu,2018,806,10.14485/hbpr.5.2.9,TRUE,Paris Scholar Publishing,Health Behavior and Policy Review,2326-4403,2326-4403,NA,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 ltu,2018,839,10.3390/min8120561,FALSE,MDPI,Minerals,2075-163X,NA,2075-163X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
-ltu,2018,86,NA,FALSE,MDPI,Journal of Earth Scienses and Geotechnical Engineering,NA,1792-9040,1792-9660,NA,NA,FALSE,NA,NA,NA,http://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=551039,FALSE
-ltu,2018,86,NA,FALSE,MDPI,Journal of Earth Scienses and Geotechnical Engineering,NA,1792-9040,1792-9660,NA,NA,FALSE,NA,NA,NA,http://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=586463,FALSE
-ltu,2018,86,NA,FALSE,MDPI,Journal of Earth Scienses and Geotechnical Engineering,NA,1792-9040,1792-9660,NA,NA,FALSE,NA,NA,NA,http://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=588431,FALSE
-ltu,2018,86,NA,FALSE,MDPI,Journal of Earth Scienses and Geotechnical Engineering,NA,1792-9040,1792-9660,NA,NA,FALSE,NA,NA,NA,http://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=590399,FALSE
-ltu,2018,86,NA,FALSE,MDPI,Journal of Earth Scienses and Geotechnical Engineering,NA,1792-9040,1792-9660,NA,NA,FALSE,NA,NA,NA,http://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=592367,FALSE
-ltu,2018,86,NA,FALSE,MDPI,Journal of Earth Scienses and Geotechnical Engineering,NA,1792-9040,1792-9660,NA,NA,FALSE,NA,NA,NA,http://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=594335,FALSE
-ltu,2018,86,NA,FALSE,MDPI,Journal of Earth Scienses and Geotechnical Engineering,NA,1792-9040,1792-9660,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=560879,FALSE
+ltu,2018,86,NA,FALSE,Scientific Research Publishing,Journal of Earth Sciences and Geotechnical Engineering,1792-9040,1792-9660,NA,NA,NA,FALSE,NA,NA,NA,http://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=551039,FALSE
+ltu,2018,86,NA,FALSE,Scientific Research Publishing,Journal of Earth Sciences and Geotechnical Engineering,1792-9040,1792-9660,NA,NA,NA,FALSE,NA,NA,NA,http://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=586463,FALSE
+ltu,2018,86,NA,FALSE,Scientific Research Publishing,Journal of Earth Sciences and Geotechnical Engineering,1792-9040,1792-9660,NA,NA,NA,FALSE,NA,NA,NA,http://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=588431,FALSE
+ltu,2018,86,NA,FALSE,Scientific Research Publishing,Journal of Earth Sciences and Geotechnical Engineering,1792-9040,1792-9660,NA,NA,NA,FALSE,NA,NA,NA,http://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=590399,FALSE
+ltu,2018,86,NA,FALSE,Scientific Research Publishing,Journal of Earth Sciences and Geotechnical Engineering,1792-9040,1792-9660,NA,NA,NA,FALSE,NA,NA,NA,http://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=592367,FALSE
+ltu,2018,86,NA,FALSE,Scientific Research Publishing,Journal of Earth Sciences and Geotechnical Engineering,1792-9040,1792-9660,NA,NA,NA,FALSE,NA,NA,NA,http://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=594335,FALSE
+ltu,2018,86,NA,FALSE,Scientific Research Publishing,Journal of Earth Sciences and Geotechnical Engineering,1792-9040,1792-9660,NA,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=560879,FALSE
 ltu,2018,914,10.4236/eng.2018.106021,FALSE,Scientific Research Publishing,Engineering,1947-3931,1947-3931,1947-394X,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 ltu,2018,916,10.4236/eng.2018.1010046,FALSE,Scientific Research Publishing,Engineering,1947-3931,1947-3931,1947-394X,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 ltu,2018,923,10.4236/eng.2018.105018,FALSE,Scientific Research Publishing,Engineering,1947-3931,1947-3931,1947-394X,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
-ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Scienses and Geotechnical Engineering,NA,1792-9040,1792-9660,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=625823,FALSE
-ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Scienses and Geotechnical Engineering,NA,1792-9040,1792-9660,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=627791,FALSE
-ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Scienses and Geotechnical Engineering,NA,1792-9040,1792-9660,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=629759,FALSE
-ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Scienses and Geotechnical Engineering,NA,1792-9040,1792-9660,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=631727,FALSE
-ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Scienses and Geotechnical Engineering,NA,1792-9040,1792-9660,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=633695,FALSE
-ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Scienses and Geotechnical Engineering,NA,1792-9040,1792-9660,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=635663,FALSE
-ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Scienses and Geotechnical Engineering,NA,1792-9040,1792-9660,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=637631,FALSE
-ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Scienses and Geotechnical Engineering,NA,1792-9040,1792-9660,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=639599,FALSE
-ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Scienses and Geotechnical Engineering,NA,1792-9040,1792-9660,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=641567,FALSE
-ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Scienses and Geotechnical Engineering,NA,1792-9040,1792-9660,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=643535,FALSE
+ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Sciences and Geotechnical Engineering,1792-9040,1792-9660,NA,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=625823,FALSE
+ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Sciences and Geotechnical Engineering,1792-9040,1792-9660,NA,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=627791,FALSE
+ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Sciences and Geotechnical Engineering,1792-9040,1792-9660,NA,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=629759,FALSE
+ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Sciences and Geotechnical Engineering,1792-9040,1792-9660,NA,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=631727,FALSE
+ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Sciences and Geotechnical Engineering,1792-9040,1792-9660,NA,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=633695,FALSE
+ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Sciences and Geotechnical Engineering,1792-9040,1792-9660,NA,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=635663,FALSE
+ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Sciences and Geotechnical Engineering,1792-9040,1792-9660,NA,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=637631,FALSE
+ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Sciences and Geotechnical Engineering,1792-9040,1792-9660,NA,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=639599,FALSE
+ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Sciences and Geotechnical Engineering,1792-9040,1792-9660,NA,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=641567,FALSE
+ltu,2018,93,NA,FALSE,Scientific Research Publishing,Journal of Earth Sciences and Geotechnical Engineering,1792-9040,1792-9660,NA,NA,NA,FALSE,NA,NA,NA,https://www.scienpress.com/journal_focus.asp?main_id=59&Sub_id=IV&Issue=643535,FALSE
 ltu,2018,972,10.1016/j.jbvi.2018.e00096,TRUE,Elsevier,Journal of Business Venturing Insights,2352-6734,2352-6734,NA,NA,https://www.elsevier.com/tdm/userlicense/1.0/,TRUE,NA,NA,NA,NA,FALSE
 ltu,2018,987,10.1016/j.jbvi.2018.01.002,TRUE,Elsevier,Journal of Business Venturing Insights,2352-6734,2352-6734,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 ltu,2018,996,10.3390/molecules23071647,FALSE,MDPI,Molecules,1420-3049,NA,1420-3049,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,29976912,PMC6099605,NA,NA,TRUE
@@ -5510,7 +5547,7 @@ oru,2015,827,10.4172/2472-095x.1000103,FALSE,OMICS Publishing Group,Journal of N
 oru,2015,899,10.4236/ojn.2015.511110,FALSE,Scientific Research Publishing,Open Journal of Nursing,2162-5336,2162-5336,2162-5344,2162-5336,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 oru,2015,899,10.4236/ojn.2015.59086,FALSE,Scientific Research Publishing,Open Journal of Nursing,2162-5336,2162-5336,2162-5344,2162-5336,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 oru,2015,899,10.4236/ojn.2016.61007,FALSE,Scientific Research Publishing,Open Journal of Nursing,2162-5336,2162-5336,2162-5344,2162-5336,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
-oru,2015,900,10.1038/ctg.2015.49,FALSE,Springer,Clinical and Translational Gastroenterology,2155-384X,NA,2155-384X,2155-384X,http://www.springer.com/tdm,TRUE,26540026,PMC4816088,ut:000372104700002,NA,TRUE
+oru,2015,900,10.1038/ctg.2015.49,FALSE,Wolters Kluwer,Clinical and Translational Gastroenterology,2155-384X,NA,2155-384X,2155-384X,http://www.springer.com/tdm,TRUE,26540026,PMC4816088,ut:000372104700002,NA,TRUE
 oru,2015,941,10.2340/16501977-1992,FALSE,Acta Dermato-Venereologica,Journal of Rehabilitation Medicine,1650-1977,1650-1977,NA,1650-1977,NA,TRUE,26134462,NA,ut:000361420600012,NA,TRUE
 oru,2015,960,10.5772/61812,FALSE,Intech,International Journal of Advanced Robotic Systems,1729-8806,1729-8806,NA,1729-8806,NA,TRUE,NA,NA,ut:000366622700002,NA,FALSE
 oru,2015,960,10.5772/62060,FALSE,Intech,International Journal of Advanced Robotic Systems,1729-8814,1729-8814,1729-8814,1729-8806,http://journals.sagepub.com/page/policies/text-and-data-mining-license,TRUE,NA,NA,ut:000368630700001,NA,TRUE
@@ -5576,7 +5613,7 @@ oru,2017,1619,10.1186/s13034-017-0179-y,FALSE,BioMed Central,Child and Adolescen
 oru,2017,1620,10.3390/s17071586,FALSE,MDPI,Sensors,1424-8220,NA,1424-8220,1424-8220,https://creativecommons.org/licenses/by/4.0/,TRUE,28684686,PMC5539647,ut:000407517600125,NA,TRUE
 oru,2017,1700,10.1075/jlp.17004.kro,TRUE,John Benjamins Publishing Company,Journal of Language and Politics,1569-2159,1569-2159,1569-9862,1569-2159,NA,TRUE,NA,NA,ut:000433035300005,NA,FALSE
 oru,2017,1749,10.1016/j.invent.2017.10.004,FALSE,Elsevier,Internet Interventions,2214-7829,2214-7829,NA,2214-7829,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,TRUE
-oru,2017,1750,10.1186/s13049-017-0367-z,FALSE,Springer,"Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine",1757-7241,NA,1757-7241,1757-7241,NA,TRUE,28253928,PMC5439232,ut:000395341800001,NA,TRUE
+oru,2017,1750,10.1186/s13049-017-0367-z,FALSE,BioMed Central,"Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine",1757-7241,NA,1757-7241,1757-7241,NA,TRUE,28253928,PMC5439232,ut:000395341800001,NA,TRUE
 oru,2017,2000,10.1111/issj.12091,TRUE,Wiley,International Social Science Journal,0020-8701,NA,NA,0020-8701,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 oru,2017,2150,10.1080/09644016.2017.1371919,TRUE,Taylor & Francis,Environmental Politics,0964-4016,0964-4016,1743-8934,0964-4016,NA,TRUE,NA,NA,ut:000415796700001,NA,FALSE
 oru,2017,2200,10.1007/s00068-017-0779-5,TRUE,Springer,European Journal of Trauma and Emergency Surgery,1863-9933,1863-9933,1863-9941,1863-9933,http://creativecommons.org/licenses/by/4.0,TRUE,28275834,PMC5707226,ut:000416534600008,NA,FALSE
@@ -5725,7 +5762,7 @@ oru,2019,2448.1695999999997,10.1002/berj.3510,TRUE,Wiley,British Educational Res
 oru,2019,2453.5504,10.14309/ctg.0000000000000034,FALSE,Wolters Kluwer,Clinical and Translational Gastroenterology,2155-384X,2155-384X,NA,NA,NA,TRUE,31009405,PMC6602784,NA,NA,TRUE
 oru,2019,2467.9464,10.1111/1750-3841.14582,TRUE,Wiley,Journal of Food Science,0022-1147,0022-1147,1750-3841,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30958573,PMC6594110,NA,NA,FALSE
 oru,2019,249.48032,10.2478/bsrj-2019-0005,FALSE,Walter de Gruyter,Business Systems Research Journal,1847-9375,NA,1847-9375,NA,http://creativecommons.org/licenses/by-nc-nd/3.0,TRUE,NA,NA,NA,NA,TRUE
-oru,2019,253.030704,10.1080/2331186x.2019.1569350,FALSE,Taylor & Francis,Cogent Education,2331-186X,NA,2331-186X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+oru,2019,253.030704,10.1080/2331186x.2019.1569350,FALSE,Cogent OA,Cogent Education,2331-186X,NA,2331-186X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 oru,2019,2633.8534560000003,10.1038/s41396-019-0370-7,TRUE,Springer,The ISME Journal,1751-7362,1751-7362,1751-7370,NA,https://creativecommons.org/licenses/by/4.0,TRUE,30770902,PMC6776033,NA,NA,FALSE
 oru,2019,2665.231072,10.1016/j.ijmedinf.2019.06.027,TRUE,Elsevier,International Journal of Medical Informatics,1386-5056,1386-5056,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31445274,NA,NA,NA,FALSE
 oru,2019,2756.274208,10.1182/bloodadvances.2018024950,FALSE,American Society of Hematology,Blood Advances,2473-9529,2473-9529,2473-9537,NA,NA,TRUE,30700416,PMC6373755,NA,NA,FALSE
@@ -7046,7 +7083,7 @@ su,2016,1533,10.1016/j.npep.2016.08.008,TRUE,Elsevier,Neuropeptides,0143-4179,01
 su,2016,1550,10.3354/meps11592,TRUE,Inter-Research Science Center,Marine Ecology Progress Series,0171-8630,0171-8630,1616-1599,0171-8630,NA,TRUE,NA,NA,ut:000371142500006,NA,FALSE
 su,2016,1607,10.1016/j.avb.2016.02.006,TRUE,Elsevier,Aggression and Violent Behavior,1359-1789,1359-1789,NA,1359-1789,http://www.elsevier.com/tdm/userlicense/1.0/,TRUE,NA,NA,ut:000375516300003,http://www.sciencedirect.com/science/article/pii/S1359178916300064,FALSE
 su,2016,1620,10.5194/bg-13-6121-2016,FALSE,Copernicus Publications,Biogeosciences,1726-4189,1726-4170,1726-4189,1726-4170,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,ut:000387864200001,http://www.biogeosciences.net/13/6121/2016/,TRUE
-su,2016,1642.5,10.1002/2016ef000434,FALSE,Wiley,Earth's Future,2328-4277,NA,2328-4277,2328-4277,http://doi.wiley.com/10.1002/tdm_license_1,TRUE,NA,NA,ut:000395001800008,http://onlinelibrary.wiley.com/doi/10.1002/2016EF000434/full,TRUE
+su,2016,1642.5,10.1002/2016ef000434,FALSE,American Geophysical Union (AGU),Earth's Future,2328-4277,NA,2328-4277,2328-4277,http://doi.wiley.com/10.1002/tdm_license_1,TRUE,NA,NA,ut:000395001800008,http://onlinelibrary.wiley.com/doi/10.1002/2016EF000434/full,TRUE
 su,2016,1725,10.5194/acp-16-10941-2016,FALSE,Copernicus Publications,Atmospheric Chemistry and Physics,1680-7324,1680-7316,1680-7324,1680-7316,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,ut:000383963200001,http://www.atmos-chem-phys.net/16/10941/2016/,TRUE
 su,2016,1727,10.1136/jech-2015-206547,TRUE,BMJ,Journal of Epidemiology and Community Health,0143-005X,0143-005X,1470-2738,0143-005X,NA,TRUE,26733672,PMC4893147,ut:000376596100008,http://jech.bmj.com/content/70/6/569.full,FALSE
 su,2016,1740,10.3389/fnagi.2016.00034,FALSE,Frontiers,Frontiers in Aging Neuroscience,1663-4365,NA,1663-4365,1663-4365,NA,TRUE,26973509,PMC4773588,ut:000371113200001,http://journal.frontiersin.org/article/10.3389/fnagi.2016.00034/full,TRUE
@@ -7141,7 +7178,7 @@ su,2016,2275,10.1093/rfs/hhw014,TRUE,Oxford University Press (OUP),Review of Fin
 su,2016,2276,10.3389/fpsyg.2016.01450,FALSE,Frontiers,Frontiers in Psychology,1664-1078,NA,1664-1078,1664-1078,NA,TRUE,NA,NA,ut:000384508200001,http://journal.frontiersin.org/article/10.3389/fpsyg.2016.01450/full,TRUE
 su,2016,2290,10.3389/fpsyg.2016.01146,FALSE,Frontiers,Frontiers in Psychology,1664-1078,NA,1664-1078,1664-1078,NA,TRUE,27559320,PMC4978721,ut:000381093100001,http://journal.frontiersin.org/article/10.3389/fpsyg.2016.01146/full,TRUE
 su,2016,2313.56,10.1128/mbio.01670-15,FALSE,American Society for Microbiology,mBio,2150-7511,NA,2150-7511,2150-7511,NA,TRUE,26884432,PMC4752598,ut:000373933100067,NA,TRUE
-su,2016,2329,10.1002/2016gl070275,TRUE,Wiley,Geophysical Research Letters,0094-8276,0094-8276,1944-8007,0094-8276,http://doi.wiley.com/10.1002/tdm_license_1,TRUE,NA,NA,ut:000383290300057,http://onlinelibrary.wiley.com/doi/10.1002/2016GL070275/full,FALSE
+su,2016,2329,10.1002/2016gl070275,TRUE,American Geophysical Union (AGU),Geophysical Research Letters,0094-8276,0094-8276,1944-8007,0094-8276,http://doi.wiley.com/10.1002/tdm_license_1,TRUE,NA,NA,ut:000383290300057,http://onlinelibrary.wiley.com/doi/10.1002/2016GL070275/full,FALSE
 su,2016,2330.89,10.1021/acscatal.6b01760,TRUE,American Chemical Society (ACS),ACS Catalysis,2155-5435,2155-5435,2155-5435,2155-5435,http://pubs.acs.org/page/policy/authorchoice_ccby_termsofuse.html,TRUE,NA,NA,ut:000385057900046,http://pubs.acs.org/doi/full/10.1021/acscatal.6b01760,FALSE
 su,2016,2340,10.1088/0031-8949/2015/t166/014063,TRUE,IOP Publishing,Physica Scripta,0031-8949,0031-8949,1402-4896,0031-8949,http://iopscience.iop.org/info/page/text-and-data-mining,TRUE,NA,NA,ut:000368901600064,NA,FALSE
 su,2016,2340,10.1093/eurpub/ckw025,TRUE,Oxford University Press (OUP),European Journal of Public Health,1101-1262,1101-1262,1464-360X,1101-1262,NA,TRUE,27032996,PMC4884330,ut:000377470800024,NA,FALSE
@@ -7356,7 +7393,7 @@ su,2017,1542,10.1002/aqc.2771,TRUE,Wiley,Aquatic Conservation: Marine and Freshw
 su,2017,1553,10.1186/s12909-016-0848-1,FALSE,BioMed Central,BMC Medical Education,1472-6920,NA,1472-6920,1472-6920,NA,TRUE,28103854,PMC5248446,ut:000392451100001,NA,TRUE
 su,2017,1560,10.3390/ijms19020519,FALSE,MDPI,International Journal of Molecular Sciences,1422-0067,NA,1422-0067,1422-0067,https://creativecommons.org/licenses/by/4.0/,TRUE,29419809,NA,ut:000427527400203,NA,TRUE
 su,2017,1566,10.1038/srep46598,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,2045-2322,NA,TRUE,28429739,PMC5399445,ut:000399996300001,NA,TRUE
-su,2017,1571,10.1002/2017ms000930,FALSE,Wiley,Journal of Advances in Modeling Earth Systems,1942-2466,NA,NA,1942-2466,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,ut:000406239300020,NA,TRUE
+su,2017,1571,10.1002/2017ms000930,FALSE,American Geophysical Union (AGU),Journal of Advances in Modeling Earth Systems,1942-2466,NA,NA,1942-2466,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,ut:000406239300020,NA,TRUE
 su,2017,1575,10.5194/tc-11-1745-2017,FALSE,Copernicus Publications,The Cryosphere,1994-0424,1994-0416,1994-0424,1994-0416,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,ut:000406279000001,NA,TRUE
 su,2017,1580,10.1080/17518369.2017.1319109,FALSE,Taylor & Francis,Polar Research,1751-8369,NA,1751-8369,0800-0395,NA,TRUE,NA,NA,ut:000410136500003,NA,TRUE
 su,2017,1600,10.1080/16000889.2017.1331102,FALSE,Taylor & Francis,Tellus B,1600-0889,NA,1600-0889,0280-6509,NA,TRUE,NA,NA,ut:000403368300001,NA,TRUE
@@ -7389,7 +7426,7 @@ su,2017,1955,10.1080/20021518.2017.1332858,FALSE,Taylor & Francis,"Society, Heal
 su,2017,1974,10.1016/j.molmet.2017.02.006,FALSE,Elsevier,Molecular Metabolism,2212-8778,2212-8778,NA,2212-8778,http://creativecommons.org/licenses/by/4.0/,TRUE,28580291,PMC5444022,ut:000405453000015,NA,TRUE
 su,2017,1974,10.1016/j.molmet.2017.10.009,FALSE,Elsevier,Molecular Metabolism,2212-8778,2212-8778,NA,2212-8778,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,29122558,PMC5784327,ut:000429085400015,NA,TRUE
 su,2017,1990,10.1371/journal.pcbi.1005375,FALSE,Public Library of Science (PLoS),PLOS Computational Biology,1553-7358,NA,1553-7358,1553-734X,http://creativecommons.org/licenses/by/4.0/,TRUE,28355220,PMC5389847,ut:000398031900014,NA,TRUE
-su,2017,2000,10.1002/2017gl074786,TRUE,Wiley,Geophysical Research Letters,0094-8276,NA,NA,0094-8276,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,ut:000413921300062,NA,FALSE
+su,2017,2000,10.1002/2017gl074786,TRUE,American Geophysical Union (AGU),Geophysical Research Letters,0094-8276,NA,NA,0094-8276,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,ut:000413921300062,NA,FALSE
 su,2017,2000,10.1515/applirev-2017-0078,TRUE,Walter de Gruyter,Applied Linguistics Review,1868-6303,1868-6303,1868-6311,1868-6303,http://creativecommons.org/licenses/by-nc-nd/4.0,TRUE,NA,NA,NA,NA,FALSE
 su,2017,2000,10.1515/iral-2017-0010,TRUE,Walter de Gruyter,International Review of Applied Linguistics in Language Teaching,0019-042X,0019-042X,1613-4141,0019-042X,NA,TRUE,NA,NA,ut:000401667900002,NA,FALSE
 su,2017,2000,10.1515/multi-2016-0043,TRUE,Walter de Gruyter,Multilingua,0167-8507,0167-8507,1613-3684,0167-8507,http://creativecommons.org/licenses/by-nc-nd/3.0,TRUE,NA,NA,ut:000405136700004,NA,FALSE
@@ -7545,7 +7582,7 @@ su,2017,243,10.5751/es-09130-220142,FALSE,Resilience Alliance,Ecology and Societ
 su,2017,2434,10.1103/physrevlett.119.075502,TRUE,American Physical Society (APS),Physical Review Letters,0031-9007,0031-9007,1079-7114,0031-9007,https://creativecommons.org/licenses/by/4.0/,TRUE,28949651,NA,ut:000407557300009,NA,FALSE
 su,2017,2450,10.1093/ije/dyw369,TRUE,Oxford University Press (OUP),International Journal of Epidemiology,0300-5771,0300-5771,1464-3685,0300-5771,NA,TRUE,28204520,PMC5407173,ut:000402724100033,NA,FALSE
 su,2017,2450,10.1093/protein/gzx045,TRUE,Oxford University Press (OUP),"Protein Engineering, Design and Selection",1741-0126,1741-0126,1741-0134,1741-0126,NA,TRUE,28967959,NA,ut:000412298600002,NA,FALSE
-su,2017,2457,10.1002/2016gl071772,TRUE,Wiley,Geophysical Research Letters,0094-8276,NA,NA,0094-8276,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,ut:000392741900032,NA,FALSE
+su,2017,2457,10.1002/2016gl071772,TRUE,American Geophysical Union (AGU),Geophysical Research Letters,0094-8276,NA,NA,0094-8276,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,ut:000392741900032,NA,FALSE
 su,2017,2500,10.1002/cssc.201700436,TRUE,Wiley,ChemSusChem,1864-5631,1864-5631,1864-564X,1864-5631,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,28394095,PMC5488201,ut:000402122100001,NA,FALSE
 su,2017,2500,10.1002/etc.3649,TRUE,Wiley,Environmental Toxicology and Chemistry,0730-7268,NA,NA,0730-7268,http://creativecommons.org/licenses/by/4.0/,TRUE,27731510,NA,ut:000402302300017,NA,FALSE
 su,2017,2500,10.1002/ldr.2747,TRUE,Wiley,Land Degradation & Development,1085-3278,NA,NA,1085-3278,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,ut:000412503200029,NA,FALSE
@@ -7583,7 +7620,7 @@ su,2017,2903,10.1016/j.envsci.2017.10.004,TRUE,Elsevier,Environmental Science & 
 su,2017,2903,10.1016/j.scitotenv.2017.01.145,TRUE,Elsevier,Science of The Total Environment,0048-9697,0048-9697,NA,0048-9697,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,28135613,NA,ut:000399358500007,NA,FALSE
 su,2017,2911,10.1175/jpo-d-17-0022.1,TRUE,American Meteorological Society,Journal of Physical Oceanography,0022-3670,0022-3670,1520-0485,0022-3670,http://www.ametsoc.org/PUBSReuseLicenses,TRUE,NA,NA,ut:000417674100001,NA,FALSE
 su,2017,2926,10.1093/gerona/glx054,TRUE,Oxford University Press (OUP),The Journals of Gerontology Series A: Biological Sciences and Medical Sciences,1079-5006,1079-5006,1758-535X,1079-5006,NA,TRUE,28444135,NA,ut:000405459100009,NA,FALSE
-su,2017,2937,10.1002/2017gl073056,TRUE,Wiley,Geophysical Research Letters,0094-8276,NA,NA,0094-8276,http://creativecommons.org/licenses/by/4.0/,TRUE,28781391,PMC5518298,ut:000404131900093,NA,FALSE
+su,2017,2937,10.1002/2017gl073056,TRUE,American Geophysical Union (AGU),Geophysical Research Letters,0094-8276,NA,NA,0094-8276,http://creativecommons.org/licenses/by/4.0/,TRUE,28781391,PMC5518298,ut:000404131900093,NA,FALSE
 su,2017,2960,10.1073/pnas.1705303114,TRUE,National Academy of Sciences,Proceedings of the National Academy of Sciences,0027-8424,0027-8424,1091-6490,0027-8424,http://www.pnas.org/site/misc/userlicense.xhtml,TRUE,28652327,PMC5547632,ut:000406653300040,NA,FALSE
 su,2017,2974,10.1128/aem.03430-16,TRUE,American Society for Microbiology,Applied and Environmental Microbiology,0099-2240,0099-2240,1098-5336,0099-2240,NA,TRUE,28389534,PMC5452829,ut:000402386500028,NA,FALSE
 su,2017,2975,10.1073/pnas.1621227114,TRUE,National Academy of Sciences,Proceedings of the National Academy of Sciences,0027-8424,0027-8424,1091-6490,0027-8424,NA,TRUE,28536196,PMC5468600,ut:000402703800006,NA,FALSE
@@ -7827,7 +7864,7 @@ su,2018,1995,10.1163/1568525x-12342499,TRUE,Brill,Mnemosyne,0026-7074,NA,0026-70
 su,2018,1995,10.1163/19552629-01002010,TRUE,Brill,Journal of Language Contact,1877-4091,NA,1877-4091,NA,NA,TRUE,NA,NA,NA,NA,TRUE
 su,2018,1998,10.2147/dddt.s164316,FALSE,Dove Medical Press,"Drug Design, Development and Therapy",1177-8881,NA,1177-8881,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,30087550,PMC6061756,NA,NA,TRUE
 su,2018,2000,10.1002/lno.11009,TRUE,Wiley,Limnology and Oceanography,0024-3590,NA,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
-su,2018,2000,10.1029/2018gl080704,TRUE,Wiley,Geophysical Research Letters,0094-8276,0094-8276,1944-8007,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+su,2018,2000,10.1029/2018gl080704,TRUE,American Geophysical Union (AGU),Geophysical Research Letters,0094-8276,0094-8276,1944-8007,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 su,2018,2000,10.1515/text-2017-0036,TRUE,Walter de Gruyter,Text & Talk,1860-7330,1860-7330,1860-7349,NA,http://creativecommons.org/licenses/by-nc-nd/4.0,TRUE,NA,NA,NA,NA,FALSE
 su,2018,2005.22,10.3389/fmicb.2018.00137,FALSE,Frontiers,Frontiers in Microbiology,1664-302X,NA,1664-302X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,29472906,PMC5809426,NA,NA,TRUE
 su,2018,2025,10.5194/bg-15-1367-2018,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,https://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
@@ -8290,9 +8327,9 @@ su,2019,2567.952816,10.1057/s41285-019-00119-8,TRUE,Palgrave Macmillan,Social Th
 su,2019,2575.2027359999997,10.1016/j.jmoldx.2019.10.014,TRUE,Elsevier,The Journal of Molecular Diagnostics,1525-1578,1525-1578,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31837428,NA,NA,NA,FALSE
 su,2019,2590.309568,10.1177/2516103219892274,TRUE,SAGE Publications,Developmental Child Welfare,2516-1032,2516-1032,2516-1040,NA,http://journals.sagepub.com/page/policies/text-and-data-mining-license,TRUE,NA,NA,NA,NA,FALSE
 su,2019,2610.406384,10.1016/j.jssc.2019.03.009,TRUE,Elsevier,Journal of Solid State Chemistry,0022-4596,0022-4596,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
-su,2019,262.029856,10.18291/njwls.v9i1.113085,FALSE,Aarhus University Library,Nordic Journal of Working Life Studies,2245-0157,NA,2245-0157,NA,http://creativecommons.org/licenses/by-nc-nd/4.0,TRUE,NA,NA,NA,NA,TRUE
-su,2019,262.720864,10.18291/njwls.v8i4.111926,FALSE,Aarhus University Library,Nordic Journal of Working Life Studies,2245-0157,NA,2245-0157,NA,http://creativecommons.org/licenses/by-nc-nd/4.0,TRUE,NA,NA,NA,NA,TRUE
-su,2019,270.68350399999997,10.18291/njwls.v9i3.116057,FALSE,Aarhus University Library,Nordic Journal of Working Life Studies,2245-0157,NA,2245-0157,NA,http://creativecommons.org/licenses/by-nc-nd/4.0,TRUE,NA,NA,NA,NA,TRUE
+su,2019,262.029856,10.18291/njwls.v9i1.113085,FALSE,Aalborg University,Nordic Journal of Working Life Studies,2245-0157,NA,2245-0157,NA,http://creativecommons.org/licenses/by-nc-nd/4.0,TRUE,NA,NA,NA,NA,TRUE
+su,2019,262.720864,10.18291/njwls.v8i4.111926,FALSE,Aalborg University,Nordic Journal of Working Life Studies,2245-0157,NA,2245-0157,NA,http://creativecommons.org/licenses/by-nc-nd/4.0,TRUE,NA,NA,NA,NA,TRUE
+su,2019,270.68350399999997,10.18291/njwls.v9i3.116057,FALSE,Aalborg University,Nordic Journal of Working Life Studies,2245-0157,NA,2245-0157,NA,http://creativecommons.org/licenses/by-nc-nd/4.0,TRUE,NA,NA,NA,NA,TRUE
 su,2019,2701.55808,10.1371/journal.pbio.3000300,FALSE,Public Library of Science (PLoS),PLOS Biology,1545-7885,NA,1545-7885,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31136568,PMC6555535,NA,NA,TRUE
 su,2019,2715.527392,10.1016/j.mam.2019.07.002,TRUE,Elsevier,Molecular Aspects of Medicine,0098-2997,0098-2997,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31323252,NA,NA,NA,FALSE
 su,2019,273.56931199999997,10.1007/s10113-018-1453-0,TRUE,Springer,Regional Environmental Change,1436-3798,1436-3798,1436-378X,NA,https://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,NA,NA,FALSE
@@ -8358,7 +8395,7 @@ su,2019,436.954944,10.3390/bs9050054,FALSE,MDPI,Behavioral Sciences,2076-328X,NA
 su,2019,4372.6882399999995,10.1038/s41467-019-10426-3,FALSE,Springer,Nature Communications,2041-1723,NA,2041-1723,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31160605,PMC6546797,NA,NA,TRUE
 su,2019,470.965376,10.5334/oq.67,FALSE,Ubiquity Press,Open Quaternary,2055-298X,NA,2055-298X,NA,NA,TRUE,NA,NA,NA,NA,TRUE
 su,2019,4723.63912,10.15252/embj.2019102718,TRUE,EMBO,The EMBO Journal,0261-4189,0261-4189,1460-2075,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31544964,PMC6826206,NA,NA,FALSE
-su,2019,496.94992,10.5271/sjweh.3768,TRUE,Nordic Association of Occupational Safety and Health(NOROSH),Scandinavian Journal of Work Environment and Health,0355-3140,0355-3140,1795-990X,NA,NA,TRUE,30199085,NA,NA,NA,FALSE
+su,2019,496.94992,10.5271/sjweh.3768,TRUE,Nordic Association of Occupational Safety and Health (NOROSH),Scandinavian Journal of Work Environment and Health,0355-3140,0355-3140,1795-990X,NA,NA,TRUE,30199085,NA,NA,NA,FALSE
 su,2019,507.71152,10.4081/jphr.2019.1504,FALSE,PAGEPress Publications,Journal of Public Health Research,2279-9036,2279-9028,2279-9036,NA,http://creativecommons.org/licenses/by-nc/4.0,TRUE,31579674,PMC6761466,NA,NA,TRUE
 su,2019,516.1263359999999,10.1016/j.dib.2019.104229,FALSE,Elsevier,Data in Brief,2352-3409,2352-3409,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31367663,PMC6646922,NA,NA,TRUE
 su,2019,516.9834880000001,10.1017/rdc.2018.78,TRUE,Cambridge University Press (CUP),Radiocarbon,0033-8222,0033-8222,1945-5755,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
@@ -9780,7 +9817,6 @@ uu,2019,1039.961376,10.1098/rsos.190381,FALSE,The Royal Society,Royal Society Op
 uu,2019,1049.014336,10.1098/rsos.181617,FALSE,The Royal Society,Royal Society Open Science,2054-5703,2054-5703,2054-5703,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,30891280,PMC6408368,NA,NA,TRUE
 uu,2019,1050.7560159999998,10.3389/fphys.2019.00457,FALSE,Frontiers,Frontiers in Physiology,1664-042X,NA,1664-042X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31133864,PMC6524713,NA,NA,TRUE
 uu,2019,1052.930048,10.3390/w11101973,FALSE,MDPI,Water,2073-4441,NA,2073-4441,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
-uu,2019,106.37463999999999,10.5061/dryad.vm447nm,FALSE,Dryad Repository,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 uu,2019,1062.016992,10.1038/s41598-019-39006-7,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,https://creativecommons.org/licenses/by/4.0,TRUE,30862963,PMC6414646,NA,NA,TRUE
 uu,2019,1064.3175199999998,10.1098/rsos.181042,FALSE,The Royal Society,Royal Society Open Science,2054-5703,2054-5703,2054-5703,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31031991,PMC6458417,NA,NA,TRUE
 uu,2019,1064.3175199999998,10.1098/rsos.181733,FALSE,The Royal Society,Royal Society Open Science,2054-5703,2054-5703,2054-5703,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31032029,PMC6458393,NA,NA,TRUE
@@ -9832,7 +9868,6 @@ uu,2019,1257.3438079999999,10.3390/ijms20164035,FALSE,MDPI,International Journal
 uu,2019,1258.93256,10.3390/ijms20205215,FALSE,MDPI,International Journal of Molecular Sciences,1422-0067,NA,1422-0067,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31640181,PMC6829218,NA,NA,TRUE
 uu,2019,1270.802416,10.1002/nop2.348,FALSE,Wiley,Nursing Open,2054-1058,2054-1058,2054-1058,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31660175,PMC6805708,NA,NA,TRUE
 uu,2019,1271.047856,10.3390/ma12203370,FALSE,MDPI,Materials,1996-1944,NA,1996-1944,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31618981,PMC6829552,NA,NA,TRUE
-uu,2019,1272.961344,10.15376/biores.14.4.9575-9587,FALSE,NC State University,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 uu,2019,1275.175968,10.1371/journal.pone.0211532,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,30716129,PMC6361431,NA,NA,TRUE
 uu,2019,1294.6610719999999,10.1161/jaha.119.012274,FALSE,Wiley,Journal of the American Heart Association,2047-9980,NA,2047-9980,NA,NA,TRUE,31164036,PMC6645636,NA,NA,TRUE
 uu,2019,1312.5574239999999,10.1186/s41181-019-0080-5,FALSE,BioMed Central,EJNMMI Radiopharmacy and Chemistry,2365-421X,NA,2365-421X,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31784919,PMC6884603,NA,NA,TRUE
@@ -10013,7 +10048,6 @@ uu,2019,2153.3933279999997,10.1128/jvi.00620-19,TRUE,American Society for Microb
 uu,2019,2165.541664,10.1016/j.srhc.2019.06.004,TRUE,Elsevier,Sexual & Reproductive Healthcare,1877-5756,1877-5756,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31395231,NA,NA,NA,FALSE
 uu,2019,2198.370208,10.1016/j.eurox.2019.100042,FALSE,Elsevier,European Journal of Obstetrics & Gynecology and Reproductive Biology: X,2590-1613,2590-1613,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31404426,PMC6687369,NA,NA,TRUE
 uu,2019,2215.396192,10.1186/s12884-019-2292-9,FALSE,BioMed Central,BMC Pregnancy and Childbirth,1471-2393,NA,1471-2393,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31060526,PMC6501294,NA,NA,TRUE
-uu,2019,2227.172592,10.7554/elife.46454.001,FALSE,eLife Sciences Publications,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 uu,2019,2230.585152,10.1002/mrm.27786,TRUE,Wiley,Magnetic Resonance in Medicine,0740-3194,0740-3194,1522-2594,NA,http://doi.wiley.com/10.1002/tdm_license_1.1,TRUE,31033022,PMC6618066,NA,NA,FALSE
 uu,2019,2240.713328,10.7554/elife.46124,FALSE,eLife Sciences Publications,eLife,2050-084X,NA,2050-084X,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31172942,PMC6594751,NA,NA,TRUE
 uu,2019,2249.823872,10.1109/tip.2019.2899947,TRUE,Institute of Electrical & Electronics Engineers (IEEE),IEEE Transactions on Image Processing,1057-7149,1057-7149,1941-0042,NA,NA,TRUE,30794174,NA,NA,NA,FALSE
@@ -10048,7 +10082,6 @@ uu,2019,2410.02728,10.3389/fimmu.2019.02036,FALSE,Frontiers,Frontiers in Immunol
 uu,2019,2416.393616,10.3389/fimmu.2019.02744,FALSE,Frontiers,Frontiers in Immunology,1664-3224,NA,1664-3224,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31921099,PMC6916672,NA,NA,TRUE
 uu,2019,2420.386736,10.1098/rstb.2019.0132,TRUE,The Royal Society,Philosophical Transactions of the Royal Society B: Biological Sciences,0962-8436,0962-8436,1471-2970,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31928197,PMC7017437,NA,NA,FALSE
 uu,2019,2421.1947999999998,10.1111/bju.14666,TRUE,Wiley,BJU International,1464-4096,NA,NA,NA,http://doi.wiley.com/10.1002/tdm_license_1.1,TRUE,30637900,PMC6850189,NA,NA,FALSE
-uu,2019,2421.941504,"10.3390/cancers11070909,10.3390/cancers11060847",FALSE,MDPI,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 uu,2019,2426.9031680000003,10.1016/j.bbr.2019.112433,TRUE,Elsevier,Behavioural Brain Research,0166-4328,0166-4328,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31843658,NA,NA,NA,FALSE
 uu,2019,2428.207776,10.1080/21507740.2019.1632972,TRUE,Taylor & Francis,AJOB Neuroscience,2150-7740,2150-7740,2150-7759,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31329081,NA,NA,NA,FALSE
 uu,2019,2429.271664,10.1111/apa.14706,TRUE,Wiley,Acta Paediatrica,0803-5253,0803-5253,1651-2227,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,30582888,PMC6590361,NA,NA,FALSE
@@ -10087,7 +10120,7 @@ uu,2019,2571.388976,10.1016/j.jddst.2019.101143,TRUE,Elsevier,Journal of Drug De
 uu,2019,2571.934608,10.1093/eurpub/cky062,TRUE,Oxford University Press (OUP),European Journal of Public Health,1101-1262,1101-1262,1464-360X,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,29672696,PMC6296307,NA,NA,FALSE
 uu,2019,2588.648128,10.1177/2047487319886959,TRUE,SAGE Publications,European Journal of Preventive Cardiology,2047-4873,2047-4873,2047-4881,NA,http://journals.sagepub.com/page/policies/text-and-data-mining-license,TRUE,31698965,NA,NA,NA,FALSE
 uu,2019,2590.102832,10.1073/pnas.1908332116,TRUE,National Academy of Sciences,Proceedings of the National Academy of Sciences,0027-8424,0027-8424,1091-6490,NA,https://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31451650,PMC6744887,NA,NA,FALSE
-uu,2019,2599.81376,10.1503/jpn.180121,TRUE,Joule,Journal of Psychiatry & Neuroscience,1180-4882,1180-4882,NA,NA,NA,TRUE,30994310,PMC6710091,NA,NA,FALSE
+uu,2019,2599.81376,10.1503/jpn.180121,TRUE,Joule,Journal of Psychiatry and Neuroscience,1180-4882,1180-4882,NA,NA,NA,TRUE,30994310,PMC6710091,NA,NA,FALSE
 uu,2019,2609.892848,10.1002/ddr.21609,TRUE,Wiley,Drug Development Research,0272-4391,0272-4391,1098-2299,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31617956,PMC7028038,NA,NA,FALSE
 uu,2019,2614.900768,10.1016/j.surfcoat.2019.125025,TRUE,Elsevier,Surface and Coatings Technology,0257-8972,0257-8972,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 uu,2019,2615.65408,10.1038/s42003-019-0464-9,FALSE,Springer,Communications Biology,2399-3642,NA,2399-3642,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31240259,PMC6586828,NA,NA,TRUE
@@ -10158,7 +10191,6 @@ uu,2019,3405.3544479999996,10.1073/pnas.1820320116,TRUE,National Academy of Scie
 uu,2019,3416.3596,10.1016/j.jpowsour.2019.01.047,TRUE,Elsevier,Journal of Power Sources,0378-7753,0378-7753,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 uu,2019,3440.9866719999995,10.1101/gr.253435.119,TRUE,Cold Spring Harbor Laboratory Press,Genome Research,1088-9051,1088-9051,1549-5469,NA,NA,TRUE,31649060,PMC6836730,NA,NA,FALSE
 uu,2019,3463.1971040000003,10.1016/j.sbi.2018.12.011,TRUE,Elsevier,Current Opinion in Structural Biology,0959-440X,0959-440X,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30743182,NA,NA,NA,FALSE
-uu,2019,3463.4500959999996,10.4172/2169-0022.1000516,FALSE,OMICS International,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 uu,2019,3521.326736,10.1016/j.ebiom.2019.01.041,FALSE,Elsevier,EBioMedicine,2352-3964,2352-3964,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,30711515,PMC6413474,NA,NA,TRUE
 uu,2019,3548.52904,10.1111/zph.12612,TRUE,Wiley,Zoonoses and Public Health,1863-1959,1863-1959,1863-2378,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31264805,PMC6852310,NA,NA,FALSE
 uu,2019,3558.20976,10.1111/joim.12941,TRUE,Wiley,Journal of Internal Medicine,0954-6820,0954-6820,1365-2796,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31127862,PMC6851863,NA,NA,FALSE
@@ -10197,7 +10229,6 @@ uu,2019,567.765024,10.1016/j.epsc.2019.101242,FALSE,Elsevier,Journal of Pediatri
 uu,2019,571.7808,10.3390/jfb10030035,FALSE,MDPI,Journal of Functional Biomaterials,2079-4983,NA,2079-4983,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31375008,PMC6787653,NA,NA,TRUE
 uu,2019,586.533632,10.3390/cells8070759,FALSE,MDPI,Cells,2073-4409,NA,2073-4409,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31330900,PMC6678527,NA,NA,TRUE
 uu,2019,604.468688,10.3389/fendo.2019.00221,FALSE,Frontiers,Frontiers in Endocrinology,1664-2392,NA,1664-2392,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31024458,PMC6465946,NA,NA,TRUE
-uu,2019,637.2500319999999,10.1145/3330345.3330376,FALSE,Association for Computing Machinery (ACM),NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 uu,2019,642.7875359999999,10.3390/min9020090,FALSE,MDPI,Minerals,2075-163X,NA,2075-163X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 uu,2019,642.7875359999999,10.3390/pharmaceutics11020068,FALSE,MDPI,Pharmaceutics,1999-4923,NA,1999-4923,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,30736357,PMC6409705,NA,NA,TRUE
 uu,2019,644.783152,10.3390/pharmaceutics11010037,FALSE,MDPI,Pharmaceutics,1999-4923,NA,1999-4923,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,30669281,PMC6359467,NA,NA,TRUE

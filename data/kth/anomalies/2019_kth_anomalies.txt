@@ -1,0 +1,10 @@
+
+Duplicate
+10.1038/s41598-018-33393-z (redan inskickad 2018)
+
+Other publication types
+ERROR: Line 109: Crossref: Error while trying to resolve DOI 10.5772/intechopen.88253: Unsupported DOI type 'book_content' (OpenAPC only supports journal articles)
+ERROR: Line 118: Crossref: Error while trying to resolve DOI 10.1145/3363384.3363477: Unsupported DOI type 'conference_paper' (OpenAPC only supports journal articles)
+ERROR: Line 119: Crossref: Error while trying to resolve DOI 10.1145/3290605.3300847: Unsupported DOI type 'conference_paper' (OpenAPC only supports journal articles)
+ERROR: Line 121: Crossref: Error while trying to resolve DOI 10.1145/3290605.3300475: Unsupported DOI type 'conference_paper' (OpenAPC only supports journal articles)
+ERROR: Line 123: Crossref: Error while trying to resolve DOI 10.1145/3290605.3300832: Unsupported DOI type 'conference_paper' (OpenAPC only supports journal articles)

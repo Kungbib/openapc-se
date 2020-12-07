@@ -1,0 +1,4 @@
+saknar doi och url
+lnu	2019	2284.188304		TRUE	Cambridge University Press	Modern Intellectual History		1479-2443	1479-2451
+
+doi not found -> registrerad med url: https://madridge.org/journal-of-agriculture-and-environmental-sciences/mjaes-1000109.php
