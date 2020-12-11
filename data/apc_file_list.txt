@@ -17,8 +17,10 @@
 # gu/apc_gu_add_may_2018_dois.tsv
 # gu/apc_gu_2018_dois.tsv
 # gu/apc_gu_2019_dois.tsv
+# gu/apc_gu_2019_corr_dois.tsv
 # hb/apc_hb_2018_dois.tsv
 # hb/apc_hb_2019_dois.tsv
+# hb/apc_hb_2019_non_dois.tsv
 # hb/apc_hb_2018_non_dois.tsv
 # hhs/apc_hhs_2019_dois.tsv
 # hig/apc_hig_2019_dois.tsv
@@ -26,7 +28,7 @@
 # his/apc_his_2018_nov_dec_dois.tsv
 # his/apc_his_2019_dois.tsv
 # hv/apc_hv_2018-2019_dois.tsv
-hv/apc_hv_2019_rest_dois.tsv
+# hv/apc_hv_2019_rest_dois.tsv
 # kau/apc_kau_2014_2018_dois.tsv
 # kau/apc_kau_2019_dois.tsv
 # ki/original_data/ki_2017_elsevier.tsv
@@ -49,13 +51,17 @@ hv/apc_hv_2019_rest_dois.tsv
 # liu/apc_liu_spring_2018_corrected_dois.csv
 # liu/apc_liu_2018_dois.tsv
 # liu/apc_liu_2019_jan_jun_dois.tsv
+# liu/apc_liu_2019_jan_jun_non_dois.tsv
 # liu/apc_liu_jul_dec_2019_dois.tsv
 # lnu/apc_lnu_2017_dois.tsv
 # lnu/apc_lnu_2018_dois.tsv
-lnu/apc_lnu_2019_dois.tsv
+# lnu/apc_lnu_2019_dois.tsv
+# lnu/apc_lnu_2019_non_dois.tsv
 # ltu/apc_ltu_2017.tsv
 # ltu/apc_ltu_2018_dois.tsv
 # ltu/apc_ltu_2018_non_dois.tsv
+# ltu/apc_ltu_2019_dois.tsv
+# ltu/apc_ltu_2019_non_dois.tsv
 # mah/apc_mah_2015.csv
 # mah/apc_mah_2016.tsv
 # mah/apc_mah_2017_dois.tsv
@@ -64,6 +70,7 @@ lnu/apc_lnu_2019_dois.tsv
 # mah/apc_mah_2019_dois.tsv
 # mah/apc_mah_2019_non_dois.tsv
 # mdh/apc_mdh_2019_dois.tsv
+# mdh/apc_mdh_2019_non_dois.tsv
 # test_duplicates.tsv
 # oru/original_data/apc_oru_2015_2017_dois.tsv
 # oru/apc_oru_2015_2017_20180614_dois.tsv
@@ -77,6 +84,7 @@ lnu/apc_lnu_2019_dois.tsv
 # slu/apc_slu_2014-2017.tsv
 # slu/apc_slu_2018_dois.tsv
 # slu/apc_slu_2019_dois.tsv
+# slu/apc_slu_2019_corr2_dois.tsv
 # su/apc_su_2015.tsv
 # su/apc_su_2016.tsv
 # su/apc_su_2017.tsv
@@ -86,6 +94,8 @@ lnu/apc_lnu_2019_dois.tsv
 # uu/apc_uu_2017_dois.tsv
 # uu/apc_uu_2018_dois.tsv
 # uu/apc_uu_2019_dois.tsv
+# uu/apc_uu_2019_corr_dois.tsv
+# uu/apc_uu_2019_corr_non_dois.tsv
 # karger/apc_karger_2014-2016.tsv
 # springer/apc_springer_2016_2.xlsx
 # taylor_and_francis/apc_tf_2014-2016.tsv
@@ -97,3 +107,5 @@ lnu/apc_lnu_2019_dois.tsv
 # liu/apc_liu_2017_jul-dec_kompl.tsv
 # springer/apc_springer_2017.tsv
 # springer/test_2017.tsv
+# rest_non_dois.tsv
+# rest_dois.tsv

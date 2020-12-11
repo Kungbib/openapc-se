@@ -647,7 +647,7 @@ def lookup_journal_in_doaj(issn):
         stating the reason.
     """
     ret_value = {'data_received': True}
-    url = "https://doaj.org/api/v1/search/journals/issn:" + issn
+    url = "https://doaj.org/api/v2/search/journals/" + issn
     req = Request(url)
     req.add_header("Accept", "application/json")
     try:

@@ -2,13 +2,13 @@ library(tidyverse)
 library(readxl)
 
 # what organisation, short name? ex kth
-organisation <- 'hv'
+organisation <- 'ltu'
 
 # data collected from which timeperiod? ex 2010-2019
-timeperiod_data <- '2019_rest'
+timeperiod_data <- '2019'
 
 # what's the name of the file to be converted?
-indata_file <- 'data/hv/original_data/hv_2019_rest.xlsx'
+indata_file <- 'data/ltu/original_data/ltu_2019.xlsx'
 
 
 outdata_file_dois <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperiod_data,'_dois.tsv')

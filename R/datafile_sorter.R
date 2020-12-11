@@ -6,13 +6,13 @@ library(tidyverse)
 
 apc_se <- read_csv("data/apc_se.csv")
 #springer_dois <- read_tsv("data/springer/Springer_Compact_2016_2018.tsv")
-bibsam_data <- read_csv("data/200109_bibsam_data.csv")
+bibsam_data <- read_csv("data/2019_bibsam_data.csv")
 
-apc_se_wo_bibsamdata <- anti_join(apc_se, bibsam_data, by = c("doi" = "DOI"))
-overlap_openapc_bibsam <- semi_join(apc_se, bibsam_data, by = c("doi" = "DOI"))
+apc_se_wo_bibsamdata <- anti_join(apc_se, bibsam_data, by = c("doi" = "doi"))
+overlap_openapc_bibsam <- semi_join(apc_se, bibsam_data, by = c("doi" = "doi"))
 
-write_tsv(apc_se_wo_bibsamdata, "data/apc_se_wo_biblsamdata.tsv") 
-write_tsv(overlap_openapc_bibsam, "data/overlap_openapc_bibsam.tsv") 
+write_tsv(apc_se_wo_bibsamdata, "data/apc_se_wo_bibsamdata_2019.tsv") 
+write_tsv(overlap_openapc_bibsam, "data/overlap_openapc_bibsam_2019.tsv") 
 
 #Springer Compact exclusion
 springer_data <- left_join(springer_dois, apc_se, by="doi")

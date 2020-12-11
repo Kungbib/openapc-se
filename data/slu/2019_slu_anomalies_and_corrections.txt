@@ -3,10 +3,10 @@ correct doi: https://doi.org/10.3390/agronomy9110749
 
 
 ERROR: Line 188: Crossref: Error while trying to resolve DOI 10.20944/preprints201904.0149.v1: Unsupported DOI type 'posted_content' (OpenAPC only supports journal articles)
-Correct doi https://doi.org/10.3390/agronomy905026
+Correct doi https://doi.org/10.3390/agronomy905026 -> nej, korrekt doi: 10.3390/agronomy9050263
 
 ERROR: Line 119: Crossref: Error while trying to resolve DOI 10.3390/agrofalsemy9050258: HTTPError: 404 - Not Found
-correct doi: https://doi.org/agronomy9050258
+correct doi: https://doi.org/agronomy9050258 -> nej, korrekt doi: 10.3390/agronomy9050258
 
 ERROR: Line 74: Crossref: Error while trying to resolve DOI 10.1002/lfalse.11349: HTTPError: 404 - Not Found
 correct doi: https://doi.org/10.1002/lno.11349

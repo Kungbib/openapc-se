@@ -21,7 +21,9 @@ uniform_data <- tibble(
 )
 
 # cambridge university press
-cup_data <- read_excel("O:/Avd-Publik-verksamhet/Enh. Nationell bibliotekssamverkan/Bibsamkonsortiet/Statistik/Publiceringsstatistik/Cambridge/2019/BIBSAM Read and Publish Report 2019.xlsx", sheet = 2, skip = 1)
+#cup_data <- read_excel("O:/Avd-Publik-verksamhet/Enh. Nationell bibliotekssamverkan/Bibsamkonsortiet/Statistik/Publiceringsstatistik/Cambridge/2019/BIBSAM Read and Publish Report 2019.xlsx", sheet = 2, skip = 1)
+cup_data <- read_excel("C:/Users/camlin/data/förlag_publiceringsdata/cup_2019.xlsx")
+
 
 uniform_cup_data <- cup_data %>%
     mutate(publisher = "cup",
@@ -117,3 +119,5 @@ final_table <- bind_rows(uniform_data,
 
 final_table <- final_table %>%
     distinct()
+
+write_csv(final_table, "data/2019_bibsam_data.csv")
