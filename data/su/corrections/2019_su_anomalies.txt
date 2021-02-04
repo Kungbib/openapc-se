@@ -1,0 +1,2 @@
+Line 172: Crossref: Error while trying to resolve DOI 10.1098/rsos.190575: HTTPError: 404 - Not Found
+DOI belongs to Royal Society of Open Science, other DOIs resolve

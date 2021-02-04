@@ -1,0 +1,13 @@
+Data not entered in Open APC Sweden
+No DOI,and no extra information about publisher, journal_title, issn and url (https://github.com/Kungbib/openapc-se/wiki/Instructions-for-data-entry) 
+gu	2019	20769	går ej att belägga	FALSE	Hindawi
+
+Duplicates (same price so no problem)
+gu	2019	2544.1744	10.1136/gutjnl-2018-317571	FALSE	BMJ -> duplicate in file, same price
+gu	2019	2252.7616	10.3389/fonc.2019.00579	FALSE	Frontiers -> duplicate in file, same price
+gu	2019	2604.7792	10.1073/pnas.1909021116		National Academy of Sciences -> duplicate in file, same price
+gu	2019	2267.488	10.3389/fimmu.2019.00269	FALSE	Frontiers -> duplicate in file, same price
+
+DOIs not resolved with Crossref (corrected so no problem)
+10.3389/fmicb/2019.02511 -> corrected with dot instead of slash to 10.3389/fmicb.2019.02511
+1016/j.molmet.2019.02.010￿. ￿i -> removed unid:d string to 10.1016/j.molmet.2019.02.010

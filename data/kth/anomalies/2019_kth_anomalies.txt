@@ -1,6 +1,6 @@
 
 Duplicate
-10.1038/s41598-018-33393-z (redan inskickad 2018)
+10.1038/s41598-018-33393-z (already in 2018 batch at EUR 1709)
 
 Other publication types
 ERROR: Line 109: Crossref: Error while trying to resolve DOI 10.5772/intechopen.88253: Unsupported DOI type 'book_content' (OpenAPC only supports journal articles)

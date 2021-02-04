@@ -37,6 +37,8 @@
 # ki/original_data/ki_2017_taylor_francis.tsv
 # ki/original_data/ki_2017_wiley.tsv
 # ki/apc_ki_2020_Q1_dois.tsv
+# ki/apc_ki_2020_Q1_rest_dois.tsv
+# ki/apc_ki_2020_Q2_dois.tsv
 # ki/apc_ki_2020_Q1_non_dois.tsv
 # kth/apc_kth_2015.tsv
 # kth/apc_kth_2016.tsv

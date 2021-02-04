@@ -1,0 +1,20 @@
+duplicate with same cost
+Line 64: uu	2019	1722.0221439999998	10.1136/heartjnl-2019-315453	TRUE	BMJ
+Line 65: uu	2019	1722.0221439999998	10.1136/heartjnl-2019-315453	TRUE	BMJ
+
+other publ types
+conference article
+Line 5: Crossref: Error while trying to resolve DOI 10.1145/3330345.3330376: Unsupported DOI type 'conference_paper' (OpenAPC only supports journal articles)
+
+10.5061/dryad.vm447nm
+other type - dataset
+
+DOI errors
+10.7554/elife.46454.001
+DOI part of art, correct DOI 10.7554/elife.46454
+
+"10.3390/cancers11070909,10.3390/cancers11060847"
+DOI given twice, corrected
+
+10.4172/2169-0022.1000516 (OMICS International)
+DOI not resolving at doi.org, crossref or web - not registered in Open APC Sweden

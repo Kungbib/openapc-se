@@ -1,0 +1,25 @@
+KI anomalies Q2 2020
+*Already registered Q1
+10.1136/bmjopen-2019-033612, different price Q1 (8540.98) and Q2 (8384.45)
+10.1016/j.stemcr.2020.02.006, different price Q1 (30153.2) and Q2 (23610.30)
+10.1111/bpa.12812, different price Q1 (26279) and Q2 (20147.45)
+
+DOI not found in DOI.org or Crossref but in PubMed: 10.1136/bmjopen-2020-037050. Reported to doi.org
+
+duplicate within file, same price
+10.3390/cells9061333
+
+ki	2020	17 582.50		FALSE	 Foundation for Rehabilitation Information	Journal of Rehabilitation Medicine		1650-1977	1651-2081	https://www.medicaljournals.se/jrm/content/html/10.2340/16501977-2682
+No DOI given but DOI found: 10.2340/16501977-2682
+
+
+
+KI anomalies Q1 2020
+
+10.3389/fimmu.2020.00014 (article paid twice, total sum registered)
+
+ki	2020	655.4275		FALSE	Foundation of Rehabilitation Information	Journal of Rehabilitation Medicine			1651-2081	https://www.medicaljournals.se/jrm/content/html/10.2340/20030711-1000023
+No DOI given but DOI found: 10.2340/20030711-1000023
+
+*No DOI or URL, not registered in Open APC Sweden
+ki	2020	1636.858776		FALSE	JSciMed Central	Journal of Sleep Medicine & Disorders

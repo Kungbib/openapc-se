@@ -1,0 +1,4 @@
+Duplicate with different prices, should it be one of the prices, or should they be summed up?
+
+hb	2019	14 121.03	10.3390/polym11030392
+hb	2019	9 047.72	10.3390/polym11030392

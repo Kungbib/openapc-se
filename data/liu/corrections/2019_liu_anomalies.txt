@@ -1,0 +1,41 @@
+2019 liu anomalies
+
+DOI not found, URL not found
+ERROR: Line 68: Crossref: Error while trying to resolve DOI 10.21037/hbsn.2019.10.36: HTTPError: 404 - Not Found
+DOI not found in doi.org or Crossref, or on web
+from liu file: 13708	AME Publishing Company	HepatoBiliary Surgery and Nutrition	2304-389X
+journal website, but impossible to search DOI: https://hbsn.amegroups.com/
+
+
+
+duplicates in file with data from jul-dec
+liu	2019	4216.2816	10.1002/advs.201901144	FALSE	Wiley, same price
+liu	2019	1609.048	10.1109/access.2019.2944210	FALSE	Institute of Electrical & Electronics Engineers (IEEE), same price
+
+DOI not found, registered with URL
+ERROR: Line 33: Crossref: Error while trying to resolve DOI 10.29011/2575-7032/10000161: HTTPError: 404 - Not Found (Gavin publishers, seems to use DOIs that won't resolve)
+DOI not found in doi.org or Crossref, but on web
+https://www.gavinpublishers.com/articles/research-article/Educational-Research-Applications-ISSN-2575-7032/are-there-certain-personalities-among-team-players-using-the-concept-team-player-developed-from-the-instrument-readiness-for-inter-professional-education-scale-ripels
+
+ÅTGÄRDA
+Sub-DOI, corrected to the article's DOI
+ERROR: Line 34: Crossref: Error while trying to resolve DOI 10.7554/elife.45274.001: Unsupported DOI type 'component' (OpenAPC only supports journal articles)
+corrected to 10.7554/elife.45274 as the sent DOI was referring to part of the article.
+
+10.2196/13011 wrong cost 2018, changed year and cost to 2019 and EUR 857 (earlier cost was for fast-track)
+
+ÅTGÄRDA
+wrong DOI-format, corrected
+10.1016j.indmarman.2019.03.015 -> 10.1016/j.indmarman.2019.03.015
+
+wrong DOI-format, corrected
+10.1136 bmjopen-2018-027847 -> 10.1136/bmjopen-2018-027847
+cost also corrected from mail 200401: 1198 EUR
+
+ÅTGÄRDA
+wrong DOI-format, corrected
+10.1186/s4059 -> 10.1186/s40594-019-0178-z
+
+ÅTGÄRDA
+DOI not found at first, but later on, registered again.
+10.4064/am2385-6-2019

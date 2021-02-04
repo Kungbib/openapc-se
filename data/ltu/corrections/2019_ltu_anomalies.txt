@@ -1,0 +1,12 @@
+duplicate 10.1039/c8dt04555k with 2 diff costs in infile
+
+correct cost is 12292.7
+
+the other cost,16429.28 is for a chapter 10.5772/intechopen.89527
+
+
+
+added URLs and ISSN:
+10.5004/dwt.2019.24011 -> https://doi.org/10.5004/dwt.2019.24011
+10.23940/ijpe.19.05.p7.13141325 -> www.ijpe-online.com/EN/10.23940/ijpe.19.05.p7.13141325
+10.22667/jisis.2019.11.30.018 -> https://doi.org/10.22667/JISIS.2019.11.30.018
