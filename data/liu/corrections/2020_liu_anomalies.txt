@@ -1,0 +1,8 @@
+jan-jul
+
+no DOI without added url:
+liu	2020	440.6526		FALSE	Research Open	Endocrinology, Diabetes and Metabolism Journal	2002-7354
+
+duplicate dois
+liu	2020	1445.5008	10.1364/boe.394296	FALSE	The Optical Society -> different price & publisher. 19521 or 15152 SEK, or 2 diff publications?
+liu	2020	1334.2644	10.3390/su12083252	FALSE	MDPI -> same price, no problem

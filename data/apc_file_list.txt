@@ -21,16 +21,20 @@
 # hb/apc_hb_2018_dois.tsv
 # hb/apc_hb_2019_dois.tsv
 # hb/apc_hb_2019_non_dois.tsv
+# hb/apc_hb_2019_corr_dois.tsv
 # hb/apc_hb_2018_non_dois.tsv
 # hhs/apc_hhs_2019_dois.tsv
 # hig/apc_hig_2019_dois.tsv
 # his/apc_his_2017_2018_dois.tsv
 # his/apc_his_2018_nov_dec_dois.tsv
 # his/apc_his_2019_dois.tsv
+his/apc_his_2020_dois.tsv
 # hv/apc_hv_2018-2019_dois.tsv
 # hv/apc_hv_2019_rest_dois.tsv
+# hv/apc_hv_2018-2019_non_dois.tsv
 # kau/apc_kau_2014_2018_dois.tsv
 # kau/apc_kau_2019_dois.tsv
+# kau/original_data/2018_kau_rest.xlsx
 # ki/original_data/ki_2017_elsevier.tsv
 # ki/original_data/ki_2017_oxford.tsv
 # ki/original_data/ki_2017_sage.tsv
@@ -42,7 +46,7 @@
 # ki/apc_ki_2020_Q1_non_dois.tsv
 # ki/apc_ki_2020_Q3_dois.tsv
 # ki/apc_ki_2020_Q4_dois.tsv
-ki/apc_ki_2020_Q4_non_dois.tsv
+# ki/apc_ki_2020_Q4_non_dois.tsv
 # kth/apc_kth_2015.tsv
 # kth/apc_kth_2016.tsv
 # kth/apc_kth_2016_correction.tsv
@@ -58,6 +62,8 @@ ki/apc_ki_2020_Q4_non_dois.tsv
 # liu/apc_liu_2019_jan_jun_dois.tsv
 # liu/apc_liu_2019_jan_jun_non_dois.tsv
 # liu/apc_liu_jul_dec_2019_dois.tsv
+# liu/apc_liu_2019_corr_dois.tsv
+# liu/apc_liu_2020_jan_jun_dois.tsv
 # lnu/apc_lnu_2017_dois.tsv
 # lnu/apc_lnu_2018_dois.tsv
 # lnu/apc_lnu_2019_dois.tsv
@@ -75,6 +81,7 @@ ki/apc_ki_2020_Q4_non_dois.tsv
 # mah/apc_mah_2019_dois.tsv
 # mah/apc_mah_2019_non_dois.tsv
 # mdh/apc_mdh_2019_dois.tsv
+# mdh/apc_mdh_2020_dois.tsv
 # mdh/apc_mdh_2019_non_dois.tsv
 # test_duplicates.tsv
 # oru/original_data/apc_oru_2015_2017_dois.tsv
@@ -100,6 +107,7 @@ ki/apc_ki_2020_Q4_non_dois.tsv
 # uu/apc_uu_2018_dois.tsv
 # uu/apc_uu_2019_dois.tsv
 # uu/apc_uu_2019_corr_dois.tsv
+# uu/apc_uu_2019_corr_2_non_dois.tsv
 # uu/apc_uu_2019_corr_non_dois.tsv
 # karger/apc_karger_2014-2016.tsv
 # springer/apc_springer_2016_2.xlsx

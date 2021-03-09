@@ -2,13 +2,13 @@ library(tidyverse)
 library(readxl)
 
 # what organisation, short name? ex kth
-organisation <- 'ki'
+organisation <- 'his'
 
 # data collected from which timeperiod? ex 2010-2019
-timeperiod_data <- '2020_Q4'
+timeperiod_data <- '2020'
 
 # what's the name of the file to be converted?
-indata_file <- 'data/ki/original_data/KI_Q4_2020.xlsx'
+indata_file <- 'data/his/original_data/APC_Sweden_2020_his.xlsx'
 
 
 outdata_file_dois <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperiod_data,'_dois.tsv')
@@ -19,7 +19,7 @@ converter <- read_xlsx(indata_file)
 # converter <- read_csv(indata_file)
 
 converter <- converter %>%
-    mutate(euro = 0.0973*sek) %>% #valutakurs hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/?y=2019&m=12&s=Comma&f=y
+    mutate(euro = 0.0954*sek) %>% #valutakurs hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/?y=2020&m=12&s=Comma&f=y
     select(-sek) %>%
     select(institution, period, euro, doi, is_hybrid, publisher, journal_full_title, issn, issn_print, issn_electronic, url)
 

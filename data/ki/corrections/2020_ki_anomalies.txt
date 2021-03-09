@@ -1,5 +1,10 @@
+KI anomalies Q3 2020
+duplicate with same price 10.3390/ijms21124333
+
+
+
 KI anomalies Q2 2020
-*Already registered Q1
+*DOIs already registered Q1 also present in Q2-file
 10.1136/bmjopen-2019-033612, different price Q1 (8540.98) and Q2 (8384.45)
 10.1016/j.stemcr.2020.02.006, different price Q1 (30153.2) and Q2 (23610.30)
 10.1111/bpa.12812, different price Q1 (26279) and Q2 (20147.45)
