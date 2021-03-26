@@ -1,0 +1,2 @@
+ERROR: Line 320: Crossref: Error while trying to resolve DOI 10.3390/pharmaceutics12070614: HTTPError: 404 - Not Found -> found in doi.org
+ERROR: Line 91: Crossref: Error while trying to resolve DOI 10.1088/1361-6439/abd3f4/meta: HTTPError: 404 - Not Found -> meta ska bort
