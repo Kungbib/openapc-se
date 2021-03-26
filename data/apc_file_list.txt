@@ -32,6 +32,7 @@
 # hv/apc_hv_2018-2019_dois.tsv
 # hv/apc_hv_2019_rest_dois.tsv
 # hv/apc_hv_2018-2019_non_dois.tsv
+hv/apc_hv_2020_dois.tsv
 # kau/apc_kau_2014_2018_dois.tsv
 # kau/apc_kau_2019_dois.tsv
 # kau/original_data/2018_kau_rest.xlsx
@@ -64,7 +65,7 @@
 # liu/apc_liu_jul_dec_2019_dois.tsv
 # liu/apc_liu_2019_corr_dois.tsv
 # liu/apc_liu_2020_jan_jun_dois.tsv
-liu/apc_liu_2020_jan_jun_corr_dois.tsv
+# liu/apc_liu_2020_jan_jun_corr_dois.tsv
 # lnu/apc_lnu_2017_dois.tsv
 # lnu/apc_lnu_2018_dois.tsv
 # lnu/apc_lnu_2019_dois.tsv
@@ -110,6 +111,7 @@ liu/apc_liu_2020_jan_jun_corr_dois.tsv
 # uu/apc_uu_2019_corr_dois.tsv
 # uu/apc_uu_2019_corr_2_non_dois.tsv
 # uu/apc_uu_2019_corr_non_dois.tsv
+# uu/apc_uu_2020_dois.tsv
 # karger/apc_karger_2014-2016.tsv
 # springer/apc_springer_2016_2.xlsx
 # taylor_and_francis/apc_tf_2014-2016.tsv

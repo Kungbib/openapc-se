@@ -1,7 +1,7 @@
 jan-jul
 
 no DOI without added url:
-liu	2020	440.6526		FALSE	Research Open	Endocrinology, Diabetes and Metabolism Journal	2002-7354
+liu	2020	440.6526		FALSE	Research Open	Endocrinology, Diabetes and Metabolism Journal	2002-7354 -> corrected with DOI 10.31038/EDMJ.2020424
 
 duplicate dois
 liu	2020	1445.5008	10.1364/boe.394296	FALSE	The Optical Society -> different price & publisher. 19521 or 15152 SEK, or 2 diff publications? -> corrected price 15477 SEK
