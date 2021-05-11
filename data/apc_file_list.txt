@@ -36,6 +36,7 @@
 # kau/apc_kau_2014_2018_dois.tsv
 # kau/apc_kau_2019_dois.tsv
 # kau/original_data/2018_kau_rest.xlsx
+kau/apc_kau_2020_dois.tsv
 # ki/original_data/ki_2017_elsevier.tsv
 # ki/original_data/ki_2017_oxford.tsv
 # ki/original_data/ki_2017_sage.tsv
