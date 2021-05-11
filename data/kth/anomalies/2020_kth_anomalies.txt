@@ -1,0 +1,5 @@
+ERROR: Line 29: Crossref: Error while trying to resolve DOI 10.1007/978-3-030-58295-1_4: Unsupported DOI type 'book_content' (OpenAPC only supports journal articles)	moved to other publ types
+ERROR: Line 168: Crossref: Error while trying to resolve DOI 10.1186/s13636-020-00187: HTTPError: 404 - Not Found	not in doi.org or Crossref
+ERROR: Line 261: Crossref: Error while trying to resolve DOI 10.3390/polym12081849: ElementTree ParseError: no element found: line 1, column 0	re-register
+ERROR: Line 263: Crossref: Error while trying to resolve DOI 10.3390/rs12183072: ElementTree ParseError: no element found: line 1, column 0	re-register
+ERROR: Line 264: Crossref: Error while trying to resolve DOI 10.3390/pr8091044: ElementTree ParseError: no element found: line 1, column 0	re-register
