@@ -59,6 +59,7 @@
 # kth/apc_kth_2018_dois.tsv
 # kth/apc_kth_2019_dois.tsv
 # kth/apc_kth_2020_dois.tsv
+# kth/apc_kth_2020_dois_kompl.tsv
 # liu/apc_liu_2017_jan-jun.tsv
 # liu/apc_liu_spring_2018_dois.tsv
 # liu/apc_liu_spring_2018_corrected_dois.csv
@@ -103,6 +104,8 @@
 # slu/apc_slu_2018_dois.tsv
 # slu/apc_slu_2019_dois.tsv
 # slu/apc_slu_2019_corr2_dois.tsv
+# slu/apc_slu_2020_dois.tsv
+slu/apc_slu_2020_dois_kompl.tsv
 # su/apc_su_2015.tsv
 # su/apc_su_2016.tsv
 # su/apc_su_2017.tsv

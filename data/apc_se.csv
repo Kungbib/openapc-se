@@ -4196,7 +4196,7 @@ kth,2020,0,10.3390/polym12061359,FALSE,MDPI,Polymers,2073-4360,NA,2073-4360,NA,h
 kth,2020,0,10.3390/su11236724,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2020,0,10.3390/su11247091,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2020,1018.5372409478673,10.3390/atmos11060621,FALSE,MDPI,Atmosphere,2073-4433,NA,2073-4433,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
-kth,2020,1052.5255375970764,10.3390/pr8091044,FALSE,MDPI,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2020,1052.5255375970764,10.3390/pr8091044,FALSE,MDPI,Processes,2227-9717,NA,2227-9717,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2020,1056.6897855230768,10.3390/app9245316,FALSE,MDPI,Applied Sciences,2076-3417,NA,2076-3417,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2020,1061.7388700869565,10.3390/met10010036,FALSE,MDPI,Metals,2075-4701,NA,2075-4701,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2020,1086.4397236777252,10.3390/met10050675,FALSE,MDPI,Metals,2075-4701,NA,2075-4701,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
@@ -4242,7 +4242,7 @@ kth,2020,1263.0306451164918,10.3390/catal10090982,FALSE,MDPI,Catalysts,2073-4344
 kth,2020,1263.0306451164918,10.3390/en13143620,FALSE,MDPI,Energies,1996-1073,NA,1996-1073,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2020,1263.0306451164918,10.3390/en13184809,FALSE,MDPI,Energies,1996-1073,NA,1996-1073,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2020,1263.0306451164918,10.3390/en13195004,FALSE,MDPI,Energies,1996-1073,NA,1996-1073,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
-kth,2020,1263.0306451164918,10.3390/polym12081849,FALSE,MDPI,NA,NA,NA,NA,NA,NA,FALSE,32824691,PMC7464575,NA,NA,NA
+kth,2020,1263.0306451164918,10.3390/polym12081849,FALSE,MDPI,Polymers,2073-4360,NA,2073-4360,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32824691,PMC7464575,NA,NA,TRUE
 kth,2020,1263.0306451164918,10.3390/su12166386,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2020,1263.0306451164918,10.3390/su12177043,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2020,1263.0306451164918,10.3390/su12177051,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
@@ -4269,7 +4269,7 @@ kth,2020,1306.3827959999999,10.1016/j.mtla.2020.100630,TRUE,Elsevier,Materialia,
 kth,2020,1309.041594,10.1177/2041731420954316,FALSE,SAGE Publications,Journal of Tissue Engineering,2041-7314,2041-7314,2041-7314,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32983402,PMC7498972,NA,NA,TRUE
 kth,2020,1314.676872,10.1016/j.jlamp.2020.100561,TRUE,Elsevier,Journal of Logical and Algebraic Methods in Programming,2352-2208,2352-2208,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 kth,2020,1319.41062,10.1080/19942060.2020.1829710,FALSE,Taylor & Francis,Engineering Applications of Computational Fluid Mechanics,1994-2060,1994-2060,1997-003X,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
-kth,2020,1325.922624,10.1186/s13636-020-00187,FALSE,MDPI,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2020,1325.922624,10.1186/s13636-020-00187-z,FALSE,Springer,"EURASIP Journal on Audio, Speech, and Music Processing",1687-4722,NA,1687-4722,NA,https://creativecommons.org/licenses/by/4.0,TRUE,33488686,PMC7801324,NA,NA,TRUE
 kth,2020,1358.0496545971564,10.3390/ijerph17124245,FALSE,MDPI,International Journal of Environmental Research and Public Health,1660-4601,NA,1660-4601,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32545871,PMC7344572,NA,NA,TRUE
 kth,2020,1358.0496545971564,10.3390/ijerph17124272,FALSE,MDPI,International Journal of Environmental Research and Public Health,1660-4601,NA,1660-4601,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32549346,PMC7344872,NA,NA,TRUE
 kth,2020,1358.0496545971564,10.3390/ijms21082999,FALSE,MDPI,International Journal of Molecular Sciences,1422-0067,NA,1422-0067,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32340383,PMC7215652,NA,NA,TRUE
@@ -4288,7 +4288,7 @@ kth,2020,1513.071666,10.1364/boe.389911,FALSE,Optical Society of America (OSA),B
 kth,2020,1515.63677413979,10.3390/su12208303,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2020,1543.7041218090455,10.3390/cancers12092694,FALSE,MDPI,Cancers,2072-6694,NA,2072-6694,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32967266,PMC7563533,NA,NA,TRUE
 kth,2020,1543.7041218090455,10.3390/rs12182883,FALSE,MDPI,Remote Sensing,2072-4292,NA,2072-4292,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
-kth,2020,1543.7041218090455,10.3390/rs12183072,FALSE,MDPI,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
+kth,2020,1543.7041218090455,10.3390/rs12183072,FALSE,MDPI,Remote Sensing,2072-4292,NA,2072-4292,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 kth,2020,1551.68577,10.1121/10.0001468,TRUE,Acoustical Society of America (ASA),The Journal of the Acoustical Society of America,0001-4966,0001-4966,NA,NA,NA,TRUE,32752737,NA,NA,NA,FALSE
 kth,2020,1577.2272119999998,10.1364/boe.391548,FALSE,Optical Society of America (OSA),Biomedical Optics Express,2156-7085,2156-7085,2156-7085,NA,NA,TRUE,32637246,PMC7316022,NA,NA,TRUE
 kth,2020,1613.872490982184,10.3390/ijerph17186682,FALSE,MDPI,International Journal of Environmental Research and Public Health,1660-4601,NA,1660-4601,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32937827,PMC7559933,NA,NA,TRUE
@@ -8666,6 +8666,182 @@ slu,2019,928.8393599999999,10.1186/s13705-019-0189-0,FALSE,Springer,"Energy, Sus
 slu,2019,987.5183999999999,10.3390/ani9100812,FALSE,MDPI,Animals,2076-2615,NA,2076-2615,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31619014,PMC6826450,NA,NA,TRUE
 slu,2019,998.752,10.22434/ifamr2018.0078,FALSE,Wageningen Academic Publishers,International Food and Agribusiness Management Review,1559-2448,NA,1559-2448,NA,NA,TRUE,NA,NA,NA,NA,TRUE
 slu,2019,998.752,10.3920/cep190022,TRUE,Wageningen Academic Publishers,Comparative Exercise Physiology,1755-2540,1755-2540,1755-2559,NA,NA,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,1018.51425,10.7717/peerj.9999,FALSE,PeerJ,PeerJ,2167-8359,NA,2167-8359,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33173615,PMC7594636,NA,NA,TRUE
+slu,2020,1099.7712,10.22434/ifamr2019.0176,FALSE,Wageningen Academic Publishers,International Food and Agribusiness Management Review,1559-2448,NA,1559-2448,NA,NA,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1110.768912,10.3390/antibiotics9110834,FALSE,MDPI,Antibiotics,2079-6382,NA,2079-6382,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33233471,PMC7700389,NA,NA,TRUE
+slu,2020,1113.3895499999999,10.7717/peerj.10354,FALSE,PeerJ,PeerJ,2167-8359,NA,2167-8359,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33240661,PMC7680050,NA,NA,TRUE
+slu,2020,1115.7678720000001,10.5194/hess-24-1709-2020,FALSE,Copernicus Publications,Hydrology and Earth System Sciences,1607-7938,NA,1607-7938,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1151.6688,10.3390/insects11070402,FALSE,MDPI,Insects,2075-4450,NA,2075-4450,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32610651,PMC7412318,NA,NA,TRUE
+slu,2020,1151.6688,10.3390/rs12030505,FALSE,MDPI,Remote Sensing,2072-4292,NA,2072-4292,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1167.17717664,10.3390/land9100389,FALSE,MDPI,Land,2073-445X,NA,2073-445X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1167.17717664,10.3390/land9110441,FALSE,MDPI,Land,2073-445X,NA,2073-445X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1171.7562240000002,10.1093/jisesa/ieaa063,FALSE,Oxford University Press (OUP),Journal of Insect Science,1536-2442,NA,1536-2442,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32706872,PMC7380461,NA,NA,TRUE
+slu,2020,1209.25224,10.3390/land9110451,FALSE,MDPI,Land,2073-445X,NA,2073-445X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1249.74,10.3920/jiff2019.0048,TRUE,Wageningen Academic Publishers,Journal of Insects as Food and Feed,2352-4588,NA,2352-4588,NA,NA,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,1255.19886432,10.3390/biom10081095,FALSE,MDPI,Biomolecules,2218-273X,NA,2218-273X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32717949,PMC7465137,NA,NA,TRUE
+slu,2020,1327.76376768,10.5194/bg-17-2487-2020,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1330.28324352,10.3390/pathogens9060419,FALSE,MDPI,Pathogens,2076-0817,NA,2076-0817,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32481503,PMC7350334,NA,NA,TRUE
+slu,2020,1333.9224864,10.3390/agronomy10121888,FALSE,MDPI,Agronomy,2073-4395,NA,2073-4395,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1333.9224864,10.3390/antibiotics9100662,FALSE,MDPI,Antibiotics,2079-6382,NA,2079-6382,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33008077,PMC7650604,NA,NA,TRUE
+slu,2020,1338.47154,10.3390/ani10122436,FALSE,MDPI,Animals,2076-2615,NA,2076-2615,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33352686,PMC7767303,NA,NA,TRUE
+slu,2020,1343.6136,10.3390/ijms21176311,FALSE,MDPI,International Journal of Molecular Sciences,1422-0067,NA,1422-0067,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32878208,PMC7503626,NA,NA,TRUE
+slu,2020,1357.49758176,10.3390/ani10040638,FALSE,MDPI,Animals,2076-2615,NA,2076-2615,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32272754,PMC7222828,NA,NA,TRUE
+slu,2020,1401.96832992,10.3390/plants9070831,FALSE,MDPI,Plants,2223-7747,NA,2223-7747,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32630736,PMC7411992,NA,NA,TRUE
+slu,2020,1419.06477312,10.3390/su12073033,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1419.70464,10.1016/j.gecco.2020.e00939,FALSE,Elsevier,Global Ecology and Conservation,2351-9894,2351-9894,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1431.50085,10.3389/fenvs.2020.538539,FALSE,Frontiers,Frontiers in Environmental Science,2296-665X,NA,2296-665X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1431.50085,10.3389/fvets.2020.00163,FALSE,Frontiers,Frontiers in Veterinary Science,2297-1769,NA,2297-1769,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32318586,PMC7146822,NA,NA,TRUE
+slu,2020,1439.586,10.3390/ijms21020620,FALSE,MDPI,International Journal of Molecular Sciences,1422-0067,NA,1422-0067,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31963543,PMC7014428,NA,NA,TRUE
+slu,2020,1449.01854144,10.3390/w12041178,FALSE,MDPI,Water,2073-4441,NA,2073-4441,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1462.41575424,10.3390/plants9060695,FALSE,MDPI,Plants,2223-7747,NA,2223-7747,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32486039,PMC7356882,NA,NA,TRUE
+slu,2020,1482.1316524800002,10.3390/w12102679,FALSE,MDPI,Water,2073-4441,NA,2073-4441,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1483.58925,10.1371/journal.pone.0233530,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32437406,PMC7241799,NA,NA,TRUE
+slu,2020,1483.58925,10.1371/journal.pone.0233611,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32569297,PMC7307758,NA,NA,TRUE
+slu,2020,1483.58925,10.1371/journal.pone.0234476,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32584848,PMC7316335,NA,NA,TRUE
+slu,2020,1483.58925,10.1371/journal.pone.0235357,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32760112,PMC7410208,NA,NA,TRUE
+slu,2020,1487.690496,10.5194/hess-24-2999-2020,FALSE,Copernicus Publications,Hydrology and Earth System Sciences,1607-7938,NA,1607-7938,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1499.6879999999999,10.1074/jbc.ra120.013755,FALSE,Elsevier,Journal of Biological Chemistry,0021-9258,0021-9258,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32873712,PMC7650248,NA,NA,TRUE
+slu,2020,1499.6879999999999,10.3390/genes11111373,FALSE,MDPI,Genes,2073-4425,NA,2073-4425,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33233626,PMC7709008,NA,NA,TRUE
+slu,2020,1500.65779824,10.3390/f11111185,FALSE,MDPI,Forests,1999-4907,NA,1999-4907,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1500.65779824,10.3390/genes11091090,FALSE,MDPI,Genes,2073-4425,NA,2073-4425,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32962042,PMC7565673,NA,NA,TRUE
+slu,2020,1500.65779824,10.3390/genes11101223,FALSE,MDPI,Genes,2073-4425,NA,2073-4425,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33086591,PMC7603098,NA,NA,TRUE
+slu,2020,1500.65779824,10.3390/su12208322,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1500.65779824,10.3390/su12218769,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1500.65779824,10.3390/su12218806,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1500.65779824,10.3390/su12219073,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1500.65779824,10.3390/su122310076,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1500.65779824,10.3390/su12239985,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1500.65779824,10.3390/w12102855,FALSE,MDPI,Water,2073-4441,NA,2073-4441,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1504.00710144,10.3390/su12166384,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1510.37577648,10.3390/ani10030496,FALSE,MDPI,Animals,2076-2615,NA,2076-2615,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32188129,PMC7143206,NA,NA,TRUE
+slu,2020,1513.6850880000002,10.3390/f11010086,FALSE,MDPI,Forests,1999-4907,NA,1999-4907,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1514.12499648,10.3390/su12125113,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1517.8942123200002,10.3390/agronomy10050645,FALSE,MDPI,Agronomy,2073-4395,NA,2073-4395,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1518.8640105600002,10.3390/agronomy10050728,FALSE,MDPI,Agronomy,2073-4395,NA,2073-4395,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1535.5584,10.3390/agronomy10060882,FALSE,MDPI,Agronomy,2073-4395,NA,2073-4395,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1548.69975,10.3389/fvets.2020.586858,FALSE,Frontiers,Frontiers in Veterinary Science,2297-1769,NA,2297-1769,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33240960,PMC7677228,NA,NA,TRUE
+slu,2020,1554.75288,10.3390/su12176995,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1569.6734400000003,10.1038/s41598-020-66626-1,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,https://creativecommons.org/licenses/by/4.0,TRUE,32555291,PMC7303184,NA,NA,TRUE
+slu,2020,1569.6734400000003,10.1038/s41598-020-68904-4,FALSE,Springer,Scientific Reports,2045-2322,NA,2045-2322,NA,https://creativecommons.org/licenses/by/4.0,TRUE,32719358,PMC7385177,NA,NA,TRUE
+slu,2020,1576.6042499999999,10.1371/journal.pone.0231608,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,33141852,PMC7608869,NA,NA,TRUE
+slu,2020,1590.5565,10.3389/fenrg.2020.00105,FALSE,Frontiers,Frontiers in Energy Research,2296-598X,NA,2296-598X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1590.5565,10.3389/fenvs.2020.00036,FALSE,Frontiers,Frontiers in Environmental Science,2296-665X,NA,2296-665X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1599.6671999999999,10.1016/j.mehy.2020.109597,TRUE,Elsevier,Medical Hypotheses,0306-9877,0306-9877,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32032912,NA,NA,NA,FALSE
+slu,2020,1619.6630400000001,10.3390/f11111151,FALSE,MDPI,Forests,1999-4907,NA,1999-4907,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1657.6751318400002,10.3390/s20020474,FALSE,MDPI,Sensors,1424-8220,NA,1424-8220,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,31947672,PMC7014454,NA,NA,TRUE
+slu,2020,1662.98402736,10.3390/f11020155,FALSE,MDPI,Forests,1999-4907,NA,1999-4907,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1667.403108,10.3390/f11101083,FALSE,MDPI,Forests,1999-4907,NA,1999-4907,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1667.403108,10.3390/molecules25245824,FALSE,MDPI,Molecules,1420-3049,NA,1420-3049,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33321815,PMC7763327,NA,NA,TRUE
+slu,2020,1673.6018184000002,10.3390/en13153804,FALSE,MDPI,Energies,1996-1073,NA,1996-1073,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1673.651808,10.5194/bg-17-5025-2020,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1679.65056,10.1016/j.landusepol.2020.104667,TRUE,Elsevier,Land Use Policy,0264-8377,0264-8377,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,1681.7001336,10.3390/f11020220,FALSE,MDPI,Forests,1999-4907,NA,1999-4907,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1682.36999424,10.3390/su12125021,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1682.36999424,10.3390/su12145502,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1682.36999424,10.3390/su12145589,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1682.36999424,10.3390/w12072053,FALSE,MDPI,Water,2073-4441,NA,2073-4441,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1720.7775,10.2166/wh.2020.264,TRUE,IWA Publishing,Journal of Water and Health,1477-8920,1477-8920,1996-7829,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32589622,NA,NA,NA,TRUE
+slu,2020,1727.5031999999999,10.3390/f11040373,FALSE,MDPI,Forests,1999-4907,NA,1999-4907,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1727.5031999999999,10.3390/su12114352,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,1765.7967600000002,10.1080/20008686.2020.1761588,FALSE,Taylor & Francis,Infection Ecology & Epidemiology,2000-8686,NA,2000-8686,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32864050,PMC7448862,NA,NA,TRUE
+slu,2020,1765.7967600000002,10.1080/20008686.2020.1772668,FALSE,Taylor & Francis,Infection Ecology & Epidemiology,2000-8686,NA,2000-8686,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32922689,PMC7448889,NA,NA,TRUE
+slu,2020,1777.6301760000001,10.1093/gbe/evaa005,FALSE,Oxford University Press (OUP),Genome Biology and Evolution,1759-6653,NA,1759-6653,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31958121,PMC7046165,NA,NA,TRUE
+slu,2020,1852.6645656,10.3390/ijerph17249357,FALSE,MDPI,International Journal of Environmental Research and Public Health,1660-4601,NA,1660-4601,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33327579,PMC7765052,NA,NA,TRUE
+slu,2020,1869.29110656,10.3390/nano10071398,FALSE,MDPI,Nanomaterials,2079-4991,NA,2079-4991,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32708405,PMC7407268,NA,NA,TRUE
+slu,2020,1884.60792,10.3390/ijerph17072406,FALSE,MDPI,International Journal of Environmental Research and Public Health,1660-4601,NA,1660-4601,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32244813,PMC7178181,NA,NA,TRUE
+slu,2020,1947.6947952,10.1016/j.ijppaw.2020.10.002,FALSE,Elsevier,International Journal for Parasitology: Parasites and Wildlife,2213-2244,2213-2244,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,33209582,PMC7658659,NA,NA,TRUE
+slu,2020,1975.588992,10.1093/gbe/evaa017,FALSE,Oxford University Press (OUP),Genome Biology and Evolution,1759-6653,NA,1759-6653,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,32022853,PMC7061230,NA,NA,TRUE
+slu,2020,2053.485,10.1042/bst20190937,TRUE,Portland Press,Biochemical Society Transactions,0300-5127,0300-5127,1470-8752,NA,https://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32573687,PMC7329337,NA,NA,FALSE
+slu,2020,2084.46615,10.3389/fenrg.2020.595224,FALSE,Frontiers,Frontiers in Energy Research,2296-598X,NA,2296-598X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,2084.46615,10.3389/fenvs.2020.570637,FALSE,Frontiers,Frontiers in Environmental Science,2296-665X,NA,2296-665X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,2084.46615,10.3389/fenvs.2020.619901,FALSE,Frontiers,Frontiers in Environmental Science,2296-665X,NA,2296-665X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,2084.46615,10.3389/fevo.2020.00254,FALSE,Frontiers,Frontiers in Ecology and Evolution,2296-701X,NA,2296-701X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,2084.46615,10.3389/fevo.2020.595730,FALSE,Frontiers,Frontiers in Ecology and Evolution,2296-701X,NA,2296-701X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,2084.46615,10.3389/fvets.2020.00355,FALSE,Frontiers,Frontiers in Veterinary Science,2297-1769,NA,2297-1769,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32671111,PMC7326779,NA,NA,TRUE
+slu,2020,2185.8525,10.1371/journal.pntd.0008531,FALSE,Public Library of Science (PLoS),PLOS Neglected Tropical Diseases,1935-2735,NA,1935-2735,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32911504,PMC7482838,NA,NA,TRUE
+slu,2020,2194.2954,10.1017/s0022029920000692,TRUE,Cambridge University Press (CUP),Journal of Dairy Research,0022-0299,0022-0299,1469-7629,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32883374,NA,NA,NA,FALSE
+slu,2020,2231.5357440000002,10.5194/bg-17-281-2020,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,2239.53408,10.1016/j.apsoil.2019.103475,TRUE,Elsevier,Applied Soil Ecology,0929-1393,0929-1393,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,2252.9664,10.1039/d0ew00150c,TRUE,Royal Society of Chemistry (RSC),Environmental Science: Water Research & Technology,2053-1400,2053-1400,2053-1419,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,2269.52784,10.1016/j.meegid.2020.104290,TRUE,Elsevier,"Infection, Genetics and Evolution",1567-1348,1567-1348,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32205264,PMC7102562,NA,NA,FALSE
+slu,2020,2288.169,10.1136/vr.105644,TRUE,Wiley,Veterinary Record,0042-4900,0042-4900,2042-7670,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,32054718,PMC7799416,NA,NA,FALSE
+slu,2020,2289.5236800000002,10.1016/j.scienta.2020.109316,TRUE,Elsevier,Scientia Horticulturae,0304-4238,0304-4238,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,2316.0735,10.3389/fvets.2020.00298,FALSE,Frontiers,Frontiers in Veterinary Science,2297-1769,NA,2297-1769,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32582779,PMC7297050,NA,NA,TRUE
+slu,2020,2369.50704,10.1016/j.biosystemseng.2020.03.017,TRUE,Elsevier,Biosystems Engineering,1537-5110,1537-5110,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,2393.7768,10.1098/rstb.2019.0449,TRUE,The Royal Society,Philosophical Transactions of the Royal Society B: Biological Sciences,0962-8436,0962-8436,1471-2970,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,33131431,PMC7662199,NA,NA,FALSE
+slu,2020,2399.5008,10.1038/s41437-020-0296-x,TRUE,Springer,Heredity,0018-067X,0018-067X,1365-2540,NA,https://creativecommons.org/licenses/by/4.0,TRUE,32076125,PMC7080786,NA,NA,FALSE
+slu,2020,2469.54825,10.3389/fmicb.2020.00679,FALSE,Frontiers,Frontiers in Microbiology,1664-302X,NA,1664-302X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32373095,PMC7176902,NA,NA,TRUE
+slu,2020,2469.54825,10.3389/fmicb.2020.01500,FALSE,Frontiers,Frontiers in Microbiology,1664-302X,NA,1664-302X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32714313,PMC7341956,NA,NA,TRUE
+slu,2020,2469.54825,10.3389/fmicb.2020.01616,FALSE,Frontiers,Frontiers in Microbiology,1664-302X,NA,1664-302X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32765458,PMC7378744,NA,NA,TRUE
+slu,2020,2469.54825,10.3389/fmicb.2020.02066,FALSE,Frontiers,Frontiers in Microbiology,1664-302X,NA,1664-302X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32983047,PMC7481360,NA,NA,TRUE
+slu,2020,2469.54825,10.3389/fmicb.2020.581698,FALSE,Frontiers,Frontiers in Microbiology,1664-302X,NA,1664-302X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33329445,PMC7720654,NA,NA,TRUE
+slu,2020,2469.54825,10.3389/fpls.2020.00023,FALSE,Frontiers,Frontiers in Plant Science,1664-462X,NA,1664-462X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32117369,PMC7020196,NA,NA,TRUE
+slu,2020,2469.54825,10.3389/fpls.2020.00329,FALSE,Frontiers,Frontiers in Plant Science,1664-462X,NA,1664-462X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32425956,PMC7212348,NA,NA,TRUE
+slu,2020,2469.54825,10.3389/fpls.2020.00358,FALSE,Frontiers,Frontiers in Plant Science,1664-462X,NA,1664-462X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32351515,PMC7175398,NA,NA,TRUE
+slu,2020,2469.54825,10.3389/fpls.2020.00448,FALSE,Frontiers,Frontiers in Plant Science,1664-462X,NA,1664-462X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32425961,PMC7204607,NA,NA,TRUE
+slu,2020,2469.54825,10.3389/fpls.2020.00651,FALSE,Frontiers,Frontiers in Plant Science,1664-462X,NA,1664-462X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32528503,PMC7265884,NA,NA,TRUE
+slu,2020,2469.54825,10.3389/fpls.2020.01043,FALSE,Frontiers,Frontiers in Plant Science,1664-462X,NA,1664-462X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32754185,PMC7381296,NA,NA,TRUE
+slu,2020,2469.54825,10.3389/fpls.2020.01067,FALSE,Frontiers,Frontiers in Plant Science,1664-462X,NA,1664-462X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32765555,PMC7379150,NA,NA,TRUE
+slu,2020,2469.54825,10.3389/fpls.2020.01144,FALSE,Frontiers,Frontiers in Plant Science,1664-462X,NA,1664-462X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32922411,PMC7456936,NA,NA,TRUE
+slu,2020,2469.54825,10.3389/fpls.2020.588846,FALSE,Frontiers,Frontiers in Plant Science,1664-462X,NA,1664-462X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33414796,PMC7783096,NA,NA,TRUE
+slu,2020,2469.54825,10.3389/fpls.2020.593773,FALSE,Frontiers,Frontiers in Plant Science,1664-462X,NA,1664-462X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33363557,PMC7752767,NA,NA,TRUE
+slu,2020,2469.54825,10.3389/fpls.2020.611607,FALSE,Frontiers,Frontiers in Plant Science,1664-462X,NA,1664-462X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33381142,PMC7768015,NA,NA,TRUE
+slu,2020,2469.54825,10.3389/fpsyg.2020.612672,FALSE,Frontiers,Frontiers in Psychology,1664-1078,NA,1664-1078,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33519631,PMC7840507,NA,NA,TRUE
+slu,2020,2469.54825,10.3389/fvets.2020.568881,FALSE,Frontiers,Frontiers in Veterinary Science,2297-1769,NA,2297-1769,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33330689,PMC7673384,NA,NA,TRUE
+slu,2020,2469.54825,10.3389/fvets.2020.572691,FALSE,Frontiers,Frontiers in Veterinary Science,2297-1769,NA,2297-1769,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33240952,PMC7669830,NA,NA,TRUE
+slu,2020,2479.48416,10.1007/s10653-019-00499-w,TRUE,Springer,Environmental Geochemistry and Health,0269-4042,0269-4042,1573-2983,NA,https://creativecommons.org/licenses/by/4.0,TRUE,31902042,PMC7429550,NA,NA,FALSE
+slu,2020,2494.48104,10.1080/02571862.2019.1640296,TRUE,Taylor & Francis,South African Journal of Plant and Soil,0257-1862,0257-1862,2167-034X,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,2499.48,10.1111/1365-2664.13569,TRUE,Wiley,Journal of Applied Ecology,0021-8901,0021-8901,1365-2664,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,2510.4777120000003,10.5194/bg-17-1507-2020,FALSE,Copernicus Publications,Biogeosciences,1726-4189,NA,1726-4189,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,2511.4049999999997,10.1071/en19296,TRUE,CSIRO Publishing,Environmental Chemistry,1448-2517,1448-2517,NA,NA,NA,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,2581.524,10.1177/0266242620967006,TRUE,SAGE Publications,International Small Business Journal: Researching Entrepreneurship,0266-2426,0266-2426,1741-2870,NA,https://creativecommons.org/licenses/by-nc/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,2589.46128,10.1016/j.jcpa.2020.02.010,TRUE,Elsevier,Journal of Comparative Pathology,0021-9975,0021-9975,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32359623,NA,NA,NA,FALSE
+slu,2020,2659.4467200000004,10.1016/j.ecolind.2020.106469,TRUE,Elsevier,Ecological Indicators,1470-160X,1470-160X,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,2719.43424,10.1016/j.biocon.2020.108516,TRUE,Elsevier,Biological Conservation,0006-3207,0006-3207,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,2743.9425,10.3389/fvets.2020.00645,FALSE,Frontiers,Frontiers in Veterinary Science,2297-1769,NA,2297-1769,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33195503,PMC7536260,NA,NA,TRUE
+slu,2020,2759.42592,10.1016/j.biocon.2020.108789,TRUE,Elsevier,Biological Conservation,0006-3207,0006-3207,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,2839.40928,10.1080/15622975.2020.1814408,TRUE,Taylor & Francis,The World Journal of Biological Psychiatry,1562-2975,1562-2975,1814-1412,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32914674,NA,NA,NA,FALSE
+slu,2020,2849.4072,10.1016/j.ecoser.2020.101140,TRUE,Elsevier,Ecosystem Services,2212-0416,2212-0416,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32834962,PMC7392851,NA,NA,FALSE
+slu,2020,2889.39888,10.1016/j.geoderma.2020.114206,TRUE,Elsevier,Geoderma,0016-7061,0016-7061,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,2889.39888,10.1016/j.geoderma.2020.114708,TRUE,Elsevier,Geoderma,0016-7061,0016-7061,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,2889.39888,10.1016/j.prevetmed.2020.104991,TRUE,Elsevier,Preventive Veterinary Medicine,0167-5877,0167-5877,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32422475,NA,NA,NA,FALSE
+slu,2020,2914.39368,10.1002/eap.2063,TRUE,Wiley,Ecological Applications,1051-0761,1051-0761,1939-5582,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,31868951,PMC7187313,NA,NA,FALSE
+slu,2020,2929.3905600000003,10.1016/j.scitotenv.2020.137647,TRUE,Elsevier,Science of The Total Environment,0048-9697,0048-9697,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32197286,NA,NA,NA,FALSE
+slu,2020,2979.38016,10.1016/j.eja.2020.126077,TRUE,Elsevier,European Journal of Agronomy,1161-0301,1161-0301,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,3039.36768,10.1016/j.biombioe.2020.105606,TRUE,Elsevier,Biomass and Bioenergy,0961-9534,0961-9534,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,3059.3635200000003,10.1016/j.envpol.2020.114398,TRUE,Elsevier,Environmental Pollution,0269-7491,0269-7491,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32229372,NA,NA,NA,FALSE
+slu,2020,3089.35728,10.1016/j.agee.2020.107118,TRUE,Elsevier,"Agriculture, Ecosystems & Environment",0167-8809,0167-8809,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,3189.3364800000004,10.1016/j.biortech.2020.122981,TRUE,Elsevier,Bioresource Technology,0960-8524,0960-8524,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32088624,NA,NA,NA,FALSE
+slu,2020,3199.3343999999997,10.1016/j.agsy.2020.102815,TRUE,Elsevier,Agricultural Systems,0308-521X,0308-521X,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,3229.32816,10.1016/j.jclepro.2020.122778,TRUE,Elsevier,Journal of Cleaner Production,0959-6526,0959-6526,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,3229.32816,10.1016/j.watres.2020.115640,TRUE,Elsevier,Water Research,0043-1354,0043-1354,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32145556,NA,NA,NA,FALSE
+slu,2020,3255.525,10.3168/jds.2020-18302,TRUE,American Dairy Science Association,Journal of Dairy Science,0022-0302,0022-0302,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,33076184,NA,NA,NA,FALSE
+slu,2020,3279.31776,10.1016/j.agee.2020.107001,TRUE,Elsevier,"Agriculture, Ecosystems & Environment",0167-8809,0167-8809,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,336.46999968,10.3390/su12125142,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,3449.2824,10.1016/j.tibtech.2019.12.002,TRUE,Elsevier,Trends in Biotechnology,0167-7799,0167-7799,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32059122,NA,NA,NA,FALSE
+slu,2020,3489.2740800000006,10.1016/j.foodhyd.2019.105622,TRUE,Elsevier,Food Hydrocolloids,0268-005X,0268-005X,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,3599.2512,10.1111/fwb.13481,TRUE,Wiley,Freshwater Biology,0046-5070,0046-5070,1365-2427,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
+slu,2020,3699.2304,10.1111/gcb.15292,TRUE,Wiley,Global Change Biology,1354-1013,1354-1013,1365-2486,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,32816359,PMC7540515,NA,NA,FALSE
+slu,2020,3709.22832,10.1016/j.pbi.2019.12.001,TRUE,Elsevier,Current Opinion in Plant Biology,1369-5266,1369-5266,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,31982289,NA,NA,NA,FALSE
+slu,2020,3879.1929600000003,10.1016/j.pt.2020.04.004,TRUE,Elsevier,Trends in Parasitology,1471-4922,1471-4922,NA,NA,https://www.elsevier.com/tdm/userlicense/1.0/,TRUE,32456963,NA,NA,NA,FALSE
+slu,2020,3879.1929600000003,10.1016/j.tibtech.2020.08.001,TRUE,Elsevier,Trends in Biotechnology,0167-7799,0167-7799,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32896439,NA,NA,NA,FALSE
+slu,2020,500.21593344,10.3390/su12219074,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,542.27745,10.1073/pnas.1922539117,TRUE,National Academy of Sciences,Proceedings of the National Academy of Sciences,0027-8424,0027-8424,1091-6490,NA,https://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,33257574,PMC7768725,NA,NA,FALSE
+slu,2020,558.09,10.5751/ace-01477-150106,FALSE,Resilience Alliance,Avian Conservation and Ecology,1712-6568,1712-6568,NA,NA,NA,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,560.8633161600001,10.3390/land9020042,FALSE,MDPI,Land,2073-445X,NA,2073-445X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,592.85666016,10.3390/ani10101830,FALSE,MDPI,Animals,2076-2615,NA,2076-2615,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33050024,PMC7600185,NA,NA,TRUE
+slu,2020,614.87208,10.1111/asj.13380,TRUE,Wiley,Animal Science Journal,1344-3941,1344-3941,1740-0929,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,32363779,NA,NA,NA,FALSE
+slu,2020,795.27825,10.3389/frsc.2020.565418,FALSE,Frontiers,Frontiers in Sustainable Cities,2624-9634,NA,2624-9634,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,795.27825,10.3389/fsufs.2020.00027,FALSE,Frontiers,Frontiers in Sustainable Food Systems,2571-581X,NA,2571-581X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,833.6965550399999,10.3390/fishes5040032,FALSE,MDPI,Fishes,2410-3888,NA,2410-3888,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,833.6965550399999,10.3390/su12218900,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,854.36225568,10.3390/su12104089,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,880.0649999999999,10.1039/d0ra06828d,FALSE,Royal Society of Chemistry (RSC),RSC Advances,2046-2069,NA,2046-2069,NA,http://creativecommons.org/licenses/by/3.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,897.6663,10.1039/c9ra10691j,FALSE,Royal Society of Chemistry (RSC),RSC Advances,2046-2069,NA,2046-2069,NA,http://creativecommons.org/licenses/by-nc/3.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,945.1433692800001,10.3390/soilsystems4010017,FALSE,MDPI,Soil Systems,2571-8789,NA,2571-8789,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,959.7239999999999,10.3390/land9050144,FALSE,MDPI,Land,2073-445X,NA,2073-445X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,962.70525,10.3389/ffgc.2020.00034,FALSE,Frontiers,Frontiers in Forests and Global Change,2624-893X,NA,2624-893X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+slu,2020,976.6575,10.1128/mra.00747-20,FALSE,American Society for Microbiology,Microbiology Resource Announcements,2576-098X,NA,2576-098X,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32972933,PMC7516144,NA,NA,FALSE
 su,2012,2630,10.1080/08920753.2012.727738,TRUE,Taylor & Francis,Coastal Management,0892-0753,0892-0753,1521-0421,0892-0753,NA,TRUE,NA,NA,ut:000310594700004,NA,FALSE
 su,2013,2132,10.1080/17449626.2013.773180,TRUE,Taylor & Francis,Journal of Global Ethics,1744-9626,1744-9626,1744-9634,1744-9626,NA,TRUE,NA,NA,NA,NA,FALSE
 su,2013,2429,10.1080/16506073.2013.809141,TRUE,Taylor & Francis,Cognitive Behaviour Therapy,1650-6073,1650-6073,1651-2316,1650-6073,NA,TRUE,23898817,PMC3869050,ut:000328243900004,NA,FALSE
