@@ -1,0 +1,12 @@
+ERROR: Line 121: Crossref: Error while trying to resolve DOI 10.1080/16000889.2020.1776080a: HTTPError: 404 - Not Found
+-> corrected: 10.1080/16000889.2020.1776080
+ERROR: Line 134: Crossref: Error while trying to resolve DOI 10.1088/1361-6455/ab84c6/meta: HTTPError: 404 - Not Found
+-> corrected to 10.1088/1361-6455/ab84c6
+ERROR: Line 145: Crossref: Error while trying to resolve DOI 10.1515/pac-2019-100: HTTPError: 404 - Not Found
+-> missing trailing number?
+ERROR: Line 175: Crossref: Error while trying to resolve DOI 10.5194/acp-20-12409-202: HTTPError: 404 - Not Found
+-> corrected to 10.5194/acp-20-12409-2020
+ERROR: Line 221: Crossref: Error while trying to resolve DOI 10.13039/501100001711: HTTPError: 404 - Not Found
+-> funder DOI, not article DOI
+ERROR: Line 224: Crossref: Error while trying to resolve DOI 10.1088/1361-6455/aba204b: HTTPError: 404 - Not Found
+-> corrected to 10.1088/1361-6455/aba204

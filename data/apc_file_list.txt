@@ -86,8 +86,10 @@
 # mah/apc_mah_2018_dois.tsv
 # mah/apc_mah_2018komp_dois.tsv
 # mah/apc_mah_2019_dois.tsv
-mah/apc_mah_2020_dois.tsv
 # mah/apc_mah_2019_non_dois.tsv
+# mah/apc_mah_2020_dois.tsv
+# mah/apc_mah_2020_rest_dois.tsv
+# mah/apc_mah_2020_rest_non_dois.tsv
 # mdh/apc_mdh_2019_dois.tsv
 # mdh/apc_mdh_2020_dois.tsv
 # mdh/apc_mdh_2019_non_dois.tsv
@@ -100,6 +102,8 @@ mah/apc_mah_2020_dois.tsv
 # oru/apc_oru_2019_dois.tsv
 # oru/apc_oru_2019_rest_dois.tsv
 # oru/apc_oru_2020_dois.tsv
+# oru/apc_oru_2020_rest_dois.tsv
+# oru/apc_oru_2020_rest_non_dois.tsv
 # sh/apc_sh_2018_dois.tsv
 # sh/apc_sh_2019_dois.tsv
 # slu/apc_slu_2014-2016.tsv
@@ -115,6 +119,7 @@ mah/apc_mah_2020_dois.tsv
 # su/apc_su_2018_dois.tsv
 # su/apc_su_2019_dois.tsv
 # su/apc_su_2019_degruyter_dois.tsv
+# su/apc_su_2020_dois.tsv
 # uu/apc_uu_2017_dois.tsv
 # uu/apc_uu_2018_dois.tsv
 # uu/apc_uu_2019_dois.tsv
