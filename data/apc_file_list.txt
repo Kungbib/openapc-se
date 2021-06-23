@@ -120,6 +120,7 @@
 # su/apc_su_2019_dois.tsv
 # su/apc_su_2019_degruyter_dois.tsv
 # su/apc_su_2020_dois.tsv
+su/apc_su_2020_rest_dois.tsv
 # uu/apc_uu_2017_dois.tsv
 # uu/apc_uu_2018_dois.tsv
 # uu/apc_uu_2019_dois.tsv
