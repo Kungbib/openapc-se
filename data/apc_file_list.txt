@@ -7,9 +7,11 @@
 # du/apc_du_2017_2018_dois.tsv
 # du/apc_du_2018_non_dois.tsv
 # du/apc_du_2019_dois.tsv
+# du/apc_du_2020_dois.tsv
 # gih/apc_gih_2018_dois.tsv
 # gih/apc_gih_2018_non_dois.tsv
 # gih/apc_gih_2019_dois.tsv
+# gih/apc_gih_2020_dois.tsv
 # gu/apc_gu_2016.tsv
 # gu/apc_gu_2014-2017.tsv
 # gu/apc_gu_2016-2017.tsv
@@ -23,6 +25,7 @@
 # hb/apc_hb_2019_non_dois.tsv
 # hb/apc_hb_2019_corr_dois.tsv
 # hb/apc_hb_2018_non_dois.tsv
+# hb/apc_hb_2020_dois.tsv
 # hhs/apc_hhs_2019_dois.tsv
 # hig/apc_hig_2019_dois.tsv
 # hig/apc_hig_2020_dois.tsv
@@ -120,7 +123,7 @@
 # su/apc_su_2019_dois.tsv
 # su/apc_su_2019_degruyter_dois.tsv
 # su/apc_su_2020_dois.tsv
-su/apc_su_2020_rest_dois.tsv
+# su/apc_su_2020_rest_dois.tsv
 # uu/apc_uu_2017_dois.tsv
 # uu/apc_uu_2018_dois.tsv
 # uu/apc_uu_2019_dois.tsv

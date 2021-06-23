@@ -2,13 +2,13 @@ library(tidyverse)
 library(readxl)
 
 # what organisation, short name? ex kth
-organisation <- 'su'
+organisation <- 'ki'
 
 # data collected from which timeperiod? ex 2010-2019
-timeperiod_data <- '2020'
+timeperiod_data <- '2021'
 
 # what's the name of the file to be converted?
-indata_file <- 'data/su/original_data/apc_su_2020.xlsx'
+indata_file <- 'data/ki/original_data/APC data till KB Q1 2021.xlsx'
 
 
 outdata_file_dois <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperiod_data,'_dois.tsv')
@@ -19,7 +19,10 @@ converter <- read_xlsx(indata_file)
 # converter <- read_tsv(indata_file)
 
 converter <- converter %>%
-    mutate(euro = 0.0954*sek) %>% #valutakurs hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/?y=2020&m=12&s=Comma&f=y
+    # standard:
+    mutate(euro = 0.0954*sek) %>% #valutakurs 2020 hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/?y=2020&m=12&s=Comma&f=y
+    # KI (ett år före, kvartalsvisa medelvärden):
+    # mutate(euro = 0.0989*sek) %>% #valutakurs 2021 q1 hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/?y=2020&m=12&s=Comma&f=y
     select(-sek) %>%
     select(institution, period, euro, doi, is_hybrid, publisher, journal_full_title, issn, issn_print, issn_electronic, url)
 
