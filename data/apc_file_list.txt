@@ -53,6 +53,7 @@
 # ki/apc_ki_2020_Q3_dois.tsv
 # ki/apc_ki_2020_Q4_dois.tsv
 # ki/apc_ki_2020_Q4_non_dois.tsv
+# ki/apc_ki_2021_Q1_dois.tsv
 # kth/apc_kth_2015.tsv
 # kth/apc_kth_2016.tsv
 # kth/apc_kth_2016_correction.tsv
