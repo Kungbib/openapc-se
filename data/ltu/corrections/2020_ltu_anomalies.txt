@@ -1,0 +1,4 @@
+ERROR: Line 72: Crossref: Error while trying to resolve DOI 10.22667/jisis.2020.08.31.047: HTTPError: 404 - Not Found
+ERROR: Line 73: Crossref: Error while trying to resolve DOI 10.22667/jowua.2020.06.30.106: HTTPError: 404 - Not Found
+ERROR: Line 74: Crossref: Error while trying to resolve DOI 10.22667/jowua.2020.09.30.029: HTTPError: 404 - Not Found
+ERROR: Line 207: Crossref: Error while trying to resolve DOI 10.1007/978-3-030-57764-3_2: Unsupported DOI type 'book_content' (OpenAPC only supports journal articles)
