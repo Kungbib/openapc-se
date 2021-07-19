@@ -2,13 +2,13 @@ library(tidyverse)
 library(readxl)
 
 # what organisation, short name? ex kth
-organisation <- 'ltu'
+organisation <- 'gu'
 
 # data collected from which timeperiod? ex 2010-2019
 timeperiod_data <- '2020'
 
 # what's the name of the file to be converted?
-indata_file <- 'data/ltu/original_data/LtuOpen APCdata_202001_202012_KB.xlsx'
+indata_file <- 'data/gu/original_data/GU Open APC Sweden 2020.xlsx'
 
 
 outdata_file_dois <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperiod_data,'_dois.tsv')
@@ -20,7 +20,7 @@ converter <- read_xlsx(indata_file)
 
 converter <- converter %>%
     # standard:
-    mutate(euro = 0.0954*sek) %>% #valutakurs 2020 hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/?y=2020&m=12&s=Comma&f=y
+    mutate(euro = format(round(0.0954*sek, 2), nsmall = 2)) %>% #valutakurs 2020 hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/?y=2020&m=12&s=Comma&f=y
     # KI (ett år före, kvartalsvisa medelvärden):
     # mutate(euro = 0.0989*sek) %>% #valutakurs 2021 q1 hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/?y=2020&m=12&s=Comma&f=y
     select(-sek) %>%
