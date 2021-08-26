@@ -1,0 +1,3 @@
+book
+lnu	2020	340239		FALSE	Routledge					https://www.taylorfrancis.com/books/oa-edit/10.4324/9781003174288/intermedial-studies-j%C3%B8rgen-bruhn-beate-schirrmacher
+-> to separate file

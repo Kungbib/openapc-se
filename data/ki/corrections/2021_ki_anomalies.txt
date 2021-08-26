@@ -1,3 +1,8 @@
 Q1
 ERROR: Line 71: Crossref: Error while trying to resolve DOI 10.3389%2Ffneur.2021.652590: Parse Error: '10.3389%2Ffneur.2021.652590' is no valid DOI
 -> corrected to 10.3389/fneur.2021.652590
+
+Q2
+ERROR: Line 59: Crossref: Error while trying to resolve DOI 10.2340/20030711-1000064: HTTPError: 404 - Not Found
+other arts in this journal has correct DOIs, and this article has this DOI: https://www.medicaljournals.se/jrm/content/abstract/10.2340/20030711-1000064 Could it be due to publication type? Reported to doi.org/crossref
+-> entered as a non-DOI article

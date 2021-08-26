@@ -20,7 +20,7 @@
 # gu/apc_gu_2018_dois.tsv
 # gu/apc_gu_2019_dois.tsv
 # gu/apc_gu_2019_corr_dois.tsv
-gu/apc_gu_2020_dois.tsv
+# gu/apc_gu_2020_dois.tsv
 # hb/apc_hb_2018_dois.tsv
 # hb/apc_hb_2019_dois.tsv
 # hb/apc_hb_2019_non_dois.tsv
@@ -56,6 +56,8 @@ gu/apc_gu_2020_dois.tsv
 # ki/apc_ki_2020_Q4_non_dois.tsv
 # ki/apc_ki_2021_Q1_dois.tsv
 # ki/apc_ki_2021_Q1_dois_rest.tsv
+# ki/apc_ki_2021_Q2_dois.tsv
+ki/apc_ki_2021_Q2_non_dois.tsv
 # kth/apc_kth_2015.tsv
 # kth/apc_kth_2016.tsv
 # kth/apc_kth_2016_correction.tsv
