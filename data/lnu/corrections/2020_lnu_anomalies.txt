@@ -1,3 +1,14 @@
-book
+duplicate w diff sum
+lnu	2020	8657.91	10.3390/socsci9110201
+lnu	2020	8692.76	10.3390/socsci9110201
+-> paid twice, will probably be repaid according to lnu. Registered with first price.
+
+books
 lnu	2020	340239		FALSE	Routledge					https://www.taylorfrancis.com/books/oa-edit/10.4324/9781003174288/intermedial-studies-j%C3%B8rgen-bruhn-beate-schirrmacher
+lnu	2020	218239.4	10.1007/978-3-030-49679-1	FALSE
+ERROR: Line 70: Crossref: Error while trying to resolve DOI 10.4324/9781315737133: Unsupported DOI type 'book_title' (OpenAPC only supports journal articles)
+ERROR: Line 71: Crossref: Error while trying to resolve DOI 10.1007/978-3-030-49683-8: Unsupported DOI type 'book_title' (OpenAPC only supports journal articles)
 -> to separate file
+
+
+10.2340/20030711-1000064
