@@ -1954,6 +1954,13 @@ hhs,2019,3216.4912,10.1108/imr-03-2018-0107,TRUE,Emerald,International Marketing
 hhs,2019,3455.1344,10.1001/jamanetworkopen.2019.19713,FALSE,American Medical Association (AMA),JAMA Network Open,2574-3805,NA,2574-3805,NA,NA,TRUE,32191328,PMC7082720,NA,NA,TRUE
 hhs,2019,3478.4512,10.1177/0007650319825876,TRUE,SAGE Publications,Business & Society,0007-6503,0007-6503,1552-4205,NA,http://journals.sagepub.com/page/policies/text-and-data-mining-license,TRUE,NA,NA,NA,NA,FALSE
 hhs,2019,711.1152,10.1177/1350508418812585,TRUE,SAGE Publications,Organization,1350-5084,1350-5084,1461-7323,NA,http://journals.sagepub.com/page/policies/text-and-data-mining-license,TRUE,NA,NA,NA,NA,FALSE
+hhs,2020,1366.51,10.1016/j.retrec.2020.100897,TRUE,Elsevier,Research in Transportation Economics,0739-8859,0739-8859,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+hhs,2020,2602.42,10.1016/j.respol.2020.104011,TRUE,Elsevier,Research Policy,0048-7333,0048-7333,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
+hhs,2020,3009.58,10.1093/jeg/lbz007,TRUE,Oxford University Press (OUP),Journal of Economic Geography,1468-2702,1468-2702,1468-2710,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,NA,NA,NA,NA,FALSE
+hhs,2020,3136.47,10.1177/0018726719897967,TRUE,SAGE Publications,Human Relations,0018-7267,0018-7267,1741-282X,NA,https://creativecommons.org/licenses/by-nc/4.0/,TRUE,NA,NA,NA,NA,FALSE
+hhs,2020,3894.7,10.1093/ej/ueaa078,TRUE,Oxford University Press (OUP),The Economic Journal,0013-0133,0013-0133,1468-0297,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
+hhs,2020,5595.21,10.1093/restud/rdaa006,TRUE,Oxford University Press (OUP),The Review of Economic Studies,0034-6527,0034-6527,1467-937X,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,NA,NA,NA,NA,FALSE
+hhs,2020,7416.4,10.1093/restud/rdaa043,TRUE,Oxford University Press (OUP),The Review of Economic Studies,0034-6527,0034-6527,1467-937X,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
 hig,2016,2200,10.1007/s00421-016-3487-7,TRUE,Springer,European Journal of Applied Physiology,1439-6319,1439-6319,1439-6327,1439-6319,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000388936600026,NA,FALSE
 hig,2016,2200,10.1007/s10639-016-9536-3,TRUE,Springer,Education and Information Technologies,1360-2357,1360-2357,1573-7608,1360-2357,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,ut:000410414300019,NA,FALSE
 hig,2016,2200,10.1007/s10826-016-0534-2,TRUE,Springer,Journal of Child and Family Studies,1062-1024,1062-1024,1573-2843,1062-1024,http://creativecommons.org/licenses/by/4.0,TRUE,28111516,PMC5219017,ut:000392057900001,NA,FALSE
@@ -6245,9 +6252,7 @@ lnu,2020,3130.95,10.1111/gbi.12297,TRUE,Wiley,Geobiology,1472-4677,1472-4677,147
 lnu,2020,3321.75,10.1136/bmjspcare-2020-002417,TRUE,BMJ,BMJ Supportive & Palliative Care,2045-435X,2045-435X,2045-4368,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,33361093,NA,NA,NA,FALSE
 lnu,2020,3370.52,10.1016/j.earscirev.2020.103119,TRUE,Elsevier,Earth-Science Reviews,0012-8252,0012-8252,NA,NA,http://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,NA,NA,NA,NA,FALSE
 lnu,2020,3675.7,10.1093/eurheartj/ehaa954,TRUE,Oxford University Press (OUP),European Heart Journal,0195-668X,0195-668X,1522-9645,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,33345270,PMC7897462,NA,NA,FALSE
-lnu,2020,4278.54,10.4324/9781315737133,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 lnu,2020,446.84,10.37763/wr.1336-4561/65.2.183194,FALSE,Pulp and Paper Research Institute,Wood Research,1336-4561,1336-4561,NA,NA,NA,TRUE,NA,NA,NA,NA,FALSE
-lnu,2020,4770,10.1007/978-3-030-49683-8,FALSE,NA,NA,NA,NA,NA,NA,NA,FALSE,NA,NA,NA,NA,NA
 lnu,2020,604.87,10.37763/wr.1336-4561/65.3.365380,FALSE,Pulp and Paper Research Institute,Wood Research,1336-4561,1336-4561,NA,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 lnu,2020,782.86,10.32604/jrm.2021.011868,FALSE,"Computers, Materials and Continua (Tech Science Press)",Journal of Renewable Materials,2164-6341,2164-6341,NA,NA,NA,TRUE,NA,NA,NA,NA,FALSE
 lnu,2020,825.96,10.3390/socsci9110201,FALSE,MDPI,Social Sciences,2076-0760,NA,2076-0760,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
@@ -8516,6 +8521,16 @@ sh,2019,3361.7709120000004,10.1016/j.agee.2019.106626,TRUE,Elsevier,"Agriculture
 sh,2019,554.809568,10.1177/1350508419828565,TRUE,SAGE Publications,Organization,1350-5084,1350-5084,1461-7323,NA,http://creativecommons.org/licenses/by-nc/4.0/,TRUE,NA,NA,NA,NA,FALSE
 sh,2019,837.3213920000001,10.3389/fmars.2019.00051,FALSE,Frontiers,Frontiers in Marine Science,2296-7745,NA,2296-7745,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
 sh,2019,885.8779199999999,10.17645/mac.v7i2.1869,FALSE,Cogitatio,Media and Communication,2183-2439,NA,2183-2439,NA,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,NA,NA,TRUE
+sh,2020,1570.39,10.3390/su12062560,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+sh,2020,1603.99,10.3390/su12125217,FALSE,MDPI,Sustainability,2071-1050,NA,2071-1050,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+sh,2020,168,10.5709/ce.1897-9254.402,FALSE,University of Economics and Human Sciences in Warsaw,Contemporary Economics,2300-8814,NA,2300-8814,NA,NA,TRUE,NA,NA,NA,NA,FALSE
+sh,2020,1894.59,10.1111/ddi.13019,FALSE,Wiley,Diversity and Distributions,1366-9516,1366-9516,1472-4642,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,TRUE
+sh,2020,200.67,10.1515/commun-2019-0122,FALSE,Walter de Gruyter,Communications,1613-4087,0341-2059,1613-4087,NA,http://creativecommons.org/licenses/by/4.0,TRUE,NA,NA,NA,NA,FALSE
+sh,2020,2257.37,10.3389/fpsyg.2020.545846,FALSE,Frontiers,Frontiers in Psychology,1664-1078,NA,1664-1078,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,33101121,PMC7554243,NA,NA,TRUE
+sh,2020,2396.34,10.1016/j.eist.2020.09.002,TRUE,Elsevier,Environmental Innovation and Societal Transitions,2210-4224,2210-4224,NA,NA,http://creativecommons.org/licenses/by/4.0/,TRUE,NA,NA,NA,NA,FALSE
+sh,2020,2857.9,10.1136/jech-2020-214487,TRUE,BMJ,Journal of Epidemiology and Community Health,0143-005X,0143-005X,1470-2738,NA,https://creativecommons.org/licenses/by/4.0/,TRUE,32699139,PMC7788481,NA,NA,FALSE
+sh,2020,3113.62,10.1177/0163443719899809,TRUE,SAGE Publications,"Media, Culture & Society",0163-4437,0163-4437,1460-3675,NA,https://creativecommons.org/licenses/by-nc/4.0/,TRUE,NA,NA,NA,NA,FALSE
+sh,2020,813.83,10.5751/es-11781-250420,FALSE,Resilience Alliance,Ecology and Society,1708-3087,1708-3087,NA,NA,NA,TRUE,NA,NA,NA,NA,TRUE
 si,2020,2231.406,10.1073/pnas.1920455117,TRUE,National Academy of Sciences,Proceedings of the National Academy of Sciences,0027-8424,0027-8424,1091-6490,NA,https://creativecommons.org/licenses/by-nc-nd/4.0/,TRUE,33148805,PMC7682573,NA,NA,FALSE
 slu,2014,1008.83,10.1371/journal.pone.0111786,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,1932-6203,http://creativecommons.org/licenses/by/4.0/,TRUE,25369054,PMC4219778,ut:000344402000100,NA,TRUE
 slu,2014,1070.25,10.1371/journal.pone.0111455,FALSE,Public Library of Science (PLoS),PLOS ONE,1932-6203,NA,1932-6203,1932-6203,http://creativecommons.org/licenses/by/4.0/,TRUE,25347069,PMC4210224,ut:000347994900077,NA,TRUE
