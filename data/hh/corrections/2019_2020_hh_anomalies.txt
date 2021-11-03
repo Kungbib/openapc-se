@@ -1,0 +1,6 @@
+mixed sek/euro, managed this time at Nat Libr Sweden.
+
+no price given:
+hh	2019		10.1504/IJEWM.2020.104367	TRUE	InderScience Publishers	International Journal of Environment and Waste Management		1478-9876	1478-9868	
+
+ERROR: Line 35: Crossref: Error while trying to resolve DOI 10.9790/9622-09110101091

@@ -27,6 +27,7 @@
 # hb/apc_hb_2019_corr_dois.tsv
 # hb/apc_hb_2018_non_dois.tsv
 # hb/apc_hb_2020_dois.tsv
+# hh/hh_2019_2020.csv
 # hhs/apc_hhs_2019_dois.tsv
 # hhs/apc_hhs_2020_dois.tsv
 # hig/apc_hig_2019_dois.tsv
@@ -93,7 +94,8 @@
 # ltu/apc_ltu_2019_non_dois.tsv
 # ltu/apc_ltu_2020_dois.tsv
 # ltu/apc_ltu_2020_non_dois.tsv
-# lu/apc_lu_2020_dois.tsv
+# lu/apc_lu_2020_rest_dois.tsv
+lu/apc_lu_2020_non_dois.tsv
 # mah/apc_mah_2015.csv
 # mah/apc_mah_2016.tsv
 # mah/apc_mah_2017_dois.tsv

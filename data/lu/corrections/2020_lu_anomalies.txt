@@ -1,2 +1,6 @@
-ERROR: Line 44: Crossref: Error while trying to resolve DOI 10.1126/sciadv.aa28645: HTTPError: 404 - Not Found
-ERROR: Line 478: Crossref: Error while trying to resolve DOI 10.23812/20-272-a: HTTPError: 404 - Not Found
+ERROR: Line 44: Crossref: Error while trying to resolve DOI 10.1126/sciadv.aa28645: HTTPError: 404 - Not Found -> korrigerad till 10.1126/sciadv.aaz8645
+ERROR: Line 478: Crossref: Error while trying to resolve DOI 10.23812/20-272-a: HTTPError: 404 - Not Found -> finns i doi.org men inte i Crossref, adderat data manuellt
+
+borttagna pga ingen DOI el länk:
+lu	2020	1355.13		TRUE	Liverpool University Press	Town Planning Review		0041-0020	1478-341X	
+lu	2020	3895.11		TRUE	Elsevier	Ecosystem Services	2212-0416			
