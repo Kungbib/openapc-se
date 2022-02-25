@@ -3,15 +3,23 @@
 
 import csv
 from collections import OrderedDict
+from html import unescape
+from http.client import RemoteDisconnected
 import json
 import locale
 import logging
 from logging.handlers import MemoryHandler
+import os
 import re
+from shutil import copyfileobj
 import sys
+from urllib.parse import quote_plus, urlencode
 from urllib.request import build_opener, urlopen, urlretrieve, HTTPErrorProcessor, Request
 from urllib.error import HTTPError, URLError
+import requests
 import xml.etree.ElementTree as ET
+
+import mappings
 
 try:
     import chardet
@@ -19,13 +27,23 @@ except ImportError:
     chardet = None
     print("WARNING: 3rd party module 'chardet' not found - character " +
           "encoding guessing will not work")
+try:
+    import Levenshtein
+except ImportError:
+    chardet = None
+    print("WARNING: 3rd party module 'Levenshtein' not found - title " +
+          "search in Crossref will not work")
+
+# Identifying User Agent header for metadata API requests
+USER_AGENT = ("OpenAPC Toolkit (https://github.com/OpenAPC/openapc-de/blob/master/python/openapc_toolkit.py;"+
+              " mailto:openapc@uni-bielefeld.de)")
 
 # regex for detecing DOIs
 DOI_RE = re.compile(r"^(((https?://)?(dx.)?doi.org/)|(doi:))?(?P<doi>10\.[0-9]+(\.[0-9]+)*\/\S+)", re.IGNORECASE)
 # regex for detecting shortDOIs
 SHORTDOI_RE = re.compile(r"^(https?://)?(dx.)?doi.org/(?P<shortdoi>[a-z0-9]+)$", re.IGNORECASE)
 
-ISSN_RE = re.compile(r"^(?P<first_part>\d{4})-?(?P<second_part>\d{3})(?P<check_digit>[\dxX])$")
+ISSN_RE = re.compile(r"^(?P<first_part>\d{4})\-(?P<second_part>\d{3})(?P<check_digit>[\dxX])$")
 
 OAI_COLLECTION_CONTENT = OrderedDict([
     ("institution", "intact:institution"),
@@ -41,6 +59,34 @@ OAI_COLLECTION_CONTENT = OrderedDict([
     ("url", None),
     ("local_id", "intact:id_number[@type='local']")
 ])
+
+MESSAGES = {
+    "num_columns": "Syntax: The number of values in this row (%s) " +
+                   "differs from the number of columns (%s). Line left " +
+                   "unchanged, the resulting CSV file will not be valid.",
+    "locale": "Error: Could not process the monetary value '%s' in " +
+              "column %s. Usually this happens due to one of two reasons:\n1) " +
+              "The value does not represent a number.\n2) The value " +
+              "represents a number, but its format differs from your " +
+              "current system locale - the most common source of error " +
+              "is the decimal mark (1234.56 vs 1234,56). Try using " +
+              "another locale with the -l option.",
+    "unify": "Normalisation: Crossref-based {} changed from '{}' to '{}' " +
+             "to maintain consistency.",
+    "digits_error": "Monetary value %s has more than 2 digits after " +
+                    "the decimal point. If this is just a formatting issue (from automated " +
+                    "conversion for example) you may call the enrichment script with the -r " +
+                    "option to round such values to 2 digits automatically.",
+    "digits_norm": "Normalisation: Monetary value %s rounded to 2 digits after " +
+                   "decimal mark (%s -> %s)",
+    "doi_norm": "Normalisation: DOI '{}' normalised to pure form ({}).",
+    "issn_hyphen_fix": "Normalisation: Added hyphen to %s value (%s -> %s)",
+    "period_format": "Normalisation: Date format in period column changed to year only (%s -> %s)",
+    "unknown_hybrid_identifier": "Unknown identifier in 'is_hybrid' column ('%s').",
+    "hybrid_normalisation": "Normalisation: is_hybrid status changed from '%s' to '%s'.",
+    "no_hybrid_identifier": "Empty value in 'is_hybrid' column.",
+    "empty_row": "Row is empty."
+}
 
 # Do not quote the values in the 'period' and 'euro' columns
 OPENAPC_STANDARD_QUOTEMASK = [
@@ -62,7 +108,70 @@ OPENAPC_STANDARD_QUOTEMASK = [
     True,
     True,
     True,
+    True
 ]
+
+COLUMN_SCHEMAS = {
+    "journal-article": [
+        "institution",
+        "period",
+        "euro",
+        "doi",
+        "is_hybrid",
+        "publisher",
+        "journal_full_title",
+        "issn",
+        "issn_print",
+        "issn_electronic",
+        "issn_l",
+        "license_ref",
+        "indexed_in_crossref",
+        "pmid",
+        "pmcid",
+        "ut",
+        "url",
+        "doaj"
+    ],
+    "journal-article_transagree": [
+        "institution",
+        "period",
+        "euro",
+        "doi",
+        "is_hybrid",
+        "publisher",
+        "journal_full_title",
+        "issn",
+        "issn_print",
+        "issn_electronic",
+        "issn_l",
+        "license_ref",
+        "indexed_in_crossref",
+        "pmid",
+        "pmcid",
+        "ut",
+        "url",
+        "doaj",
+        "agreement"
+    ],
+    "book": [
+        "institution",
+        "period",
+        "euro",
+        "doi",
+        "backlist_oa",
+        "publisher",
+        "book_title",
+        "isbn",
+        "isbn_print",
+        "isbn_electronic",
+        "license_ref",
+        "indexed_in_crossref",
+        "doab"
+    ]
+}
+
+INSTITUTIONS_FILE = "../data/institutions.csv"
+INSTITUTIONS_MAP = None
 
 class OpenAPCUnicodeWriter(object):
     """
@@ -105,10 +214,12 @@ class OpenAPCUnicodeWriter(object):
                 continue
             if not use_quotemask or not self.quotemask:
                 # Always quote without a quotemask
+                row[index] = row[index].replace('"', '""')
                 row[index] = '"' + row[index] + '"'
                 continue
             if index < len(self.quotemask):
                 if self.quotemask[index] or "," in row[index] and self.minimal_quotes:
+                    row[index] = row[index].replace('"', '""')
                     row[index] = '"' + row[index] + '"'
         return row
 
@@ -122,13 +233,13 @@ class OpenAPCUnicodeWriter(object):
         for row in rows:
             self._write_row(self._prepare_row(row, True))
 
-class DOAJOfflineAnalysis(object):
+class DOAJAnalysis(object):
 
-    def __init__(self, doaj_csv_file, download=False):
+    def __init__(self, doaj_csv_file, update=False):
         self.doaj_issn_map = {}
         self.doaj_eissn_map = {}
         
-        if download:
+        if not os.path.isfile(doaj_csv_file) or update :
             doaj_csv_file = self.download_doaj_csv(doaj_csv_file)
 
         handle = open(doaj_csv_file, "r")
@@ -150,8 +261,370 @@ class DOAJOfflineAnalysis(object):
         return None
         
     def download_doaj_csv(self, filename):
-        result = urlretrieve("https://doaj.org/csv", filename)
-        return result[0]
+        request = Request("https://doaj.org/csv")
+        request.add_header("User-Agent", USER_AGENT)
+        with urlopen(request) as source:
+            with open(filename, "wb") as dest:
+                copyfileobj(source, dest)
+        return filename
+
+class EZBSrcaping(object):
+    """
+    Contains methods to scrap journal information from the Regensburg
+    Electronic Journals Library ("Elektronische Zeitschriftenbibliothek")
+    (https://ezb.uni-regensburg.de/)
+    """
+
+    EZB_SEARCH_URL = ("https://ezb.uni-regensburg.de/searchres.phtml?" +
+                      "bibid=AAAAA&colors=7&lang=de&jq_type1=QS&jq_term1=")
+    EZB_ID_URL = ('https://ezb.uni-regensburg.de/detail.phtml?')
+
+    JOURNAL_PAGE_INDICATOR = re.compile(r'<h1\s+class="detail_heading"\s*>')
+    JOURNAL_ACCESS = re.compile(r'<h1\s+class="detail_heading"\s*>\s*<div\s+class="filter-container-mid"\s+title="(?P<access_msg>.*?)">\s*<span\s+class="filter-light\s+(?P<green>.*?)"\s*>\s*</span>\s*<span\s+class="filter-light\s+(?P<yellow>.*?)"\s*>\s*</span>\s*<span\s+class="filter-light\s+(?P<red>.*?)"\s*>')
+    JOURNAL_TITLE = re.compile(r'<dd\s+id="title"\s+class="defListContentDefinition"\s*>\s*(?P<title>.*?)\s*</dd\s*>')
+    JOURNAL_REMARKS = re.compile(r'<dt\s+class="defListContentTitle"\s*>\s*Bemerkung:\s*</dt\s*>\s*<dd\s+class="defListContentDefinition"\s*>\s*(?P<remarks>.*?)\s*</dd\s*>')
+
+    RESULT_LINKS = re.compile(r'<a\s+href="warpto.phtml\?(?P<url_params>.*?)"\s+title="Direktlink zur Zeitschrift"\s*>')
+
+    def _get_journal_details(self, content):
+        res = {
+            "errors": [],
+            "access_msg" : None,
+            "access_color": None,
+            "title": None,
+            "remarks": None
+        }
+        access_mo = re.search(self.JOURNAL_ACCESS, content)
+        if access_mo:
+            access_dict = access_mo.groupdict()
+            res["access_msg"] = access_dict["access_msg"]
+            if access_dict["green"] == "green":
+                res["access_color"] = "green"
+            elif access_dict["yellow"] == "yellow":
+                res["access_color"] = "yellow"
+            elif access_dict["red"] == "red":
+                res["access_color"] = "red"
+        else:
+            res["errors"].append("Could not scrap journal access information (RE 'JOURNAL_ACCESS' did not find anything)")
+        title_mo = re.search(self.JOURNAL_TITLE, content)
+        if title_mo:
+            title_dict = title_mo.groupdict()
+            res["title"] = title_dict["title"]
+        else:
+            res["errors"].append("Could not scrap journal title information (RE 'JOURNAL_TITLE' did not find anything)")
+        remarks_mo = re.search(self.JOURNAL_REMARKS, content)
+        if remarks_mo:
+            remarks_dict = remarks_mo.groupdict()
+            res["remarks"] = remarks_dict["remarks"]
+        else:
+            res["errors"].append("Could not scrap journal remarks information (RE 'JOURNAL_REMARKS' did not find anything)")
+        return res
+
+    def _request_ezb_page(self, url):
+        request = Request(url)
+        request.add_header("User-Agent", USER_AGENT)
+        ret_value = {'success': True}
+        try:
+            ret = urlopen(request)
+            content_bytes = ret.read()
+            content = content_bytes.decode("latin-1")
+            ret_value["content"] = content
+        except HTTPError as httpe:
+            ret_value['success'] = False
+            ret_value['error_msg'] = "HTTPError: {} - {}".format(httpe.code, httpe.reason)
+        except URLError as urle:
+            ret_value['success'] = False
+            ret_value['error_msg'] = "URLError: {}".format(urle.reason)
+        return ret_value
+
+    def get_ezb_info(self, issn):
+        ret_value = {"success": True, "data": []}
+        url = self.EZB_SEARCH_URL + issn
+        answer = self._request_ezb_page(url)
+        if not answer['success']:
+            return answer
+        # When querying the EZB, it may either lead us directly to a journal detail
+        # page or to a results page if there's more than one search result
+        content = answer["content"]
+        if re.search(self.JOURNAL_PAGE_INDICATOR, content):
+            ret_value["data"].append(self._get_journal_details(content))
+        else:
+            link_params = re.findall(self.RESULT_LINKS, content)
+            for params in link_params:
+                url = self.EZB_ID_URL + unescape(params)
+                answer = self._request_ezb_page(url)
+                if answer['success']:
+                    ret_value["data"].append(self._get_journal_details(answer["content"]))
+        if not ret_value["data"]:
+            ret_value["success"] = False
+        return ret_value
+
+class DOABAnalysis(object):
+
+    # Priority mappings from DOAB fields to OpenAPC values. Unfortuately, the current DOAB CSV file is a real mess...
+    MAPPINGS = {
+        "book_title": ["dc.title", "dc.subject.other"],
+        "publisher": ["oapen.relation.isPublishedBy_publisher.name", "oapen.relation.isPublishedBy", "oapen.relation.isPartOfBook_dc.title", "oapen.imprint"],
+        "license_ref": ["BITSTREAM License"]
+    }
+    ISBN_FIELDS = ["oapen.relation.isPublishedBy_publisher.name",
+                   "oapen.relation.isPublisherOf",
+                   "oapen.relation.isbn"]
+
+    DOAB_ISBN_RE = re.compile(r"97[89]\d{10}")
+
+    def __init__(self, isbn_handling, doab_csv_file, update=False, verbose=False):
+        self.isbn_map = {}
+        self.isbn_handling = isbn_handling
+
+        if not os.path.isfile(doab_csv_file) or update:
+            self.download_doab_csv(doab_csv_file)
+
+        lines = []
+        # The file might contain NUL bytes, we need to get rid of them before
+        # handing the lines to a DictReader
+        with open(doab_csv_file, "r") as handle:
+            for line in handle:
+                if "\x00" in line:
+                    continue
+                lines.append(line)
+        duplicate_isbns = []
+        reader = csv.DictReader(lines)
+        for line in reader:
+            # ATM we focus on books only
+            if line["dc.type"] != "book" and line["dc.title.alternative"] != "book":
+                continue
+            isbn_string = " ".join([line[field] for field in self.ISBN_FIELDS])
+            # may contain multi-values split by a whitespace, semicolon or double vbar...
+            isbn_string = isbn_string.replace(";", " ")
+            isbn_string = isbn_string.replace("||", " ")
+            isbn_string = isbn_string.strip()
+            if len(isbn_string) == 0:
+                continue
+            while "  " in isbn_string:
+               isbn_string = isbn_string.replace("  ", " ")
+            isbns = isbn_string.split(" ")
+            # ...which may also contain duplicates
+            for isbn in list(set(isbns)):
+                result = self.isbn_handling.test_and_normalize_isbn(isbn)
+                if not result["valid"]:
+                    if verbose:
+                        msg = "Line {}: ISBN normalization failure ({}): {}"
+                        msg = msg.format(reader.line_num, result["input_value"],
+                                         ISBNHandling.ISBN_ERRORS[result["error_type"]])
+                        print_r(msg)
+                    continue
+                else:
+                    isbn = result["normalised"]
+                if isbn not in self.isbn_map:
+                    new_line = self._extract_line_data(line)
+                    if verbose:
+                        for field in ["publisher", "book_title"]:
+                            if not has_value(new_line[field]):
+                                msg = "Line {}: No '{}' value found for ISBN {}" 
+                                print_r(msg.format(reader.line_num, field, isbn))
+                    self.isbn_map[isbn] = new_line
+                else:
+                    if isbn not in duplicate_isbns:
+                        duplicate_isbns.append(isbn)
+                        if verbose:
+                            print_y("ISBN duplicate found in DOAB: " + isbn)
+        for duplicate in duplicate_isbns:
+            # drop duplicates alltogether
+            del(self.isbn_map[duplicate])
+        if verbose:
+            print_b("ISBN map created, contains " + str(len(self.isbn_map)) + " entries")
+
+    def _extract_line_data(self, line):
+        new_line = {key: "" for key in self.MAPPINGS.keys()}
+        for key, prio_list in self.MAPPINGS.items():
+            for field in prio_list:
+                if has_value(line[field]) and not self.DOAB_ISBN_RE.search(line[field]):
+                    new_line[key] = line[field]
+                    break
+        return new_line
+
+    def lookup(self, isbn):
+        result = self.isbn_handling.test_and_normalize_isbn(isbn)
+        if result["valid"]:
+            norm_isbn = result["normalised"]
+            return self.isbn_map.get(norm_isbn)
+        return None
+
+    def download_doab_csv(self, target):
+        urlretrieve("https://directory.doabooks.org/download-export?format=csv", target)
+
+class ISBNHandling(object):
+
+    # regex for 13-digit, unsplit ISBNs
+    ISBN_RE = re.compile(r"^97[89]\d{10}$")
+
+    # regex for 13-digit ISBNs split with hyphens
+    ISBN_SPLIT_RE = re.compile(r"^97[89]\-\d{1,5}\-\d{1,7}\-\d{1,6}\-\d{1}$")
+
+    ISBN_ERRORS = {
+        0: "Input is neither a valid split nor a valid unsplit 13-digit ISBN",
+        1: "Too short (Must be 17 chars long including hyphens)",
+        2: "Too long (Must be 17 chars long including hyphens)",
+        3: "Input ISBN was split, but the segmentation is invalid"
+    }
+
+    def __init__(self, range_file_path, range_file_update=False):
+        if not os.path.isfile(range_file_path) or range_file_update:
+            self.download_range_file(range_file_path)
+        with open(range_file_path, "r") as range_file:
+            range_file_content = range_file.read()
+            range_file_root = ET.fromstring(range_file_content)
+            self.ean_elements = range_file_root.findall("./EAN.UCCPrefixes/EAN.UCC")
+            self.registration_groups = range_file_root.findall("./RegistrationGroups/Group")
+
+    def download_range_file(self, target):
+        urlretrieve("http://www.isbn-international.org/export_rangemessage.xml", target)
+
+    def test_and_normalize_isbn(self, isbn):
+        """
+        Take a string input and try to normalize it to a 13-digit, split ISBN.
+
+        This method takes a string which is meant to represent a split or unsplit 13-digit ISBN. It
+        applies a range of tests to verify its validity and then returns a normalized, split variant.
+
+        The following tests will be applied:
+            - Syntax (Regex)
+            - Re-split and segmentation comparison (if input was split already)
+
+        Args:
+            isbn: A string potentially representing a 13-digit ISBN (split or unsplit).
+        Returns:
+            A dict with 3 keys:
+                'valid': A boolean indicating if the input passed all tests.
+                'input_value': The original input value
+                'normalised': The normalised, split result. Will be present if 'valid' is True.
+                'error_type': An int indicating why a test failed. Will be present if 'valid'
+                              is False. Corresponds to a key in the ISBN_ERRORS dict.
+        """
+        ret = {"valid": False, "input_value": str(isbn)}
+        stripped_isbn = isbn.strip()
+        unsplit_isbn = stripped_isbn.replace("-", "")
+        split_on_input = False
+        if self.ISBN_SPLIT_RE.match(stripped_isbn):
+            if len(stripped_isbn) < 17:
+                ret["error_type"] = 1
+                return ret
+            elif len(stripped_isbn) > 17:
+                ret["error_type"] = 2
+                return ret
+            else:
+                split_on_input = True
+        if self.ISBN_RE.match(unsplit_isbn):
+            split_isbn = self.split_isbn(unsplit_isbn)["value"]
+            if split_on_input and split_isbn != stripped_isbn:
+                ret["error_type"] = 3
+                return ret
+            ret["normalised"] = split_isbn
+            ret["valid"] = True
+            return ret
+        ret["error_type"] = 0
+        return ret
+
+    def isbn_has_valid_check_digit(self, isbn):
+        """
+        Take a string representing a 13-digit ISBN (without hyphens) and test if its check digit is
+        correct.
+        """
+        if not self.ISBN_RE.match(isbn):
+            raise ValueError(str(isbn) + " is no valid 13-digit ISBN!")
+        checksum = 0
+        for index, digit in enumerate(isbn):
+            if index % 2 == 0:
+                checksum += int(digit)
+            else:
+                checksum += 3 * int(digit)
+        return checksum % 10 == 0
+
+    def _get_range_length_from_rules(self, isbn_fragment, rules_element):
+        value = int(isbn_fragment[:7])
+        range_re = re.compile(r"(?P<min>\d{7})-(?P<max>\d{7})")
+        for rule in rules_element.findall("Rule"):
+            range_text = rule.find("Range").text
+            range_match = range_re.match(range_text)
+            if int(range_match["min"]) <= value <= int(range_match["max"]):
+                length = rule.find("Length").text
+                return int(length)
+        # Shouldn't happen as the range file is meant to be comprehensive. Undefined ranges are marked
+        # with a length of 0 instead.
+        msg = ('Could not find a length definition for fragment "' + isbn_fragment + '" in the ISBN ' +
+               'range file.')
+        raise ValueError(msg)
+
+    def split_isbn(self, isbn):
+        """
+        Take an unsplit, 13-digit ISBN and insert hyphens to correctly separate its parts.
+
+        This method takes a 13-digit ISBN and returns a hyphenated variant (Example: 9782753518278 ->
+        978-2-7535-1827-8). Since the segments of an ISBN may vary in length (except for the EAN prefix
+        and the check digit), the official "RangeMessage" XML file provided by the ISBN organization is
+        needed for reference.
+
+        Args:
+            isbn: A string representing a 13-digit ISBN.
+        Returns:
+            A dict with two keys: 'success' and 'result'. If the process was successful, 'success'
+            will be True and 'result' will contain the hyphenated result string. Otherwise, 'success'
+            will be False and 'result' will contain an error message stating the reason.
+        """
+        ret_value = {
+            'success': False,
+            'value': None
+        }
+        split_isbn = ""
+        remaining_isbn = isbn
+
+        if not self.ISBN_RE.match(isbn):
+            ret_value['value'] = '"' + str(isbn) + '" is no valid 13-digit ISBN!'
+            return ret_value
+        for ean in self.ean_elements:
+            prefix = ean.find("Prefix").text
+            if remaining_isbn.startswith(prefix):
+                split_isbn += prefix
+                remaining_isbn = remaining_isbn[len(prefix):]
+                rules = ean.find("Rules")
+                length = self._get_range_length_from_rules(remaining_isbn, rules)
+                if length == 0:
+                    msg = ('Invalid ISBN: Remaining fragment "{}" for EAN prefix "{}" is inside a ' +
+                           'range which is not marked for use yet')
+                    ret_value['value'] = msg.format(remaining_isbn, prefix)
+                    return ret_value
+                group = remaining_isbn[:length]
+                split_isbn += "-" + group
+                remaining_isbn = remaining_isbn[length:]
+                break
+        else:
+            msg = 'ISBN "{}" does not seem to have a valid prefix.'
+            ret_value['value'] = msg.format(isbn)
+            return ret_value
+        for group in self.registration_groups:
+            prefix = group.find("Prefix").text
+            if split_isbn == prefix:
+                rules = group.find("Rules")
+                length = self._get_range_length_from_rules(remaining_isbn, rules)
+                if length == 0:
+                    msg = ('Invalid ISBN: Remaining fragment "{}" for registration group "{}" is ' +
+                           'inside a range which is not marked for use yet')
+                    ret_value['value'] = msg.format(remaining_isbn, split_isbn)
+                    return ret_value
+                registrant = remaining_isbn[:length]
+                split_isbn += "-" + registrant
+                remaining_isbn = remaining_isbn[length:]
+                check_digit = remaining_isbn[-1:]
+                publication_number = remaining_isbn[:-1]
+                split_isbn += "-" + publication_number + "-" + check_digit
+                ret_value['success'] = True
+                ret_value['value'] = split_isbn
+                return ret_value
+        else:
+            msg = 'ISBN "{}" does not seem to have a valid registration group element.'
+            ret_value['value'] = msg.format(isbn)
+            return ret_value
 
 class CSVAnalysisResult(object):
 
@@ -244,6 +717,26 @@ class NoRedirection(HTTPErrorProcessor):
         return response
 
     https_response = http_response
+
+class UnsupportedDoiTypeError(ValueError):
+    """
+    An exception indicating an unsupported DOI type while looking up Crossref metadata
+
+    Its main purpose is to store already obtained Crossref data (type + title)
+    for later error handling, avoiding double lookups
+    """
+    def __init__(self, doi_type, doi_types, crossref_title):
+        self.doi_type = doi_type
+        self.crossref_title = crossref_title
+        supported_types = []
+        for valid_doi_type, content in doi_types.items():
+            doi_type_str = valid_doi_type
+            if content['aliases']:
+                doi_type_str += ' (alias: ' + ", ".join(content['aliases']) + ')'
+            supported_types.append(doi_type_str)
+        msg = ('Unsupported DOI type "{}" (OpenAPC only supports the following types: {})')
+        msg = msg.format(doi_type, ", ".join(supported_types))
+        super().__init__(msg)
 
 def get_normalised_DOI(doi_string):
     doi_string = doi_string.strip()
@@ -345,14 +838,7 @@ def analyze_csv_file(file_path, test_lines=1000, enc=None):
             error = ('A UnicodeError occured while trying to read the csv ' +
                      'file ("{}") - it seems the encoding we used ({}) is ' +
                      'not correct.')
-            advice = ""
-            if chardet:
-                if enc is not None:
-                    advice = (" You could try to omit the encoding and let the chardet module " +
-                              "have a guess.")
-                elif guessed_enc is not None:
-                    advice = " It was auto-detected by chardet, try to specify it manually."
-            error_msg = error.format(str(ue), used_encoding) + advice
+            error_msg = error.format(str(ue), used_encoding)
             return {"success": False, "error_msg": error_msg}
 
     sniffer = csv.Sniffer()
@@ -366,22 +852,20 @@ def analyze_csv_file(file_path, test_lines=1000, enc=None):
     result = CSVAnalysisResult(blanks, dialect, has_header, guessed_enc, guessed_enc_confidence)
     return {"success": True, "data": result}
 
-def get_csv_file_content(file_name, enc=None, force_header=False):
+def get_csv_file_content(file_name, enc=None, force_header=False, print_results=True):
     result = analyze_csv_file(file_name, enc=enc)
     if result["success"]:
         csv_analysis = result["data"]
-        print(csv_analysis)
+        if print_results:
+            print(csv_analysis)
     else:
-        print_r(result["error_msg"])
-        sys.exit()
+        raise IOError(result["error_msg"])
 
     if enc is None:
         enc = csv_analysis.enc
 
     if enc is None:
-        print("Error: No encoding given for CSV file and automated detection failed. Please set " +
-              "the encoding manually via the --enc argument")
-        sys.exit()
+        raise IOError("No encoding given for CSV file and automated detection failed.")
 
     dialect = csv_analysis.dialect
 
@@ -400,11 +884,13 @@ def get_csv_file_content(file_name, enc=None, force_header=False):
 def has_value(field):
     return len(field) > 0 and field != "NA"
 
-def oai_harvest(basic_url, metadata_prefix=None, oai_set=None, processing=None):
+def oai_harvest(basic_url, metadata_prefix=None, oai_set=None, processing=None, out_file_suffix=None):
     """
     Harvest OpenAPC records via OAI-PMH
     """
-    collection_xpath = ".//oai_2_0:record//oai_2_0:metadata//intact:collection"
+    collection_xpath = ".//oai_2_0:metadata//intact:collection"
+    record_xpath = ".//oai_2_0:record"
+    identifier_xpath = ".//oai_2_0:header//oai_2_0:identifier"
     token_xpath = ".//oai_2_0:resumptionToken"
     processing_regex = re.compile(r"'(?P<target>\w*?)':'(?P<generator>.*?)'")
     variable_regex = re.compile(r"%(\w*?)%")
@@ -428,18 +914,28 @@ def oai_harvest(basic_url, metadata_prefix=None, oai_set=None, processing=None):
         else:
             print_r("Error: Unable to parse processing instruction!")
             processing = None
+    print_b("Harvesting from " + url)
     articles = []
+    file_output = ""
     while url is not None:
         try:
             request = Request(url)
             url = None
             response = urlopen(request)
             content_string = response.read()
+            if out_file_suffix:
+                file_output += content_string.decode()
             root = ET.fromstring(content_string)
-            collections = root.findall(collection_xpath, namespaces)
+            records = root.findall(record_xpath, namespaces)
             counter = 0
-            for collection in collections:
+            for record in records:
                 article = {}
+                identifier = record.find(identifier_xpath, namespaces)
+                article["identifier"] = identifier.text
+                collection = record.find(collection_xpath, namespaces)
+                if collection is None:
+                    # Might happen with deleted records
+                    continue
                 for elem, xpath in OAI_COLLECTION_CONTENT.items():
                     article[elem] = "NA"
                     if xpath is not None:
@@ -471,26 +967,197 @@ def oai_harvest(basic_url, metadata_prefix=None, oai_set=None, processing=None):
             print("HTTPError: {} - {}".format(code, httpe.reason))
         except URLError as urle:
             print("URLError: {}".format(urle.reason))
+    if out_file_suffix:
+        with open("raw_harvest_data_" + out_file_suffix, "w") as out:
+            out.write(file_output)
     return articles
+
+def find_book_dois_in_crossref(isbn_list):
+    """
+    Take a list of ISBNs and try to obtain book/monograph DOIs from crossref.
+
+    Args:
+        isbn_list: A list of strings representing ISBNs (will not be tested for validity).
+    Returns:
+        A dict with a key 'success'. If the lookup was successful,
+        'success' will be True and the dict will have a second entry 'dois'
+        which contains a list of obtained DOIs as strings. The list may be empty if the lookup
+        returned an empty result.
+        If an error occured during lookup, 'success' will be False and the dict will
+        contain a second entry 'error_msg' with a string value
+        stating the reason.
+    """
+    ret_value = {
+        "success": False,
+        "dois": []
+    }
+    if type(isbn_list) != type([]) or len(isbn_list) == 0:
+        ret_value['error_msg'] = "Parameter must be a non-empty list!"
+        return ret_value
+    filter_list = ["isbn:" + isbn.strip() for isbn in isbn_list]
+    filters = ",".join(filter_list)
+    api_url = "https://api.crossref.org/works?filter="
+    url = api_url + filters + "&rows=500"
+    request = Request(url)
+    request.add_header("User-Agent", USER_AGENT)
+    try:
+        ret = urlopen(request)
+        content = ret.read()
+        data = json.loads(content)
+        if data["message"]["total-results"] == 0:
+            ret_value["success"] = True
+        else:
+            for item in data["message"]["items"]:
+                if item["type"] in ["monograph", "book"] and item["DOI"] not in ret_value["dois"]:
+                    ret_value["dois"].append(item["DOI"])
+            if len(ret_value["dois"]) == 0:
+                msg = "No monograph/book DOI type found in  Crossref ISBN search result ({})!"
+                raise ValueError(msg.format(url))
+            else:
+                ret_value["success"] = True
+    except HTTPError as httpe:
+        ret_value['error_msg'] = "HTTPError: {} - {}".format(httpe.code, httpe.reason)
+    except URLError as urle:
+        ret_value['error_msg'] = "URLError: {}".format(urle.reason)
+    except ValueError as ve:
+        ret_value['error_msg'] = str(ve)
+    return ret_value
+
+def title_lookup(lookup_title, acccepted_doi_types):
+    api_url = "https://api.crossref.org/works?"
+    empty_result = {
+        "found_title": "",
+        "similarity": 0,
+        "doi": ""
+    }
+    params = {"rows": "100", "query.bibliographic": lookup_title}
+    url = api_url + urlencode(params, quote_via=quote_plus)
+    request = Request(url)
+    request.add_header("User-Agent", USER_AGENT)
+    skipped_stats = {}
+    try:
+        ret = urlopen(request)
+        content = ret.read()
+        data = json.loads(content)
+        items = data["message"]["items"]
+        most_similar = empty_result
+        for item in items:
+            if "title" not in item:
+                continue
+            if "type" not in item:
+                continue
+            if item["type"] not in acccepted_doi_types:
+                if item["type"] not in skipped_stats:
+                    skipped_stats[item["type"]] = 1
+                else:
+                    skipped_stats[item["type"]] += 1
+                continue
+            title = item["title"].pop()
+            result = {
+                "found_title": title,
+                "similarity": Levenshtein.ratio(title.lower(), params["query.bibliographic"].lower()),
+                "doi": item["DOI"]
+            }
+            if most_similar["similarity"] < result["similarity"]:
+                most_similar = result
+            # Also try a title: subtitle combination, can be helpful for books
+            if "subtitle" in item:
+                full_title = title + ": " + item["subtitle"].pop()
+                result = {
+                    "found_title": full_title,
+                    "similarity": Levenshtein.ratio(full_title.lower(), params["query.bibliographic"].lower()),
+                    "doi": item["DOI"]
+                }
+                if most_similar["similarity"] < result["similarity"]:
+                    most_similar = result
+    except HTTPError as httpe:
+        error_msg = "An HTTPError occured during title lookup: {} - {}".format(httpe.code, httpe.reason)
+        print_r(error_msg)
+        return None
+    if skipped_stats:
+        msg = "Some search results were ignored due to non-accepted DOI types: "
+        for name, count in skipped_stats.items():
+            msg += "'" + str(name) + "': " + str(count) + ", "
+        print_y(msg[:-2])
+    if most_similar["doi"]:
+        similarity = most_similar["similarity"]
+        msg = "{} match for a final version found in Crossref (similarity: {}):"
+        if similarity == 1.0:
+            print_c(msg.format("Perfect", most_similar["similarity"]))
+        elif similarity >= 0.9:
+            print_g(msg.format("Good", most_similar["similarity"]))
+        elif similarity >= 0.8:
+            print_y(msg.format("Possible", most_similar["similarity"]))
+        else:
+            print_r(msg.format("No good", most_similar["similarity"]))
+        msg_old = "    '{}' [title for existing DOI]"
+        print(msg_old.format(lookup_title))
+        msg_new = "    '{}' [title for discovered doi {}]"
+        print(msg_new.format(most_similar["found_title"], most_similar["doi"]))
+        answer = input("Do you want to accept the new DOI? (y/n)")
+        while answer not in ["y", "n"]:
+            answer = input("Please type 'y' or 'n':")
+        if answer == "y":
+            return most_similar["doi"]
+    else:
+        print_r("Could not obtain a result with an accepted DOI type.")
+        return None
+
+
+def _extract_crossref_license(crossref_data):
+    """
+    Helper function to extract license information from a crossref JSON object
+    """
+    ret = None
+    if 'message' in crossref_data:
+        if 'license' in crossref_data['message']:
+            for lic in crossref_data['message']['license']:
+                 # Use the first license found unless there's a 'vor' version
+                if ret is None:
+                    ret = lic['URL']
+                elif 'content-version' in lic and lic['content-version'] == 'vor':
+                    ret = lic['URL']
+    return ret
+
+def _extract_crossref_isxn(crossref_data, identifier_type, representation_type):
+    """
+    Helper function to extract electronic/print ISSNs and ISBNS from a crossref JSON object
+    """
+    valid_identifier_types = ['issn', 'isbn']
+    valid_representation_types = ['print', 'electronic']
+    if identifier_type not in valid_identifier_types:
+        raise ValueError('identifier_type must be one of ' + str(valid_identifier_types))
+    if representation_type not in valid_representation_types:
+        raise ValueError('identifier_type must be one of ' + str(valid_representation_types))
+    ret = None
+    id_type_key = identifier_type + '-type'
+    if 'message' in crossref_data:
+        if id_type_key in crossref_data['message']:
+            for identifier in crossref_data['message'][id_type_key]:
+                if identifier['type'] == representation_type:
+                    ret = identifier['value']
+                    break
+    return ret
 
 def get_metadata_from_crossref(doi_string):
     """
     Take a DOI and extract metadata relevant to OpenAPC from crossref.
 
     This method looks up a DOI in crossref and returns all metadata fields
-    relevant to OpenAPC (publisher, journal_full_title, issn, issn_print,
-    issn_electronic, license_ref) and the crossref prefix.
+    relevant to OpenAPC. The set of metadata returned depends on the crossref
+    DOI type.
 
     Args:
-        doi_string: A string representing a doi. 'Pure' form (10.xxx),
+        doi_string: A string representing a DOI. 'Pure' form (10.xxx),
         DOI Handbook notation (doi:10.xxx) or crossref-style
         (https://doi.org/10.xxx) are all acceptable.
     Returns:
         A dict with a key 'success'. If data extraction was successful,
         'success' will be True and the dict will have a second entry 'data'
-        which contains the extracted metadata as another dict:
+        which contains the extracted metadata plus the doi type as another dict:
 
-        {'publisher': 'MDPI AG',
+        {'doi_type': 'journal-article',
+         'publisher': 'MDPI AG',
          'journal_full_title': 'Chemosensors',
          [...]
         }
@@ -498,73 +1165,139 @@ def get_metadata_from_crossref(doi_string):
         be retreived will have a None value.
 
         If data extraction failed, 'success' will be False and the dict will
-        contain a second entry 'error_msg' with a string value
-        stating the reason.
+        contain both an entry 'error_msg' with a string value
+        stating the reason and an entry 'exception' holding the exception object.
     """
-    xpaths = {
-        ".//cr_qr:crm-item[@name='publisher-name']": "publisher",
-        ".//cr_qr:crm-item[@name='prefix-name']": "prefix",
-        ".//cr_1_0:journal_metadata//cr_1_0:full_title": "journal_full_title",
-        ".//cr_1_1:journal_metadata//cr_1_1:full_title": "journal_full_title",
-        ".//cr_1_0:journal_metadata//cr_1_0:issn": "issn",
-        ".//cr_1_1:journal_metadata//cr_1_1:issn": "issn",
-        ".//cr_1_0:journal_metadata//cr_1_0:issn[@media_type='print']": "issn_print",
-        ".//cr_1_1:journal_metadata//cr_1_1:issn[@media_type='print']": "issn_print",
-        ".//cr_1_0:journal_metadata//cr_1_0:issn[@media_type='electronic']": "issn_electronic",
-        ".//cr_1_1:journal_metadata//cr_1_1:issn[@media_type='electronic']": "issn_electronic",
-        ".//ai:license_ref": "license_ref"
-    }
-    namespaces = {
-        "cr_qr": "http://www.crossref.org/qrschema/3.0",
-        "cr_1_1": "http://www.crossref.org/xschema/1.1",
-        "cr_1_0": "http://www.crossref.org/xschema/1.0",
-        "ai": "http://www.crossref.org/AccessIndicators.xsd"
+    doi_types = {
+        'journal-article': {
+            'aliases': [],
+            'data_fields': {
+                'publisher': {
+                    'access': 'path',
+                    'path_elements': ['message', 'publisher']
+                },
+                'journal_full_title': {
+                     'access': 'path',
+                     'path_elements':  ['message', 'container-title', 0]
+                },
+                'issn': {
+                    'access': 'path',
+                    'path_elements':  ['message', 'ISSN', 0]
+                },
+                'license_ref': {
+                    'access': 'function',
+                    'func_name': '_extract_crossref_license',
+                    'additional_params': []
+                },
+                'issn_print': {
+                    'access': 'function',
+                    'func_name': '_extract_crossref_isxn',
+                    'additional_params': ['issn', 'print']
+                },
+                'issn_electronic': {
+                    'access': 'function',
+                    'func_name': '_extract_crossref_isxn',
+                    'additional_params': ['issn', 'electronic']
+                }
+            }
+        },
+        'book': {
+            'aliases': ['monograph'],
+            'data_fields': {
+                'publisher': {
+                    'access': 'path',
+                    'path_elements': ['message', 'publisher']
+                },
+                'book_title': {
+                    'access': 'path',
+                    'path_elements':  ['message', 'title', 0]
+                },
+                'isbn': {
+                    'access': 'path',
+                    'path_elements':  ['message', 'ISBN', 0]
+                },
+                'license_ref': {
+                    'access': 'function',
+                    'func_name': '_extract_crossref_license',
+                    'additional_params': []
+                },
+                'isbn_print': {
+                    'access': 'function',
+                    'func_name': '_extract_crossref_isxn',
+                    'additional_params': ['isbn', 'print']
+                },
+                'isbn_electronic': {
+                    'access': 'function',
+                    'func_name': '_extract_crossref_isxn',
+                    'additional_params': ['isbn', 'electronic']
+                }
+            }
+        }
     }
     doi = get_normalised_DOI(doi_string)
     if doi is None:
-        error_msg = "Parse Error: '{}' is no valid DOI".format(doi_string)
-        return {"success": False, "error_msg": error_msg}
-    url = 'http://data.crossref.org/' + doi
+        error_msg = 'Parse Error: "{}" is no valid DOI'.format(doi_string)
+        return {'success': False, 'error_msg': error_msg, 'exception': None}
+
+    url = 'http://api.crossref.org/works/' + doi
     req = Request(url)
-    req.add_header("Accept", "application/vnd.crossref.unixsd+xml")
+    req.add_header('User-Agent', USER_AGENT)
     ret_value = {'success': True}
     try:
         response = urlopen(req)
         content_string = response.read()
-        root = ET.fromstring(content_string)
-        doi_element = root.findall(".//cr_qr:doi", namespaces)
-        doi_type = doi_element[0].attrib['type']
-        if doi_type != "journal_article":
-            msg = ("Unsupported DOI type '" + doi_type + "' (OpenAPC only " +
-                   "supports journal articles)")
-            raise ValueError(msg)
-        crossref_data = {}
-        for path, elem in xpaths.items():
-            if elem not in crossref_data:
-                crossref_data[elem] = None
-            result = root.findall(path, namespaces)
-            if result:
-                crossref_data[elem] = result[0].text
-                if elem == 'license_ref':
-                    # If there's more than one license_ref element, prefer
-                    # the one with the attribute applies_to="vor"
-                    for xml_elem in result:
-                        if xml_elem.get("applies_to") == "vor":
-                            crossref_data[elem] = xml_elem.text
-                            break
+        data = json.loads(content_string)
+        data_doi_type = data['message']['type']
+        normalized_doi_type = None
+        for doi_type, content in doi_types.items():
+            if data_doi_type == doi_type or data_doi_type in content['aliases']:
+                normalized_doi_type = doi_type
+                break
+        if normalized_doi_type is None:
+            title = data['message']['title'][0]
+            raise UnsupportedDoiTypeError(data_doi_type, doi_types, title)
+        crossref_data = {'doi_type': normalized_doi_type}
+        data_fields = doi_types[normalized_doi_type]['data_fields']
+        for field, access_method in data_fields.items():
+            if access_method['access'] == 'path':
+                position = data
+                for element in access_method['path_elements']:
+                    try:
+                        position = position[element]
+                    except (KeyError, IndexError):
+                        crossref_data[field] = None
+                        break
+                else:
+                    crossref_data[field] = position
+            elif access_method['access'] == 'function':
+                function = globals()[access_method['func_name']]
+                params = [data] + access_method['additional_params']
+                crossref_data[field] = function(*params)
         ret_value['data'] = crossref_data
     except HTTPError as httpe:
         ret_value['success'] = False
-        ret_value['error_msg'] = "HTTPError: {} - {}".format(httpe.code, httpe.reason)
+        ret_value['error_msg'] = 'HTTPError: {} - {}'.format(httpe.code, httpe.reason)
+        ret_value['exception'] = httpe
+    except RemoteDisconnected as rd:
+        ret_value['success'] = False
+        ret_value['error_msg'] = 'Remote Disconnected: {}'.format(str(rd))
+        ret_value['exception'] = rd
+    except ConnectionResetError as cre:
+        ret_value['success'] = False
+        ret_value['error_msg'] = 'Connection Reset: {}'.format(str(cre))
+        ret_value['exception'] = cre
     except URLError as urle:
         ret_value['success'] = False
-        ret_value['error_msg'] = "URLError: {}".format(urle.reason)
+        ret_value['error_msg'] = 'URLError: {}'.format(urle.reason)
+        ret_value['exception'] = urle
     except ET.ParseError as etpe:
         ret_value['success'] = False
-        ret_value['error_msg'] = "ElementTree ParseError: {}".format(str(etpe))
-    except ValueError as ve:
+        ret_value['error_msg'] = 'ElementTree ParseError: {}'.format(str(etpe))
+        ret_value['exception'] = etpe
+    except UnsupportedDoiTypeError as udte:
         ret_value['success'] = False
-        ret_value['error_msg'] = str(ve)
+        ret_value['error_msg'] = str(udte)
+        ret_value['exception'] = udte
     return ret_value
 
 def get_metadata_from_pubmed(doi_string):
@@ -591,12 +1324,10 @@ def get_metadata_from_pubmed(doi_string):
                }
     url = "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=doi:"
     url += doi
-    req = Request(url)
     ret_value = {'success': True}
     try:
-        response = urlopen(req)
-        content_string = response.read()
-        root = ET.fromstring(content_string)
+        request = requests.get(url)
+        root = ET.fromstring(request.text)
         pubmed_data = {}
         xpaths = {
             "pmid": ".//resultList/result/pmid",
@@ -617,61 +1348,6 @@ def get_metadata_from_pubmed(doi_string):
         ret_value['error_msg'] = "URLError: {}".format(urle.reason)
     return ret_value
 
-def lookup_journal_in_doaj(issn):
-    """
-    Take an ISSN and check if the corresponding journal exists in DOAJ.
-
-    This method looks up an ISSN in the Directory of Open Access Journals
-    (DOAJ, https://doaj.org). This is a simple existence check and will not
-    return any additional metadata (except for the journal title).
-    It is also important to note that there is no additional effort to test
-    the validity of the given ISSN - if a negative result is returned, the ISSN
-    might be invalid, but it might also belong to a journal which is not
-    registered in DOAJ.
-
-    Args:
-        issn: A string representing an issn
-     Returns:
-        A dict with a key 'data_received'. If data was received from DOAJ,
-        this key will have the value True and the dict will have a second
-        entry 'data' which contains the lookup result:
-
-        {'in_doaj': True,
-         'title': 'Frontiers in Human Neuroscience',
-        }
-        or
-        {'in_doaj': False}
-
-        If data extraction failed, 'data_received' will be False and the dict
-        will contain a second entry 'error_msg' with a string value
-        stating the reason.
-    """
-    ret_value = {'data_received': True}
-    url = "https://doaj.org/api/v2/search/journals/" + issn
-    req = Request(url)
-    req.add_header("Accept", "application/json")
-    try:
-        response = urlopen(req)
-        content_string = response.read()
-        json_dict = json.loads(content_string)
-        ret_data = {}
-        if "results" in json_dict and len(json_dict["results"]) > 0:
-            ret_data["in_doaj"] = True
-            # Try to extract the journal title - useful for error correction
-            journal = json_dict["results"][0]
-            ret_data["title"] = journal["bibjson"].get("title", "")
-        else:
-            ret_data["in_doaj"] = False
-        ret_value['data'] = ret_data
-    except HTTPError as httpe:
-        ret_value['data_received'] = False
-        ret_value['error_msg'] = "HTTPError: {} - {}".format(httpe.code, httpe.reason)
-    except ValueError as ve:
-        ret_value['data_received'] = False
-        msg = "ValueError while parsing JSON: {}"
-        ret_value['error_msg'] = msg.format(ve.message)
-    return ret_value
-    
 def get_euro_exchange_rates(currency, frequency="D"):
     """
     Obtain historical euro exchange rates against a certain currency from the European Central Bank.
@@ -712,204 +1388,353 @@ def get_euro_exchange_rates(currency, frequency="D"):
         result[date] = value
     return result
 
+def _process_euro_value(euro_value, round_monetary, row_num, index, offsetting_mode):
+    if not has_value(euro_value):
+        msg = "Line %s: Empty monetary value in column %s."
+        if offsetting_mode is None:
+            logging.error(msg, row_num, index)
+        else:
+            logging.warning(msg, row_num, index)
+        return "NA"
+    try:
+        # Cast to float to ensure the decimal point is a dot (instead of a comma)
+        euro = locale.atof(euro_value)
+        if euro.is_integer():
+            euro = int(euro)
+        if re.match(r"^\d+\.\d{3}", str(euro)):
+            if round_monetary:
+                euro = round(euro, 2)
+                msg = "Line %s: " + MESSAGES["digits_norm"]
+                logging.warning(msg, row_num, euro_value, euro_value, euro)
+            else:
+                msg = "Line %s: " + MESSAGES["digits_error"]
+                logging.error(msg, row_num, euro_value)
+        if euro == 0:
+            msg = "Line %s: Euro value is 0"
+            if offsetting_mode is None:
+                logging.error(msg, row_num)
+            else:
+                logging.warning(msg, row_num)
+        return str(euro)
+    except ValueError:
+        msg = "Line %s: " + MESSAGES["locale"]
+        logging.error(msg, row_num, euro_value, index)
+        return "NA"
 
-def process_row(row, row_num, column_map, num_required_columns,
-                no_crossref_lookup=False, no_pubmed_lookup=False,
-                no_doaj_lookup=False, doaj_offline_analysis=False,
-                round_monetary=False):
+def _process_period_value(period_value, row_num):
+    if re.match(r"^\d{4}-[0-1]{1}\d(-[0-3]{1}\d)?$", period_value):
+        msg = "Line %s: " + MESSAGES["period_format"]
+        new_value = period_value[:4]
+        logging.info(msg, row_num, period_value, new_value)
+        return new_value
+    return period_value
+
+def _process_hybrid_status(hybrid_status, row_num):
+    if not has_value(hybrid_status):
+        msg = "Line %s: " + MESSAGES["no_hybrid_identifier"]
+        logging.error(msg, row_num)
+        return "NA"
+    norm_value = get_hybrid_status_from_whitelist(hybrid_status)
+    if norm_value is None:
+        msg = "Line %s: " + MESSAGES["unknown_hybrid_identifier"]
+        logging.error(msg, row_num, hybrid_status)
+        return hybrid_status
+    if norm_value != hybrid_status:
+        msg = "Line %s: " + MESSAGES["hybrid_normalisation"]
+        logging.warning(msg, row_num, hybrid_status, norm_value)
+        return norm_value
+    return hybrid_status
+
+def _process_crossref_results(current_row, row_num, key, value):
+    new_value = "NA"
+    if value is not None:
+        if key == "journal_full_title":
+            unified_value = get_unified_journal_title(value)
+            if unified_value != value:
+                msg = MESSAGES["unify"].format("journal title", value, unified_value)
+                logging.warning(msg)
+            new_value = unified_value
+        elif key == "publisher":
+            unified_value = get_unified_publisher_name(value)
+            if unified_value != value:
+                msg = MESSAGES["unify"].format("publisher name", value, unified_value)
+                logging.warning(msg)
+            new_value = unified_value
+        # Fix ISSNs without hyphen
+        elif key in ["issn", "issn_print", "issn_electronic"]:
+            new_value = value
+            if re.match(r"^\d{7}[\dxX]$", value):
+                new_value = value[:4] + "-" + value[4:]
+                msg = "Line %s: " + MESSAGES["issn_hyphen_fix"]
+                logging.warning(msg, row_num, key, value, new_value)
+        else:
+            new_value = value
+    return new_value
+
+def _isbn_lookup(current_row, row_num, additional_isbns, isbn_handling):
+    collected_isbns = []
+    for isbn_field in ["isbn", "isbn_print", "isbn_electronic"]:
+        if has_value(current_row[isbn_field]):
+            collected_isbns.append(current_row[isbn_field])
+    for isbn in additional_isbns:
+        if has_value(isbn):
+            collected_isbns.append(isbn)
+    if len(collected_isbns) == 0:
+        msg = ("Line %s: Neither a DOI nor an ISBN found, assuming default record type " +
+               "journal-article")
+        logging.warning(msg, row_num)
+        return (None, "journal-article")
+    query_isbns = []
+    for isbn in collected_isbns:
+        res = isbn_handling.test_and_normalize_isbn(isbn)
+        if not res["valid"]:
+            msg = "Invalid ISBN {}: {}".format(isbn, ISBNHandling.ISBN_ERRORS[res["error_type"]])
+            logging.warning(msg)
+        else:
+            query_isbns.append(res["input_value"])
+            if res["input_value"] != res["normalised"]:
+                query_isbns.append(res["normalised"])
+    cr_res = find_book_dois_in_crossref(query_isbns)
+    if not cr_res["success"]:
+        msg = "Line %s: Error while trying to look up ISBNs in Crossref: %s"
+        logging.error(msg, row_num, cr_res["error_msg"])
+        return (None, "book")
+    elif len(cr_res["dois"]) == 0:
+        msg = "Line %s: Performed Crossref ISBN lookup, no DOI found."
+        logging.info(msg, row_num)
+        return (None, "book")
+    elif len(cr_res["dois"]) > 1:
+        msg = "Line %s: Performed Crossref ISBN lookup, more than one DOI found (%s) -> Used first in list."
+        logging.warning(msg, row_num, str(cr_res["dois"]))
+        return (cr_res["dois"][0], None)
+    else:
+        msg = "Line %s: Performed Crossref ISBN lookup, DOI found (%s)."
+        logging.info(msg, row_num, cr_res["dois"][0])
+        return (cr_res["dois"][0], None)
+
+def _process_isbn(row_num, isbn, isbn_handling):
+    if not has_value(isbn):
+        return "NA"
+    # handle a potential white-space split
+    isbn = isbn.replace(" ", "")
+    norm_res = isbn_handling.test_and_normalize_isbn(isbn)
+    if norm_res["valid"]:
+        if norm_res["normalised"] != norm_res["input_value"]:
+            msg = "Line %s: Normalisation: ISBN value tested and split (%s -> %s)"
+            logging.info(msg, row_num, norm_res["input_value"], norm_res["normalised"])
+        return norm_res["normalised"]
+    else:
+        # in case of an invalid split: Use the correct one. In all other cases: Drop the value
+        if norm_res["error_type"] == 4:
+            unsplit_isbn = isbn.replace("-", "")
+            new_res = isbn_handling.test_and_normalize_isbn(unsplit_isbn)
+            msg = "Line %s: ISBN value had an invalid split, used the correct one (%s -> %s)"
+            logging.info(msg, row_num, isbn, new_res["normalised"])
+            return new_res["normalised"]
+        else:
+            msg = "Line %s: Invalid ISBN value (%s), set to NA (reason: %s)"
+            logging.warning(msg, row_num, norm_res["input_value"],
+                            ISBNHandling.ISBN_ERRORS[norm_res["error_type"]])
+            return "NA"
+
+def _process_institution_value(institution, row_num, orig_file_path, offsetting_mode):
+    global INSTITUTIONS_MAP
+    if offsetting_mode or not os.path.isfile(INSTITUTIONS_FILE):
+        return institution
+    if INSTITUTIONS_MAP is None:
+        with open(INSTITUTIONS_FILE, "r") as ins_file:
+            reader = csv.DictReader(ins_file)
+            INSTITUTIONS_MAP = {}
+            for line in reader:
+                path = line["openapc_data_dir"]
+                if has_value(path):
+                    INSTITUTIONS_MAP[path] = line["institution"]
+    path = os.path.dirname(orig_file_path)
+    data_path = path.split("data/").pop()
+    if data_path in INSTITUTIONS_MAP:
+        new_value = INSTITUTIONS_MAP[data_path]
+        if new_value != institution:
+            msg = "Line %s: Normalisation: Institution name replaced via mapping file ('%s' -> '%s')"
+            logging.warning(msg, row_num, institution, new_value)
+            return new_value
+    return institution
+
+def process_row(row, row_num, column_map, num_required_columns, additional_isbn_columns,
+                doab_analysis, doaj_analysis, no_crossref_lookup=False, no_pubmed_lookup=False,
+                no_doaj_lookup=False, no_title_lookup=False, round_monetary=False,
+                offsetting_mode=None, orig_file_path=None, crossref_max_retries=3):
     """
-    Enrich a single row of data and reformat it according to Open APC standards.
+    Enrich a single row of data and reformat it according to OpenAPC standards.
 
-    Take a csv row (a list) and a column mapping (a list of CSVColumn objects)
+    Take a csv row (a list) and a column mapping (a dict of CSVColumn objects)
     and return an enriched and re-arranged version which conforms to the Open
-    APC data schema.
+    APC data schema. The method will decide on which data schema to use depending
+    on the identified publication type.
 
     Args:
         row: A list of column values (as yielded by a UnicodeReader f.e.).
         row_num: The line number in the csv file, for logging purposes.
-        column_map: An OrderedDict of CSVColumn Objects, mapping the row
+        column_map: A dict of CSVColumn Objects, mapping the row
                     cells to OpenAPC data schema fields.
         num_required_columns: An int describing the required length of the row
                               list. If not matched, an error is logged and the
                               row is returned unchanged.
+        additional_isbn_columns: A list of ints designating row indexes as additional ISBN sources.
+        doab_analysis: A DOABanalysis object to perform an offline DOAB lookup
+        doaj_analysis: A DOAJAnalysis object to perform offline DOAJ lookups
         no_crossref_lookup: If true, no metadata will be imported from crossref.
         no_pubmed_lookup: If true, no_metadata will be imported from pubmed.
         no_doaj_lookup: If true, journals will not be checked for being
                         listended in the DOAJ.
-        doaj_offline_analysis: If true, a local copy will be used for the DOAJ
-                               lookup. Has no effect if no_doaj_lookup is set to
-                               true.
+        no_title_lookup: If true, titles will not be looked up in Crossref
         round_monetary: If true, monetary values with more than 2 digits behind the decimal
                         mark will be rounded. If false, these cases will be treated as errors.
-
+        offsetting_mode: If not None, the row is assumed to originate from an offsetting file
+                         and this argument's value will be added to the 'agreement' column
+        crossref_max_retries: Max number of attempts to query the crossref API if a 504 error
+                              is received.
+        orig_file_path: Path of the csv file this row originates from, can be used for
+                        automated institution name lookup.
      Returns:
         A list of values which represents the enriched and re-arranged variant
         of the input row. If no errors were logged during the process, this
-        result will conform to the Open APC data schema.
+        result will conform to the OpenAPC data schema.
     """
-    MESSAGES = {
-        "num_columns": "Syntax: The number of values in this row (%s) " +
-                       "differs from the number of columns (%s). Line left " +
-                       "unchanged, the resulting CSV file will not be valid.",
-        "locale": "Error: Could not process the monetary value '%s' in " +
-                  "column %s. Usually this happens due to one of two reasons:\n1) " +
-                  "The value does not represent a number.\n2) The value " +
-                  "represents a number, but its format differs from your " +
-                  "current system locale - the most common source of error " +
-                  "is the decimal mark (1234.56 vs 1234,56). Try using " +
-                  "another locale with the -l option.",
-        "digits_error": "Monetary value %s has more than 2 digits after " +
-                        "the decimal point. If this is just a formatting issue (from automated " +
-                        "conversion for example) you may call the enrichment script with the -r " +
-                        "option to round such values to 2 digits automatically.",
-        "digits_norm": "Normalisation: Monetary value %s rounded to 2 digits after " +
-                       "decimal mark (%s -> %s)",
-        "unify": "Normalisation: CrossRef-based {} changed from '{}' to '{}' " +
-                 "to maintain consistency.",
-        "doi_norm": "Normalisation: DOI '{}' normalised to pure form ({}).",
-        "springer_distinction": "publisher 'Springer Nature' found " +
-                                "for a pre-2015 article - publisher " +
-                                "changed to '%s' based on prefix " +
-                                "discrimination ('%s')",
-        "unknown_prefix": "publisher 'Springer Nature' found for a " +
-                          "pre-2015 article, but discrimination was " +
-                          "not possible - unknown prefix ('%s')",
-        "issn_hyphen_fix": "Normalisation: Added hyphen to %s value (%s -> %s)",
-        "period_format": "Normalisation: Date format in period column changed to year only (%s -> %s)"
-            
-    }
-
     if len(row) != num_required_columns:
         msg = "Line %s: " + MESSAGES["num_columns"]
         logging.error(msg, row_num, len(row), num_required_columns)
         return row
 
-    doi = row[column_map["doi"].index]
-
-    current_row = OrderedDict()
-    # Copy content of identified columns
-    for csv_column in column_map.values():
-        if csv_column.column_type == "euro" and csv_column.index is not None:
-            # special case for monetary values: Cast to float to ensure
-            # the decimal point is a dot (instead of a comma)
-            euro_value = row[csv_column.index]
-            if not euro_value or euro_value == "NA":
-                msg = "Line %s: Empty monetary value in column %s."
-                logging.warning(msg, row_num, csv_column.index)
-                current_row[csv_column.column_type] = "NA"
-            else:
-                try:
-                    euro = locale.atof(euro_value)
-                    if euro.is_integer():
-                        euro = int(euro)
-                    if re.match(r"^\d+\.\d{3}", str(euro)):
-                        if round_monetary:
-                            euro = round(euro, 2)
-                            msg = "Line %s: " + MESSAGES["digits_norm"]
-                            logging.warning(msg, row_num, euro_value, euro_value, euro)
-                        else:
-                            msg = "Line %s: " + MESSAGES["digits_error"]
-                            logging.error(msg, row_num, euro_value)
-                    current_row[csv_column.column_type] = str(euro)
-                except ValueError:
-                    msg = "Line %s: " + MESSAGES["locale"]
-                    logging.error(msg, row_num, euro_value, csv_column.index)
-        elif csv_column.column_type == "period":
-            value = row[csv_column.index]
-            if re.match(r"^\d{4}-[0-1]{1}\d(-[0-3]{1}\d)?$", value):
-                msg = "Line %s: " + MESSAGES["period_format"]
-                new_value = value[:4]
-                logging.warning(msg, row_num, value, new_value)
-                current_row[csv_column.column_type] = new_value
-            else:
-                current_row[csv_column.column_type] = value
-        else:
-            if csv_column.index is not None and len(row[csv_column.index]) > 0:
-                current_row[csv_column.column_type] = row[csv_column.index]
-            else:
-                current_row[csv_column.column_type] = "NA"
-
-    if len(doi) == 0 or doi == 'NA':
-        msg = ("Line %s: No DOI found, entry could not enriched with " +
-               "Crossref or Pubmed metadata.")
-        logging.warning(msg, row_num)
-        current_row["indexed_in_crossref"] = "FALSE"
+    empty_row = True
+    for elem in row:
+        if has_value(elem):
+            empty_row = False
+            break
     else:
+        msg = "Line %s: " + MESSAGES["empty_row"]
+        logging.warning(msg, row_num)
+
+    current_row = {}
+    record_type = None
+
+    # Copy content of identified columns and apply special processing rules
+    for csv_column in column_map.values():
+        index, column_type = csv_column.index, csv_column.column_type
+        if empty_row:
+            current_row[column_type] = ""
+            continue
+        if column_type == "euro" and index is not None:
+            current_row["euro"] = _process_euro_value(row[index], round_monetary, row_num, index, offsetting_mode)
+        elif column_type == "period" and index is not None:
+            current_row["period"] = _process_period_value(row[index], row_num)
+        elif column_type == "is_hybrid" and index is not None:
+            current_row["is_hybrid"] = _process_hybrid_status(row[index], row_num)
+        elif column_type == "institution" and index is not None:
+            current_row["institution"] = _process_institution_value(row[index], row_num, orig_file_path, offsetting_mode)
+        else:
+            if index is not None and len(row[index]) > 0:
+                current_row[column_type] = row[index]
+            else:
+                current_row[column_type] = "NA"
+
+    doi = current_row["doi"]
+    if not has_value(doi) and not empty_row:
+        msg = ("Line %s: No DOI found")
+        logging.info(msg, row_num)
+        current_row["indexed_in_crossref"] = "FALSE"
+        # lookup ISBNs in crossref
+        additional_isbns = [row[i] for i in additional_isbn_columns]
+        found_doi, r_type = _isbn_lookup(current_row, row_num, additional_isbns, doab_analysis.isbn_handling)
+        if r_type is not None:
+            record_type = r_type
+        if found_doi is not None:
+            # integrate DOI into row and restart
+            logging.info("New DOI integrated, restarting enrichment for current line.")
+            index = column_map["doi"].index
+            row[index] = found_doi
+            return process_row(row, row_num, column_map, num_required_columns, additional_isbn_columns,
+                doab_analysis, doaj_analysis, no_crossref_lookup, no_pubmed_lookup,
+                no_doaj_lookup, no_title_lookup, round_monetary, offsetting_mode, orig_file_path)
+        # lookup the book title in Crossref
+        lookup_title = current_row["book_title"]
+        if has_value(lookup_title):
+            msg = ("Line %s: Trying to look up the book title ('%s') in Crossref...")
+            logging.info(msg, row_num, lookup_title)
+            book_doi = title_lookup(lookup_title, ["book", "monograph", "reference-book"])
+            if book_doi:
+                logging.info("New DOI integrated, restarting enrichment for current line.")
+                index = column_map["doi"].index
+                row[index] = book_doi
+                return process_row(row, row_num, column_map, num_required_columns, additional_isbn_columns,
+                    doab_analysis, doaj_analysis, no_crossref_lookup, no_pubmed_lookup,
+                    no_doaj_lookup, no_title_lookup, round_monetary, offsetting_mode, orig_file_path)
+    if has_value(doi):
         # Normalise DOI
         norm_doi = get_normalised_DOI(doi)
         if norm_doi is not None and norm_doi != doi:
             current_row["doi"] = norm_doi
             msg = MESSAGES["doi_norm"].format(doi, norm_doi)
-            logging.warning(msg)
+            logging.info(msg)
             doi = norm_doi
         # include crossref metadata
         if not no_crossref_lookup:
             crossref_result = get_metadata_from_crossref(doi)
+            retries = 0
             while not crossref_result["success"] and crossref_result["error_msg"].startswith("HTTPError: 504"):
+                if retries >= crossref_max_retries:
+                    break
                 # retry on gateway timeouts, crossref API is quite busy sometimes
                 msg = "%s, retrying..."
                 logging.warning(msg, crossref_result["error_msg"])
+                retries += 1
                 crossref_result = get_metadata_from_crossref(doi)
-            if crossref_result["success"]:
-                logging.info("Crossref: DOI resolved: " + doi)
-                current_row["indexed_in_crossref"] = "TRUE"
-                data = crossref_result["data"]
-                prefix = data.pop("prefix")
-                for key, value in data.items():
-                    if value is not None:
-                        if key == "journal_full_title":
-                            unified_value = get_unified_journal_title(value)
-                            if unified_value != value:
-                                msg = MESSAGES["unify"].format("journal title",
-                                                               value,
-                                                               unified_value)
-                                logging.warning(msg)
-                            new_value = unified_value
-                        elif key == "publisher":
-                            unified_value = get_unified_publisher_name(value)
-                            if unified_value != value:
-                                msg = MESSAGES["unify"].format("publisher name",
-                                                               value,
-                                                               unified_value)
-                                logging.warning(msg)
-                            new_value = unified_value
-                            # Treat Springer Nature special case: crossref erroneously
-                            # reports publisher "Springer Nature" even for articles
-                            # published before 2015 (publishers fusioned only then)
-                            if int(current_row["period"]) < 2015 and new_value == "Springer Nature":
-                                publisher = None
-                                if prefix in ["Springer (Biomed Central Ltd.)", "Springer-Verlag", "Springer - Psychonomic Society"]:
-                                    publisher = "Springer Science + Business Media"
-                                elif prefix in ["Nature Publishing Group", "Nature Publishing Group - Macmillan Publishers"]:
-                                    publisher = "Nature Publishing Group"
-                                if publisher:
-                                    msg = "Line %s: " + MESSAGES["springer_distinction"]
-                                    logging.warning(msg, row_num, publisher, prefix)
-                                    new_value = publisher
-                                else:
-                                    msg = "Line %s: " + MESSAGES["unknown_prefix"]
-                                    logging.error(msg, row_num, prefix)
-                        # Fix ISSNs without hyphen
-                        elif key in ["issn", "issn_print", "issn_electronic"]:
-                            new_value = value
-                            if re.match(r"^\d{7}[\dxX]$", value):
-                                new_value = value[:4] + "-" + value[4:]
-                                msg = "Line %s: " + MESSAGES["issn_hyphen_fix"]
-                                logging.warning(msg, row_num, key, value, new_value)
-                        else:
-                            new_value = value
+            if not crossref_result["success"]:
+                exc = crossref_result["exception"]
+                # check if a preprint lookup is possible
+                if not no_title_lookup and type(exc) == UnsupportedDoiTypeError and exc.doi_type == "posted-content":
+                    msg = ("Line %s: Found a DOI with type 'posted_content' (%s). This might " +
+                           "be a case of a preprint DOI, trying to find the final version of the article...")
+                    logging.info(msg, row_num, doi)
+                    if not exc.crossref_title:
+                        msg = "Line %s: Preprint lookup failed, no title could be extracted."
+                        logging.warning(msg, row_num)
                     else:
-                        new_value = "NA"
-                        msg = "WARNING: Element '%s' not found in in response for doi %s."
-                        logging.debug(msg, key, doi)
+                        article_doi = title_lookup(exc.crossref_title, ["journal-article"])
+                        if article_doi:
+                            logging.info("New DOI integrated, restarting enrichment for current line...")
+                            index = column_map["doi"].index
+                            row[index] = article_doi
+                            return process_row(row, row_num, column_map, num_required_columns, additional_isbn_columns,
+                                doab_analysis, doaj_analysis, no_crossref_lookup, no_pubmed_lookup,
+                                no_doaj_lookup, no_title_lookup, round_monetary, offsetting_mode, orig_file_path)
+            if crossref_result["success"]:
+                data = crossref_result["data"]
+                record_type = data.pop("doi_type")
+                logging.info("Crossref: DOI resolved: " + doi + " [" + record_type + "]")
+                current_row["indexed_in_crossref"] = "TRUE"
+                for key, value in data.items():
+                    new_value = _process_crossref_results(current_row, row_num, key, value)
                     old_value = current_row[key]
                     current_row[key] = column_map[key].check_overwrite(old_value, new_value)
             else:
                 msg = "Line %s: Crossref: Error while trying to resolve DOI %s: %s"
                 logging.error(msg, row_num, doi, crossref_result["error_msg"])
                 current_row["indexed_in_crossref"] = "FALSE"
+                # lookup ISBNs in crossref and try to find a correct DOI
+                additional_isbns = [row[i] for i in additional_isbn_columns]
+                found_doi, r_type = _isbn_lookup(current_row, row_num, additional_isbns, doab_analysis.isbn_handling)
+                if r_type is not None:
+                    record_type = r_type
+                if found_doi is not None:
+                    # integrate DOI into row and restart
+                    logging.info("New DOI integrated, restarting enrichment for current line.")
+                    index = column_map["doi"].index
+                    row[index] = found_doi
+                    return process_row(row, row_num, column_map, num_required_columns, additional_isbn_columns,
+                                       doab_analysis, doaj_analysis, no_crossref_lookup, no_pubmed_lookup,
+                                       no_doaj_lookup, no_title_lookup, round_monetary, offsetting_mode, orig_file_path)
         # include pubmed metadata
-        if not no_pubmed_lookup:
+        if not no_pubmed_lookup and record_type == "journal-article":
             pubmed_result = get_metadata_from_pubmed(doi)
             if pubmed_result["success"]:
                 logging.info("Pubmed: DOI resolved: " + doi)
@@ -928,7 +1753,7 @@ def process_row(row, row_num, column_map, num_required_columns,
                 logging.error(msg, row_num, doi, pubmed_result["error_msg"])
 
     # lookup in DOAJ. try the EISSN first, then ISSN and finally print ISSN
-    if not no_doaj_lookup:
+    if not no_doaj_lookup and not empty_row:
         issns = []
         new_value = "NA"
         if current_row["issn_electronic"] != "NA":
@@ -938,42 +1763,84 @@ def process_row(row, row_num, column_map, num_required_columns,
         if current_row["issn_print"] != "NA":
             issns.append(current_row["issn_print"])
         for issn in issns:
-            # In some cases xref delievers ISSNs without a hyphen. Add it
-            # temporarily to prevent the DOAJ lookup from failing.
-            if re.match(r"^\d{7}[\dxX]$", issn):
-                issn = issn[:4] + "-" + issn[4:]
-            # look up in an offline copy of the DOAJ if requested...
-            if doaj_offline_analysis:
-                lookup_result = doaj_offline_analysis.lookup(issn)
-                if lookup_result:
-                    msg = "DOAJ: Journal ISSN (%s) found in DOAJ offline copy ('%s')."
-                    logging.info(msg, issn, lookup_result)
-                    new_value = "TRUE"
-                    break
-                else:
-                    msg = "DOAJ: Journal ISSN (%s) not found in DOAJ offline copy."
-                    new_value = "FALSE"
-                    logging.info(msg, issn)
-            # ...or query the online API
+            lookup_result = doaj_analysis.lookup(issn)
+            if lookup_result:
+                msg = "DOAJ: Journal ISSN (%s) found in DOAJ offline copy ('%s')."
+                logging.info(msg, issn, lookup_result)
+                new_value = "TRUE"
+                break
             else:
-                doaj_res = lookup_journal_in_doaj(issn)
-                if doaj_res["data_received"]:
-                    if doaj_res["data"]["in_doaj"]:
-                        msg = "DOAJ: Journal ISSN (%s) found in DOAJ ('%s')."
-                        logging.info(msg, issn, doaj_res["data"]["title"])
-                        new_value = "TRUE"
-                        break
-                    else:
-                        msg = "DOAJ: Journal ISSN (%s) not found in DOAJ."
-                        logging.info(msg, issn)
-                        new_value = "FALSE"
-                else:
-                    msg = "Line %s: DOAJ: Error while trying to look up ISSN %s: %s"
-                    logging.error(msg, row_num, issn, doaj_res["error_msg"])
+                msg = "DOAJ: Journal ISSN (%s) not found in DOAJ offline copy."
+                new_value = "FALSE"
+                logging.info(msg, issn)
         old_value = current_row["doaj"]
-        current_row["doaj"] = column_map["doaj"].check_overwrite(old_value,
-                                                                 new_value)
-    return list(current_row.values())
+        current_row["doaj"] = column_map["doaj"].check_overwrite(old_value, new_value)
+    if record_type != "journal-article" and not empty_row:
+        collected_isbns = []
+        for isbn_field in ["isbn", "isbn_print", "isbn_electronic"]:
+            # test and split all ISBNs
+            current_row[isbn_field] = _process_isbn(row_num, current_row[isbn_field], doab_analysis.isbn_handling)
+            if has_value(current_row[isbn_field]):
+                collected_isbns.append(current_row[isbn_field])
+        additional_isbns = [row[i] for i in additional_isbn_columns]
+        for isbn in additional_isbns:
+            result = _process_isbn(row_num, isbn, doab_analysis.isbn_handling)
+            if has_value(result):
+                collected_isbns.append(result)
+        if len(collected_isbns) == 0:
+            logging.info("No ISBN found, skipping DOAB lookup.")
+            current_row["doab"] = "NA"
+        else:
+            record_type = "book"
+            logging.info("Trying a DOAB lookup with the following values: " + str(collected_isbns))
+            for isbn in collected_isbns:
+                doab_result = doab_analysis.lookup(isbn)
+                if doab_result is not None:
+                    current_row["doab"] = "TRUE"
+                    msg = 'DOAB: ISBN %s found in normalized DOAB (%s, "%s")'
+                    logging.info(msg, isbn, doab_result["publisher"], doab_result["book_title"])
+                    if current_row["indexed_in_crossref"] == "TRUE":
+                        msg = "Book already found in Crossref via DOI, those results take precedence"
+                        logging.info(msg)
+                    else:
+                        for key in doab_result:
+                            current_row[key] = doab_result[key]
+                    if not has_value(current_row["isbn"]):
+                        current_row["isbn"] = isbn
+                    break
+            else:
+                current_row["doab"] = "FALSE"
+                msg = "DOAB: None of the ISBNs found in DOAB"
+                logging.info(msg)
+    if offsetting_mode:
+        current_row["agreement"] = offsetting_mode
+        record_type = "journal-article_transagree"
+
+    if record_type is None:
+        msg = "Line %s: Could not identify record type, using default schema 'journal-article'"
+        logging.warning(msg, row_num)
+        record_type = "journal-article"
+
+    result = []
+    for field in COLUMN_SCHEMAS[record_type]:
+        result.append(current_row[field])
+
+    return (record_type, result)
+
+def get_hybrid_status_from_whitelist(hybrid_status):
+    """
+    Obtain a boolean identifier for journal hybrid status by looking up possible
+    synonyms in a whitelist.
+    Args:
+        hybrid status: A string describing the hybrid status of a journal.
+    Returns:
+        An OpenAPC-normalised boolean identifer (TRUE/FALSE) if the designation was found
+        in a whitelist.
+    """
+    for boolean_value, whitelist in mappings.HYBRID_STATUS.items():
+        if hybrid_status.strip().lower() in whitelist:
+            return boolean_value
+    return None
 
 def get_column_type_from_whitelist(column_name):
     """
@@ -985,28 +1852,8 @@ def get_column_type_from_whitelist(column_name):
         An APC-normed column type (as a string) if the column name was found in
         a whitelist, None otherwise.
     """
-    column_names = {
-        "institution": ["institution"],
-        "doi": ["doi"],
-        "euro": ["apc", "kosten", "cost", "euro", "eur"],
-        "period": ["period", "jahr"],
-        "is_hybrid": ["is_hybrid", "is hybrid", "hybrid"],
-        "publisher": ["publisher"],
-        "journal_full_title": ["journal_full_title", "journal", "journal title", "journal full title", "journaltitle", "journal_title"],
-        "issn": ["issn", "issn.1", "issn0"],
-        "issn_print": ["issn_print"],
-        "issn_electronic": ["issn_electronic"],
-        "issn_l": ["issn_l"],
-        "license_ref": ["licence", "license", "license_ref"],
-        "indexed_in_crossref": ["indexed_in_crossref"],
-        "pmid": ["pmid", "pubmed id"],
-        "pmcid": ["pmcid", "pubmed central (pmc) id"],
-        "ut": ["ut"],
-        "url": ["url"],
-        "doaj": ["doaj"]
-    }
-    for key, whitelist in column_names.items():
-        if column_name.lower() in whitelist:
+    for key, whitelist in mappings.COLUMN_NAMES.items():
+        if column_name.strip().lower() in whitelist:
             return key
     return None
 
@@ -1022,22 +1869,7 @@ def get_unified_publisher_name(publisher):
     Returns:
         Either a unified name or the original name as a string
     """
-    publisher_mappings = {
-        "The Optical Society": "Optical Society of America (OSA)",
-        "Impact Journals": "Impact Journals LLC",
-        "American Society for Biochemistry &amp; Molecular Biology (ASBMB)": "American Society for Biochemistry & Molecular Biology (ASBMB)",
-        "Institute of Electrical and Electronics Engineers (IEEE)": "Institute of Electrical & Electronics Engineers (IEEE)",
-        "Cold Spring Harbor Laboratory": "Cold Spring Harbor Laboratory Press",
-        "Institute of Electrical &amp; Electronics Engineers (IEEE)": "Institute of Electrical & Electronics Engineers (IEEE)",
-        "Hindawi Limited": "Hindawi Publishing Corporation",
-        "Oxford University Press": "Oxford University Press (OUP)",
-        "Wiley": "Wiley-Blackwell",
-        "Bioscientifica": "BioScientifica",
-        "Springer Nature America, Inc": "Springer Nature",
-        "Springer Science and Business Media LLC": "Springer Nature",
-        "F1000 ( Faculty of 1000 Ltd)": "F1000 Research, Ltd." 
-    }
-    return publisher_mappings.get(publisher, publisher)
+    return mappings.PUBLISHER_MAPPINGS.get(publisher, publisher)
 
 def get_unified_journal_title(journal_full_title):
     """
@@ -1051,169 +1883,33 @@ def get_unified_journal_title(journal_full_title):
     Returns:
         Either a unified name or the original name as a string
     """
-    journal_mappings = {
-        "PLoS ONE": "PLOS ONE",
-        "Phys. Chem. Chem. Phys.": "Physical Chemistry Chemical Physics",
-        "J. Mater. Chem. A": "Journal of Materials Chemistry A",
-        "J. Mater. Chem. B": "Journal of Materials Chemistry B",
-        "PLoS Pathogens": "PLOS Pathogens",
-        "PLoS Genetics": "PLOS Genetics",
-        "PLoS Biology": "PLOS Biology",
-        "PLoS Computational Biology": "PLOS Computational Biology",
-        "PLoS Neglected Tropical Diseases": "PLOS Neglected Tropical Diseases",
-        "Oncotarget": "OncoTarget",
-        "Journal of Lipid Research": "The Journal of Lipid Research",
-        "Plastic and Reconstructive Surgery Global Open": "Plastic and Reconstructive Surgery - Global Open",
-        "RSC Adv.": "RSC Advances",
-        "Zeitschrift für die neutestamentliche Wissenschaft": "Zeitschrift für die Neutestamentliche Wissenschaft und die Kunde der älteren Kirche",
-        "Chem. Soc. Rev.": "Chemical Society Reviews",
-        "Journal of Elections, Public Opinion and Parties": "Journal of Elections, Public Opinion & Parties",
-        "Scientific Repor.": "Scientific Reports",
-        "PAIN": "Pain",
-        "G3&amp;#58; Genes|Genomes|Genetics": "G3: Genes|Genomes|Genetics",
-        "Transactions of the Royal Society of Tropical Medicine and Hygiene": "Transactions of The Royal Society of Tropical Medicine and Hygiene",
-        "Org. Biomol. Chem.": "Organic & Biomolecular Chemistry",
-        "PLoS Medicine": "PLOS Medicine",
-        "AJP: Heart and Circulatory Physiology": "American Journal of Physiology - Heart and Circulatory Physiology",
-        "Naturwissenschaften": "The Science of Nature",
-        "Dalton Trans.": "Dalton Transactions",
-        "Chem. Sci.": "Chemical Science",
-        "J. Anal. At. Spectrom.": "Journal of Analytical Atomic Spectrometry",
-        "Geospatial health": "Geospatial Health",
-        "Journal of the European Optical Society-Rapid Publications": "Journal of the European Optical Society: Rapid Publications",
-        "J. Mater. Chem. C": "Journal of Materials Chemistry C",
-        "Chem. Commun.": "Chemical Communications",
-        "Cognition and Emotion": "Cognition & Emotion",
-        "Catal. Sci. Technol.": "Catalysis Science & Technology",
-        "Journal of Epidemiology & Community Health": "Journal of Epidemiology and Community Health",
-        "JRSM": "Journal of the Royal Society of Medicine",
-        "Green Chem.": "Green Chemistry",
-        "Stochastics and  Partial Differential Equations: Analysis and Computations": "Stochastics and Partial Differential Equations: Analysis and Computations",
-        "Journal of Mass Communication & Journalism": "Journal of Mass Communication and Journalism",
-        "Journal of Child and Adolescent Behavior": "Journal of Child and Adolescent Behaviour",
-        "Journal of Otolaryngology - Head and Neck Surgery": "Journal of Otolaryngology - Head & Neck Surgery",
-        "manuscripta mathematica": "Manuscripta Mathematica",
-        "CPT Pharmacometrics Syst. Pharmacol.": "CPT: Pharmacometrics & Systems Pharmacology",
-        "Taal en tongval": "Taal en Tongval",
-        "Notfall +  Rettungsmedizin": "Notfall + Rettungsmedizin",
-        "The Journal of Neuroscience": "Journal of Neuroscience",
-        "British Editorial Society of Bone &amp; Joint Surgery": "British Editorial Society of Bone & Joint Surgery",
-        "Proceedings of the Royal Society A: Mathematical, Physical and Engineering Science": "Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences",
-        "The FEBS Journal": "FEBS Journal",
-        "PLANT PHYSIOLOGY": "Plant Physiology",
-        "IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control": "IEEE Transactions on Ultrasonics, Ferroelectrics and Frequency Control",
-        "Cellular and Molecular Gastroenterology and Hepatology": "CMGH Cellular and Molecular Gastroenterology and Hepatology",
-        "Tellus B: Chemical and Physical Meteorology": "Tellus B",
-        "Natural Hazards and Earth System Science": "Natural Hazards and Earth System Sciences",
-        "interactive Journal of Medical Research": "Interactive Journal of Medical Research",
-        "EP Europace": "Europace",
-        "Prostate Cancer and Prostatic Disease": "Prostate Cancer and Prostatic Diseases",
-        "CARTILAGE": "Cartilage",
-        "Annals of Clinical Biochemistry": "Annals of Clinical Biochemistry: An international journal of biochemistry and laboratory medicine",
-        "JNCI: Journal of the National Cancer Institute": "JNCI Journal of the National Cancer Institute",
-        "Journal of the National Cancer Institute": "JNCI Journal of the National Cancer Institute",
-        "European Heart Journal – Cardiovascular Imaging": "European Heart Journal - Cardiovascular Imaging",
-        "Transplantation": "Transplantation Journal",
-        "SHOCK": "Shock",
-        "Endocrine-Related Cancer": "Endocrine Related Cancer",
-        "The American Journal of Tropical Medicine and Hygiene": "American Journal of Tropical Medicine and Hygiene",
-        "American Journal of Physiology - Endocrinology And Metabolism": "AJP: Endocrinology and Metabolism",
-        "Neurology - Neuroimmunology Neuroinflammation": "Neurology: Neuroimmunology & Neuroinflammation",
-        "eneuro": "eNeuro",
-        "The Journal of Experimental Biology": "Journal of Experimental Biology",
-        "The Plant Cell Online": "The Plant Cell",
-        "Journal of Agricultural, Biological, and Environmental Statistics": "Journal of Agricultural, Biological and Environmental Statistics",
-        "PalZ": "Paläontologische Zeitschrift",
-        "Lighting Research and Technology": "Lighting Research & Technology",
-        "The Journal of Infectious Diseases": "Journal of Infectious Diseases",
-        "Planning Practice and Research": "Planning Practice & Research",
-        "Learning and Individual Differences": "Learning & Individual Differences",
-        "Water Science and Technology": "Water Science & Technology",
-        "Antimicrobial Resistance & Infection Control": "Antimicrobial Resistance and Infection Control",
-        "MedChemComm": "Med. Chem. Commun.",
-        "European Journal of Public Health": "The European Journal of Public Health",
-        "Journal of Vacuum Science & Technology B, Nanotechnology and Microelectronics: Materials, Processing, Measurement, and Phenomena": "Journal of Vacuum Science & Technology B: Microelectronics and Nanometer Structures",
-        "Briefings In Bioinformatics": "Briefings in Bioinformatics",
-        "Notes and Records: the Royal Society journal of the history of science": "Notes and Records of the Royal Society",
-        "Journal Of Logic And Computation": "Journal of Logic and Computation",
-        "Health:: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine": "Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine",
-        "INTERNATIONAL JOURNAL OF SYSTEMATIC AND EVOLUTIONARY MICROBIOLOGY": "International Journal of Systematic and Evolutionary Microbiology",
-        "Protein Engineering Design and Selection": "Protein Engineering, Design and Selection",
-        "The Journals of Gerontology: Series A": "The Journals of Gerontology Series A: Biological Sciences and Medical Sciences",
-        "MHR: Basic science of reproductive medicine": "Molecular Human Reproduction",
-        "Research on Language and Social Interaction": "Research on Language & Social Interaction",
-        "Psychology and Sexuality": "Psychology & Sexuality",
-        "BJA: British Journal of Anaesthesia": "British Journal of Anaesthesia",
-        "Journal of Development Studies": "The Journal of Development Studies",
-        "Tellus A: Dynamic Meteorology and Oceanography": "Tellus A",
-        "International journal of methods in psychiatric research": "International Journal of Methods in Psychiatric Research",
-        "Polym. Chem.": "Polymer Chemistry",
-        "Angewandte Chemie": "Angewandte Chemie International Edition",
-        "ISME Journal": "The ISME Journal",
-        "Interface": "Journal of The Royal Society Interface",
-        "Medical Engineering and Physics": "Medical Engineering & Physics",
-        "Forensic Science, Medicine, and Pathology": "Forensic Science, Medicine and Pathology",
-        "Lab Chip": "Lab on a Chip",
-        "Mater. Horiz.": "Materials Horizons",
-        "AoB PLANTS": "AoB Plants",
-        "Elem Sci Anth": "Elementa: Science of the Anthropocene",
-        "Cell Death & Disease": "Cell Death and Disease",
-        "Scandinavian Journal of Work, Environment & Health": "Scandinavian Journal of Work Environment and Health",
-        "The Bone & Joint Journal": "Bone & Joint Journal",
-        "British Journal of Psychiatry": "The British Journal of Psychiatry",
-        "American Journal of Physiology-Heart and Circulatory Physiology": "American Journal of Physiology - Heart and Circulatory Physiology",
-        "American Journal of Physiology-Endocrinology and Metabolism": "AJP: Endocrinology and Metabolism",
-        "Milbank Quarterly": "The Milbank Quarterly",
-        "Faraday Discuss.": "Faraday Discussions",
-        "Journal of Management and Governance": "Journal of Management & Governance",
-        "Journal für Verbraucherschutz und Lebensmittelsicherheit": "Journal of Consumer Protection and Food Safety",
-        "Nanoscale Horiz.": "Nanoscale Horizons",
-        "BeitrÃ¤ge zur Algebra und Geometrie / Contributions to Algebra and Geometry": "Beiträge zur Algebra und Geometrie / Contributions to Algebra and Geometry",
-        "Energy Environ. Sci.": "Energy & Environmental Science",
-        "Raumforschung und Raumordnung |  Spatial Research and Planning": "Raumforschung und Raumordnung",
-        "Mol. BioSyst.": "Molecular BioSystems",
-        "Physics in Medicine & Biology": "Physics in Medicine and Biology",
-        "Anal. Methods": "Analytical Methods",
-        "The American Journal of Clinical Nutrition": "American Journal of Clinical Nutrition",
-        "International Journal of Clinical and Experimental Pathology ": "International Journal of Clinical and Experimental Pathology",
-        "Forestry": "Forestry: An International Journal of Forest Research",
-        "BJPsych Open": "British Journal of Psychiatry Open",
-        "JOURNAL OF FORENSIC SCIENCE & CRIMINOLOGY": "Journal of Forensic Science & Criminology",
-        "New J. Chem.": "New Journal of Chemistry",
-        "The British Journal of Criminology": "British Journal of Criminology",
-        "Journal of Alzheimer's disease": "Journal of Alzheimer's Disease",
-        "Cell Death & Differentiation": "Cell Death and Differentiation",
-        "Nat. Prod. Rep.": "Natural Product Reports",
-        "Bone & Joint Research": "Bone and Joint Research",
-        "Psychology of Well-Being": "Psychology of Well-Being: Theory, Research and Practice",
-        "Genes & Immunity": "Genes and Immunity",
-        "Biomater. Sci.": "Biomaterials Science",
-        "BDJ": "British Dental Journal",
-        "QJM: An International Journal of Medicine": "QJM",
-        "American Journal of Physiology-Lung Cellular and Molecular Physiology": "American Journal of Physiology - Lung Cellular and Molecular Physiology",
-        "American Journal of Physiology-Renal Physiology": "AJP: Renal Physiology",
-        "The Journal of Nutrition": "Journal of Nutrition",
-        "Microbial Ecology in Health and Disease": "Microbial Ecology in Health & Disease"
-    }
-    return journal_mappings.get(journal_full_title, journal_full_title)
+
+    return mappings.JOURNAL_MAPPINGS.get(journal_full_title, journal_full_title)
 
 def get_corrected_issn_l(issn_l):
-    issn_l_corrections = {
-        "0266-7061": "1367-4803", # "Bioinformatics". 1460-2059(issn_e) -> 0266-7061, but 1367-4803(issn_p) -> 1367-4803
-        "1654-6628": "1654-661X",  # "Food & Nutrition Research". 1654-6628(issn_p) -> 1654-6628, but 1654-661X(issn_e) -> 1654-661X
-        "1474-7596": "1465-6906", # "Genome Biology".  1465-6906(issn_p) -> 1465-6906, but 1474-760X(issn_e) -> 1474-7596
-        "0959-8138": "1756-1833" # BMJ. The BMJ has a bunch of ISSNs assigend, but the ISSN-L mappings are all fixed points. Unknown if this is intended. 
+    return mappings.ISSN_L_CORRECTIONS.get(issn_l, issn_l)
+    
+def colorize(text, color):
+    ANSI_COLORS = {
+        "red": "\033[91m",
+        "green": "\033[92m",
+        "yellow": "\033[93m",
+        "blue": "\033[94m",
+        "cyan": "\033[96m"
     }
-    return issn_l_corrections.get(issn_l, issn_l)
+    return ANSI_COLORS[color] + text + "\033[0m"
 
 def print_b(text):
-    print("\033[94m" + text + "\033[0m")
+    print(colorize(text, "blue"))
 
 def print_g(text):
-    print("\033[92m" + text + "\033[0m")
+    print(colorize(text, "green"))
 
 def print_r(text):
-    print("\033[91m" + text + "\033[0m")
+    print(colorize(text, "red"))
 
 def print_y(text):
-    print("\033[93m" + text + "\033[0m")
+    print(colorize(text, "yellow"))
+
+def print_c(text):
+    print(colorize(text, "cyan"))
