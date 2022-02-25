@@ -60,6 +60,7 @@
 # ki/apc_ki_2021_Q1_dois_rest.tsv
 # ki/apc_ki_2021_Q2_dois.tsv
 # ki/apc_ki_2021_Q2_non_dois.tsv
+ki/apc_ki_2021_Q3_dois.tsv
 # kth/apc_kth_2015.tsv
 # kth/apc_kth_2016.tsv
 # kth/apc_kth_2016_correction.tsv
@@ -95,7 +96,7 @@
 # ltu/apc_ltu_2020_dois.tsv
 # ltu/apc_ltu_2020_non_dois.tsv
 # lu/apc_lu_2020_rest_dois.tsv
-lu/apc_lu_2020_non_dois.tsv
+# lu/apc_lu_2020_non_dois.tsv
 # mah/apc_mah_2015.csv
 # mah/apc_mah_2016.tsv
 # mah/apc_mah_2017_dois.tsv
