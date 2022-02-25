@@ -38,8 +38,6 @@ A first sample of statistics from the project may be viewed at the [statistics p
 See [guidelines for contribution of data](https://github.com/Kungbib/openapc-se/wiki/Instructions-for-data-entry) in the project Wiki.
 
 ## Contact
+**openaccess [at] kb.se**
 
-For general comments, email Beate Eellend at the National Library of Sweden: **beate.eellend [at] kb.se**  
-For technical comments, contact Camilla Lindelöw at the National Library of Sweden: **camilla.lindelow [at] kb.se**
-
-[Page updated 2019-10-04] 
+[Page updated 2022-02-14] 
