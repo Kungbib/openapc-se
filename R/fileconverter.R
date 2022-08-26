@@ -2,20 +2,21 @@ library(tidyverse)
 library(readxl)
 
 # what organisation, short name? ex kth
-organisation <- 'hig'
+organisation <- 'liu'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2021'
 
 # what's the name of the file to be converted?
-indata_file <- 'data/hig/original_data/HiG_APC_2021.xlsx'
-tu_file <- tibble(
-  institution = character(),
-  period = double(),
-  sek = double(),
-  doi = character(),
-  is_hybrid = logical()
-)
+indata_file <- str_c('data/', organisation, '/original_data/apc_liu_2021_jan_dec.xlsx')
+
+# tu_file <- tibble(
+#   institution = character(),
+#   period = double(),
+#   sek = double(),
+#   doi = character(),
+#   is_hybrid = logical()
+# )
 
 
 # outdata_file_dois <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperiod_data,'_dois.csv')
@@ -31,7 +32,7 @@ converter <- converter %>%
   # standard:
   mutate(euro = format(round(0.0986*sek, 2), nsmall = 2)) %>% #valutakurs 2021 hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/?y=2020&m=12&s=Comma&f=y
   # KI (ett år före, kvartalsvisa medelvärden):
-  # mutate(euro = format(round(0.0981*sek, 2), nsmall = 2)) %>% #valutakurs 2021 q3 hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/ (månadsgenomsnitt)    select(-sek) %>%
+  # mutate(euro = format(round(0.0986*sek, 2), nsmall = 2)) %>% #valutakurs 2021 q3 hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/ (månadsgenomsnitt)    select(-sek) %>%
   select(-sek) %>%
   select(institution, period, euro, doi, is_hybrid, publisher, journal_full_title, issn, issn_print, issn_electronic, url)
 
@@ -43,8 +44,18 @@ check <- semi_join(converter, bibsam_data, by = "doi")
 write_csv(converter_checked, outdata_file, na = '')
 write_csv(check, check_file, na = '')
 
-rbind(tu_file, converter_checked)
 
+
+
+# tu_data <- rbind(tu_file, converter_checked)
+tu_data <- rbind(tu_data, converter_checked)
+
+
+#när alla är inlästa
+tu_data_all <- tu_data %>%
+  filter(period == 2021)
+
+write_csv(tu_data_all, "data/tu_data_open_apc_se.csv", na = '')
 
 # converter_dois <- converter %>%
 #     filter(!(is.na(doi))) %>%
