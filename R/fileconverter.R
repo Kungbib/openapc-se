@@ -1,14 +1,19 @@
+
+# required libraries ------------------------------------------------------
 library(tidyverse)
 library(readxl)
 
+
+# settings: change before running -----------------------------------------
+
 # what organisation, short name? ex kth
-organisation <- 'liu'
+organisation <- 'lnu'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2021'
 
 # what's the name of the file to be converted?
-indata_file <- str_c('data/', organisation, '/original_data/apc_liu_2021_jan_dec.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/Lnu-OpenAPC-2021.xlsx')
 
 # tu_file <- tibble(
 #   institution = character(),
@@ -25,9 +30,13 @@ outdata_file <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperio
 check_file <- str_c('data/',organisation,'/','check_',organisation,'_',timeperiod_data,'.csv')
 
 
+# conversion --------------------------------------------------------------
+
 converter <- read_xlsx(indata_file)
 # converter <- read_tsv(indata_file)
 
+# kom ihåg att KI är ett år före, och kommer leverera data under innevarande år, därav
+# en egen rad för dem.
 converter <- converter %>%
   # standard:
   mutate(euro = format(round(0.0986*sek, 2), nsmall = 2)) %>% #valutakurs 2021 hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/?y=2020&m=12&s=Comma&f=y
@@ -36,16 +45,41 @@ converter <- converter %>%
   select(-sek) %>%
   select(institution, period, euro, doi, is_hybrid, publisher, journal_full_title, issn, issn_print, issn_electronic, url)
 
-#tvätta mot Bibsam-data
+
+# Bibsam check ------------------------------------------------------------
+
+# separera de utan DOI och hantera dem separat, utanför Bibsam-checken.
+without_dois <- filter(converter, is.na(doi))
+with_dois <- filter(converter, !(is.na(doi)))
+
+# tvätta mot Bibsams publiceringsdata (se till att använda uppdaterad fil)
 bibsam_data <- read_csv("data/19_21_bibsam_data.csv")
-converter_checked <- anti_join(converter, bibsam_data, by = "doi")
-check <- semi_join(converter, bibsam_data, by = "doi")
+with_dois_checked <- anti_join(with_dois, bibsam_data, by = "doi")
+check_bibsam <- semi_join(with_dois, bibsam_data, by = "doi")
 
-write_csv(converter_checked, outdata_file, na = '')
-write_csv(check, check_file, na = '')
+# sätt tillbaka de som inte har DOIs
+all_data <- rbind(with_dois_checked, without_dois)
+
+
+# Open APC Initiative check -----------------------------------------------
+
+# checka mot Open APC Initiative data för att se om posten registrerats tidigare, antingen av
+# samma lärosäte men då förmodligen olika kostnad, eller av två separata lärosäten:
+# apc_de-filen behöver uppdateras kontinuerligt. Kan ersättas av den kommande svenska totalfilen.
+
+openapcinitiative_data <- read_csv("data/apc_de.csv")
+check_initiative <- inner_join(with_dois, openapcinitiative_data, by = "doi")
+
+
+# Skriv till filer --------------------------------------------------------
+
+write_csv(all_data, outdata_file, na = '')
+write_csv(check_bibsam, check_file, na = '')
 
 
 
+
+# Gammal kod, gå igenom ---------------------------------------------------
 
 # tu_data <- rbind(tu_file, converter_checked)
 tu_data <- rbind(tu_data, converter_checked)

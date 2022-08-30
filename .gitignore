@@ -16,3 +16,6 @@ python/__pycache__/
 
 *.ffs_db
 .Rproj.user
+
+# exclude German (Open APC Initiative) data
+data/apc_de.csv
