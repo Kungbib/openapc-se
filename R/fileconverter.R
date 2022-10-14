@@ -7,13 +7,13 @@ library(readxl)
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'lnu'
+organisation <- 'uu'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
-timeperiod_data <- '2021'
+timeperiod_data <- '2021_rest'
 
 # what's the name of the file to be converted?
-indata_file <- str_c('data/', organisation, '/original_data/Lnu-OpenAPC-2021.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/APC-data till KB Q1 2022.xlsx')
 
 # tu_file <- tibble(
 #   institution = character(),
@@ -33,7 +33,7 @@ check_file <- str_c('data/',organisation,'/','check_',organisation,'_',timeperio
 # conversion --------------------------------------------------------------
 
 converter <- read_xlsx(indata_file)
-# converter <- read_tsv(indata_file)
+# converter <- read_csv(indata_file)
 
 # kom ihåg att KI är ett år före, och kommer leverera data under innevarande år, därav
 # en egen rad för dem.
@@ -41,7 +41,7 @@ converter <- converter %>%
   # standard:
   mutate(euro = format(round(0.0986*sek, 2), nsmall = 2)) %>% #valutakurs 2021 hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/?y=2020&m=12&s=Comma&f=y
   # KI (ett år före, kvartalsvisa medelvärden):
-  # mutate(euro = format(round(0.0986*sek, 2), nsmall = 2)) %>% #valutakurs 2021 q3 hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/ (månadsgenomsnitt)    select(-sek) %>%
+  # mutate(euro = format(round(0.0954*sek, 2), nsmall = 2)) %>% #valutakurs 2022 q1 hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/ (månadsgenomsnitt)    select(-sek) %>%
   select(-sek) %>%
   select(institution, period, euro, doi, is_hybrid, publisher, journal_full_title, issn, issn_print, issn_electronic, url)
 
