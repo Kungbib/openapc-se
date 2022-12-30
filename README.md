@@ -31,9 +31,6 @@ Swedish Open APC data is collected by the Open APC Initiative, and the current s
 5. Dalarna University College (du)
 6. Linköping University (liu) 
 
-## Sample of statistics
-A first sample of statistics from the project may be viewed at the [statistics page](https://github.com/Kungbib/openapc-se/blob/master/statistics.md)
-
 ## Contributing APC data
 See [guidelines for contribution of data](https://github.com/Kungbib/openapc-se/wiki/Instructions-for-data-entry) in the project Wiki.
 
