@@ -39,7 +39,6 @@ converter <- read_xlsx(indata_file, col_types = column_types)
 # kom ihåg att KI är ett år före, och kommer leverera data under innevarande år, därav
 # en egen rad för dem.
 converter <- converter %>%
-    
   # standard:
   mutate(euro = format(round(0.0941*sek, 2), nsmall = 2)) %>% #valutakurs 2022 hämtad från 
   # https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/
