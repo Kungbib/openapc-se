@@ -7,13 +7,13 @@ library(readxl)
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'liu'
+organisation <- 'su'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2022'
 
 # what's the name of the file to be converted?
-indata_file <- str_c('data/', organisation, '/original_data/apc_liu_HT2022.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/apc_su_2022.xlsx')
 
 # tu_file <- tibble(
 #   institution = character(),
@@ -32,13 +32,14 @@ check_initiative_file <- str_c('data/',organisation,'/','check_initiative_',orga
 
 
 # conversion --------------------------------------------------------------
-
-converter <- read_xlsx(indata_file)
+column_types <- c("text", "numeric", "numeric", "text", "logical", "text", "text", "text", "text", "text", "text")
+converter <- read_xlsx(indata_file, col_types = column_types)
 # converter <- read_csv(indata_file)
 
 # kom ihåg att KI är ett år före, och kommer leverera data under innevarande år, därav
 # en egen rad för dem.
 converter <- converter %>%
+    
   # standard:
   mutate(euro = format(round(0.0941*sek, 2), nsmall = 2)) %>% #valutakurs 2022 hämtad från 
   # https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/
