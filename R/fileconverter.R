@@ -7,13 +7,13 @@ library(readxl)
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'su'
+organisation <- 'hb'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2022'
 
 # what's the name of the file to be converted?
-indata_file <- str_c('data/', organisation, '/original_data/apc_su_2022.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/hb_2022.xlsx')
 
 # tu_file <- tibble(
 #   institution = character(),
