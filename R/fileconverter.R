@@ -7,13 +7,13 @@ library(readxl)
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'gih'
+organisation <- 'ki'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
-timeperiod_data <- '2022'
+timeperiod_data <- '2022_q2-q4'
 
 # what's the name of the file to be converted?
-indata_file <- str_c('data/', organisation, '/original_data/gih_2022.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/APC-data Q2-Q4 2022 till KB.xlsx')
 
 # tu_file <- tibble(
 #   institution = character(),
@@ -42,8 +42,8 @@ converter <- converter %>%
   # standard:
   mutate(euro = format(round(0.0941*sek, 2), nsmall = 2)) %>% #valutakurs 2022 hämtad från 
   # https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/
-  # KI (ett år före, kvartalsvisa medelvärden):
-  # mutate(euro = format(round(0.0954*sek, 2), nsmall = 2)) %>% #valutakurs 2022 q1 hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/ (månadsgenomsnitt)    select(-sek) %>%
+  # KI (kvartalsvisa medelvärden):
+  # mutate(euro = format(round(0.0937*sek, 2), nsmall = 2)) %>% #valutakurs 2022 q2-q4 hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/ (månadsgenomsnitt)    select(-sek) %>%
   select(-sek) %>%
   select(institution, period, euro, doi, is_hybrid, publisher, journal_full_title, issn, issn_print, issn_electronic, url)
 
