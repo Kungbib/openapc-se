@@ -7,13 +7,13 @@ library(readxl)
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'gih'
+organisation <- 'uu'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2022'
 
 # what's the name of the file to be converted?
-indata_file <- str_c('data/', organisation, '/original_data/gih_2022.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/uu_2022.xlsx')
 
 # tu_file <- tibble(
 #   institution = character(),
@@ -35,7 +35,8 @@ check_initiative_file <- str_c('data/',organisation,'/','check_initiative_',orga
 column_types <- c("text", "numeric", "numeric", "text", "logical", "text", "text", "text", "text", "text", "text")
 converter <- read_xlsx(indata_file, col_types = column_types)
 # converter <- read_csv(indata_file)
-
+doi_check <- subset(converter, str_detect(doi, "[\\s]")) # hittar mellanslag i doi
+doi_dubbletter <- subset(converter, duplicated(doi)) # hittar doi_dubbletter
 # kom ihåg att KI är ett år före, och kommer leverera data under innevarande år, därav
 # en egen rad för dem.
 converter <- converter %>%
@@ -59,9 +60,9 @@ bibsam_data <- read_csv("data/19_21_bibsam_data.csv")
 with_dois_checked <- anti_join(with_dois, bibsam_data, by = "doi")
 check_bibsam <- semi_join(with_dois, bibsam_data, by = "doi")
 
-# sätt tillbaka de som inte har DOIs
-all_data <- rbind(with_dois_checked, without_dois)
-
+# # sätt tillbaka de som inte har DOIs 
+# all_data <- rbind(with_dois_checked, without_dois)
+# # läggs nu tillbaka senare i processen
 
 # Open APC Initiative check -----------------------------------------------
 
@@ -71,7 +72,8 @@ all_data <- rbind(with_dois_checked, without_dois)
 
 openapcinitiative_data <- read_csv("data/apc_de.csv")
 check_initiative <- inner_join(with_dois, openapcinitiative_data, by = "doi")
-for_sending_to_initiative <- anti_join(with_dois_checked, check_initiative, by = "doi")
+for_sending_to_initiative <- anti_join(with_dois_checked, check_initiative, by = "doi") %>% 
+    rbind(without_dois) # lägger tillbaka de utan doi
 
 
 # Skriv till filer --------------------------------------------------------
