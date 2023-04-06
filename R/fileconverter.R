@@ -7,13 +7,13 @@ library(readxl)
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'ki'
+organisation <- 'gu'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
-timeperiod_data <- '2022_q2-q4'
+timeperiod_data <- '2022'
 
 # what's the name of the file to be converted?
-indata_file <- str_c('data/', organisation, '/original_data/APC-data Q2-Q4 2022 till KB.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/gu_2022.xlsx')
 
 # tu_file <- tibble(
 #   institution = character(),
@@ -72,8 +72,8 @@ check_bibsam <- semi_join(with_dois, bibsam_data, by = "doi")
 
 openapcinitiative_data <- read_csv("data/apc_de.csv")
 check_initiative <- inner_join(with_dois, openapcinitiative_data, by = "doi")
-for_sending_to_initiative <- anti_join(with_dois_checked, check_initiative, by = "doi") %>% 
-    rbind(without_dois) # lägger tillbaka de utan doi
+for_sending_to_initiative <- anti_join(with_dois_checked, check_initiative, by = "doi") 
+for_sending_to_initiative <- rbind(for_sending_to_initiative, without_dois) # lägger tillbaka de utan doi
 
 
 # Skriv till filer --------------------------------------------------------
