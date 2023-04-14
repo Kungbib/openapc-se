@@ -3,6 +3,9 @@
 library(tidyverse)
 library(readxl)
 library(openxlsx)
+library(yaml)
+
+config <- yaml.load_file("open_apc_config.yml")
 
 year_to_analyse = 2022
 
@@ -10,7 +13,7 @@ year_to_analyse = 2022
 de_data <- read_csv("https://raw.githubusercontent.com/OpenAPC/openapc-de/master/data/apc_de.csv")
 
 # read organisations from Forskningssamverkansstatistik/help_files
-org_help_table <- read_xlsx("/Volumes/Org-kataloger/Arbetsgrupper/Forskningssamverkanstatistik/help_files/orgs_tables.xlsx")
+org_help_table <- read_xlsx(config$org_help_file[1])
 
 # filter SWE data
 swe_data <- filter(de_data, institution %in% org_help_table$open_apc_name)
@@ -22,4 +25,4 @@ summary_swe_data <- filter(swe_data, period == year_to_analyse) %>%
 write_csv(swe_data, "result_files/apc_swe.csv")
 
 # write Excel-fil for Bibsam on Forskningssamverkansstatistik
-write.xlsx(swe_data, "/Volumes/Org-kataloger/Arbetsgrupper/Forskningssamverkanstatistik/for_bibsam/apc_swe.xlsx")
+write.xlsx(swe_data, config$xlsx_file[1])
