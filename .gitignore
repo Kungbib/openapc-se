@@ -19,3 +19,6 @@ python/__pycache__/
 
 # exclude German (Open APC Initiative) data
 data/apc_de.csv
+
+# exclude config-file
+open_apc_config.yml
