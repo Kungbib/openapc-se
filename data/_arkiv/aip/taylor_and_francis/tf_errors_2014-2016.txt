@@ -1,0 +1,7 @@
+ERROR: Line 6: Crossref: Error while trying to resolve DOI 10.3109/03009734.2015.1044055: HTTPError: 404 - Not Found
+ERROR: Line 61: Crossref: Error while trying to resolve DOI 10.1080/16512235.2017.1281963: HTTPError: 404 - Not Found
+ERROR: Line 62: Crossref: Error while trying to resolve DOI 10.1080/16512235.2017.1281946: HTTPError: 404 - Not Found
+ERROR: Line 63: Crossref: Error while trying to resolve DOI 10.1080/03009734.2017.1285374: HTTPError: 404 - Not Found
+ERROR: Line 64: Crossref: Error while trying to resolve DOI 10.1080/03009734.2017.1285836: HTTPError: 404 - Not Found
+ERROR: Line 95: Crossref: Error while trying to resolve DOI 10.1080/21693277.2014.898219: HTTPError: 404 - Not Found
+ERROR: Line 283: Crossref: Error while trying to resolve DOI 10.1080/15592324.2014.1003753: HTTPError: 404 - Not Found
