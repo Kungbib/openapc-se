@@ -14,8 +14,10 @@ bibsam_data <- read_csv("https://raw.githubusercontent.com/Kungbib/oa-tskr/maste
 apc_agreements <- c("mdpi", "frontiers")
 
 # första mängden utgörs av de transformativa avtalen:  
+# fär närvarande (230825) skickas Springer in separat så dessa filtreras bort.
 transformative_bibsam_data <- bibsam_data %>%
-  filter(!publisher %in% apc_agreements)
+  filter(!publisher %in% apc_agreements,
+         publisher != "springer_nature")
 
 # andra mängden är de som betalas per artikel:
 apc_bibsam_data <- bibsam_data %>%
