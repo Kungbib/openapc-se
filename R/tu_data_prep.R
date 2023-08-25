@@ -8,7 +8,7 @@ library(yaml)
 tu_year = 2022
 conversion_rate = 0.094 # rate sek to euro, use average between conversion rates KI and others
 
-# select TU year from apc_swe-data
+# select TU year from apc_swe-data (to prepare swe_data see script extract_swe_data.R)
 swe_data <- read_csv("result_files/apc_swe.csv") %>% 
     filter(period == tu_year)
 
