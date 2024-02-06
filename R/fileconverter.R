@@ -7,13 +7,13 @@ library(readxl)
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'lnu'
+organisation <- 'hig'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
-timeperiod_data <- '2022'
+timeperiod_data <- '2023'
 
 # what's the name of the file to be converted?
-indata_file <- str_c('data/', organisation, '/original_data/lnu_2022.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/HIG_APC_2023.xlsx')
 
 # tu_file <- tibble(
 #   institution = character(),
@@ -41,7 +41,8 @@ doi_dubbletter <- subset(converter, duplicated(doi)) # hittar doi_dubbletter
 # en egen rad för dem.
 converter <- converter %>%
   # standard:
-  mutate(euro = format(round(0.0941*sek, 2), nsmall = 2)) %>% #valutakurs 2022 hämtad från 
+  mutate(euro = format(round(0.0871*sek, 2), nsmall = 2)) %>% 
+  # valutakurs 2023 hämtad från 
   # https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/
   # KI (kvartalsvisa medelvärden):
   # mutate(euro = format(round(0.0937*sek, 2), nsmall = 2)) %>% #valutakurs 2022 q2-q4 hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/ (månadsgenomsnitt)    select(-sek) %>%
@@ -56,7 +57,9 @@ without_dois <- filter(converter, is.na(doi))
 with_dois <- filter(converter, !(is.na(doi)))
 
 # tvätta mot Bibsams publiceringsdata (se till att använda uppdaterad fil)
-bibsam_data <- read_csv("data/19_21_bibsam_data.csv")
+# bibsam_data <- read_csv("data/19_21_bibsam_data.csv") ändrat till att läsa filen från GitHUB
+bibsam_data <- read_csv("https://raw.githubusercontent.com/Kungbib/oa-tskr/master/Bibsam_artikeldata/19_22_bibsam_data.csv")
+
 with_dois_checked <- anti_join(with_dois, bibsam_data, by = "doi")
 check_bibsam <- semi_join(with_dois, bibsam_data, by = "doi")
 
@@ -70,7 +73,9 @@ check_bibsam <- semi_join(with_dois, bibsam_data, by = "doi")
 # samma lärosäte men då förmodligen olika kostnad, eller av två separata lärosäten:
 # apc_de-filen behöver uppdateras kontinuerligt. Kan ersättas av den kommande svenska totalfilen.
 
-openapcinitiative_data <- read_csv("data/apc_de.csv")
+# har bytt till att läsa den senaste från tyska git
+# openapcinitiative_data <- read_csv("data/apc_de.csv")
+openapcinitiative_data <- read_csv("https://raw.githubusercontent.com/OpenAPC/openapc-de/master/data/apc_de.csv")
 check_initiative <- inner_join(with_dois, openapcinitiative_data, by = "doi")
 for_sending_to_initiative <- anti_join(with_dois_checked, check_initiative, by = "doi") 
 for_sending_to_initiative <- rbind(for_sending_to_initiative, without_dois) # lägger tillbaka de utan doi
@@ -78,9 +83,13 @@ for_sending_to_initiative <- rbind(for_sending_to_initiative, without_dois) # l�
 
 # Skriv till filer --------------------------------------------------------
 
+# check_bibsam och check_initiativ skrivs nu bara om publikationer redan finns i Bibsams eller OpenAPCs data
 write_csv(for_sending_to_initiative, outdata_file, na = '')
-write_csv(check_bibsam, check_bibsam_file, na = '')
-write_csv(check_initiative, check_initiative_file, na = '')
+if (nrow(check_bibsam) > 0) write_csv(check_bibsam, check_bibsam_file, na = '')
+if (nrow(check_initiative) > 0) write_csv(check_initiative, check_initiative_file, na = '')
+
+# write_csv(check_bibsam, check_bibsam_file, na = '')
+# write_csv(check_initiative, check_initiative_file, na = '')
 
 
 
