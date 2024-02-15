@@ -1,9 +1,11 @@
 # About Open APC Sweden
 
 
-Open APC Sweden is a project initiated by the National Library of Sweden together with Swedish higher education institutions (HEIs) in order to investigate the possibilities of establishing an transparent open access publication cost system. 
+Open APC Sweden was initially a project by the National Library of Sweden together with Swedish higher education institutions (HEIs) in order to investigate the possibilities of establishing an transparent open access publication cost system. 
 
-In order to establish Open APC Sweden there is a great need for a concerted effort by stakeholders. The current project aims to keep the Swedish HEI sector informed about ways in which to monitor the total cost of publication, which includes the collection of APCs. 
+The project aimed at keeping the Swedish HEI sector informed about ways in which to monitor the total cost of publication, which includes the collection of APCs. In order to establish Open APC Sweden there is a great need for a concerted effort by stakeholders. 
+
+As of today 25 HEI are reporting data to Open APC Sweden. 
 
 ## Aim
 
@@ -20,7 +22,7 @@ Please see the [project wiki](https://github.com/Kungbib/openapc-se/wiki) for mo
 ## Acknowledgement  
 This project follows the [Open APC Initiative](https://github.com/OpenAPC/openapc-de) to share data on paid APCs. It recognises efforts from [JISC](https://www.jisc-collections.ac.uk/Jisc-Monitor/APC-data-collection/) and [FWF](https://figshare.com/articles/Austrian_Science_Fund_FWF_Publication_Cost_Data_2014/1378610) to standardise APC reporting.    
 
-Swedish Open APC data is collected by the Open APC Initiative, and the current status in Europe is available at the [INTACT project](https://treemaps.intact-project.org/). Please note that due to data cleaning differences, the results may differ between Open APC Sweden and the Opena APC Initiative.
+Swedish Open APC data is collected by the Open APC Initiative, and the current status in Europe is available at the [Open APC](https://treemaps.openapc.net/apcdata/openapc/). Please note that due to data cleaning differences, the results may differ between Open APC Sweden and the Open APC Initiative.
 
 ## Pilot contributors 
 
@@ -37,4 +39,4 @@ See [guidelines for contribution of data](https://github.com/Kungbib/openapc-se/
 ## Contact
 **openaccess [at] kb.se**
 
-[Page updated 2022-02-14] 
+[Page updated 2024-02-15] 
