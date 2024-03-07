@@ -24,19 +24,40 @@ This project follows the [Open APC Initiative](https://github.com/OpenAPC/openap
 
 Swedish Open APC data is collected by the Open APC Initiative, and the current status in Europe is available at the [Open APC](https://treemaps.openapc.net/apcdata/openapc/). Please note that due to data cleaning differences, the results may differ between Open APC Sweden and the Open APC Initiative.
 
-## Pilot contributors 
-
-1. KTH Royal Institute of Techonology (kth)
-2. Stockholm University (su)
-3. Swedish University of Agricultural Sciences (slu)
-4. University of Gothenburg (gu)
-5. Dalarna University College (du)
-6. Linköping University (liu) 
-
 ## Contributing APC data
 See [guidelines for contribution of data](https://github.com/Kungbib/openapc-se/wiki/Instructions-for-data-entry) in the project Wiki.
+
+## Contributors 
+(\*Pilot contributor)
+
+Blekinge Institute of Technology (bth) \
+\*Dalarna University College (du) \
+Halmstad University (hh) \
+Jönköping University (ju) \
+Karlstad University (kau) \
+Karolinska Institute (ki) \
+\*KTH Royal Institute of Techonology (kth) \
+\*Linköping University (liu) \
+Linnaeus University (lnu) \
+Luleå University of Technology (ltu) \
+Lund University (lu) \
+Malmö University (mau) \
+Mälardalen University (mdu) \
+Stockholm School of Economics (hhs) \
+Stockholm University (su), pilot contributor \
+Swedish School of Sport and Health Sciences (gih) \
+\*Swedish University of Agricultural Sciences (slu) \
+Södertörn University (sh) \
+University of Borås (hb) \
+\*University of Gothenburg (gu) \
+University of Gävle (hig) \
+University of Skövde (his) \
+University West (hv) \
+Uppsala University (uu) \
+Örebro University (oru) \
+
 
 ## Contact
 **openaccess [at] kb.se**
 
-[Page updated 2024-02-15] 
+[Page updated 2024-03-07] 
