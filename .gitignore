@@ -24,5 +24,6 @@ data/apc_de.csv
 # exclude config-file
 open_apc_config.yml
 
-# exclude local script_testing.R for script testing
+# exclude local script_testing.R
 R/script_testing.R
+R/snippets.R
