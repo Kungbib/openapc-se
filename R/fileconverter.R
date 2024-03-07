@@ -1,3 +1,5 @@
+# script for preparing data for Open APC Initiative, converting SEK to EUR
+# Johan Fröberg (based on Camilla Lindelöws original)
 
 # required libraries ------------------------------------------------------
 library(tidyverse)
@@ -16,18 +18,19 @@ column_types <- c("text", "numeric", "numeric", "text", "logical", "text", "text
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'kth'
+organisation <- 'kau'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2023'
 
 # what's the name of the file or files to be converted?
-indata_file <- str_c('data/', organisation, '/original_data/apc_kth_2023.xlsx')
-
+# indata_file <- str_c('data/', organisation, '/original_data/APC-kostnader 2023_Malmö universitet_till KB.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/apc_komplettering2022.xlsx')
 # indata_file2 <- str_c('data/', organisation, '/original_data/apc_liu_ht2023.xlsx')
 
 # outdata_file_dois <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperiod_data,'_dois.csv')
 # outdata_file_non_dois <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperiod_data,'_non_dois.csv')
+# outdata_file <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperiod_data,'_additions','.csv') # for additions
 outdata_file <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperiod_data,'.csv')
 check_bibsam_file <- str_c('data/',organisation,'/','check_bibsam_',organisation,'_',timeperiod_data,'.csv')
 check_initiative_file <- str_c('data/',organisation,'/','check_initiative_',organisation,'_',timeperiod_data,'.csv')
@@ -90,9 +93,10 @@ high_apcs <- filter(indata, sek > 80000)
 # en egen rad för dem.
 converter <- indata %>%
   # standard:
-  mutate(euro = format(round(0.0871*sek, 2), nsmall = 2)) %>% 
-  # valutakurs 2023 hämtad från 
-  # https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/
+  mutate(euro = format(round(0.0871 *sek, 2), nsmall = 2)) %>% 
+  # valutakurs 2023 0.0871 
+  # hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/
+    # valutakurs 2022 0.0941
   
   # KI (kvartalsvisa medelvärden):
   # mutate(euro = format(round(0.0937*sek, 2), nsmall = 2)) %>% #valutakurs 2022 q2-q4 hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/ (månadsgenomsnitt)    select(-sek) %>%
@@ -139,30 +143,5 @@ write_csv(for_sending_to_initiative, outdata_file, na = '')
 if (nrow(check_bibsam) > 0) write_csv(check_bibsam, check_bibsam_file, na = '')
 if (nrow(check_initiative) > 0) write_csv(check_initiative, check_initiative_file, na = '')
 
-# write_csv(check_bibsam, check_bibsam_file, na = '')
-# write_csv(check_initiative, check_initiative_file, na = '')
 
-
-
-
-# Gammal kod, gå igenom ---------------------------------------------------
-
-# tu_data <- rbind(tu_file, converter_checked)
-tu_data <- rbind(tu_data, converter_checked)
-
-
-#när alla är inlästa
-tu_data_all <- tu_data %>%
-  filter(period == 2021)
-
-write_csv(tu_data_all, "data/tu_data_open_apc_se.csv", na = '')
-
-# converter_dois <- converter %>%
-#     filter(!(is.na(doi))) %>%
-#     select(institution, period, euro, doi, is_hybrid, publisher)
-# 
-# converter_non_dois <- filter(converter, (is.na(doi)))
-
-# write_tsv(converter_dois, outdata_file_dois, na = '')
-# write_tsv(converter_non_dois, outdata_file_non_dois, na = '')
 
