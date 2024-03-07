@@ -54,7 +54,7 @@ University of Gävle (hig) \
 University of Skövde (his) \
 University West (hv) \
 Uppsala University (uu) \
-Örebro University (oru) \
+Örebro University (oru)
 
 
 ## Contact
