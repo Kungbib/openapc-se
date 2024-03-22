@@ -18,14 +18,14 @@ column_types <- c("text", "numeric", "numeric", "text", "logical", "text", "text
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'sh'
+organisation <- 'slu'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
-timeperiod_data <- '2023'
+timeperiod_data <- '2022'
 
 # what's the name of the file or files to be converted?
 # indata_file <- str_c('data/', organisation, '/original_data/APC-kostnader 2023_Malmö universitet_till KB.xlsx')
-indata_file <- str_c('data/', organisation, '/original_data/apc_sh_2023.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/slu_apc_2022.csv')
 # indata_file2 <- str_c('data/', organisation, '/original_data/apc_liu_ht2023.xlsx')
 
 # outdata_file_dois <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperiod_data,'_dois.csv')
@@ -52,6 +52,18 @@ indata <- read_xlsx(indata_file, col_types = column_types)
 
 # # if multiple indata fiels
 # indata <- bind_rows(read_xlsx(indata_file, col_types = column_types), read_xlsx(indata_file2, col_types = column_types))
+
+# csv import
+indata <- read_csv2(indata_file)
+
+# add columns if only five supplied
+indata <- mutate(indata,
+                 publisher = NA,
+                 journal_full_title = NA, 
+                 issn = NA,
+                 issn_print = NA,
+                 issn_electronic = NA, 
+                 url = NA)
 
 # check column names creates character string with wrong names
 check_column_names <- setdiff(colnames(indata), column_names) 
@@ -97,7 +109,11 @@ high_apcs <- filter(indata, sek > 80000)
 # en egen rad för dem.
 converter <- indata %>%
   # standard:
-  mutate(euro = format(round(0.0871 *sek, 2), nsmall = 2)) %>% 
+  mutate(euro = case_when(period == 2023 ~ format(round(0.0871 * sek, 2), nsmall = 2),
+                          period == 2022 ~ format(round(0.0941 * sek, 2), nsmall = 2),
+                          period == 2021 ~ format(round(0.0986 * sek, 2), nsmall = 2),
+                          TRUE ~ NA)
+         ) %>% 
   # valutakurs 2023 0.0871 
   # hämtad från https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/
     # valutakurs 2022 0.0941
