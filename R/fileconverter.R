@@ -6,7 +6,7 @@ library(tidyverse)
 library(readxl)
 
 # clean environment when doing several consecutive runs, keep bibsam- and openapc-data
-rm(check_bibsam, check_initiative, converter, doi_check, doi_dubbletter,
+rm(check_bibsam, check_initiative, converter, doi_check, doi_dubbletter_all,
    for_sending_to_initiative, with_dois, with_dois_checked, without_dois,
    check_bibsam_file, check_initiative_file, indata_file, outdata_file, 
    organisation, timeperiod_data, check_org_period, indata, high_apcs, check_column_names)
@@ -18,14 +18,14 @@ column_types <- c("text", "numeric", "numeric", "text", "logical", "text", "text
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'kau'
+organisation <- 'sh'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2023'
 
 # what's the name of the file or files to be converted?
 # indata_file <- str_c('data/', organisation, '/original_data/APC-kostnader 2023_Malmö universitet_till KB.xlsx')
-indata_file <- str_c('data/', organisation, '/original_data/apc_komplettering2022.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/apc_sh_2023.xlsx')
 # indata_file2 <- str_c('data/', organisation, '/original_data/apc_liu_ht2023.xlsx')
 
 # outdata_file_dois <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperiod_data,'_dois.csv')
@@ -50,8 +50,8 @@ check_initiative_file <- str_c('data/',organisation,'/','check_initiative_',orga
 # reads indata file, gives error if number of columns are incorrect, if so add missing columns in excel
 indata <- read_xlsx(indata_file, col_types = column_types)
 
-# if multiple indata fiels
-indata <- bind_rows(read_xlsx(indata_file, col_types = column_types), read_xlsx(indata_file2, col_types = column_types))
+# # if multiple indata fiels
+# indata <- bind_rows(read_xlsx(indata_file, col_types = column_types), read_xlsx(indata_file2, col_types = column_types))
 
 # check column names creates character string with wrong names
 check_column_names <- setdiff(colnames(indata), column_names) 
@@ -80,7 +80,11 @@ indata <- mutate(indata,
 doi_check <- subset(indata, str_detect(doi, "[\\s]"))
 
 # find doi duplicates, if != 0 resolve with organisation alter and start over 
-doi_dubbletter <- subset(indata, duplicated(doi)) # hittar doi_dubbletter
+# doi_dubbletter <- subset(indata, duplicated(doi)) # hittar doi_dubbletter
+doi_dubbletter_all <- group_by(indata, doi) %>% 
+    filter(n() > 1) %>% 
+    ungroup() %>% 
+    arrange(doi)
 
 # find high apc:s, if any resolve with organisation
 high_apcs <- filter(indata, sek > 80000)
@@ -117,6 +121,9 @@ bibsam_data <- read_csv("https://raw.githubusercontent.com/Kungbib/oa-tskr/maste
 
 with_dois_checked <- anti_join(with_dois, bibsam_data, by = "doi")
 check_bibsam <- semi_join(with_dois, bibsam_data, by = "doi")
+
+# för att se info i bibsam-filen för eventeulla tidigare rapporterade publikationer
+# check_bibsam_info <- filter(bibsam_data, doi %in% check_bibsam$doi)
 
 # # sätt tillbaka de som inte har DOIs 
 # all_data <- rbind(with_dois_checked, without_dois)
