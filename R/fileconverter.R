@@ -18,14 +18,14 @@ column_types <- c("text", "numeric", "numeric", "text", "logical", "text", "text
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'hj'
+organisation <- 'gu'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2023'
 
 # what's the name of the file or files to be converted?
 # indata_file <- str_c('data/', organisation, '/original_data/APC-kostnader 2023_Malmö universitet_till KB.xlsx')
-indata_file <- str_c('data/', organisation, '/original_data/Open APC Sweden - JU-2023.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/apc_2023.xlsx')
 # indata_file2 <- str_c('data/', organisation, '/original_data/apc_liu_ht2023.xlsx')
 
 # outdata_file_dois <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperiod_data,'_dois.csv')
@@ -53,17 +53,17 @@ indata <- read_xlsx(indata_file, col_types = column_types)
 # # if multiple indata fiels
 # indata <- bind_rows(read_xlsx(indata_file, col_types = column_types), read_xlsx(indata_file2, col_types = column_types))
 
-# csv import
-indata <- read_csv2(indata_file)
+# # csv import
+# indata <- read_csv2(indata_file)
 
-# add columns if only five supplied
-indata <- mutate(indata,
-                 publisher = NA,
-                 journal_full_title = NA, 
-                 issn = NA,
-                 issn_print = NA,
-                 issn_electronic = NA, 
-                 url = NA)
+# # add columns if only five supplied
+# indata <- mutate(indata,
+#                  publisher = NA,
+#                  journal_full_title = NA, 
+#                  issn = NA,
+#                  issn_print = NA,
+#                  issn_electronic = NA, 
+#                  url = NA)
 
 # check column names creates character string with wrong names
 check_column_names <- setdiff(colnames(indata), column_names) 
