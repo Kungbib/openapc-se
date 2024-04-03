@@ -7,17 +7,20 @@ library(readxl)
 column_names <- c("institution", "period", "sek", "doi", "backlist_oa", "publisher", "book_title", "isbn_1", "isbn_2", "isbn_3")
 column_types <- c("text", "numeric", "numeric", "text", "logical", "text", "text", "text", "text", "text")
 
+# rm between consecutive runs
+rm(organisation, timeperiod_data, indata_file, outdata_file, check_initiative_file, indata,
+   check_column_names, doi_check, doi_dubbletter, converter, check_initiative, for_sending_to_initiative)
 
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'hj'
+organisation <- 'lnu'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2023'
 
 # what's the name of the file to be converted?
-indata_file <- str_c('data/', organisation, '/original_data/Open BPC Sweden - JU-2023.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/2023 OpenBPC Lnu.xlsx')
 
 outdata_file <- str_c('data/', organisation, '/bookpc_', organisation, '_', timeperiod_data, '.csv')
 check_initiative_file <- str_c('data/',organisation,'/','book_check_initiative_',organisation,'_',timeperiod_data,'.csv')
