@@ -15,13 +15,13 @@ rm(organisation, timeperiod_data, indata_file, outdata_file, check_initiative_fi
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'su'
+organisation <- 'uu'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2023'
 
 # what's the name of the file to be converted?
-indata_file <- str_c('data/', organisation, '/original_data/bpc_su_2023.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/OpenBPCuu2023.xlsx')
 
 outdata_file <- str_c('data/', organisation, '/bookpc_', organisation, '_', timeperiod_data, '.csv')
 check_initiative_file <- str_c('data/',organisation,'/','book_check_initiative_',organisation,'_',timeperiod_data,'.csv')
@@ -31,15 +31,25 @@ missing_doi_isbn_file <- str_c('data/', organisation, "/missing_doi_and_isbn_", 
 # conversion --------------------------------------------------------------
 indata <- read_xlsx(indata_file)
 
+# add columns
+indata <- mutate(indata,
+                 publisher = NA,
+                 book_title = NA,
+                 isbn_1 = NA,
+                 isbn_2 = NA,
+                 isbn_3 = NA)
+# remove extra column(s) 
+indata <- select(indata, -url) 
+
 # check column names creates character string with wrong names
 check_column_names <- setdiff(colnames(indata), column_names) 
 
 # if wrong names, rename all column names to correct
 indata <- rename_with(indata, ~ column_names)
 
-# remove extra column(s) and rows which have no doi or isbn, which first are written to separate table
-indata <- select(indata, -url) 
+# create table rows which have no doi or isbn
 missing_doi_isbn <- filter(indata, is.na(doi) & is.na(isbn_1))
+# remove rows which have no doi or isbn
 indata <- filter(indata, !is.na(doi) | !is.na(isbn_1))
 
 doi_check <- subset(indata, str_detect(doi, "[\\s]")) # hittar mellanslag i doi
