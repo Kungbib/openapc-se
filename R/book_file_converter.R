@@ -15,13 +15,13 @@ rm(organisation, timeperiod_data, indata_file, outdata_file, check_initiative_fi
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'sh'
+organisation <- 'su'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2023'
 
 # what's the name of the file to be converted?
-indata_file <- str_c('data/', organisation, '/original_data/bpc_sh_2023.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/bpc_su_2023.xlsx')
 
 outdata_file <- str_c('data/', organisation, '/bookpc_', organisation, '_', timeperiod_data, '.csv')
 check_initiative_file <- str_c('data/',organisation,'/','book_check_initiative_',organisation,'_',timeperiod_data,'.csv')
@@ -50,6 +50,7 @@ indata <- mutate(indata,
                  doi = if_else(str_starts(doi, "10."), doi, str_replace(doi, "^.*(?=10.*)", "")),
                  isbn_1 = str_replace_all(isbn_1, "-", "")
 )
+doi_check <- subset(indata, str_detect(doi, "[\\s]")) # hittar mellanslag i doi
 
 # hittar doi_dubbletter
 doi_dubbletter_all <- group_by(indata, doi) %>% 
