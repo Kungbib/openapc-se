@@ -27,3 +27,5 @@ open_apc_config.yml
 # exclude local script_testing.R
 R/script_testing.R
 R/snippets.R
+
+/result_files
