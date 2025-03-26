@@ -2,8 +2,6 @@
 library(tidyverse)
 library(readxl)
 
-# 2024: HV, HH
-
 add_costs_outdata_file <- str_c('data/',organisation,'/','add_costs_',organisation,'_',timeperiod_data,'.csv')
 
 add_costs <- read_xlsx(indata_file, sheet = 2) %>% 
