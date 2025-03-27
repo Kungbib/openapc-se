@@ -15,13 +15,13 @@ rm(organisation, timeperiod_data, indata_file, outdata_file, check_initiative_fi
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'uu'
+organisation <- 'hv'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
-timeperiod_data <- '2023'
+timeperiod_data <- '2024'
 
 # what's the name of the file to be converted?
-indata_file <- str_c('data/', organisation, '/original_data/OpenBPCuu2023.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/HV_2024_OA_BPC.xlsx')
 
 outdata_file <- str_c('data/', organisation, '/bookpc_', organisation, '_', timeperiod_data, '.csv')
 check_initiative_file <- str_c('data/',organisation,'/','book_check_initiative_',organisation,'_',timeperiod_data,'.csv')
@@ -29,7 +29,11 @@ missing_doi_isbn_file <- str_c('data/', organisation, "/missing_doi_and_isbn_", 
 
 
 # conversion --------------------------------------------------------------
-indata <- read_xlsx(indata_file)
+indata <- read_xlsx(indata_file, col_types = column_types) 
+# %>% # %>% mutate(institution = organisation) 
+#     filter(doi != "Ej ännu publicerad") %>% 
+#     filter(!str_detect(Kommentar, "Kapitel")) %>% 
+#     select(-Kommentar)
 
 # add columns
 indata <- mutate(indata,
@@ -48,9 +52,9 @@ check_column_names <- setdiff(colnames(indata), column_names)
 indata <- rename_with(indata, ~ column_names)
 
 # create table rows which have no doi or isbn
-missing_doi_isbn <- filter(indata, is.na(doi) & is.na(isbn_1))
+missing_doi_isbn <- filter(indata, is.na(doi) & is.na(isbn_1) & is.na(isbn_2) & is.na(isbn_3))
 # remove rows which have no doi or isbn
-indata <- filter(indata, !is.na(doi) | !is.na(isbn_1))
+indata <- filter(indata, !is.na(doi) | !is.na(isbn_1) | !is.na(isbn_2) | !is.na(isbn_3))
 
 doi_check <- subset(indata, str_detect(doi, "[\\s]")) # hittar mellanslag i doi
 
@@ -61,6 +65,8 @@ indata <- mutate(indata,
                  isbn_1 = str_replace_all(isbn_1, "-", "")
 )
 doi_check <- subset(indata, str_detect(doi, "[\\s]")) # hittar mellanslag i doi
+
+indata <- mutate(indata, across( 8:10, ~ str_remove_all(.x, "-")))
 
 # hittar doi_dubbletter
 doi_dubbletter_all <- group_by(indata, doi) %>% 
@@ -75,7 +81,7 @@ isbn_dubbletter_all <- group_by(indata, isbn_1) %>%
 
 converter <- indata %>%
   # standard:
-  mutate(euro = format(round(0.0871*sek, 2), nsmall = 2)) %>% # valutakurs 2022 0.0941 hämtad från 
+  mutate(euro = format(round(0.0875 * sek, 2), nsmall = 2)) %>% # valutakurs 2022 0.0941 hämtad från 
   # https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/
   select(-sek) %>%
   relocate(euro, .after = period)

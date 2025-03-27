@@ -19,14 +19,14 @@ column_types <- c("text", "numeric", "numeric", "text", "logical", "text", "text
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'kth'
+organisation <- 'slu'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2024'
 
 # what's the name of the file or files to be converted?
 # indata_file <- str_c('data/', organisation, '/original_data/APC-kostnader 2023_Malmö universitet_till KB.xlsx')
-indata_file <- str_c('data/', organisation, '/original_data/apc_kth_2024.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/slu_apc_2024.csv')
 # indata_file2 <- str_c('data/', organisation, '/original_data/apc_liu_ht2023.xlsx')
 
 # outdata_file_dois <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperiod_data,'_dois.csv')
@@ -98,6 +98,9 @@ doi_dubbletter_all <- group_by(indata, doi) %>%
     filter(n() > 1) %>% 
     ungroup() %>% 
     arrange(doi)
+
+# # filter rows with wrong apc or other
+# indata <- filter(indata, !(doi == "10.3390/buildings14103160" & sek == 1560)) SLU 2024
 
 # find high apc:s, if any resolve with organisation
 high_apcs <- filter(indata, sek > 80000)
