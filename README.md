@@ -50,6 +50,7 @@ Linnaeus University (lnu) \
 Luleå University of Technology (ltu) \
 Lund University (lu) \
 Malmö University (mau) \
+Mittuniversitetet (miun) \
 Mälardalen University (mdu) \
 Stockholm School of Economics (hhs) \
 Stockholm University (su), pilot contributor \
