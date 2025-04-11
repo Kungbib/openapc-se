@@ -19,14 +19,15 @@ column_types <- c("text", "numeric", "numeric", "text", "logical", "text", "text
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'slu'
+organisation <- 'hkr'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2024'
 
 # what's the name of the file or files to be converted?
 # indata_file <- str_c('data/', organisation, '/original_data/APC-kostnader 2023_Malmö universitet_till KB.xlsx')
-indata_file <- str_c('data/', organisation, '/original_data/slu_apc_2024.csv')
+indata_file <- str_c('data/', organisation, '/original_data/HKR_OpenAPC_2024.xlsx')
+# indata_file_parttwo <- str_c('data/', organisation, '/original_data/Open APC LiU 2024HT.xlsx')
 # indata_file2 <- str_c('data/', organisation, '/original_data/apc_liu_ht2023.xlsx')
 
 # outdata_file_dois <- str_c('data/',organisation,'/','apc_',organisation,'_',timeperiod_data,'_dois.csv')
@@ -50,6 +51,9 @@ check_initiative_file <- str_c('data/',organisation,'/','check_initiative_',orga
 
 # reads indata file, gives error if number of columns are incorrect, if so add missing columns in excel
 indata <- read_xlsx(indata_file, col_types = column_types)
+# indata_parttwo <- read_xlsx(indata_file_parttwo, col_types = column_types)
+# 
+# indata <- bind_rows(indata, indata_parttwo)
 
 # # if multiple indata files
 # indata <- bind_rows(read_xlsx(indata_file, col_types = column_types), read_xlsx(indata_file2, col_types = column_types))
@@ -58,13 +62,14 @@ indata <- read_xlsx(indata_file, col_types = column_types)
 # indata <- read_csv2(indata_file)
 # 
 # # # add columns if only five supplied
-# indata <- mutate(indata,
-#                  publisher = NA,
-#                  journal_full_title = NA,
-#                  issn = NA,
-#                  issn_print = NA,
-#                  issn_electronic = NA,
-#                  url = NA)
+indata <- mutate(indata,
+                 publisher = NA,
+                 journal_full_title = NA,
+                 issn = NA,
+                 issn_print = NA,
+                 issn_electronic = NA,
+                 url = NA) %>% 
+    select(-"...7")
 
 # check column names creates character string with wrong names
 check_column_names <- setdiff(colnames(indata), column_names) 

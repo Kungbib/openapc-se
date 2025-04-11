@@ -2,6 +2,8 @@
 library(tidyverse)
 library(readxl)
 
+# indata_file <- str_c('data/', organisation, '/original_data/apc_bth_additional_costs-2024.csv')
+
 add_costs_outdata_file <- str_c('data/',organisation,'/','add_costs_',organisation,'_',timeperiod_data,'.csv')
 
 add_costs <- read_xlsx(indata_file, sheet = 2) %>% 

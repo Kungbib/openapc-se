@@ -15,13 +15,15 @@ rm(organisation, timeperiod_data, indata_file, outdata_file, check_initiative_fi
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'hv'
+organisation <- 'liu'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2024'
 
 # what's the name of the file to be converted?
-indata_file <- str_c('data/', organisation, '/original_data/HV_2024_OA_BPC.xlsx')
+# indata_file <- str_c('data/', organisation, '/original_data/Miun bpc_template 2024.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/KB-mall 2024VT.xlsx')
+indata_file_parttwo <- str_c('data/', organisation, '/original_data/Open APC LiU 2024HT.xlsx')
 
 outdata_file <- str_c('data/', organisation, '/bookpc_', organisation, '_', timeperiod_data, '.csv')
 check_initiative_file <- str_c('data/',organisation,'/','book_check_initiative_',organisation,'_',timeperiod_data,'.csv')
@@ -29,7 +31,11 @@ missing_doi_isbn_file <- str_c('data/', organisation, "/missing_doi_and_isbn_", 
 
 
 # conversion --------------------------------------------------------------
-indata <- read_xlsx(indata_file, col_types = column_types) 
+indata <- read_xlsx(indata_file, sheet = 2, col_types = column_types) 
+
+indata_parttwo <- read_xlsx(indata_file_parttwo, sheet = 2, col_types = column_types)
+
+indata <- bind_rows(indata, indata_parttwo)
 # %>% # %>% mutate(institution = organisation) 
 #     filter(doi != "Ej ännu publicerad") %>% 
 #     filter(!str_detect(Kommentar, "Kapitel")) %>% 
@@ -66,6 +72,7 @@ indata <- mutate(indata,
 )
 doi_check <- subset(indata, str_detect(doi, "[\\s]")) # hittar mellanslag i doi
 
+# för att ta bort - i ISBN
 indata <- mutate(indata, across( 8:10, ~ str_remove_all(.x, "-")))
 
 # hittar doi_dubbletter
