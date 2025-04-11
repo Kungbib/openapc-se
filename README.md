@@ -45,6 +45,7 @@ Jönköping University (ju) \
 Karlstad University (kau) \
 Karolinska Institute (ki) \
 \*KTH Royal Institute of Techonology (kth) \
+Kristianstad University (hkr) \
 \*Linköping University (liu) \
 Linnaeus University (lnu) \
 Luleå University of Technology (ltu) \
@@ -53,7 +54,7 @@ Malmö University (mau) \
 Mittuniversitetet (miun) \
 Mälardalen University (mdu) \
 Stockholm School of Economics (hhs) \
-Stockholm University (su), pilot contributor \
+\*Stockholm University (su)\
 Swedish School of Sport and Health Sciences (gih) \
 \*Swedish University of Agricultural Sciences (slu) \
 Södertörn University (sh) \
@@ -69,4 +70,4 @@ Uppsala University (uu) \
 ## Contact
 **openaccess [at] kb.se**
 
-[Page updated 2025-03-28] 
+[Page updated 2025-04-11] 
