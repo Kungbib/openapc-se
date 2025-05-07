@@ -5,7 +5,7 @@ Open APC Sweden was initially a project by the National Library of Sweden togeth
 
 The project aimed at keeping the Swedish HEI sector informed about ways in which to monitor the total cost of publication, which includes the collection of APCs. In order to establish Open APC Sweden there is a great need for a concerted effort by stakeholders. 
 
-As of today 26 HEI are reporting data to Open APC Sweden. 
+As of today 27 HEI are reporting data to Open APC Sweden. 
 
 ## Aim
 
