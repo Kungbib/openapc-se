@@ -19,14 +19,14 @@ column_types <- c("text", "numeric", "numeric", "text", "logical", "text", "text
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'hkr'
+organisation <- 'liu'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2024'
 
 # what's the name of the file or files to be converted?
 # indata_file <- str_c('data/', organisation, '/original_data/APC-kostnader 2023_Malmö universitet_till KB.xlsx')
-indata_file <- str_c('data/', organisation, '/original_data/HKR_OpenAPC_2024.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/KB-mall 2024VT.xlsx')
 # indata_file_parttwo <- str_c('data/', organisation, '/original_data/Open APC LiU 2024HT.xlsx')
 # indata_file2 <- str_c('data/', organisation, '/original_data/apc_liu_ht2023.xlsx')
 
@@ -86,16 +86,17 @@ indata <- mutate(indata,
                       period = timeperiod_data)
 
 # find spaces in doi
-doi_check <- subset(indata, str_detect(doi, "[\\s]"))
+doi_check <- subset(indata, str_detect(doi, "[\\s]") | !str_starts(doi, "10\\.") | str_starts(doi, "https:"))
 # remove spaces in doi and change doi to right format
 indata <- mutate(indata, 
                  # doi = str_replace(doi, "https://", ""),
                  doi = str_replace_all(doi, "[\\s]", ""),
-                 doi = if_else(str_starts(doi, "10."), doi, str_replace(doi, "^.*(?=10.*)", ""))
+                 doi = if_else(str_starts(doi, "0\\."), str_replace(doi, "^\\.*(?=0\\.*)", "1"), doi),
+                 doi = if_else(str_starts(doi, "10\\."), doi, str_replace(doi, "^\\.*(?=10\\.*)", "")),
+                 doi = str_to_lower(doi)
                  )
 
-
-doi_check <- subset(indata, str_detect(doi, "[\\s]"))
+doi_check <- subset(indata, str_detect(doi, "[\\s]") | !str_starts(doi, "10\\."))
 
 # find doi duplicates, if != 0 resolve with organisation alter and start over 
 # doi_dubbletter <- subset(indata, duplicated(doi)) # hittar doi_dubbletter
