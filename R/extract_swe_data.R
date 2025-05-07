@@ -7,7 +7,7 @@ library(yaml)
 
 config <- yaml.load_file("open_apc_config.yml")
 
-year_to_analyse = 2023
+year_to_analyse = 2024
 
 # read data from Open APC DE
 de_data <- read_csv("https://raw.githubusercontent.com/OpenAPC/openapc-de/master/data/apc_de.csv")
