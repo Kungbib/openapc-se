@@ -109,7 +109,6 @@ ot_publishers_total_2024 <- tribble(
 # MDPI from Open APC ------------------------------------------------------
 
 
-
 # mdpi from open_apc - non agreement institutions
 mdpi_open_apc <- tu_data_final %>% 
     filter(period == 2024 & publisher == "MDPI AG") 
@@ -124,7 +123,10 @@ mdpi_open_apc_per_org <- group_by(mdpi_open_apc, institution) %>%
     summarise(mdpi_open_apc = round(sum(sek, na.rm = TRUE), 0))
 
 
-# mdpi from Bibsam - agreement institutions data from ÅRSFILER to get what they actueall paid
+# MDPI from Bibsam --------------------------------------------------------
+
+
+# mdpi from Bibsam - agreement institutions data from ÅRSFILER to get what they actual paid
 mdpi_bibsam_orig <- read_xlsx("~/r/repos/normalisera_forlagsdata/ÅRSFILER 2024/mdpi_2024.xlsx") %>% 
     clean_names()
 
@@ -217,6 +219,21 @@ mdpi_2023_per_org <- bind_rows(mdpi_open_apc_per_org, mdpi_bibsam_per_org) %>%
     add_row(institution = "Södertörns University", mdpi = 0) 
 
 
+# TU summary --------------------------------------------------------------
+
+
+tu_summary <- left_join(tu_data_summary, mdpi_2023_per_org, by = "institution") %>% 
+    mutate(mdpi_typ = if_else(institution %in% mdpi_no_aggreement_institutions, "ej avtal", "avtal")) %>% 
+    add_row(institution = "Stockholm School of Economics", totalt = 0, mdpi = 0, mdpi_typ = "ej avtal") %>% 
+    arrange(institution) %>% 
+    rename("Lärosäte" = institution,
+           "OpenAPC exkl. MDPI, Frontiers, PLoS" = totalt,
+           MDPI = mdpi,
+           MDPI_typ = mdpi_typ)
+
+write.xlsx(tu_summary, tu_summary_file)
+
+
 # # Frontiers Open APC -------------------------------------------------------
 # frontiers_open_apc <- tu_data %>% 
 #     filter(period == 2023 & publisher == "Frontiers Media SA") %>% 
@@ -247,19 +264,3 @@ mdpi_2023_per_org <- bind_rows(mdpi_open_apc_per_org, mdpi_bibsam_per_org) %>%
 #     add_row(institution = "University of Skövde", PLoS = 0) %>% 
 #     add_row(institution = "University West", PLoS = 0) %>% 
 #     arrange(institution)
-
-
-
-# TU summary --------------------------------------------------------------
-
-
-tu_summary <- left_join(tu_data_summary, mdpi_2023_per_org, by = "institution") %>% 
-    mutate(mdpi_typ = if_else(institution %in% mdpi_no_aggreement_institutions, "ej avtal", "avtal")) %>% 
-    add_row(institution = "Stockholm School of Economics", totalt = 0, mdpi = 0, mdpi_typ = "ej avtal") %>% 
-    arrange(institution) %>% 
-    rename("Lärosäte" = institution,
-           "OpenAPC exkl. MDPI, Frontiers, PLoS" = totalt,
-           MDPI = mdpi,
-           MDPI_typ = mdpi_typ)
-
-write.xlsx(tu_summary, tu_summary_file)
