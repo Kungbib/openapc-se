@@ -15,15 +15,15 @@ rm(organisation, timeperiod_data, indata_file, outdata_file, check_initiative_fi
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'oru'
+organisation <- 'lnu'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
-timeperiod_data <- '2022-2024'
+timeperiod_data <- '2025'
 
 # what's the name of the file to be converted?
 # indata_file <- str_c('data/', organisation, '/original_data/Miun bpc_template 2024.xlsx')
-indata_file <- str_c('data/', organisation, '/original_data/oru_bpc_2022-2024.xlsx')
-indata_file_parttwo <- str_c('data/', organisation, '/original_data/Open APC LiU 2024HT.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/2025 OpenBPC Lnu.xlsx')
+# indata_file_parttwo <- str_c('data/', organisation, '/original_data/Open APC LiU 2024HT.xlsx')
 
 outdata_file <- str_c('data/', organisation, '/bookpc_', organisation, '_', timeperiod_data, '.csv')
 check_initiative_file <- str_c('data/',organisation,'/','book_check_initiative_',organisation,'_',timeperiod_data,'.csv')
@@ -60,8 +60,8 @@ indata <- rename_with(indata, ~ column_names)
 
 # create table rows which have no doi or isbn
 missing_doi_isbn <- filter(indata, is.na(doi) & is.na(isbn_1) & is.na(isbn_2) & is.na(isbn_3))
-# remove rows which have no doi or isbn
-indata <- filter(indata, !is.na(doi) | !is.na(isbn_1) | !is.na(isbn_2) | !is.na(isbn_3))
+# # remove rows which have no doi or isbn
+# indata <- filter(indata, !is.na(doi) | !is.na(isbn_1) | !is.na(isbn_2) | !is.na(isbn_3))
 
 doi_check <- subset(indata, str_detect(doi, "[\\s]")) # hittar mellanslag i doi
 
@@ -69,6 +69,7 @@ indata <- mutate(indata,
                  # doi = str_replace(doi, "https://", ""),
                  doi = str_replace_all(doi, "[\\s]", ""),
                  doi = if_else(str_starts(doi, "10."), doi, str_replace(doi, "^.*(?=10.*)", "")),
+                 doi = str_to_lower(doi),
                  isbn_1 = str_replace_all(isbn_1, "-", "")
 )
 doi_check <- subset(indata, str_detect(doi, "[\\s]")) # hittar mellanslag i doi
@@ -91,7 +92,8 @@ converter <- indata %>%
   # standard:
   # mutate(euro = format(round(0.0875 * sek, 2), nsmall = 2)) %>% # valutakurs 2022 0.0941 hämtad från 
   # https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/
-    mutate(euro = case_when(period == 2024 ~ format(round(0.0875 * sek, 2), nsmall = 2),
+    mutate(euro = case_when(period == 2025 ~ format(round(0.0904 * sek, 2), nsmall = 2),
+                            period == 2024 ~ format(round(0.0875 * sek, 2), nsmall = 2),
                             period == 2023 ~ format(round(0.0871 * sek, 2), nsmall = 2),
                             period == 2022 ~ format(round(0.0941 * sek, 2), nsmall = 2),
                             period == 2021 ~ format(round(0.0986 * sek, 2), nsmall = 2),

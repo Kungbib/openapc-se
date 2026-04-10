@@ -5,12 +5,26 @@
 library(tidyverse)
 library(readxl)
 
+# bibsam_data <- read_csv("data/19_21_bibsam_data.csv") 
+# ändrat till att läsa filen från GitHUB
+# bibsam_data <- read_csv("https://raw.githubusercontent.com/Kungbib/oa-tskr/master/Bibsam_artikeldata/19_24_bibsam_data.csv")
+bibsam_data <- read_csv("../normalisera_forlagsdata/result_files/19_25_bibsam_data.csv") %>% 
+    filter(doi != "10.1177/14034948251319382") %>% # för att ta bort sage publikation som ska vara med i OpenAPC enligt Henrik, se mejl
+    filter(publisher != "mdpi") %>% 
+    filter(!(publisher == "aps" & oa_type == "gold"))
+
+# har bytt till att läsa den senaste från tyska git
+# openapcinitiative_data <- read_csv("data/apc_de.csv")
+openapcinitiative_data <- read_csv("https://raw.githubusercontent.com/OpenAPC/openapc-de/master/data/apc_de.csv") %>% 
+    mutate(doi = str_to_lower(doi))
+
 # clean environment when doing several consecutive runs, keep bibsam- and openapc-data
 rm(check_bibsam, check_initiative, converter, doi_check, doi_dubbletter_all,
    for_sending_to_initiative, with_dois, with_dois_checked, without_dois,
    check_bibsam_file, check_bibsam_info, check_initiative_file, indata_file, outdata_file, 
-   organisation, timeperiod_data, check_org_period, indata, high_apcs, check_column_names,
-   add_costs, add_costs_for_sending, add_costs_outdata_file)
+   organisation, timeperiod_data, check_org_period, indata, high_apcs, check_column_names)
+
+rm(add_costs, add_costs_for_sending, add_costs_outdata_file, add_costs_not_sending, add_costs_not_sending_file)
 
 # definitions of column names and types
 column_names <- c("institution", "period", "sek", "doi", "is_hybrid", "publisher", "journal_full_title", "issn", "issn_print", "issn_electronic", "url")
@@ -19,14 +33,14 @@ column_types <- c("text", "numeric", "numeric", "text", "logical", "text", "text
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'liu'
+organisation <- 'lu'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
-timeperiod_data <- '2024'
+timeperiod_data <- '2025'
 
 # what's the name of the file or files to be converted?
 # indata_file <- str_c('data/', organisation, '/original_data/APC-kostnader 2023_Malmö universitet_till KB.xlsx')
-indata_file <- str_c('data/', organisation, '/original_data/KB-mall 2024VT.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/lu_apc_and_additional_costs_2025.xlsx')
 # indata_file_parttwo <- str_c('data/', organisation, '/original_data/Open APC LiU 2024HT.xlsx')
 # indata_file2 <- str_c('data/', organisation, '/original_data/apc_liu_ht2023.xlsx')
 
@@ -50,7 +64,9 @@ check_initiative_file <- str_c('data/',organisation,'/','check_initiative_',orga
 # code to represent check list in Handbok_openapcsweden
 
 # reads indata file, gives error if number of columns are incorrect, if so add missing columns in excel
-indata <- read_xlsx(indata_file, col_types = column_types)
+indata <- read_xlsx(indata_file, col_types = column_types) 
+
+# %>% filter(str_to_lower(institution) == "hh")
 # indata_parttwo <- read_xlsx(indata_file_parttwo, col_types = column_types)
 # 
 # indata <- bind_rows(indata, indata_parttwo)
@@ -59,7 +75,7 @@ indata <- read_xlsx(indata_file, col_types = column_types)
 # indata <- bind_rows(read_xlsx(indata_file, col_types = column_types), read_xlsx(indata_file2, col_types = column_types))
 
 # # # csv import
-# indata <- read_csv2(indata_file)
+# indata <- read_csv2(indata_file) %>% mutate(institution = str_to_lower(institution))
 # 
 # # # add columns if only five supplied
 indata <- mutate(indata,
@@ -80,10 +96,10 @@ indata <- rename_with(indata, ~ column_names)
 # check organisation and period
 check_org_period <- filter(indata, period != timeperiod_data | institution != organisation)
 
-# set correct organisation and period
-indata <- mutate(indata,
-                      institution = organisation, 
-                      period = timeperiod_data)
+# # set correct organisation and period
+# indata <- mutate(indata,
+#                       institution = organisation, 
+#                       period = timeperiod_data)
 
 # find spaces in doi
 doi_check <- subset(indata, str_detect(doi, "[\\s]") | !str_starts(doi, "10\\.") | str_starts(doi, "https:"))
@@ -105,6 +121,7 @@ doi_dubbletter_all <- group_by(indata, doi) %>%
     ungroup() %>% 
     arrange(doi)
 
+# indata <- distinct(indata, doi, .keep_all = TRUE)
 # # filter rows with wrong apc or other
 # indata <- filter(indata, !(doi == "10.3390/buildings14103160" & sek == 1560)) SLU 2024
 
@@ -116,10 +133,11 @@ high_apcs <- filter(indata, sek > 80000)
 # converter <- read_xlsx(indata_file2, col_types = column_types)
 
 # kom ihåg att KI är ett år före, och kommer leverera data under innevarande år, därav
-# en egen rad för dem.
+# en egen rad för dem. 
 converter <- indata %>%
   # standard:
-  mutate(euro = case_when(period == 2024 ~ format(round(0.0875 * sek, 2), nsmall = 2),
+  mutate(euro = case_when(period == 2025 ~ format(round(0.0904 * sek, 2), nsmall = 2),
+                          period == 2024 ~ format(round(0.0875 * sek, 2), nsmall = 2),
                           period == 2023 ~ format(round(0.0871 * sek, 2), nsmall = 2),
                           period == 2022 ~ format(round(0.0941 * sek, 2), nsmall = 2),
                           period == 2021 ~ format(round(0.0986 * sek, 2), nsmall = 2),
@@ -143,13 +161,6 @@ without_dois <- filter(converter, is.na(doi))
 with_dois <- filter(converter, !(is.na(doi)))
 
 # tvätta mot Bibsams publiceringsdata (se till att använda uppdaterad fil)
-# bibsam_data <- read_csv("data/19_21_bibsam_data.csv") 
-# ändrat till att läsa filen från GitHUB
-# bibsam_data <- read_csv("https://raw.githubusercontent.com/Kungbib/oa-tskr/master/Bibsam_artikeldata/19_24_bibsam_data.csv")
-
-bibsam_data <- read_csv("../normalisera_forlagsdata/result_files/19_24_bibsam_data.csv") %>% 
-    filter(publisher != "mdpi") %>% 
-    filter(!(publisher == "aps" & oa_type == "gold"))
 
 with_dois_checked <- anti_join(with_dois, bibsam_data, by = "doi")
 check_bibsam <- semi_join(with_dois, bibsam_data, by = "doi")
@@ -173,10 +184,9 @@ check_bibsam_info <- filter(bibsam_data, doi %in% check_bibsam$doi)
 # samma lärosäte men då förmodligen olika kostnad, eller av två separata lärosäten:
 # apc_de-filen behöver uppdateras kontinuerligt. Kan ersättas av den kommande svenska totalfilen.
 
-# har bytt till att läsa den senaste från tyska git
-# openapcinitiative_data <- read_csv("data/apc_de.csv")
-openapcinitiative_data <- read_csv("https://raw.githubusercontent.com/OpenAPC/openapc-de/master/data/apc_de.csv")
+
 check_initiative <- inner_join(with_dois, openapcinitiative_data, by = "doi")
+check_initiative_new <- semi_join(with_dois, openapcinitiative_data, by = "doi")
 for_sending_to_initiative <- anti_join(with_dois_checked, check_initiative, by = "doi") 
 for_sending_to_initiative <- rbind(for_sending_to_initiative, without_dois) # lägger tillbaka de utan doi
 
@@ -186,7 +196,7 @@ for_sending_to_initiative <- rbind(for_sending_to_initiative, without_dois) # l�
 # check_bibsam och check_initiativ skrivs nu bara om publikationer redan finns i Bibsams eller OpenAPCs data
 write_csv(for_sending_to_initiative, outdata_file, na = '')
 if (nrow(check_bibsam) > 0) write_csv(check_bibsam, check_bibsam_file, na = '')
-if (nrow(check_initiative) > 0) write_csv(check_initiative, check_initiative_file, na = '')
+if (nrow(check_initiative) > 0) write_csv(check_initiative_new, check_initiative_file, na = '')
 
 
 
