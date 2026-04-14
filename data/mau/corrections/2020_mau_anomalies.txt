@@ -1,0 +1,2 @@
+ERROR: Line 23: Crossref: Error while trying to resolve DOI 10.3290/j.ohpd.a44681: HTTPError: 404 - Not Found -> correct DOI not registered in Crossref, added webpage: https://www.quintessence-publishing.com/deu/de/article/842316/oral-health-and-preventive-dentistry/2020/01/why-do-adolescents-use-fluoride-toothpaste-a-qualitative-interview-investigation
+ERROR: Line 28: Crossref: Error while trying to resolve DOI 1660-4601/17/21/7738: Parse Error: '1660-4601/17/21/7738' is no valid DOI -> corrected to 10.3390/ijerph17217738
