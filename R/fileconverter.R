@@ -33,14 +33,14 @@ column_types <- c("text", "numeric", "numeric", "text", "logical", "text", "text
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'lu'
+organisation <- 'uu'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2025'
 
 # what's the name of the file or files to be converted?
 # indata_file <- str_c('data/', organisation, '/original_data/APC-kostnader 2023_Malmö universitet_till KB.xlsx')
-indata_file <- str_c('data/', organisation, '/original_data/lu_apc_and_additional_costs_2025_korr_2.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/UU Open APC Sweden 2025.xlsx')
 # indata_file_parttwo <- str_c('data/', organisation, '/original_data/lu_apc_additions_for_2021-2024.xlsx')
 # indata_file2 <- str_c('data/', organisation, '/original_data/apc_liu_ht2023.xlsx')
 
@@ -64,22 +64,19 @@ check_initiative_file <- str_c('data/',organisation,'/','check_initiative_',orga
 # code to represent check list in Handbok_openapcsweden
 
 # reads indata file, gives error if number of columns are incorrect, if so add missing columns in excel
-indata <- read_xlsx(indata_file, sheet = 1, col_types = column_types) %>% 
-    mutate(doi = if_else(is.na(doi) & sek == 37840.8, "10.56367/OAG-049-12345", doi),
-           issn = NA,
-           issn = if_else(is.na(doi) & sek == 10000.0, "1404-2614", issn))
+indata <- read_xlsx(indata_file, sheet = 1, col_types = column_types) 
 
 
 # %>% filter(!(doi == "10.1109/OJIM.2025.3613073" & sek == 2062.94))
 
 # %>% filter(str_to_lower(institution) == "hh")
-indata_parttwo <- read_xlsx(indata_file, sheet = 4) %>% 
-    mutate(period = year(period))
-
-indata_corrections <- read_xlsx(indata_file, sheet = 3, col_types = column_types)
+# indata_parttwo <- read_xlsx(indata_file, sheet = 4) %>% 
+#     mutate(period = year(period))
 # 
-indata <- anti_join(indata, indata_corrections, by = "doi") %>% 
-    bind_rows(indata_parttwo)
+# indata_corrections <- read_xlsx(indata_file, sheet = 3, col_types = column_types)
+# # 
+# indata <- anti_join(indata, indata_corrections, by = "doi") %>% 
+#     bind_rows(indata_parttwo)
 
 # # if multiple indata files
 # indata <- bind_rows(read_xlsx(indata_file, col_types = column_types), read_xlsx(indata_file2, col_types = column_types))

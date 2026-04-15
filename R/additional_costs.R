@@ -7,12 +7,12 @@ library(readxl)
 add_costs_outdata_file <- str_c('data/',organisation,'/','add_costs_',organisation,'_',timeperiod_data,'.csv')
 add_costs_not_sending_file <- str_c('data/',organisation,'/','add_costs_not_sending_',organisation,'_',timeperiod_data,'.csv')
 
-add_costs <- read_xlsx(indata_file, sheet = 2) %>% 
+add_costs <- read_xlsx(indata_file, sheet = 3) %>% 
     mutate(doi = str_to_lower(str_replace_all(doi, "[\\s]", "")),
            doi = str_remove(doi, "https://doi.org/"),
            doi = if_else(str_starts(doi, "10."), doi, str_replace(doi, "^.*(?=10.*)", ""))
     ) %>% 
-    select(-fil)
+    select(-comment)
 
 
 doi_dubbletter_add_costs <- group_by(add_costs, doi) %>% 

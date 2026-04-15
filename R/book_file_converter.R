@@ -16,15 +16,14 @@ rm(organisation, timeperiod_data, indata_file, outdata_file, check_initiative_fi
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'lu'
+organisation <- 'uu'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2025'
 
 # what's the name of the file to be converted?
 # indata_file <- str_c('data/', organisation, '/original_data/Miun bpc_template 2024.xlsx')
-indata_file <- str_c('data/', organisation, '/original_data/lu_bpc_2025.xlsx')
-indata_file_parttwo <- str_c('data/', organisation, '/original_data/lu_apc_and_additional_costs_2025_korr_2.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/UU Open APC Sweden 2025.xlsx')
 
 outdata_file <- str_c('data/', organisation, '/bookpc_', organisation, '_', timeperiod_data, '.csv')
 check_initiative_file <- str_c('data/',organisation,'/','book_check_initiative_',organisation,'_',timeperiod_data,'.csv')
@@ -32,20 +31,17 @@ missing_doi_isbn_file <- str_c('data/', organisation, "/missing_doi_and_isbn_", 
 
 
 # conversion --------------------------------------------------------------
-indata <- read_xlsx(indata_file, sheet = 1) %>% 
-    mutate(period = year(period),
-           backlist_oa = as.logical(backlist_oa))#, col_types = column_types) 
-
-# %>% 
-#     filter(!(Kommentar %in% c("Bokkapitel", "Inte publicerad än", "Inte publicerad än. Bokkapitel" ))) %>% 
-#     select(-Kommentar)
+indata <- read_xlsx(indata_file, sheet = 2) %>%
+    filter(!(Kommentar %in% c("Bokkapitel", "Inte publicerad än", "Inte publicerad än. Bokkapitel" ))) %>%
+    select(-Kommentar) %>% 
+    mutate(doi = if_else(str_detect(doi, "routledge"), NA, doi))
 
 # indata <- filter(indata, !str_detect(institution, "Kapitel"))
-
-indata_parttwo <- read_xlsx(indata_file_parttwo, sheet = 5)
 # 
-indata <- bind_rows(indata, indata_parttwo) %>% 
-    filter(!(doi == "10.4324/9781003462743" & sek == 64653.10))
+# indata_parttwo <- read_xlsx(indata_file_parttwo, sheet = 5)
+# # 
+# indata <- bind_rows(indata, indata_parttwo) %>% 
+#     filter(!(doi == "10.4324/9781003462743" & sek == 64653.10))
 # %>% # %>% mutate(institution = organisation) 
 #     filter(doi != "Ej ännu publicerad") %>% 
 #     filter(!str_detect(Kommentar, "Kapitel")) %>% 
