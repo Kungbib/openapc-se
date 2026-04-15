@@ -17,6 +17,7 @@
 - [Mälardalen University](https://www.mdu.se/en/malardalen-university)
 - [Stockholm School of Economics](https://www.hhs.se/en/)
 - [Stockholm University](https://www.su.se/english/)
+- [Swedish Defence University](https://www.fhs.se/en/swedish-defence-university.html)
 - [Swedish School of Sport and Health Sciences](https://www.gih.se/english)
 - [Swedish University of Agricultural Sciences](https://www.slu.se/en/)
 - [Södertörns University](https://www.sh.se/english/sodertorn-university)
