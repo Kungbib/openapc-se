@@ -2,6 +2,7 @@
 library(tidyverse)
 library(readxl)
 
+data_openbpc_de <- read_csv("https://raw.githubusercontent.com/OpenAPC/openapc-de/master/data/bpc.csv")
 
 # definitions of column names and types
 column_names <- c("institution", "period", "sek", "doi", "backlist_oa", "publisher", "book_title", "isbn_1", "isbn_2", "isbn_3")
@@ -15,15 +16,15 @@ rm(organisation, timeperiod_data, indata_file, outdata_file, check_initiative_fi
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'lnu'
+organisation <- 'lu'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2025'
 
 # what's the name of the file to be converted?
 # indata_file <- str_c('data/', organisation, '/original_data/Miun bpc_template 2024.xlsx')
-indata_file <- str_c('data/', organisation, '/original_data/2025 OpenBPC Lnu.xlsx')
-# indata_file_parttwo <- str_c('data/', organisation, '/original_data/Open APC LiU 2024HT.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/lu_bpc_2025.xlsx')
+indata_file_parttwo <- str_c('data/', organisation, '/original_data/lu_apc_and_additional_costs_2025_korr_2.xlsx')
 
 outdata_file <- str_c('data/', organisation, '/bookpc_', organisation, '_', timeperiod_data, '.csv')
 check_initiative_file <- str_c('data/',organisation,'/','book_check_initiative_',organisation,'_',timeperiod_data,'.csv')
@@ -31,11 +32,20 @@ missing_doi_isbn_file <- str_c('data/', organisation, "/missing_doi_and_isbn_", 
 
 
 # conversion --------------------------------------------------------------
-indata <- read_xlsx(indata_file, sheet = 1, col_types = column_types) 
+indata <- read_xlsx(indata_file, sheet = 1) %>% 
+    mutate(period = year(period),
+           backlist_oa = as.logical(backlist_oa))#, col_types = column_types) 
 
-indata_parttwo <- read_xlsx(indata_file_parttwo, sheet = 2, col_types = column_types)
+# %>% 
+#     filter(!(Kommentar %in% c("Bokkapitel", "Inte publicerad än", "Inte publicerad än. Bokkapitel" ))) %>% 
+#     select(-Kommentar)
 
-indata <- bind_rows(indata, indata_parttwo)
+# indata <- filter(indata, !str_detect(institution, "Kapitel"))
+
+indata_parttwo <- read_xlsx(indata_file_parttwo, sheet = 5)
+# 
+indata <- bind_rows(indata, indata_parttwo) %>% 
+    filter(!(doi == "10.4324/9781003462743" & sek == 64653.10))
 # %>% # %>% mutate(institution = organisation) 
 #     filter(doi != "Ej ännu publicerad") %>% 
 #     filter(!str_detect(Kommentar, "Kapitel")) %>% 
@@ -55,8 +65,8 @@ indata <- select(indata, -url)
 # check column names creates character string with wrong names
 check_column_names <- setdiff(colnames(indata), column_names) 
 
-# if wrong names, rename all column names to correct
-indata <- rename_with(indata, ~ column_names)
+# # if wrong names, rename all column names to correct
+# indata <- rename_with(indata, ~ column_names)
 
 # create table rows which have no doi or isbn
 missing_doi_isbn <- filter(indata, is.na(doi) & is.na(isbn_1) & is.na(isbn_2) & is.na(isbn_3))
@@ -108,8 +118,8 @@ converter <- indata %>%
 # samma lärosäte men då förmodligen olika kostnad, eller av två separata lärosäten:
 # apc_de-filen behöver uppdateras kontinuerligt. Kan ersättas av den kommande svenska totalfilen.
 
-openapcinitiative_book_data <- read_csv("https://raw.githubusercontent.com/OpenAPC/openapc-de/master/data/bpc.csv")
-check_initiative <- inner_join(converter, openapcinitiative_book_data, by = "doi", na_matches = "never")
+
+check_initiative <- inner_join(converter, data_openbpc_de, by = "doi", na_matches = "never")
 for_sending_to_initiative <- anti_join(converter, check_initiative, by = "doi") 
 
 # Skriv till filer --------------------------------------------------------
