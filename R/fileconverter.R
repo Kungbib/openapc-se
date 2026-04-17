@@ -33,14 +33,14 @@ column_types <- c("text", "numeric", "numeric", "text", "logical", "text", "text
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'hig'
+organisation <- 'su'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2025'
 
 # what's the name of the file or files to be converted?
 # indata_file <- str_c('data/', organisation, '/original_data/APC-kostnader 2023_MalmoÌˆ universitet_till KB.xlsx')
-indata_file <- str_c('data/', organisation, '/original_data/HIG_APC_2025.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/apc_su_2025.xlsx')
 # indata_file_parttwo <- str_c('data/', organisation, '/original_data/lu_apc_additions_for_2021-2024.xlsx')
 # indata_file2 <- str_c('data/', organisation, '/original_data/apc_liu_ht2023.xlsx')
 
@@ -64,7 +64,10 @@ check_initiative_file <- str_c('data/',organisation,'/','check_initiative_',orga
 # code to represent check list in Handbok_openapcsweden
 
 # reads indata file, gives error if number of columns are incorrect, if so add missing columns in excel
-indata <- read_xlsx(indata_file, sheet = 1, col_types = column_types) 
+indata <- read_xlsx(indata_file, sheet = 1, col_types = column_types) %>% 
+    mutate(institution = "su",
+           doi = str_remove(doi, "doi.org/")) %>% 
+    filter(!(doi == "10.16993/dfl.234" & period == 2025))
 
 
 # %>% filter(!(doi == "10.1109/OJIM.2025.3613073" & sek == 2062.94))
@@ -206,7 +209,7 @@ for_sending_to_initiative <- rbind(for_sending_to_initiative, without_dois) # lÃ
 # check_bibsam och check_initiativ skrivs nu bara om publikationer redan finns i Bibsams eller OpenAPCs data
 write_csv(for_sending_to_initiative, outdata_file, na = '')
 if (nrow(check_bibsam_se) > 0) write_csv(check_bibsam_se, check_bibsam_file, na = '')
-if (nrow(check_initiative) > 0) write_csv(check_initiative, check_initiative_file, na = '')
+if (nrow(check_initiative_new) > 0) write_csv(check_initiative_new, check_initiative_file, na = '')
 
 
 

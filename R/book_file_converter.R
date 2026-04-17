@@ -16,14 +16,14 @@ rm(organisation, timeperiod_data, indata_file, outdata_file, check_initiative_fi
 # settings: change before running -----------------------------------------
 
 # what organisation, short name? ex kth
-organisation <- 'kth'
+organisation <- 'su'
 
 # data collected from which timeperiod? ex 2010-2019, 2020_Q1
 timeperiod_data <- '2025'
 
 # what's the name of the file to be converted?
 # indata_file <- str_c('data/', organisation, '/original_data/Miun bpc_template 2024.xlsx')
-indata_file <- str_c('data/', organisation, '/original_data/Template Open BPC Sweden 2025 KTH.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/bpc_su_2025.xlsx')
 
 outdata_file <- str_c('data/', organisation, '/bookpc_', organisation, '_', timeperiod_data, '.csv')
 check_initiative_file <- str_c('data/',organisation,'/','book_check_initiative_',organisation,'_',timeperiod_data,'.csv')
@@ -33,7 +33,8 @@ missing_doi_isbn_file <- str_c('data/', organisation, "/missing_doi_and_isbn_", 
 # conversion --------------------------------------------------------------
 indata <- read_xlsx(indata_file, sheet = 1, col_types = column_types) 
 
-# indata <- filter(indata, !str_detect(institution, "Kapitel"))
+indata <- filter(indata, !str_detect(institution, "Kapitel")) %>% 
+    mutate(doi = if_else(doi == "N/A", NA, doi))
 # 
 # indata_parttwo <- read_xlsx(indata_file_parttwo, sheet = 5)
 # # 

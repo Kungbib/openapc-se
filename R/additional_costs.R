@@ -13,7 +13,8 @@ add_costs <- read_xlsx(indata_file, sheet = 2) %>%
            doi = if_else(str_starts(doi, "10."), doi, str_replace(doi, "^.*(?=10.*)", ""))
     ) %>% 
     select(-`other 2`) %>% 
-    rename(other = `other 1`)
+    rename(other = `other 1`) %>% 
+    filter(doi != "10.1093/aje/kwaf213")
 
 doi_dubbletter_add_costs <- group_by(add_costs, doi) %>% 
     filter(n() > 1) %>% 
