@@ -96,7 +96,8 @@ converter <- indata %>%
   # standard:
   # mutate(euro = format(round(0.0875 * sek, 2), nsmall = 2)) %>% # valutakurs 2022 0.0941 hämtad från 
   # https://www.riksbank.se/sv/statistik/sok-rantor--valutakurser/arsgenomsnitt-valutakurser/
-    mutate(euro = case_when(period == 2025 ~ format(round(0.0904 * sek, 2), nsmall = 2),
+    mutate(euro = case_when(period == 2026 ~ format(round(0.0935 * sek, 2), nsmall = 2), 
+                            period == 2025 ~ format(round(0.0904 * sek, 2), nsmall = 2),
                             period == 2024 ~ format(round(0.0875 * sek, 2), nsmall = 2),
                             period == 2023 ~ format(round(0.0871 * sek, 2), nsmall = 2),
                             period == 2022 ~ format(round(0.0941 * sek, 2), nsmall = 2),
@@ -114,10 +115,15 @@ converter <- indata %>%
 
 
 check_initiative <- inner_join(converter, data_openbpc_de, by = "doi", na_matches = "never")
-for_sending_to_initiative <- anti_join(converter, check_initiative, by = "doi") 
+for_sending_to_initiative <- anti_join(converter, check_initiative, by = "doi") %>% 
+    filter(!is.na(doi)) %>% 
+    mutate(institution = "su")
 
 # Skriv till filer --------------------------------------------------------
 
 write_csv(for_sending_to_initiative, outdata_file, na = '')
 if (nrow(check_initiative) > 0) write_csv(check_initiative, check_initiative_file, na = '')
 if (nrow(missing_doi_isbn) > 0) write_csv(missing_doi_isbn, missing_doi_isbn_file, na = '')
+
+
+write_csv(for_sending_to_initiative, "data/su/bookpc_su_2025_additions.csv")

@@ -40,7 +40,7 @@ timeperiod_data <- '2025'
 
 # what's the name of the file or files to be converted?
 # indata_file <- str_c('data/', organisation, '/original_data/APC-kostnader 2023_MalmoÌˆ universitet_till KB.xlsx')
-indata_file <- str_c('data/', organisation, '/original_data/apc_su_2025.xlsx')
+indata_file <- str_c('data/', organisation, '/original_data/apc_su_2025_new.xlsx')
 # indata_file_parttwo <- str_c('data/', organisation, '/original_data/lu_apc_additions_for_2021-2024.xlsx')
 # indata_file2 <- str_c('data/', organisation, '/original_data/apc_liu_ht2023.xlsx')
 
@@ -68,7 +68,6 @@ indata <- read_xlsx(indata_file, sheet = 1, col_types = column_types) %>%
     mutate(institution = "su",
            doi = str_remove(doi, "doi.org/")) %>% 
     filter(!(doi == "10.16993/dfl.234" & period == 2025))
-
 
 # %>% filter(!(doi == "10.1109/OJIM.2025.3613073" & sek == 2062.94))
 
@@ -140,6 +139,8 @@ doi_dubbletter_all <- group_by(indata, doi) %>%
 # find high apc:s, if any resolve with organisation
 high_apcs <- filter(indata, sek > 80000)
 
+
+
 # conversion --------------------------------------------------------------
 
 # converter <- read_xlsx(indata_file2, col_types = column_types)
@@ -207,6 +208,7 @@ for_sending_to_initiative <- rbind(for_sending_to_initiative, without_dois) # lÃ
 # Skriv till filer --------------------------------------------------------
 
 # check_bibsam och check_initiativ skrivs nu bara om publikationer redan finns i Bibsams eller OpenAPCs data
+write_csv(for_sending_to_initiative, "data/su/apc_corrections_su_2025.csv")
 write_csv(for_sending_to_initiative, outdata_file, na = '')
 if (nrow(check_bibsam_se) > 0) write_csv(check_bibsam_se, check_bibsam_file, na = '')
 if (nrow(check_initiative_new) > 0) write_csv(check_initiative_new, check_initiative_file, na = '')
@@ -216,6 +218,12 @@ if (nrow(check_initiative_new) > 0) write_csv(check_initiative_new, check_initia
 
 
 # corrections -------------------------------------------------------------
+
+
+indata_corrections <- anti_join(indata, data_openapc_de, by = "doi") %>% 
+    filter(doi != "10.1175/jcli-d-24-0260.s1") %>% 
+    rename(issn = `kommentar SU`) %>% 
+    mutate(issn = NA) 
 
 indata_corrections <- mutate(indata_corrections, 
                  # doi = str_replace(doi, "https://", ""),
